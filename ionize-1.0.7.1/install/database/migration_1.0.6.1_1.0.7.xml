@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<sql>
+
+    <query>
+        update setting set content='1.0.7' where name = 'ionize_version';
+    </query>
+
+    <!-- Extend Field -->
+    <query>ALTER TABLE extend_field_type add display smallint(1) NOT NULL default 1;</query>
+
+    <!-- Article -->
+    <query>ALTER TABLE article add priority smallint(1) NOT NULL default 5;</query>
+
+    <!-- Notification -->
+    <query>ALTER TABLE notification add code varchar(50);</query>
+
+
+</sql>

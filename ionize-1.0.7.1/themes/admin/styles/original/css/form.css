@@ -1,0 +1,768 @@
+/*
+
+Ionize Form CSS
+
+Copyright:
+	Copyright (c) 2010 Ionize Dev Team.
+	
+License:
+	MIT-style license.
+
+*/
+
+/* Reset
+---------------------------------------------------------------- */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+
+/* Form layout
+---------------------------------------------------------------- */
+form {
+	width: 100%;
+}
+
+fieldset {
+	border:none;
+}
+
+.panel dl.first,
+.mocha dl.first {
+	margin-top: 10px;
+}
+
+.panel dl.compact,
+.mocha dl.compact {
+	margin:0;
+}
+
+.panel dl,
+.mocha dl {
+	position:relative;
+	margin:1px 0 5px 0;
+}
+.panel dl.last,
+.mocha dl.last {
+	padding-bottom:10px;
+}
+.panel dt,
+.mocha dt {
+	clear: left;
+	float:left;
+	margin:0 0 0 0;
+	padding: 0;
+	text-align:right;
+	font-weight: normal;
+	width:18%;
+}
+.panel dt.left,
+.mocha dt.left {
+	text-align: left;
+}
+.panel dd,
+.mocha dd {
+	margin:0;
+	margin-left: 22%;
+	padding:0;
+	width: 78%;
+	position: relative;
+}
+.panel dd.nomargin,
+.mocha dd.nomargin {
+	margin-left: 0;
+	width: auto;
+}
+
+/* Small DL, used in side column and in some windows */
+.panel dl.small,
+.mocha dl.small,
+.panel dl.x-small,
+.mocha dl.x-small {
+	min-width: inherit;
+	clear:both;
+	min-height: 20px;
+}
+.panel dl.small dt,
+.mocha dl.small dt,
+.panel dl.x-small dt,
+.mocha dl.x-small dt {
+	min-width:inherit;
+	width:130px;
+}
+.panel dl.x-small dt,
+.mocha dl.x-small dt {
+	width:90px;
+}
+
+.panel dl.small dd,
+.mocha dl.small dd,
+.panel dl.x-small dd,
+.mocha dl.x-small dd {
+	width:auto;
+	min-width:inherit;
+	margin-left:135px;
+}
+.panel dl.x-small dd,
+.mocha dl.x-small dd {
+	margin-left:95px;
+}
+
+dl.required dt label { color:#b00;}
+dl.required dd input,
+dl.required dd input[required],
+dl.required dd textarea,
+dl.required dd select { border-color: #666;}
+
+
+/* Mocha Windows correction */
+.mochaContent dd { 
+	width: auto;
+	position: relative;
+}
+.mochaContent dl {
+	min-width: inherit;
+}
+.mochaContent textarea {
+	width: 96%;
+}
+
+/* Card DL */
+dl.card{
+	padding:10px;
+	margin: 0;
+}
+dl.card:hover{
+	background: url(../images/bg-gray-light.png);
+}
+
+dl.card dt{
+	width:50px;
+	min-width: 0;
+	text-align: center;
+	height: 100%;
+}
+dl.card dd{
+	text-align: left;
+	margin:0 0 0 50px;
+	width: auto;
+}
+dl.card label{
+	margin:0;
+	font-weight: bold;
+	display: block;
+}
+dl.card .help{
+	color: #999;
+	font-weight: normal;
+	display: block;
+}
+
+
+/* Form Elements
+---------------------------------------------------------------- */
+
+/* Standard label */
+div.label {
+	background-color: #f2f2f2;
+	padding:2px 0 2px 5px;
+	-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+}
+div.label:hover {
+	background-color: #cef;
+}
+
+label {
+	font-size: 11px;
+	margin: 0 10px;
+}
+label[for] { cursor: pointer; }
+label.required {
+	color:#b00;
+}
+label.toggler {
+	display: block;
+}
+label[title]
+{
+	background: url("../images/icon_12_label_help.png") no-repeat scroll right top transparent;
+	padding-right: 14px;
+	border-bottom: dotted 1px #94aec9;
+}
+table thead tr td label[title],
+table thead tr th label[title],
+table tbody tr td label[title],
+table tbody tr th label[title]
+{
+	border-bottom: none;
+}
+label.over{
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+label.over input,
+label.over select,
+label.over textarea{
+	margin-bottom: 5px;
+}
+
+input, textarea, select {
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+}
+input.required, textarea.required, select.required{
+	border-color: #b00;
+	border-color: #e2800d;
+}
+textarea{
+	border:1px solid #bbb;
+	padding:4px;
+	margin:0;
+}
+.select {
+	border:1px solid #bbb;
+	padding:3px;
+}
+optgroup:before {
+	content: attr(label);
+	display: block;
+}
+select optgroup{
+	color:#555;
+	font-weight: bold;
+	font-style: normal;
+
+}
+select optgroup option {
+}
+dl.small .select {
+	width:150px;
+}
+#options select {
+/*	max-width: 150px;*/
+}
+.inputtext {
+	border:1px solid #bbb;
+	padding:4px;
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"] {
+	height:26px;
+}
+.inputtext.date {
+	width:120px;
+}
+.inputtext:focus,
+textarea:focus {
+	background-color: #F5F5F5;
+	border:1px solid #098ED1;
+}
+
+input.italic {font-style: italic;}
+input.center {text-align: center}
+
+/* Droppable areas */
+div.droppable,
+ul.droppable{
+	min-height: 40px;
+	padding: 2px 2px 2px 45px;
+}
+
+div.droppable{
+	padding: 8px 10px 8px 45px;
+	font-style: italic;
+	position: relative;
+}
+ul.droppable:before,
+li.droppable:before,
+div.droppable:before {
+	content: url("../images/icon_24_drop_static.png");
+	position: absolute;
+	left: 8px;
+	top: 1px;
+	opacity: 0.25;
+	filter:alpha(opacity=0.25);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.25);
+}
+ul.droppable.onenter,
+li.droppable.onenter,
+div.droppable.onenter {
+	background:url("../images/bg-gray-dark.png") repeat scroll 0 0 transparent;
+	color: #353c43;
+}
+ul.droppable.onenter:before,
+li.droppable.onenter:before,
+div.droppable.onenter:before {
+	content: url("../images/icon_24_drop_onenter.png");
+	opacity:.50;
+	position:absolute;
+	left: 10px;
+	-webkit-animation:dropenter .8s ease-out infinite;
+	-moz-animation:dropenter .8s ease-out infinite;
+	-o-animation:dropenter .8s ease-out infinite;
+	animation:dropenter .8s ease-out infinite;
+}
+
+@keyframes dropenter {
+	0%   {top:0px;opacity: 1;}
+	100% {top:90%;opacity: 0;}
+}
+@-moz-keyframes dropenter {
+	0%   {top:0px;opacity: 1;}
+	100% {top:90%;opacity: 0;}
+}
+@-webkit-keyframes dropenter {
+	0%   {top:0px;opacity: 1;}
+	100% {top:90%;opacity: 0;}
+}
+@-o-keyframes dropenter {
+	0%   {top:0px;opacity: 1;}
+	100% {top:90%;opacity: 0;}
+}
+
+
+input.droppable,
+textarea.droppable {
+	padding:4px;
+}
+.droppable.empty{
+	font-style: italic;
+	color:#999;
+}
+li.droppable,
+div.droppable,
+ul.droppable,
+input.droppable.empty,
+textarea.droppable.empty {
+	background-color:#fff;
+	border: dashed 1px #ccc;
+	position: relative;
+}
+div.droppable.hover,
+ul.droppable.hover,
+input.droppable.hover,
+textarea.droppable.hover {
+	background-color: #df8;
+	border-color: transparent;
+}
+div.droppable.nofocus,
+input.nofocus,
+input.droppable.nofocus,
+textarea.nofocus,
+textarea.droppable.nofocus {
+	background-color:#f8f8f8;
+}
+.focus,
+input.focus,
+input.droppable.focus,
+textarea.focus,
+textarea.droppable.focus {
+	background-color:#fdfced !important;
+}
+.droppable.filled{
+	border-color: transparent;
+	padding: 2px 0 2px 45px;
+}
+.inputcheckbox {}
+.inputradio {}
+.inputicon {
+	margin:0 0 0 5px;
+}
+
+/* Submit & button */
+button.button,
+input.button,
+button.submit,
+input.submit{
+	border:1px solid #fff;
+	color:#333;
+	cursor:pointer;
+	font-size:11px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+button.submit,
+input.submit{
+	color:#fff;
+}
+button.button,
+button.submit {
+	padding:2px 8px;
+}
+input.button,
+input.submit{
+	padding:3px 8px;
+}
+
+a.button.disabled,
+button.button.disabled,
+input.button.disabled,
+button.submit.disabled,
+input.submit.disabled{
+	opacity: .5;
+}
+a.button.disabled:hover,
+button.button.disabled:hover,
+input.button.disabled:hover,
+button.submit.disabled:hover,
+input.submit.disabled:hover{
+	cursor: default;
+}
+
+#maincolumn .inputtext, #maincolumn .textarea {
+	width: 82%;
+}
+
+/* Side Options Panel elements */
+#splitPanel_sidePanel_pad .optionInputTab {
+	width: 96%;
+	margin-left: 10px;
+	padding-bottom: 5px;
+}
+#splitPanel_sidePanel_pad .optionInputTab textarea,
+#splitPanel_sidePanel_pad .optionInputTab input.inputtext{
+	width:96%;
+}
+#splitPanel_sidePanel_pad .help {
+	border-bottom: dotted 1px #94aec9;
+	background: url(../images/icon_12_label_help.png) no-repeat top right;
+	padding-right: 14px;
+}
+
+/* Buttons */
+
+.button.left {float:left;}
+.button.right {float:right;}
+
+.button,
+a.button {
+	background: url(../images/bg-gray-light.png);
+	color:#098ED1;
+	border-radius: 0px;
+	margin:0;
+	cursor:pointer;
+	font-size:11px;
+	padding:3px 6px;
+	vertical-align: middle;
+	height:auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+.button:hover
+a.button:hover {
+	background: url(../images/bg-gray-medium.png);
+	border:1px solid #bbb;
+
+}
+.button.active{
+	background: url(../images/bg-gray-medium.png);
+	border:1px solid #bbb;
+}
+.button i,
+a.button i{
+    width:16px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+    margin-right:8px;
+	margin-top: 1px;
+    background:transparent url(../images/icons_16.png) no-repeat 0 0;
+}
+a.button span{
+	line-height: 18px;
+}
+
+/* Special buttons */
+.button.yes,
+.button.yes:hover,
+a.button.yes,
+a.button.yes:hover,
+.button.info,
+.button.info:hover,
+a.button.info,
+a.button.info:hover,
+.button.no,
+.button.no:hover,
+a.button.no,
+a.button.no:hover,
+.button.submit ,
+.button.submit:hover,
+a.button.submit ,
+a.button.submit:hover {
+	border:solid 1px #fff;
+	color:#fff;
+}
+
+.button.yes,
+button.button.yes,
+input.button.yes,
+a.button.yes,
+button.button.green,
+input.button.green,
+.button.green,
+a.button.green,
+button.submit,
+submit.submit,
+.submit,
+a.button.submit{
+	color:#fff;
+	background:#8AC05E;
+}
+.button.yes:hover,
+a.button.yes:hover,
+.button.green:hover,
+a.button.green:hover,
+.submit:hover,
+a.button.submit:hover{
+	background: #70b54b;
+
+}
+.button.no, a.button.no,
+.button.cancel, a.button.cancel,
+.button.delete, a.button.delete,
+.button.red, a.button.red {
+	color:#fff !important;
+	background: #B63C1A;
+}
+.button.no:hover, a.button.no:hover,
+.button.cancel:hover, a.button.cancel:hover,
+.button.red:hover, a.button.red:hover {
+	background: #901A00;
+}
+
+.button.info, a.button.info,
+.button.blue, a.button.blue {
+	color:#fff !important;
+	background: #5F95C1;
+}
+
+.button.info:hover, a.button.info:hover,
+.button.blue:hover, a.button.blue:hover {
+	background: #2E68A2;
+}
+
+
+.button.gray, a.button.gray {
+	color:#fff;
+	background: #9EA2A3;
+}
+
+.button.gray:hover, a.button.gray:hover{
+	color:#fff;
+	background: #888C8D;
+}
+
+
+.button.brown, a.button.brown {
+	color:#fff;
+	background: #B67D4C;
+}
+
+.button.brown:hover, a.button.brown:hover{
+	color:#fff;
+	background: #9F5C15;
+}
+
+.button.yellow, a.button.yellow {
+	color:#fff;
+	background: #E3B83A;
+}
+
+.button.yellow:hover, a.button.yellow:hover {
+	color:#fff;
+	background: #E29602;
+}
+
+.mocha .button{border: solid 1px #fff;padding-left:8px;padding-right:8px;}
+.mocha .button.right{margin-left:10px;}
+.mocha.modal .button.right{}
+
+/* Light buttons */
+.button.light {
+    border: 1px solid transparent;
+    background: none;
+	color:#444;
+}
+.button.light:hover {
+    border:1px solid #bbb;
+	background: url(../images/bg-gray-light.png);
+}
+.button.light.active{
+	background: url(../images/bg-gray-medium.png);
+	border:1px solid #bbb;
+}
+
+.button.white {color:#fff;}
+/* Rounded buttons */
+.button.rounded {
+	border-radius: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border:none !important;
+}
+.button.rounded.no,
+.button.rounded.cancel,
+.button.rounded.red,
+.button.rounded.no:hover,
+.button.rounded.cancel:hover,
+.button.rounded.red:hover {
+	border:none;
+}
+
+/* Toolbar button with dropdown */
+.btn-toolbar .btn-group {float: left;}
+
+.btn-group {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+.caret {
+	border-color: #000000 rgba(0, 0, 0, 0);
+	border-style: solid solid dotted;
+	border-width: 5px 4px 0;
+	content: "";
+	display: inline-block;
+	height: 0;
+	margin-left: 5px;
+	vertical-align: middle;
+	width: 0;
+	margin-top: -2px;
+}
+.open > .dropdown-menu {display: block;}
+.dropdown-menu {
+	background-clip: padding-box;
+	background-color: #FFFFFF;
+	border: 1px solid #bbb;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+	text-align: left;
+	display: none;
+	float: left;
+	left: 0;
+	list-style: none outside none;
+	margin: 2px 0 0;
+	min-width: 160px;
+	padding: 3px 0;
+	position: absolute;
+	top: 100%;
+	z-index: 1000;
+}
+.dropdown-menu > li > a {
+	clear: both;
+	color: #3F3F3F;
+	display: block;
+	font-weight: normal;
+	line-height: 1.42857;
+	padding: 3px 20px;
+	white-space: nowrap;
+}
+.dropdown-menu > li > a:hover {
+	background: #93adc8;
+	color:#fff;
+}
+
+
+/* Buttons specific context */
+.tabsidecolumn .button.light,
+.panelAlt .button.light {
+}
+.tabsidecolumn .button.light:hover,
+.panelAlt .button.light:hover,
+.summary .button.light:hover{
+	border:1px solid #bbb;
+	background: #fff;
+}
+
+/* Toolbar button */
+.toolbar-button,
+.light-button {
+	border: 1px solid transparent;
+	background-color: transparent;
+	color:#098ED1;
+	margin:0px;
+	cursor:pointer;
+	padding:2px 6px;
+	height: 24px;
+	vertical-align: middle;
+}
+.toolbar-button.plus, .light-button.plus { background:url(../images/icon_16_plus.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.minus, .light-button.minus { background:url(../images/icon_16_minus.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.files, .light-button.files { background:url(../images/icon_16_files.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.music, .light-button.music { background:url(../images/icon_16_music.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.delete, .light-button.delete { background:url(../images/icon_16_delete.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.video, .light-button.video { background:url(../images/icon_16_video.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.refresh, .light-button.refresh { background:url(../images/icon_16_refresh.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.pictures, .light-button.pictures { background:url(../images/icon_16_pictures.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.back, .light-button.back { background:url(../images/icon_16_left.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.helpme, .light-button.helpme { background:url(../images/icon_16_helpme.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.element, .light-button.element { background:url(../images/icon_16_element.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.print, .light-button.print { background:url(../images/icon_16_print.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.search, .light-button.search { background:url(../images/icon_16_search.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.calendar, .light-button.calendar { background:url(../images/icon_16_calendar.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.alert, .light-button.alert { background:url(../images/icon_16_alert.png) no-repeat 4px 50%; padding-left: 24px; }
+
+.toolbar-button:hover, .light-button:hover {
+	border:1px solid #bbb;
+	background-color: #fff !important;
+}
+
+/* Toolbox inputs */
+.toolbox .inputtext, .toolbox .select {
+	margin-top:2px;
+}
+.toolbox label,
+.toolbox .icon {
+	margin-top:4px;
+	margin-left:3px;
+}
+
+/* IE Mocha form hacks */
+* html .toolbox .searchField, * html .toolbox .searchButton { /* IE6 Hack */
+	margin-top: -1px;		
+}
+
+* html .toolbox .button { /* IE6 Hack */
+	vertical-align: top;
+	margin-top: 0;			
+}
+
+*:first-child+html .toolbox .searchField, *:first-child+html .toolbox .searchButton { /* IE7 Hack */
+	margin-top: -1px;	
+}
+
+*:first-child+html .toolbox .button { /* IE7 Hack */
+	vertical-align: top;
+	margin-top: 0;	
+}
+
+/* Form Validation */
+.validation-passed { border-color: #99cc99 !important; }
+/* This style is applied to input fields after successful validation */
+.validation-advice { background-color: transparent; color: #b00; margin: 0; padding: 0; }
+/* This style is applied to the error messages */
+.validation-failed { border-color: #b00 !important; }
+/* This style is applied to input fields after validation failed */
+
+/* Upload */
+ul.list .upload-item a {
+	float:right;
+	height: 16px;
+	width: 16px;
+	background: url(../images/icons_16.png) no-repeat 0 0;
+	background-position: -160px -64px;
+	text-indent: -999em;
+}
