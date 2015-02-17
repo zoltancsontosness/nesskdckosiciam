@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /projekt3/komprax3.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 58568,
+  8 => 1424077005,
+  9 => 1424077005,
+  10 => 1424077005,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 58568,
+  'atime' => 1424077005,
+  'mtime' => 1424077005,
+  'ctime' => 1424077005,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 58568,
+    'filename' => 'komprax3.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt3',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt3/komprax3.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 58568,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 448,
+      'resolution_y' => 329,
+      'compression_ratio' => 0.1324540454479664342013478517401381395757198333740234375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 88,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5538040,
+      'path' => 'C:\\softy\\xampp\\htdocs\\projekt_1/files/.thumbs/.backend/d3/34/1289_komprax3ae3deae75b3d5fe69c6ed7e1-500x500.jpg',
+      'filesize' => 58568,
+      'imageinfo' => 
+      array (
+        0 => 448,
+        1 => 329,
+        2 => 2,
+        3 => 'width="448" height="329"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 742418.962962963036261498928070068359375,
+      'usage_guestimate' => 1039386.5481481482274830341339111328125,
+      'usage_min_advised' => 6577426.548148147761821746826171875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.4 MB',
+  'memory estimated' => '1.0 MB',
+  'memory suggested' => '6.6 MB',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/d3/34/1289_komprax3ae3deae75b3d5fe69c6ed7e1-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 448,
+    1 => 329,
+    2 => 2,
+    3 => 'width="448" height="329"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/d3/34/1289_komprax3ae3deae75b3d5fe69c6ed7e1-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 88,
+    2 => 2,
+    3 => 'width="120" height="88"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

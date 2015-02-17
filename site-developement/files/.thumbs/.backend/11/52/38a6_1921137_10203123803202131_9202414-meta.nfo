@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /1921137_10203123803202131_920241475_o_3.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 436871,
+  8 => 1423728283,
+  9 => 1423728283,
+  10 => 1423728283,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 436871,
+  'atime' => 1423728283,
+  'mtime' => 1423728283,
+  'ctime' => 1423728283,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 436871,
+    'filename' => '1921137_10203123803202131_920241475_o_3.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/1921137_10203123803202131_920241475_o_3.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 436871,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 674,
+      'compression_ratio' => 0.18004904385097264540860351189621724188327789306640625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 67,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5538536,
+      'path' => 'C:\\softy\\xampp\\htdocs\\projekt_1/files/.thumbs/.backend/11/52/38a6_1921137_10203123803202131_9202414-500x500.jpg',
+      'filesize' => 37701,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 281,
+        2 => 2,
+        3 => 'width="500" height="281"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 707703.703703703708015382289886474609375,
+      'usage_guestimate' => 990785.1851851851679384708404541015625,
+      'usage_min_advised' => 6529321.18518518470227718353271484375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '10.3 MB',
+  'memory estimated' => '1.0 MB',
+  'memory suggested' => '6.5 MB',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/11/52/38a6_1921137_10203123803202131_9202414-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 281,
+    2 => 2,
+    3 => 'width="500" height="281"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/11/52/38a6_1921137_10203123803202131_9202414-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 67,
+    2 => 2,
+    3 => 'width="120" height="67"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
