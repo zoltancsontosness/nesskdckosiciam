@@ -816,15 +816,15 @@
 		margin-left: 12%;
 	}
 	.da-slide h2{
-		width:70%;
-		top: 50px;
+		width:95%;
+		top: 5px;
 		font-size: 22px;
 		margin-left:10px;
 	}
 	.da-slide p{
-		width:70%;
+		width:80%;
 		margin-left:20px;
-		top: 110px;
+		top: 50px;
 		font-size:13px;
 	}
 	.da-slide .da-link {

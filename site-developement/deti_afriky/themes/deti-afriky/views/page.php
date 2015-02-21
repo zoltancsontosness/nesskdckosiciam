@@ -15,7 +15,7 @@
                                     </ion:media>
                                     <ion:title tag="h4"/>
                                     <div class="para">
-                                        <ion:content />
+                                        <ion:content characters="150"/>
                                     </div>
                                 </ion:article>
                             </div>
@@ -23,6 +23,20 @@
                         <a href="<ion:page:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
                     </div>
                 </ion:pages>
+                <ion:articles>
+                    <ion:article>
+                        <h2><ion:title /></h2>
+                        <div class="img-thumbnail">
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="para">
+                                    <ion:content characters="270"/>
+                                </div>
+                            </div>
+                            <a href="<ion:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
+                        </div>
+                    </ion:article>
+                </ion:articles>
+
             </article>
             <ion:partial view="aside" />
         </div>

@@ -11,9 +11,9 @@ $statdata = array (
   5 => 0,
   6 => 2,
   7 => 200930,
-  8 => 1424441302,
-  9 => 1423484615,
-  10 => 1424441302,
+  8 => 1424507941,
+  9 => 1424507941,
+  10 => 1424507941,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -24,9 +24,9 @@ $statdata = array (
   'gid' => 0,
   'rdev' => 2,
   'size' => 200930,
-  'atime' => 1424441302,
-  'mtime' => 1423484615,
-  'ctime' => 1424441302,
+  'atime' => 1424507941,
+  'mtime' => 1424507941,
+  'ctime' => 1424507941,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -38,8 +38,8 @@ $data = array (
     'GETID3_VERSION' => '1.9.3-20111213',
     'filesize' => 200930,
     'filename' => 'screenshot_ionize_dashboard.jpg',
-    'filepath' => 'C:/xampp/htdocs/deti_afriky/files',
-    'filenamepath' => 'C:/xampp/htdocs/deti_afriky/files/screenshot_ionize_dashboard.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/deti_afriky/files',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/deti_afriky/files/screenshot_ionize_dashboard.jpg',
     'avdataoffset' => 0,
     'avdataend' => 200930,
     'fileformat' => 'jpg',
@@ -62,7 +62,7 @@ $data = array (
         'FILE' => 
         array (
           'FileName' => 'screenshot_ionize_dashboard.jpg',
-          'FileDateTime' => 1423484615,
+          'FileDateTime' => 1424507941,
           'FileSize' => 200930,
           'FileType' => 2,
           'MimeType' => 'image/jpeg',
@@ -85,7 +85,7 @@ $data = array (
     ),
   ),
   'mime_type from file extension' => 'image/jpeg',
-  'thumb250_direct' => '/deti_afriky/files/.thumbs/.backend/ca/70/4789_screenshot_ionize_dashboardc94e09-500x500.jpg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/deti_afriky/files/.thumbs/.backend/ca/70/4789_screenshot_ionize_dashboardc94e09-500x500.jpg',
   'thumb250_info' => 
   array (
     0 => 500,
@@ -96,7 +96,7 @@ $data = array (
     'channels' => 3,
     'mime' => 'image/jpeg',
   ),
-  'thumb48_direct' => '/deti_afriky/files/.thumbs/.backend/ca/70/4789_screenshot_ionize_dashboardc94e09-120x120.jpg',
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/deti_afriky/files/.thumbs/.backend/ca/70/4789_screenshot_ionize_dashboardc94e09-120x120.jpg',
   'thumb48_info' => 
   array (
     0 => 120,
