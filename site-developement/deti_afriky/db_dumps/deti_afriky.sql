@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Pi 20.Feb 2015, 17:42
+-- Čas generovania: So 21.Feb 2015, 22:43
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `flag` smallint(1) DEFAULT '0',
   `has_url` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `priority` smallint(1) unsigned NOT NULL DEFAULT '5'
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article`
@@ -92,10 +92,16 @@ INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `pu
 (6, 'paschal-emmanuel-awe', 'admin', 'admin', '2015-02-20 15:43:39', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 15:44:30', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (7, 'emiliana-nicodemus-daffi', 'admin', 'admin', '2015-02-20 16:54:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 16:56:11', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (8, 'naomi-naftali-yona', 'admin', 'admin', '2015-02-20 16:55:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 16:55:54', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(9, 'ako-podporovat', 'admin', 'admin', '2015-02-20 17:02:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:02:35', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(9, 'ako-podporovat', 'admin', 'admin', '2015-02-20 17:02:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 10:38:33', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (10, '1.2.2014', 'admin', NULL, '2015-02-20 17:15:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:15:28', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (11, '3.1.2015', 'admin', NULL, '2015-02-20 17:15:53', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:15:53', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(12, '5.2.2015', 'admin', NULL, '2015-02-20 17:16:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:16:35', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
+(12, '5.2.2015', 'admin', 'admin', '2015-02-20 17:16:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 09:48:47', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(13, 'skola-yedidiass', 'admin', NULL, '2015-02-21 11:05:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 11:05:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(14, 'podporte-nas-2-z-dane', 'admin', 'admin', '2015-02-21 20:44:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 20:47:31', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(15, 'dokoncenie-triedy-a-domu-uciteov', 'admin', 'admin', '2015-02-21 21:45:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 22:04:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(17, 'potravinova-pomoc', 'admin', 'admin', '2015-02-21 22:14:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 22:25:38', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(18, NULL, NULL, NULL, '2015-02-21 22:25:32', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 22:25:32', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(19, NULL, NULL, NULL, '2015-02-21 22:25:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 22:25:38', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -160,10 +166,14 @@ INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `m
 (6, 'sk', 'paschal-emmanuel-awe', 'Paschal Emmanuel Awe', 'Chlapec, 16 rokov.', 'Paschal Emmanuel Awe', '<p>Pochádza z chudobnej rodiny.</p>\n<p><strong>variabilný symbol: 1003</strong></p>', '', '', 1),
 (7, 'sk', 'emiliana-nicodemus-daffi', 'Emiliana Nicodemus Daffi', 'Dievča, 22 rokov', 'Emiliana Nicodemus Daffi', '<p>Chodí do 1. triedy. Jej záľubou je netball. Pochádza z veľmi chudobnej rodiny.</p>\n<p><strong>variabilný symbol: 1028</strong></p>', '', '', 1),
 (8, 'sk', 'naomi-naftali-yona', 'Naomi Naftali Yona', 'Dievča, 16 rokov', 'Naomi Naftali Yona', '<p>Chodí do 1. triedy. Rada hrá netball. Otec je alkoholik. Chce sa stať sestričkou.</p>\n<p><strong>variabilný symbol: 1029</strong></p>', '', '', 1),
-(9, 'sk', 'ako-podporovat', 'Ako podporovať', '', 'Ako podporovať', '<p>V prvom rade ide o pravidelnú mesačnú podporu konkrétneho študenta, ktorého rodina si nemôže dovoliť platiť školné, čiastkou 17 Eur mesačne.</p>\n<h2><strong>Na podporu študenta ide celá čiastka!</strong></h2>\n<p>V prípade, že chcete podporovať študenta, kontaktujte nás <strong>nadetiafriky@detiafriky.sk .</strong></p>\n<p>Ďalej ide o podporu dobudovania a zabezpečenie základného vybavenia školy. Momentálne je najdôležitejšie dokončenie budovy pre študentov a učiteľov.</p>\n<p><b>Číslo účtu: 2100346091/8330</b></p>\n<p>Podpora potrieb detí v.s. 1999 (všeobecná podpora, nie pravidelná podpora)<br />Podpora učiteľov v.s. 2100<br />Miestnosť pre učiteľov v.s. 2200<br />Dostavba budovy pre študentov a učiteľov v.s. 2300<br />Kúpa stola a stoličky do triedy  v.s. 2500<br />Všeobecná podpora projektu v.s. 3000</p>\n<p>Všeobecná podpora projektu bude použitá na správu a propagáciu projektu.</p>', '', '', 1),
+(9, 'sk', 'ako-podporovat', 'Ako podporovať', '', 'Ako podporovať', '<p>V prvom rade ide o pravidelnú mesačnú podporu konkrétneho študenta, ktorého rodina si nemôže dovoliť platiť školné, čiastkou 17 Eur mesačne.</p>\n<p>Na podporu študenta ide celá čiastka!</p>\n<p>V prípade, že chcete podporovať študenta, kontaktujte nás <strong>nadetiafriky@detiafriky.sk .</strong></p>\n<p>Ďalej ide o podporu dobudovania a zabezpečenie základného vybavenia školy. Momentálne je najdôležitejšie dokončenie budovy pre študentov a učiteľov.</p>\n<p><b>Číslo účtu: 2100346091/8330</b></p>\n<p>Podpora potrieb detí v.s. 1999 (všeobecná podpora, nie pravidelná podpora)<br />Podpora učiteľov v.s. 2100<br />Miestnosť pre učiteľov v.s. 2200<br />Dostavba budovy pre študentov a učiteľov v.s. 2300<br />Kúpa stola a stoličky do triedy  v.s. 2500<br />Všeobecná podpora projektu v.s. 3000</p>\n<p>Všeobecná podpora projektu bude použitá na správu a propagáciu projektu.</p>', '', '', 1),
 (10, 'sk', '1.2.2014', '1.2.2014', '', '1.2.2014', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit lacinia risus non luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>', NULL, NULL, 1),
 (11, 'sk', '3.1.2015', '3.1.2015', '', '3.1.2015', '<p>Curabitur pharetra accumsan rutrum. In ut tempus tortor. Aenean faucibus pharetra tortor a suscipit. Vivamus fringilla quam odio, nec mollis lacus luctus nec. Aliquam erat volutpat.</p>', NULL, NULL, 1),
-(12, 'sk', '5.2.2015', '5.2.2015', '', '5.2.2015', '<p>Duis finibus metus ut tristique malesuada. Vestibulum facilisis justo ligula, nec tempus neque auctor sed. Maecenas id semper mauris. Nunc dignissim consectetur orci in faucibus.</p>', NULL, NULL, 1);
+(12, 'sk', '5.2.2015', '5.2.2015', '', '5.2.2015', '<p>Duis finibus metus ut tristique malesuada. Vestibulum facilisis justo ligula, nec tempus neque auctor sed. Maecenas id semper mauris. Nunc dignissim consectetur orci in faucibus.</p>\n<p><a href="files/gis.pdf" target="_blank">Si môžte prečítať tu</a></p>', '', '', 1),
+(13, 'sk', 'skola-yedidiass', 'Škola Yedidiass', '', 'Škola Yedidiass', '<p>Škola Yedidiass sa nachádza v Tanzánii, v dištrikte Mbulu, pri oblasti Maretadu. Táto oblasť nie je ohraničená mestami alebo dedinami. Najbližšie väčšie mestá sú Dongobesh a Haydom.</p>', NULL, NULL, 1),
+(14, 'sk', 'podporte-nas-2-z-dane', 'Podporte nás 2% z dane', '', 'Podporte nás 2% z dane', '<p>Budeme Vám veľmi vďačný za Vašu podporu 2% z Vašej dane. Pre formulár <strong><a href="files/dve_percenta_z_dane_oz_kairos.doc" target="_blank">kliknite TU</a></strong>. Prosíme Vás tiež o zaslanie fotografie alebo oskenovaného vyplneného formulára na adresu <b style="font-size: 1em; line-height: 1.5em;"><a href="mailto:detiafriky@detiafriky.sk">detiafriky@detiafriky.sk</a></b> kvôli identifikácií podporovateľa a priradeniu Vašej podpory pre tento  projekt.</p>\n<p>Ďakujeme Vám</p>\n<p>Tím DetiAfriky</p>', '', '', 1),
+(15, 'sk', 'dokoncenie-triedy-a-domu-uciteov', 'Dokončenie triedy a domu učiteľov', '', 'Dokončenie triedy a domu učiteľov', '<p><strong>4.11.2014</strong> Posledné mesiace sa Paulo a celá škola venovala príprave na záverečné skúšky a školské slávnosti. Práce na stavbe sú menej viditeľné, ale boli urobené vnútorné omietky a nakúpené a osadené dvere. Za posledné štyri mesiace sme na dokončenie budovy zaslali 1400 Eur.</p>\n<p><strong>8.7.2014</strong> Po dlhšej dobe máme od Paula ďalšie podklady a informácie o stavbe, za posledné 3 mesiace sme zaslali 1600 Eur a stavba skutočne veľmi pokročila o čom svedčia priložené fotografie. Blížime sa k finále:)</p>\n<p><strong>4.4.2014</strong> Na ďalšie vybavenie budovy a hlavne okná sme zaslali 500 Eur. Paulo je zanepraznený prácami na budove.</p>\n<p><strong>7.3.2014 </strong>Na strechu sme poslali 1000 Eur. Od Paula sme dostali následujúce fotky – stavba úspešne pokračuje:)</p>\n<p><strong>8.2.2014. </strong>Na hranoly na strechu sme zaslali prvých 500 Eur. Riaditeľ školy Paulo nám zaslal fotky a napísal : “<em style="font-size: 1em; line-height: 1.5em;">V minulosti sme tento spôsob prepravy používali aj na dovoz tehál, kameňov, piesku, a pod. Je to náročné. Drevo sme doviezli z obchodu, ktorý je od našej školy vzdialený 10 km. Na malé množstvo dreva by bolo použitie auta príliš drahé. “ </em> </p>\n<p><strong>14.1.2014.</strong> Súčasťou prevádzky školy je jej rozširovanie každý rok o ďalšie triedy  – to je základná legislatívna požiadavka pre školy v Tanzánií.</p>\n<p>Z tohto dôvodu škola svojpomocne pracuje na rozširovaní počtu tried. Budovu, ktorá je rozostavaná na fotografií je potrebné ukončiť. Boli sme požiadaní o finančnú pomoc, ktorá ma najvyššiu prioritu.</p>\n<p>Rozpočet na dokončenie triedy a domu učiteľov :</p>\n<table border="1" cellspacing="0" cellpadding="0" align="center">\n<tbody>\n<tr>\n<td style="width: 10%;"> </td>\n<td style="width: 60%;"><strong>Materiál</strong></td>\n<td><strong>Cena [€]</strong></td>\n</tr>\n<tr>\n<td>1.</td>\n<td>piesok</td>\n<td>164</td>\n</tr>\n<tr>\n<td>2.</td>\n<td>agregát</td>\n<td>328</td>\n</tr>\n<tr>\n<td>3.</td>\n<td>jadro budovy</td>\n<td>127</td>\n</tr>\n<tr>\n<td>4.</td>\n<td>voda</td>\n<td>545</td>\n</tr>\n<tr>\n<td>5.</td>\n<td>cement</td>\n<td> 1588</td>\n</tr>\n<tr>\n<td>6.</td>\n<td>vápno</td>\n<td> 73</td>\n</tr>\n<tr>\n<td>7.</td>\n<td>krytina G 28</td>\n<td> 1198</td>\n</tr>\n<tr>\n<td>8.</td>\n<td>hranoly 2x 4 x 15</td>\n<td> 590</td>\n</tr>\n<tr>\n<td>9.</td>\n<td>hranoly 2x 4 x 15</td>\n<td> 872</td>\n</tr>\n<tr>\n<td>10.</td>\n<td>dvere</td>\n<td> 1362</td>\n</tr>\n<tr>\n<td>11.</td>\n<td>okná</td>\n<td> 363</td>\n</tr>\n<tr>\n<td>12.</td>\n<td>malé okná</td>\n<td> 182</td>\n</tr>\n<tr>\n<td>13.</td>\n<td>strop</td>\n<td> 490</td>\n</tr>\n<tr>\n<td>14.</td>\n<td>maliarská emulzia</td>\n<td> 95</td>\n</tr>\n<tr>\n<td>15.</td>\n<td>olejová farba</td>\n<td> 142</td>\n</tr>\n<tr>\n<td>16.</td>\n<td>ancient type</td>\n<td> 41</td>\n</tr>\n<tr>\n<td>17.</td>\n<td>PVC trúbky</td>\n<td> 68</td>\n</tr>\n<tr>\n<td>18.</td>\n<td>kryt otvoru</td>\n<td> 64</td>\n</tr>\n<tr>\n<td>19.</td>\n<td>septic tash</td>\n<td> 681</td>\n</tr>\n<tr>\n<td>20.</td>\n<td>solvent</td>\n<td> 30</td>\n</tr>\n<tr>\n<td>21.</td>\n<td>amora</td>\n<td> 136</td>\n</tr>\n<tr>\n<td>22.</td>\n<td>tmel</td>\n<td> 91</td>\n</tr>\n<tr>\n<td>23.</td>\n<td>brúsny papier</td>\n<td> 14</td>\n</tr>\n<tr>\n<td>24.</td>\n<td>výplň</td>\n<td> 68</td>\n</tr>\n<tr>\n<td> </td>\n<td><strong>Spolu</strong></td>\n<td><strong> 9312</strong></td>\n</tr>\n</tbody>\n</table>', '', '', 1),
+(17, 'sk', 'potravinova-pomoc', 'Potravinová pomoc', '', 'Potravinová pomoc', '<p>Základnou a každodennou potravinou pre ľudí v provincií Maretadu je kukurica a fazuľa. Výnimočne sa na ich stole objaví mäso zo sliepky. Preto sme podporili nákup osiva a to kukurice a fazule, ktoré si svojpomocne vysejú a dopestujú. Tento spôsob je oveľa úspornejší ako kupovať na trhu dopestované potraviny.</p>\n<p>Na priložených fotkách je fazuľa a kukurica, ktorú zakúpili na sejbu.</p>', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -188,7 +198,9 @@ INSERT INTO `article_media` (`id_article`, `id_media`, `online`, `ordering`, `ur
 (5, 1, 1, 1, NULL, NULL),
 (6, 2, 1, 1, NULL, NULL),
 (7, 4, 1, 1, NULL, NULL),
-(8, 3, 1, 1, NULL, NULL);
+(8, 3, 1, 1, NULL, NULL),
+(17, 5, 1, 1, NULL, NULL),
+(17, 6, 1, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -535,7 +547,7 @@ CREATE TABLE IF NOT EXISTS `media` (
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Medium date',
   `link` varchar(255) DEFAULT NULL COMMENT 'Link to a resource, attached to this medium',
   `square_crop` enum('tl','m','br') NOT NULL DEFAULT 'm'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `media`
@@ -545,7 +557,9 @@ INSERT INTO `media` (`id_media`, `type`, `file_name`, `path`, `base_path`, `copy
 (1, 'picture', '1.jpg', 'files/1.jpg', 'files/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (2, 'picture', '2.jpg', 'files/2.jpg', 'files/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (3, 'picture', '4.jpg', 'files/4.jpg', 'files/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(4, 'picture', '3.jpg', 'files/3.jpg', 'files/', NULL, '', '0000-00-00 00:00:00', NULL, 'm');
+(4, 'picture', '3.jpg', 'files/3.jpg', 'files/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
+(5, 'picture', 'semienka.jpg', 'files/semienka.jpg', 'files/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(6, 'picture', 'fazula.jpg', 'files/fazula.jpg', 'files/', '', '', '0000-00-00 00:00:00', '', 'm');
 
 -- --------------------------------------------------------
 
@@ -560,6 +574,14 @@ CREATE TABLE IF NOT EXISTS `media_lang` (
   `alt` varchar(500) DEFAULT NULL,
   `description` longtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `media_lang`
+--
+
+INSERT INTO `media_lang` (`lang`, `id_media`, `title`, `alt`, `description`) VALUES
+('sk', 5, 'Semienka fazule', '', ''),
+('sk', 6, 'Fazuľa obsahuje veľa bielkov&iacute;n', '', '');
 
 -- --------------------------------------------------------
 
@@ -648,7 +670,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
 --
 
 INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `category`, `title`, `content`, `read`) VALUES
-(1, '2015-02-20', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
+(1, '2015-02-21', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
 
 -- --------------------------------------------------------
 
@@ -689,7 +711,7 @@ CREATE TABLE IF NOT EXISTS `page` (
   `priority` int(1) unsigned NOT NULL DEFAULT '5' COMMENT 'Page priority',
   `used_by_module` tinyint(1) unsigned DEFAULT NULL,
   `deny_code` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `page`
@@ -699,11 +721,14 @@ INSERT INTO `page` (`id_page`, `id_parent`, `id_menu`, `id_type`, `id_subnav`, `
 (1, 0, 2, 0, 0, '404', 0, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
 (2, 0, 2, 0, 0, '401', 0, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
 (3, 0, 2, 0, 0, '403', 0, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
-(4, 0, 1, 0, 0, 'home', 1, 0, 1, 1, NULL, 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 15:19:42', '0000-00-00 00:00:00', 1, 1, 'home_page', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(5, 6, 1, 0, 0, 'podporovani-studenti', 3, 1, 1, 0, 'admin', 'admin', '2015-02-20 15:37:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:14:08', '0000-00-00 00:00:00', 1, 1, 'page_content', 'page_content', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(6, 0, 1, 0, 0, 'podporujeme', 2, 0, 1, 0, 'admin', 'admin', '2015-02-20 16:01:51', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 16:15:16', '0000-00-00 00:00:00', 1, 1, 'page', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(7, 6, 1, 0, 0, 'cakatelia-na-podporu', 4, 1, 1, 0, 'admin', NULL, '2015-02-20 16:53:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, 'page_content', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(8, 0, 1, 0, 0, 'aktuality', 5, 0, 1, 0, 'admin', 'admin', '2015-02-20 17:14:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:16:58', '0000-00-00 00:00:00', 0, 0, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404');
+(4, 0, 1, 0, 0, 'home', 1, 0, 1, 1, NULL, 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 11:05:09', '0000-00-00 00:00:00', 1, 1, 'home_page', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(5, 6, 1, 0, 0, 'podporovani-studenti', 1, 1, 1, 0, 'admin', 'admin', '2015-02-20 15:37:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 10:53:44', '0000-00-00 00:00:00', 1, 1, 'page_student_list', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(6, 0, 1, 0, 0, 'podporujeme', 2, 0, 1, 0, 'admin', 'admin', '2015-02-20 16:01:51', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 10:47:58', '0000-00-00 00:00:00', 1, 1, 'page', 'page_content', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(7, 6, 1, 0, 0, 'cakatelia-na-podporu', 2, 1, 1, 0, 'admin', 'admin', '2015-02-20 16:53:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 10:53:51', '0000-00-00 00:00:00', 1, 1, 'page_student_list', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(8, 0, 1, 0, 0, 'aktuality', 5, 0, 1, 0, 'admin', 'admin', '2015-02-20 17:14:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-20 17:16:58', '0000-00-00 00:00:00', 0, 0, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(9, 0, 1, 0, 0, 'projekty', 6, 0, 1, 0, 'admin', 'admin', '2015-02-21 21:42:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 21:48:25', '0000-00-00 00:00:00', 1, 1, 'page_projects', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(10, 9, 1, 0, 0, 'aktualne', 7, 1, 1, 0, 'admin', 'admin', '2015-02-21 21:44:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 22:06:52', '0000-00-00 00:00:00', 1, 1, 'page_content', 'page_content', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(11, 9, 1, 0, 0, 'realizovane', 8, 1, 1, 0, 'admin', 'admin', '2015-02-21 22:14:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-21 22:15:20', '0000-00-00 00:00:00', 1, 1, 'page_content', 'page_content', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404');
 
 -- --------------------------------------------------------
 
@@ -732,15 +757,19 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (1, 1, 1, NULL, 0, NULL, '', '', '', 0),
 (2, 2, 1, NULL, 0, NULL, '', '', '', 0),
 (3, 3, 1, NULL, 0, NULL, '', '', '', 0),
-(4, 4, 1, NULL, 0, 1, '', '', '', 0),
+(4, 4, 1, NULL, 1, 1, '', '', '', 0),
+(4, 13, 1, NULL, 1, 1, '', '', '', 1),
 (5, 5, 1, NULL, 2, NULL, '', '', '', 1),
 (5, 6, 1, NULL, 1, NULL, '', '', '', 1),
-(6, 9, 1, NULL, 1, NULL, '', '', '', 1),
+(6, 9, 1, NULL, 2, NULL, '', '', '', 1),
+(6, 14, 1, NULL, 1, NULL, '', '', '', 1),
 (7, 7, 1, NULL, 2, NULL, '', '', '', 1),
 (7, 8, 1, NULL, 1, NULL, '', '', '', 1),
 (8, 10, 1, NULL, 3, NULL, '', '', '', 1),
 (8, 11, 1, NULL, 2, NULL, '', '', '', 1),
-(8, 12, 1, NULL, 1, NULL, '', '', '', 1);
+(8, 12, 1, NULL, 1, NULL, '', '', '', 1),
+(10, 15, 1, NULL, 2, NULL, '', '', '', 1),
+(11, 17, 1, NULL, 1, NULL, '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -774,8 +803,11 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 4, 'home', '', 'Domov', '', 'Domov', '', 'Domov', '', '', 1),
 ('sk', 5, 'podporovani-studenti', '', 'Podporovaní študenti', '', 'Podporovaní študenti', '', 'Podporovaní študenti', '', '', 1),
 ('sk', 6, 'podporujeme', '', 'Podporujeme', '', 'Podporujeme', '', 'Podporujeme', '', '', 1),
-('sk', 7, 'cakatelia-na-podporu', '', 'Čakatelia na podporu', '', 'Čakatelia na podporu', '', 'Čakatelia na podporu', NULL, NULL, 1),
-('sk', 8, 'aktuality', '', 'Aktuality', '', 'Aktuality', '', 'Aktuality', '', '', 1);
+('sk', 7, 'cakatelia-na-podporu', '', 'Čakatelia na podporu', '', 'Čakatelia na podporu', '', 'Čakatelia na podporu', '', '', 1),
+('sk', 8, 'aktuality', '', 'Aktuality', '', 'Aktuality', '', 'Aktuality', '', '', 1),
+('sk', 9, 'projekty', '', 'Projekty', '', '', '', 'Projekty', '', '', 1),
+('sk', 10, 'aktualne', '', 'Aktuálne', '', '', '', 'Aktuálne', '', '', 1),
+('sk', 11, 'realizovane', '', 'Realizované', '', '', '', 'Realizované', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -1008,7 +1040,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `name` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `lang` varchar(8) NOT NULL DEFAULT ''
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `setting`
@@ -1043,7 +1075,7 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 (26, 'force_lang_urls', '0', ''),
 (27, 'tinyblockformats', 'p,h2,h3,h4,h5,pre,div', ''),
 (28, 'article_allowed_tags', 'h2,h3,h4,h5,h6,em,img,iframe,table,object,thead,tbody,tfoot,tr,th,td,param,embed,map,p,a,ul,ol,li,br,b,strong', ''),
-(29, 'filemanager_file_types', 'gif,jpe,jpeg,jpg,png,flv,mpeg,mpg,mp3,pdf', ''),
+(29, 'filemanager_file_types', 'gif,jpe,jpeg,jpg,png,mpeg,mpg,mp3,doc,docx,pdf,rar,word,zip', ''),
 (30, 'default_admin_lang', 'en', ''),
 (31, 'upload_autostart', '1', ''),
 (32, 'resize_on_upload', '1', ''),
@@ -1056,8 +1088,9 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 (39, 'notification', '1', ''),
 (40, 'notification_date', '', ''),
 (41, 'site_title', 'My website', 'sk'),
-(42, 'last_notification_refresh', '2015-02-20 15:14:34', ''),
-(43, 'last_version', '1.0.7', '');
+(42, 'last_notification_refresh', '2015-02-21 20:24:23', ''),
+(43, 'last_version', '1.0.7', ''),
+(44, 'media_thumb_unsharp', '', '');
 
 -- --------------------------------------------------------
 
@@ -1146,22 +1179,29 @@ CREATE TABLE IF NOT EXISTS `url` (
   `path_ids` varchar(50) DEFAULT NULL,
   `full_path_ids` varchar(50) DEFAULT NULL,
   `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `url`
 --
 
 INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`, `path`, `path_ids`, `full_path_ids`, `creation_date`) VALUES
-(3, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-02-20 15:19:42'),
-(24, 6, 'page', 1, 1, 'sk', 'podporujeme', '6', '6', '2015-02-20 16:15:17'),
-(28, 7, 'page', 1, 1, 'sk', 'podporujeme/cakatelia-na-podporu', '6/7', '6/7', '2015-02-20 16:53:48'),
-(29, 7, 'article', 1, 1, 'sk', 'podporujeme/cakatelia-na-podporu/emiliana-nicodemus-daffi', '6/7/7', '6/7/7', '2015-02-20 16:54:38'),
-(30, 8, 'article', 1, 1, 'sk', 'podporujeme/cakatelia-na-podporu/naomi-naftali-yona', '6/7/8', '6/7/8', '2015-02-20 16:55:13'),
-(31, 9, 'article', 1, 1, 'sk', 'podporujeme/ako-podporovat', '6/9', '6/9', '2015-02-20 17:02:19'),
-(32, 5, 'page', 1, 1, 'sk', 'podporujeme/podporovani-studenti', '6/5', '6/5', '2015-02-20 17:14:08'),
-(33, 5, 'article', 1, 1, 'sk', 'podporujeme/podporovani-studenti/basirista-dahaye-duay', '6/5/5', '6/5/5', '2015-02-20 17:14:08'),
-(34, 6, 'article', 1, 1, 'sk', 'podporujeme/podporovani-studenti/paschal-emmanuel-awe', '6/5/6', '6/5/6', '2015-02-20 17:14:09');
+(47, 6, 'page', 1, 1, 'sk', 'podporujeme', '6', '6', '2015-02-21 10:47:59'),
+(48, 9, 'article', 1, 1, 'sk', 'podporujeme/ako-podporovat', '6/9', '6/9', '2015-02-21 10:47:59'),
+(55, 5, 'page', 1, 1, 'sk', 'podporujeme/podporovani-studenti', '6/5', '6/5', '2015-02-21 10:53:44'),
+(56, 5, 'article', 1, 1, 'sk', 'podporujeme/podporovani-studenti/basirista-dahaye-duay', '6/5/5', '6/5/5', '2015-02-21 10:53:44'),
+(57, 6, 'article', 1, 1, 'sk', 'podporujeme/podporovani-studenti/paschal-emmanuel-awe', '6/5/6', '6/5/6', '2015-02-21 10:53:44'),
+(58, 7, 'page', 1, 1, 'sk', 'podporujeme/cakatelia-na-podporu', '6/7', '6/7', '2015-02-21 10:53:51'),
+(59, 7, 'article', 1, 1, 'sk', 'podporujeme/cakatelia-na-podporu/emiliana-nicodemus-daffi', '6/7/7', '6/7/7', '2015-02-21 10:53:52'),
+(60, 8, 'article', 1, 1, 'sk', 'podporujeme/cakatelia-na-podporu/naomi-naftali-yona', '6/7/8', '6/7/8', '2015-02-21 10:53:52'),
+(62, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-02-21 11:05:10'),
+(63, 13, 'article', 1, 1, 'sk', 'home/skola-yedidiass', '4/13', '4/13', '2015-02-21 11:05:10'),
+(64, 14, 'article', 1, 1, 'sk', 'podporujeme/podporte-nas-2-z-dane', '6/14', '6/14', '2015-02-21 20:44:37'),
+(69, 9, 'page', 1, 1, 'sk', 'projekty', '9', '9', '2015-02-21 21:48:25'),
+(81, 10, 'page', 1, 1, 'sk', 'projekty/aktualne', '9/10', '9/10', '2015-02-21 22:06:52'),
+(82, 15, 'article', 1, 1, 'sk', 'projekty/aktualne/dokoncenie-triedy-a-domu-uciteov', '9/10/15', '9/10/15', '2015-02-21 22:06:52'),
+(86, 11, 'page', 1, 1, 'sk', 'projekty/realizovane', '9/11', '9/11', '2015-02-21 22:15:20'),
+(87, 17, 'article', 1, 1, 'sk', 'projekty/realizovane/potravinova-pomoc', '9/11/17', '9/11/17', '2015-02-21 22:15:20');
 
 -- --------------------------------------------------------
 
@@ -1502,7 +1542,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `article_comment`
 --
@@ -1567,7 +1607,7 @@ MODIFY `id_item_definition` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `menu`
 --
@@ -1597,7 +1637,7 @@ MODIFY `id_notification` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT
 -- AUTO_INCREMENT for table `page`
 --
 ALTER TABLE `page`
-MODIFY `id_page` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `id_page` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `resource`
 --
@@ -1612,7 +1652,7 @@ MODIFY `id_role` smallint(4) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-MODIFY `id_setting` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
+MODIFY `id_setting` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT for table `tag`
 --
@@ -1632,7 +1672,7 @@ MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT for table `user`
 --
