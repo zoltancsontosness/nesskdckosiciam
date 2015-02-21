@@ -284,7 +284,24 @@ if ( ! function_exists('repeater'))
 		return (($num > 0) ? str_repeat($data, $num) : '');
 	}
 }
+//-------------------------------------------------------------------------
 
+/**
+ * Trim_newlines function
+ *
+ * Delete new lines from string
+ *
+ * @access	public
+ * @param	string
+ * @return	string
+ */
+if ( ! function_exists('trim_newlines'))
+{
+	function trim_newlines($string)
+	{
+		return trim($string, "\n");
+	}
+}
 
 /* End of file string_helper.php */
 /* Location: ./system/helpers/string_helper.php */

@@ -1,3 +1,4 @@
+<script src="<ion:theme_url/>assets/js/lightbox.min.js"></script>
 <!-- start footer -->
 <div class="footer_bg">
   <div class="container">

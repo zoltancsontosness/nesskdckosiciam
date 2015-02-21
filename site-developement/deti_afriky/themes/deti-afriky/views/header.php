@@ -15,6 +15,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.web/js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="<ion:theme_url/>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="<ion:theme_url/>assets/css/lightbox.css" rel="stylesheet" type="text/css" media="all" />
     <!-- start plugins -->
     <script type="text/javascript" src="<ion:theme_url/>assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="<ion:theme_url/>assets/js/bootstrap.js"></script>

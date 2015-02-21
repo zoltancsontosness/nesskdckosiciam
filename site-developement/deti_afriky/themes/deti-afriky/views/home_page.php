@@ -84,7 +84,7 @@
 			</div>
 		</div>
 
-		<!----start-img-cursual---->
+		<!--start-img-cursual-->
 		<h2>Podporovaní študenti</h2>
 
 		<div id="owl-demo" class="owl-carousel text-center">
@@ -112,7 +112,7 @@
 			</ion:page>
 
 		</div>
-		<!----//End-img-cursual---->
+		<!--//End-img-cursual-->
 	</div>
 </div>
 

@@ -6,22 +6,19 @@
             <article class="col-xs-12 col-lg-9">
                 <ion:pages parent="this">
                     <h2><ion:page:title /></h2>
-                    <div class="img-thumbnail">
                         <ion:articles limit="2">
-                            <div class="col-xs-12 col-lg-6">
-                                <ion:article>
-                                    <ion:media limit="1">
-                                        <img class="img-small img-responsive" src="<ion:src />" alt="<ion:alt />"/>
-                                    </ion:media>
-                                    <ion:title tag="h4"/>
-                                    <div class="para">
-                                        <ion:content characters="150"/>
-                                    </div>
-                                </ion:article>
+                            <div class="img-thumbnail">
+                                <div class="col-xs-12 col-lg-12">
+                                    <ion:article>
+                                        <ion:title tag="h4"/>
+                                        <div class="para">
+                                            <ion:content characters="270" function="strip_tags"/>
+                                        </div>
+                                    </ion:article>
+                                </div>
+                                <a href="<ion:article:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
                             </div>
                         </ion:articles>
-                        <a href="<ion:page:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
-                    </div>
                 </ion:pages>
                 <ion:articles>
                     <ion:article>
