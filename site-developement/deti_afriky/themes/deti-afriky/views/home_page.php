@@ -24,32 +24,28 @@
 	<div class="container">
 		<div class="main row">
 			<div class="col-md-3 images_1_of_4 text-center">
-				<span class="bg"><img src="<ion:theme_url/>assets/images/icon1.png" style="max-width: 120px;"
-									  border="0"></span>
+				<img class="bg" src="<ion:theme_url/>assets/images/icon1.png" style="max-width: 120px;" alt="just image" />
 				<h4><a href="#">Podporte nás 2% z dane</a></h4>
 
 				<p class="para">Budeme Vám veľmi vďačný za Vašu podporu 2% z Vašej dane.</p>
 				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
 			</div>
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<span class="bg"><img src="<ion:theme_url/>assets/images/icon2.png" style="max-width: 120px;"
-									  border="0"></span>
+				<img class="bg" src="<ion:theme_url/>assets/images/icon2.png" style="max-width: 120px;" alt="just image" />
 				<h4><a href="#">Podporovaní študenti</a></h4>
 
 				<p class="para">Momentálne podporujeme 26 študentov, ktorí sú z veľmi chudobných pomerov.</p>
 				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
 			</div>
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<span class="bg"><img src="<ion:theme_url/>assets/images/icon3.png" style="max-width: 120px;"
-									  border="0"></span>
+				<img class="bg" src="<ion:theme_url/>assets/images/icon3.png" style="max-width: 120px;" alt="just image" />
 				<h4><a href="#">Čakatelia na podporu</a></h4>
 
 				<p class="para">Študenti čakajúci na Vašu podporu.</p>
 				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
 			</div>
 			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<span class="bg"><img src="<ion:theme_url/>assets/images/icon4.png" style="max-width: 120px;"
-									  border="0"></span>
+				<img class="bg" src="<ion:theme_url/>assets/images/icon4.png" style="max-width: 120px;" alt="just image" />
 				<h4><a href="#">Napíšte nám</a></h4>
 
 				<p class="para">V prípade, že chcete podporovať študenta, kontaktujte nás.</p>
@@ -64,7 +60,7 @@
 	<div class="container">
 		<div class="main row">
 			<div class="col-md-6 content_left">
-				<img src="<ion:theme_url/>assets/images/pic1.jpg" alt="" class="img-responsive">
+				<img src="<ion:theme_url/>assets/images/pic1.jpg" alt="just image" class="img-responsive" />
 			</div>
 			<div class="col-md-6 content_right">
 				<h4>Príležitosť stať sa dobrovoľníkom v Tanzánií</h4>
@@ -94,18 +90,18 @@
 					<div class="item">
 						<div class="cau_left">
 							<ion:article:medias type="picture" limit="1">
-								<img class="lazyOwl itemFoto" data-src="<ion:media:src />" alt="<ion:media:alt />">
+								<img class="lazyOwl itemFoto" src="#" data-src="<ion:media:src />" alt="<ion:article:title />" />
 							</ion:article:medias>
 						</div>
 						<div class="cau_left">
 							<h4>
 								<ion:article:title/>
 							</h4>
-							<p>
+							<div class="para">
 								<ion:article:subtitle/>
 								<br/>
 								<ion:article:content paragraph="1"/>
-							</p>
+							</div>
 						</div>
 					</div>
 				</ion:articles>

@@ -4,39 +4,52 @@
     <div class="container">
         <div class="about details row">
             <article class="col-xs-12 col-lg-9">
-                <ion:pages parent="this">
-                    <h2><ion:page:title /></h2>
-                    <div class="img-thumbnail">
-                        <ion:articles limit="2">
-                            <div class="col-xs-12 col-lg-6">
-                                <ion:article>
-                                    <ion:media limit="1">
-                                        <img class="img-small img-responsive" src="<ion:src />" alt="<ion:alt />"/>
-                                    </ion:media>
-                                    <ion:title tag="h4"/>
-                                    <div class="para">
-                                        <ion:content characters="150"/>
-                                    </div>
-                                </ion:article>
-                            </div>
-                        </ion:articles>
-                        <a href="<ion:page:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
-                    </div>
-                </ion:pages>
                 <ion:articles>
                     <ion:article>
-                        <h2><ion:title /></h2>
-                        <div class="img-thumbnail">
-                            <div class="col-xs-12 col-lg-12">
-                                <div class="para">
-                                    <ion:content characters="270" function="strip_tags"/>
+                        <div class="clearfix">
+                            <h2><ion:title /></h2>
+                            <ion:article:medias limit="1">
+                                <div class="pull-left">
+                                    <a href="<ion:article:url />">
+                                        <img class="media-object bg" src="<ion:media:src />" alt="<ion:media:alt />">
+                                    </a>
+                                </div>
+                            </ion:article:medias>
+                            <div class="media-body">
+                                <div class="full-width">
+                                    <div class="col-xs-12 col-lg-12">
+                                        <div class="para">
+                                            <ion:content characters="270" function="strip_tags"/>
+                                        </div>
+                                    </div>
+                                    <a href="<ion:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
                                 </div>
                             </div>
-                            <a href="<ion:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
                         </div>
+                        <hr/>
                     </ion:article>
                 </ion:articles>
-
+                <ion:pages parent="this">
+                    <div class="media">
+                        <h2><ion:page:title /></h2>
+                        <ion:page:medias limit="1">
+                            <div class="pull-left">
+                                <a href="<ion:page:url />">
+                                    <img class="media-object bg" src="<ion:media:src />" alt="<ion:media:alt />">
+                                </a>
+                            </div>
+                        </ion:page:medias>
+                        <div class="media-body">
+                            <div class="full-width">
+                                <div class="para">
+                                    <ion:page:subtitle helper="trim_newlines"/>
+                                </div>
+                                <a href="<ion:page:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                </ion:pages>
             </article>
             <ion:partial view="aside" />
         </div>

@@ -2,6 +2,7 @@
 * 	Owl Carousel Owl Demo Theme 
 *	v1.24
 */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300&subset=latin,latin-ext);
     #owl-demo .item{
        margin: 0.5em;
 		transition: 0.5s all;
@@ -52,10 +53,12 @@
 	text-decoration:none;
 }
 .item p{
-	font-family: 'open_sansregular';
-	font-size: 13px;
-	color: #3b3b3b;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 	line-height: 1.8em;
+	color: #868686;
+	min-height: 80px;
+	font-weight: 400;
 }
 /*---//--*/
 /* Styling Next and Prev buttons */

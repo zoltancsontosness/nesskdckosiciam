@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /projekt8/img_0793.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 143571,
+  8 => 1424078131,
+  9 => 1424078131,
+  10 => 1424078131,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 143571,
+  'atime' => 1424078131,
+  'mtime' => 1424078131,
+  'ctime' => 1424078131,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 143571,
+    'filename' => 'img_0793.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt8',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt8/img_0793.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 143571,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 336,
+      'resolution_y' => 448,
+      'compression_ratio' => 0.31792756164965985110626434106961823999881744384765625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 90,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5538160,
+      'path' => 'C:\\softy\\xampp\\htdocs\\projekt_1/files/.thumbs/.backend/08/5c/4817_img_0793ddc2d5fffdf2cc225893c302-500x500.jpg',
+      'filesize' => 143571,
+      'imageinfo' => 
+      array (
+        0 => 336,
+        1 => 448,
+        2 => 2,
+        3 => 'width="336" height="448"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 758215.111111111124046146869659423828125,
+      'usage_guestimate' => 1061501.15555555559694766998291015625,
+      'usage_min_advised' => 6599661.15555555559694766998291015625,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.4 MB',
+  'memory estimated' => '1.1 MB',
+  'memory suggested' => '6.6 MB',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/08/5c/4817_img_0793ddc2d5fffdf2cc225893c302-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 336,
+    1 => 448,
+    2 => 2,
+    3 => 'width="336" height="448"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/08/5c/4817_img_0793ddc2d5fffdf2cc225893c302-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 90,
+    1 => 120,
+    2 => 2,
+    3 => 'width="90" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

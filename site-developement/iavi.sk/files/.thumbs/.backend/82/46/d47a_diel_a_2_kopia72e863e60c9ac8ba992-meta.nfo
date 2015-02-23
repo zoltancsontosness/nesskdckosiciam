@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /projekt4/diel_a_2_kopia.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 80567,
+  8 => 1424077312,
+  9 => 1424077312,
+  10 => 1424077312,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 80567,
+  'atime' => 1424077312,
+  'mtime' => 1424077312,
+  'ctime' => 1424077312,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 80567,
+    'filename' => 'diel_a_2_kopia.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt4',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt4/diel_a_2_kopia.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 80567,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 448,
+      'resolution_y' => 318,
+      'compression_ratio' => 0.188508441898772083344937300353194586932659149169921875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 85,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5538240,
+      'path' => 'C:\\softy\\xampp\\htdocs\\projekt_1/files/.thumbs/.backend/82/46/d47a_diel_a_2_kopia72e863e60c9ac8ba992-500x500.jpg',
+      'filesize' => 80567,
+      'imageinfo' => 
+      array (
+        0 => 448,
+        1 => 318,
+        2 => 2,
+        3 => 'width="448" height="318"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 717596.4444444444961845874786376953125,
+      'usage_guestimate' => 1004635.022222222178243100643157958984375,
+      'usage_min_advised' => 6542875.022222221828997135162353515625,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.4 MB',
+  'memory estimated' => '1.0 MB',
+  'memory suggested' => '6.5 MB',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/82/46/d47a_diel_a_2_kopia72e863e60c9ac8ba992-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 448,
+    1 => 318,
+    2 => 2,
+    3 => 'width="448" height="318"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/82/46/d47a_diel_a_2_kopia72e863e60c9ac8ba992-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 85,
+    2 => 2,
+    3 => 'width="120" height="85"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
