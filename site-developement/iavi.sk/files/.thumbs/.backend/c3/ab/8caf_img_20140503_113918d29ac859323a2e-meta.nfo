@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /projekt5/img_20140503_113918.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 101584,
+  8 => 1424077458,
+  9 => 1424077458,
+  10 => 1424077458,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 101584,
+  'atime' => 1424077458,
+  'mtime' => 1424077458,
+  'ctime' => 1424077458,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 101584,
+    'filename' => 'img_20140503_113918.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt5',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt5/img_20140503_113918.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 101584,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 448,
+      'resolution_y' => 336,
+      'compression_ratio' => 0.2249503968253968311241663968758075498044490814208984375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/c3/ab/8caf_img_20140503_113918d29ac859323a2e-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 448,
+    1 => 336,
+    2 => 2,
+    3 => 'width="448" height="336"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/c3/ab/8caf_img_20140503_113918d29ac859323a2e-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 90,
+    2 => 2,
+    3 => 'width="120" height="90"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
