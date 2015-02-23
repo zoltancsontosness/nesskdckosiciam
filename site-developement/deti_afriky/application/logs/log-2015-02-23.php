@@ -377,6 +377,7 @@ ERROR - 2015-02-23 14:29:42 --> Language file contains no data: language/sk/user
 ERROR - 2015-02-23 14:29:48 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 14:29:53 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 14:30:02 --> Language file contains no data: language/sk/user_lang
+<<<<<<< HEAD
 >>>>>>> af9d85ae73695b42738095de20bed3cdf201cc06
 ERROR - 2015-02-23 14:44:13 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 14:47:13 --> Language file contains no data: language/sk/user_lang
@@ -489,3 +490,8 @@ ERROR - 2015-02-23 15:50:27 --> Language file contains no data: language/sk/user
 ERROR - 2015-02-23 15:50:33 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 15:50:33 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 15:50:34 --> Language file contains no data: language/sk/user_lang
+=======
+ERROR - 2015-02-23 14:35:32 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:35:33 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:35:33 --> Language file contains no data: language/sk/user_lang
+>>>>>>> b8c1549160228e5e834e8f597cda7e59cea960ca
