@@ -997,3 +997,13 @@ a{
 a:hover{
     color: inherit;
 }
+.full-width{
+    width: 100%;
+}
+.media-object{
+    width: 128px;
+    height: 128px;
+}
+hr{
+    border-top: 1px solid #ccc;
+}
