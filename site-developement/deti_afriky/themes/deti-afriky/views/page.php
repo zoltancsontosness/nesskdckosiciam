@@ -4,6 +4,19 @@
     <div class="container">
         <div class="about details row">
             <article class="col-xs-12 col-lg-9">
+                <ion:articles>
+                    <ion:article>
+                        <h2><ion:title /></h2>
+                        <div class="img-thumbnail">
+                            <div class="col-xs-12 col-lg-12">
+                                <div class="para">
+                                    <ion:content characters="270" function="strip_tags"/>
+                                </div>
+                            </div>
+                            <a href="<ion:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
+                        </div>
+                    </ion:article>
+                </ion:articles>
                 <ion:pages parent="this">
                     <h2><ion:page:title /></h2>
                     <div class="img-thumbnail">
@@ -23,20 +36,6 @@
                         <a href="<ion:page:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
                     </div>
                 </ion:pages>
-                <ion:articles>
-                    <ion:article>
-                        <h2><ion:title /></h2>
-                        <div class="img-thumbnail">
-                            <div class="col-xs-12 col-lg-12">
-                                <div class="para">
-                                    <ion:content characters="270" function="strip_tags"/>
-                                </div>
-                            </div>
-                            <a href="<ion:url />" class="fa-btn btn-1 btn-1e pull-right">Čítať viac &raquo;</a>
-                        </div>
-                    </ion:article>
-                </ion:articles>
-
             </article>
             <ion:partial view="aside" />
         </div>
