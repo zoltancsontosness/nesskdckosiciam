@@ -271,3 +271,11 @@ ERROR - 2015-02-23 13:02:56 --> Language file contains no data: language/sk/user
 ERROR - 2015-02-23 13:02:56 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 13:03:30 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-02-23 13:04:20 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:23:41 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:23:48 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:23:56 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:27:54 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:29:42 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:29:48 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:29:53 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-02-23 14:30:02 --> Language file contains no data: language/sk/user_lang
