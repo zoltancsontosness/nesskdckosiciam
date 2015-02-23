@@ -886,6 +886,9 @@ body {
     .detail h2{
         font-size: 2em;
     }
+    article .article-para{
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 320px) {
     .main {
@@ -918,6 +921,9 @@ body {
     }
     .blog_list ul li:nth-child(3){
         margin-left: 0;
+    }
+    article .article-para{
+        font-size: 12px;
     }
 }
 

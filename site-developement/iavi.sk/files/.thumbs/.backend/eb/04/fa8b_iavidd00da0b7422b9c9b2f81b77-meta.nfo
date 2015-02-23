@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /iavi.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 133140,
+  8 => 1424172948,
+  9 => 1424172948,
+  10 => 1424172948,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 133140,
+  'atime' => 1424172948,
+  'mtime' => 1424172948,
+  'ctime' => 1424172948,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 133140,
+    'filename' => 'iavi.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/iavi.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 133140,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 476,
+      'resolution_y' => 392,
+      'compression_ratio' => 0.2378451380552220884023739699841826222836971282958984375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/eb/04/fa8b_iavidd00da0b7422b9c9b2f81b77-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 476,
+    1 => 392,
+    2 => 2,
+    3 => 'width="476" height="392"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/eb/04/fa8b_iavidd00da0b7422b9c9b2f81b77-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 99,
+    2 => 2,
+    3 => 'width="120" height="99"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
