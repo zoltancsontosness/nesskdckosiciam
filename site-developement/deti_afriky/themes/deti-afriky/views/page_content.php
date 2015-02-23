@@ -9,7 +9,7 @@
                     <div class="article-para">
                         <ion:article:content />
                     </div>
-                    <ion:article:medias type="picture">
+                    <ion:article:medias>
                         <a href="<ion:media:src />" data-lightbox="project-gallery" data-title="<ion:media:title />">
                             <div class="col-xs-12 col-lg-4">
                                 <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive"/>
