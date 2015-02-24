@@ -12,7 +12,7 @@
                     <ion:article:medias>
                         <a href="<ion:media:src />" data-lightbox="project-gallery" data-title="<ion:media:title />">
                             <div class="col-xs-12 col-lg-4">
-                                <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive"/>
+                                <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive" style="max-height: 160px; margin-left: auto; margin-right: auto;" />
                             </div>
                         </a>
                     </ion:article:medias >

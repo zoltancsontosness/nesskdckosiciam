@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /podporovani_studenti/neema_peter_2014.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 41678,
+  8 => 1424780772,
+  9 => 1424780772,
+  10 => 1424780772,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 41678,
+  'atime' => 1424780772,
+  'mtime' => 1424780772,
+  'ctime' => 1424780772,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 41678,
+    'filename' => 'neema_peter_2014.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/deti_afriky/files/podporovani_studenti',
+    'filenamepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/deti_afriky/files/podporovani_studenti/neema_peter_2014.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 41678,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 355,
+      'resolution_y' => 426,
+      'compression_ratio' => 0.09186448896823821985702096526438253931701183319091796875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/deti_afriky/files/.thumbs/.backend/a5/4f/bf05_neema_peter_2014c77585f23f6ade8fb-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 355,
+    1 => 426,
+    2 => 2,
+    3 => 'width="355" height="426"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/deti_afriky/files/.thumbs/.backend/a5/4f/bf05_neema_peter_2014c77585f23f6ade8fb-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 100,
+    1 => 120,
+    2 => 2,
+    3 => 'width="100" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

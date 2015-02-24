@@ -231,7 +231,6 @@ body {
     font-size: 14px;
     line-height: 1.8em;
     color: #868686;
-    min-height: 80px;
     font-weight: 400;
 }
 .article-para{
@@ -964,11 +963,11 @@ body {
 .intro-img{
     width:100%;
     margin-bottom: 10px;
-    height: 275px;
-    overflow: hidden;
 }
 .intro-img > img{
     margin: auto;
+    max-width: 392px;
+    max-height: 275px;
 }
 .text-muted{
     margin-left: 10px;
