@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Po 23.Feb 2015, 15:50
+-- Čas generovania: Út 24.Feb 2015, 08:14
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `flag` smallint(1) DEFAULT '0',
   `has_url` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `priority` smallint(1) unsigned NOT NULL DEFAULT '5'
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article`
@@ -105,7 +105,11 @@ INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `pu
 (20, 'z-africkeho-dennika-25.6.-7.7.-2014', 'admin', 'admin', '2015-02-23 12:31:51', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-23 12:40:28', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (21, 'yedidiass', 'admin', 'admin', '2015-02-23 15:05:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-23 15:11:30', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (22, 'state-sa-dobrovonikom', 'admin', 'admin', '2015-02-23 15:22:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-23 15:24:33', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(23, 'onas', 'admin', 'admin', '2015-02-23 15:30:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-23 15:32:52', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
+(23, 'onas', 'admin', 'admin', '2015-02-23 15:30:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-23 15:32:52', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(24, 'podporte-nas-2-z-dane-1', 'admin', NULL, '2015-02-24 08:03:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-24 08:03:20', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(25, 'podporovani-studenti', 'admin', NULL, '2015-02-24 08:03:51', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-24 08:03:51', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(26, 'cakatelia-na-podporu', 'admin', NULL, '2015-02-24 08:04:21', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-24 08:04:21', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(27, 'napiste-nam', 'admin', NULL, '2015-02-24 08:04:40', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-02-24 08:04:40', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -181,7 +185,11 @@ INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `m
 (20, 'sk', 'z-africkeho-dennika-25.6.-7.7.-2014', 'Z afrického denníka (25.6. – 7.7. 2014)', '', '', '<p>V Budapešti som nastúpil do lietadla sám. V Istanbule sa ku mne pridali k traja bratia zo Sliezskej evanjelickej cirkvi: Michal Klus so synom Benom a Jirko Zietek. Na letisku pod bájnym Kilimandžarom sme pristáli v noci a hneď sme sa presunuli do neďalekej Arushe.<br /> Aká bude tá Afrika? Ako to tu zvládnem? Ako ma príjmú ľudia v Dongobeshi? Aké bude stretnutie s riaditeľom Paulom? V hlave mi vírilo množstvo otázok ale aj obáv. Po prvých stretnutiach s Martinom Tangom, riaditeľom školy v Dongobeshi a Zakom, pastorom v oblasti Manyara, kam máme namierené. som sa upokojil. Ľudia sú tu milí a pri každom stretnutí prejavujú radosť a nadšenie. Po krátkej adaptácií a príprave sa vydávame na cestu do Dongobesha.</p>\n<p>Cesty sú prašné, všade okolo množstvo ľudí, prepravujú sa hlavne peši a na bicykloch… Míňame územie Masajov a po únavnej ceste sme dorazili do Dongobesha. Dongobesh je 18 tisícové mestečko kde sme bývali a odtiaľ sme vyrážali na návštevy okolitých zborov v  osadách alebo mestách.<br /> Bývanie je tu veľmi skromné a všetko je zariadené veľmi jednoducho, ale funkčne. Domáci nám venujú veľa pozornosti a sú veľmi nápomocní. Hneď prvý deň sme boli na návšteve v Bindži a Endanachan, kde nás prijali domáci veľmi srdečne a strávili sme tam celý deň na spoločných službách Božích a seminároch. Nasledujúce dni sú rovnako hektické: cesty, návštevy nových miest Haydom, Mbulu, Dodoma, Haeraby… Stále noví ľudia, nové zážitky, svedectvá, silné príbehy. Veľmi silno je tu cítiť radosť ľudí, schopnosť tešiť sa a byť vďačný zato čo im život prináša. Sú veľmi radi ak sa môžu rozprávať s nami. Niektorí prosia o pomoc pre svoje detí, ale nikdy sa nesťažujú.<br /> Celá oblasť. kde sme boli, leží vo výške cca 2000 metrov nad morom, stále tam svieti slnko a fúka mierny vietor. Pôsobí to únavne a v kombinácií s naším nabitým programom a zážitkami v novom prostredí to spôsobuje, že večer sme už veľmi unavení.</p>\n<p>Návšteva u pastora Zaka, ktorý bol u nás minulý rok na návšteve, bola pre nás všetkých veľkým povzbudením a neobyčajne silným zážitkom. Zak sa spolu s manželkou stará o 19 adoptovaných detí. Býva v malom domčeku v ťažkých podmienkach. Strávili sme s nimi niekoľko hodín, niekoľko nezabudnuteľných hodín.<br /> Návšteva Paula Buru v Maretadu bola pre mňa dôležitým bodom pobytu. Bol som rád, že môžem osobne poznať Paula, vidieť školu, zoznámiť sa s učiteľmi, hovoriť so študentmi. Chcel som vidieť ako sú využívané prostriedky od podporovateľov, kde pestuje škola plodiny, v akých triedach sa učia študenti, aký je ich denný režim.<br /> Škola Yedidiass leží na okraji mestečka. Videl som aj okolie školy, výstavbu novej triedy, miesta odkiaľ dovážajú pomocou povozu s volmi vodu na pitie aj na stavbu. Je to veľmi náročné v týchto podmienkach zabezpečiť dostatok vody, jej filtráciu, prepravu. Sú to podmienky, ktoré sú pre našinca nepredstaviteľné. V Maretadu na rozdiel od Dongobesha nie je ani elektrina. Jedinou možnosťou na jej výrobu sú solárne nabíjačky alebo elektrocentrály. Učiteľ je tu vážené povolanie, ale jeho mesačný zárobok je len 160 eur.<br /> Škola má 137 študentov, 7 učiteľov, 3 zamestnancov, vlastní polia v okolí školy, kde sa pestuje kukurica, fazuľa a slnečnica pre vlastné potreby. Tiež má ihriská na futbal, volejbal a netball, čo je potrebné pre udelenie licencie škole zo strany štátu. Vyučovanie je cez pracovné dni od 8.00 do 17.00 hod. V piatok je výučba náboženstva. Vyučovacie predmety sú: matematika, svahilština, biológia, chémia, poľnohospodárstvo, angličtina, fyzika,  náuka o spoločnosti a literatúra. Všetky predmety, okrem svahilštiny, sa vyučujú v angličtine.</p>\n<p>Napriek týmto skutočnostiam som videl na učiteľoch a  študentoch nadšenie a vďačnosť, že môžu chodiť do školy, môžu sa učiť, získať vzdelanie, ktoré im veľmi pomôže pri uplatnení v spoločnosti. V Tanzánií sa za školu platí. A ak nemôžu za dieťa zaplatiť rodičia, je v podstate jedinou možnosťou podpora zo zahraničia.<br /> Som veľmi rád, že som dostal odpovede na všetky moje otázky a tiež s Paulom a predsedom rady školy Malkiadym prebral plány a potreby školy na ďalšie obdobie. Plánov je veľa a potreby sú značné.<br /> Činnosťou, ktorú robíme, umožňujeme spájať ochotných podporovateľov a podporované detí, ktoré to veľmi potrebujú. Paulo a učiteľský zbor si veľmi vážia túto podporu, lebo umožňuje aj rozširovanie školy na potrebný počet tried. Ostáva tu veľa práce, ale všetci veria, že spoločnými silami a hlavne s Božou pomocou sa podarí dobudovať školu a rozšíriť počet študentov.<br /> Z Maretadu a Dongobesha som priniesol veľa pozdravovm od pastora Zaka, Paula, Martina a iných pre nás všetkých a predovšetkým pre podporovateľov. Patrí vám veľká vďaka za to čo robíte.<br />Ak máte záujem o stretnutie s nami, radi k vám prídeme s osobnými svedectvami a ďalšími informáciami priamo z Afriky.</p>\n<p style="text-align: justify;"> </p>\n<p style="text-align: justify;">                                                                                  Laco Ivanecký a tím Deti Afriky</p>', '', '', 1),
 (21, 'sk', 'yedidiass', 'Škola Yedidiass', '', 'Škola Yedidiass', '<p>Škola <strong>Yedidiass</strong> sa nachádza v Tanzánii, v dištrikte Mbulu, pri oblasti Maretadu. Táto oblasť nie je ohraničená mestami alebo dedinami. Najbližšie väčšie mestá sú Dongobesh a Haydom.</p>\n<h3><strong>História školy</strong></h3>\n<p>Škola bola založená v roku 2003 s 22 študentmi (9 dievčat a 13 chlapcov)</p>\n<p>Na začiatku používali triedu v základnej škole. Neskôr sa stretávali od 3.30 do 12.30 večer, po vyučovaní základnej školy.</p>\n<p>Zo študentov, s ktorými začali je 7, o ktorých sa vie, že sú zamestnaní. Traja sú učitelia na základnej škole, traja sú učitelia na strednej škole a jeden sa stal vojakom.</p>\n<p>V roku 2004 požiadali lídrov o pozemok na vybudovanie školy a dostali pozemok s rozlohou 3 akre. Postavili malý dom zo 16tich železných plechov s tehlami spájanými blatom. Potom ako dostali vlastný pozemok začali šetriť a zbierať tehly a kamene, aby si mohli dovoliť pristaviť ďalšiu časť. Stavebný materiál bol na stavbu prevážaný na vozíku ťahanom kravou.</p>\n<p>V roku 2007 bol založený prvý pevný základ a bola postavená stena až do strešnej úrovne.</p>\n<p>V roku 2009 bola budova zastrešená (2 triedy a 3 miestnosti pre učiteľov). Zastrešovanie sa realizovalo v dvoch fázach. V marci a v júni. V roku 2012 mala škola 100 študentov (45 chlapcov a 55 dievčat) a 7 učiteľov.</p>\n<p>Škola má v máji 2014 sedem učiteľov, troch zamestnancov a 125 študentov z toho 61 chlapcov a 64 dievčat.</p>\n<p></p>\n<p><iframe width="100%" height="350" src="https://maps.google.sk/maps?f=d&amp;source=s_d&amp;saddr=-4.193541,35.194251&amp;daddr=Dongobesh,+Tanz%C3%A1nia&amp;geocode=FfsCwP8diwUZAg%3BFVr7wf8d5ngbAimrOAm51IU1GDHi8HiWnVqPtA&amp;sll=-4.19361,35.19478&amp;sspn=0.002127,0.004106&amp;t=h&amp;hl=sk&amp;mra=dme&amp;ie=UTF8&amp;ll=-4.19361,35.19478&amp;spn=0.002127,0.004106&amp;output=embed"></iframe></p>', '', '', 1),
 (22, 'sk', 'state-sa-dobrovonikom', 'Staňte sa dobrovoľníkom', '', 'Staňte sa dobrovoľníkom', '<p>Milí priatelia,</p>\n<p>Sme veľmi potešení, že pre náš projekt sa otvára ďalšia možnosť pomoci nami podporovaných škôl v Dongobesh a Maretadu.V spolupráci so Sliezskou diakoniou a CZ SECAV v Třinci je možnosť vyslania dobrovoľníka zo Slovenska do našich partnerských škôl v Tanzánií.</p>\n<p>Projekt pod názvom ROK MEDZINÁRODNÝM DOBROVOĽNÍKOM V TANZÁNIÍ zastrešuje Sliezska diakonia (<a title="Sliezska diakonia" href="http://www.sdfd.cz/" target="_blank">www.sdfd.cz</a>) za podpory Európskej únie.</p>\n<p>Prihlásiť sa môžu mladí ľudia vo veku od 17 do 30 rokov hovoriaci anglicky.<br />Viac informácií nájdete na tomto letáku :</p>', '', '', 1),
-(23, 'sk', 'onas', 'O nás', '', 'O nás', '<p>Projekt Deti Afriky zastrešuje OZ Kairos s podporou oboch Evanjelických zborov v Košiciach.<br />Projekt vznikol na základe partnerstva s projektom <a title="www.detiafriky.cz" href="http://www.detiafriky.cz/">detiafriky.cz</a> a na základe osobnej návštevy Tanzánie, ktorá sa uskutočnila od 29.9 – 12.10.2012.</p>\n<p>Veľkým oživením a podporou pre nás a pre projekt Deti Afriky bola návšteva pastora Zaka Malekwu z Tanzánie, ktorá je pre nás a pre našu prácu novým impulzom.<br />Následne od 25.6. do 7.7. 2014 sa zúčastnil jeden člen nášho tímu návštevy v Tanzánií v provincií Manyara  – viac o tomto pobyte v Galérií položka <em>Boli sme v Maretadu</em><br />Tešíme sa, že počet podporovateľov, ktorí pravidelne mesačne podporujú študentov v Yedidiass stúpa a veríme, že sa nájde ešte viac ľudí, ktorí majú pochopenie a nadšenie pre túto formu pomoci.</p>\n<p><strong>Ako to vzniklo :</strong></p>\n<p>Jeden z nás niekedy v roku 2011 narazil na informácie o projekte Děti Afriky, ktorý už niekoľko rokov realizuje evanjelický cirkevný zbor v Třinci.<br />Keďže viacerí sme mali srdce pre podporu Afriky aj v minulosti, slovo dalo slovo a skontaktovali sme Michala Klusa, farára v Třinci<br />a hlavného nositeľa tohto projektu.<br />V júni 2011 sme sa vybrali priamo do Třinca, kedy sme hovorili o konkrétnych možnostiach ako sa do tohto projektu zapojiť podporou detí. V auguste sme začali podporovať prvé deti v škole v Dongobeshi.<br />Vo februári 2012 sa podarilo zrealizovať návštevu Michala v Košiciach spolu s širšou prezentáciou tohto projektu. V priebehu roka sa nám podarilo podporovať spolu už 7 detí.<br />Medzitým sme premýšľali ako tento projekt posunúť ďalej.<br />Príležitosť prišla začiatkom októbra 2012 cez účasť jedného z nás na ceste priamo na miesto projektu, ktorý realizuje v Tanzánii Třinec. Tam bol nadviazaný osobný kontakt so strednou školou Yedidiass v Maretadu v Tanzánii.<br />Okrem fotodokumentácie bol z tejto cesty natočený aj filmový dokument. Takto sme sa mohli na vlastné oči presvedčiť, v akých podmienkach tu žijú miestni ľudia a tiež ako sa snažia vo svojej biede dať deťom vzdelanie a tým šancu na lepší život.</p>\n<p>Po návrate sme viedli diskusie o tom, ako ďalej, či pokračovať tak ako doteraz, alebo skúsiť rozbehnúť ďalší projekt. Naši priatelia v Třinci nás povzbudzovali urobiť krok viery a tiež vedomie, že to málo, čo môžeme my dať vie urobiť veľkú zmenu v živote tamojších ľudí nás viedlo k tomu, že sme sa rozhodli začať vlastný projekt podpory tejto školy.<br />Po dohode s priateľmi v Třinci naďalej pokračuje naša podpora tých detí, ktoré už podporujeme a naviac rozbiehame vlastný projekt. Sme veľmi vďační podpore a know-how, ktoré máme z Třinca, po dohode používame ten istý názov a chceme a v budúcnosti spolupracovať na tejto podpore.<br />Viac informácii o projekte v Čechách získate na www.detiafriky.cz.<br />Pred nami sa otvorila nová etapa našej priamej podpory školy Yedidiass v Maretadu. Škola bola do súčasného stavu vybudovaná vďaka štedrosti a obetavosti miestnych ľudí. V ich snahách im chceme pomôcť a spolupracovať s nimi na budovaní tejto školy a podpore konkrétnych študentov.</p>\n<p>Budeme radi, ak sa k nám pridáte.</p>\n<p><strong>Napíšte nám na <a href="mailto:detiafriky@detiafriky.sk">detiafriky@detiafriky.sk</a></strong></p>', '', '', 1);
+(23, 'sk', 'onas', 'O nás', '', 'O nás', '<p>Projekt Deti Afriky zastrešuje OZ Kairos s podporou oboch Evanjelických zborov v Košiciach.<br />Projekt vznikol na základe partnerstva s projektom <a title="www.detiafriky.cz" href="http://www.detiafriky.cz/">detiafriky.cz</a> a na základe osobnej návštevy Tanzánie, ktorá sa uskutočnila od 29.9 – 12.10.2012.</p>\n<p>Veľkým oživením a podporou pre nás a pre projekt Deti Afriky bola návšteva pastora Zaka Malekwu z Tanzánie, ktorá je pre nás a pre našu prácu novým impulzom.<br />Následne od 25.6. do 7.7. 2014 sa zúčastnil jeden člen nášho tímu návštevy v Tanzánií v provincií Manyara  – viac o tomto pobyte v Galérií položka <em>Boli sme v Maretadu</em><br />Tešíme sa, že počet podporovateľov, ktorí pravidelne mesačne podporujú študentov v Yedidiass stúpa a veríme, že sa nájde ešte viac ľudí, ktorí majú pochopenie a nadšenie pre túto formu pomoci.</p>\n<p><strong>Ako to vzniklo :</strong></p>\n<p>Jeden z nás niekedy v roku 2011 narazil na informácie o projekte Děti Afriky, ktorý už niekoľko rokov realizuje evanjelický cirkevný zbor v Třinci.<br />Keďže viacerí sme mali srdce pre podporu Afriky aj v minulosti, slovo dalo slovo a skontaktovali sme Michala Klusa, farára v Třinci<br />a hlavného nositeľa tohto projektu.<br />V júni 2011 sme sa vybrali priamo do Třinca, kedy sme hovorili o konkrétnych možnostiach ako sa do tohto projektu zapojiť podporou detí. V auguste sme začali podporovať prvé deti v škole v Dongobeshi.<br />Vo februári 2012 sa podarilo zrealizovať návštevu Michala v Košiciach spolu s širšou prezentáciou tohto projektu. V priebehu roka sa nám podarilo podporovať spolu už 7 detí.<br />Medzitým sme premýšľali ako tento projekt posunúť ďalej.<br />Príležitosť prišla začiatkom októbra 2012 cez účasť jedného z nás na ceste priamo na miesto projektu, ktorý realizuje v Tanzánii Třinec. Tam bol nadviazaný osobný kontakt so strednou školou Yedidiass v Maretadu v Tanzánii.<br />Okrem fotodokumentácie bol z tejto cesty natočený aj filmový dokument. Takto sme sa mohli na vlastné oči presvedčiť, v akých podmienkach tu žijú miestni ľudia a tiež ako sa snažia vo svojej biede dať deťom vzdelanie a tým šancu na lepší život.</p>\n<p>Po návrate sme viedli diskusie o tom, ako ďalej, či pokračovať tak ako doteraz, alebo skúsiť rozbehnúť ďalší projekt. Naši priatelia v Třinci nás povzbudzovali urobiť krok viery a tiež vedomie, že to málo, čo môžeme my dať vie urobiť veľkú zmenu v živote tamojších ľudí nás viedlo k tomu, že sme sa rozhodli začať vlastný projekt podpory tejto školy.<br />Po dohode s priateľmi v Třinci naďalej pokračuje naša podpora tých detí, ktoré už podporujeme a naviac rozbiehame vlastný projekt. Sme veľmi vďační podpore a know-how, ktoré máme z Třinca, po dohode používame ten istý názov a chceme a v budúcnosti spolupracovať na tejto podpore.<br />Viac informácii o projekte v Čechách získate na www.detiafriky.cz.<br />Pred nami sa otvorila nová etapa našej priamej podpory školy Yedidiass v Maretadu. Škola bola do súčasného stavu vybudovaná vďaka štedrosti a obetavosti miestnych ľudí. V ich snahách im chceme pomôcť a spolupracovať s nimi na budovaní tejto školy a podpore konkrétnych študentov.</p>\n<p>Budeme radi, ak sa k nám pridáte.</p>\n<p><strong>Napíšte nám na <a href="mailto:detiafriky@detiafriky.sk">detiafriky@detiafriky.sk</a></strong></p>', '', '', 1),
+(24, 'sk', 'podporte-nas-2-z-dane', 'PODPORTE NÁS 2% Z DANE', '', 'PODPORTE NÁS 2% Z DANE', '<p>Budeme Vám veľmi vďačný za Vašu podporu 2% z Vašej dane.</p>', NULL, NULL, 1),
+(25, 'sk', 'podporovani-studenti', 'PODPOROVANÍ ŠTUDENTI', '', 'PODPOROVANÍ ŠTUDENTI', '<p>Momentálne podporujeme 26 študentov, ktorí sú z veľmi chudobných pomerov.</p>', NULL, NULL, 1),
+(26, 'sk', 'cakatelia-na-podporu', 'ČAKATELIA NA PODPORU', '', 'ČAKATELIA NA PODPORU', '<p>Študenti čakajúci na Vašu podporu.</p>', NULL, NULL, 1),
+(27, 'sk', 'napiste-nam', 'NAPÍŠTE NÁM', '', 'NAPÍŠTE NÁM', '<p>V prípade, že chcete podporovať študenta, kontaktujte nás.</p>', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -233,7 +241,11 @@ INSERT INTO `article_media` (`id_article`, `id_media`, `online`, `ordering`, `ur
 (22, 30, 1, 1, NULL, NULL),
 (23, 34, 1, 1, NULL, NULL),
 (23, 35, 1, 2, NULL, NULL),
-(23, 36, 1, 3, NULL, NULL);
+(23, 36, 1, 3, NULL, NULL),
+(24, 29, 1, 1, NULL, NULL),
+(25, 27, 1, 1, NULL, NULL),
+(26, 28, 1, 1, NULL, NULL),
+(27, 37, 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -258,14 +270,15 @@ CREATE TABLE IF NOT EXISTS `article_type` (
   `ordering` int(11) DEFAULT '0',
   `description` text,
   `type_flag` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article_type`
 --
 
 INSERT INTO `article_type` (`id_type`, `type`, `ordering`, `description`, `type_flag`) VALUES
-(1, 'slider', 0, '', 10);
+(1, 'slider', 0, '', 10),
+(2, 'four-columns', 0, '', 17);
 
 -- --------------------------------------------------------
 
@@ -580,7 +593,7 @@ CREATE TABLE IF NOT EXISTS `media` (
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Medium date',
   `link` varchar(255) DEFAULT NULL COMMENT 'Link to a resource, attached to this medium',
   `square_crop` enum('tl','m','br') NOT NULL DEFAULT 'm'
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `media`
@@ -619,7 +632,8 @@ INSERT INTO `media` (`id_media`, `type`, `file_name`, `path`, `base_path`, `copy
 (30, 'picture', 'invyt_2015_da.jpg', 'files/invyt_2015_da.jpg', 'files/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
 (34, 'picture', 'riaditel_1.jpg', 'files/riaditel_1.jpg', 'files/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (35, 'picture', 'okolie_1.jpg', 'files/okolie_1.jpg', 'files/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(36, 'picture', 'budovy_1.jpg', 'files/budovy_1.jpg', 'files/', '', '', '0000-00-00 00:00:00', '', 'm');
+(36, 'picture', 'budovy_1.jpg', 'files/budovy_1.jpg', 'files/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(37, 'picture', 'icon4.png', 'files/icon4.png', 'files/', NULL, '', '0000-00-00 00:00:00', NULL, 'm');
 
 -- --------------------------------------------------------
 
@@ -757,7 +771,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
 --
 
 INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `category`, `title`, `content`, `read`) VALUES
-(1, '2015-02-23', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
+(1, '2015-02-24', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
 
 -- --------------------------------------------------------
 
@@ -848,8 +862,12 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (1, 1, 1, NULL, 0, NULL, '', '', '', 0),
 (2, 2, 1, NULL, 0, NULL, '', '', '', 0),
 (3, 3, 1, NULL, 0, NULL, '', '', '', 0),
-(4, 4, 1, NULL, 1, 1, 'article', '14.22', 'Staňte sa dobrovoľníkom', 0),
-(4, 13, 1, NULL, 1, 1, 'article', '13.21', 'Škola Yedidiass', 1),
+(4, 4, 1, NULL, 6, 1, 'article', '14.22', 'Staňte sa dobrovoľníkom', 0),
+(4, 13, 1, NULL, 5, 1, 'article', '13.21', 'Škola Yedidiass', 1),
+(4, 24, 1, NULL, 1, 2, 'article', '6.14', 'Podporte nás 2% z dane', 1),
+(4, 25, 1, NULL, 2, 2, 'page', '5', 'Podporovaní študenti', 1),
+(4, 26, 1, NULL, 3, 2, 'page', '7', 'Čakatelia na podporu', 1),
+(4, 27, 1, NULL, 4, 2, 'article', '15.23', 'O nás', 1),
 (5, 5, 1, NULL, 2, NULL, '', '', '', 1),
 (5, 6, 1, NULL, 1, NULL, '', '', '', 1),
 (6, 9, 1, NULL, 1, NULL, '', '', '', 1),
@@ -1286,7 +1304,7 @@ CREATE TABLE IF NOT EXISTS `url` (
   `path_ids` varchar(50) DEFAULT NULL,
   `full_path_ids` varchar(50) DEFAULT NULL,
   `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `url`
@@ -1316,7 +1334,11 @@ INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`,
 (112, 14, 'page', 1, 1, 'sk', 'ostatne-clanky', '14', '14', '2015-02-23 15:24:55'),
 (113, 22, 'article', 1, 1, 'sk', 'ostatne-clanky/state-sa-dobrovonikom', '14/22', '14/22', '2015-02-23 15:24:55'),
 (116, 15, 'page', 1, 1, 'sk', 'o-nas', '15', '15', '2015-02-23 15:30:58'),
-(117, 23, 'article', 1, 1, 'sk', 'o-nas/onas', '15/23', '15/23', '2015-02-23 15:30:58');
+(117, 23, 'article', 1, 1, 'sk', 'o-nas/onas', '15/23', '15/23', '2015-02-23 15:30:58'),
+(118, 24, 'article', 1, 1, 'sk', 'home/podporte-nas-2-z-dane', '4/24', '4/24', '2015-02-24 08:03:21'),
+(119, 25, 'article', 1, 1, 'sk', 'home/podporovani-studenti', '4/25', '4/25', '2015-02-24 08:03:52'),
+(120, 26, 'article', 1, 1, 'sk', 'home/cakatelia-na-podporu', '4/26', '4/26', '2015-02-24 08:04:21'),
+(121, 27, 'article', 1, 1, 'sk', 'home/napiste-nam', '4/27', '4/27', '2015-02-24 08:04:41');
 
 -- --------------------------------------------------------
 
@@ -1345,7 +1367,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id_user`, `id_role`, `join_date`, `last_visit`, `username`, `screen_name`, `firstname`, `lastname`, `birthdate`, `gender`, `password`, `email`, `salt`) VALUES
-(1, 1, '2015-02-20 14:11:15', '2015-02-23 10:57:05', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'wYxgOoOgMY43z+Cr', 'frank238238@gmail.com', 'c2f34b7371ee57ef');
+(1, 1, '2015-02-20 14:11:15', '2015-02-24 07:02:41', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'wYxgOoOgMY43z+Cr', 'frank238238@gmail.com', 'c2f34b7371ee57ef');
 
 --
 -- Indexes for dumped tables
@@ -1657,7 +1679,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `article_comment`
 --
@@ -1667,7 +1689,7 @@ MODIFY `id_article_comment` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `article_type`
 --
 ALTER TABLE `article_type`
-MODIFY `id_type` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id_type` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `captcha`
 --
@@ -1722,7 +1744,7 @@ MODIFY `id_item_definition` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
+MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `menu`
 --
@@ -1787,7 +1809,7 @@ MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=118;
+MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=122;
 --
 -- AUTO_INCREMENT for table `user`
 --

@@ -23,34 +23,18 @@
 <div class="main_bg">
 	<div class="container">
 		<div class="main row">
-			<div class="col-md-3 images_1_of_4 text-center">
-				<img class="bg" src="<ion:theme_url/>assets/images/icon1.png" style="max-width: 120px;" alt="just image" />
-				<h4><a href="#">Podporte nás 2% z dane</a></h4>
-
-				<p class="para">Budeme Vám veľmi vďačný za Vašu podporu 2% z Vašej dane.</p>
-				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
-			</div>
-			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<img class="bg" src="<ion:theme_url/>assets/images/icon2.png" style="max-width: 120px;" alt="just image" />
-				<h4><a href="#">Podporovaní študenti</a></h4>
-
-				<p class="para">Momentálne podporujeme 26 študentov, ktorí sú z veľmi chudobných pomerov.</p>
-				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
-			</div>
-			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<img class="bg" src="<ion:theme_url/>assets/images/icon3.png" style="max-width: 120px;" alt="just image" />
-				<h4><a href="#">Čakatelia na podporu</a></h4>
-
-				<p class="para">Študenti čakajúci na Vašu podporu.</p>
-				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
-			</div>
-			<div class="col-md-3 images_1_of_4 bg1 text-center">
-				<img class="bg" src="<ion:theme_url/>assets/images/icon4.png" style="max-width: 120px;" alt="just image" />
-				<h4><a href="#">Napíšte nám</a></h4>
-
-				<p class="para">V prípade, že chcete podporovať študenta, kontaktujte nás.</p>
-				<a href="single-page.html" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
-			</div>
+			<ion:articles type="four-columns">
+				<ion:article>
+					<div class="col-md-3 images_1_of_4 text-center">
+						<ion:medias limit="1">
+							<img class="bg" src="<ion:media:src />" style="max-width: 120px;" alt="just image" />
+						</ion:medias>
+						<h4><a href="<ion:url />"><ion:title /></a></h4>
+						<div class="para"><ion:content /></div>
+						<a href="<ion:url />" class="fa-btn btn-1 btn-1e">Čítať viac &raquo;</a>
+					</div>
+				</ion:article>
+			</ion:articles>
 		</div>
 	</div>
 </div>
