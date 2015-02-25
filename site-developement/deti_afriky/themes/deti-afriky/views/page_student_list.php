@@ -5,18 +5,21 @@
             <article class="col-xs-12 col-lg-9">
                 <ion:page:title tag="h2"/>
                 <ion:articles>
-                    <div class="img-thumbnail text-center col-xs-12 col-lg-6">
-                        <h4><ion:article:title /></h4>
-                        <ion:article:subtitle tag="p" class="text-muted" />
-                        <!-- intro image -->
-                        <ion:article:medias type="picture" limit="1">
-                            <div class="intro-img">
-                                <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive"/>
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12">
+                            <ion:article:medias type="picture" limit="1">
+                                <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive col-sm-12 col-sm-4 col-lg-4"/>
+                            </ion:article:medias >
+                            <div class="col-sm-12 col-lg-8">
+                                <h4><ion:article:title /></h4>
                             </div>
-                        </ion:article:medias >
-
-                        <div class="para text-center"><ion:article:content /></div>
+                            <div class="para col-sm-12 col-lg-8">
+                                <ion:article:subtitle tag="p"/>
+                                <ion:article:content />
+                            </div>
+                        </div>
                     </div>
+                    <hr/>
                 </ion:articles>
             </article>
             <ion:partial view="aside" />

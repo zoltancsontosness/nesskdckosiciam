@@ -2,10 +2,11 @@
     <h3>Aktuality</h3>
     <ion:page id="aktuality">
         <ion:articles>
-            <ion:article:title tag="h4" />
+            <ion:article:title tag="h4"/>
             <div class="para">
-                <ion:article:content />
+                <ion:article:content/>
             </div>
+            <hr/>
         </ion:articles>
     </ion:page>
 </aside>

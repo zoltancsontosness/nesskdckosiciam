@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /album_navsteva_zaka_malekwu/zak_malekwu0452ffcd825b6fb_760x1024.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 525001,
+  8 => 1424769077,
+  9 => 1424769077,
+  10 => 1424769077,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 525001,
+  'atime' => 1424769077,
+  'mtime' => 1424769077,
+  'ctime' => 1424769077,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 525001,
+    'filename' => 'zak_malekwu0452ffcd825b6fb_760x1024.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/deti_afriky/files/album_navsteva_zaka_malekwu',
+    'filenamepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/deti_afriky/files/album_navsteva_zaka_malekwu/zak_malekwu0452ffcd825b6fb_760x1024.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 525001,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 760,
+      'resolution_y' => 1024,
+      'compression_ratio' => 0.2248667934484649133519695851646247319877147674560546875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 89,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5559952,
+      'path' => 'C:\\softy\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\deti_afriky/files/.thumbs/.backend/9e/33/b352_zak_malekwu0452ffcd825b6fb_760x10-500x500.jpg',
+      'filesize' => 62313,
+      'imageinfo' => 
+      array (
+        0 => 371,
+        1 => 500,
+        2 => 2,
+        3 => 'width="371" height="500"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 934370.370370370452292263507843017578125,
+      'usage_guestimate' => 1308118.5185185186564922332763671875,
+      'usage_min_advised' => 6868070.5185185186564922332763671875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '10.5 MB',
+  'memory estimated' => '1.3 MB',
+  'memory suggested' => '6.9 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/deti_afriky/files/.thumbs/.backend/9e/33/b352_zak_malekwu0452ffcd825b6fb_760x10-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 371,
+    1 => 500,
+    2 => 2,
+    3 => 'width="371" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/deti_afriky/files/.thumbs/.backend/9e/33/b352_zak_malekwu0452ffcd825b6fb_760x10-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 89,
+    1 => 120,
+    2 => 2,
+    3 => 'width="89" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
