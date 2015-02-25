@@ -739,7 +739,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .container {
     width: 750px;
   }
@@ -3650,7 +3650,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .navbar-header {
     float: left;
   }
@@ -3667,7 +3667,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -3777,7 +3777,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .navbar-toggle {
     display: none;
   }
@@ -3812,7 +3812,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -3828,7 +3828,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: -15px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 995px) {
   .navbar-left {
     float: left !important;
   }

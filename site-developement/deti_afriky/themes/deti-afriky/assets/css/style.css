@@ -163,7 +163,7 @@ body {
 }
 /* start slider */
 .slider_bg{
-    background: url('http://www.detiafriky.sk/wp-content/themes/naturefox/images/back.jpg') no-repeat;
+    background: url('../images/slider_bg.jpg') no-repeat;
     background-size: 100%;
     background-position:0 -100px;
 }
@@ -770,9 +770,9 @@ body {
         font-size: 2em;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 995px) {
 .slider_bg{
-    background: url('http://www.detiafriky.sk/wp-content/themes/naturefox/images/back.jpg') no-repeat;
+    background: url('../images/slider_bg.jpg') no-repeat;
     background-size: 100%;
 }
     .logo{
@@ -844,6 +844,11 @@ body {
     }
     .technology h4 {
         font-size: 20px;
+    }
+}
+@media only screen and (max-width: 995px) {
+    .h_menu {
+        position: relative !important;
     }
 }
 @media only screen and (max-width: 640px){

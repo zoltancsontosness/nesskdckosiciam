@@ -5,8 +5,8 @@
     <title><ion:meta_title /></title>
     <meta name="description" content="<ion:meta_description />" />
     <meta name="keywords" content="<ion:meta_keywords />" />
-    <!-- Bootstrap -->
-    <link href="<ion:theme_url/>assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Bootstrap
+    <link href="<ion:theme_url/>assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />-->
     <link href="<ion:theme_url/>assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
