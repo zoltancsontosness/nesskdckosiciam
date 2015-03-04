@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /projekt8/img_0602_kopia_2.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 85168,
+  8 => 1424078131,
+  9 => 1424078131,
+  10 => 1424078131,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 85168,
+  'atime' => 1424078131,
+  'mtime' => 1424078131,
+  'ctime' => 1424078131,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 85168,
+    'filename' => 'img_0602_kopia_2.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt8',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt8/img_0602_kopia_2.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 85168,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 448,
+      'resolution_y' => 268,
+      'compression_ratio' => 0.236451670220326926052933913524611853063106536865234375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 72,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5538288,
+      'path' => 'C:\\softy\\xampp\\htdocs\\projekt_1/files/.thumbs/.backend/8a/49/b8c3_img_0602_kopia_2c8473cc12c77da75d-500x500.jpg',
+      'filesize' => 85168,
+      'imageinfo' => 
+      array (
+        0 => 448,
+        1 => 268,
+        2 => 2,
+        3 => 'width="448" height="268"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 604766.8148148148320615291595458984375,
+      'usage_guestimate' => 846673.54074074071832001209259033203125,
+      'usage_min_advised' => 6384961.540740740485489368438720703125,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.2 MB',
+  'memory estimated' => '0.8 MB',
+  'memory suggested' => '6.4 MB',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/8a/49/b8c3_img_0602_kopia_2c8473cc12c77da75d-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 448,
+    1 => 268,
+    2 => 2,
+    3 => 'width="448" height="268"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/8a/49/b8c3_img_0602_kopia_2c8473cc12c77da75d-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 72,
+    2 => 2,
+    3 => 'width="120" height="72"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

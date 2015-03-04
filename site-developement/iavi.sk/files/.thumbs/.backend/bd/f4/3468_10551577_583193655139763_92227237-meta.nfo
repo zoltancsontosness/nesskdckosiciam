@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /fotogaleria/10551577_583193655139763_9222723778477238289_o.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 794166,
+  8 => 1424172751,
+  9 => 1424172752,
+  10 => 1424172751,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 794166,
+  'atime' => 1424172751,
+  'mtime' => 1424172752,
+  'ctime' => 1424172751,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 794166,
+    'filename' => '10551577_583193655139763_9222723778477238289_o.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/fotogaleria',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/fotogaleria/10551577_583193655139763_9222723778477238289_o.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 794166,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 675,
+      'resolution_y' => 1200,
+      'compression_ratio' => 0.32681728395061726555326231391518376767635345458984375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/bd/f4/3468_10551577_583193655139763_92227237-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 281,
+    1 => 500,
+    2 => 2,
+    3 => 'width="281" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/bd/f4/3468_10551577_583193655139763_92227237-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 67,
+    1 => 120,
+    2 => 2,
+    3 => 'width="67" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

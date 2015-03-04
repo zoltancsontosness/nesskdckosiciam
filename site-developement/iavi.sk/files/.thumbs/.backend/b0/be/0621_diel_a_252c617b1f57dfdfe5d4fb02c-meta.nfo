@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /projekt4/diel_a_2.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 96862,
+  8 => 1424077313,
+  9 => 1424077313,
+  10 => 1424077313,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 96862,
+  'atime' => 1424077313,
+  'mtime' => 1424077313,
+  'ctime' => 1424077313,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 96862,
+    'filename' => 'diel_a_2.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt4',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/projekt4/diel_a_2.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 96862,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 448,
+      'resolution_y' => 316,
+      'compression_ratio' => 0.2280694318866787195787537712021730840206146240234375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 85,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5538056,
+      'path' => 'C:\\softy\\xampp\\htdocs\\projekt_1/files/.thumbs/.backend/b0/be/0621_diel_a_252c617b1f57dfdfe5d4fb02c-500x500.jpg',
+      'filesize' => 96862,
+      'imageinfo' => 
+      array (
+        0 => 448,
+        1 => 316,
+        2 => 2,
+        3 => 'width="448" height="316"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 713083.25925925932824611663818359375,
+      'usage_guestimate' => 998316.56296296301297843456268310546875,
+      'usage_min_advised' => 6536372.562962963245809078216552734375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.3 MB',
+  'memory estimated' => '1.0 MB',
+  'memory suggested' => '6.5 MB',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/b0/be/0621_diel_a_252c617b1f57dfdfe5d4fb02c-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 448,
+    1 => 316,
+    2 => 2,
+    3 => 'width="448" height="316"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/b0/be/0621_diel_a_252c617b1f57dfdfe5d4fb02c-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 85,
+    2 => 2,
+    3 => 'width="120" height="85"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

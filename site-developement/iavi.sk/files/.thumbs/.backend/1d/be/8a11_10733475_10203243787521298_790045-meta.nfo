@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /fotogaleria/10733475_10203243787521298_790045162_n.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 262885,
+  8 => 1424172754,
+  9 => 1424172754,
+  10 => 1424172754,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 262885,
+  'atime' => 1424172754,
+  'mtime' => 1424172754,
+  'ctime' => 1424172754,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 262885,
+    'filename' => '10733475_10203243787521298_790045162_n.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/projekt_1/files/fotogaleria',
+    'filenamepath' => 'C:/softy/xampp/htdocs/projekt_1/files/fotogaleria/10733475_10203243787521298_790045162_n.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 262885,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 720,
+      'resolution_y' => 960,
+      'compression_ratio' => 0.1267771026234567888213433661803719587624073028564453125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/projekt_1/files/.thumbs/.backend/1d/be/8a11_10733475_10203243787521298_790045-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 375,
+    1 => 500,
+    2 => 2,
+    3 => 'width="375" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/projekt_1/files/.thumbs/.backend/1d/be/8a11_10733475_10203243787521298_790045-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 90,
+    1 => 120,
+    2 => 2,
+    3 => 'width="90" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
