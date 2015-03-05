@@ -1,0 +1,55 @@
+/*
+  style chanes for OA Watsonova
+*/
+
+.leftMenu {
+  position: relative;
+  float: left;
+}
+
+.tour {
+  width: 100% !important;
+}
+
+.tour > li > a {
+  padding: 12px 16px 13px !important;
+}
+
+.submenuUl {
+  margin: 0px;
+  overflow: hidden;
+  height: 0px;
+}
+
+.submenuUl > li > a {
+  padding: 12px 32px 13px !important;
+}
+
+/*
+  style for different screens
+*/
+
+@media (min-width: 1024px) {
+
+  .leftMenu {
+    width: 28%;
+    margin-right: 2%;
+  }
+
+  .camera_wrap {
+    width: 70% !important;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .leftMenu {
+    width: 100%;
+  }
+
+  .camera_wrap {
+    width: 100% !important;
+  }
+
+}
