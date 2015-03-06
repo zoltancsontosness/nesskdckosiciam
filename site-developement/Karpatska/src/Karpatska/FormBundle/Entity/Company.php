@@ -95,6 +95,13 @@ class Company implements UserInterface
     /**
      * @var string
      *
+     * @ORM\Column(name="repr_phone", type="string", length=10)
+     */
+    private $reprPhone;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="dic", type="string", length=255)
      */
     private $dic;
@@ -356,6 +363,29 @@ class Company implements UserInterface
     public function getReprEmail()
     {
         return $this->reprEmail;
+    }
+
+    /**
+     * Set reprPhone
+     *
+     * @param string $reprPhone
+     * @return Company
+     */
+    public function setReprPhone($reprPhone)
+    {
+        $this->reprPhone = $reprPhone;
+
+        return $this;
+    }
+
+    /**
+     * Get reprPhone
+     *
+     * @return string
+     */
+    public function getReprPhone()
+    {
+        return $this->reprPhone;
     }
 
     /**
