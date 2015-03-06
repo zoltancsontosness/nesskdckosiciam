@@ -1,0 +1,3 @@
+karpatska_form_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: KarpatskaFormBundle:Default:index }
