@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class CompanyController extends Controller
 {
     /**
-     * @Route("/register")
+     * @Route("/register", name="_company_register")
      * @Template()
      */
     public function registerAction(Request $request)
@@ -33,4 +33,12 @@ class CompanyController extends Controller
         );
     }
 
+   /**
+    * @Route("/company", name="company/index")
+    * @Template()
+    */
+    public function indexAction(Request $request)
+    {
+        return array();
+    }
 }

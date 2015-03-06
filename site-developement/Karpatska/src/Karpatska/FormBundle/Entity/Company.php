@@ -3,6 +3,7 @@
 namespace Karpatska\FormBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Company
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity
  */
-class Company
+class Company implements UserInterface
 {
     /**
      * @var integer
@@ -419,5 +420,24 @@ class Company
     public function getSalt()
     {
         return null;
+    }
+
+    public function getRoles()
+    {
+        return array('ROLE_COMPANY');
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
+   /**
+    * Get username
+    *
+    * @return string
+    */
+    public function getUsername()
+    {
+        return $this->ico;
     }
 }

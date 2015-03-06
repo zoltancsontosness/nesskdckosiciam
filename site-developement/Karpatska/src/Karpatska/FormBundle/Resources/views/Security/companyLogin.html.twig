@@ -1,0 +1,18 @@
+{% block title %}NakupujemShopBundle:Security:userLogin{% endblock %}
+
+{% block body %}<form action="{{path('_company_security_check')}}" method="post">
+    <div>
+        <div>
+            <label>IČO: </label>
+            <input type="text" name="_username">
+
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="password" name="_password">
+        </div>
+        <button type="submit">Submit</button>
+
+    </div>
+</form>
+{% endblock %}
