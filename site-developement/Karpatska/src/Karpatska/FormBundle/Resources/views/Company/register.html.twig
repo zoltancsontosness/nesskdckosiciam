@@ -16,14 +16,24 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.ico) }}
+                                <i id="tooltip"
+                                   class="glyphicon glyphicon-info-sign"
+                                   data-toggle="tooltip"
+                                   data-original-title="Zadajte Vaše IČO. Slúži aj ako prihlasovací údaj. Príklad: 87654321">
+                                </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.address) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte ulicu a číslo">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
@@ -31,28 +41,48 @@
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.county) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte okres v ktorom sa spoločnosť nachádza">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.region) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte kraj v ktorom sa spoločnosť nachádza">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.type) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte typ spoločnosti">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.dic) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte DIČ ak ho spoločnosť má">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
@@ -64,22 +94,37 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.bankAddress) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte ulicu, čislo a mesto v ktorom sídli banka spoločnosti. Príklad: Uličná 4, Košice">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.bankName) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte meno banky spoločnosti">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.accountNum) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte číslo účtu spoločnosti. Tvar: 1234567890/1234">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
@@ -91,22 +136,37 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.reprEmail) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte e-mail zástupcu">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.reprName) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte celé meno zástupcu">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.reprPhone) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte telefónne číslo v medzinárodnom tvare. Tvar: +421908123456">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
@@ -118,14 +178,24 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.password.first) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte heslo">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.password.second, {'attr':{'placeholder': 'Heslo znovu'}}) }}
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte heslo znovu. Heslá sa musia zhodovať!">
+                            </i>
                             <p class="text-danger">CHYBA</p>
                         </div>
                     </div>
