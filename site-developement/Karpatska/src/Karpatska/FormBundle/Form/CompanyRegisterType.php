@@ -12,6 +12,7 @@ class CompanyRegisterType extends AbstractType
         $builder
             ->add('ico','text', array(
                 'required' => true,
+                'max_length' => '8',
                 'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'IČO')
             ))
             ->add('address','text', array(
@@ -52,10 +53,12 @@ class CompanyRegisterType extends AbstractType
             ))
             ->add('reprPhone','text', array(
                 'required' => true,
+                'max_length' => '13',
                 'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Telef. č. zástupcu')
             ))
             ->add('dic','text', array(
                 'required' => true,
+                'max_length' => '10',
                 'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'DIČ')
             ))
             ->add('password', 'repeated', array(

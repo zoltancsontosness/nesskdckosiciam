@@ -26,8 +26,8 @@ class Company implements UserInterface
     /**
      * @var integer
      * @Assert\NotBlank()
-     * @Assert\MaxLenght(8)
-     * @ORM\Column(name="ico", type="integer")
+     *
+     * @ORM\Column(name="ico", type="integer", unique=true)
      */
     private $ico;
 
@@ -76,6 +76,7 @@ class Company implements UserInterface
     /**
      * @var string
      * @Assert\NotBlank()
+     * @Assert\Regex(pattern="/^\d{10}\/\d{4}$/", message = "Iba čísla a lomítko")
      * @ORM\Column(name="account_num", type="string", length=50)
      */
     private $accountNum;
@@ -98,21 +99,21 @@ class Company implements UserInterface
     /**
      * @var string
      * @Assert\NotBlank()
-     * @ORM\Column(name="repr_phone", type="string", length=10)
+     * @Assert\Regex(pattern="/^(\+42)(1|2)\d{9}$/", message = "Iba čísla, zadávajte v medzinárodnom tvare")
+     * @ORM\Column(name="repr_phone", type="string", length=15)
      */
     private $reprPhone;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="dic", type="string", length=255)
+     * @Assert\Regex(pattern="/^\d{10}/", message = "Zadajte validné DIČ")
+     * @ORM\Column(name="dic", type="integer")
      */
     private $dic;
 
     /**
      * @var string
      * @Assert\NotBlank()
-     * @Assert\MaxLength(10)
      * @ORM\Column(name="password", type="string", length=10)
      */
     private $password;
