@@ -13,11 +13,11 @@ class CompanyRegisterType extends AbstractType
             ->add('ico','text', array(
                 'required' => true,
                 'max_length' => '8',
-                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'IČO')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'IČO')
             ))
             ->add('address','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'Ulica a číslo')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Ulica a číslo')
             ))
             ->add('county','text', array(
                 'required' => true,
@@ -25,11 +25,11 @@ class CompanyRegisterType extends AbstractType
             ))
             ->add('region','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'Kraj')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Kraj')
             ))
             ->add('type','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Typ firmy')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Typ organizácie')
             ))
             ->add('bankName','text', array(
                 'required' => true,
@@ -37,7 +37,7 @@ class CompanyRegisterType extends AbstractType
             ))
             ->add('bankAddress','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'Adresa banky')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Adresa banky')
             ))
             ->add('accountNum','text', array(
                 'required' => true,
@@ -59,7 +59,7 @@ class CompanyRegisterType extends AbstractType
             ->add('dic','text', array(
                 'required' => true,
                 'max_length' => '10',
-                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'DIČ')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'DIČ')
             ))
             ->add('password', 'repeated', array(
                 'type' => 'password',

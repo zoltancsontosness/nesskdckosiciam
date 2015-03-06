@@ -26,7 +26,7 @@ class Company implements UserInterface
     /**
      * @var integer
      * @Assert\NotBlank()
-     *
+     * @Assert\Regex(pattern="/^\d{8}$/", message = "Iba čísla")
      * @ORM\Column(name="ico", type="integer", unique=true)
      */
     private $ico;
