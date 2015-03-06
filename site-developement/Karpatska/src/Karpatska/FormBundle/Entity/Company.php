@@ -4,6 +4,7 @@ namespace Karpatska\FormBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Company
@@ -24,77 +25,79 @@ class Company implements UserInterface
 
     /**
      * @var integer
-     *
+     * @Assert\NotBlank()
+     * @Assert\MaxLenght(8)
      * @ORM\Column(name="ico", type="integer")
      */
     private $ico;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="address", type="string", length=255)
      */
     private $address;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="county", type="string", length=255)
      */
     private $county;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="region", type="string", length=255)
      */
     private $region;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="type", type="string", length=255)
      */
     private $type;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="bank_name", type="string", length=255)
      */
     private $bankName;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="bank_address", type="text")
      */
     private $bankAddress;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="account_num", type="string", length=50)
      */
     private $accountNum;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="repr_name", type="string", length=255)
      */
     private $reprName;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Email()
      * @ORM\Column(name="repr_email", type="string", length=255)
      */
     private $reprEmail;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="repr_phone", type="string", length=10)
      */
     private $reprPhone;
@@ -108,7 +111,8 @@ class Company implements UserInterface
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(10)
      * @ORM\Column(name="password", type="string", length=10)
      */
     private $password;
