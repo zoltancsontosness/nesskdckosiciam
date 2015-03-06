@@ -11,47 +11,57 @@ class CompanyRegisterType extends AbstractType
     {
         $builder
             ->add('ico','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'IČO')
             ))
             ->add('address','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Ulica a číslo')
             ))
             ->add('county','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Okres')
             ))
             ->add('region','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Kraj')
             ))
             ->add('type','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Typ firmy')
             ))
             ->add('bankName','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Meno banky')
             ))
             ->add('bankAddress','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Adresa banky')
             ))
             ->add('accountNum','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Číslo účtu')
             ))
             ->add('reprName','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Meno a priezvisko zástupcu')
             ))
             ->add('reprEmail','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'E-mail zástupcu')
             ))
             ->add('dic','text', array(
-                'required' => true
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'DIČ')
             ))
             ->add('password', 'repeated', array(
                 'type' => 'password',
-                'invalid_message' => 'The password fields must match.',
-                'options' => array('attr' => array('class' => 'password-field')),
+                'invalid_message' => 'Heslá sa musia zhodovať!',
+                'options' => array('attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Heslo')),
                 'required' => true,
-                'first_options'  => array('label' => 'Heslo'),
-                'second_options' => array('label' => 'Znovu heslo')
-            ))
-            ->add('save', 'submit');
+                'first_options'  => array('label' => NULL),
+                'second_options' => array('label' => NULL)
+            ));
     }
 
     public function getName()

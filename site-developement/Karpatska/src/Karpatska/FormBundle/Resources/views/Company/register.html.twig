@@ -1,9 +1,143 @@
-{% extends "::base.html.twig" %}
+{% extends "KarpatskaFormBundle::layout.html.twig" %}
 
-{% block title %}KarpatskaFormBundle:Company:register{% endblock %}
+{% block title %}Registrácia{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Company:register page</h1>
+    <div class="container">
+        <div class="col-xs-12 col-sm-8 col-md-10 col-sm-offset-2 col-md-offset-1">
+            {{ form_start(form) }}
 
-    {{ form(form) }}
+                <h2>Registrácia <small>Žiadosť o grant</small></h2>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h2><small>Firemné údaje</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.ico) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.address) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.county) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.region) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.type) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.dic) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h2><small>Bankové údaje</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.bankAddress) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.bankName) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.accountNum) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h2><small>Údaje o zástupcovi firmy</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.reprEmail) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.reprName) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h2><small>Nastavenie hesla</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.password.first) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="form-group">
+                            {{ form_widget(form.password.second, {'attr':{'placeholder': 'Heslo znovu'}}) }}
+                            <p class="alert alert-danger">CHYBA</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <input type="submit" value="Registrovať" class="btn btn-primary btn-block btn-lg" tabindex="7">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 text-center">
+                        <a href="#">Spoločnosť už je registrovaná</a>
+                    </div>
+                </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+
+    {{ form_end(form) }}
 {% endblock %}
