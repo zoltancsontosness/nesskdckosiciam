@@ -12,11 +12,11 @@ class CompanyRegisterType extends AbstractType
         $builder
             ->add('ico','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'IČO')
+                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'IČO')
             ))
             ->add('address','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Ulica a číslo')
+                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'Ulica a číslo')
             ))
             ->add('county','text', array(
                 'required' => true,
@@ -24,7 +24,7 @@ class CompanyRegisterType extends AbstractType
             ))
             ->add('region','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Kraj')
+                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'Kraj')
             ))
             ->add('type','text', array(
                 'required' => true,
@@ -36,7 +36,7 @@ class CompanyRegisterType extends AbstractType
             ))
             ->add('bankAddress','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Adresa banky')
+                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'Adresa banky')
             ))
             ->add('accountNum','text', array(
                 'required' => true,
@@ -50,9 +50,13 @@ class CompanyRegisterType extends AbstractType
                 'required' => true,
                 'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'E-mail zástupcu')
             ))
+            ->add('reprPhone','text', array(
+                'required' => true,
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Telef. č. zástupcu')
+            ))
             ->add('dic','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'DIČ')
+                'attr' => array('class' => 'form-control input-lg input-error', 'placeholder' => 'DIČ')
             ))
             ->add('password', 'repeated', array(
                 'type' => 'password',

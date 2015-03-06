@@ -15,3 +15,9 @@ body{
 input[type="submit"]{
     margin-bottom: 8px;
 }
+.input-error{
+    border: 1px solid #d9534f;
+}
+.text-danger{
+    color: #d9534f;
+}

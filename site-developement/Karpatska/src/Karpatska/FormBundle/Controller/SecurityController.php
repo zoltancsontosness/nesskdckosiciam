@@ -79,7 +79,7 @@ class SecurityController extends Controller
      * @Route("/company/logout", name="_company_logout")
      * @Template()
      */
-    public function shopLogoutAction()
+    public function companyLogoutAction()
     {
         return $this->redirect($this->generateUrl('_company_register'));
     }
