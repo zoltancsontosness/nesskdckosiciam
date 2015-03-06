@@ -111,6 +111,11 @@ class Company
      */
     private $salt;
 
+    public function __construct()
+    {
+        $this->salt = md5(microtime());
+    }
+
 
     /**
      * Get id
