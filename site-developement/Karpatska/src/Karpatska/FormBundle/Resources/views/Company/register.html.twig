@@ -3,7 +3,7 @@
 {% block title %}Registrácia{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container" ng-controller="RegistrationController">
         <div class="col-xs-12 col-sm-8 col-md-10 col-sm-offset-2 col-md-offset-1">
             {{ form_start(form) }}
 
@@ -16,9 +16,10 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
-                            {{ form_widget(form.ico) }}
-                            <p class="alert alert-danger">CHYBA</p>
+                        <div class="form-group" ng-model="ico">
+                            <input type="text" id="karpatska_form_bundle_company_register_ico" name="karpatska_form_bundle_company_register[ico]" required="required" class="form-control input-lg" placeholder="IČO" ng-model="ico">
+                            <p class="alert alert-danger" ngWhile="ico.length < 6">Ičo je krátke</p>
+
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
