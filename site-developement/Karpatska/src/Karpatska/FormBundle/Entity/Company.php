@@ -114,7 +114,7 @@ class Company implements UserInterface
     /**
      * @var string
      * @Assert\NotBlank()
-     * @ORM\Column(name="password", type="string", length=10)
+     * @ORM\Column(name="password", type="string", length=300)
      */
     private $password;
     /**

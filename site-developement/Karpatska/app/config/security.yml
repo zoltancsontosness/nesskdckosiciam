@@ -1,7 +1,14 @@
 security:
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+<<<<<<< HEAD
         Karpatska\FormBundle\Entity\Company: md5
+=======
+        Karpatska\FormBundle\Entity\Company:
+          algorithm: md5
+          encode_as_base64: false
+          iterations: 0
+>>>>>>> 796a9f2c6911b50733474c8d1cd92eccbaaf60e5
 
     role_hierarchy:
         ROLE_USER:       ROLE_USER
@@ -55,7 +62,7 @@ security:
                 check_path: _company_security_check
                 login_path: _company_login
                 always_use_default_target_path: false
-                default_target_path: /company/
+                default_target_path: /company
                 csrf_provider: form.csrf_provider
             logout:
                 path: _company_logout

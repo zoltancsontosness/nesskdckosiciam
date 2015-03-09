@@ -3,7 +3,7 @@
 {% block title %}Registrácia{% endblock %}
 
 {% block body %}
-    <div class="container" ng-controller="RegistrationController">
+    <div class="container">
         <div class="col-xs-12 col-sm-8 col-md-10 col-sm-offset-2 col-md-offset-1">
             {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
 
@@ -243,4 +243,5 @@
 
 
     {{ form_end(form) }}
+    <script src="{{ asset('assets/js/frontend/karpatskaApp.js') }}"></script>
 {% endblock %}
