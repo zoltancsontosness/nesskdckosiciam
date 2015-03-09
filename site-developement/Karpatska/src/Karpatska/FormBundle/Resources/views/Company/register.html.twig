@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container" ng-controller="RegistrationController">
         <div class="col-xs-12 col-sm-8 col-md-10 col-sm-offset-2 col-md-offset-1">
-            {{ form_start(form) }}
+            {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
 
                 <h2>Registrácia <small>Žiadosť o grant</small></h2>
                 <hr class="colorgraph">
@@ -94,7 +94,7 @@
                                data-original-title="Zadajte DIČ ak ho organizácie má">
                             </i>
                             {% if form_errors(form.dic) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">DIČ ma nesprávny tvar</p>
                             {% endif %}
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                                data-original-title="Zadajte ulicu, čislo a mesto v ktorom sídli banka organizácie. Príklad: Uličná 4, Košice">
                             </i>
                             {% if form_errors(form.bankAddress) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Zadajte adresu banky</p>
                             {% endif %}
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                                data-original-title="Zadajte meno banky organizácie">
                             </i>
                             {% if form_errors(form.bankName) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Zadajte meno banky</p>
                             {% endif %}
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                                data-original-title="Zadajte číslo účtu organizácie. Tvar: 1234567890/1234">
                             </i>
                             {% if form_errors(form.accountNum) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Číslo účtu má nesprávny tvar</p>
                             {% endif %}
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                data-original-title="Zadajte e-mail zástupcu">
                             </i>
                             {% if form_errors(form.reprEmail) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Zadajte validný email</p>
                             {% endif %}
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                                data-original-title="Zadajte celé meno zástupcu">
                             </i>
                             {% if form_errors(form.reprName) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Zadajte meno zástupcu organizácie</p>
                             {% endif %}
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                                data-original-title="Zadajte telefónne číslo v medzinárodnom tvare. Tvar: +421908123456">
                             </i>
                             {% if form_errors(form.reprPhone) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Zadajte validné telefónne číslo</p>
                             {% endif %}
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                                data-original-title="Zadajte heslo">
                             </i>
                             {% if form_errors(form.password.first) %}
-                                <p class="text-danger">CHYBA</p>
+                                <p class="text-danger">Zadajte heslo. Heslá sa musia zhodovať</p>
                             {% endif %}
                         </div>
                     </div>
@@ -222,9 +222,6 @@
                                data-toggle="tooltip"
                                data-original-title="Zadajte heslo znovu. Heslá sa musia zhodovať!">
                             </i>
-                            {% if form_errors(form.password.second) %}
-                                <p class="text-danger">CHYBA</p>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
