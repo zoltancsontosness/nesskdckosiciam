@@ -10,3 +10,5 @@ function FormModel(form) {
 FormModel.prototype.getListOfInputs = function () {
 	return document.forms[this.formName].getElementsByTagName("input");
 };
+
+new FormModel("")
