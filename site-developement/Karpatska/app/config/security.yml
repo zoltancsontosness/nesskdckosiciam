@@ -1,7 +1,10 @@
 security:
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
-        Karpatska\FormBundle\Entity\Company: plaintext
+        Karpatska\FormBundle\Entity\Company:
+          algorithm: md5
+          encode_as_base64: false
+          iterations: 0
 
     role_hierarchy:
         ROLE_USER:       ROLE_USER
@@ -55,7 +58,7 @@ security:
                 check_path: _company_security_check
                 login_path: _company_login
                 always_use_default_target_path: false
-                default_target_path: /company/
+                default_target_path: /company
             logout:
                 path: _company_logout
                 target: /
