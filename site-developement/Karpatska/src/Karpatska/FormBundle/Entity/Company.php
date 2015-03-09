@@ -4,6 +4,7 @@ namespace Karpatska\FormBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Company
@@ -24,91 +25,95 @@ class Company implements UserInterface
 
     /**
      * @var integer
-     *
-     * @ORM\Column(name="ico", type="integer")
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern="/^\d{8}$/", message = "Iba čísla")
+     * @ORM\Column(name="ico", type="integer", unique=true)
      */
     private $ico;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="address", type="string", length=255)
      */
     private $address;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="county", type="string", length=255)
      */
     private $county;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="region", type="string", length=255)
      */
     private $region;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="type", type="string", length=255)
      */
     private $type;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="bank_name", type="string", length=255)
      */
     private $bankName;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="bank_address", type="text")
      */
     private $bankAddress;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern="/^\d{10}\/\d{4}$/", message = "Iba čísla a lomítko")
      * @ORM\Column(name="account_num", type="string", length=50)
      */
     private $accountNum;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="repr_name", type="string", length=255)
      */
     private $reprName;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
+     * @Assert\Email()
      * @ORM\Column(name="repr_email", type="string", length=255)
      */
     private $reprEmail;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="repr_phone", type="string", length=10)
+     * @Assert\NotBlank()
+     * @Assert\Regex(pattern="/^(\+42)(1|2)\d{9}$/", message = "Iba čísla, zadávajte v medzinárodnom tvare")
+     * @ORM\Column(name="repr_phone", type="string", length=15)
      */
     private $reprPhone;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="dic", type="string", length=255)
+     * @Assert\Regex(pattern="/^\d{10}/", message = "Zadajte validné DIČ")
+     * @ORM\Column(name="dic", type="integer")
      */
     private $dic;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="password", type="string", length=10)
      */
     private $password;

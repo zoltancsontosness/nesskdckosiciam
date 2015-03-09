@@ -11,49 +11,91 @@
                 <hr class="colorgraph">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h2><small>Firemné údaje</small></h2>
+                        <h2><small>Údaje organizácie</small></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.ico) }}
-                            <p class="text-danger">CHYBA</p>
+                                <i id="tooltip"
+                                   class="glyphicon glyphicon-info-sign"
+                                   data-toggle="tooltip"
+                                   data-original-title="Zadajte Vaše IČO. Slúži aj ako prihlasovací údaj. Príklad: 87654321">
+                                </i>
+                            {% if form_errors(form.ico) %}
+                                <p class="text-danger">Zadajte validné IČO</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.address) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte ulicu a číslo">
+                            </i>
+                            {% if form_errors(form.address) %}
+                                <p class="text-danger">Zadajte adresu</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.county) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte okres v ktorom sa organizácia nachádza">
+                            </i>
+                            {% if form_errors(form.county) %}
+                                <p class="text-danger">Zadajte okres</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.region) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte kraj v ktorom sa organizácia nachádza">
+                            </i>
+                            {% if form_errors(form.region) %}
+                                <p class="text-danger">Zadajte kraj</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.type) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte typ organizácie">
+                            </i>
+                            {% if form_errors(form.type) %}
+                                <p class="text-danger">Zadajte typ organizácie</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.dic) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte DIČ ak ho organizácie má">
+                            </i>
+                            {% if form_errors(form.dic) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -64,50 +106,92 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.bankAddress) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte ulicu, čislo a mesto v ktorom sídli banka organizácie. Príklad: Uličná 4, Košice">
+                            </i>
+                            {% if form_errors(form.bankAddress) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.bankName) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte meno banky organizácie">
+                            </i>
+                            {% if form_errors(form.bankName) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.accountNum) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte číslo účtu organizácie. Tvar: 1234567890/1234">
+                            </i>
+                            {% if form_errors(form.accountNum) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h2><small>Údaje o zástupcovi firmy</small></h2>
+                        <h2><small>Údaje o zástupcovi organizácie</small></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.reprEmail) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte e-mail zástupcu">
+                            </i>
+                            {% if form_errors(form.reprEmail) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.reprName) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte celé meno zástupcu">
+                            </i>
+                            {% if form_errors(form.reprName) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.reprPhone) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte telefónne číslo v medzinárodnom tvare. Tvar: +421908123456">
+                            </i>
+                            {% if form_errors(form.reprPhone) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -118,15 +202,29 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.password.first) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte heslo">
+                            </i>
+                            {% if form_errors(form.password.first) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="form-group">
+                        <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.password.second, {'attr':{'placeholder': 'Heslo znovu'}}) }}
-                            <p class="text-danger">CHYBA</p>
+                            <i id="tooltip"
+                               class="glyphicon glyphicon-info-sign"
+                               data-toggle="tooltip"
+                               data-original-title="Zadajte heslo znovu. Heslá sa musia zhodovať!">
+                            </i>
+                            {% if form_errors(form.password.second) %}
+                                <p class="text-danger">CHYBA</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -138,7 +236,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-12 text-center">
-                        <a href="{{ path('_company_login') }}">Spoločnosť už je registrovaná</a>
+                        <a class="link" href="{{ path('_company_login') }}">Organizácia už je registrovaná</a>
                     </div>
                 </div>
 
