@@ -99,7 +99,7 @@ class Company implements UserInterface
     /**
      * @var string
      * @Assert\NotBlank()
-     * @Assert\Regex(pattern="/^(\+42)(1|2)\d{9}$/", message = "Iba čísla, zadávajte v medzinárodnom tvare")
+     * @Assert\Regex(pattern="/^(\+42)(1|0)\d{9}$/", message = "Iba čísla, zadávajte v medzinárodnom tvare")
      * @ORM\Column(name="repr_phone", type="string", length=15)
      */
     private $reprPhone;

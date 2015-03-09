@@ -59,6 +59,7 @@ security:
                 login_path: _company_login
                 always_use_default_target_path: false
                 default_target_path: /company
+                csrf_provider: form.csrf_provider
             logout:
                 path: _company_logout
                 target: /
@@ -71,7 +72,7 @@ security:
             #path: ^/user/*
             #roles: ROLE_USER
         company_login:
-            path: /ĺogin/company
+            path: /login/company
             roles: IS_AUTHENTICATED_ANONYMOUSLY
         company_area:
             path: ^/company/*
