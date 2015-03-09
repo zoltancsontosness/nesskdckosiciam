@@ -76,7 +76,7 @@ security:
             #path: ^/user/*
             #roles: ROLE_USER
         company_login:
-            path: /ĺogin/company
+            path: /login/company
             roles: IS_AUTHENTICATED_ANONYMOUSLY
         company_area:
             path: ^/company/*
