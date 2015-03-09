@@ -72,37 +72,4 @@ class Form
     {
         return $this->name;
     }
-
-    /**
-     * Add question
-     *
-     * @param \Karpatska\FormBundle\Entity\Form $question
-     * @return Form
-     */
-    public function addQuestion(\Karpatska\FormBundle\Entity\Form $question)
-    {
-        $this->question[] = $question;
-
-        return $this;
-    }
-
-    /**
-     * Remove question
-     *
-     * @param \Karpatska\FormBundle\Entity\Form $question
-     */
-    public function removeQuestion(\Karpatska\FormBundle\Entity\Form $question)
-    {
-        $this->question->removeElement($question);
-    }
-
-    /**
-     * Get question
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getQuestion()
-    {
-        return $this->question;
-    }
 }

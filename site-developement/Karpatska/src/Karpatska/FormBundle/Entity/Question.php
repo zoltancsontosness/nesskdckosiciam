@@ -13,16 +13,12 @@ use Karpatska\FormBundle\Entity\Form;
  */
 class Question
 {
-    public function __construct() {
-        $this->answer= new ArrayCollection();
-    }
     /**
      * @var integer
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\OneToMany(targetEntity="Answers", mappedBy="question")
      */
     private $id;
 
@@ -36,11 +32,19 @@ class Question
     private $answer;
 
     /**
+     * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToOne(targetEntity="Form", inversedBy="question")
-     * @ORM\JoinColumn(name="formId", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Karpatska\FormBundle\Entity\Form")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="form_id", referencedColumnName="id")
+     *  }
+     * )
      */
     private $form;
+
+    public function __construct() {
+            $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -53,7 +57,7 @@ class Question
     }
 
     /**
-     * Set question
+     * Set questionText
      *
      * @param string $questionText
      * @return Question
@@ -72,16 +76,16 @@ class Question
      */
     public function getQuestionText()
     {
-        return $this->$questionText;
+        return $this->questionText;
     }
 
     /**
      * Set form
      *
-     * @param integer $form
+     * @param \Karpatska\FormBundle\Entity\Form $form
      * @return Question
      */
-    public function setForm($form)
+    public function setForm(\Karpatska\FormBundle\Entity\Form $form = null)
     {
         $this->form = $form;
 
@@ -91,7 +95,7 @@ class Question
     /**
      * Get form
      *
-     * @return integer 
+     * @return \Karpatska\FormBundle\Entity\Form 
      */
     public function getForm()
     {

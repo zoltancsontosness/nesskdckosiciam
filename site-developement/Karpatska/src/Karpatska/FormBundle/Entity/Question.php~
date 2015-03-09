@@ -1,0 +1,48 @@
+<?php
+
+namespace Karpatska\FormBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Karpatska\FormBundle\Entity\Form;
+
+/**
+ * Question
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Question
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="questionText", type="text")
+     */
+    private $questionText;
+
+    private $answer;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToOne(targetEntity="Karpatska\FormBundle\Entity\Form")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="form_id", referencedColumnName="id")
+     *  }
+     * )
+     */
+    private $form;
+
+    public function __construct() {
+            $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+}

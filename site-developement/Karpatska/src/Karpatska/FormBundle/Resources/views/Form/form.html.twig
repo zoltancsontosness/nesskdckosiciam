@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}KarpatskaFormBundle:Form:form{% endblock %}
+
+{% block body %}
+<h1>{{form.name}}</h1>
+
+{{dump(form.question)}}
+{% for question in questions %}
+{% endfor %}
+{% endblock %}
