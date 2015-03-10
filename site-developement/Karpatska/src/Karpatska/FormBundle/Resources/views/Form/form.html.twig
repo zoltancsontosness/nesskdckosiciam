@@ -5,7 +5,9 @@
 {% block body %}
 <h1>{{form.name}}</h1>
 
-{{dump(form.question)}}
-{% for question in questions %}
+{{dump(form)}}
+{% for question in form.question %}
+{{question.questionText}} <br>
 {% endfor %}
+
 {% endblock %}
