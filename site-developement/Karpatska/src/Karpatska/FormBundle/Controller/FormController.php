@@ -18,7 +18,6 @@ class FormController extends Controller
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
         return array(
                 'form' => $form,
-                //'questions' => $form->getQuestion(),
             );    }
 
 }
