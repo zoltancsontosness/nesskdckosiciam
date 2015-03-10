@@ -34,11 +34,8 @@ class Question
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToOne(targetEntity="Karpatska\FormBundle\Entity\Form")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="form_id", referencedColumnName="id")
-     *  }
-     * )
+     * @ORM\ManyToOne(targetEntity="Question", inversedBy="question")
+     * @ORM\JoinColumn(name="form_id", referencedColumnName="id")
      */
     private $form;
 
