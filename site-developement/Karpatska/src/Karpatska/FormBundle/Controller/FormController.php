@@ -9,15 +9,17 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class FormController extends Controller
 {
     /**
-     * @Route("/company/form/{formId}")
+     * @Route("/form/{formId}", name="_form")
      * @Template()
      */
     public function formAction($formId)
     {
 
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
+
         return array(
-                'form' => $form,
-            );    }
+            'form' => $form
+        );
+    }
 
 }

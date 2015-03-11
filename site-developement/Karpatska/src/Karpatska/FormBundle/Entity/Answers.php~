@@ -3,6 +3,7 @@
 namespace Karpatska\FormBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Karpatska\FormBundle\Entity\Question;
 
 /**
  * Answers
@@ -24,6 +25,13 @@ class Answers
     /**
      * @var string
      *
+     * @ORM\Column(name="answerType", type="text")
+     */
+    private $answerType;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="answerText", type="text")
      */
     private $answerText;
@@ -32,64 +40,11 @@ class Answers
      * @var integer
      *
      * @ORM\ManyToOne(targetEntity="Question", inversedBy="answer")
-     * @ORM\JoinColumn(name="questionId", referencedColumnName="id")
+     * @ORM\JoinColumn(name="question_id", referencedColumnName="id")
      */
     private $question;
 
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set answers
-     *
-     * @param string $answerText
-     * @return Answers
-     */
-    public function setAnswerText($answerText)
-    {
-        $this->answerText = $answerText;
-
-        return $this;
-    }
-
-    /**
-     * Get answerText
-     *
-     * @return string 
-     */
-    public function getAnswerText()
-    {
-        return $this->answerText;
-    }
-
-    /**
-     * Set question
-     *
-     * @param integer $question
-     * @return Answers
-     */
-    public function setQuestion($question)
-    {
-        $this->question = $question;
-
-        return $this;
-    }
-
-    /**
-     * Get question
-     *
-     * @return integer 
-     */
-    public function getQuestion()
-    {
-        return $this->question;
+    public function __construct() {
+        $this->question = new \Doctrine\Common\Collections\ArrayCollection();
     }
 }

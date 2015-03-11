@@ -29,6 +29,11 @@ class Question
      */
     private $questionText;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Answers", mappedBy="question", cascade={"persist", "merge", "remove", "refresh"})
+     */
     private $answer;
 
     /**
@@ -97,5 +102,38 @@ class Question
     public function getForm()
     {
         return $this->form;
+    }
+
+    /**
+     * Add answer
+     *
+     * @param \Karpatska\FormBundle\Entity\Answer $answer
+     * @return Question
+     */
+    public function addAnswer(\Karpatska\FormBundle\Entity\Answer $answer)
+    {
+        $this->answer[] = $answer;
+
+        return $this;
+    }
+
+    /**
+     * Remove answer
+     *
+     * @param \Karpatska\FormBundle\Entity\Answer $answer
+     */
+    public function removeAnswer(\Karpatska\FormBundle\Entity\Answer $answer)
+    {
+        $this->answer->removeElement($answer);
+    }
+
+    /**
+     * Get answer
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAnswer()
+    {
+        return $this->answer;
     }
 }

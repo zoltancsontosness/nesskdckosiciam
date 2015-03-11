@@ -1,12 +1,28 @@
-{% extends "::base.html.twig" %}
+{% extends "KarpatskaFormBundle::layout.html.twig" %}
 
 {% block title %}KarpatskaFormBundle:Form:form{% endblock %}
 
 {% block body %}
-<h1>{{form.name}}</h1>
+    <div class="container">
 
-{% for question in form.question %}
-{{question.questionText}} <br>
-{% endfor %}
+        <h1>{{form.name}}</h1>
+        <hr class="colorgraph"/>
+        <form action="" class="form-horizontal" role="form">
+            {% for question in form.question %}
+                <div class="row form-group form-group-lg">
+                    <label class="col-xs-12 col-md-4 control-label">{{ question.questionText }}:</label>
+                    <div class="col-xs-12 col-md-6">
+                        <input type="text" name="{{ question.id }}" class="form-control input-lg">
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="col-xs-12 col-md-6 col-md-offset-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Odoslať</button>
+                <br/>
+            </div>
+        </form>
+        <hr class="colorgraph clearfix"/>
+
+    </div>
 
 {% endblock %}
