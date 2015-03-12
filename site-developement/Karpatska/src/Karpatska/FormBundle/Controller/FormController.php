@@ -19,6 +19,7 @@ class FormController extends Controller
         return array(
                 'form' => $form,
                 'questions' => $form->getQuestion(),
-            );    }
+            );
+    }
 
 }
