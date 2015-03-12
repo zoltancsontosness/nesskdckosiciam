@@ -18,7 +18,19 @@ class FormController extends Controller
         /*
         $em = $this->getDoctrine()->getManager();
         */
-        var_dump($_POST);
+        if($_POST)
+        {
+            foreach($_POST as $questionId => $questionText) {
+                $answer = new RealAnswer();
+                $answer->setFormId($formId);
+                $answer->setQuestionId($questionId);
+                $answer->setQuestionText($questionText);
+                //$answer->setComapnyId(); TODO vyber id prave lognuteho usera
+
+                $em->persist($answer);
+                $em->flush();
+            }
+        }
 
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
 
