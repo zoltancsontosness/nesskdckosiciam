@@ -13,7 +13,7 @@ security:
 
     providers:
         #entity_user:
-                #entity: { class: NakupujemShopBundle:User, property: username }
+                #entity: { class: KarpatskaFormBundle:User, property: username }
         entity_company:
                 entity: { class: KarpatskaFormBundle:Company, property: ico }
 

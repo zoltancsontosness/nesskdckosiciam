@@ -1,11 +1,14 @@
 {% extends "KarpatskaFormBundle::layout.html.twig" %}
 
 {% block title %}Registrácia{% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
 
 {% block body %}
     <div class="container">
         <div class="col-xs-12 col-sm-8 col-md-10 col-sm-offset-2 col-md-offset-1">
-            {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+            {{ form_start(form,{'attr':{'novalidate':'novalidate', 'id':'karpatska_form_bundle_company_register'}}) }}
 
                 <h2>Registrácia <small>Žiadosť o grant</small></h2>
                 <hr class="colorgraph">
@@ -243,5 +246,6 @@
 
 
     {{ form_end(form) }}
-    <script src="{{ asset('assets/js/frontend/karpatskaApp.js') }}"></script>
+{% endblock %}
+{% block scriptPlace %}
 {% endblock %}

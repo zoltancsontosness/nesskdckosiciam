@@ -24,7 +24,7 @@ class Form
    /**
     * @var \Doctrine\Common\Collections\Collection
     *
-    * @ORM\OneToMany(targetEntity="Karpatska\FormBundle\Entity\Form", mappedBy="form", cascade={"persist", "merge", "remove", "refresh"})
+    * @ORM\OneToMany(targetEntity="Question", mappedBy="form", cascade={"persist", "merge", "remove", "refresh"})
     */
     private $question;
 

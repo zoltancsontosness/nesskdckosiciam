@@ -26,6 +26,8 @@ class CompanyController extends Controller
         {
             $em->persist($company);
             $em->flush();
+
+            return $this->redirect($this->generateUrl('_company_login'));
         }
 
         return array(
