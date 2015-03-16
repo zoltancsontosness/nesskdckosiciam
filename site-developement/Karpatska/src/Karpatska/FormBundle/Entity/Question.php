@@ -30,6 +30,13 @@ class Question
     private $questionText;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+    
+    /**
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\OneToMany(targetEntity="Answers", mappedBy="question", cascade={"persist", "merge", "remove", "refresh"})
@@ -135,5 +142,28 @@ class Question
     public function getAnswer()
     {
         return $this->answer;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Question
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 }

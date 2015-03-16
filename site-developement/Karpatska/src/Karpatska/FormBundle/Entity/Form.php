@@ -25,6 +25,7 @@ class Form
     * @var \Doctrine\Common\Collections\Collection
     *
     * @ORM\OneToMany(targetEntity="Question", mappedBy="form", cascade={"persist", "merge", "remove", "refresh"})
+    * @ORM\OrderBy({"position" = "ASC"})
     */
     private $question;
 

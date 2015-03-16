@@ -58,6 +58,7 @@ class SecurityController extends Controller
     {
         //Security layer will handle this
     }
+
     /**
      * @Route("/login/company", name="_company_login")
      * @Template()

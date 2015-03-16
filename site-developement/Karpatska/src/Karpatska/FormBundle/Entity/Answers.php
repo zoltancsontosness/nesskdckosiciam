@@ -25,7 +25,7 @@ class Answers
     /**
      * @var string
      *
-     * @ORM\Column(name="answerType", type="text")
+     * @ORM\Column(name="answerType", type="string", length=50)
      */
     private $answerType;
 

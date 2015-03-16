@@ -12,7 +12,22 @@
                 <div class="row form-group form-group-lg">
                     <label class="col-xs-12 col-md-4 control-label">{{ question.questionText }}:</label>
                     <div class="col-xs-12 col-md-6">
-                        <input type="text" name="{{ question.id }}" class="form-control input-lg">
+                        {% for answer in question.answer %}
+
+                            {% if answer.answerType == 'text' %}
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg">
+                            {% elseif answer.answerType == 'radio' %}
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="{{ question.id }}">
+                                            {{ answer.answerText }}
+                                        </label>
+                                    </div>
+                            {% elseif answer.answerType == 'textDisabled' %}
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg" disabled>
+                            {% endif %}
+
+                        {% endfor %}
                     </div>
                 </div>
             {% endfor %}
