@@ -10,21 +10,36 @@
         <form action="" class="form-horizontal" role="form" method="post">
             {% for question in form.question %}
                 <div class="row form-group form-group-lg">
-                    <label class="col-xs-12 col-md-4 control-label">{{ question.questionText }}:</label>
+                    {% if question.type == 'heading' %}
+                        <h2 class="col-xs-12 col-md-4 col-md-offset-3"><small>{{ question.questionText }}</small></h2>
+                    {% else %}
+                        <label class="col-xs-12 col-md-4 control-label">{{ question.questionText }}:</label>
+                    {% endif %}
                     <div class="col-xs-12 col-md-6">
                         {% for answer in question.answer %}
 
                             {% if answer.answerType == 'text' %}
-                                <input type="text" name="{{ question.id }}" class="form-control input-lg">
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">
                             {% elseif answer.answerType == 'radio' %}
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="{{ question.id }}">
+                                            <input type="radio" name="{{ question.id }}" value="{{ answer.answerText }}">
                                             {{ answer.answerText }}
                                         </label>
                                     </div>
                             {% elseif answer.answerType == 'textDisabled' %}
-                                <input type="text" name="{{ question.id }}" class="form-control input-lg" disabled>
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg" disabled data-position="{{ question.position }}">
+                            {% elseif answer.answerType == 'checkbox' %}
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="{{ question.id }}">
+                                        {{ answer.answerText }}
+                                    </label>
+                                </div>
+                            {% elseif answer.answerType == 'date' %}
+                                <div class="col-sm-12 col-md-6">
+                                    <input type="date" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">
+                                </div>
                             {% endif %}
 
                         {% endfor %}
@@ -40,4 +55,28 @@
 
     </div>
 
+{% endblock %}
+{% block scriptPlace %}
+    <script>
+        $(document).ready(function(){
+            var path = "{{ path('_company_get') }}";
+            $.ajax({
+                type: "POST",
+                url: path,
+                success: function(result){
+                    var data = $.parseJSON(result);
+                    $('input[data-position="4"]').val(data.address);
+                    $('input[data-position="5"]').val(data.county);
+                    $('input[data-position="6"]').val(data.region);
+                    $('input[data-position="8"]').val(data.ico);
+                    $('input[data-position="26"]').val(data.accountNum);
+                    $('input[data-position="27"]').val(data.bankName);
+                    $('input[data-position="28"]').val(data.bankAddress);
+                },
+                error: function(){
+                    confirm("Nastala chyba pri automatickom vpisovaní dát do formulára. Skúste znova.")
+                }
+            });
+        });
+    </script>
 {% endblock %}

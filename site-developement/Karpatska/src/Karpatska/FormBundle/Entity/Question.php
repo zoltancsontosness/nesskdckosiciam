@@ -35,6 +35,13 @@ class Question
      * @ORM\Column(name="position", type="integer")
      */
     private $position;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=50, options={"default":"question"})
+     */
+    private $type;
     
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -165,5 +172,28 @@ class Question
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Question
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

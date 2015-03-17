@@ -35,6 +35,13 @@ class Question
      * @ORM\Column(name="position", type="integer")
      */
     private $position;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="section", type="string", length=50)
+     */
+    private $section;
     
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -142,5 +149,28 @@ class Question
     public function getAnswer()
     {
         return $this->answer;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Question
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 }

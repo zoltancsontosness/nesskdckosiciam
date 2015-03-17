@@ -6,8 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Karpatska\FormBundle\Entity\RealAnswer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 
 class FormController extends Controller
 {
@@ -43,5 +48,24 @@ class FormController extends Controller
             'form' => $form
         );
     }
+
+    /**
+     * @Route("company/get", name="_company_get")
+     * @Template()
+     */
+    public function getCompanyAction()
+    {
+        $companyIco = $this->get('security.context')->getToken()->getUsername();
+        $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
+
+        $encoders = array(new XmlEncoder(), new JsonEncoder());
+        $normalizers = array(new GetSetMethodNormalizer());
+        $serializer = new Serializer($normalizers, $encoders);
+
+        $jsonCompany = $serializer->serialize($company, 'json');
+
+        return new Response($jsonCompany);
+    }
+
 
 }

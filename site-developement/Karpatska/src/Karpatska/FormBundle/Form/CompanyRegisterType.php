@@ -41,7 +41,7 @@ class CompanyRegisterType extends AbstractType
             ))
             ->add('accountNum','text', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Číslo účtu')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'IBAN')
             ))
             ->add('reprName','text', array(
                 'required' => true,
