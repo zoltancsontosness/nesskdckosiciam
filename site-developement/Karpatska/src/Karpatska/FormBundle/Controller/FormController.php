@@ -13,6 +13,7 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Symfony\Component\Validator\EmailValidator;
 
 class FormController extends Controller
 {
@@ -25,9 +26,12 @@ class FormController extends Controller
         $em = $this->getDoctrine()->getManager();
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
+        $questions = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Question")->findByForm($formId);
 
         if($_POST)
         {
+            var_dump($questions);
+            die();
             foreach($_POST as $questionId => $answerText)
             {
                 $answer = new RealAnswer();

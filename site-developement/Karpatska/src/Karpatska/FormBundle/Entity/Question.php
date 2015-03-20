@@ -44,6 +44,13 @@ class Question
     private $type;
     
     /**
+     * @var string
+     *
+     * @ORM\Column(name="validator", type="string", length=50)
+     */
+    private $validator;
+    
+    /**
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\OneToMany(targetEntity="Answers", mappedBy="question", cascade={"persist", "merge", "remove", "refresh"})
