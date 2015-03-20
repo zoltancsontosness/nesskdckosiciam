@@ -13,6 +13,7 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Symfony\Component\Validator\Constraints\EmailValidator as EmailValidator;
 
 class FormController extends Controller
 {
@@ -25,7 +26,10 @@ class FormController extends Controller
         $em = $this->getDoctrine()->getManager();
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
-
+        $quest = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Question")->findByForm($formId);
+        echo "<pre>";
+        var_dump($quest);
+        echo "</pre>";
         if($_POST)
         {
             foreach($_POST as $questionId => $answerText)
@@ -38,12 +42,9 @@ class FormController extends Controller
                 $em->persist($answer);
             }
             $em->flush();
-
             return new Response("Formulár bol odoslaný");
         }
-
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
-
         return array(
             'form' => $form
         );

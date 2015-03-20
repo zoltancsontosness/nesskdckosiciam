@@ -39,9 +39,9 @@ class Question
     /**
      * @var string
      *
-     * @ORM\Column(name="section", type="string", length=50)
+     * @ORM\Column(name="type", type="string", length=50, options={"default":"question"})
      */
-    private $section;
+    private $type;
     
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -58,6 +58,13 @@ class Question
      */
     private $form;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="validator", type="string", length=150)
+     */
+    private $validator;
+    
     public function __construct() {
             $this->form = new \Doctrine\Common\Collections\ArrayCollection();
     }
@@ -172,5 +179,28 @@ class Question
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Question
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

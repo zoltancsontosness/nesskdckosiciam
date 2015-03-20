@@ -28,7 +28,7 @@
                                         </label>
                                     </div>
                             {% elseif answer.answerType == 'textDisabled' %}
-                                <input type="text" name="{{ question.id }}" class="form-control input-lg" disabled data-position="{{ question.position }}">
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg" readonly="readonly" data-position="{{ question.position }}">
                             {% elseif answer.answerType == 'checkbox' %}
                                 <div class="checkbox">
                                     <label>

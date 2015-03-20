@@ -58,6 +58,13 @@ class Question
      */
     private $form;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="validator", type="string", length=150, nullable=true)
+     */
+    private $validator;
+    
     public function __construct() {
             $this->form = new \Doctrine\Common\Collections\ArrayCollection();
     }
@@ -195,5 +202,28 @@ class Question
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set validator
+     *
+     * @param string $validator
+     * @return Question
+     */
+    public function setValidator($validator)
+    {
+        $this->validator = $validator;
+
+        return $this;
+    }
+
+    /**
+     * Get validator
+     *
+     * @return string 
+     */
+    public function getValidator()
+    {
+        return $this->validator;
     }
 }
