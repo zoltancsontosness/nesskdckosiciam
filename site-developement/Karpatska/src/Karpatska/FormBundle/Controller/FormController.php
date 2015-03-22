@@ -13,7 +13,8 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
-use Symfony\Component\Validator\Constraints\EmailValidator as EmailValidator;
+use Symfony\Component\Validator\Constraints;
+use Symfony\Component\Validator\Constraint;
 
 class FormController extends Controller
 {
@@ -23,28 +24,43 @@ class FormController extends Controller
      */
     public function formAction($formId, Request $request)
     {
+        $i = 0;
         $em = $this->getDoctrine()->getManager();
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
-        $quest = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Question")->findByForm($formId);
-        echo "<pre>";
-        var_dump($quest);
-        echo "</pre>";
-        if($_POST)
-        {
-            foreach($_POST as $questionId => $answerText)
-            {
-                $answer = new RealAnswer();
-                $answer->setFormId($formId);
-                $answer->setQuestionId($questionId);
-                $answer->setAnswerText($answerText);
-                $answer->setCompanyId($company->getId());
-                $em->persist($answer);
-            }
-            $em->flush();
-            return new Response("Formulár bol odoslaný");
-        }
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
+        $questions = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Question")->findBy(array('form' => $form));
+        $answersArray = array();
+        foreach($_POST as $questionId => $answer) {
+            $answersArray[] = array('qid' => $questionId, 'answerText' => $answer);
+        }
+
+        if($_POST){
+            foreach($questions as $question) {
+                $qId = $question->getId();
+                foreach($answersArray as $answerPair) {
+                    if($qId === $answerPair['qid']) {
+                        $validators = $question->getValidator();
+                        $validators = explode(",",$validators);
+                            foreach($validators as $validator) {
+                                $i++;
+                                if($validator !== "") {
+                                    $validator = new $validator();
+                                    if($validator instanceof Constraint) {
+                                        $validator->message = "Chyba";
+                                        $errors = $this->get('validator')->validateValue(
+                                            $answerPair['answerText'],
+                                            $validator
+                                        );
+                                        echo $i.$errors . "<br>";
+                                    }
+                                }
+                            }
+                    }
+
+                }
+            }
+        }
         return array(
             'form' => $form
         );

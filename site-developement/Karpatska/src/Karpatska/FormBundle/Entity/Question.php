@@ -44,6 +44,13 @@ class Question
     private $type;
     
     /**
+     * @var string
+     *
+     * @ORM\Column(name="validator", type="string", length=50)
+     */
+    private $validator;
+    
+    /**
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\OneToMany(targetEntity="Answers", mappedBy="question", cascade={"persist", "merge", "remove", "refresh"})
@@ -57,13 +64,6 @@ class Question
      * @ORM\JoinColumn(name="form_id", referencedColumnName="id")
      */
     private $form;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="validator", type="string", length=150, nullable=true)
-     */
-    private $validator;
     
     public function __construct() {
             $this->form = new \Doctrine\Common\Collections\ArrayCollection();
