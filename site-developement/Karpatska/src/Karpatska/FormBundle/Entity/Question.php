@@ -44,13 +44,6 @@ class Question
     private $type;
     
     /**
-     * @var string
-     *
-     * @ORM\Column(name="validator", type="string", length=50)
-     */
-    private $validator;
-    
-    /**
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\OneToMany(targetEntity="Answers", mappedBy="question", cascade={"persist", "merge", "remove", "refresh"})
@@ -64,9 +57,17 @@ class Question
      * @ORM\JoinColumn(name="form_id", referencedColumnName="id")
      */
     private $form;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Validator", mappedBy="question")
+     */
+    private $validators;
     
     public function __construct() {
             $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+            $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -204,26 +205,37 @@ class Question
         return $this->type;
     }
 
+
     /**
-     * Set validator
+     * Add validators
      *
-     * @param string $validator
+     * @param \Karpatska\FormBundle\Entity\Validator $validators
      * @return Question
      */
-    public function setValidator($validator)
+    public function addValidator(\Karpatska\FormBundle\Entity\Validator $validators)
     {
-        $this->validator = $validator;
+        $this->validators[] = $validators;
 
         return $this;
     }
 
     /**
-     * Get validator
+     * Remove validators
      *
-     * @return string 
+     * @param \Karpatska\FormBundle\Entity\Validator $validators
      */
-    public function getValidator()
+    public function removeValidator(\Karpatska\FormBundle\Entity\Validator $validators)
     {
-        return $this->validator;
+        $this->validators->removeElement($validators);
+    }
+
+    /**
+     * Get validators
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getValidators()
+    {
+        return $this->validators;
     }
 }
