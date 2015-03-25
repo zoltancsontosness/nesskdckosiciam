@@ -42,7 +42,7 @@ class Question
      * @ORM\Column(name="type", type="string", length=50, options={"default":"question"})
      */
     private $type;
-    
+
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
@@ -64,16 +64,16 @@ class Question
      * @ORM\OneToMany(targetEntity="Validator", mappedBy="question")
      */
     private $validators;
-    
+
     public function __construct() {
-            $this->form = new \Doctrine\Common\Collections\ArrayCollection();
-            $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -96,7 +96,7 @@ class Question
     /**
      * Get questionText
      *
-     * @return string 
+     * @return string
      */
     public function getQuestionText()
     {
@@ -119,7 +119,7 @@ class Question
     /**
      * Get form
      *
-     * @return \Karpatska\FormBundle\Entity\Form 
+     * @return \Karpatska\FormBundle\Entity\Form
      */
     public function getForm()
     {
@@ -152,7 +152,7 @@ class Question
     /**
      * Get answer
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getAnswer()
     {
@@ -175,7 +175,7 @@ class Question
     /**
      * Get position
      *
-     * @return integer 
+     * @return integer
      */
     public function getPosition()
     {
@@ -198,7 +198,7 @@ class Question
     /**
      * Get type
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -232,7 +232,7 @@ class Question
     /**
      * Get validators
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getValidators()
     {

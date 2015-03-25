@@ -51,7 +51,7 @@ class Answers
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -74,7 +74,7 @@ class Answers
     /**
      * Get answerType
      *
-     * @return string 
+     * @return string
      */
     public function getAnswerType()
     {
@@ -97,7 +97,7 @@ class Answers
     /**
      * Get answerText
      *
-     * @return string 
+     * @return string
      */
     public function getAnswerText()
     {
@@ -120,7 +120,7 @@ class Answers
     /**
      * Get question
      *
-     * @return \Karpatska\FormBundle\Entity\Question 
+     * @return \Karpatska\FormBundle\Entity\Question
      */
     public function getQuestion()
     {

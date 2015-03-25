@@ -48,3 +48,36 @@ input[type="submit"]{
 .clearfix{
     clear: both;
 }
+div.errors{
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    background-color: #f2dede;
+    /*padding: 10px;*/
+}
+div.errors .alert-danger{
+    padding: 10px 30px;
+}
+.close{
+    border-top: 2px solid #ebccd1;
+    border-bottom: 2px solid #ebccd1;
+    text-align: center !important;
+}
+#printer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-group-lg textarea.form-control{
+    height: 120px;
+}
+@media print {
+    .errors{
+        visibility: hidden;
+    }
+    .btn{
+        visibility: hidden;
+    }
+}

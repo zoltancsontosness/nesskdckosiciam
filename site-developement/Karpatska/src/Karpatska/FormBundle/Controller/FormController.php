@@ -24,7 +24,7 @@ class FormController extends Controller
      */
     public function formAction($formId, Request $request)
     {
-        $i = 0;
+        $validForm = true;
         $em = $this->getDoctrine()->getManager();
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
@@ -36,34 +36,68 @@ class FormController extends Controller
         }
 
         if($_POST){
+            $errors = array();
+            $validatorLength =array();
             foreach($questions as $question) {
                 $qId = $question->getId();
                 foreach($answersArray as $answerPair) {
                     if($qId === $answerPair['qid']) {
-                        $validators = $question->getValidator();
-                        $validators = explode(",",$validators);
+                        $currQuestion = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Question")->find($qId);
+                        $validators = $question->getValidators();
                             foreach($validators as $validator) {
-                                $i++;
-                                if($validator !== "") {
-                                    $validator = new $validator();
+                                if($validator !== NULL) {
+                                    $validatorName = $validator->getName();
+                                    $validatorLength = array('min' => $validator->getMinLength(), 'max' => $validator->getMaxLength());
+                                    if($validatorLength['min'] !== NULL || $validatorLength['max'] !== NULL){
+                                        $validator = new $validatorName($validatorLength);
+                                    }
+                                    else{
+                                        $validator = new $validatorName();
+                                    }
                                     if($validator instanceof Constraint) {
-                                        $validator->message = "Chyba";
-                                        $errors = $this->get('validator')->validateValue(
-                                            $answerPair['answerText'],
-                                            $validator
+                                        //$validator->message = "Chyba";
+                                        $errors[] = array(
+                                            'message' => $this->get('validator')->validateValue(
+                                                $answerPair['answerText'],
+                                                $validator
+                                            ),
+                                            'question' => $currQuestion->getQuestionText()
                                         );
-                                        echo $i.$errors . "<br>";
                                     }
                                 }
                             }
+                        foreach($errors as $error) {
+                            if(strlen($error['message']) > 0) {
+                                $validForm = false;
+                            }
+                        }
+                        if($validForm) {
+                            $answer = new RealAnswer();
+                            $answer->setFormId($formId);
+                            $answer->setQuestionId($answerPair["qid"]);
+                            $answer->setAnswerText($answerPair["answerText"]);
+                            $answer->setCompanyId($company->getId());
+                            $em->persist($answer);
+                        }
                     }
 
                 }
             }
+            if($validForm === true){
+                $em->flush();
+
+                return new Response("Formulár bol odoslaný");
+            }
+            return array(
+                'form' => $form,
+                'errors' => $errors
+            );
         }
+
         return array(
             'form' => $form
         );
+
     }
 
     /**

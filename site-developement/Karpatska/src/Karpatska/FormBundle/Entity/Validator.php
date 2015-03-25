@@ -32,21 +32,21 @@ class Validator
     /**
      * @var integer
      *
-     * @ORM\Column(name="min_length", type="integer")
+     * @ORM\Column(name="min_length", type="integer", nullable=true)
      */
     private $minLength;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="max_length", type="integer")
+     * @ORM\Column(name="max_length", type="integer", nullable=true)
      */
     private $maxLength;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="regex", type="text")
+     * @ORM\Column(name="regex", type="text", nullable=true)
      */
     private $regex;
 
@@ -66,7 +66,7 @@ class Validator
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -89,7 +89,7 @@ class Validator
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -112,7 +112,7 @@ class Validator
     /**
      * Get minLength
      *
-     * @return integer 
+     * @return integer
      */
     public function getMinLength()
     {
@@ -135,7 +135,7 @@ class Validator
     /**
      * Get maxLength
      *
-     * @return integer 
+     * @return integer
      */
     public function getMaxLength()
     {
@@ -158,7 +158,7 @@ class Validator
     /**
      * Get regex
      *
-     * @return string 
+     * @return string
      */
     public function getRegex()
     {
@@ -181,7 +181,7 @@ class Validator
     /**
      * Get question
      *
-     * @return \Karpatska\FormBundle\Entity\Question 
+     * @return \Karpatska\FormBundle\Entity\Question
      */
     public function getQuestion()
     {

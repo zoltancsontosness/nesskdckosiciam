@@ -40,6 +40,8 @@
                                 <div class="col-sm-12 col-md-6">
                                     <input type="date" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">
                                 </div>
+                            {% elseif answer.answerType == 'textarea' %}
+                                <textarea name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}"></textarea>
                             {% endif %}
 
                         {% endfor %}
@@ -48,17 +50,37 @@
             {% endfor %}
             <div class="col-xs-12 col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Odoslať</button>
+            </div>
+            <br/>
+            <div class="col-xs-12 col-md-6 col-md-offset-4">
+                <button id="printer" type="submit" class="btn btn-warning btn-block">Vytlačiť</button>
+            </div>
+            <!-- signature only for print -->
+            <div class="text-center visible-print-block pull-right">
+                <span>...................................</span>
                 <br/>
+                <span>Podpis</span>
             </div>
         </form>
         <hr class="colorgraph clearfix"/>
 
     </div>
-
+    {% if errors is defined %}
+        <div class="errors clearfix">
+            <span class="col-xs-12 close">&times;</span>
+            {% for error in errors if error.message != "" %}
+                <div class="col-md-4 col-xs-12 alert-danger">
+                  <b>{{ error.question }}</b> {{ error.message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endblock %}
 {% block scriptPlace %}
     <script>
         $(document).ready(function(){
+
+            // Autofill
             var path = "{{ path('_company_get') }}";
             $.ajax({
                 type: "POST",
@@ -74,9 +96,50 @@
                     $('input[data-position="28"]').val(data.bankAddress);
                 },
                 error: function(){
-                    confirm("Nastala chyba pri automatickom vpisovaní dát do formulára. Skúste znova.")
+                    alert("Nastala chyba pri automatickom vpisovaní dát do formulára. Skúste znova.");
                 }
             });
+
+            /* errors animation */
+            var element = $("div.errors");
+            var height = element.outerHeight();
+                //set height to 0 for correct animation
+            element.css({
+                height: 0
+            });
+            if(element.children("div.alert-danger").length == 0){
+                element.animate({
+                   height: 0
+                });
+            }
+            else{
+                element.animate({
+                    height: height + "px"
+                }, 1200);
+            }
+
+            $(".close").click(function(){
+                element.animate({
+                    height: 0,
+                    padding:0,
+                    border:0
+                }, 1200);
+            });
+
+            /* Make form printable */
+                $('#printer').click(function(){
+                    window.print();
+                    return false;
+                });
+
+            /* Live update */
+            function liveUpdate()
+            {
+                var first = $('input[data-position="1"]').val();
+                $('input[data-position="29"]').val(first);
+            }
+            $(document).on("change, keyup, input", "input[data-position='1']", liveUpdate);
+
         });
     </script>
 {% endblock %}

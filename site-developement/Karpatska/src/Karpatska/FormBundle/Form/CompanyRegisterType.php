@@ -23,9 +23,13 @@ class CompanyRegisterType extends AbstractType
                 'required' => true,
                 'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Okres')
             ))
-            ->add('region','text', array(
+            ->add('region','choice', array(
                 'required' => true,
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Kraj')
+                'placeholder' => 'Vyberte kraj...',
+                'choices'   => array('Košický' => 'Košický', 'Prešovský' => 'Prešovský'),
+                'expanded' => false,
+                'multiple' => false,
+                'attr' => array('class' => 'form-control input-lg')
             ))
             ->add('type','text', array(
                 'required' => true,

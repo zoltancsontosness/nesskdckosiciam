@@ -63,13 +63,8 @@
                     <div class="col-xs-12 col-sm-12 col-md-6">
                         <div class="form-group inner-addon right-addon">
                             {{ form_widget(form.region) }}
-                            <i id="tooltip"
-                               class="glyphicon glyphicon-info-sign"
-                               data-toggle="tooltip"
-                               data-original-title="Zadajte kraj v ktorom sa organizácia nachádza">
-                            </i>
                             {% if form_errors(form.region) %}
-                                <p class="text-danger">Zadajte kraj</p>
+                                <p class="text-danger">Vyberte kraj</p>
                             {% endif %}
                         </div>
                     </div>
