@@ -37,7 +37,7 @@ class FormController extends Controller
 
         if($_POST){
             $errors = array();
-            $validatorLength =array();
+            $validatorLength = array();
             foreach($questions as $question) {
                 $qId = $question->getId();
                 foreach($answersArray as $answerPair) {
@@ -46,7 +46,8 @@ class FormController extends Controller
                         $validators = $question->getValidators();
                             foreach($validators as $validator) {
                                 if($validator !== NULL) {
-                                    $validatorName = $validator->getName();
+                                    $validatorName = "\\Symfony\\Component\\Validator\\Constraints\\";
+                                    $validatorName .= $validator->getName();
                                     $validatorLength = array('min' => $validator->getMinLength(), 'max' => $validator->getMaxLength());
                                     if($validatorLength['min'] !== NULL || $validatorLength['max'] !== NULL){
                                         $validator = new $validatorName($validatorLength);
@@ -55,7 +56,6 @@ class FormController extends Controller
                                         $validator = new $validatorName();
                                     }
                                     if($validator instanceof Constraint) {
-                                        //$validator->message = "Chyba";
                                         $errors[] = array(
                                             'message' => $this->get('validator')->validateValue(
                                                 $answerPair['answerText'],

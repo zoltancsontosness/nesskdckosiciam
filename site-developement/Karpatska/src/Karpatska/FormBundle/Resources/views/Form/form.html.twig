@@ -42,6 +42,13 @@
                                 </div>
                             {% elseif answer.answerType == 'textarea' %}
                                 <textarea name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}"></textarea>
+                            {% elseif answer.answerType == 'checkbox' %}
+                                <div class="radio">
+                                    <label>
+                                        <input type="checkbox" name="{{ question.id }}" value="{{ answer.answerText }}">
+                                        {{ answer.answerText }}
+                                    </label>
+                                </div>
                             {% endif %}
 
                         {% endfor %}
@@ -56,10 +63,19 @@
                 <button id="printer" type="submit" class="btn btn-warning btn-block">Vytlačiť</button>
             </div>
             <!-- signature only for print -->
+            <div class="col-xs-12 visible-print-block">
+                Žiadam o poskytnutie grantu v celkovej výške <span id="grant">......................................</span> EUR.
+                Prehlasujem, že všetky údaje, ktoré sú v Žiadosti o grant a jej prílohách uvedené sú pravdivé a v relevantných
+                prípadoch totožné s originálom a že predložená žiadosť
+                bola zostavená v súlade so 4. Výzvou Fondu Karpatskej vandrovky na predkladanie projektov MÁME RADI VÝCHOD.
+                <br/><br/><br/><br/>
+            </div>
             <div class="text-center visible-print-block pull-right">
-                <span>...................................</span>
+                <span>
+                    ...........................................................
+                </span>
                 <br/>
-                <span>Podpis</span>
+                <span>Dátum a podpis – štatutár žiadateľa</span>
             </div>
         </form>
         <hr class="colorgraph clearfix"/>
@@ -139,6 +155,13 @@
                 $('input[data-position="29"]').val(first);
             }
             $(document).on("change, keyup, input", "input[data-position='1']", liveUpdate);
+
+            function grantLiveUpdate()
+            {
+                var first = $('input[data-position="21"]').val();
+                $('#grant').text(first);
+            }
+            $(document).on("change, keyup, input", "input[data-position='21']", grantLiveUpdate);
 
         });
     </script>

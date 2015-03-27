@@ -72,6 +72,7 @@ div.errors .alert-danger{
 }
 .form-group-lg textarea.form-control{
     height: 120px;
+    max-width: 100%;
 }
 @media print {
     .errors{
