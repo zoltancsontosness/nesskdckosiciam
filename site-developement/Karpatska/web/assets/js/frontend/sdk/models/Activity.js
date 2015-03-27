@@ -1,9 +1,20 @@
 function Activity (goal) {
 	this.fields = [];
 	this.goal = goal;
+
+	this.createElement();
 }
 
-Activity.prototype.createFieldElements = function (options, targetElement) {
+Activity.prototype.createElement = function () {
+	var tmpl = '<div class="activity"></div>';
+
+	this.goal.element.innerHTML = this.goal.element.innerHTML + tmpl;
+	var activities = this.goal.element.getElementsByClassName("activity");
+
+	this.element = activities[activities.length - 1];
+};
+
+Activity.prototype.createFieldElements = function (options) {
 	var options = options;
 	var tmpl = "";
 	if(!options) {
@@ -19,6 +30,9 @@ Activity.prototype.createFieldElements = function (options, targetElement) {
 		tmpl += "<label>" + options[i].label + "</label>";
 		tmpl += '<input type="' + options[i].type + '">';
 	}
+	this.renderFields(tmpl);
+};
 
-	targetElement.innerHTML = targetElement.innerHTML + tmpl;
+Activity.prototype.renderFields = function (tmpl) {
+	this.element.innerHTML = this.element.innerHTML + tmpl;
 };

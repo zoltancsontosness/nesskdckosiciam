@@ -1,0 +1,15 @@
+- Goal potrebuje element do ktorého sa vykresliť
+- Goal si mustí stornuť svoj element po jeho vytvorení | DONE
+- cieľ potrebuje mať svoj jeden field na popis cieľu | DONE
+
+- Activity potrebuje dostať goal pod ktorý patrí | DONE
+- activity sa musí vytvoriť vždy do vnútra goal elementu na jeho koniec | DONE
+- activity nemá rovno vykresľovať inputy, má vytvárať field objekty a potom ich vyrenderovať cez niejakú funckiu | NOT NEEDED NOW
+
+- field elementy potrebujú name aby sa poslali
+- field elementy majú mať info o aktivite a tá má mať svoj element aby sa tam vedeli vykresliť | NOT NEEDED NOW
+
+- vymyslieť serializovanie goalu do jsonu spolu so všetkým čo v sebe má ( aktivity, fieldy ktoré majú aktivity ) | MAL BY STAČIT Json.serialize
+
+- implementácia do formuláru ( vykresliť prvý goal v twigu podľa jsonu ( aj otázka musí asi mať json flag aby sme vedeli vytvoriť prvý goal/aktivitu )
+- -||-                       ( celé to musí byť v niejakom dive kde sa budú vkladať dalšie ciele aby sa to pchalo stále tam kde má pri kliku [ten sa passuje do Goal classy ako element ] )
