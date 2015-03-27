@@ -74,6 +74,14 @@ div.errors .alert-danger{
     height: 120px;
     max-width: 100%;
 }
+.input-dynamic{
+    margin-bottom: 5px;
+}
+div#stuff{
+    border: 1px solid #aaa;
+    padding: 3px;
+    margin-bottom: 5px;
+}
 @media print {
     .errors{
         visibility: hidden;

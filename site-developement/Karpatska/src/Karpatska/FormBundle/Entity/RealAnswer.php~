@@ -49,4 +49,113 @@ class RealAnswer
      */
     private $answerText;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="json", type="string", length=5)
+     */
+    private $json;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set formId
+     *
+     * @param integer $formId
+     * @return RealAnswer
+     */
+    public function setFormId($formId)
+    {
+        $this->formId = $formId;
+
+        return $this;
+    }
+
+    /**
+     * Get formId
+     *
+     * @return integer 
+     */
+    public function getFormId()
+    {
+        return $this->formId;
+    }
+
+    /**
+     * Set companyId
+     *
+     * @param integer $companyId
+     * @return RealAnswer
+     */
+    public function setCompanyId($companyId)
+    {
+        $this->companyId = $companyId;
+
+        return $this;
+    }
+
+    /**
+     * Get companyId
+     *
+     * @return integer 
+     */
+    public function getCompanyId()
+    {
+        return $this->companyId;
+    }
+
+    /**
+     * Set questionId
+     *
+     * @param integer $questionId
+     * @return RealAnswer
+     */
+    public function setQuestionId($questionId)
+    {
+        $this->questionId = $questionId;
+
+        return $this;
+    }
+
+    /**
+     * Get questionId
+     *
+     * @return integer 
+     */
+    public function getQuestionId()
+    {
+        return $this->questionId;
+    }
+
+    /**
+     * Set answerText
+     *
+     * @param string $answerText
+     * @return RealAnswer
+     */
+    public function setAnswerText($answerText)
+    {
+        $this->answerText = $answerText;
+
+        return $this;
+    }
+
+    /**
+     * Get answerText
+     *
+     * @return string 
+     */
+    public function getAnswerText()
+    {
+        return $this->answerText;
+    }
 }

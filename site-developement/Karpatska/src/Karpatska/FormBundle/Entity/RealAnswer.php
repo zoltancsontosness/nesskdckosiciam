@@ -49,6 +49,13 @@ class RealAnswer
      */
     private $answerText;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="json", type="string", length=5)
+     */
+    private $json;
+
 
     /**
      * Get id
@@ -150,5 +157,28 @@ class RealAnswer
     public function getAnswerText()
     {
         return $this->answerText;
+    }
+
+    /**
+     * Set json
+     *
+     * @param string $json
+     * @return RealAnswer
+     */
+    public function setJson($json)
+    {
+        $this->json = $json;
+
+        return $this;
+    }
+
+    /**
+     * Get json
+     *
+     * @return string 
+     */
+    public function getJson()
+    {
+        return $this->json;
     }
 }
