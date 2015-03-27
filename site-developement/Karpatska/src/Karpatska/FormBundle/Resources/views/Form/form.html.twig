@@ -98,24 +98,6 @@
 {% block scriptPlace %}
     <script>
         $(document).ready(function(){
-            var targetIterator = 1;
-            $('#add_target').click(function () {
-                var stuff = $("#stuff");
-                stuff.append("<label>Cieľ "+targetIterator+"</label><input type='text' name='target_"+targetIterator+"' class='form-control input-lg input-dynamic' />");
-                stuff.append("<button class='btn btn-warning pull-right' id='add_activity' style='margin-bottom: 5px;'><i class='glyphicon glyphicon-plus'></i> Pridať aktivitu</button>");
-                targetIterator++;
-
-                return false;
-            });
-            $('button#add_activity').click(function () {
-                var stuff = $("#stuff");
-                stuff.append("<label>Aktivita</label><input type='text' name='target_' class='form-control input-lg input-dynamic pull-right' style='width: 80%;' />");
-                return false;
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
 
             // Autofill
             var path = "{{ path('_company_get') }}";

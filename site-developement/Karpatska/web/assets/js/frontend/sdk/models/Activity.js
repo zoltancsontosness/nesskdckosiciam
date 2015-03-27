@@ -17,7 +17,7 @@ Activity.prototype.createFieldElements = function (options, targetElement) {
 
 	for(var i = 0; i == options.length; i++) {
 		tmpl += "<label>" + options[i].label + "</label>";
-		tmpl += '<input type="' + options[i].type + '">';
+		tmpl += '<input type="' + options[i].type + ' class="form-control input-lg input-dynamic">';
 	}
 
 	targetElement.innerHTML = targetElement.innerHTML + tmpl;
