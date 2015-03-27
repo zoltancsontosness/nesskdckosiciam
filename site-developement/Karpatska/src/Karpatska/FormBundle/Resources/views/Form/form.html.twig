@@ -50,8 +50,16 @@
                                     </label>
                                 </div>
                             {% elseif answer.answerType == 'targets_and_activities' %}
-                                <div id="stuff" class="clearfix"></div>
-                                <button class='btn btn-info' id='add_target'><i class='glyphicon glyphicon-plus'></i> Pridať ciele</button>
+                                <div id="goals" class="clearfix"></div>
+                                <script>
+                                    var parentElement = $("#goals");
+                                    var goal = new Goal(parentElement);
+                                    goal.createInput();
+                                    var activity = new Activity(goal);
+                                    //goal.createActivity();
+                                    //activity.createFieldElements();
+                                </script>
+                                <button type="button" id="add_goal" class="btn btn-info">Pridajte cieľ</button>
                             {% endif %}
 
                         {% endfor %}
@@ -96,6 +104,17 @@
     {% endif %}
 {% endblock %}
 {% block scriptPlace %}
+    <script>
+        $(document).ready(function(){
+           $("button#add_goal").click(function(){
+               var parentElement = $("#goals");
+                var goal = new Goal(parentElement);
+               goal.createInput();
+               goal.createActivity();
+               return false;
+           });
+        });
+    </script>
     <script>
         $(document).ready(function(){
 

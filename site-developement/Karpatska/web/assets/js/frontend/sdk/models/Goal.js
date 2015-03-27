@@ -1,20 +1,32 @@
-function Goal(){
+function Goal (element) {
+	this.activities = [];
+	this.parentElement = element;
 
+	this.createElement();
 }
 
-Goal.prototype.createFieldElements = function (options, targetElement) {
-    var options = options;
-    var tmpl = "";
-    if(!options) {
-        options = [
-            {label: 'Cieľ', type: 'text'}
-        ];
-    }
+Goal.prototype.createElement = function () {
+	var tmpl = '<div class="goal"></div>';
 
-    for(var i = 0; i == options.length; i++) {
-        tmpl += "<label>" + options[i].label + "</label>";
-        tmpl += '<input type="' + options[i].type + ' class="form-control input-lg input-dynamic">';
-    }
+	this.parentElement.append(tmpl);
+	var goals = this.parentElement.find(".goal");
 
-    targetElement.innerHTML = targetElement.innerHTML + tmpl;
+	this.element = goals[goals.length - 1];
 };
+
+Goal.prototype.createInput = function (options) {
+	if(!options) {
+		options = {
+			placeholder: 'Cieľ projektu',
+			type: 'text'
+		};
+	}
+	var tmpl = '<input type="' + options.type + '" placeholder="' + options.placeholder + '" class="form-control input-lg input-dynamic" />';
+	this.element.innerHTML = this.element.innerHTML + tmpl;
+};
+
+Goal.prototype.createActivity = function () {
+	var activity = new Activity(this);
+	this.activities.push(activity);
+	activity.createFieldElements();
+}
