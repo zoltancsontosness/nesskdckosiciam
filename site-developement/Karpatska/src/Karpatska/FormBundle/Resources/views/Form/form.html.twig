@@ -98,13 +98,14 @@
 {% block scriptPlace %}
     <script>
         $(document).ready(function(){
-           $("button#add_goal").click(function(){
-               var parentElement = $("#goals");
+            var parentElement = $("#goals");
+
+            $("button#add_goal").click(function(){
                 var goal = new Goal(parentElement);
-               goal.createInput();
-               goal.createActivity();
-               return false;
-           });
+                goal.createInput();
+                goal.createActivity();
+                return false;
+            });
         });
     </script>
     <script>

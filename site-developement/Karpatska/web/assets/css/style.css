@@ -82,6 +82,12 @@ div#stuff{
     padding: 3px;
     margin-bottom: 5px;
 }
+.activity{
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #b6b6b6;
+}
+
 @media print {
     .errors{
         visibility: hidden;

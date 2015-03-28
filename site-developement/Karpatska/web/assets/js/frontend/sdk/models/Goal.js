@@ -6,7 +6,7 @@ function Goal (element) {
 }
 
 Goal.prototype.createElement = function () {
-	var tmpl = '<div class="goal"></div>';
+	var tmpl = '<div class="goal"></div><button onclick="'+this.createActivity()+'" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button>';
 
 	this.parentElement.append(tmpl);
 	var goals = this.parentElement.find(".goal");

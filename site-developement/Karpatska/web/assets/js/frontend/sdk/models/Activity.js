@@ -6,7 +6,7 @@ function Activity (goal) {
 }
 
 Activity.prototype.createElement = function () {
-	var tmpl = '<div class="activity"></div>';
+	var tmpl = '<div class="activity clearfix"></div>';
 
 	this.goal.element.innerHTML = this.goal.element.innerHTML + tmpl;
 	var activities = this.goal.element.getElementsByClassName("activity");
@@ -35,4 +35,5 @@ Activity.prototype.createFieldElements = function (options) {
 
 Activity.prototype.renderFields = function (tmpl) {
 	this.element.innerHTML = this.element.innerHTML + tmpl;
+
 };
