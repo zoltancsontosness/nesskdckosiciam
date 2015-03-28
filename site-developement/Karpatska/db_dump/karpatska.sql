@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: St 25.Mar 2015, 16:08
+-- Čas generovania: So 28.Mar 2015, 18:15
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `answers` (
   `answerType` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `question_id` int(11) DEFAULT NULL,
   `answerText` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Sťahujem dáta pre tabuľku `answers`
@@ -73,7 +73,21 @@ INSERT INTO `answers` (`id`, `answerType`, `question_id`, `answerText`) VALUES
 (44, 'textDisabled', 38, ''),
 (45, 'textDisabled', 39, ''),
 (46, 'textDisabled', 40, ''),
-(47, 'textarea', 41, '');
+(47, 'textarea', 41, ''),
+(48, 'checkbox', 48, 'z webovej stránky Karpatskej nadácia / Karpatskej vandrovky '),
+(49, 'checkbox', 48, 'z facebookovej stránky Karpatskej nadácia / Karpatskej vandrovky'),
+(50, 'checkbox', 48, 'z iného internetového zdroja (prosím špecifikujte)'),
+(51, 'checkbox', 48, 'z rozhlasu (prosím špecifikujte)'),
+(52, 'checkbox', 48, 'z televízie (prosím špecifikujte)'),
+(53, 'checkbox', 48, 'z regionálnej tlače (prosím špecifikujte)'),
+(54, 'checkbox', 48, 'iné (prosím špecifikujte)'),
+(55, 'textarea', 47, ''),
+(56, 'textarea', 46, ''),
+(57, 'textarea', 45, ''),
+(58, 'textarea', 44, ''),
+(59, 'textarea', 43, ''),
+(61, 'textarea', 42, ''),
+(62, 'targets_and_activities', 49, '');
 
 -- --------------------------------------------------------
 
@@ -93,18 +107,22 @@ CREATE TABLE IF NOT EXISTS `company` (
   `account_num` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `repr_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `repr_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `dic` int(11) NOT NULL,
+  `dic` int(11) DEFAULT NULL,
   `password` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   `salt` longtext COLLATE utf8_unicode_ci NOT NULL,
   `repr_phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Sťahujem dáta pre tabuľku `company`
 --
 
 INSERT INTO `company` (`id`, `ico`, `address`, `county`, `region`, `type`, `bank_name`, `bank_address`, `account_num`, `repr_name`, `repr_email`, `dic`, `password`, `salt`, `repr_phone`) VALUES
-(4, 12345678, 'Moldavská cesta 24', 'Košice', 'Košický', 'sro', 'Banka', 'Hlavná 1', 'SK3302000000000000012351', 'Admin Adminovsky', 'frank238238@gmail.com', 1234567890, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '5ecf195bbd8c07f4c50f6e8ef6aae07c', '+421908483898');
+(4, 12345678, 'Moldavská cesta 24', 'Košice', 'Košický', 'sro', 'Banka', 'Hlavná 1', 'SK3302000000000000012351', 'Admin Adminovsky', 'frank238238@gmail.com', 1234567890, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '5ecf195bbd8c07f4c50f6e8ef6aae07c', '+421908483898'),
+(5, 87654321, 'Vyšný Čaj 15', 'Košice', 'Košický', 'nadácia', 'slsp', 'Domaca 4', 'SK3112000000001987426375', 'Frantisek Ferko', 'frantisek.ferko@ness.com', NULL, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '7df04f76fdf606e37a591b5654461f57', '+421908483898'),
+(6, 15975312, 'Vyšný Čaj 15', 'Košice', 'Košický', 'nadácia', 'slsp', 'Domaca 4', 'SK3112000000001987426375', 'Frantisek Ferko', 'frantisek.ferko@ness.com', NULL, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', 'b3592778dd8e623ac660ba707f490ad6', '+421908483898'),
+(7, 12345679, 'Vysny caj 15', 'Kosice', 'Košický', 'nadácia', 'slsp', 'bratislavska 1, bratislava', 'SK3112000000001987426375', 'Fero Ferko', 'frantisek.ferko@ness.com', NULL, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '5ff194f0c4f06904679924220266d298', '+421908483898'),
+(9, 12345670, 'Vysny caj 15', 'Kosice', 'Košický', 'nadácia', 'slsp', 'bratislavska 1, bratislava', 'SK3112000000001987426375', 'Fero Ferko', 'frantisek.ferko@ness.com', NULL, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '65a2dcf233a52b7f53425c319d366955', '+421908483898');
 
 -- --------------------------------------------------------
 
@@ -137,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `question` (
   `form_id` int(11) DEFAULT NULL,
   `position` int(11) NOT NULL,
   `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'question'
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Sťahujem dáta pre tabuľku `question`
@@ -182,7 +200,15 @@ INSERT INTO `question` (`id`, `questionText`, `form_id`, `position`, `type`) VAL
 (38, 'Názov banky', 2, 27, 'question'),
 (39, 'Adresa banky', 2, 28, 'question'),
 (40, 'Názov projektu', 2, 29, 'question'),
-(41, 'Zhrnutie projektu', 2, 30, 'question');
+(41, 'Zhrnutie projektu', 2, 30, 'question'),
+(42, 'Informácia o žiadateľovi', 2, 31, 'question'),
+(43, 'Informácie o mieste, kde budete projekt realizovať', 2, 32, 'question'),
+(44, 'Informácie o ľuďoch, pre ktorých budete projekt realizovať', 2, 33, 'question'),
+(45, 'Spôsoby informovania o projekte v tlači, televízii, na internete, atď.', 2, 34, 'question'),
+(46, 'Budúcnosť vášho projektu', 2, 35, 'question'),
+(47, 'Nejasnosti a riziká súvisiace s projektom ', 2, 36, 'question'),
+(48, 'Odkiaľ ste sa dozvedeli o 5. Výzve Fondu Karpatskej vandrovky MÁME RADI VÝCHOD?', 2, 37, 'question'),
+(49, 'Ciele a aktivity projektu ', 2, 38, 'question');
 
 -- --------------------------------------------------------
 
@@ -195,8 +221,9 @@ CREATE TABLE IF NOT EXISTS `realanswer` (
   `form_id` int(11) NOT NULL,
   `company_id` int(11) NOT NULL,
   `question_id` int(11) NOT NULL,
-  `answer_text` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1890 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `answer_text` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `json` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=727 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -211,43 +238,55 @@ CREATE TABLE IF NOT EXISTS `validator` (
   `min_length` int(11) DEFAULT NULL,
   `max_length` int(11) DEFAULT NULL,
   `regex` longtext COLLATE utf8_unicode_ci
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Sťahujem dáta pre tabuľku `validator`
 --
 
 INSERT INTO `validator` (`id`, `question_id`, `name`, `min_length`, `max_length`, `regex`) VALUES
-(1, 9, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(2, 10, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(3, 11, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(4, 12, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(5, 13, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(6, 16, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(7, 17, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(10, 14, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(11, 15, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(12, 16, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(13, 17, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(14, 18, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(15, 19, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(16, 19, '\\Symfony\\Component\\Validator\\Constraints\\Email', NULL, NULL, NULL),
-(17, 25, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(18, 26, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(19, 27, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(20, 27, '\\Symfony\\Component\\Validator\\Constraints\\Email', NULL, NULL, NULL),
-(21, 29, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(22, 29, '\\Symfony\\Component\\Validator\\Constraints\\Date', NULL, NULL, NULL),
-(23, 30, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(24, 30, '\\Symfony\\Component\\Validator\\Constraints\\Date', NULL, NULL, NULL),
-(25, 32, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(26, 33, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(27, 37, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(28, 37, '\\Symfony\\Component\\Validator\\Constraints\\Iban', NULL, NULL, NULL),
-(29, 38, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(30, 39, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(31, 40, '\\Symfony\\Component\\Validator\\Constraints\\NotBlank', NULL, NULL, NULL),
-(32, 41, '\\Symfony\\Component\\Validator\\Constraints\\Length', NULL, 800, NULL);
+(1, 9, 'NotBlank', NULL, NULL, NULL),
+(2, 10, 'NotBlank', NULL, NULL, NULL),
+(3, 11, 'NotBlank', NULL, NULL, NULL),
+(4, 12, 'NotBlank', NULL, NULL, NULL),
+(5, 13, 'NotBlank', NULL, NULL, NULL),
+(6, 16, 'NotBlank', NULL, NULL, NULL),
+(7, 17, 'NotBlank', NULL, NULL, NULL),
+(10, 14, 'NotBlank', NULL, NULL, NULL),
+(11, 15, 'NotBlank', NULL, NULL, NULL),
+(12, 16, 'NotBlank', NULL, NULL, NULL),
+(13, 17, 'NotBlank', NULL, NULL, NULL),
+(14, 18, 'NotBlank', NULL, NULL, NULL),
+(15, 19, 'NotBlank', NULL, NULL, NULL),
+(16, 19, 'Email', NULL, NULL, NULL),
+(17, 25, 'NotBlank', NULL, NULL, NULL),
+(18, 26, 'NotBlank', NULL, NULL, NULL),
+(19, 27, 'NotBlank', NULL, NULL, NULL),
+(20, 27, 'Email', NULL, NULL, NULL),
+(21, 29, 'NotBlank', NULL, NULL, NULL),
+(22, 29, 'Date', NULL, NULL, NULL),
+(23, 30, 'NotBlank', NULL, NULL, NULL),
+(24, 30, 'Date', NULL, NULL, NULL),
+(25, 32, 'NotBlank', NULL, NULL, NULL),
+(26, 33, 'NotBlank', NULL, NULL, NULL),
+(27, 37, 'NotBlank', NULL, NULL, NULL),
+(28, 37, 'Iban', NULL, NULL, NULL),
+(29, 38, 'NotBlank', NULL, NULL, NULL),
+(30, 39, 'NotBlank', NULL, NULL, NULL),
+(31, 40, 'NotBlank', NULL, NULL, NULL),
+(32, 41, 'Length', NULL, 800, NULL),
+(33, 42, 'Length', NULL, 800, NULL),
+(34, 43, 'Length', NULL, 800, NULL),
+(35, 44, 'Length', NULL, 800, NULL),
+(36, 45, 'Length', NULL, 800, NULL),
+(37, 46, 'Length', NULL, 800, NULL),
+(38, 47, 'Length', NULL, 800, NULL),
+(39, 42, 'NotBlank', NULL, NULL, NULL),
+(40, 43, 'NotBlank', NULL, NULL, NULL),
+(41, 44, 'NotBlank', NULL, NULL, NULL),
+(42, 45, 'NotBlank', NULL, NULL, NULL),
+(43, 47, 'NotBlank', NULL, NULL, NULL),
+(44, 46, 'NotBlank', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -297,12 +336,12 @@ ALTER TABLE `validator`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=48;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `form`
 --
@@ -312,17 +351,17 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `realanswer`
 --
 ALTER TABLE `realanswer`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1890;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=727;
 --
 -- AUTO_INCREMENT for table `validator`
 --
 ALTER TABLE `validator`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
 --
 -- Obmedzenie pre exportované tabuľky
 --

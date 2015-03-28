@@ -27,6 +27,7 @@ class CompanyController extends Controller
             $em->persist($company);
             $em->flush();
 
+            $this->sendEmail($company->getReprEmail(), $company->getIco());
             return $this->redirect($this->generateUrl('_company_login'));
         }
 
@@ -42,5 +43,26 @@ class CompanyController extends Controller
     public function indexAction(Request $request)
     {
         return array();
+    }
+
+    /**
+     * @param $recipient
+     * @param $ico
+     *
+     * Send email for successfully registered organization
+     */
+    public function sendEmail($recipient, $ico){
+        $email = \Swift_Message::newInstance()
+            ->setSubject('Registrácia bola úspešná - Karpatská nadácia')
+            ->setFrom('frank238238@gmail.com')
+            ->setTo($recipient)
+            ->setBody(
+                $this->renderView(
+                    'KarpatskaFormBundle:Email:registration.html.twig',
+                    array('ico' => $ico)
+                )
+            );
+        $this->get('mailer')->send($email);
+
     }
 }

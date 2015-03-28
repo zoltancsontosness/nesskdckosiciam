@@ -29,13 +29,6 @@
                                     </div>
                             {% elseif answer.answerType == 'textDisabled' %}
                                 <input type="text" name="{{ question.id }}" class="form-control input-lg" readonly="readonly" data-position="{{ question.position }}">
-                            {% elseif answer.answerType == 'checkbox' %}
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="{{ question.id }}">
-                                        {{ answer.answerText }}
-                                    </label>
-                                </div>
                             {% elseif answer.answerType == 'date' %}
                                 <div class="col-sm-12 col-md-6">
                                     <input type="date" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">
@@ -55,8 +48,7 @@
                                     var parentElement = $("#goals");
                                     var goal = new Goal(parentElement);
                                     goal.createInput();
-                                    var activity = new Activity(goal);
-                                    //goal.createActivity();
+                                    goal.createActivity();
                                     //activity.createFieldElements();
                                 </script>
                                 <button type="button" id="add_goal" class="btn btn-info">Pridajte cieľ</button>

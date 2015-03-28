@@ -15,12 +15,15 @@ use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
+//use Ps\PdfBundle\Annotation\Pdf;
 
 class FormController extends Controller
 {
     /**
      * @Route("company/form/{formId}", name="_form")
-     * @Template()
+     * @Template("KarpatskaFormBundle:Form:form.html.twig")
+     *
+     *
      */
     public function formAction($formId, Request $request)
     {
@@ -86,7 +89,16 @@ class FormController extends Controller
             if($validForm === true){
                 $em->flush();
 
-                return new Response("Formulár bol odoslaný");
+                $html = $this->renderView('KarpatskaFormBundle:Form:form.html.twig', array('form' => $form));
+                $mpdfService = $this->get('tfox.mpdfport');
+
+                return new Response($mpdfService->generatePdfResponse($html),
+                    200,
+                    array(
+                        'Content-Type' => 'application/pdf',
+                        'Content-Disposition' => 'attachment; filename="form.pdf"'
+                    )
+                );
             }
             return array(
                 'form' => $form,

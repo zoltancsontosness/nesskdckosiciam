@@ -22,13 +22,13 @@ Activity.prototype.createFieldElements = function (options) {
 			{label: 'Názov aktivity', type: 'text'},
 			{label: 'Popis aktivity', type: 'text'},
 			{label: 'Zodpovedná osoba', type: 'text'},
-			{label: 'Dátum', type: 'text'}
+			{label: 'Dátum realizácie', type: 'text'}
 		];
 	}
 
-	for(var i = 0; i == options.length; i++) {
-		tmpl += "<label>" + options[i].label + "</label>";
-		tmpl += '<input type="' + options[i].type + ' class="form-control input-lg input-dynamic" />';
+	for(var i = 0; i < options.length; i++) {
+		tmpl += '<div class="clearfix" style="width:85%;float:right;"><label>' + options[i].label + '</label>';
+		tmpl += '<input type="' + options[i].type + '" class="form-control input-lg input-dynamic pull-right"/></div>';
 	}
 	this.renderFields(tmpl);
 };

@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new Karpatska\FormBundle\KarpatskaFormBundle(),
+            new TFox\MpdfPortBundle\TFoxMpdfPortBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -174,7 +174,7 @@ class QuestionController extends Controller
      *
      * @Route("/{id}", name="question_update")
      * @Method("PUT")
-     * @Template("KarpatskaFormBundle:Question:edit.html.twig")
+     * @Template("KarpatskaFormBundle:Question:form.pdf.twig")
      */
     public function updateAction(Request $request, $id)
     {
