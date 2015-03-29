@@ -45,11 +45,11 @@
                             {% elseif answer.answerType == 'targets_and_activities' %}
                                 <div id="goals" class="clearfix"></div>
                                 <script>
+                                    goalList = new GoalList();
                                     var parentElement = $("#goals");
                                     var goal = new Goal(parentElement);
-                                    goal.createInput();
+                                    goalList.addGoal(goal);
                                     goal.createActivity();
-                                    //activity.createFieldElements();
                                 </script>
                                 <button type="button" id="add_goal" class="btn btn-info">Pridajte cieľ</button>
                             {% endif %}
@@ -102,13 +102,20 @@
 
             $("button#add_goal").click(function(){
                 var goal = new Goal(parentElement);
-                goal.createInput();
+                goalList.addGoal(goal);
                 goal.createActivity();
                 return false;
             });
         });
     </script>
     <script>
+    function registerActivityHandler(element) {
+                for(i=0; i < goalList.goals.length; i++) {
+                    if(goalList.goals[i].element === element.parentElement) {
+                        goalList.goals[i].createActivity();
+                    }
+                }
+            }
         $(document).ready(function(){
 
             // Autofill

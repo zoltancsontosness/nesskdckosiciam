@@ -92,7 +92,7 @@ class FormController extends Controller
                 $html = $this->renderView('KarpatskaFormBundle:Form:form.html.twig', array('form' => $form));
                 $mpdfService = $this->get('tfox.mpdfport');
 
-                return new Response($mpdfService->generatePdfResponse($html),
+                return new Response($mpdfService->generatePdf($html),
                     200,
                     array(
                         'Content-Type' => 'application/pdf',

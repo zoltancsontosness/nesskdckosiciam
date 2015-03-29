@@ -16,24 +16,36 @@ Activity.prototype.createElement = function () {
 
 Activity.prototype.createFieldElements = function (options) {
 	var options = options;
-	var tmpl = "";
 	if(!options) {
 		options = [
-			{label: 'Názov aktivity', type: 'text'},
-			{label: 'Popis aktivity', type: 'text'},
-			{label: 'Zodpovedná osoba', type: 'text'},
-			{label: 'Dátum realizácie', type: 'text'}
+			{placeholder: 'Názov aktivity', type: 'text', class: 'pull-right'},
+			{placeholder: 'Popis aktivity', type: 'text', class: 'pull-right'},
+			{placeholder: 'Zodpovedná osoba', type: 'text', class: 'pull-right'},
+			{placeholder: 'Dátum realizácie', type: 'text', class: 'pull-right'}
 		];
 	}
 
 	for(var i = 0; i < options.length; i++) {
-		tmpl += '<div class="clearfix" style="width:85%;float:right;"><label>' + options[i].label + '</label>';
-		tmpl += '<input type="' + options[i].type + '" class="form-control input-lg input-dynamic pull-right"/></div>';
+		var tmpl = '<div class="clearfix activity-item" style="width:85%;float:right;"><label>' + options[i].placeholder + '</label></div>';
+
+		$(this.element).append(tmpl);
+		var elements = $(this.element).find('.activity-item');
+		var field = new Field(elements[elements.length - 1], options[i]);
+		this.fields.push(field);
 	}
-	this.renderFields(tmpl);
 };
 
-Activity.prototype.renderFields = function (tmpl) {
-	this.element.innerHTML = this.element.innerHTML + tmpl;
+Activity.prototype.toJSON = function () {
+	var clone = this;
+	var clonedFields = [];
 
-};
+	for(i = 0; i<clone.fields.length; i++) {
+		clonedFields.push(clone.fields[i].toJSON());
+	}
+
+	clone.fields = clonedFields;
+	delete clone.element;
+	delete clone.goal;
+
+	return clone;
+}

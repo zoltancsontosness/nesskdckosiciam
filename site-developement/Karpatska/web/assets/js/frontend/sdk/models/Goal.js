@@ -6,12 +6,13 @@ function Goal (element) {
 }
 
 Goal.prototype.createElement = function () {
-	var tmpl = '<div class="goal"></div><button onclick="'+this.createActivity()+'" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button>';
+	var tmpl = '<div class="goal"><button onclick="registerActivityHandler(this);" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button></div>';
 
 	this.parentElement.append(tmpl);
 	var goals = this.parentElement.find(".goal");
 
 	this.element = goals[goals.length - 1];
+	this.createInput();
 };
 
 Goal.prototype.createInput = function (options) {
@@ -21,12 +22,27 @@ Goal.prototype.createInput = function (options) {
 			type: 'text'
 		};
 	}
-	var tmpl = '<input type="' + options.type + '" placeholder="' + options.placeholder + '" class="form-control input-lg input-dynamic" />';
-	this.element.innerHTML = this.element.innerHTML + tmpl;
+	this.inputField = new Field(this.element, options);
 };
 
 Goal.prototype.createActivity = function () {
 	var activity = new Activity(this);
 	this.activities.push(activity);
 	activity.createFieldElements();
-}
+};
+
+Goal.prototype.toJSON = function () {
+	var clone = this;
+	var clonedActivities = [];
+
+	for(i = 0; i<clone.activities.length; i++) {
+		clonedActivities.push(clone.activities[i].toJSON());
+	}
+
+	clone.activities = clonedActivities;
+	delete clone.element;
+	delete clone.parentElement;
+	clone.inputField = clone.inputField.toJSON();
+
+	return clone;
+};
