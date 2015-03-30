@@ -65,6 +65,15 @@ class Question
      */
     private $validators;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\Column(name="json", type="string", length=5, nullable=true)
+     */
+    private $json;
+
+
+
     public function __construct() {
         $this->form = new \Doctrine\Common\Collections\ArrayCollection();
         $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
@@ -237,5 +246,28 @@ class Question
     public function getValidators()
     {
         return $this->validators;
+    }
+
+    /**
+     * Set json
+     *
+     * @param string $json
+     * @return Question
+     */
+    public function setJson($json)
+    {
+        $this->json = $json;
+
+        return $this;
+    }
+
+    /**
+     * Get json
+     *
+     * @return string 
+     */
+    public function getJson()
+    {
+        return $this->json;
     }
 }

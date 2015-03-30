@@ -80,6 +80,9 @@ class FormController extends Controller
                             $answer->setQuestionId($answerPair["qid"]);
                             $answer->setAnswerText($answerPair["answerText"]);
                             $answer->setCompanyId($company->getId());
+                            if($question->getJson() === "true"){
+                                $answer->setJson("true");
+                            }
                             $em->persist($answer);
                         }
                     }

@@ -42,7 +42,7 @@ class Question
      * @ORM\Column(name="type", type="string", length=50, options={"default":"question"})
      */
     private $type;
-    
+
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
@@ -64,16 +64,25 @@ class Question
      * @ORM\OneToMany(targetEntity="Validator", mappedBy="question")
      */
     private $validators;
-    
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\Column(name="json", type="string", length=5)
+     */
+    private $json;
+
+
+
     public function __construct() {
-            $this->form = new \Doctrine\Common\Collections\ArrayCollection();
-            $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -96,7 +105,7 @@ class Question
     /**
      * Get questionText
      *
-     * @return string 
+     * @return string
      */
     public function getQuestionText()
     {
@@ -119,7 +128,7 @@ class Question
     /**
      * Get form
      *
-     * @return \Karpatska\FormBundle\Entity\Form 
+     * @return \Karpatska\FormBundle\Entity\Form
      */
     public function getForm()
     {
@@ -152,7 +161,7 @@ class Question
     /**
      * Get answer
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getAnswer()
     {
@@ -175,7 +184,7 @@ class Question
     /**
      * Get position
      *
-     * @return integer 
+     * @return integer
      */
     public function getPosition()
     {
@@ -198,33 +207,44 @@ class Question
     /**
      * Get type
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
         return $this->type;
     }
 
+
     /**
-     * Set validator
+     * Add validators
      *
-     * @param string $validator
+     * @param \Karpatska\FormBundle\Entity\Validator $validators
      * @return Question
      */
-    public function setValidator($validator)
+    public function addValidator(\Karpatska\FormBundle\Entity\Validator $validators)
     {
-        $this->validator = $validator;
+        $this->validators[] = $validators;
 
         return $this;
     }
 
     /**
-     * Get validator
+     * Remove validators
      *
-     * @return string 
+     * @param \Karpatska\FormBundle\Entity\Validator $validators
      */
-    public function getValidator()
+    public function removeValidator(\Karpatska\FormBundle\Entity\Validator $validators)
     {
-        return $this->validator;
+        $this->validators->removeElement($validators);
+    }
+
+    /**
+     * Get validators
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getValidators()
+    {
+        return $this->validators;
     }
 }

@@ -16,6 +16,11 @@ Field.prototype.createElement = function (options) {
 			type: 'text'
 		};
 	}
+
+	if(!options.class) {
+		options.class = "";
+	}
+
 	var tmpl = '<input type="' + options.type + '" placeholder="' + options.placeholder + '" class="form-control input-lg input-dynamic field ' + options.class + '" />';
 	$(this.parent).append(tmpl);
 

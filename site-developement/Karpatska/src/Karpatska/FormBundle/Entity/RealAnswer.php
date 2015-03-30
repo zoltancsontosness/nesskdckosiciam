@@ -52,7 +52,7 @@ class RealAnswer
     /**
      * @var string
      *
-     * @ORM\Column(name="json", type="string", length=5)
+     * @ORM\Column(name="json", type="string", length=5, nullable=true)
      */
     private $json;
 

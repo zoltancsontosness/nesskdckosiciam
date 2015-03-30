@@ -43,6 +43,7 @@
                                     </label>
                                 </div>
                             {% elseif answer.answerType == 'targets_and_activities' %}
+                                <input type="hidden" name="{{ question.id }}" id="jsonHandler"/>
                                 <div id="goals" class="clearfix"></div>
                                 <script>
                                     goalList = new GoalList();
@@ -106,16 +107,21 @@
                 goal.createActivity();
                 return false;
             });
+
+            $("form.form-horizontal").submit(function(){
+                $("#jsonHandler").val(goalList.toJSON());
+            });
         });
-    </script>
-    <script>
-    function registerActivityHandler(element) {
-                for(i=0; i < goalList.goals.length; i++) {
-                    if(goalList.goals[i].element === element.parentElement) {
-                        goalList.goals[i].createActivity();
-                    }
+
+        function registerActivityHandler(element) {
+            for(var i=0; i < goalList.goals.length; i++) {
+                if(goalList.goals[i].element === element.parentElement) {
+                    goalList.goals[i].createActivity();
                 }
             }
+        }
+    </script>
+    <script>
         $(document).ready(function(){
 
             // Autofill

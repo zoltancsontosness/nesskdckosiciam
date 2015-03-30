@@ -15,13 +15,10 @@ GoalList.prototype.removeGoal = function (goal) {
 };
 
 GoalList.prototype.toJSON = function () {
-	var clone = this;
-	var clonedGoals = [];
-	for(i=0; i<this.goals.length; i++) {
-		clonedGoals.push(this.goals[i].toJSON());
+	var goals = [];
+	for(i=0;i<this.goals.length; i++) {
+		goals.push(this.goals[i].toJSON());
 	}
 
-	clone.goals = clonedGoals;
-
-	return JSON.stringify(clone);
+	return JSON.stringify(this.goals);
 }
