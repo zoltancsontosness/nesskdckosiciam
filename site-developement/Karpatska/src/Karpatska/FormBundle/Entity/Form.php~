@@ -24,7 +24,8 @@ class Form
    /**
     * @var \Doctrine\Common\Collections\Collection
     *
-    * @ORM\OneToMany(targetEntity="Karpatska\FormBundle\Entity\Form", mappedBy="form", cascade={"persist", "merge", "remove", "refresh"})
+    * @ORM\OneToMany(targetEntity="Question", mappedBy="form", cascade={"persist", "merge", "remove", "refresh"})
+    * @ORM\OrderBy({"position" = "ASC"})
     */
     private $question;
 
@@ -71,5 +72,38 @@ class Form
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Add question
+     *
+     * @param \Karpatska\FormBundle\Entity\Form $question
+     * @return Form
+     */
+    public function addQuestion(\Karpatska\FormBundle\Entity\Form $question)
+    {
+        $this->question[] = $question;
+
+        return $this;
+    }
+
+    /**
+     * Remove question
+     *
+     * @param \Karpatska\FormBundle\Entity\Form $question
+     */
+    public function removeQuestion(\Karpatska\FormBundle\Entity\Form $question)
+    {
+        $this->question->removeElement($question);
+    }
+
+    /**
+     * Get question
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getQuestion()
+    {
+        return $this->question;
     }
 }

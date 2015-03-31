@@ -72,17 +72,27 @@ class Question
      */
     private $json;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="RealAnswer", mappedBy="question")
+     */
+    private $realAnswer;
+
 
 
     public function __construct() {
         $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->realAnswer = new\Doctrine\Common\Collections\ArrayCollection();
         $this->validators = new \Doctrine\Common\Collections\ArrayCollection();
     }
+
+
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -105,67 +115,11 @@ class Question
     /**
      * Get questionText
      *
-     * @return string
+     * @return string 
      */
     public function getQuestionText()
     {
         return $this->questionText;
-    }
-
-    /**
-     * Set form
-     *
-     * @param \Karpatska\FormBundle\Entity\Form $form
-     * @return Question
-     */
-    public function setForm(\Karpatska\FormBundle\Entity\Form $form = null)
-    {
-        $this->form = $form;
-
-        return $this;
-    }
-
-    /**
-     * Get form
-     *
-     * @return \Karpatska\FormBundle\Entity\Form
-     */
-    public function getForm()
-    {
-        return $this->form;
-    }
-
-    /**
-     * Add answer
-     *
-     * @param \Karpatska\FormBundle\Entity\Answer $answer
-     * @return Question
-     */
-    public function addAnswer(\Karpatska\FormBundle\Entity\Answer $answer)
-    {
-        $this->answer[] = $answer;
-
-        return $this;
-    }
-
-    /**
-     * Remove answer
-     *
-     * @param \Karpatska\FormBundle\Entity\Answer $answer
-     */
-    public function removeAnswer(\Karpatska\FormBundle\Entity\Answer $answer)
-    {
-        $this->answer->removeElement($answer);
-    }
-
-    /**
-     * Get answer
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getAnswer()
-    {
-        return $this->answer;
     }
 
     /**
@@ -184,7 +138,7 @@ class Question
     /**
      * Get position
      *
-     * @return integer
+     * @return integer 
      */
     public function getPosition()
     {
@@ -207,13 +161,91 @@ class Question
     /**
      * Get type
      *
-     * @return string
+     * @return string 
      */
     public function getType()
     {
         return $this->type;
     }
 
+    /**
+     * Set json
+     *
+     * @param string $json
+     * @return Question
+     */
+    public function setJson($json)
+    {
+        $this->json = $json;
+
+        return $this;
+    }
+
+    /**
+     * Get json
+     *
+     * @return string 
+     */
+    public function getJson()
+    {
+        return $this->json;
+    }
+
+    /**
+     * Add answer
+     *
+     * @param \Karpatska\FormBundle\Entity\Answers $answer
+     * @return Question
+     */
+    public function addAnswer(\Karpatska\FormBundle\Entity\Answers $answer)
+    {
+        $this->answer[] = $answer;
+
+        return $this;
+    }
+
+    /**
+     * Remove answer
+     *
+     * @param \Karpatska\FormBundle\Entity\Answers $answer
+     */
+    public function removeAnswer(\Karpatska\FormBundle\Entity\Answers $answer)
+    {
+        $this->answer->removeElement($answer);
+    }
+
+    /**
+     * Get answer
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAnswer()
+    {
+        return $this->answer;
+    }
+
+    /**
+     * Set form
+     *
+     * @param \Karpatska\FormBundle\Entity\Form $form
+     * @return Question
+     */
+    public function setForm(\Karpatska\FormBundle\Entity\Form $form = null)
+    {
+        $this->form = $form;
+
+        return $this;
+    }
+
+    /**
+     * Get form
+     *
+     * @return \Karpatska\FormBundle\Entity\Form 
+     */
+    public function getForm()
+    {
+        return $this->form;
+    }
 
     /**
      * Add validators
@@ -241,7 +273,7 @@ class Question
     /**
      * Get validators
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getValidators()
     {
@@ -249,25 +281,35 @@ class Question
     }
 
     /**
-     * Set json
+     * Add realAnswer
      *
-     * @param string $json
+     * @param \Karpatska\FormBundle\Entity\RealAnswer $realAnswer
      * @return Question
      */
-    public function setJson($json)
+    public function addRealAnswer(\Karpatska\FormBundle\Entity\RealAnswer $realAnswer)
     {
-        $this->json = $json;
+        $this->realAnswer[] = $realAnswer;
 
         return $this;
     }
 
     /**
-     * Get json
+     * Remove realAnswer
      *
-     * @return string 
+     * @param \Karpatska\FormBundle\Entity\RealAnswer $realAnswer
      */
-    public function getJson()
+    public function removeRealAnswer(\Karpatska\FormBundle\Entity\RealAnswer $realAnswer)
     {
-        return $this->json;
+        $this->realAnswer->removeElement($realAnswer);
+    }
+
+    /**
+     * Get realAnswer
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRealAnswer()
+    {
+        return $this->realAnswer;
     }
 }

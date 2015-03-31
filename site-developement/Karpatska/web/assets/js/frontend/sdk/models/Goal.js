@@ -19,7 +19,8 @@ Goal.prototype.createInput = function (options) {
 	if(!options) {
 		options = {
 			placeholder: 'Cieľ projektu',
-			type: 'text'
+			type: 'text',
+			class: 'pull-right'
 		};
 	}
 	this.inputField = new Field(this.element, options);

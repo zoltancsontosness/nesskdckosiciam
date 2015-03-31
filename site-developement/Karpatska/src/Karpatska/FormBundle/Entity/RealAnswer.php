@@ -36,13 +36,6 @@ class RealAnswer
     private $companyId;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="question_id", type="integer")
-     */
-    private $questionId;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="answer_text", type="text")
@@ -55,6 +48,14 @@ class RealAnswer
      * @ORM\Column(name="json", type="string", length=5, nullable=true)
      */
     private $json;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToOne(targetEntity="Question", inversedBy="realAnswer")
+     * @ORM\JoinColumn(name="question_id", referencedColumnName="id")
+     */
+    private $question;
 
 
     /**
@@ -114,29 +115,6 @@ class RealAnswer
     }
 
     /**
-     * Set questionId
-     *
-     * @param integer $questionId
-     * @return RealAnswer
-     */
-    public function setQuestionId($questionId)
-    {
-        $this->questionId = $questionId;
-
-        return $this;
-    }
-
-    /**
-     * Get questionId
-     *
-     * @return integer 
-     */
-    public function getQuestionId()
-    {
-        return $this->questionId;
-    }
-
-    /**
      * Set answerText
      *
      * @param string $answerText
@@ -180,5 +158,28 @@ class RealAnswer
     public function getJson()
     {
         return $this->json;
+    }
+
+    /**
+     * Set question
+     *
+     * @param \Karpatska\FormBundle\Entity\Question $question
+     * @return RealAnswer
+     */
+    public function setQuestion(\Karpatska\FormBundle\Entity\Question $question = null)
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    /**
+     * Get question
+     *
+     * @return \Karpatska\FormBundle\Entity\Question 
+     */
+    public function getQuestion()
+    {
+        return $this->question;
     }
 }

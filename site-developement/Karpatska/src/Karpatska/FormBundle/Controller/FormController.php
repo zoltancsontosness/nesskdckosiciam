@@ -77,7 +77,7 @@ class FormController extends Controller
                         if($validForm) {
                             $answer = new RealAnswer();
                             $answer->setFormId($formId);
-                            $answer->setQuestionId($answerPair["qid"]);
+                            $answer->setQuestion($answerPair["qid"]);
                             $answer->setAnswerText($answerPair["answerText"]);
                             $answer->setCompanyId($company->getId());
                             if($question->getJson() === "true"){
@@ -133,5 +133,13 @@ class FormController extends Controller
         return new Response($jsonCompany);
     }
 
+    /**
+     * @Route("company/build/pdf/{formId}", name="_build_pdf")
+     * @Template()
+     */
+    public function buildPdfAction()
+    {
+
+    }
 
 }
