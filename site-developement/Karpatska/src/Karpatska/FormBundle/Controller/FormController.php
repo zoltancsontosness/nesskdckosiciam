@@ -77,7 +77,7 @@ class FormController extends Controller
                         if($validForm) {
                             $answer = new RealAnswer();
                             $answer->setFormId($formId);
-                            $answer->setQuestion($answerPair["qid"]);
+                            $answer->setQuestion($question);
                             $answer->setAnswerText($answerPair["answerText"]);
                             $answer->setCompanyId($company->getId());
                             if($question->getJson() === "true"){
@@ -92,16 +92,7 @@ class FormController extends Controller
             if($validForm === true){
                 $em->flush();
 
-                $html = $this->renderView('KarpatskaFormBundle:Form:form.html.twig', array('form' => $form));
-                $mpdfService = $this->get('tfox.mpdfport');
-
-                return new Response($mpdfService->generatePdf($html),
-                    200,
-                    array(
-                        'Content-Type' => 'application/pdf',
-                        'Content-Disposition' => 'attachment; filename="form.pdf"'
-                    )
-                );
+               return $this->redirectToRoute("_build_pdf", array('formId' => $formId));
             }
             return array(
                 'form' => $form,
@@ -137,9 +128,37 @@ class FormController extends Controller
      * @Route("company/build/pdf/{formId}", name="_build_pdf")
      * @Template()
      */
-    public function buildPdfAction()
+    public function buildPdfAction($formId)
     {
+        $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
+        $companyIco = $this->get('security.context')->getToken()->getUsername();
+        $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
+        $realAnswers = $this->getDoctrine()->getRepository("KarpatskaFormBundle:RealAnswer")->findBy(array(
+                'formId' => $formId,
+                'companyId' => $company->getId()
+        ));
 
+        if($form){
+            return $this->createPdf($form, $realAnswers);
+        }
+
+            return array(
+                'form' => $form,
+                'answers' => $realAnswers
+            );
+    }
+
+    public function createPdf($form, $answers){
+        $view = $this->renderView('KarpatskaFormBundle:Form:buildPdf.html.twig', array('form' => $form, 'answers' => $answers));
+        $mpdfService = $this->get('tfox.mpdfport');
+
+        return new Response($mpdfService->generatePdf($view),
+            200,
+            array(
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'attachment; filename="form.pdf"'
+            )
+        );
     }
 
 }

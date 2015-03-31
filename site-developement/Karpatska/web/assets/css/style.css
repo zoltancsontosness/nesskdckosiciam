@@ -87,6 +87,12 @@ div#stuff{
     margin-bottom: 5px;
     border: 1px solid #b6b6b6;
 }
+.table-custom{
+    padding: 5px;
+}
+.print-pdf{
+    font-size: 22px;
+}
 
 @media print {
     .errors{
