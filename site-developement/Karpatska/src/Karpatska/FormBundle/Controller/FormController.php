@@ -139,7 +139,8 @@ class FormController extends Controller
         ));
 
         if($form){
-            return $this->createPdf($form, $realAnswers);
+            $file = $this->createPdf($form, $realAnswers);
+            $this->saveFile($file,$company->getIco(),$formId);
         }
 
             return array(
@@ -147,6 +148,8 @@ class FormController extends Controller
                 'answers' => $realAnswers
             );
     }
+
+
 
     public function createPdf($form, $answers){
         $view = $this->renderView('KarpatskaFormBundle:Form:buildPdf.html.twig', array('form' => $form, 'answers' => $answers));
@@ -159,6 +162,31 @@ class FormController extends Controller
                 'Content-Disposition' => 'attachment; filename="form.pdf"'
             )
         );
+    }
+
+    /**
+     * @param $file
+     * @param $ico
+     * @param $formId
+     *
+     * This action save file and return path where is this file stored
+     *
+     * @return string
+     *
+     */
+    public function saveFile($file, $ico, $formId)
+    {
+        $cwd = getcwd();
+        if(!file_exists($cwd . "\\files\\" . $ico)){
+            mkdir($cwd . "\\files\\" . $ico ,0700);
+        }
+        $route = $cwd . "\\files" . "\\" . $ico . "\\";
+        $fileName = $ico . "_" . $formId . ".pdf";
+        $openFile = fopen($route . $fileName, "w+");
+        fwrite($openFile, $file);
+        fclose($openFile);
+
+        return $route . $fileName;
     }
 
 }

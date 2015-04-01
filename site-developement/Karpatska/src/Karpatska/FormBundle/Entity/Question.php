@@ -79,6 +79,12 @@ class Question
      */
     private $realAnswer;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
 
 
     public function __construct() {
@@ -311,5 +317,28 @@ class Question
     public function getRealAnswer()
     {
         return $this->realAnswer;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Question
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

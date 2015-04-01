@@ -1,6 +1,6 @@
 {% extends "KarpatskaFormBundle::layout.html.twig" %}
 {% block body %}
-    <div class="container">
+    <div class="container" style="max-width: 950px;">
     <h1>{{ form.name }}</h1>
     <hr class="colorgraph"/>
             {% for question in form.question %}
@@ -10,9 +10,9 @@
                         <label class="control-label">{{ question.questionText }}:</label>
                     </div>
                     <div class="col-lg-12 text-left">
-                        <pre>
-                            {{ answer.answerText }}
-                        </pre>
+                        <div class="thumbnail" style="margin-left: 20px;">
+                            <small>{{ answer.answerText }}</small>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
