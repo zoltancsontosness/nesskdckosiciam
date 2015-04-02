@@ -94,6 +94,7 @@ div#stuff{
     font-size: 22px;
 }
 
+
 @media print {
     .errors{
         visibility: hidden;

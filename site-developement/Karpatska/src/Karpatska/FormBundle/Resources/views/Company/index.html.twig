@@ -1,15 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-Indeeex
-{#
-{% if file_path %}
-    <a href="{{ file_path }}" download="form">Stiahnite TU!</a>
-{% endif %}
-#}
-</body>
-</html>
+{% extends "KarpatskaFormBundle::layout.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Texty co dodaju</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id pulvinar augue.
+                Cras eget mauris eget leo laoreet posuere sit amet vitae sem.
+                Etiam vestibulum augue libero. Donec non nulla lacus. Sed imperdiet placerat pellentesque.
+                In non orci eget est interdum commodo sit amet at turpis. Fusce viverra fermentum molestie.
+                Etiam vulputate porta imperdiet.Donec ut imperdiet augue. Morbi accumsan, risus at bibendum
+                tempor, lacus magna euismod lacus, vitae placerat neque lorem a erat. Fusce risus nibh, bibendum
+                eu metus vitae, cursus consectetur diam. Phasellus malesuada non nunc vitae ornare. Nunc porta dui
+                orci, consequat aliquam libero ultricies sit amet. Fusce non quam quis nulla dapibus ultricies et in
+                lacus. Proin varius nec nisi eget dapibus.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+        <div class="div-col-xs-12 col-lg-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Dostupné formuláre</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">Žiadosť o grant</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="div-col-xs-12 col-lg-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tlačivá na stiahnutie</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">Prehlásenie</a></li>
+                        <li><a href="#">Rozpočet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="div-col-xs-12 col-lg-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Vaše vyplnené formuláre</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {% if not files  %}
+                            Nemáte vyplnené žiadne formuláre.
+                        {% endif %}
+                        {% for file in files %}
+                            <li><a href="{{ asset("files") }}/{{ ico }}/{{ file }}" target="_blank">{{ file }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

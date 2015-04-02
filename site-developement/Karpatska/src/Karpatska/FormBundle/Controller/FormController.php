@@ -169,10 +169,9 @@ class FormController extends Controller
      * @param $ico
      * @param $formId
      *
-     * This action save file and return path where is this file stored
-     *
      * @return string
      *
+     * This action save file and return path where the file is stored
      */
     public function saveFile($file, $ico, $formId)
     {

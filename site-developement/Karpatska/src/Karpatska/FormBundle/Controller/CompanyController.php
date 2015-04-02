@@ -42,7 +42,12 @@ class CompanyController extends Controller
     */
     public function indexAction(Request $request)
     {
-        return array();
+        $companyIco = $this->get('security.context')->getToken()->getUsername();
+        $files = $this->getCompanyFiles($companyIco);
+        return array(
+            'ico' => $companyIco,
+            'files' => $files
+        );
     }
 
     /**
@@ -64,5 +69,25 @@ class CompanyController extends Controller
             );
         $this->get('mailer')->send($email);
 
+    }
+
+
+    /**
+     * @param $ico
+     *
+     * @return array
+     *
+     * Get all company forms in pdf documents
+     */
+    public function getCompanyFiles($ico)
+    {
+        $cwd = getcwd();
+        if(!file_exists($cwd . "\\files\\" . $ico)){
+            mkdir($cwd . "\\files\\" . $ico ,0700);
+        }
+        $route = $cwd . "\\files" . "\\" . $ico . "\\";
+        $files = array_diff(scandir($route), array('..', '.'));
+
+        return $files;
     }
 }
