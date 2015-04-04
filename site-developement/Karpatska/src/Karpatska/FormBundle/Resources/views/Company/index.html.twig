@@ -3,17 +3,10 @@
 {% block body %}
     <div class="container">
         <div class="jumbotron">
-            <h1>Texty co dodaju</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id pulvinar augue.
-                Cras eget mauris eget leo laoreet posuere sit amet vitae sem.
-                Etiam vestibulum augue libero. Donec non nulla lacus. Sed imperdiet placerat pellentesque.
-                In non orci eget est interdum commodo sit amet at turpis. Fusce viverra fermentum molestie.
-                Etiam vulputate porta imperdiet.Donec ut imperdiet augue. Morbi accumsan, risus at bibendum
-                tempor, lacus magna euismod lacus, vitae placerat neque lorem a erat. Fusce risus nibh, bibendum
-                eu metus vitae, cursus consectetur diam. Phasellus malesuada non nunc vitae ornare. Nunc porta dui
-                orci, consequat aliquam libero ultricies sit amet. Fusce non quam quis nulla dapibus ultricies et in
-                lacus. Proin varius nec nisi eget dapibus.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            <h1>Fond Karpatskej vandrovky</h1>
+            <p>Fond Karpatskej vandrovky podporuje projekty, ktoré prinášajú pomoc a radosť obyvateľom východného Slovenska.
+                Cieľom je podporiť aktívnych východniarov, ich dobré nápady a užitočné projekty.
+                <a href="{{ asset("files/karpatska/Výzva_ MAME_RADI_VYCHOD_2015.pdf") }}" target="_blank">Grantové podmienky nájdete TU.</a></p>
         </div>
         <div class="div-col-xs-12 col-lg-4">
             <div class="panel panel-info">
@@ -34,8 +27,8 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li><a href="#">Prehlásenie</a></li>
-                        <li><a href="#">Rozpočet</a></li>
+                        <li><a href="{{ asset('files/karpatska/prehlasenie_MAME_RADI_VYCHOD.doc') }}">Čestné prehlásenie</a></li>
+                        <li><a href="{{ asset('files/karpatska/Rozpocet_MAME_RADI_VYCHOD_2015.xls') }}">Žiadosť o grant - rozpočet</a></li>
                     </ul>
                 </div>
             </div>

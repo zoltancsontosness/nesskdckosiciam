@@ -37,7 +37,7 @@
                                 <input type="text" name="{{ question.id }}" class="form-control input-lg" readonly="readonly" data-position="{{ question.position }}">
                             {% elseif answer.answerType == 'date' %}
                                 <div class="col-sm-12 col-md-6">
-                                    <input type="date" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">
+                                    <input type="text" name="{{ question.id }}" class="form-control input-lg datepicker" data-position="{{ question.position }}">
                                 </div>
                             {% elseif answer.answerType == 'textarea' %}
                                 <textarea name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}"></textarea>
@@ -123,6 +123,13 @@
             for(var i=0; i < goalList.goals.length; i++) {
                 if(goalList.goals[i].element === element.parentElement) {
                     goalList.goals[i].createActivity();
+                }
+            }
+        }
+        function removeGoal(goal) {
+            for(var i=0;i<this.goals.length; i++) {
+                if(this.goals[i] === goal) {
+                    this.goals.splice(i, 1);
                 }
             }
         }
