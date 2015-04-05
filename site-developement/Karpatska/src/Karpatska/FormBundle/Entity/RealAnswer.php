@@ -24,16 +24,18 @@ class RealAnswer
     /**
      * @var integer
      *
-     * @ORM\Column(name="form_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Form", inversedBy="realAnswers")
+     * @ORM\JoinColumn(name="form_id", referencedColumnName="id")
      */
-    private $formId;
+    private $form;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="company_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Company", inversedBy="realAnswers")
+     * @ORM\JoinColumn(name="company_id", referencedColumnName="id")
      */
-    private $companyId;
+    private $company;
 
     /**
      * @var string
@@ -57,6 +59,11 @@ class RealAnswer
      */
     private $question;
 
+    public function __construct ()
+    {
+        $this->form = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
 
     /**
      * Get id
@@ -66,52 +73,6 @@ class RealAnswer
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set formId
-     *
-     * @param integer $formId
-     * @return RealAnswer
-     */
-    public function setFormId($formId)
-    {
-        $this->formId = $formId;
-
-        return $this;
-    }
-
-    /**
-     * Get formId
-     *
-     * @return integer 
-     */
-    public function getFormId()
-    {
-        return $this->formId;
-    }
-
-    /**
-     * Set companyId
-     *
-     * @param integer $companyId
-     * @return RealAnswer
-     */
-    public function setCompanyId($companyId)
-    {
-        $this->companyId = $companyId;
-
-        return $this;
-    }
-
-    /**
-     * Get companyId
-     *
-     * @return integer 
-     */
-    public function getCompanyId()
-    {
-        return $this->companyId;
     }
 
     /**
@@ -181,5 +142,51 @@ class RealAnswer
     public function getQuestion()
     {
         return $this->question;
+    }
+
+    /**
+     * Set company
+     *
+     * @param \Karpatska\FormBundle\Entity\Company $company
+     * @return RealAnswer
+     */
+    public function setCompany(\Karpatska\FormBundle\Entity\Company $company = null)
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
+    /**
+     * Get company
+     *
+     * @return \Karpatska\FormBundle\Entity\Company 
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * Set form
+     *
+     * @param \Karpatska\FormBundle\Entity\Form $form
+     * @return RealAnswer
+     */
+    public function setForm(\Karpatska\FormBundle\Entity\Form $form = null)
+    {
+        $this->form = $form;
+
+        return $this;
+    }
+
+    /**
+     * Get form
+     *
+     * @return \Karpatska\FormBundle\Entity\Form 
+     */
+    public function getForm()
+    {
+        return $this->form;
     }
 }

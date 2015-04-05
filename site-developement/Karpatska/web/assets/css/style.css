@@ -93,7 +93,9 @@ div#stuff{
 .print-pdf{
     font-size: 22px;
 }
-
+.file-form input{
+    margin-bottom: 20px;
+}
 
 @media print {
     .errors{

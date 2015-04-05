@@ -76,10 +76,10 @@ class FormController extends Controller
                         }
                         if($validForm) {
                             $answer = new RealAnswer();
-                            $answer->setFormId($formId);
+                            $answer->setForm($form);
                             $answer->setQuestion($question);
                             $answer->setAnswerText($answerPair["answerText"]);
-                            $answer->setCompanyId($company->getId());
+                            $answer->setCompany($company);
                             if($question->getJson() === "true"){
                                 $answer->setJson("true");
                             }

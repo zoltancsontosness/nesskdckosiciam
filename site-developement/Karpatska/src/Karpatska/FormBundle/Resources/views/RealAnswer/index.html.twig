@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Firmy ktoré vyplnili formulár</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>IČO</th>
+                <th>DIČ</th>
+                <th>Akcie</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            {% if entity.realAnswers|length > 0 %}
+            <tr>
+                <td><a href="{{ path('admin_records_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.ico }}</td>
+                <td>{{ entity.dic }}</td>
+                <td>
+                    <a href="{{ path('admin_records_show', { 'id': entity.id }) }}">show</a>
+                </td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

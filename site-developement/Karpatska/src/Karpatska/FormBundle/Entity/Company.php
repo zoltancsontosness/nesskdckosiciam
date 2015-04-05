@@ -124,9 +124,17 @@ class Company implements UserInterface
      */
     private $salt;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="RealAnswer", mappedBy="company", cascade={"persist", "merge", "remove", "refresh"})
+     */
+    private $realAnswers;
+
     public function __construct()
     {
         $this->salt = md5(microtime());
+        $this->realAnswers = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -474,5 +482,38 @@ class Company implements UserInterface
     public function getUsername()
     {
         return $this->ico;
+    }
+
+    /**
+     * Add realAnswers
+     *
+     * @param \Karpatska\FormBundle\Entity\RealAnswer $realAnswers
+     * @return Company
+     */
+    public function addRealAnswer(\Karpatska\FormBundle\Entity\RealAnswer $realAnswers)
+    {
+        $this->realAnswers[] = $realAnswers;
+
+        return $this;
+    }
+
+    /**
+     * Remove realAnswers
+     *
+     * @param \Karpatska\FormBundle\Entity\RealAnswer $realAnswers
+     */
+    public function removeRealAnswer(\Karpatska\FormBundle\Entity\RealAnswer $realAnswers)
+    {
+        $this->realAnswers->removeElement($realAnswers);
+    }
+
+    /**
+     * Get realAnswers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRealAnswers()
+    {
+        return $this->realAnswers;
     }
 }
