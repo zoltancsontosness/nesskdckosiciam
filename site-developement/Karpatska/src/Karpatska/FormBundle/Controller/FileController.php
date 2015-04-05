@@ -23,9 +23,8 @@ class FileController extends Controller
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
         $formObj = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
-        $file = new File();
 
-        $form = $this->createForm(new FileUploadType(), $file);
+        $form = $this->createForm(new FileUploadType());
         $form->handleRequest($request);
         //$fileAttr = array();
 
@@ -33,6 +32,7 @@ class FileController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             foreach($_FILES['karpatska_form_bundle_file_upload'] as $tmp_name){
+                $file = new File();
                 $i++;
                 $fileAttr = array(
                     'name' => $_FILES['karpatska_form_bundle_file_upload']['name']['file_'.$i],
@@ -52,6 +52,8 @@ class FileController extends Controller
                 $file->upload($companyIco);
             }
             $em->flush();
+
+            return $this->redirectToRoute("company/index");
 
         }
 
