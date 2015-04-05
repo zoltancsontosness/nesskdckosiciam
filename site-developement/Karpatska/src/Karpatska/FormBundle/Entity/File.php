@@ -58,7 +58,6 @@ class File
      **/
     private $form;
 
-
     /**
      * Get id
      *
@@ -115,11 +114,11 @@ class File
         return $this->path;
     }
 
-    public function getAbsolutePath()
+    public function getAbsolutePath($ico)
     {
         return null === $this->path
             ? null
-            : $this->getUploadRootDir().'/'.$this->path;
+            : $this->getUploadRootDir($ico).'/'.$this->path;
     }
 
     public function getWebPath()
@@ -129,18 +128,18 @@ class File
             : $this->getUploadDir().'/'.$this->path;
     }
 
-    protected function getUploadRootDir()
+    protected function getUploadRootDir($ico)
     {
         // the absolute directory path where uploaded
         // documents should be saved
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+        return __DIR__.'/../../../../web/'.$this->getUploadDir().'/'.$ico;
     }
 
     protected function getUploadDir()
     {
         // get rid of the __DIR__ so it doesn't screw up
         // when displaying uploaded doc/image in the view.
-        return 'file';
+        return 'files';
     }
 
     /**
@@ -161,5 +160,76 @@ class File
     public function getFile()
     {
         return $this->file;
+    }
+    public function upload($ico)
+    {
+        // the file property can be empty if the field is not required
+        if (null === $this->getFile()) {
+            return;
+        }
+
+        // use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+
+        // move takes the target directory and then the
+        // target filename to move to
+        $this->getFile()->move(
+            $this->getUploadRootDir($ico),
+            $this->getFile()->getClientOriginalName()
+        );
+
+        // set the path property to the filename where you've saved the file
+        $this->path = $this->getFile()->getClientOriginalName();
+
+        // clean up the file property as you won't need it anymore
+        $this->file = null;
+    }
+
+
+
+    /**
+     * Set Company
+     *
+     * @param Company $company
+     * @return $this
+     */
+    public function setCompany(\Karpatska\FormBundle\Entity\Company $company = null)
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
+    /**
+     * Get company
+     *
+     * @return mixed
+     */
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * Set form
+     *
+     * @param \Karpatska\FormBundle\Entity\Form $form
+     * @return Question
+     */
+    public function setForm(\Karpatska\FormBundle\Entity\Form $form = null)
+    {
+        $this->form = $form;
+
+        return $this;
+    }
+
+    /**
+     * Get form
+     *
+     * @return \Karpatska\FormBundle\Entity\Form
+     */
+    public function getForm()
+    {
+        return $this->form;
     }
 }

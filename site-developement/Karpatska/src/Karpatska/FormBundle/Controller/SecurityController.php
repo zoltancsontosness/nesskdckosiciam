@@ -60,7 +60,7 @@ class SecurityController extends Controller
     }
 
     /**
-     * @Route("/login/company", name="_company_login")
+     * @Route("/", name="_company_login")
      * @Template()
      */
     public function companyLoginAction()
