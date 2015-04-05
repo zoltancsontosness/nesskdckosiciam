@@ -47,17 +47,14 @@ class RealAnswerController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('KarpatskaFormBundle:RealAnswer')->find($id);
+        $entity = $em->getRepository('KarpatskaFormBundle:Company')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Unable to find RealAnswer entity.');
+            throw $this->createNotFoundException('Firma s daným ID neexistuje.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
-
         return array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
+            'entity' => $entity,
         );
     }
 
