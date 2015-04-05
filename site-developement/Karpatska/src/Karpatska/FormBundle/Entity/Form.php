@@ -43,10 +43,16 @@ class Form
      */
     private $realAnswers;
 
+    /**
+     * @ORM\OneToMany(targetEntity="File", mappedBy="form")
+     **/
+    private $file;
+
 
     public function __construct() {
         $this->question = new \Doctrine\Common\Collections\ArrayCollection();
         $this->realAnswers = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->file = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**

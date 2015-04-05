@@ -131,10 +131,16 @@ class Company implements UserInterface
      */
     private $realAnswers;
 
+    /**
+     * @ORM\OneToMany(targetEntity="File", mappedBy="form")
+     **/
+    private $file;
+
     public function __construct()
     {
         $this->salt = md5(microtime());
         $this->realAnswers = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->file = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 

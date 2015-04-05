@@ -40,11 +40,23 @@ class File
     /**
      * @Assert\File(
      *     maxSize = "2M",
-     *     mimeTypes = {"application/pdf", "application/x-pdf", "image/jpeg", "image/JPEG", "image/PNG", "image/png", "application/excel", "application/vnd.ms-excel", "application/x-excel", "application/x-msexcel", "application/msword",},
+     *     mimeTypes = {"application/pdf", "application/x-pdf", "image/jpeg", "image/JPEG", "image/PNG", "image/png", "application/excel", "application/vnd.ms-excel", "application/x-excel", "application/x-msexcel", "application/msword"},
      *     mimeTypesMessage = "Prosím vkladajte len povolené formáty!"
      * )
      */
     private $file;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Company", inversedBy="file")
+     * @ORM\JoinColumn(name="company_id", referencedColumnName="id")
+     **/
+    private $company;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Form", inversedBy="file")
+     * @ORM\JoinColumn(name="form_id", referencedColumnName="id")
+     **/
+    private $form;
 
 
     /**
