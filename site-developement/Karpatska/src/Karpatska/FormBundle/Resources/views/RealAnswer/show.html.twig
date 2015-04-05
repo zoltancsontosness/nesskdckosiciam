@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>RealAnswer</h1>
+    <h1>Firma</h1>
 
     <table class="record_properties">
         <tbody>
@@ -10,12 +10,12 @@
                 <td>{{ entity.id }}</td>
             </tr>
             <tr>
-                <th>Answertext</th>
-                <td>{{ entity.answerText }}</td>
+                <th>IČO</th>
+                <td>{{ entity.ico }}</td>
             </tr>
             <tr>
-                <th>Json</th>
-                <td>{{ entity.json }}</td>
+                <th>DIC</th>
+                <td>{{ entity.dic }}</td>
             </tr>
         </tbody>
     </table>
@@ -26,11 +26,5 @@
             Back to the list
         </a>
     </li>
-    <li>
-        <a href="{{ path('admin_records_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
 </ul>
 {% endblock %}
