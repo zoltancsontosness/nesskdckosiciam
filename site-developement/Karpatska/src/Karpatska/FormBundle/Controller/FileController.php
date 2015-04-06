@@ -42,11 +42,10 @@ class FileController extends Controller
                     'size' => $_FILES['karpatska_form_bundle_file_upload']['size']['file_'.$i]
                 );
 
-
-                $uploadedFile = new UploadedFile($fileAttr['tmp_name'], $fileAttr['name'], $fileAttr['type'], $fileAttr['size'], $fileAttr['error'] = null, $test = null);
+                $uploadedFile = new UploadedFile($fileAttr['tmp_name'], $this->generateRandomName($fileAttr['name']), $fileAttr['type'], $fileAttr['size'], $fileAttr['error'] = null, $test = null);
                 $file->setFile($uploadedFile);
                 $file->setCompany($company);
-                $file->setName("Temp name");
+                $file->setName($fileAttr['name']);
                 $file->setForm($formObj);
                 $em->persist($file);
                 $file->upload($companyIco);
@@ -61,6 +60,15 @@ class FileController extends Controller
                 'form' => $form->createView(),
                 'ico' => $companyIco
             );
+    }
+
+    /**
+     * @param $filename
+     * @return string
+     */
+    public function generateRandomName($filename){
+        $name = md5(microtime()).'.'.pathinfo($filename, PATHINFO_EXTENSION);
+        return $name;
     }
 
 }

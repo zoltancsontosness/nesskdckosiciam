@@ -82,6 +82,6 @@ class SecurityController extends Controller
      */
     public function companyLogoutAction()
     {
-        return $this->redirect($this->generateUrl('_company_register'));
+        return $this->redirect($this->generateUrl('_company_login'));
     }
 }
