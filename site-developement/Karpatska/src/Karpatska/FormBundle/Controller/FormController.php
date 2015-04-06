@@ -134,7 +134,11 @@ class FormController extends Controller
         return new Response($jsonCompany);
     }
 
-    public function buildPdf($formId)
+    /**
+     * @Route("company/build/form/{formId}")
+     * @Template()
+     */
+    public function buildPdfAction($formId)
     {
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
         $companyIco = $this->get('security.context')->getToken()->getUsername();
@@ -145,8 +149,8 @@ class FormController extends Controller
         ));
 
         if($form){
-            $file = $this->createPdf($form, $realAnswers);
-            $this->saveFile($file,$company->getIco(),$formId);
+           // $file = $this->createPdf($form, $realAnswers);
+            //$this->saveFile($file,$company->getIco(),$formId);
         }
 
             return array(
