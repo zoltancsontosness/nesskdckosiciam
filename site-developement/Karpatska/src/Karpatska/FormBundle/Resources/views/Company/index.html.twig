@@ -44,7 +44,11 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li><a href="{{ path('_form', {'formId': 2}) }}">Žiadosť o grant</a></li>
+                        {% if isFilled %}
+                            Nemáte dostupný žiaden grantový formulár!
+                        {% else %}
+                            <li><a href="{{ path('_form', {'formId': 2}) }}">Žiadosť o grant</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

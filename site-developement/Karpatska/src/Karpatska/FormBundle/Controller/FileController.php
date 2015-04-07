@@ -42,7 +42,7 @@ class FileController extends Controller
                     'size' => $_FILES['karpatska_form_bundle_file_upload']['size']['file_'.$i]
                 );
 
-                $uploadedFile = new UploadedFile($fileAttr['tmp_name'], $this->generateRandomName($fileAttr['name']), $fileAttr['type'], $fileAttr['size'], $fileAttr['error'] = null, $test = null);
+                $uploadedFile = new UploadedFile($fileAttr['tmp_name'], $fileAttr['name'].$this->generateRandomName($fileAttr['name']), $fileAttr['type'], $fileAttr['size'], $fileAttr['error'] = null, $test = null);
                 $file->setFile($uploadedFile);
                 $file->setCompany($company);
                 $file->setName($fileAttr['name']);
@@ -51,6 +51,8 @@ class FileController extends Controller
                 $file->upload($companyIco);
             }
             $em->flush();
+            $recipient = $company->getReprEmail();
+            $this->sendEmail($recipient);
 
             return $this->redirectToRoute("company/index");
 
@@ -69,6 +71,16 @@ class FileController extends Controller
     public function generateRandomName($filename){
         $name = md5(microtime()).'.'.pathinfo($filename, PATHINFO_EXTENSION);
         return $name;
+    }
+
+    public function sendEmail($recipient){
+        $email = \Swift_Message::newInstance()
+            ->setSubject('Žiadosť o grant - Karpatská nadácia')
+            ->setFrom('frank238238@gmail.com')
+            ->setTo($recipient)
+            ->setBody("Žiadosť o grant ste úspešne podali na spracovanie.");
+        $this->get('mailer')->send($email);
+
     }
 
 }

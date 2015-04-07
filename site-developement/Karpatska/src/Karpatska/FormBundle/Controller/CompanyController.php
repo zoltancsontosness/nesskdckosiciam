@@ -44,9 +44,17 @@ class CompanyController extends Controller
     {
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $files = $this->getCompanyFiles($companyIco);
+        $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
+        $isFilled = false;
+        $filledForm = $this->getDoctrine()->getRepository("KarpatskaFormBundle:RealAnswer")->findBy(array('company' => $company->getId(), 'form' => 2));
+
+        if($filledForm != null){
+            $isFilled = true;
+        }
         return array(
             'ico' => $companyIco,
-            'files' => $files
+            'files' => $files,
+            'isFilled' => $isFilled
         );
     }
 

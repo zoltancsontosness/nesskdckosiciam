@@ -55,7 +55,7 @@
 
                                 </div>
                             {% elseif answer.answerType == 'targets_and_activities' %}
-                                <input type="text" name="{{ question.id }}" id="jsonHandler" style="width: 150%;"/>
+                                <input type="hidden" name="{{ question.id }}" id="jsonHandler" style="width: 150%;"/>
                                 <div id="goals" class="clearfix"></div>
                                 <script>
                                     goalList = new GoalList();
@@ -72,7 +72,7 @@
                 </div>
             {% endfor %}
             <div class="col-xs-12 col-md-6 col-md-offset-4">
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Prejsť na ďalší krok &raquo;</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Potvrdiť a prejsť na ďalší krok &raquo;</button>
                 <br/>
             </div>
         </form>

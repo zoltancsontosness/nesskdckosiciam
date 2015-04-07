@@ -99,6 +99,9 @@ div#stuff{
 #activities{
     margin-left: 40px;
 }
+.panel{
+    word-break: break-all;
+}
 
 @media print {
     .errors{

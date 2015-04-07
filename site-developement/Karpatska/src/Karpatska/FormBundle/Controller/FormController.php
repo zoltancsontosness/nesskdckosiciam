@@ -151,7 +151,11 @@ class FormController extends Controller
     }
 
 
-    public function buildPdf($formId)
+    /**
+     * @Route("company/build/pdf/{formId}")
+     * @Template()
+     */
+    public function buildPdfAction($formId)
     {
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
         $companyIco = $this->get('security.context')->getToken()->getUsername();
@@ -162,7 +166,7 @@ class FormController extends Controller
         ));
 
         if($form){
-           $file = $this->createPdf($form, $realAnswers);
+            $file = $this->createPdf($form, $realAnswers);
             $this->saveFile($file,$company->getIco(),$formId);
         }
 
@@ -204,7 +208,7 @@ class FormController extends Controller
             mkdir($cwd . "\\files\\" . $ico ,0700);
         }
         $route = $cwd . "\\files" . "\\" . $ico . "\\";
-        $fileName = $ico . "_" . $formId . ".pdf";
+        $fileName = 'ziadost_o_grant'.$ico . "_" . $formId . ".pdf";
         $openFile = fopen($route . $fileName, "w+");
         fwrite($openFile, $file);
         fclose($openFile);

@@ -58,7 +58,7 @@ class RealAnswerController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'files' => $files,
             'ico' => $ico
         );
