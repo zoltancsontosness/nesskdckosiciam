@@ -16,8 +16,8 @@ GoalList.prototype.removeGoal = function (goal) {
 
 GoalList.prototype.toJSON = function () {
 	var goals = [];
-	for(var i=0;i<this.goals.length; i++) {
-		goals.push(this.goals[i].toJSON());
+	for(var l=0;l<this.goals.length; l++) {
+		goals.push(this.goals[l].toJSON());
 	}
 
 	return JSON.stringify(this.goals);
