@@ -12,8 +12,8 @@ Goal.prototype.createElement = function () {
 	var goals = this.parentElement.find(".goal");
 
 	this.element = goals[goals.length - 1];
-    this.createActivityButton();
 	this.createInput();
+	this.createActivityButton();
 };
 
 Goal.prototype.createInput = function (options) {
@@ -28,7 +28,7 @@ Goal.prototype.createInput = function (options) {
 };
 
 Goal.prototype.createActivityButton = function () {
-    var tmpl = '<button onclick="registerActivityHandler(this);" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button>';
+    var tmpl = '<div class="addActivityButton"><button onclick="registerActivityHandler(this);" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button></div>';
     $(this.element).append(tmpl);
 };
 

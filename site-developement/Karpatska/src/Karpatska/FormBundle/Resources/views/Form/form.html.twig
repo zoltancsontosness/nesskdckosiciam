@@ -103,7 +103,7 @@
 
         function registerActivityHandler(element) {
             for(var i=0; i < goalList.goals.length; i++) {
-                if(goalList.goals[i].element === element.parentElement) {
+                if(goalList.goals[i].element === element.parentElement.parentElement) {
                     goalList.goals[i].createActivity();
                 }
             }

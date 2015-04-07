@@ -8,8 +8,8 @@ function Activity (goal) {
 
 Activity.prototype.createElement = function () {
 	var tmpl = '<div class="activity clearfix"></div>';
-
-	this.goal.element.innerHTML = this.goal.element.innerHTML + tmpl;
+	$(tmpl).insertBefore($(this.goal.element).find('.addActivityButton'));
+	//this.goal.element.innerHTML = this.goal.element.innerHTML + tmpl;
 	var activities = this.goal.element.getElementsByClassName("activity");
 
 	this.element = activities[activities.length - 1];
