@@ -84,4 +84,39 @@ class SecurityController extends Controller
     {
         return $this->redirect($this->generateUrl('_company_login'));
     }
+
+    /**
+         * @Route("/admin/security-check", name="_admin_security_check")
+         * @Template()
+         */
+        public function adminSecurityCheckAction()
+        {
+            //Security layer will handle this
+        }
+
+        /**
+         * @Route("/login/admin", name="_admin_login")
+         * @Template()
+         */
+        public function adminLoginAction()
+        {
+            if ($this->get('request')->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
+                $error = $this->get('request')->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+            } else {
+                $error = $this->get('request')->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
+            }
+            return array(
+                'last_username' => $this->get('request')->getSession()->get(SecurityContext::LAST_USERNAME),
+                'error'         => $error,
+            );
+        }
+
+        /**
+         * @Route("/admin/logout", name="_admin_logout")
+         * @Template()
+         */
+        public function adminLogoutAction()
+        {
+            return $this->redirect($this->generateUrl('_company_login'));
+        }
 }
