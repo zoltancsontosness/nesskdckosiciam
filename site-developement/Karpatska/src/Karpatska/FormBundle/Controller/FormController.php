@@ -97,12 +97,14 @@ class FormController extends Controller
             }
             return array(
                 'form' => $form,
-                'errors' => $errors
+                'errors' => $errors,
+                'post' => $_POST
             );
         }
 
         return array(
-            'form' => $form
+            'form' => $form,
+            'post' => $_POST
         );
 
     }
