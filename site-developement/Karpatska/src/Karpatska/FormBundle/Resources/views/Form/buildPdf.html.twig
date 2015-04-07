@@ -10,25 +10,39 @@
                         <label class="control-label">{{ question.questionText }}:</label>
                     </div>
                     <div class="col-lg-12 text-left">
-
-                        <div class="thumbnail" style="margin-left: 20px;">
-                            {% if answer.json == 'true' %}
-                                <script>
-                                    var values = {{ answer.answerText|raw }};
-                                    for(var i = 0;i<values.length; i++) {
-
-                                            for(var j = 0;j<values[i]['activities'].length; j++){
-                                                for(var k = 0;k<values[i]['activities'][j]['fields'].length; k++) {
-                                                    console.log(values[i]['activities'][j]['fields'][k]['value']);
-                                                }
-                                        }
-                                    }
-                                </script>
-
+                         {% if answer.json == 'true' %}
+                             <div class="thumbnail" style="margin-left: 20px;" id="goals">
+                                 <script>
+                                     var activities = [];
+                                     var goals = [];
+                                     var tmpl = '';
+                                     var values = {{ answer.answerText|raw }};
+                                     for(var i = 0;i<values.length; i++) {
+                                         if(values[i]['inputField']){
+                                             goals.push(values[0]['inputField']['value']);
+                                         }
+                                         for(var j = 0;j<values[i]['activities'].length; j++){
+                                             for(var k = 0;k<values[i]['activities'][j]['fields'].length; k++) {
+                                                 activities.push(values[i]['activities'][j]['fields'][k]['value']);
+                                             }
+                                         }
+                                     }
+                                     for(var iter = 0;iter<goals.length;iter++){
+                                         tmpl += '<small><label>Cieľ projektu:</label>';
+                                         tmpl += '&nbsp;'+goals[iter];
+                                         tmpl += '<div id="activities"><label>Názov aktivity:</label>'+activities[0]+'</div>';
+                                         tmpl += '<div id="activities"><label>Popis aktivity:</label>'+activities[1]+'</div>';
+                                         tmpl += '<div id="activities"><label>Zodpovedná osoba:</label>'+activities[2]+'</div>';
+                                         tmpl += '<div id="activities"><label>Dátum realizácie:</label>'+activities[3]+'</div></small>';
+                                     }
+                                     $('#goals').append(tmpl);
+                                 </script>
+                             </div>
                             {% else %}
-                            <small>{{ answer.answerText }}</small>
-                            {% endif %}
-                        </div>
+                            <div class="thumbnail" style="margin-left: 20px;">
+                                <small>{{ answer.answerText }}</small>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

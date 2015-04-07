@@ -49,7 +49,7 @@
                                     </label>
                                 </div>
                             {% elseif answer.answerType == 'targets_and_activities' %}
-                                <input type="hidden" name="{{ question.id }}" id="jsonHandler"/>
+                                <input type="text" name="{{ question.id }}" id="jsonHandler" style="width: 150%;"/>
                                 <div id="goals" class="clearfix"></div>
                                 <script>
                                     goalList = new GoalList();
@@ -97,7 +97,8 @@
             });
 
             $("form.form-horizontal").submit(function(){
-                $("#jsonHandler").val(goalList.toJSON());
+                $("input#jsonHandler").val(goalList.toJSON());
+                return false;
             });
         });
 

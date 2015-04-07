@@ -7,7 +7,7 @@ GoalList.prototype.addGoal = function (goal) {
 };
 
 GoalList.prototype.removeGoal = function (goal) {
-	for(i=0;i<this.goals.length; i++) {
+	for( var i=0;i<this.goals.length; i++) {
 		if(this.goals[i] === goal) {
 			this.goals.splice(i, 1);
 		}
@@ -16,7 +16,7 @@ GoalList.prototype.removeGoal = function (goal) {
 
 GoalList.prototype.toJSON = function () {
 	var goals = [];
-	for(i=0;i<this.goals.length; i++) {
+	for(var i=0;i<this.goals.length; i++) {
 		goals.push(this.goals[i].toJSON());
 	}
 
