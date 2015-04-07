@@ -150,11 +150,7 @@ class FormController extends Controller
         return new Response($jsonCompany);
     }
 
-    /**
-     * @Route("company/build/form/{formId}")
-     * @Template()
-     */
-    public function buildPdfAction($formId)
+    public function buildPdf($formId)
     {
         $form = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
         $companyIco = $this->get('security.context')->getToken()->getUsername();
@@ -173,14 +169,12 @@ class FormController extends Controller
         }
 
         foreach($jsons as $json) {
-            $results = json_decode($json, true);
+            $results = json_decode($json);
         }
 
-
-
         if($form){
-           // $file = $this->createPdf($form, $realAnswers);
-            //$this->saveFile($file,$company->getIco(),$formId);
+           $file = $this->createPdf($form, $realAnswers, $results);
+           $this->saveFile($file,$company->getIco(),$formId);
         }
 
             return array(
@@ -192,8 +186,8 @@ class FormController extends Controller
 
 
 
-    public function createPdf($form, $answers){
-        $view = $this->renderView('KarpatskaFormBundle:Form:buildPdf.html.twig', array('form' => $form, 'answers' => $answers));
+    public function createPdf($form, $answers, $jsonResults){
+        $view = $this->renderView('KarpatskaFormBundle:Form:buildPdf.html.twig', array('form' => $form, 'answers' => $answers, 'jsonResults' => $jsonResults));
         $mpdfService = $this->get('tfox.mpdfport');
 
         return new Response($mpdfService->generatePdf($view),
