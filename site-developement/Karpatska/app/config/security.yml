@@ -16,6 +16,12 @@ security:
                 #entity: { class: KarpatskaFormBundle:User, property: username }
         entity_company:
                 entity: { class: KarpatskaFormBundle:Company, property: ico }
+        in_memory:
+          memory:
+            users:
+              admin:
+                password: karpata
+                roles: 'ROLE_ADMIN'
 
     firewalls:
         dev:
@@ -64,6 +70,19 @@ security:
                 path: _company_logout
                 target: /
 
+        admin_area:
+            pattern: ^/admin
+            provider: in_memory
+            form_login:
+                check_path: _admin_security_check
+                login_path: _admin_login
+                always_use_default_target_path: false
+                default_target_path: /admin/records
+                csrf_provider: form.csrf_provider
+            logout:
+                path: _admin_logout
+                target: /
+
     access_control:
         #user_login:
             #path: /login/user
@@ -77,3 +96,9 @@ security:
         company_area:
             path: ^/company/*
             roles: ROLE_COMPANY
+        admin_area:
+            path: ^/admin/*
+            roles: ROLE_ADMIN
+        admin_login:
+            path: /login/admin
+            roles: IS_AUTHENTICATED_ANONYMOUSLY
