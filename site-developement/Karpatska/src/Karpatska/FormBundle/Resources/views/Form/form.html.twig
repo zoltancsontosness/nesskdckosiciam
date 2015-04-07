@@ -104,11 +104,22 @@
 
         function registerActivityHandler(element) {
             for(var i=0; i < goalList.goals.length; i++) {
-                if(goalList.goals[i].element === element.parentElement) {
+                if(goalList.goals[i].element === element.parentElement.parentElement) {
                     goalList.goals[i].createActivity();
                 }
             }
         }
+
+        function registerRemoveActivityHandler(element) {
+            for(var i=0; i < goalList.goals.length; i++) {
+                for(var j=0; j < goalList.goals[i].activities.length; j++) {
+                    if(goalList.goals[i].activities[j].element === element.parentElement) {
+                        goalList.goals[i].activities[j].removeActivity();
+                    }
+                }
+            }
+        }
+
         function removeGoal(goal) {
             for(var i=0;i<this.goals.length; i++) {
                 if(this.goals[i] === goal) {
