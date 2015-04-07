@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Št 02.Apr 2015, 01:06
+-- Čas generovania: Út 07.Apr 2015, 13:20
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -121,10 +121,36 @@ CREATE TABLE IF NOT EXISTS `company` (
 
 INSERT INTO `company` (`id`, `ico`, `address`, `county`, `region`, `type`, `bank_name`, `bank_address`, `account_num`, `repr_name`, `repr_email`, `dic`, `password`, `salt`, `repr_phone`) VALUES
 (4, 12345678, 'Moldavská cesta 24', 'Košice', 'Košický', 'sro', 'Banka', 'Hlavná 1', 'SK3302000000000000012351', 'Admin Adminovsky', 'frank238238@gmail.com', 1234567890, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '5ecf195bbd8c07f4c50f6e8ef6aae07c', '+421908483898'),
-(5, 87654321, 'Vyšný Čaj 15', 'Košice', 'Košický', 'nadácia', 'slsp', 'Domaca 4', 'SK3112000000001987426375', 'Frantisek Ferko', 'frantisek.ferko@ness.com', 0, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '7df04f76fdf606e37a591b5654461f57', '+421908483898'),
+(5, 87654321, 'Vyšný Čaj 15', 'Košice', 'Košický', 'nadácia', 'slsp', 'Domaca 4', 'SK3302000000000000012351', 'Frantisek Ferko', 'frantisek.ferko@ness.com', 0, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '7df04f76fdf606e37a591b5654461f57', '+421908483898'),
 (6, 15975312, 'Vyšný Čaj 15', 'Košice', 'Košický', 'nadácia', 'slsp', 'Domaca 4', 'SK3112000000001987426375', 'Frantisek Ferko', 'frantisek.ferko@ness.com', 0, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', 'b3592778dd8e623ac660ba707f490ad6', '+421908483898'),
 (7, 12345679, 'Vysny caj 15', 'Kosice', 'Košický', 'nadácia', 'slsp', 'bratislavska 1, bratislava', 'SK3112000000001987426375', 'Fero Ferko', 'frantisek.ferko@ness.com', 0, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '5ff194f0c4f06904679924220266d298', '+421908483898'),
 (9, 12345670, 'Vysny caj 15', 'Kosice', 'Košický', 'nadácia', 'slsp', 'bratislavska 1, bratislava', 'SK3112000000001987426375', 'Fero Ferko', 'frantisek.ferko@ness.com', 0, '846cc2fe8b93c6ac62f34aa3ad3c4eb7', '65a2dcf233a52b7f53425c319d366955', '+421908483898');
+
+-- --------------------------------------------------------
+
+--
+-- Štruktúra tabuľky pre tabuľku `file`
+--
+
+DROP TABLE IF EXISTS `file`;
+CREATE TABLE IF NOT EXISTS `file` (
+`id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `path` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `form_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `file`
+--
+
+INSERT INTO `file` (`id`, `name`, `path`, `company_id`, `form_id`) VALUES
+(16, '3-formy-moje (1).docx', 'bc606f8de708adef000ad99e5bf4cb19.docx', 4, 2),
+(17, '199-GAMMAINGL199GAMMAES003 (3).pdf', 'b9e4efe24d19f28b7586eceab2c832f7.pdf', 4, 2),
+(18, '11088101_855541834508309_1353636527_n.jpg', '79f5e0fe4ab91cbe54f7c084ab235f03.jpg', 4, 2),
+(19, '10984256_10203933966209004_5035558516040387620_n.jpg', '2f672437a934036f8348d7142665c16a.jpg', 4, 2),
+(20, 'meranie001_Engler_2012.xls', 'd02be25aefe1e8060594b0a654a2e596.xls', 4, 2);
 
 -- --------------------------------------------------------
 
@@ -225,12 +251,86 @@ INSERT INTO `question` (`id`, `questionText`, `form_id`, `position`, `type`, `js
 DROP TABLE IF EXISTS `realanswer`;
 CREATE TABLE IF NOT EXISTS `realanswer` (
 `id` int(11) NOT NULL,
-  `form_id` int(11) NOT NULL,
-  `company_id` int(11) NOT NULL,
+  `form_id` int(11) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
   `question_id` int(11) DEFAULT NULL,
   `answer_text` longtext COLLATE utf8_unicode_ci NOT NULL,
   `json` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=815 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `realanswer`
+--
+
+INSERT INTO `realanswer` (`id`, `form_id`, `company_id`, `question_id`, `answer_text`, `json`) VALUES
+(747, 2, 5, 8, 'občianske združenie', NULL),
+(748, 2, 5, 9, 'Moj vlastny projektasdsasdfsdsw', NULL),
+(749, 2, 5, 10, 'Hesto firma', NULL),
+(750, 2, 5, 11, 'Vyšný Čaj 15', NULL),
+(751, 2, 5, 12, 'Košice', NULL),
+(752, 2, 5, 13, 'Košický', NULL),
+(753, 2, 5, 14, '+421908483898', NULL),
+(754, 2, 5, 15, '87654321', NULL),
+(755, 2, 5, 16, 'Franky Ferko', NULL),
+(756, 2, 5, 17, 'Vyšný Čaj 15', NULL),
+(757, 2, 5, 18, '+421908483898', NULL),
+(758, 2, 5, 19, 'skola@gmail.com', NULL),
+(759, 2, 5, 25, 'Johny Kovalčik', NULL),
+(760, 2, 5, 26, '+421905358747', NULL),
+(761, 2, 5, 27, 'johny.kovalcik@johny.com', NULL),
+(762, 2, 5, 29, '2015-07-02', NULL),
+(763, 2, 5, 30, '2015-07-30', NULL),
+(764, 2, 5, 32, '3300', NULL),
+(765, 2, 5, 33, '4000', NULL),
+(766, 2, 5, 34, '700', NULL),
+(767, 2, 5, 36, 'Kradnem', NULL),
+(768, 2, 5, 37, 'SK3302000000000000012351', NULL),
+(769, 2, 5, 38, 'slsp', NULL),
+(770, 2, 5, 39, 'Domaca 4', NULL),
+(771, 2, 5, 40, 'Moj vlastny projektasdsasdfsdsw', NULL),
+(772, 2, 5, 41, 'dsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(773, 2, 5, 42, 'dsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(774, 2, 5, 43, 'dsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(775, 2, 5, 44, 'dsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(776, 2, 5, 45, 'vdsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(777, 2, 5, 46, 'dsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(778, 2, 5, 47, 'dsfjksdb dhsa iusdvui sbdv uibsdiu bsiu bisudbgdisu bdsgiu ', NULL),
+(779, 2, 5, 48, 'z rozhlasu (prosím špecifikujte)', NULL),
+(780, 2, 5, 49, '[{"activities":[{"fields":[{"value":""},{"value":""},{"value":""},{"value":""}]}],"inputField":{"value":""}}]', 'true'),
+(781, 2, 4, 8, 'občianske združenie', NULL),
+(782, 2, 4, 9, 'Moj vlastny projekt', NULL),
+(783, 2, 4, 10, 'Hesto firma', NULL),
+(784, 2, 4, 11, 'Moldavská cesta 24', NULL),
+(785, 2, 4, 12, 'Košice', NULL),
+(786, 2, 4, 13, 'Košický', NULL),
+(787, 2, 4, 14, '+421908483898', NULL),
+(788, 2, 4, 15, '12345678', NULL),
+(789, 2, 4, 16, 'Franky Ferko', NULL),
+(790, 2, 4, 17, 'Vyšný Čaj 15', NULL),
+(791, 2, 4, 18, '+421908483898', NULL),
+(792, 2, 4, 19, 'skola@gmail.com', NULL),
+(793, 2, 4, 25, 'Johny Kovalčik', NULL),
+(794, 2, 4, 26, '+421905358747', NULL),
+(795, 2, 4, 27, 'johny.kovalcik@johny.com', NULL),
+(796, 2, 4, 29, '2015-07-01', NULL),
+(797, 2, 4, 30, '2015-07-31', NULL),
+(798, 2, 4, 32, '3300', NULL),
+(799, 2, 4, 33, '4000', NULL),
+(800, 2, 4, 34, '700', NULL),
+(801, 2, 4, 36, 'Ucet na grant', NULL),
+(802, 2, 4, 37, 'SK3302000000000000012351', NULL),
+(803, 2, 4, 38, 'Banka', NULL),
+(804, 2, 4, 39, 'Hlavná 1', NULL),
+(805, 2, 4, 40, 'Moj vlastny projekt', NULL),
+(806, 2, 4, 41, 'fsadjibfiusdbf uisdbuif sdbib isdjf ', NULL),
+(807, 2, 4, 42, 'df dsfj sdigf ishj', NULL),
+(808, 2, 4, 43, 'dsf iudsab uidsfb duis ', NULL),
+(809, 2, 4, 44, 'f sdf ndijf kd', NULL),
+(810, 2, 4, 45, 'f sdf ndijf kd', NULL),
+(811, 2, 4, 46, 'f sdf ndijf kd', NULL),
+(812, 2, 4, 47, 'f sdf ndijf kd', NULL),
+(813, 2, 4, 48, 'z webovej stránky Karpatskej nadácia / Karpatskej vandrovky ', NULL),
+(814, 2, 4, 49, '[{"activities":[{"fields":[{"value":"sad"},{"value":"sadsad"},{"value":"sadsad"},{"value":"sadasd"}]}],"inputField":{"value":"adssad"}}]', 'true');
 
 -- --------------------------------------------------------
 
@@ -313,6 +413,12 @@ ALTER TABLE `company`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `UNIQ_800230D32B9A6D10` (`ico`);
 
 --
+-- Indexes for table `file`
+--
+ALTER TABLE `file`
+ ADD PRIMARY KEY (`id`), ADD KEY `IDX_2CAD992E979B1AD6` (`company_id`), ADD KEY `IDX_2CAD992E5FF69B7D` (`form_id`);
+
+--
 -- Indexes for table `form`
 --
 ALTER TABLE `form`
@@ -328,7 +434,7 @@ ALTER TABLE `question`
 -- Indexes for table `realanswer`
 --
 ALTER TABLE `realanswer`
- ADD PRIMARY KEY (`id`), ADD KEY `IDX_747B92EC1E27F6BF` (`question_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `IDX_747B92EC1E27F6BF` (`question_id`), ADD KEY `IDX_747B92EC5FF69B7D` (`form_id`), ADD KEY `IDX_747B92EC979B1AD6` (`company_id`);
 
 --
 -- Indexes for table `validator`
@@ -351,6 +457,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
 ALTER TABLE `company`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
+-- AUTO_INCREMENT for table `file`
+--
+ALTER TABLE `file`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+--
 -- AUTO_INCREMENT for table `form`
 --
 ALTER TABLE `form`
@@ -364,7 +475,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
 -- AUTO_INCREMENT for table `realanswer`
 --
 ALTER TABLE `realanswer`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=815;
 --
 -- AUTO_INCREMENT for table `validator`
 --
@@ -381,6 +492,13 @@ ALTER TABLE `answers`
 ADD CONSTRAINT `FK_9F6DFF9A1E27F6BF` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`);
 
 --
+-- Obmedzenie pre tabuľku `file`
+--
+ALTER TABLE `file`
+ADD CONSTRAINT `FK_2CAD992E5FF69B7D` FOREIGN KEY (`form_id`) REFERENCES `form` (`id`),
+ADD CONSTRAINT `FK_2CAD992E979B1AD6` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`);
+
+--
 -- Obmedzenie pre tabuľku `question`
 --
 ALTER TABLE `question`
@@ -390,7 +508,9 @@ ADD CONSTRAINT `FK_4F812B185FF69B7D` FOREIGN KEY (`form_id`) REFERENCES `form` (
 -- Obmedzenie pre tabuľku `realanswer`
 --
 ALTER TABLE `realanswer`
-ADD CONSTRAINT `FK_747B92EC1E27F6BF` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`);
+ADD CONSTRAINT `FK_747B92EC1E27F6BF` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`),
+ADD CONSTRAINT `FK_747B92EC5FF69B7D` FOREIGN KEY (`form_id`) REFERENCES `form` (`id`),
+ADD CONSTRAINT `FK_747B92EC979B1AD6` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`);
 
 --
 -- Obmedzenie pre tabuľku `validator`
