@@ -47,6 +47,10 @@ class RealAnswerController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->find($id);
+        $ico = $company->getIco();
+
+        $files = $this->getCompanyFiles($ico);
         $entity = $em->getRepository('KarpatskaFormBundle:Company')->find($id);
 
         if (!$entity) {
@@ -55,7 +59,21 @@ class RealAnswerController extends Controller
 
         return array(
             'entity'      => $entity,
+            'files' => $files,
+            'ico' => $ico
         );
+    }
+
+    public function getCompanyFiles($ico)
+    {
+        $cwd = getcwd();
+        if(!file_exists($cwd . "\\files\\" . $ico)){
+            mkdir($cwd . "\\files\\" . $ico ,0700);
+        }
+        $route = $cwd . "\\files" . "\\" . $ico . "\\";
+        $files = array_diff(scandir($route), array('..', '.'));
+
+        return $files;
     }
 
 }

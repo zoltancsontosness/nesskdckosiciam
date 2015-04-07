@@ -45,7 +45,7 @@ Activity.prototype.createRemoveButton = function () {
 
 Activity.prototype.removeActivity = function () {
     var cloneActivities = this.goal.activities;
-    for(i=0; this.goal.activities.length; i++) {
+    for(var i=0; this.goal.activities.length; i++) {
         if(this.goal.activities[i] === this) {
             var index = this.goal.activities.indexOf(this.goal.activities[i]);
             this.element.remove();

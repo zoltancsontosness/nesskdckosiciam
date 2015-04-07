@@ -14,12 +14,13 @@
                              <div class="thumbnail" style="margin-left: 20px;" id="goals">
                                  <script>
                                      var activities = [];
+                                     var activityLabels = ["Názov aktivity:","Popis aktivity:","Zodpovedná osoba:","Dátum realizácie:"];
                                      var goals = [];
                                      var tmpl = '';
                                      var values = {{ answer.answerText|raw }};
                                      for(var i = 0;i<values.length; i++) {
                                          if(values[i]['inputField']){
-                                             goals.push(values[0]['inputField']['value']);
+                                             goals.push(values[i]['inputField']['value']);
                                          }
                                          for(var j = 0;j<values[i]['activities'].length; j++){
                                              for(var k = 0;k<values[i]['activities'][j]['fields'].length; k++) {
@@ -30,10 +31,10 @@
                                      for(var iter = 0;iter<goals.length;iter++){
                                          tmpl += '<small><label>Cieľ projektu:</label>';
                                          tmpl += '&nbsp;'+goals[iter];
-                                         tmpl += '<div id="activities"><label>Názov aktivity:</label>'+activities[0]+'</div>';
-                                         tmpl += '<div id="activities"><label>Popis aktivity:</label>'+activities[1]+'</div>';
-                                         tmpl += '<div id="activities"><label>Zodpovedná osoba:</label>'+activities[2]+'</div>';
-                                         tmpl += '<div id="activities"><label>Dátum realizácie:</label>'+activities[3]+'</div></small>';
+                                         for(var r = 0;r<goals[iter].length; r++){
+                                             tmpl += '<div id="activities"><label>'+ activityLabels[r] +'</label>'+activities[r]+'</div></small>';
+                                         }
+
                                      }
                                      $('#goals').append(tmpl);
                                  </script>

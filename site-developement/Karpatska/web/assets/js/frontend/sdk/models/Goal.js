@@ -42,7 +42,7 @@ Goal.prototype.toJSON = function () {
 	var clone = this;
 	var clonedActivities = [];
 
-	for(i = 0; i<clone.activities.length; i++) {
+	for(var i = 0; i<clone.activities.length; i++) {
 		clonedActivities.push(clone.activities[i].toJSON());
 	}
 
