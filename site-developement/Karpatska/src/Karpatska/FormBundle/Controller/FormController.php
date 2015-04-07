@@ -163,6 +163,20 @@ class FormController extends Controller
                 'form' => $formId,
                 'company' => $company->getId()
         ));
+        $jsons = array();
+        foreach($realAnswers as $realAnswer)
+        {
+            if($realAnswer->getJson() === 'true')
+            {
+                $jsons[] = $realAnswer->getAnswerText();
+            }
+        }
+
+        foreach($jsons as $json) {
+            $results = json_decode($json, true);
+        }
+
+
 
         if($form){
            // $file = $this->createPdf($form, $realAnswers);
@@ -171,7 +185,8 @@ class FormController extends Controller
 
             return array(
                 'form' => $form,
-                'answers' => $realAnswers
+                'answers' => $realAnswers,
+                'jsonResults' => $results
             );
     }
 
