@@ -66,26 +66,8 @@
                 </div>
             {% endfor %}
             <div class="col-xs-12 col-md-6 col-md-offset-4">
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Odoslať</button>
-            </div>
-            <br/>
-            <div class="col-xs-12 col-md-6 col-md-offset-4">
-                <button id="printer" type="submit" class="btn btn-warning btn-block">Vytlačiť</button>
-            </div>
-            <!-- signature only for print -->
-            <div class="col-xs-12 visible-print-block">
-                Žiadam o poskytnutie grantu v celkovej výške <span id="grant">......................................</span> EUR.
-                Prehlasujem, že všetky údaje, ktoré sú v Žiadosti o grant a jej prílohách uvedené sú pravdivé a v relevantných
-                prípadoch totožné s originálom a že predložená žiadosť
-                bola zostavená v súlade so 4. Výzvou Fondu Karpatskej vandrovky na predkladanie projektov MÁME RADI VÝCHOD.
-                <br/><br/><br/><br/>
-            </div>
-            <div class="text-center visible-print-block pull-right">
-                <span>
-                    ...........................................................
-                </span>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Prejsť na ďalší krok &raquo;</button>
                 <br/>
-                <span>Dátum a podpis – štatutár žiadateľa</span>
             </div>
         </form>
         <hr class="colorgraph clearfix"/>
@@ -126,6 +108,17 @@
                 }
             }
         }
+
+        function registerRemoveActivityHandler(element) {
+            for(var i=0; i < goalList.goals.length; i++) {
+                for(var j=0; j < goalList.goals[i].activities.length; j++) {
+                    if(goalList.goals[i].activities[j].element === element.parentElement) {
+                        goalList.goals[i].activities[j].removeActivity();
+                    }
+                }
+            }
+        }
+
         function removeGoal(goal) {
             for(var i=0;i<this.goals.length; i++) {
                 if(this.goals[i] === goal) {

@@ -10,8 +10,24 @@
                         <label class="control-label">{{ question.questionText }}:</label>
                     </div>
                     <div class="col-lg-12 text-left">
+
                         <div class="thumbnail" style="margin-left: 20px;">
+                            {% if answer.json == 'true' %}
+                                <script>
+                                    var values = {{ answer.answerText|raw }};
+                                    for(var i = 0;i<values.length; i++) {
+
+                                            for(var j = 0;j<values[i]['activities'].length; j++){
+                                                for(var k = 0;k<values[i]['activities'][j]['fields'].length; k++) {
+                                                    console.log(values[i]['activities'][j]['fields'][k]['value']);
+                                                }
+                                        }
+                                    }
+                                </script>
+
+                            {% else %}
                             <small>{{ answer.answerText }}</small>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

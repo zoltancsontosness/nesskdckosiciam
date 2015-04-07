@@ -91,8 +91,9 @@ class FormController extends Controller
             }
             if($validForm === true){
                 $em->flush();
+                $this->buildPdf($formId);
 
-               return $this->redirectToRoute("_build_pdf", array('formId' => $formId));
+               return $this->redirectToRoute("_file_upload", array('formId' => $formId));
             }
             return array(
                 'form' => $form,
@@ -114,18 +115,27 @@ class FormController extends Controller
     {
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
+        $companyObj = array(
+            'address' => $company->getAddress(),
+            'county' => $company->getCounty(),
+            'region' => $company->getRegion(),
+            'ico' => $company->getIco(),
+            'accountNum' => $company->getAccountNum(),
+            'bankName' => $company->getBankName(),
+            'bankAddress' => $company->getBankAddress()
+        );
 
         $encoders = array(new XmlEncoder(), new JsonEncoder());
         $normalizers = array(new GetSetMethodNormalizer());
         $serializer = new Serializer($normalizers, $encoders);
 
-        $jsonCompany = $serializer->serialize($company, 'json');
+        $jsonCompany = $serializer->serialize($companyObj, 'json');
 
         return new Response($jsonCompany);
     }
 
     /**
-     * @Route("company/build/pdf/{formId}", name="_build_pdf")
+     * @Route("company/build/form/{formId}")
      * @Template()
      */
     public function buildPdfAction($formId)
@@ -134,13 +144,13 @@ class FormController extends Controller
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
         $realAnswers = $this->getDoctrine()->getRepository("KarpatskaFormBundle:RealAnswer")->findBy(array(
-                'formId' => $formId,
-                'companyId' => $company->getId()
+                'form' => $formId,
+                'company' => $company->getId()
         ));
 
         if($form){
-            $file = $this->createPdf($form, $realAnswers);
-            $this->saveFile($file,$company->getIco(),$formId);
+           // $file = $this->createPdf($form, $realAnswers);
+            //$this->saveFile($file,$company->getIco(),$formId);
         }
 
             return array(

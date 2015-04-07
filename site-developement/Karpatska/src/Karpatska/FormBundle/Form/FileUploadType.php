@@ -11,19 +11,24 @@ class FileUploadType extends AbstractType
     {
         $builder
             ->add('file_1', 'file', array(
-            'required' => true,
+                'required' => true,
+                'mapped' => false
         ))
             ->add('file_2', 'file', array(
                 'required' => true,
+                'mapped' => false
             ))
             ->add('file_3', 'file', array(
                 'required' => true,
+                'mapped' => false
             ))
             ->add('file_4', 'file', array(
                 'required' => true,
+                'mapped' => false
             ))
             ->add('file_5', 'file', array(
                 'required' => true,
+                'mapped' => false
             ))
         ;
     }

@@ -50,11 +50,11 @@ class RealAnswerController extends Controller
         $entity = $em->getRepository('KarpatskaFormBundle:Company')->find($id);
 
         if (!$entity) {
-            throw $this->createNotFoundException('Firma s daným ID neexistuje.');
+            throw $this->createNotFoundException('Spoločnosť s daným ID neexistuje.');
         }
 
         return array(
-            'entity' => $entity,
+            'entity'      => $entity,
         );
     }
 

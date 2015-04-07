@@ -6,12 +6,13 @@ function Goal (element) {
 }
 
 Goal.prototype.createElement = function () {
-	var tmpl = '<div class="goal"><button onclick="registerActivityHandler(this);" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button></div>';
+	var tmpl = '<div class="goal"></div>';
 
 	this.parentElement.append(tmpl);
 	var goals = this.parentElement.find(".goal");
 
 	this.element = goals[goals.length - 1];
+    this.createActivityButton();
 	this.createInput();
 };
 
@@ -24,6 +25,11 @@ Goal.prototype.createInput = function (options) {
 		};
 	}
 	this.inputField = new Field(this.element, options);
+};
+
+Goal.prototype.createActivityButton = function () {
+    var tmpl = '<button onclick="registerActivityHandler(this);" type="button" id="add_activity" class="btn btn-warning pull-right">Pridajte aktivitu</button>';
+    $(this.element).append(tmpl);
 };
 
 Goal.prototype.createActivity = function () {

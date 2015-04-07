@@ -60,7 +60,7 @@ class SecurityController extends Controller
     }
 
     /**
-     * @Route("/login/company", name="_company_login")
+     * @Route("/", name="_company_login")
      * @Template()
      */
     public function companyLoginAction()
@@ -82,6 +82,6 @@ class SecurityController extends Controller
      */
     public function companyLogoutAction()
     {
-        return $this->redirect($this->generateUrl('_company_register'));
+        return $this->redirect($this->generateUrl('_company_login'));
     }
 }
