@@ -24,11 +24,11 @@
                         {% for answer in question.answer %}
 
                             {% if answer.answerType == 'text' %}
-                                <input type="text" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}" value="{% if post[question.id] %}{{ post[question.id] }}{% endif %}">
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}" value="{% if post[question.id] is defined %}{{ post[question.id] }}{% endif %}">
                             {% elseif answer.answerType == 'radio' %}
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="{{ question.id }}" value="{{ answer.answerText }}" {% if post[question.id] == answer.answerText %}checked="checked"{% endif %}>
+                                            <input type="radio" name="{{ question.id }}" value="{{ answer.answerText }}" {% if post[question.id] is defined and post[question.id] == answer.answerText %}checked="checked"{% endif %}>
                                             {{ answer.answerText }}
                                         </label>
                                     </div>
@@ -36,16 +36,18 @@
                                 <input type="text" name="{{ question.id }}" class="form-control input-lg" readonly="readonly" data-position="{{ question.position }}">
                             {% elseif answer.answerType == 'date' %}
                                 <div class="col-sm-12 col-md-6">
-                                    <input type="text" name="{{ question.id }}" class="form-control input-lg datepicker" data-position="{{ question.position }}" value="{% if post[question.id] %}{{ post[question.id] }}{% endif %}">
+                                    <input type="text" name="{{ question.id }}" class="form-control input-lg datepicker" data-position="{{ question.position }}" value="{% if post[question.id] is defined %}{{ post[question.id] }}{% endif %}">
                                 </div>
                             {% elseif answer.answerType == 'textarea' %}
-                                <textarea name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">{% if post[question.id] %}{{ post[question.id] }}{% endif %}</textarea>
+                                <textarea name="{{ question.id }}" class="form-control input-lg" data-position="{{ question.position }}">{% if post[question.id] is defined %}{{ post[question.id] }}{% endif %}</textarea>
                             {% elseif answer.answerType == 'checkbox' %}
                                 <div class="checkbox">
                                     {% set checked = false %}
-                                    {% for key, item in post[question.id] if item == answer.answerText %}
-                                        {% set checked = true %}
-                                    {% endfor %}
+                                    {% if post[question.id] is defined %}
+                                        {% for key, item in post[question.id] if item == answer.answerText %}
+                                            {% set checked = true %}
+                                        {% endfor %}
+                                    {% endif %}
                                     <label>
                                         <input type="checkbox" name="{{ question.id }}[]" value="{{ answer.answerText }}" {% if checked == true %}checked="checked"{% endif %}>
                                         {{ answer.answerText }}
@@ -102,7 +104,7 @@
 
             $("form.form-horizontal").submit(function(){
                 $("input#jsonHandler").val(goalList.toJSON());
-                return false;
+                //return false;
             });
         });
 

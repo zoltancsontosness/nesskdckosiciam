@@ -90,10 +90,15 @@ class FormController extends Controller
                 }
             }
             if($validForm === true){
-                $em->flush();
-                $this->buildPdf($formId);
+                $filledForm = $this->getDoctrine()->getRepository('KarpatskaFormBundle:RealAnswer')->findBy(array('form' => $formId, 'company' => $company->getId()));
+                /*if(){
+                    $em->flush();
+                    $this->buildPdf($formId);
 
-               return $this->redirectToRoute("_file_upload", array('formId' => $formId));
+                    return $this->redirectToRoute("_file_upload", array('formId' => $formId));
+                }else{
+
+                }*/
             }
             return array(
                 'form' => $form,
