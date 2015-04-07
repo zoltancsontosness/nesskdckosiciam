@@ -59,8 +59,8 @@ Activity.prototype.toJSON = function () {
 	var clone = this;
 	var clonedFields = [];
 
-	for(i = 0; i<clone.fields.length; i++) {
-		clonedFields.push(clone.fields[i].toJSON());
+	for(j = 0; j<clone.fields.length; j++) {
+		clonedFields.push(clone.fields[j].toJSON());
 	}
 
 	clone.fields = clonedFields;
