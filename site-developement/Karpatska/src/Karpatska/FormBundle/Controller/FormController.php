@@ -16,6 +16,7 @@ use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
 //use Ps\PdfBundle\Annotation\Pdf;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class FormController extends Controller
 {
@@ -78,7 +79,13 @@ class FormController extends Controller
                             $answer = new RealAnswer();
                             $answer->setForm($form);
                             $answer->setQuestion($question);
-                            $answer->setAnswerText($answerPair["answerText"]);
+                            if(is_array($answerPair["answerText"])){
+                                foreach($answerPair["answerText"] as $oneAnswer){
+                                    $answer->setAnswerText($oneAnswer);
+                                }
+                            }else{
+                                $answer->setAnswerText($answerPair["answerText"]);
+                            }
                             $answer->setCompany($company);
                             if($question->getJson() === "true"){
                                 $answer->setJson("true");
@@ -91,14 +98,16 @@ class FormController extends Controller
             }
             if($validForm === true){
                 $filledForm = $this->getDoctrine()->getRepository('KarpatskaFormBundle:RealAnswer')->findBy(array('form' => $formId, 'company' => $company->getId()));
-                /*if(){
+
+                if($filledForm == null){
                     $em->flush();
                     $this->buildPdf($formId);
 
                     return $this->redirectToRoute("_file_upload", array('formId' => $formId));
                 }else{
+                    throw new AccessDeniedException("Tento formulár môžte vyplniť len raz!");
+                }
 
-                }*/
             }
             return array(
                 'form' => $form,
