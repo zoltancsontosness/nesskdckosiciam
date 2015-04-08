@@ -76,7 +76,7 @@ class Company implements UserInterface
     /**
      * @var string
      * @Assert\NotBlank()
-     * @Assert\Regex(pattern="/^[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}$/", message = "Nutný validný IBAN")
+     * @Assert\Iban(message = "Nutný validný IBAN.")
      * @ORM\Column(name="account_num", type="string", length=50)
      */
     private $accountNum;

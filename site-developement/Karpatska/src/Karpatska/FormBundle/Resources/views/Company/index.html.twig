@@ -33,9 +33,16 @@
     <div class="container">
         <div class="jumbotron">
             <h1>Fond Karpatskej vandrovky</h1>
-            <p>Fond Karpatskej vandrovky podporuje projekty, ktoré prinášajú pomoc a radosť obyvateľom východného Slovenska.
+            <p class="small">Fond Karpatskej vandrovky podporuje projekty, ktoré prinášajú pomoc a radosť obyvateľom východného Slovenska.
                 Cieľom je podporiť aktívnych východniarov, ich dobré nápady a užitočné projekty.
                 <a href="{{ asset("files/karpatska/Výzva_ MAME_RADI_VYCHOD_2015.pdf") }}" target="_blank">Grantové podmienky nájdete TU.</a></p>
+                <p>Pri žiadosti o grant je potrebné dodržať nasledujúci postup:</p>
+                <ol>
+                    <li>Vyplniť formulár žiadosť o grant v sekcii: "Dostupné formuláre"</li>
+                    <li>Stiahnuť požadované prílohy v sekcii: "Tlačivá na stiahnutie"</li>
+                    <li>Pripraviť "Rozpočet", "Čestné prehlásenie","Doklad o registrácií žiadateľa", "Doklad o pridelení IČO", "Doklad o vedení bankového účtu" v elektronickej podobe</li>
+                </ol>
+                <p class="danger">Každá organizácia môže podať iba jeden projekt!</p>
         </div>
         <div class="div-col-xs-12 col-lg-4">
             <div class="panel panel-info">
@@ -71,8 +78,8 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Vaše odoslané súbory a vyplnené formuláre</h3>
                 </div>
-                <div class="panel-body">
-                    <ul>
+                <div class="panel-body" style="text-overflow: ellipsis;">
+                    <ul class="inline-li">
                         {% if not files  %}
                             Nemáte vyplnené žiadne formuláre.
                         {% endif %}

@@ -102,7 +102,20 @@ div#stuff{
 .panel{
     word-break: break-all;
 }
-
+.jumbotron > p.small {
+    font-size: 16px;
+}
+p.danger{
+    color: #d9534f;
+}
+ol{
+    font-size: 16px;
+}
+ul.inline-li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 @media print {
     .errors{
         visibility: hidden;
