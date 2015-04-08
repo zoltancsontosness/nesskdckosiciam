@@ -213,6 +213,7 @@ class FormController extends Controller
     public function saveFile($file, $ico, $formId)
     {
         $cwd = getcwd();
+        var_dump($cwd);
         if(!file_exists($cwd . "/files/" . $ico)){
             mkdir($cwd . "/files/" . $ico ,0700);
         }
