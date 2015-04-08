@@ -76,7 +76,7 @@ class FileController extends Controller
     public function sendEmail($recipient){
         $email = \Swift_Message::newInstance()
             ->setSubject('Žiadosť o grant - Karpatská nadácia')
-            ->setFrom('frank238238@gmail.com')
+            ->setFrom('granty@karpatskanadacia.sk')
             ->setTo($recipient)
             ->setBody("Žiadosť o grant ste úspešne podali na spracovanie.");
         $this->get('mailer')->send($email);
