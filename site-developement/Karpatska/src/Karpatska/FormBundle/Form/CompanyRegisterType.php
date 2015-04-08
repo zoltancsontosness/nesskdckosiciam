@@ -60,10 +60,10 @@ class CompanyRegisterType extends AbstractType
                 'max_length' => '13',
                 'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Telef. č. zástupcu')
             ))
-            ->add('dic','text', array(
+            ->add('orgName','text', array(
                 'required' => true,
                 'max_length' => '10',
-                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'DIČ')
+                'attr' => array('class' => 'form-control input-lg', 'placeholder' => 'Meno organizácie')
             ))
             ->add('password', 'repeated', array(
                 'type' => 'password',

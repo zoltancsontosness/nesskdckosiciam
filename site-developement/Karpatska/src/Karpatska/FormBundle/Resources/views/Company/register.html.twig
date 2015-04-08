@@ -85,14 +85,14 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
                         <div class="form-group inner-addon right-addon">
-                            {{ form_widget(form.dic) }}
+                            {{ form_widget(form.orgName) }}
                             <i id="tooltip"
                                class="glyphicon glyphicon-info-sign"
                                data-toggle="tooltip"
-                               data-original-title="Zadajte DIČ ak ho organizácie má">
+                               data-original-title="Zadajte meno organizácie">
                             </i>
-                            {% if form_errors(form.dic) %}
-                                <p class="text-danger">DIČ ma nesprávny tvar</p>
+                            {% if form_errors(form.orgName) %}
+                                <p class="text-danger">Zadajte meno organizácie</p>
                             {% endif %}
                         </div>
                     </div>

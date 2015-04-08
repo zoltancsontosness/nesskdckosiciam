@@ -106,10 +106,10 @@ class Company implements UserInterface
 
     /**
      * @var string
-     * @Assert\Regex(pattern="/^\d{10}/", message = "Zadajte validné DIČ")
-     * @ORM\Column(name="dic", type="integer")
+     * @Assert\NotBlank()
+     * @ORM\Column(name="org_name", type="string", length=255)
      */
-    private $dic;
+    private $orgName;
 
     /**
      * @var string
@@ -408,26 +408,26 @@ class Company implements UserInterface
     }
 
     /**
-     * Set dic
+     * Set orgName
      *
-     * @param string $dic
+     * @param string $orgName
      * @return Company
      */
-    public function setDic($dic)
+    public function setOrgName($orgName)
     {
-        $this->dic = $dic;
+        $this->orgName = $orgName;
 
         return $this;
     }
 
     /**
-     * Get dic
+     * Get orgName
      *
      * @return string 
      */
-    public function getDic()
+    public function getOrgName()
     {
-        return $this->dic;
+        return $this->orgName;
     }
 
     /**

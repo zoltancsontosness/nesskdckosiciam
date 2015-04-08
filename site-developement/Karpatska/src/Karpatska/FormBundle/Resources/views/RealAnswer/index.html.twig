@@ -9,6 +9,7 @@
             <tr>
                 <th>Id</th>
                 <th>IČO</th>
+                <th>Meno organizácie</th>
                 <th>Meno reprezentanta</th>
                 <th>Telefón na reprezentanta</th>
                 <th>Email na reprezentanta</th>
@@ -21,6 +22,7 @@
             <tr>
                 <td><a href="{{ path('admin_records_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.ico }}</td>
+                <td>{{ entity.orgName }}</td>
                 <td>{{ entity.reprName }}</td>
                 <td>{{ entity.reprPhone }}</td>
                 <td>{{ entity.reprEmail }}</td>
