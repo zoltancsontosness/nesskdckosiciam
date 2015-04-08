@@ -67,7 +67,7 @@ class CompanyController extends Controller
     public function sendEmail($recipient, $ico){
         $email = \Swift_Message::newInstance()
             ->setSubject('Registrácia bola úspešná - Karpatská nadácia')
-            ->setFrom('frank238238@gmail.com')
+            ->setFrom('granty@karpatskanadacia.sk')
             ->setTo($recipient)
             ->setBody(
                 $this->renderView(
