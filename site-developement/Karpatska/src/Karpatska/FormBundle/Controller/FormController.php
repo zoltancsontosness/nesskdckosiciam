@@ -213,10 +213,10 @@ class FormController extends Controller
     public function saveFile($file, $ico, $formId)
     {
         $cwd = getcwd();
-        if(!file_exists($cwd . "\\files\\" . $ico)){
-            mkdir($cwd . "\\files\\" . $ico ,0700);
+        if(!file_exists($cwd . "/files/" . $ico)){
+            mkdir($cwd . "/files/" . $ico ,0700);
         }
-        $route = $cwd . "\\files" . "\\" . $ico . "\\";
+        $route = $cwd . "/files" . "/" . $ico . "/";
         $fileName = 'ziadost_o_grant'.$ico . "_" . $formId . ".pdf";
         $openFile = fopen($route . $fileName, "w+");
         fwrite($openFile, $file);
