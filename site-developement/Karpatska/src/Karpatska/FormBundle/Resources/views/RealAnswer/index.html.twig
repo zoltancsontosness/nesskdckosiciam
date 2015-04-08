@@ -20,7 +20,7 @@
         {% for entity in entities %}
             {% if entity.realAnswers|length > 0 %}
             <tr>
-                <td><a href="{{ path('admin_records_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="{{ path('admin_records_show', { 'id': entity.id }) }}">{{ entity.id }}/{{ year }}/fkv</a></td>
                 <td>{{ entity.ico }}</td>
                 <td>{{ entity.orgName }}</td>
                 <td>{{ entity.reprName }}</td>

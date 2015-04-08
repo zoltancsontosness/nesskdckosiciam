@@ -33,6 +33,7 @@ class RealAnswerController extends Controller
 
         return array(
             'entities' => $entities,
+            'year' => date('Y')
         );
     }
 
@@ -60,7 +61,8 @@ class RealAnswerController extends Controller
         return array(
             'entity' => $entity,
             'files' => $files,
-            'ico' => $ico
+            'ico' => $ico,
+            'year' => date('Y')
         );
     }
 
