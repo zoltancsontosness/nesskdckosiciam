@@ -67,10 +67,10 @@ class RealAnswerController extends Controller
     public function getCompanyFiles($ico)
     {
         $cwd = getcwd();
-        if(!file_exists($cwd . "\\files\\" . $ico)){
-            mkdir($cwd . "\\files\\" . $ico ,0700);
+        if(!file_exists($cwd . "/files/" . $ico)){
+            mkdir($cwd . "/files/" . $ico ,0700);
         }
-        $route = $cwd . "\\files" . "\\" . $ico . "\\";
+        $route = $cwd . "/files" . "/" . $ico . "/";
         $files = array_diff(scandir($route), array('..', '.'));
 
         return $files;
