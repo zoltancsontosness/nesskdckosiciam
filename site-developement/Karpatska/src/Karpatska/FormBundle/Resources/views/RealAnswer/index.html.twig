@@ -9,7 +9,9 @@
             <tr>
                 <th>Id</th>
                 <th>IČO</th>
-                <th>DIČ</th>
+                <th>Meno reprezentanta</th>
+                <th>Telefón na reprezentanta</th>
+                <th>Email na reprezentanta</th>
                 <th>Akcie</th>
             </tr>
         </thead>
@@ -19,7 +21,9 @@
             <tr>
                 <td><a href="{{ path('admin_records_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.ico }}</td>
-                <td>{{ entity.dic }}</td>
+                <td>{{ entity.reprName }}</td>
+                <td>{{ entity.reprPhone }}</td>
+                <td>{{ entity.reprEmail }}</td>
                 <td>
                     <a class="btn btn-primary" href="{{ path('admin_records_show', { 'id': entity.id }) }}"><i class="glyphicon glyphicon-search"></i> Zobraziť</a>
                 </td>
