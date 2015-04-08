@@ -33,7 +33,7 @@
                                         </label>
                                     </div>
                             {% elseif answer.answerType == 'textDisabled' %}
-                                <input type="text" name="{{ question.id }}" class="form-control input-lg" readonly="readonly" data-position="{{ question.position }}" {% if post[question.id] is defined %}{{ post[question.id] }}{% endif %}>
+                                <input type="text" name="{{ question.id }}" class="form-control input-lg" readonly="readonly" data-position="{{ question.position }}" value="{% if post[question.id] is defined %}{{ post[question.id] }}{% endif %}">
                             {% elseif answer.answerType == 'date' %}
                                 <div class="col-sm-12 col-md-6">
                                     <input type="text" name="{{ question.id }}" class="form-control input-lg datepicker" data-position="{{ question.position }}" value="{% if post[question.id] is defined %}{{ post[question.id] }}{% endif %}">
