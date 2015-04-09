@@ -8,7 +8,7 @@
         <tbody>
             <tr>
                 <th>ID</th>
-                <td>{{ entity.id}}/{{ year }}/fkv</td>
+                <td>{% if entity.id|length == 1 %} 00{{ entity.id}}{% elseif entity.id|length == 2 %}0{{ entity.id}}{% else %} {{ entity.id}} {% endif %}/{{ year }}/FKV</td>
             </tr>
             <tr>
                 <th>Meno organizácie</th>

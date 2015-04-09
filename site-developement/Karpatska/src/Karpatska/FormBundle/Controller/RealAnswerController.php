@@ -33,7 +33,7 @@ class RealAnswerController extends Controller
 
         return array(
             'entities' => $entities,
-            'year' => date('Y')
+            'year' => date('Y'),
         );
     }
 

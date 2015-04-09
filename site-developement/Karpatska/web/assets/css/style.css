@@ -138,6 +138,30 @@ ul.inline-li{
     height: 11em;
     clear: both;
 }
+
+/** Errors styles **/
+.leading-text{
+    font-size: 100px;
+    font-weight: 900;
+    color: #CCC;
+    margin: 25px 0;
+}
+.error-code{
+    color: #CCC;
+    font-weight: 600;
+    font-size: 80px;
+    margin: 25px 0;
+}
+.error-main-text{
+    color: #d9534f;
+    font-size: 26px;
+    margin: 20px 0;
+}
+.error-info-text{
+    color: #636363;
+    font-size: 26px;
+    margin: 20px 0;
+}
 @media print {
     .errors{
         visibility: hidden;
