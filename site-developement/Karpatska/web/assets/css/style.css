@@ -116,6 +116,28 @@ ul.inline-li{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.footer-bg{
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #AAA;
+    position: relative;
+    bottom: 0;
+    width:100%;
+}
+.img-logo-nesskdckosiciam{
+    margin:auto;
+}
+.static-img{
+    position: static;
+}
+.container{
+    margin: 0 auto -11em;
+}
+.footer-bg, .push{
+    height: 11em;
+    clear: both;
+}
 @media print {
     .errors{
         visibility: hidden;
