@@ -1,0 +1,106 @@
+<?php
+
+// legal URL: /sponsors/profa.gif
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 3262,
+  8 => 1429271429,
+  9 => 1429271429,
+  10 => 1429271429,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 3262,
+  'atime' => 1429271429,
+  'mtime' => 1429271429,
+  'ctime' => 1429271429,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/gif',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 3262,
+    'filename' => 'profa.gif',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/profa.gif',
+    'avdataoffset' => 0,
+    'avdataend' => 3262,
+    'fileformat' => 'gif',
+    'video' => 
+    array (
+      'dataformat' => 'gif',
+      'lossless' => true,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 67,
+      'bits_per_sample' => 8,
+      'compression_ratio' => 0.331201137171286408289461178355850279331207275390625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/gif',
+    'gif' => 
+    array (
+      'header' => 
+      array (
+        'raw' => 
+        array (
+          'identifier' => 'GIF',
+          'version' => '87a',
+          'width' => 147,
+          'height' => 67,
+          'flags' => 231,
+          'bg_color_index' => 0,
+          'aspect_ratio' => 0,
+        ),
+        'flags' => 
+        array (
+          'global_color_table' => true,
+          'global_color_sorted' => true,
+        ),
+        'bits_per_pixel' => 21,
+        'global_color_size' => 256,
+      ),
+      'version' => '87a',
+    ),
+  ),
+  'mime_type from file extension' => 'image/gif',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/57/0f/3caf_profab1c705e428063dd37b870d3f-500x500.gif',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 67,
+    2 => 1,
+    3 => 'width="147" height="67"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/gif',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/57/0f/3caf_profab1c705e428063dd37b870d3f-120x120.gif',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 55,
+    2 => 1,
+    3 => 'width="120" height="55"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/gif',
+  ),
+);

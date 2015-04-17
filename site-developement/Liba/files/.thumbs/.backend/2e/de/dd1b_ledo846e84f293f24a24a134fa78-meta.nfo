@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /sponsors/ledo.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 17303,
+  8 => 1429271428,
+  9 => 1429271428,
+  10 => 1429271428,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 17303,
+  'atime' => 1429271428,
+  'mtime' => 1429271428,
+  'ctime' => 1429271428,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 17303,
+    'filename' => 'ledo.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/ledo.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 17303,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 103,
+      'compression_ratio' => 0.38093036567377758228047923694248311221599578857421875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/2e/de/dd1b_ledo846e84f293f24a24a134fa78-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 103,
+    2 => 2,
+    3 => 'width="147" height="103"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/2e/de/dd1b_ledo846e84f293f24a24a134fa78-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 84,
+    2 => 2,
+    3 => 'width="120" height="84"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

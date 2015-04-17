@@ -17,13 +17,6 @@
         </ion:page>
       </div><!-- /.col-md-12 -->
     </div><!-- /.row -->
-    
-    <script>
-      jQuery('#camera_wrap').camera({
-        time: 2000,
-        height: '35%' 
-      });
-    </script>
 
     <div class="row">
       <ion:articles>

@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /sponsors/rwe.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 11797,
+  8 => 1429271430,
+  9 => 1429271430,
+  10 => 1429271430,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 11797,
+  'atime' => 1429271430,
+  'mtime' => 1429271430,
+  'ctime' => 1429271430,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 11797,
+    'filename' => 'rwe.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/rwe.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 11797,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 101,
+      'compression_ratio' => 0.264857097954693421204552805647836066782474517822265625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/e8/35/bda9_rwe928b89bfa3ef0767e29f5e7b-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 101,
+    2 => 2,
+    3 => 'width="147" height="101"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/e8/35/bda9_rwe928b89bfa3ef0767e29f5e7b-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 82,
+    2 => 2,
+    3 => 'width="120" height="82"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

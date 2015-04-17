@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<ion:theme_url/>assets/js/bootstrap.min.js"></script>
     <link rel='stylesheet' id='camera-css'  href='<ion:theme_url/>assets/camera/css/camera.css' type='text/css' media='all'>
+    <script src="<ion:theme_url/>assets/js/owl.carousel.min.js"></script>
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.min.js'></script>
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.mobile.customized.min.js'></script>
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.easing.1.3.js'></script> 
@@ -22,6 +23,7 @@
     <script src="<ion:theme_url/>assets/lightbox/js/lightbox.min.js"></script>
     <link href="<ion:theme_url/>assets/lightbox/css/lightbox.css" rel="stylesheet" />
     <link href="<ion:theme_url/>assets/css/custom.css" rel="stylesheet">
+    <link href="<ion:theme_url/>assets/css/owl.carousel.css" rel="stylesheet">
   </head>
   <body>
 

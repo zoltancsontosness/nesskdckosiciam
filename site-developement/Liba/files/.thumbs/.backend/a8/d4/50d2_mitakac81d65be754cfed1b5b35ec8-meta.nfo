@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /sponsors/mitaka.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 5877,
+  8 => 1429271428,
+  9 => 1429271428,
+  10 => 1429271428,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 5877,
+  'atime' => 1429271428,
+  'mtime' => 1429271428,
+  'ctime' => 1429271428,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 5877,
+    'filename' => 'mitaka.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/mitaka.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 5877,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 32,
+      'compression_ratio' => 0.41645408163265307255329616964445449411869049072265625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/a8/d4/50d2_mitakac81d65be754cfed1b5b35ec8-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 32,
+    2 => 2,
+    3 => 'width="147" height="32"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/a8/d4/50d2_mitakac81d65be754cfed1b5b35ec8-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 26,
+    2 => 2,
+    3 => 'width="120" height="26"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

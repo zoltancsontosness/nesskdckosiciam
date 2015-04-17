@@ -185,3 +185,18 @@ body {
   background-color: #fff;
 }
 
+/** Other **/
+
+.sponsor-logo{
+  max-width: 120px;
+  max-height: 120px;
+}
+
+#trainings td{
+  text-align: center;
+  padding: 3px;
+}
+#trainings th{
+  padding: 3px;
+}
+

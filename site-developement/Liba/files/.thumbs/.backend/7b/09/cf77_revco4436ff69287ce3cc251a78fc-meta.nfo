@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /sponsors/revco.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 7851,
+  8 => 1429271430,
+  9 => 1429271430,
+  10 => 1429271430,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 7851,
+  'atime' => 1429271430,
+  'mtime' => 1429271430,
+  'ctime' => 1429271430,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 7851,
+    'filename' => 'revco.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/revco.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 7851,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 42,
+      'compression_ratio' => 0.4238743116294136914490309209213592112064361572265625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/7b/09/cf77_revco4436ff69287ce3cc251a78fc-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 42,
+    2 => 2,
+    3 => 'width="147" height="42"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/7b/09/cf77_revco4436ff69287ce3cc251a78fc-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 34,
+    2 => 2,
+    3 => 'width="120" height="34"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

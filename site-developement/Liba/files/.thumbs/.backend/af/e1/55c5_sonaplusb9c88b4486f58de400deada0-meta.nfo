@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /sponsors/sonaplus.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 9557,
+  8 => 1429271430,
+  9 => 1429271430,
+  10 => 1429271430,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 9557,
+  'atime' => 1429271430,
+  'mtime' => 1429271430,
+  'ctime' => 1429271430,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 9557,
+    'filename' => 'sonaplus.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/sonaplus.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 9557,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 75,
+      'compression_ratio' => 0.28894935752078609869641923069139011204242706298828125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/af/e1/55c5_sonaplusb9c88b4486f58de400deada0-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 75,
+    2 => 2,
+    3 => 'width="147" height="75"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/af/e1/55c5_sonaplusb9c88b4486f58de400deada0-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 61,
+    2 => 2,
+    3 => 'width="120" height="61"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
