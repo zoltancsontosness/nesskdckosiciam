@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /sponsors/neonet.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 4332,
+  8 => 1429271429,
+  9 => 1429271429,
+  10 => 1429271429,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 4332,
+  'atime' => 1429271429,
+  'mtime' => 1429271429,
+  'ctime' => 1429271429,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 4332,
+    'filename' => 'neonet.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/neonet.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 4332,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 147,
+      'resolution_y' => 50,
+      'compression_ratio' => 0.19646258503401359263307313085533678531646728515625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/ba/2a/255b_neonet93353dcf3881a6ccd42e335d-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 147,
+    1 => 50,
+    2 => 2,
+    3 => 'width="147" height="50"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/ba/2a/255b_neonet93353dcf3881a6ccd42e335d-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 41,
+    2 => 2,
+    3 => 'width="120" height="41"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
