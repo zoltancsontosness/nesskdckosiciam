@@ -7,9 +7,14 @@ h1 {
   color: #1962B5;
 }
 
-h4 {
+h4,h2 {
   font-family: 'Alegreya', serif;
   color: #003399;
+}
+h5{
+  font-family: 'Alegreya', serif;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 p {
@@ -21,6 +26,9 @@ p {
 
 body {
   background-color: #CFCFCF;
+}
+article{
+  text-align: justify;
 }
 
 .container {
@@ -91,6 +99,15 @@ body {
 }
 
 /** NAVBAR **/
+.navbar-collapse{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav > li:first-child > a {
+  border-radius: 4px 0 4px 0;
+}
+
 .navbar-default{
   background-color: #f08819;
   text-transform: uppercase;
