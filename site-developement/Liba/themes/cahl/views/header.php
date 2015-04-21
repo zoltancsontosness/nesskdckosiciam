@@ -13,15 +13,20 @@
 		<meta name="author" content="gigUp, s.r.o., design & coding: Zoltán Csontos">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="index, follow" />
-		
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="<ion:theme_url/>js/owl.carousel.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="<ion:theme_url />fonts/stylesheet.css" />
         <link rel="stylesheet" href="<ion:theme_url />css/resets.css" />
         <link rel="stylesheet" href="<ion:theme_url />css/colors.css" />
         <link rel="stylesheet" href="<ion:theme_url />css/main.css" />
+        <link href="<ion:theme_url/>css/owl.carousel.css" rel="stylesheet">
         <!-- <link rel="stylesheet" href="<ion:theme_url />css/main.min.css" /> -->
 
-		<link rel="shortcut icon" href="<ion:theme_url />img/favicon.ico">
-		
+        <link rel="shortcut icon" href="<ion:theme_url />img/favicon.ico">
+
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="js/html5shiv.js"><\/script>')</script>
@@ -70,10 +75,11 @@
 			<div class="wrapper clearfix">
 				<ul>
 					<li class="mobile"><a><span class="ico">&#xf0c9;</span> <ion:lang key="navigation" /></a></li>
-					<li class="ico"><a href="<ion:home_url />">&#xf015;</a></li>
-					<ion:navigation level="0"  active_class="active"  >
-					<li><a href="<ion:url />"><ion:title /></a></li>
-					</ion:navigation>
+					<ion:tree_navigation level="0"  active_class="active"  tag="ul" id="nav">
+                        <li>
+                            <a href="<ion:url />"><ion:title /></a>
+                        </li>
+					</ion:tree_navigation>
 				</ul>
 			</div>
 		</nav>

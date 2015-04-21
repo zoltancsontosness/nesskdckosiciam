@@ -3,7 +3,6 @@
 		<section class="main-content wrapper clearfix">
 			<div class="articles left">
 				<!-- News -->
-				<ion:page id="8">
 					<ion:articles limit="10">
 						<ion:article>
 					
@@ -22,13 +21,11 @@
 									<img src="<ion:media:src />" alt="<ion:media:alt />" />
 								</ion:medias>						
 								<ion:content paragraph="2" />
-								<a href="<ion:url />" class="red read-more"><ion:lang key="read_more" /></a>
 							</div>
 						</article>	
 						
 						</ion:article>
 					</ion:articles>
-				</ion:page>			
 		
 			</div>
 			

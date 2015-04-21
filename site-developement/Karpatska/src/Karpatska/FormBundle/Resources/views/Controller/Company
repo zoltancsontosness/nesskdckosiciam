@@ -1,7 +1,0 @@
-{% extends "::base.html.twig" %}
-
-{% block title %}KarpatskaFormBundle:Controller:Company:register{% endblock %}
-
-{% block body %}
-<h1>Welcome to the Controller:Company:register page</h1>
-{% endblock %}

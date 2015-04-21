@@ -1,3 +1,0 @@
-karpatska_form_homepage:
-    resource: "@KarpatskaFormBundle/Controller"
-    type:     annotation
