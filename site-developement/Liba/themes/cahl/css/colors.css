@@ -1,0 +1,39 @@
+.red {
+	color:#ba1515 !important;
+}
+.red-background {
+	background:#ba1515 !important;
+}
+.blue {
+	color:#013654 !important;
+}
+.blue-background {
+	background:#013654;
+}
+.silver {
+	color:#2a2a2a !important;
+}
+.silver-background {
+	background:#2a2a2a;
+}
+.silver-light {
+	color:#d2d2d2;
+}
+.white {
+	color:white !important;
+}
+.white-background {
+	background:white;
+}
+.light-blue {
+	color:#3880ab !important;
+}
+.light-blue-background {
+	background:#3880ab;
+}
+.red-opaque-background {
+	background:url('../img/red-opaque-background.png') repeat center transparent;
+}
+.blue-opaque-background {
+	background:url('../img/blue-opaque-background.png') repeat center transparent;
+}

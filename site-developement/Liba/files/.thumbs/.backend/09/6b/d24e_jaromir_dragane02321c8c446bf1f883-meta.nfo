@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /treneri/jaromir_dragan.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 9668,
+  8 => 1429629184,
+  9 => 1429629184,
+  10 => 1429629184,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 9668,
+  'atime' => 1429629184,
+  'mtime' => 1429629184,
+  'ctime' => 1429629184,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 9668,
+    'filename' => 'jaromir_dragan.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/treneri',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/treneri/jaromir_dragan.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 9668,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 100,
+      'resolution_y' => 128,
+      'compression_ratio' => 0.251770833333333332593184650249895639717578887939453125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 94,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5546920,
+      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\Liba/files/.thumbs/.backend/09/6b/d24e_jaromir_dragane02321c8c446bf1f883-500x500.jpg',
+      'filesize' => 9668,
+      'imageinfo' => 
+      array (
+        0 => 100,
+        1 => 128,
+        2 => 2,
+        3 => 'width="100" height="128"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 64474.07407407407299615442752838134765625,
+      'usage_guestimate' => 90263.703703703693463467061519622802734375,
+      'usage_min_advised' => 5637183.70370370335876941680908203125,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '5.7 MB',
+  'memory estimated' => '0.1 MB',
+  'memory suggested' => '5.6 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/09/6b/d24e_jaromir_dragane02321c8c446bf1f883-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 100,
+    1 => 128,
+    2 => 2,
+    3 => 'width="100" height="128"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/09/6b/d24e_jaromir_dragane02321c8c446bf1f883-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 94,
+    1 => 120,
+    2 => 2,
+    3 => 'width="94" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
