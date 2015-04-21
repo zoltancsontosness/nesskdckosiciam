@@ -31,4 +31,6 @@
       </ion:articles>
     </div>
 
+    <ion:partial view="news" />
+
 <ion:partial view="footer" />

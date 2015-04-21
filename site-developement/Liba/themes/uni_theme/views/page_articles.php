@@ -18,7 +18,7 @@
           </div>
           <div class="media-body">
             <h4 class="media-heading"><ion:article:title /></h4>
-            <ion:article:content characters="100" />
+            <ion:article:content characters="200" />
             <p><a href="<ion:article:url />" class="btn btn-primary pull-right" role="button">Viac info</a></p>
           </div>
         </div>

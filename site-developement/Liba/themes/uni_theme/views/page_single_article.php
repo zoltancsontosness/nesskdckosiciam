@@ -1,16 +1,16 @@
 <ion:partial view="header" />
 
     <ion:article>
-      <div class="row">     
+      <article class="row">     
         <div class="col-md-12">
           <ion:article:title tag="h1" />
           <hr />
           <ion:article:media type="picture" limit="1">
-            <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive pull-right img-article-right">
+            <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive pull-left img-article-left">
           </ion:article:media>
           <ion:article:content />  
         </div>     
-      </div>
+      </article>
       <hr />
       <div class="row">
         <ion:article:medias type="picture">

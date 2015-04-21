@@ -1,0 +1,25 @@
+/* ==================================================================
+ * Capsulaa
+ * ================================================================== */
+@font-face {
+    font-family: 'Capsuula Regular';
+    src: url('Capsuula-webfont.eot');
+    src: url('Capsuula-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Capsuula-webfont.svg#capsuularegular') format('svg'),
+         url('Capsuula-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ==================================================================
+ * Font awesome
+ * ================================================================== */
+@font-face {
+	font-family: 'Font Awesome';
+	src: url('fontawesome-webfont.eot?v=4.0.3');
+	src: url('fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), 
+		 url('fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg'),
+		 url('fontawesome-webfont.woff?v=4.0.3') format('woff'), 
+		 url('fontawesome-webfont.ttf?v=4.0.3') format('truetype'); 
+	font-weight: normal;
+	font-style: normal;
+}

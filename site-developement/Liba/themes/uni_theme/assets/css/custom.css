@@ -7,9 +7,14 @@ h1 {
   color: #1962B5;
 }
 
-h4 {
+h4,h2 {
   font-family: 'Alegreya', serif;
   color: #003399;
+}
+h5{
+  font-family: 'Alegreya', serif;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 p {
@@ -21,6 +26,9 @@ p {
 
 body {
   background-color: #CFCFCF;
+}
+article{
+  text-align: justify;
 }
 
 .container {
@@ -50,6 +58,13 @@ body {
 
 .img-article {
   margin: 0px 10px 10px 0px;
+}
+
+.img-article-left{
+  margin-right: 15px;
+}
+.img-article-right{
+  margin-left: 15px;
 }
 /** MEDIA **/
 
@@ -91,6 +106,15 @@ body {
 }
 
 /** NAVBAR **/
+.navbar-collapse{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav > li:first-child > a {
+  border-radius: 4px 0 4px 0;
+}
+
 .navbar-default{
   background-color: #f08819;
   text-transform: uppercase;
@@ -112,6 +136,7 @@ body {
   background: -ms-linear-gradient(top,  rgba(99,91,88,0.8) 0%,rgba(38,37,35,0.8) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(99,91,88,0.8) 0%,rgba(38,37,35,0.8) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc635b58', endColorstr='#cc262523',GradientType=0 ); /* IE6-9 */
+  transition: all 0.5s;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
