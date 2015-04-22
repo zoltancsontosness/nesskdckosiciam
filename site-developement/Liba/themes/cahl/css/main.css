@@ -29,7 +29,7 @@ a:focus, a:hover{
     text-decoration: none;
 }
 .wrapper {
-	width:1100px;
+	width:1200px;
 	margin:0 auto;
 	height:100%;
 }
@@ -191,10 +191,6 @@ nav ul li a:hover {
 /* -----------------------------------------------
    Aside
    ----------------------------------------------- */
-aside {
-	width: 30%;
-	max-width: 280px;
-}
 aside .box {
 	width:92%;
 	height:60px;
@@ -375,10 +371,7 @@ aside .countdown ul li div {
 .main-content {
 	margin:30px auto;
 }
-.main-content .articles {
-	width:70%;
-	max-width: 638px;
-}
+
 .main-content .articles article:first-child {
 	border-top:0;
 	padding-top: 0;
@@ -390,7 +383,6 @@ aside .countdown ul li div {
 	margin-top: 20px;	
 }
 .main-content .articles .text {
-	max-width: 569px;
 	overflow: hidden;
 	min-width:70%;
 }
@@ -418,6 +410,19 @@ aside .countdown ul li div {
 	padding-bottom: 3px;
 	border-bottom: 2px solid #ccc;
 }
+aside h3{
+	font-size: 26px;
+  	text-transform: uppercase;
+  	margin: 20px 0;
+  	padding: 5px;
+}
+aside article{
+	border-bottom: 1px solid #eee;
+	margin: 10px 0;
+}
+aside article:last-child{
+	border-bottom: 0;
+}
 .main-content article img {
 	max-width:100%;
 	margin-bottom: 5px;
@@ -439,10 +444,7 @@ aside .countdown ul li div {
 .main-content .twitter {
 	margin-bottom:15px;
 }
-.main-content .social {
-	width:49px;
-	margin-right:15px;
-}
+
 .main-content article .text h4 {
 	font-size: 25px;
 }
@@ -574,9 +576,12 @@ footer .copyright {
 	.wrapper-wide {
 		width:768px;
 	}
-	.main-content .articles {
+	/*.main-content .articles {
 		width: 67%;
 		padding-right:3%;
+	}*/
+	.main-content .social {
+		margin-right:15px;
 	}
 	.main-content .social {
 		width: 15%;
@@ -621,9 +626,6 @@ footer .copyright {
 }
 /* Phones landscape */
 @media only screen and (max-width: 767px) {
-	.mobile {
-		display:block;
-	}
     .wrapper {
 		width:96%;
 	}
@@ -664,11 +666,12 @@ footer .copyright {
 		padding:0 3%;
 	}
 	.main-content .social {
-		width: 15%;
-		margin-right: 5%;
+		width: 100%;
 	}
-	.main-content .articles .text {
-		width: 80%;
+
+	.social time, .social .facebook, .social .google, .social .twitter{
+		float: left;
+		margin-left:5px;
 	}
 	.main-content .articles .text img {
 		max-width:100%;
@@ -686,23 +689,6 @@ footer .copyright {
 	}
 	#top-nav input[type="text"]:focus {
 		width: 150px;
-	}
-	nav {
-		height: auto;
-	}
-	nav ul li.mobile {
-		background:#ba1515;
-	}
-	nav ul li {
-		display:none;
-		float:none;
-		width:100%;
-		margin:0;
-		background:#2a2a2a;
-		border-bottom: 1px dotted white;	
-	}
-	nav ul .mobile:hover {
-		background:#ba1515;
 	}
 	#logo-big {
 		margin-top:65px;
@@ -729,6 +715,30 @@ footer .copyright {
 	}
 	.wrapper-wide {
 		width:100%;
+	}
+}
+
+@media only screen and (max-width: 1204px){
+	.mobile {
+		display:block;
+		cursor:pointer;
+	}
+	nav {
+		height: auto;
+	}
+	nav ul li.mobile {
+		background:#ba1515;
+	}
+	nav ul li {
+		display:none;
+		float:none;
+		width:100%;
+		margin:0;
+		background:#2a2a2a;
+		border-bottom: 1px dotted white;	
+	}
+	nav ul .mobile:hover {
+		background:#ba1515;
 	}
 }
 
