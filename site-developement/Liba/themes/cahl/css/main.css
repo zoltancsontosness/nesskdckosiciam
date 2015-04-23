@@ -12,6 +12,10 @@ body {
 .mobile {
 	display:none;
 }
+aside time{
+    float: left;
+    margin-right: 10px;
+}
 .clearfix:before,
 .clearfix:after {
   content:"";
@@ -237,7 +241,6 @@ aside .countdown ul li div {
    Newsreader
    ----------------------------------------------- */
 #logo-big {
-	margin-top:26px;
 	width:296px;
 	position:relative;
 	z-index:12;
@@ -428,7 +431,7 @@ aside article:last-child{
 	margin-bottom: 5px;
 }
 .main-content article p {
-	margin: 20px 0;
+	margin-right:5px;
 	text-align:justify;
 }
 .main-content article .text p:first-child {
@@ -689,9 +692,6 @@ footer .copyright {
 	}
 	#top-nav input[type="text"]:focus {
 		width: 150px;
-	}
-	#logo-big {
-		margin-top:65px;
 	}
 	footer ul {
 		display: none;
