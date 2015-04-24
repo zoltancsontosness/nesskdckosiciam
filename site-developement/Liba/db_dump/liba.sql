@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Út 21.Apr 2015, 17:53
+-- Čas generovania: Pi 24.Apr 2015, 17:11
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `flag` smallint(1) DEFAULT '0',
   `has_url` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `priority` smallint(1) unsigned NOT NULL DEFAULT '5'
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article`
@@ -87,17 +87,18 @@ INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `pu
 (1, '404', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
 (2, '401', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
 (3, '403', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
-(4, 'welcome', '', 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 15:38:57', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (5, 'zapasy', 'admin', 'admin', '2015-04-17 10:51:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 10:57:36', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (6, 'turnaje', 'admin', 'admin', '2015-04-17 10:57:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 10:58:07', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (7, 'toto-je-nas-tim', 'admin', 'admin', '2015-04-17 10:58:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 10:59:04', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(8, 'filozofia-skoly', 'admin', NULL, '2015-04-20 13:49:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-20 13:49:54', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(9, 'oznam', 'admin', NULL, '2015-04-20 14:00:10', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-20 14:00:10', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(10, 'oznam-1', 'admin', NULL, '2015-04-20 14:31:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-20 14:31:49', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(11, 'zoznam-hracov', 'admin', 'admin', '2015-04-21 15:02:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 15:09:09', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(8, 'filozofia-skoly-1', 'admin', 'admin', '2015-04-20 13:49:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:07:49', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(11, 'zoznam-hracov', 'admin', 'admin', '2015-04-21 15:02:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 16:03:51', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (12, 'igor-liba', 'admin', 'admin', '2015-04-21 17:02:43', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 17:03:22', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(13, 'pavel-valko-st.', 'admin', NULL, '2015-04-21 17:10:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 17:10:36', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(14, 'jaromir-dragan', 'admin', 'admin', '2015-04-21 17:12:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 17:13:11', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
+(13, 'pavel-valko-st.', 'admin', 'admin', '2015-04-21 17:10:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 15:59:05', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(14, 'jaromir-dragan', 'admin', 'admin', '2015-04-21 17:12:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 14:34:35', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(15, 'uvod', 'admin', NULL, '2015-04-22 10:03:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-22 10:03:20', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(16, 'oznam-1', 'admin', NULL, '2015-04-22 13:03:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-22 13:03:48', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(17, 'oznam', 'admin', NULL, '2015-04-22 13:04:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-22 13:04:06', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(18, NULL, NULL, NULL, '2015-04-24 17:07:53', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:07:53', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -157,17 +158,17 @@ INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `m
 (1, 'sk', '404', '404', NULL, NULL, '<p>The content you asked for was not found !</p>', NULL, NULL, 1),
 (2, 'sk', '401', '401', 'Please login', NULL, '<p>Please login to see this content.</p>', NULL, NULL, 1),
 (3, 'sk', '403', '403', 'Forbidden', NULL, '<p>This content is forbidden.</p>', NULL, NULL, 1),
-(4, 'sk', 'uvod', 'Úvod', '', '', '<p>Stiahnite si: <strong>VYHLÁSENIE o poukázaní sumy do výšky 2% (3 %) zaplatenej dane</strong> <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne.rtf" target="_blank">word dokument</a>, <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne-2.pdf" target="_blank">pdf dokument</a><br /><br />Rozpis tréningov od 3. 11. 2014 </p>\n<table border="1" cellpadding="3" align="center" class="center" id="trainings">\n<thead>\n<tr align="center" valign="middle" class="center">\n<td align="center" valign="middle" class="center"></td>\n<th align="center" valign="middle">8:00-9:15</th><th align="center" valign="middle">9:30-10:30</th><th align="center" valign="middle">10:45-11:45</th><th align="center" valign="middle">12:00-13:00</th><th align="center" valign="middle">15:15-16:15</th><th align="center" valign="middle">16:30-17:30</th><th align="center" valign="middle">20:15-21:15</th></tr>\n</thead>\n<tbody>\n<tr>\n<td>Pondelok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Utorok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Streda</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Štvrtok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Piatok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Sobota</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n<tr>\n<td>Nedeľa</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n</tbody>\n</table>\n<p><br />POZOR, v nedeľu možné zmeny podľa zápasov hokejových prípraviek HP 5,<br />zmeny budú oznamované prostredníctvom web. stránky a facebooku.</p>\n<p></p>\n<p>Zmeny tréningov - apríl 2015 </p>', '', '', 1),
 (5, 'sk', 'zapasy', 'Zápasy', '', '', '', '', '', 1),
 (6, 'sk', 'turnaje', 'Turnaje', '', '', '', '', '', 1),
 (7, 'sk', 'toto-je-nas-tim', 'Toto je náš tím', '', '', '', '', '', 1),
-(8, 'sk', 'filozofia-skoly', 'Filozofia školy', '', '', '<p>Tak ako v zahraničí existuje veľa mimoklubových výberov, aj na Slovensku začína fungovať mnoho výberov hráčov rôznych ročníkov, niektoré fungujú skvele, iné horšie. Našou prioritou je podpora talentovaných jedincov zo širokej športovej oblasti od útleho veku, ktorí majú o svoj športový rast predovšetkým vlastný záujem, bez ohľadu na klubovú príslušnosť. Jedná sa o celoročnú spoluprácu vhodne doplňujúcu "klubové povinosti" bez konfliktu.</p>\n<p>Týmto športovcom sa Hockey Liba Academy bude snažiť vytvárať čo najoptimálnejšie podmienky na rozvíjanie ich talentu nasledujúcimi spôsobmi:</p>\n<ul class="liba">\n<li>rôznymi formami tréningov</li>\n<li>organizovaním campov</li>\n<li>sústredeniami</li>\n<li>individuálnou prípravou</li>\n<li>poradenskou činnosťou</li>\n<li>zdravotnými prehliadkami</li>\n</ul>\n<p>Budeme sa snažiť prezentovať ich talent na kvalitných slovenských i medzinárodných akciách.</p>\n<p></p>\n<p><strong>Hokejová akadémia Igora Libu</strong> je špeciálne zameraná na mladých hráčov hneď od začiatku ich hokejového vývoja, tak, aby získali čo najlepšie návyky pre svoj hokejový rast.</p>\n<ul class="liba">\n<li>Ponúkame komplexnú starostlivosť v najrýchlejšom tímovom športe na svete</li>\n<li>U nás môžete očakávať pozitívny prístup trénerov. Našou snahou je, aby sa každý hráč v našej akadémii cítil dobre, zbavil sa strachu z chýb, ktorých sa všetci zákonite v priebehu učenia nových zručností dopúšťame.</li>\n<li>Trpezlivá práca s každým. Našou snahou je vytvoriť v jej priebehu dostatok času a priestoru na učenie sa novým hokejovým schopnostiam, ich opakovanie a zdokonaľovanie. Iba tak môže každý získať a následne rozvíjať správne pohybové a herné návyky, ktoré mu neskôr umožní jeho ďalší hokejový rast</li>\n<li>Odovzdávanie najnovších poznatkov a použitie efektívnych metód tréningu z celého sveta</li>\n<li>Svojím individuálnym prístupom sa snažíme u chlapcov aj dievčat o čo najväčšie posilnenie sebadôvery. Tým, že každému pomôžeme uvedomiť si svoje prednosti a spoznať svoje nedostatky mu umožníme, aby mohol sám svoje prednosti ďalej rozvíjať a svoje nedostatky postupne odstraňovať. Samozrejmosťou je potom plné rešpektovanie vekovej a výkonnostnej úrovne každého hráča.</li>\n<li>Podrobne sa zoznámite s našim individuálnym tréningovým procesom a môžete tak niektoré veci rozvíjať aj Vy mimo tréningový proces v domácich podmienkach</li>\n</ul>', NULL, NULL, 1),
-(9, 'sk', 'oznam', 'Oznam', '', '', '<p>7.4.2015 z dôvodu konania Veľkonočného turnaja skupina 3 (15:15 hod.) nebude mať tréning.</p>', NULL, NULL, 1),
-(10, 'sk', 'oznam-1', 'Oznam', '', '', '<p>28.03.2015 sa uskutoční turnaj v Sabinove. Skupina 1. Zraz o 6:00 hod pred zimným štadiónom v Čani. </p>', NULL, NULL, 1),
-(11, 'sk', 'zoznam-hracov', 'Zoznam hráčov', '', '', '<h2>SKUPINA 1</h2>\n<ul>\n<li><strong>ročníky: 2007, 2006, 2005</strong></li>\n<li><strong>tréningy: pondelok – 16.30 hod., štvrtok– 15.15 hod. a sobota – 9.30 hod.</strong></li>\n</ul>\n<ol>\n<li> Baksay Marko</li>\n<li> Bálint Samuel</li>\n<li> Buchla Peter</li>\n<li> Barakat Andree</li>\n<li> Binda Mathias</li>\n<li> Eštok Martin - <strong>HC Michalovce</strong></li>\n<li> Haluška Matej</li>\n<li> Hudák Jakub</li>\n<li> Janke Šimon</li>\n<li> Komendát Richard</li>\n<li> Krajcár Matúš</li>\n<li> Levkanič Adam</li>\n<li> Oravec Marek</li>\n<li> Ruščák Richard</li>\n<li> Slivkár Šimon</li>\n<li> Ujjobbágy Pavol</li>\n<li> Vasilík Ľuboslav</li>\n<li> Vindiš Martin</li>\n<li> Vizner Lukáš - <strong>HC Košice </strong></li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Baltes Eduard</li>\n<li>Barakat Alex</li>\n<li>Buróci Šimon</li>\n</ul>\n<h2>SKUPINA 2 </h2>\n\n<ul>\n<li><strong>ročníky: 2004, 2003</strong></li>\n<li><strong>tréningy: streda – 16.30 hod., piatok – 15.15 hod. a sobota – 8.00 hod.</strong></li>\n</ul>\n\n<ol>\n<li> Čelko Ferencech Šimon</li>\n<li> Domby Matej</li>\n<li> Droppa Patrik</li>\n<li> Fedor Alex</li>\n<li> Haluška Branislav</li>\n<li> Hanušovský Kristián</li>\n<li> Hegyi Kristián</li>\n<li> Horváth Dušan</li>\n<li> Kissi Tomáš</li>\n<li> Kočiš Róbert</li>\n<li> Lauff Eduard</li>\n<li> Marušiak Peter</li>\n<li> Pillár Sebastián</li>\n<li> Pollák Maxim</li>\n<li> Rohun Oliver</li>\n<li> Spišák Róbert</li>\n<li> Szilasi Tomáš</li>\n<li> Šelepský Sebastián</li>\n<li> Timko Frederik</li>\n<li> Tomčo Jakub</li>\n<li> Ujjobbágy Samuel</li>\n<li> Valent Jakub</li>\n<li> Vizner Jakub</li>\n<li> Zajac Štefan</li>\n</ol>\n<strong> Brankári: </strong>\n\n<ul>\n<li>Pataki Samuel</li>\n<li>Trnka Matúš</li>\n<li>Youssef Štefan</li>\n</ul>\n', '', '', 1),
+(8, 'sk', 'filozofia-skoly-1', 'Filozofia školy', '', '', '<p>Tak ako v zahraničí existuje veľa mimoklubových výberov, aj na Slovensku začína fungovať mnoho výberov hráčov rôznych ročníkov, niektoré fungujú skvele, iné horšie. Našou prioritou je podpora talentovaných jedincov zo širokej športovej oblasti od útleho veku, ktorí majú o svoj športový rast predovšetkým vlastný záujem, bez ohľadu na klubovú príslušnosť. Jedná sa o celoročnú spoluprácu vhodne doplňujúcu "klubové povinosti" bez konfliktu.</p>\n<p>Týmto športovcom sa Hockey Liba Academy bude snažiť vytvárať čo najoptimálnejšie podmienky na rozvíjanie ich talentu nasledujúcimi spôsobmi:</p>\n<ul class="liba">\n<li>rôznymi formami tréningov</li>\n<li>organizovaním campov</li>\n<li>sústredeniami</li>\n<li>individuálnou prípravou</li>\n<li>poradenskou činnosťou</li>\n<li>zdravotnými prehliadkami</li>\n</ul>\n<p>Budeme sa snažiť prezentovať ich talent na kvalitných slovenských i medzinárodných akciách.</p>\n<p></p>\n<p><strong>Hokejová akadémia Igora Libu</strong> je špeciálne zameraná na mladých hráčov hneď od začiatku ich hokejového vývoja, tak, aby získali čo najlepšie návyky pre svoj hokejový rast.</p>\n<ul class="liba">\n<li>Ponúkame komplexnú starostlivosť v najrýchlejšom tímovom športe na svete</li>\n<li>U nás môžete očakávať pozitívny prístup trénerov. Našou snahou je, aby sa každý hráč v našej akadémii cítil dobre, zbavil sa strachu z chýb, ktorých sa všetci zákonite v priebehu učenia nových zručností dopúšťame.</li>\n<li>Trpezlivá práca s každým. Našou snahou je vytvoriť v jej priebehu dostatok času a priestoru na učenie sa novým hokejovým schopnostiam, ich opakovanie a zdokonaľovanie. Iba tak môže každý získať a následne rozvíjať správne pohybové a herné návyky, ktoré mu neskôr umožní jeho ďalší hokejový rast</li>\n<li>Odovzdávanie najnovších poznatkov a použitie efektívnych metód tréningu z celého sveta</li>\n<li>Svojím individuálnym prístupom sa snažíme u chlapcov aj dievčat o čo najväčšie posilnenie sebadôvery. Tým, že každému pomôžeme uvedomiť si svoje prednosti a spoznať svoje nedostatky mu umožníme, aby mohol sám svoje prednosti ďalej rozvíjať a svoje nedostatky postupne odstraňovať. Samozrejmosťou je potom plné rešpektovanie vekovej a výkonnostnej úrovne každého hráča.</li>\n<li>Podrobne sa zoznámite s našim individuálnym tréningovým procesom a môžete tak niektoré veci rozvíjať aj Vy mimo tréningový proces v domácich podmienkach</li>\n</ul>', NULL, NULL, 1),
+(11, 'sk', 'zoznam-hracov', 'Zoznam hráčov', '', '', '<h2>SKUPINA 1</h2>\n<ul>\n<li><strong>ročníky: 2007, 2006, 2005</strong></li>\n<li><strong>tréningy: pondelok – 16.30 hod., štvrtok– 15.15 hod. a sobota – 9.30 hod.</strong></li>\n</ul>\n<ol>\n<li> Baksay Marko</li>\n<li> Bálint Samuel</li>\n<li> Buchla Peter</li>\n<li> Barakat Andree</li>\n<li> Binda Mathias</li>\n<li> Eštok Martin - <strong>HC Michalovce</strong></li>\n<li> Haluška Matej</li>\n<li> Hudák Jakub</li>\n<li> Janke Šimon</li>\n<li> Komendát Richard</li>\n<li> Krajcár Matúš</li>\n<li> Levkanič Adam</li>\n<li> Oravec Marek</li>\n<li> Ruščák Richard</li>\n<li> Slivkár Šimon</li>\n<li> Ujjobbágy Pavol</li>\n<li> Vasilík Ľuboslav</li>\n<li> Vindiš Martin</li>\n<li> Vizner Lukáš - <strong>HC Košice </strong></li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Baltes Eduard</li>\n<li>Barakat Alex</li>\n<li>Buróci Šimon</li>\n</ul>\n<h2></h2>\n<h2>SKUPINA 2</h2>\n<ul>\n<li><strong>ročníky: 2004, 2003</strong></li>\n<li><strong>tréningy: streda – 16.30 hod., piatok – 15.15 hod. a sobota – 8.00 hod.</strong></li>\n</ul>\n<ol>\n<li> Čelko Ferencech Šimon</li>\n<li> Domby Matej</li>\n<li> Droppa Patrik</li>\n<li> Fedor Alex</li>\n<li> Haluška Branislav</li>\n<li> Hanušovský Kristián</li>\n<li> Hegyi Kristián</li>\n<li> Horváth Dušan</li>\n<li> Kissi Tomáš</li>\n<li> Kočiš Róbert</li>\n<li> Lauff Eduard</li>\n<li> Marušiak Peter</li>\n<li> Pillár Sebastián</li>\n<li> Pollák Maxim</li>\n<li> Rohun Oliver</li>\n<li> Spišák Róbert</li>\n<li> Szilasi Tomáš</li>\n<li> Šelepský Sebastián</li>\n<li> Timko Frederik</li>\n<li> Tomčo Jakub</li>\n<li> Ujjobbágy Samuel</li>\n<li> Valent Jakub</li>\n<li> Vizner Jakub</li>\n<li> Zajac Štefan</li>\n</ol>\n<p><strong> Brankári: </strong></p>\n<ul>\n<li>Pataki Samuel</li>\n<li>Trnka Matúš</li>\n<li>Youssef Štefan</li>\n</ul>', '', '', 1),
 (12, 'sk', 'igor-liba', 'Igor LIBA', '', '', '<p>Často považovaný za najvšestrannejšieho česko-slovenského hokejistu 80. rokov – výborný korčuliar, fyzicky i technicky dokonale vybavený s vyváženou útočnou a obrannou činnosťou.</p>\n<p>S hokejom začínal ako desaťročný, je odchovancom klubu ZPA Prešov. Hráč VSŽ Košice, Dukly Jihlava, Zelttwegu a HK Spišská Nová Ves. V NHL hráč Minnesota North Stars, Los Angeles Kings (kde jeho spoluhráčom v útoku bol fenomenálny Wayne Gretzky), New York Rangers. Bol draftovaný v roku 1983 tímom Calgary Flames v 5. kole z 91. miesta.</p>\n<p>Je držiteľom striebornej medaily zo ZOH 1984 a bronzovej zo ZOH 1992. Majster sveta 1985, strieborný z MS 1982 – 83. Reprezentačný dres ČSSR obliekol 211-krát, najviac spomedzi všetkých slovenských hráčov. Tromfol hokejistu storočia Dzurillu, legendárneho Golonku, Pašeka, Rusnáka i Lukáča. Raz (v roku 1993 proti Francúzom) nastúpil aj v reprezentačnom tíme Slovenska. Na Majstrovstvách sveta 1985 prispel významným spôsobom k zlatej medaile.</p>\n<p>V oranžovo - čiernom drese Košíc sa dvakrát radoval z československého titulu (1986 a 1988). V roku 1999 sa dočkal aj titulu majstra Slovenska, keď dokázal zomknúť partiu proti bratislavskému Slovanu. Vtedy si ako prvý mohol so slzami v očiach poťažkať nový pohár určený pre víťaza extraligy. Počas kariéry ho sprevádzalo číslo 11. Nosil ho nielen v reprezentácii, ale aj v spomínaných Košiciach a nevynechal ani zahraničie. Iba v zámorí mu prischli čísla 26 respektíve 23.</p>', '', '', 1),
-(13, 'sk', 'pavel-valko-st.', 'Pavel VALKO st.', '', '', '<p>Hráčska kariéra:<br />1. Československá liga – Košice (1985 až 1987 a 1989 až 1993), Trenčín ( 1987 až 1989 )<br />2. Slovenská liga – Košice (1993 až 1997), Nitra, Skalica<br />3. Česká liga - Znojmo, Zlín ( 1999 až 2001 ) <br />4. Švédska liga - Karlskrona, Motal<br />5. Anglická liga – Romford<br />6. Maďarská liga – Szekesfehervar<br />7. Rumunská liga – Mercuria Ciuc<br /><br />Reprezentácia:<br />1. ME 18 ( za Československo ) – 3. miesto ( Duseldorf – Nemecko )<br />2. MS 20 ( za Československo ) – 4. miesto ( Moskva )<br />3. 3 štarty za Slovensko <br /><br />Úspechy:<br />1. Majster Československa – VSŽ Košice – 1986<br />2. 2. miesto ( Československá liga ) – Trenčín – 1989<br />3. Majster Slovenska – HC Košice – 1995 a 1996<br />4. 1. miesto ( Švédska liga ) – Karlskrona – 2006<br />5. 1. miesto ( Maďarská liga ) – Szekesfehervar <br />6. 1. miesto ( Rumunska liga ) – Mercuria Ciuc <br /><br />Trénerska kariéra:<br />- seniori Michalovce<br />- juniori Motala Švédsko<br />- dorast Trebišov<br />- dorast Romford Anglicko</p>', NULL, NULL, 1),
-(14, 'sk', 'jaromir-dragan', 'Jaromír Dragan', '', '', '<p>- bývalý slovenský hokejový brankár <br /><br />Hráčska kariera: <br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br />Reprezentácia: <br />1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku 1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.<br /><br />MS: <br />1996 10. miesto<br />1997 9. miesto<br /><br />ZOH: <br />1992 3. miesto<br />1994 6. miesto<br /><br />OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br />Prehľad medailí: <br />BRONZ ZOH 1992 ČSFR<br />ZLATO MS skupiny C 1994<br />MS skupiny B 1995<br />Československá liga 1987/1988<br />Slovenská liga 1994/1995, 1995/1996<br /><br />TRENERSKA KARIERA:<br />1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári <br />2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /<br />2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /<br />2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori /<br />2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18 /</p>', '', '', 1);
+(13, 'sk', 'pavel-valko-st.', 'Pavel VALKO st.', '', '', '<p>Hráčska kariéra:<br />1. Československá liga – Košice (1985 až 1987 a 1989 až 1993), Trenčín ( 1987 až 1989 )<br />2. Slovenská liga – Košice (1993 až 1997), Nitra, Skalica<br />3. Česká liga - Znojmo, Zlín ( 1999 až 2001 ) <br />4. Švédska liga - Karlskrona, Motal<br />5. Anglická liga – Romford<br />6. Maďarská liga – Szekesfehervar<br />7. Rumunská liga – Mercuria Ciuc<br /><br />Reprezentácia:<br />1. ME 18 ( za Československo ) – 3. miesto ( Duseldorf – Nemecko )<br />2. MS 20 ( za Československo ) – 4. miesto ( Moskva )<br />3. 3 štarty za Slovensko <br /><br />Úspechy:<br />1. Majster Československa – VSŽ Košice – 1986<br />2. 2. miesto ( Československá liga ) – Trenčín – 1989<br />3. Majster Slovenska – HC Košice – 1995 a 1996<br />4. 1. miesto ( Švédska liga ) – Karlskrona – 2006<br />5. 1. miesto ( Maďarská liga ) – Szekesfehervar <br />6. 1. miesto ( Rumunska liga ) – Mercuria Ciuc <br /><br />Trénerska kariéra:<br />- seniori Michalovce<br />- juniori Motala Švédsko<br />- dorast Trebišov<br />- dorast Romford Anglicko</p>', '', '', 1),
+(14, 'sk', 'jaromir-dragan', 'Jaromír Dragan', '', '', '<p>- bývalý slovenský hokejový brankár <br /><br />Hráčska kariera: <br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br />Reprezentácia: <br />1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku 1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.<br /><br />MS: <br />1996 10. miesto<br />1997 9. miesto<br /><br />ZOH: <br />1992 3. miesto<br />1994 6. miesto<br /><br />OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br />Prehľad medailí: <br />BRONZ ZOH 1992 ČSFR<br />ZLATO MS skupiny C 1994<br />MS skupiny B 1995<br />Československá liga 1987/1988<br />Slovenská liga 1994/1995, 1995/1996<br /><br />TRENERSKA KARIERA:<br />1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári <br />2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /<br />2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /<br />2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori <br />2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18 </p>', '', '', 1),
+(15, 'sk', 'uvod', 'Úvod', '', '', '<p>Stiahnite si: <strong>VYHLÁSENIE o poukázaní sumy do výšky 2% (3 %) zaplatenej dane</strong> <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne.rtf" target="_blank">word dokument</a>, <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne-2.pdf" target="_blank">pdf dokument</a><br /><br />Rozpis tréningov od 3. 11. 2014 </p>\n<table border="1" cellpadding="3" align="center" class="center" id="trainings">\n<thead>\n<tr align="center" valign="middle" class="center">\n<td align="center" valign="middle" class="center"></td>\n<th align="center" valign="middle">8:00-9:15</th><th align="center" valign="middle">9:30-10:30</th><th align="center" valign="middle">10:45-11:45</th><th align="center" valign="middle">12:00-13:00</th><th align="center" valign="middle">15:15-16:15</th><th align="center" valign="middle">16:30-17:30</th><th align="center" valign="middle">20:15-21:15</th></tr>\n</thead>\n<tbody>\n<tr>\n<td>Pondelok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Utorok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Streda</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Štvrtok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Piatok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Sobota</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n<tr>\n<td>Nedeľa</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n</tbody>\n</table>\n<p><br />POZOR, v nedeľu možné zmeny podľa zápasov hokejových prípraviek HP 5,<br />zmeny budú oznamované prostredníctvom web. stránky a facebooku.</p>\n<p></p>\n<p>Zmeny tréningov - apríl 2015 </p>', NULL, NULL, 1),
+(16, 'sk', 'oznam-1', 'Oznam', '', '', '<p>Dňa 28.03.2015 sa uskutoční turnaj v Sabinove. Skupina 1. Zraz o 6:00 hod pred zimným štadiónom v Čani. </p>', NULL, NULL, 1),
+(17, 'sk', 'oznam', 'Oznam', '', '', '<p>Dňa 7.4.2015 z dôvodu konania Veľkonočného turnaja skupina 3 (15:15 hod.) nebude mať tréning.</p>', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -685,7 +686,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
 --
 
 INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `category`, `title`, `content`, `read`) VALUES
-(1, '2015-04-21', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
+(1, '2015-04-24', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
 
 -- --------------------------------------------------------
 
@@ -744,9 +745,9 @@ INSERT INTO `page` (`id_page`, `id_parent`, `id_menu`, `id_type`, `id_subnav`, `
 (9, 0, 1, 0, 0, '2-z-dani', 6, 0, 1, 0, 'admin', NULL, '2015-04-15 11:42:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (10, 0, 1, 0, 0, 'fotogaleria', 7, 0, 1, 0, 'admin', NULL, '2015-04-15 11:42:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (11, 0, 1, 0, 0, 'kontakt', 9, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:42:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-15 15:53:16', '0000-00-00 00:00:00', 1, 1, 'page_contact', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(13, 5, 1, 0, 0, 'filozofia-skoly', 8, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:25:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-20 13:52:30', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(14, 5, 1, 0, 0, 'zoznam-hracov', 9, 1, 1, 0, 'admin', NULL, '2015-04-15 13:26:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(15, 5, 1, 0, 0, 'treneri', 10, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:29:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 15:13:08', '0000-00-00 00:00:00', 1, 1, 'page_articles', 'page_single_article', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(13, 5, 1, 0, 0, 'filozofia-skoly', 8, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:25:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:09:19', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', 'page_blog_post', '', '', 'ordering', 'ASC', 'Filozofia školy', 'article', '13.8', 0, 5, 0, '404'),
+(14, 5, 1, 0, 0, 'zoznam-hracov', 9, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:26:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:06:35', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', 'page_blog_post', '', '', 'ordering', 'ASC', 'Zoznam hráčov', 'article', '14.11', 0, 5, 0, '404'),
+(15, 5, 1, 0, 0, 'treneri', 10, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:29:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 13:18:53', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (16, 5, 1, 0, 0, 'rozpis-treningov', 11, 1, 1, 0, 'admin', NULL, '2015-04-15 13:29:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (17, 5, 1, 0, 0, 'specialne-brankarske-treningy', 12, 1, 1, 0, 'admin', NULL, '2015-04-15 13:31:56', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (18, 5, 1, 0, 0, 'prihlasky', 13, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-15 13:32:19', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
@@ -794,17 +795,17 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (1, 1, 1, NULL, 0, NULL, '', '', '', 0),
 (2, 2, 1, NULL, 0, NULL, '', '', '', 0),
 (3, 3, 1, NULL, 0, NULL, '', '', '', 0),
-(4, 4, 1, NULL, 1, NULL, '', '', '', 0),
+(4, 15, 1, NULL, 1, NULL, '', '', '', 1),
 (13, 8, 1, NULL, 1, NULL, '', '', '', 1),
 (14, 11, 1, NULL, 1, NULL, '', '', '', 1),
 (15, 12, 1, NULL, 1, NULL, '', '', '', 1),
-(15, 13, 1, NULL, 2, NULL, '', '', '', 1),
-(15, 14, 1, NULL, 3, NULL, '', '', '', 1),
+(15, 13, 1, NULL, 3, NULL, '', '', '', 1),
+(15, 14, 1, NULL, 2, NULL, '', '', '', 1),
 (32, 5, 1, NULL, 3, 1, '', '', '', 1),
 (32, 6, 1, NULL, 2, 1, '', '', '', 1),
 (32, 7, 1, NULL, 1, 1, '', '', '', 1),
-(34, 9, 1, NULL, 2, NULL, '', '', '', 1),
-(34, 10, 1, NULL, 1, NULL, '', '', '', 1);
+(34, 16, 1, NULL, 2, NULL, '', '', '', 1),
+(34, 17, 1, NULL, 1, NULL, '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -844,7 +845,7 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 10, 'fotogaleria', '', 'Fotogaléria', '', '', '', '', NULL, NULL, 1),
 ('sk', 11, 'kontakt', '', 'Kontakt', '', '', '', '', '', '', 1),
 ('sk', 13, 'filozofia-skoly', '', 'Filozofia školy', '', '', '', '', '', '', 1),
-('sk', 14, 'zoznam-hracov', '', 'Zoznam hráčov', '', '', '', '', NULL, NULL, 1),
+('sk', 14, 'zoznam-hracov', '', 'Zoznam hráčov', '', '', '', '', '', '', 1),
 ('sk', 15, 'treneri', '', 'Tréneri', '', '', '', '', '', '', 1),
 ('sk', 16, 'rozpis-treningov', '', 'Rozpis tréningov', '', '', '', '', NULL, NULL, 1),
 ('sk', 17, 'specialne-brankarske-treningy', '', 'Špeciálne brankárske tréningy', '', '', '', '', NULL, NULL, 1),
@@ -1141,7 +1142,7 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 (1, 'ionize_version', '1.0.7', ''),
 (2, 'site_email', '', ''),
 (3, 'files_path', 'files', ''),
-(4, 'theme', 'uni_theme', ''),
+(4, 'theme', 'cahl', ''),
 (5, 'theme_admin', 'admin', ''),
 (6, 'google_analytics', '', ''),
 (7, 'filemanager', 'mootools-filemanager', ''),
@@ -1179,7 +1180,7 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 (39, 'notification', '1', ''),
 (40, 'notification_date', '', ''),
 (41, 'site_title', 'My website', 'sk'),
-(42, 'last_notification_refresh', '2015-04-21 14:53:45', ''),
+(42, 'last_notification_refresh', '2015-04-24 12:46:27', ''),
 (43, 'last_version', '1.0.7', '');
 
 -- --------------------------------------------------------
@@ -1269,7 +1270,7 @@ CREATE TABLE IF NOT EXISTS `url` (
   `path_ids` varchar(50) DEFAULT NULL,
   `full_path_ids` varchar(50) DEFAULT NULL,
   `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `url`
@@ -1299,23 +1300,24 @@ INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`,
 (44, 32, 'page', 1, 1, 'sk', 'slideshow', '32', '32', '2015-04-17 11:04:07'),
 (46, 33, 'page', 1, 1, 'sk', 'sponsors', '33', '33', '2015-04-17 13:55:50'),
 (52, 5, 'page', 1, 1, 'sk', 'o-nas', '5', '5', '2015-04-20 13:51:13'),
-(55, 14, 'page', 1, 1, 'sk', 'o-nas/zoznam-hracov', '5/14', '5/14', '2015-04-20 13:51:14'),
 (57, 16, 'page', 1, 1, 'sk', 'o-nas/rozpis-treningov', '5/16', '5/16', '2015-04-20 13:51:14'),
 (58, 17, 'page', 1, 1, 'sk', 'o-nas/specialne-brankarske-treningy', '5/17', '5/17', '2015-04-20 13:51:14'),
 (59, 18, 'page', 1, 1, 'sk', 'o-nas/prihlaska', '5/18', '5/18', '2015-04-20 13:51:14'),
 (60, 19, 'page', 1, 1, 'sk', 'o-nas/clanky', '5/19', '5/19', '2015-04-20 13:51:14'),
 (61, 20, 'page', 1, 1, 'sk', 'o-nas/reklamne-predmety', '5/20', '5/20', '2015-04-20 13:51:14'),
-(66, 13, 'page', 1, 1, 'sk', 'o-nas/filozofia-skoly', '5/13', '5/13', '2015-04-20 13:52:30'),
-(67, 8, 'article', 1, 1, 'sk', 'o-nas/filozofia-skoly/filozofia-skoly', '5/13/8', '5/13/8', '2015-04-20 13:52:30'),
 (76, 34, 'page', 1, 1, 'sk', 'news', '34', '34', '2015-04-20 14:28:28'),
-(77, 9, 'article', 1, 1, 'sk', 'news/oznam', '34/9', '34/9', '2015-04-20 14:28:28'),
-(78, 10, 'article', 1, 1, 'sk', 'news/oznam-1', '34/10', '34/10', '2015-04-20 14:31:49'),
-(79, 11, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/zoznam-hracov', '5/14/11', '5/14/11', '2015-04-21 15:02:26'),
-(80, 15, 'page', 1, 1, 'sk', 'o-nas/treneri', '5/15', '5/15', '2015-04-21 15:13:08'),
-(81, 12, 'article', 1, 1, 'sk', 'o-nas/treneri/igor-liba', '5/15/12', '5/15/12', '2015-04-21 17:02:43'),
-(82, 13, 'article', 1, 1, 'sk', 'o-nas/treneri/pavel-valko-st.', '5/15/13', '5/15/13', '2015-04-21 17:10:36'),
-(83, 14, 'article', 1, 1, 'sk', 'o-nas/treneri/jaromir-dragan', '5/15/14', '5/15/14', '2015-04-21 17:12:51'),
-(84, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-04-21 17:48:38');
+(84, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-04-21 17:48:38'),
+(85, 15, 'article', 1, 1, 'sk', 'home/uvod', '4/15', '4/15', '2015-04-22 10:03:20'),
+(86, 16, 'article', 1, 1, 'sk', 'news/oznam-1', '34/16', '34/16', '2015-04-22 13:03:48'),
+(87, 17, 'article', 1, 1, 'sk', 'news/oznam', '34/17', '34/17', '2015-04-22 13:04:07'),
+(108, 15, 'page', 1, 1, 'sk', 'o-nas/treneri', '5/15', '5/15', '2015-04-24 13:18:54'),
+(109, 12, 'article', 1, 1, 'sk', 'o-nas/treneri/igor-liba', '5/15/12', '5/15/12', '2015-04-24 13:18:54'),
+(111, 14, 'article', 1, 1, 'sk', 'o-nas/treneri/jaromir-dragan', '5/15/14', '5/15/14', '2015-04-24 13:18:54'),
+(112, 13, 'article', 1, 1, 'sk', 'o-nas/treneri/pavel-valko-st.', '5/15/13', '5/15/13', '2015-04-24 15:59:05'),
+(129, 14, 'page', 1, 1, 'sk', 'o-nas/zoznam-hracov', '5/14', '5/14', '2015-04-24 17:06:35'),
+(130, 11, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/zoznam-hracov', '5/14/11', '5/14/11', '2015-04-24 17:06:35'),
+(132, 13, 'page', 1, 1, 'sk', 'o-nas/filozofia-skoly', '5/13', '5/13', '2015-04-24 17:09:19'),
+(133, 8, 'article', 1, 1, 'sk', 'o-nas/filozofia-skoly/filozofia-skoly-1', '5/13/8', '5/13/8', '2015-04-24 17:09:19');
 
 -- --------------------------------------------------------
 
@@ -1344,7 +1346,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id_user`, `id_role`, `join_date`, `last_visit`, `username`, `screen_name`, `firstname`, `lastname`, `birthdate`, `gender`, `password`, `email`, `salt`) VALUES
-(1, 1, '2015-04-15 09:28:59', '2015-04-21 15:42:55', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'QYWmfVcmcZLZzhB1JcE=', 'frank238238@gmail.com', '0a72e12a518d9523');
+(1, 1, '2015-04-15 09:28:59', '2015-04-24 10:46:22', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'QYWmfVcmcZLZzhB1JcE=', 'frank238238@gmail.com', '0a72e12a518d9523');
 
 --
 -- Indexes for dumped tables
@@ -1656,7 +1658,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `article_comment`
 --
@@ -1786,7 +1788,7 @@ MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=85;
+MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=134;
 --
 -- AUTO_INCREMENT for table `user`
 --
