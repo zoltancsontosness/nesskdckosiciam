@@ -18,33 +18,21 @@
         <footer class="bottom-grill clearfix">
 			<div class="wrapper white">
 				<div class="clearfix">
-					<!-- Info -->
-					<ion:page id="14">
-					<ul class="links">
-						<ion:articles>
-						<li><a href="<ion:article:url />"><ion:article:title /></a></li>
-						</ion:articles>
-					</ul>
-					</ion:page>
-					<!-- Links -->
-					<ion:page id="13">
-					<ul class="links">
-						<ion:articles>
-						<li><a href="<ion:article:url />"><ion:article:title /></a></li>
-						</ion:articles>
-					</ul>
-					</ion:page>
+					<div class="container-fluid footer-bg">
+				      <div class="row">
+				        <div class="col-md-12 text-center">
+				          <a href="http://nesskdckosiciam.sk" target="_blank">
+				            <img src="<ion:theme_url />img/logo-final.png" alt="Ness KDC Košiciam" class="img-responsive img-logo-nesskdckosiciam">
+				          </a>
+				          <p> 
+				            Webová stránka bola vytvorená v rámci projektu NESS KDC Košiciam
+				          </p>
+				        </div>
+				      </div><!-- /.row -->
+				    </div><!-- /.container-fluid -->
 				</div>
-				<div class="copyright white center"><ion:lang key="copyright" /></div>
-				<a href="<ion:home_url />" id="logo-small" class="center">
-					<img src="<ion:theme_url />img/cahl-logo-small.png" alt="<ion:site_title />" />
-				</a>
 			</div>
 		</footer>
-		
-		<div id="small-footer" class="clearfix">
-			Designed & developed by <a class="red" href="http://www.gigup.eu">gigUp, s.r.o.</a>, in 2014, title photo copyright: <a class="red" href="http://photo.elsoar.com">http://photo.elsoar.com</a>
-		</div>
 		
 		<div id="fb-root"></div>
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>

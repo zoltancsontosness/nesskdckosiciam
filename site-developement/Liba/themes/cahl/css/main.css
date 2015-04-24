@@ -12,10 +12,6 @@ body {
 .mobile {
 	display:none;
 }
-aside time{
-    float: left;
-    margin-right: 10px;
-}
 .clearfix:before,
 .clearfix:after {
   content:"";
@@ -241,6 +237,7 @@ aside .countdown ul li div {
    Newsreader
    ----------------------------------------------- */
 #logo-big {
+	margin-top:26px;
 	width:296px;
 	position:relative;
 	z-index:12;
@@ -374,6 +371,12 @@ aside .countdown ul li div {
 .main-content {
 	margin:30px auto;
 }
+.article-img{
+	max-height: 100px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	float:left;
+}
 
 .main-content .articles article:first-child {
 	border-top:0;
@@ -381,7 +384,6 @@ aside .countdown ul li div {
 	margin-top:0;
 }
 .main-content .articles article {
-	border-top: 1px solid #ccc;
 	padding-top: 20px;
 	margin-top: 20px;	
 }
@@ -426,12 +428,15 @@ aside article{
 aside article:last-child{
 	border-bottom: 0;
 }
+aside time{
+	float: left;
+	margin-right: 10px;
+}
 .main-content article img {
 	max-width:100%;
 	margin-bottom: 5px;
 }
 .main-content article p {
-	margin-right:5px;
 	text-align:justify;
 }
 .main-content article .text p:first-child {
@@ -491,6 +496,14 @@ aside article:last-child{
 	background:#ba1515;
 	color:white;
 }
+
+.btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open>.dropdown-toggle.btn-danger{
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+.btn-danger{
+	background-color: #ba1515;
+}
 /* -----------------------------------------------
    Forms
    ----------------------------------------------- */
@@ -526,9 +539,6 @@ input[type="submit"] {
 /* -----------------------------------------------
    Footer
    ----------------------------------------------- */
-footer {
-	min-height:346px;
-}
 footer ul:first-child {
 	border-left:0;
 	padding-left:0;
@@ -562,11 +572,18 @@ footer .copyright {
 #logo-small {
 	display:block;
 	height:inherit;
-	width:148px;
+	width:130px;
+}
+#logo-small img{
+	width:130px;
 }
 .fb_iframe_widget iframe,
 .fb_iframe_widget_fluid span {
 	width:100% !important;
+}
+.img-logo-nesskdckosiciam {
+  margin: 20px auto;
+  background: #fff;
 }
 /* -----------------------------------------------
    Media queries
@@ -692,6 +709,9 @@ footer .copyright {
 	}
 	#top-nav input[type="text"]:focus {
 		width: 150px;
+	}
+	#logo-big {
+		margin-top:65px;
 	}
 	footer ul {
 		display: none;
