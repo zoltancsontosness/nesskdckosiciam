@@ -19,9 +19,15 @@ class FileController extends Controller
      */
     public function fileUploadAction(Request $request, $formId)
     {
+
         $i = 0;
         $companyIco = $this->get('security.context')->getToken()->getUsername();
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
+        $fileRecords = $this->getDoctrine()->getRepository('KarpatskaFormBundle:File')->findBy(array("form" => 2, "company" => $company->getId()));
+
+        if ($fileRecords != null) {
+            throw new \Symfony\Component\Security\Core\Exception\AccessDeniedException('Tento formulár ste už vyplnili.');
+        }
         $formObj = $this->getDoctrine()->getRepository('KarpatskaFormBundle:Form')->find($formId);
 
         $form = $this->createForm(new FileUploadType());
@@ -67,6 +73,8 @@ class FileController extends Controller
     /**
      * @param $filename
      * @return string
+     *
+     * Generate the random name for files
      */
     public function generateRandomName($filename){
         $name = md5(microtime()).'.'.pathinfo($filename, PATHINFO_EXTENSION);

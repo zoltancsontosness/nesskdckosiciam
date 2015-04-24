@@ -51,8 +51,10 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        {% if isFilled %}
+                        {% if isFilled and haveFiles %}
                             Nemáte dostupný žiaden grantový formulár!
+                        {% elseif isFilled and not haveFiles %}
+                            <li><a target="_blank" href="{{ path('_file_upload', {'formId': 2}) }}">Nahratie súborov pre žiadosť o grant</a></li>
                         {% else %}
                             <li><a target="_blank" href="{{ path('_form', {'formId': 2}) }}">Žiadosť o grant</a></li>
                         {% endif %}

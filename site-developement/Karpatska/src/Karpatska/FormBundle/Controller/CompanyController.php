@@ -47,14 +47,20 @@ class CompanyController extends Controller
         $company = $this->getDoctrine()->getRepository("KarpatskaFormBundle:Company")->findOneByIco($companyIco);
         $isFilled = false;
         $filledForm = $this->getDoctrine()->getRepository("KarpatskaFormBundle:RealAnswer")->findBy(array('company' => $company->getId(), 'form' => 2));
+        $fileRecords = $this->getDoctrine()->getRepository('KarpatskaFormBundle:File')->findBy(array("form" => 2, "company" => $company->getId()));
 
         if($filledForm != null){
             $isFilled = true;
         }
+        $haveFiles = true;
+        if($fileRecords == null){
+            $haveFiles = false;
+        }
         return array(
             'ico' => $companyIco,
             'files' => $files,
-            'isFilled' => $isFilled
+            'isFilled' => $isFilled,
+            'haveFiles' => $haveFiles
         );
     }
 
