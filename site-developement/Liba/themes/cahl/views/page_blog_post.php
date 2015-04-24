@@ -3,7 +3,7 @@
 		<section class="main-content wrapper clearfix">
 			<div class="articles left col-xs-12 col-md-12 col-lg-10">
 
-				<ion:page:articles:article>
+				<ion:page:article>
 			
 				<article class="col-sm-12 clearfix">
 					<h3><ion:title /></h3>
@@ -17,13 +17,13 @@
 					<div class="text silver left col-xs-12 col-sm-12 col-md-11">
 						<!-- Get the pictures only -->
 						<ion:medias type="picture" size="569,356">							 
-							<img src="<ion:media:src />" alt="<ion:media:alt />" />
+							<img class="article-img" src="<ion:media:src />" alt="<ion:media:alt />" />
 						</ion:medias>						
 						<ion:content />
 					</div>
 				</article>	
 
-				</ion:page:articles:article>
+				</ion:page:article>
 		
 			</div>
 			

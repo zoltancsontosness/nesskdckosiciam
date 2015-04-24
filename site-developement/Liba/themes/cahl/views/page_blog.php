@@ -22,7 +22,7 @@
 									<img class="article-img" src="<ion:media:src />" alt="<ion:media:alt />" />
 								</ion:medias>						
 								<ion:content characters="700" />
-								<button href="<ion:url />" class="btn btn-danger"><ion:lang key="read_more" /></button>
+								<a href="<ion:url />" class="btn btn-danger pull-right"><ion:lang key="read_more" /></a>
 							</div>
 						</article>	
 						
