@@ -40,20 +40,12 @@
         <!-- <script src="js/main.js"></script> -->
         <script src="<ion:theme_url />js/main.min.js"></script>
 		<script src="<ion:theme_url />js/jquery.jaysValidation.plugin.js"></script>
+		<script src="<ion:theme_url />js/lightbox.min.js"></script>
+		<script src="<ion:theme_url />js/bootstrap-hover-dropdown.js"></script>
 		
-		<!-- Countdown init -->
+		<!-- owl carousel init -->
 		<script>
 			$(document).ready(function() {
-				// Countdown
-				var translations = {
-					dayLabel : '<ion:lang key="countdown_days" />',
-					hrLabel : '<ion:lang key="countdown_hours" />',
-					minLabel : '<ion:lang key="countdown_mins" />',
-					secLabel : '<ion:lang key="countdown_secs" />'
-				};
-				Cahl.CountDown.init('#countdown-timer', new Date('2015/09/01 16:00'), translations);
-				// Form pre validation
-				
 				$('form[name="sign-up"]').jaysValidation({
 					emptyFieldMessage: '<ion:lang key="form_empty_field" />',
 					notValidEmailMessage: '<ion:lang key="form_email_not_valid" />',
@@ -68,9 +60,10 @@
 					notValidPhoneMessage: '<ion:lang key="form_not_valid_phone" />'
 				});
 
-                var navDropdowns = $("ul#nav").children("li").has("ul");
-                navDropdowns.addClass("dropdown").children("a").addClass("dropdown-toggle").attr({"data-toggle": "dropdown", role: "button", "aria-expanded": "false"}).append(' <b class="caret"></b>');
-                navDropdowns.children("ul").addClass("dropdown-menu").attr({role: "menu"});
+			    var navDropdowns = $("ul#nav").children("li").has("ul");
+			    navDropdowns.addClass("dropdown").children("a").addClass("dropdown-toggle").attr({"data-toggle": "dropdown", "data-hover": "dropdown", role: "button", "aria-expanded": "false"}).append(' <b class="caret"></b>');
+			    navDropdowns.children("ul").addClass("dropdown-menu").attr({role: "menu"});
+  
 
                 /** Add to all tables responsive view **/
                 $("table").wrap('<div class="table-responsive"></div>');

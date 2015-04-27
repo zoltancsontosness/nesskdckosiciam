@@ -28,7 +28,7 @@ a.btn{
 }
 
 a:focus, a:hover{
-    color:inherit;
+    color: inherit;
     text-decoration: none;
 }
 .wrapper {
@@ -79,6 +79,23 @@ a:hover {
 }
 textarea:focus, input:focus{
     outline: 0;
+}
+.thumbnail{
+	margin-bottom: 5px;
+}
+.caption{
+	margin-top: -10px;
+	margin-bottom: 20px;
+	height: 70px;
+	overflow: hidden;
+}
+.thumbnail{
+	height: 200px;
+}
+.thumbnail img{
+	max-width: 202px;
+	max-height: 190px;
+	margin: auto;
 }
 /* -----------------------------------------------
    top nav
@@ -590,7 +607,6 @@ footer .copyright {
 }
 .img-logo-nesskdckosiciam {
   margin: 20px auto;
-  background: #fff;
 }
 /* -----------------------------------------------
    Media queries

@@ -31,8 +31,6 @@ $lang['form_alert_error_title'] = 'Správa nebola odoslaná';
 $lang['form_alert_error_message'] = 'Prosím skontrolujte údaje v kontaktnom formulári';
 $lang['mail_website_contact_subject'] = 'Kontaktný mail z cahl.sk';
 $lang['mail_website_contact_message'] = 'Správa:';
-
-// Sign up
 $lang['sign_up_title'] = 'Nová prihláška';
 $lang['form_label_company_name'] = 'Názov spoločnosti';
 $lang['form_label_team_name'] = 'Názov tímu';
@@ -44,29 +42,16 @@ $lang['form_label_notice'] = 'Poznámka';
 $lang['form_label_address'] = 'Adresa';
 $lang['form_label_city'] = 'Mesto';
 $lang['form_label_zip'] = 'PSČ';
-
-// Contact form
 $lang['form_label_firstname'] = 'Meno';
 $lang['form_label_name'] = 'Meno';
-$lang['form_label_email'] = 'Email';
 $lang['form_label_topic'] = 'Predmet';
 $lang['form_label_message'] = 'Správa';
 $lang['form_button_send'] = 'Odoslať';
-
-// Pagination
 $lang['prev_link'] = 'Novšie';
 $lang['next_link'] = 'Staršie';
-
-// No content & 404
-$lang['no-content-notice'] = 'V tejto sekcii sa momentálne nenachádzajú žiadne články';
-$lang['404-title'] = '404: Hľadaná stránka neexistuje';
-$lang['404-message'] = 'Stránka bola pravdepodobne zmazaná, alebo presunutá...';
-
-/*
-|--------------------------------------------------------------------------
-| PHP month date format 'M' translations
-|--------------------------------------------------------------------------
-*/
+$lang['no_content_notice'] = 'V tejto sekcii sa momentálne nenachádzajú žiadne články';
+$lang['404_title'] = '404: Hľadaná stránka neexistuje';
+$lang['404_message'] = 'Stránka bola pravdepodobne zmazaná, alebo presunutá...';
 $lang['jan'] = 'jan';
 $lang['feb'] = 'feb';
 $lang['mar'] = 'mar';
@@ -79,17 +64,10 @@ $lang['sep'] = 'sep';
 $lang['oct'] = 'okt';
 $lang['nov'] = 'nov';
 $lang['dec'] = 'dec';
-
-/*
-|--------------------------------------------------------------------------
-| PHP month date format 'F' translations
-|--------------------------------------------------------------------------
-*/
 $lang['january'] = 'január';
 $lang['february'] = 'február';
 $lang['march'] = 'marec';
 $lang['april'] = 'apríl';
-$lang['may'] = 'máj';
 $lang['june'] = 'jún';
 $lang['july'] = 'júl';
 $lang['august'] = 'august';
@@ -97,11 +75,29 @@ $lang['september'] = 'september';
 $lang['october'] = 'október';
 $lang['november'] = 'november';
 $lang['december'] = 'december';
-
-// Validation
-$lang['form_empty_field'] = "Toto pole je povinné";
-$lang['form_email_not_valid'] = "Toto nie je validný email";
-$lang['form_numeric_only'] = "Pole môže obsahovať iba číselnú hodnotu";
-$lang['form_not_valid_phone'] = "Toto nie je validné telefónne číslo";
+$lang['form_empty_field'] = 'Toto pole je povinné';
+$lang['form_email_not_valid'] = 'Toto nie je validný email';
+$lang['form_numeric_only'] = 'Pole môže obsahovať iba číselnú hodnotu';
+$lang['form_not_valid_phone'] = 'Toto nie je validné telefónne číslo';
+$lang['form_placeholder_name'] = '';
+$lang['form_placeholder_email'] = '';
+$lang['form_placeholder_message'] = '';
+$lang['form_button_send_message'] = '';
+$lang['form_register_success_message'] = '';
+$lang['form_label_lastname'] = '';
+$lang['form_label_screen_name'] = '';
+$lang['form_label_password'] = '';
+$lang['form_button_register'] = '';
+$lang['form_label_birthdate'] = '';
+$lang['form_label_gender'] = '';
+$lang['form_label_gender_male'] = '';
+$lang['form_label_gender_female'] = '';
+$lang['form_label_gender_unisex'] = '';
+$lang['form_note_password_change'] = '';
+$lang['form_label_delete_account'] = '';
+$lang['form_button_save_profile'] = '';
+$lang['form_button_logout'] = '';
+$lang['form_button_login'] = '';
+$lang['form_button_password_back'] = '';
 
 ?>

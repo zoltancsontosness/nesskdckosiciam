@@ -10,7 +10,7 @@
         <meta name="description" content="<ion:meta_description />" />
 		<meta name="keywords" content="<ion:meta_keywords />" />
         
-		<meta name="author" content="gigUp, s.r.o., design & coding: Zoltán Csontos">
+		<meta name="author" content="NESS KDC">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="index, follow" />
 
@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="<ion:theme_url />css/colors.css" />
         <link rel="stylesheet" href="<ion:theme_url />css/main.css" />
         <link href="<ion:theme_url/>css/owl.carousel.css" rel="stylesheet">
+        <link href="<ion:theme_url/>css/lightbox.css" rel="stylesheet" />
         <!-- <link rel="stylesheet" href="<ion:theme_url />css/main.min.css" /> -->
 
         <link rel="shortcut icon" href="<ion:theme_url />img/favicon.ico">
