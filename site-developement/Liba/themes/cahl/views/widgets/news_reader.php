@@ -5,7 +5,7 @@
 				<!-- League logo -->
 				<h1 id="logo-big" class="center">
 					<a href="<ion:home_url />">
-						<img src="<ion:theme_url />img/liba-logo.png" alt="Corporate amateur hockey league" />
+						<img src="<ion:theme_url />img/liba-logo.png" alt="Igor Liba academy" />
 					</a>
 				</h1>
 				

@@ -18,33 +18,21 @@
         <footer class="bottom-grill clearfix">
 			<div class="wrapper white">
 				<div class="clearfix">
-					<!-- Info -->
-					<ion:page id="14">
-					<ul class="links">
-						<ion:articles>
-						<li><a href="<ion:article:url />"><ion:article:title /></a></li>
-						</ion:articles>
-					</ul>
-					</ion:page>
-					<!-- Links -->
-					<ion:page id="13">
-					<ul class="links">
-						<ion:articles>
-						<li><a href="<ion:article:url />"><ion:article:title /></a></li>
-						</ion:articles>
-					</ul>
-					</ion:page>
+					<div class="container-fluid footer-bg">
+				      <div class="row">
+				        <div class="col-md-12 text-center">
+				          <a href="http://nesskdckosiciam.sk" target="_blank">
+				            <img src="<ion:theme_url />img/logo-final.png" alt="Ness KDC Košiciam" class="img-responsive img-logo-nesskdckosiciam">
+				          </a>
+				          <p> 
+				            Webová stránka bola vytvorená v rámci projektu NESS KDC Košiciam
+				          </p>
+				        </div>
+				      </div><!-- /.row -->
+				    </div><!-- /.container-fluid -->
 				</div>
-				<div class="copyright white center"><ion:lang key="copyright" /></div>
-				<a href="<ion:home_url />" id="logo-small" class="center">
-					<img src="<ion:theme_url />img/cahl-logo-small.png" alt="<ion:site_title />" />
-				</a>
 			</div>
 		</footer>
-		
-		<div id="small-footer" class="clearfix">
-			Designed & developed by <a class="red" href="http://www.gigup.eu">gigUp, s.r.o.</a>, in 2014, title photo copyright: <a class="red" href="http://photo.elsoar.com">http://photo.elsoar.com</a>
-		</div>
 		
 		<div id="fb-root"></div>
 		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -52,20 +40,12 @@
         <!-- <script src="js/main.js"></script> -->
         <script src="<ion:theme_url />js/main.min.js"></script>
 		<script src="<ion:theme_url />js/jquery.jaysValidation.plugin.js"></script>
+		<script src="<ion:theme_url />js/lightbox.min.js"></script>
+		<script src="<ion:theme_url />js/bootstrap-hover-dropdown.js"></script>
 		
-		<!-- Countdown init -->
+		<!-- owl carousel init -->
 		<script>
 			$(document).ready(function() {
-				// Countdown
-				var translations = {
-					dayLabel : '<ion:lang key="countdown_days" />',
-					hrLabel : '<ion:lang key="countdown_hours" />',
-					minLabel : '<ion:lang key="countdown_mins" />',
-					secLabel : '<ion:lang key="countdown_secs" />'
-				};
-				Cahl.CountDown.init('#countdown-timer', new Date('2015/09/01 16:00'), translations);
-				// Form pre validation
-				
 				$('form[name="sign-up"]').jaysValidation({
 					emptyFieldMessage: '<ion:lang key="form_empty_field" />',
 					notValidEmailMessage: '<ion:lang key="form_email_not_valid" />',
@@ -80,9 +60,10 @@
 					notValidPhoneMessage: '<ion:lang key="form_not_valid_phone" />'
 				});
 
-                var navDropdowns = $("ul#nav").children("li").has("ul");
-                navDropdowns.addClass("dropdown").children("a").addClass("dropdown-toggle").attr({"data-toggle": "dropdown", role: "button", "aria-expanded": "false"}).append(' <b class="caret"></b>');
-                navDropdowns.children("ul").addClass("dropdown-menu").attr({role: "menu"});
+			    var navDropdowns = $("ul#nav").children("li").has("ul");
+			    navDropdowns.addClass("dropdown").children("a").addClass("dropdown-toggle").attr({"data-toggle": "dropdown", "data-hover": "dropdown", role: "button", "aria-expanded": "false"}).append(' <b class="caret"></b>');
+			    navDropdowns.children("ul").addClass("dropdown-menu").attr({role: "menu"});
+  
 
                 /** Add to all tables responsive view **/
                 $("table").wrap('<div class="table-responsive"></div>');

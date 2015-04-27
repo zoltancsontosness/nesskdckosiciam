@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /slavomir_ilavsky.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 11145,
+  8 => 1430137174,
+  9 => 1430137174,
+  10 => 1430137174,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 11145,
+  'atime' => 1430137174,
+  'mtime' => 1430137174,
+  'ctime' => 1430137174,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 11145,
+    'filename' => 'slavomir_ilavsky.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/slavomir_ilavsky.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 11145,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 100,
+      'resolution_y' => 128,
+      'compression_ratio' => 0.290234374999999988897769753748434595763683319091796875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 94,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5553432,
+      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\Liba/files/.thumbs/.backend/35/32/265f_slavomir_ilavskyb8661ff09c4d8eb97-500x500.jpg',
+      'filesize' => 11145,
+      'imageinfo' => 
+      array (
+        0 => 100,
+        1 => 128,
+        2 => 2,
+        3 => 'width="100" height="128"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 64474.07407407407299615442752838134765625,
+      'usage_guestimate' => 90263.703703703693463467061519622802734375,
+      'usage_min_advised' => 5643695.70370370335876941680908203125,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '5.7 MB',
+  'memory estimated' => '0.1 MB',
+  'memory suggested' => '5.6 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/35/32/265f_slavomir_ilavskyb8661ff09c4d8eb97-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 100,
+    1 => 128,
+    2 => 2,
+    3 => 'width="100" height="128"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/35/32/265f_slavomir_ilavskyb8661ff09c4d8eb97-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 94,
+    1 => 120,
+    2 => 2,
+    3 => 'width="94" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

@@ -1,28 +1,28 @@
 <ion:partial view="header" />
 
 		<section class="main-content wrapper clearfix">
-			<div class="articles left">
+			<div class="articles left col-xs-12 col-md-12 col-lg-10">
 				<!-- News -->
 				<ion:page>
 					<ion:articles>
 						<ion:article>
 					
-						<article class="clearfix">
-							<h3><a href="<ion:url />"><ion:title /></a></h3>
-							<div class="social left">
+						<article class="col-sm-12 clearfix">
+							<h3><ion:title /></h3>
+							<div class="social left col-xs-12 col-md-1">
 								<time class="red-background clearfix white" datetime="<ion:date format="Y-d-m H:i" />">
 									<strong><ion:date format="d" /></strong>
 									<ion:date format="M" />
 								</time>
 								<ion:partial view="widgets/social" />
 							</div>
-							<div class="text silver left">
+							<div class="text silver left col-xs-12 col-sm-12 col-md-11">
 								<!-- Get the pictures only -->
 								<ion:medias type="picture" size="569,356">							 
-									<img src="<ion:media:src />" alt="<ion:media:alt />" />
+									<img class="article-img" src="<ion:media:src />" alt="<ion:media:alt />" />
 								</ion:medias>						
-								<ion:content paragraph="2" />
-								<a href="<ion:url />" class="red read-more"><ion:lang key="read_more" /></a>
+								<ion:content characters="700" />
+								<a href="<ion:url />" class="btn btn-danger pull-right"><ion:lang key="read_more" /></a>
 							</div>
 						</article>	
 						
