@@ -97,6 +97,12 @@ textarea:focus, input:focus{
 	max-height: 190px;
 	margin: auto;
 }
+.noBorder{
+    border:0 !important;
+}
+.media{
+    border-bottom: 2px solid #ccc;
+}
 /* -----------------------------------------------
    top nav
    ----------------------------------------------- */

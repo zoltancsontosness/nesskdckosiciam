@@ -73,22 +73,26 @@
                     loop: true,
                     autoplay: true,
                     responsiveClass: true,
-                    slideBy: 2,
                     responsive:{
                         0:{
-                            items:2
+                            items:2,
+                            slideBy: 2
                         },
                         450:{
-                            items:3
+                            items:3,
+                            slideBy: 3
                         },
                         600:{
-                            items:4
+                            items:4,
+                            slideBy: 4
                         },
                         768:{
-                            items:6
+                            items:5,
+                            slideBy: 5
                         },
                         1200:{
-                            items:8
+                            items:8,
+                            slideBy: 8
                         }
                     }
                 });

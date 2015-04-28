@@ -2,8 +2,8 @@
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Hostiteľ: 127.0.0.1
--- Čas generovania: Po 27.Apr 2015, 19:01
+-- Hostiteľ: localhost
+-- Čas generovania: Út 28.Apr 2015, 08:30
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `flag` smallint(1) DEFAULT '0',
   `has_url` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `priority` smallint(1) unsigned NOT NULL DEFAULT '5'
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article`
@@ -108,7 +108,17 @@ INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `pu
 (25, 'rozpis-treningov', 'admin', 'admin', '2015-04-27 17:17:56', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:19:02', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (26, 'kodex-klubu', 'admin', 'admin', '2015-04-27 17:20:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:25:01', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (27, 'ulohy-trenerov', 'admin', 'admin', '2015-04-27 17:22:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:24:53', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(28, 'desatoro-pre-rodicov', 'admin', 'admin', '2015-04-27 17:23:29', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:24:45', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
+(28, 'desatoro-pre-rodicov', 'admin', 'admin', '2015-04-27 17:23:29', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:24:45', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(29, 'clanky', 'admin', NULL, '2015-04-28 06:57:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 06:57:28', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(30, 'rusnak-liba-lukac.-utok-ktor-velebil-aj-tichonov', 'admin', 'admin', '2015-04-28 07:00:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 07:22:20', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(31, 'igor-liba-vychovava-aj-baletky.-mesto-mu-zrejme-znizi-najomne', 'admin', 'admin', '2015-04-28 08:10:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:10:50', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(32, 'gretzky-m-stval-nechtl-jit-na-pivo-vzpomina-liba-na-legendu', 'admin', 'admin', '2015-04-28 08:13:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:18:48', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(33, 'bude-z-neho-vek-hrac-hovori-liba-o-jurcovi', 'admin', 'admin', '2015-04-28 08:14:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:14:24', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(34, 'pan-trener-ja-prsim-pocul-igor-liba-na-treningu', 'admin', 'admin', '2015-04-28 08:16:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:16:34', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(35, 'v-libovom-hokejovom-kempe-bol-aj-peter-bondra', 'admin', 'admin', '2015-04-28 08:16:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:17:13', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(36, 'bondra-s-libom-po-vyse-dvoch-dekadach-opa-spolu-foto', 'admin', 'admin', '2015-04-28 08:17:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:17:45', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(37, 'bondra-navstivil-libov-detsk-kemp', 'admin', 'admin', '2015-04-28 08:19:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:19:31', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(38, 'igor-liba-pokroky-su-badatene-a-to-nas-zenie-vpred', 'admin', 'admin', '2015-04-28 08:20:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 08:20:17', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -188,7 +198,17 @@ INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `m
 (25, 'sk', 'rozpis-treningov', 'Rozpis tréningov', '', '', '<p></p>\n<table border="1" cellpadding="3" align="center" class="center" id="trainings">\n<thead>\n<tr align="center" valign="middle" class="center">\n<td align="center" valign="middle" class="center"></td>\n<th align="center" valign="middle">8:00-9:15</th><th align="center" valign="middle">9:30-10:30</th><th align="center" valign="middle">10:45-11:45</th><th align="center" valign="middle">12:00-13:00</th><th align="center" valign="middle">15:15-16:15</th><th align="center" valign="middle">16:30-17:30</th><th align="center" valign="middle">20:15-21:15</th></tr>\n</thead>\n<tbody>\n<tr>\n<td>Pondelok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Utorok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Streda</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Štvrtok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Piatok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Sobota</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n<tr>\n<td>Nedeľa</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n</tbody>\n</table>', '', '', 1),
 (26, 'sk', 'kodex-klubu', 'Kódex rodičov', '', '', '<ol>\n<li>Dávajú prednosť dlhodobému a zdravému športovému vývoju dieťaťa pred vlastnými ambíciami.</li>\n<li>Umožňujú svojim deťom vykonávať aj iné aktivity,veľmi dôležitá je regenerácia.</li>\n<li>Nenútia deti do športových výkonov proti ich vôli.Deti by mali športovať pre svoje vlastné potešenie,hra je určená pre deti ,nie pre rodičov.</li>\n<li>Kladú dôraz na správnu životosprávu detí,nechajú riadne doliečiť zranenia,choroby i drobné nachladenia.</li>\n<li>Pri zápasoch deťom fandia a aktívne ich povzbudzujú.Ak chcú ,aby deti hrali ako tím,musia rodičia vystupovať tiež ako tím.</li>\n<li>Zdôrazňujú vplyv poctivého tréningu na výkon dieťaťa v zápase.</li>\n<li>Trénerovi dôverujú ,deťom nedávajú pokyny v rozpore s pokynmi trénera a neznižujú jeho autoritu.</li>\n<li>Nikdy nezasahajú do kompetencií trénera pri tréningu a zápase.Nevstupujú do priestorov striedačiek a nevynucujú si zaradenie svojho dieťaťa do zostavy.</li>\n<li>Nepostávajú pri mantineli a nevolajú svoje dieťa po rady.Nepokrikujú po rozhodcoch.</li>\n<li>Pokiaľ majú výhrady,riešia ich najprv s hlavným trénerom a potom s vedením klubu.</li>\n<li>Slušne sa vyjadruje a nepoužíva vulgarizmy.</li>\n</ol>', '', '', 1),
 (27, 'sk', 'ulohy-trenerov', 'Úlohy trénerov', '', '', '<ol>\n<li>Organizujú a vedú tréningový proces pridelených mužstiev v LIBA ACADEMY 11.</li>\n<li>Spolupracujú s ostatnými trénermi mládežnickych mužstiev,podľa možností ich prípravu a zápasy.</li>\n<li>Sledujú prospech v škole a udržujú kontakt s rodičmi.</li>\n<li>Vedú pridelené mužstvo v zápase,určujú zostavu a nasadzovanie hráčov.Iba tréner je oprávnený udeľovať zaväzné pokyny vedúcim mužstva a jeho hráčom.</li>\n<li>Dbajú o zdravie a fyzickú pripravenosť členov svojho mužstva,vedú ich k dodržiavaniu životosprávy,výživy,hygieny,regenerácie,rehabilitácie a športovej etiky.</li>\n<li>Pracujú na zdokonaľovaní tréningových metód a sú príkladom pre svojich hráčov.</li>\n<li>Uverňujú na internetových stránkach LIBA ACADEMY 11 týždenné plány mužstiev/prehľad zápasov,výsledkov,termínov zrazov,aktuálne informácie atď/</li>\n<li>Usilujú sa o spravodlivosť,čo sa týka sympatií a pozornosti.</li>\n<li>Budovať u hráčov sebadôveru ale aj sebakontrolu.</li>\n<li>Učiť umeniu koncentrácie a relaxácie.</li>\n<li>Slušne sa vyadruje a nepoužíva vulgarizmy</li>\n</ol>', '', '', 1),
-(28, 'sk', 'desatoro-pre-rodicov', 'Desatoro pre rodičov', '', '', '<ol>\n<li>Pozitívne motivovať chlapcov pred tréningom a nezaťažovať ich radami, čo majú robiť.</li>\n<li>Po tréningu pochváliť a povzbudiť bez ohľadu na výkon chlapca.</li>\n<li>Nezasahovať do činnosti trénera pri tréningu a zápase.</li>\n<li>Nevynucovať si zaradenie svojho syna do zostavy.</li>\n<li>Nepostávať pri mantineloch, nevolať chlapcov a neradiť im.</li>\n<li>Nevstupovať do priestorov striedačky a do priestorov šatní.</li>\n<li>Nepokrikovať na rozhodcov.</li>\n<li>Nenosiť chlapcom výstroj.</li>\n<li>Nenarušovať dochádzku na tréningy a zápasy počas víkendov (odchod na chaty a výlety...)</li>\n<li>Nezabúdať na pravidelnú kontrolu výstroja a svojho syna (ribaná, dresy, korčule...)</li>\n</ol>\n<p><br />Čas strávený s Vašimi deťmi počas tréningov a zápasov bude pre všetkých príjemný. Majte na pamäti, že sú to len Vaše deti.</p>', '', '', 1);
+(28, 'sk', 'desatoro-pre-rodicov', 'Desatoro pre rodičov', '', '', '<ol>\n<li>Pozitívne motivovať chlapcov pred tréningom a nezaťažovať ich radami, čo majú robiť.</li>\n<li>Po tréningu pochváliť a povzbudiť bez ohľadu na výkon chlapca.</li>\n<li>Nezasahovať do činnosti trénera pri tréningu a zápase.</li>\n<li>Nevynucovať si zaradenie svojho syna do zostavy.</li>\n<li>Nepostávať pri mantineloch, nevolať chlapcov a neradiť im.</li>\n<li>Nevstupovať do priestorov striedačky a do priestorov šatní.</li>\n<li>Nepokrikovať na rozhodcov.</li>\n<li>Nenosiť chlapcom výstroj.</li>\n<li>Nenarušovať dochádzku na tréningy a zápasy počas víkendov (odchod na chaty a výlety...)</li>\n<li>Nezabúdať na pravidelnú kontrolu výstroja a svojho syna (ribaná, dresy, korčule...)</li>\n</ol>\n<p><br />Čas strávený s Vašimi deťmi počas tréningov a zápasov bude pre všetkých príjemný. Majte na pamäti, že sú to len Vaše deti.</p>', '', '', 1),
+(29, 'sk', 'clanky', 'Články', '', '', '', NULL, NULL, 1),
+(30, 'sk', 'rusnak-liba-lukac.-utok-ktor-velebil-aj-tichonov', ' Rusnák, Liba, Lukáč. Útok, ktorý velebil aj Tichonov', '', '', '', '', '', 1),
+(31, 'sk', 'igor-liba-vychovava-aj-baletky.-mesto-mu-zrejme-znizi-najomne', 'Igor Liba vychováva aj baletky. Mesto mu zrejme zníži nájomné', '', '', '', '', '', 1),
+(32, 'sk', 'gretzky-m-stval-nechtl-jit-na-pivo-vzpomina-liba-na-legendu', 'Gretzky ma štval, nechcel ísť na pivo, spomína Liba na legendu', '', '', '', '', '', 1),
+(33, 'sk', 'bude-z-neho-vek-hrac-hovori-liba-o-jurcovi', 'Bude z neho veľký hráč! Hovorí Liba o Jurčovi', '', '', '', '', '', 1),
+(34, 'sk', 'pan-trener-ja-prsim-pocul-igor-liba-na-treningu', 'Pán tréner, ja prším, počul Igor Liba na tréningu', '', '', '', '', '', 1),
+(35, 'sk', 'v-libovom-hokejovom-kempe-bol-aj-peter-bondra', 'V Libovom hokejovom kempe bol aj Peter Bondra', '', '', '', '', '', 1),
+(36, 'sk', 'bondra-s-libom-po-vyse-dvoch-dekadach-opa-spolu-foto', 'Bondra s Libom po vyše dvoch dekádach opäť spolu + FOTO', '', '', '', '', '', 1),
+(37, 'sk', 'bondra-navstivil-libov-detsk-kemp', 'Bondra navštívil Libov detský kemp', '', '', '', '', '', 1),
+(38, 'sk', 'igor-liba-pokroky-su-badatene-a-to-nas-zenie-vpred', 'Igor Liba: Pokroky sú badateľné a to nás ženie vpred', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -754,7 +774,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
 --
 
 INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `category`, `title`, `content`, `read`) VALUES
-(1, '2015-04-27', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
+(1, '2015-04-28', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
 
 -- --------------------------------------------------------
 
@@ -819,7 +839,7 @@ INSERT INTO `page` (`id_page`, `id_parent`, `id_menu`, `id_type`, `id_subnav`, `
 (16, 5, 1, 0, 0, 'rozpis-treningov', 11, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:29:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:19:33', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', '', '', '', 'ordering', 'ASC', 'Rozpis tréningov', 'article', '16.25', 0, 5, 0, '404'),
 (17, 5, 1, 0, 0, 'specialne-brankarske-treningy', 12, 1, 1, 0, 'admin', NULL, '2015-04-15 13:31:56', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (18, 5, 1, 0, 0, 'prihlasky', 13, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-15 13:32:19', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(19, 5, 1, 0, 0, 'clanky', 14, 1, 1, 0, 'admin', NULL, '2015-04-15 13:32:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(19, 5, 1, 0, 0, 'clanky', 14, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-28 07:20:45', '0000-00-00 00:00:00', 1, 1, 'page_newspaper', '', '', '', 'ordering', 'ASC', '', '', '', 0, 5, 0, '404'),
 (20, 5, 1, 0, 0, 'reklamne-predmety', 15, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 14:43:33', '0000-00-00 00:00:00', 1, 1, 'page_gallery', '', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (21, 6, 1, 0, 0, 'kodex-klubu-1', 16, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:41:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:22:18', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (22, 6, 1, 0, 0, 'desatoro-pre-rodicov', 17, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:41:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:24:24', '0000-00-00 00:00:00', 1, 1, '', 'page_blog_post', '', '', 'ordering', 'ASC', 'Desatoro pre rodičov', 'article', '22.28', 0, 5, 0, '404'),
@@ -871,6 +891,15 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (15, 22, 1, NULL, 3, NULL, '', '', '', 1),
 (15, 23, 1, NULL, 4, NULL, '', '', '', 1),
 (16, 25, 1, NULL, 1, NULL, '', '', '', 1),
+(19, 30, 1, NULL, 1, NULL, 'external', '', 'http://www.hokej.sk/reprezentacia/clanok130733-Rusnak_Liba_Lukac_Utok_ktory_velebil_aj_Tichonov.htm', 1),
+(19, 31, 1, NULL, 2, NULL, 'external', '', 'http://kosice.korzar.sme.sk/c/7749534/igor-liba-vychovava-aj-baletky-mesto-mu-zrejme-znizi-najomne.html', 1),
+(19, 32, 1, NULL, 3, NULL, 'external', '', 'http://hokej.idnes.cz/igor-liba-c68-/reprezentace.aspx?c=A150409_2154010_reprezentace_ald', 1),
+(19, 33, 1, NULL, 4, NULL, 'external', '', 'http://www.hokej.sk/extraliga/clanok122187-Bude_z_neho_velky_hrac_Hovori_Liba_o_Jurcovi_FOTO.htm', 1),
+(19, 34, 1, NULL, 5, NULL, 'external', '', 'http://hokej.pravda.sk/ostatne/clanok/306822-pan-trener-ja-prsim-pocul-liba-na-treningu/', 1),
+(19, 35, 1, NULL, 6, NULL, 'external', '', 'http://kosice.korzar.sme.sk/c/6873549/v-libovom-hokejovom-kempe-bol-aj-peter-bondra.html', 1),
+(19, 36, 1, NULL, 7, NULL, 'external', '', 'http://www.hokej.sk/extraliga/clanok110607-Bondra_s_Libom_po_vyse_dvoch_dekadach_opat_spolu__FOTO.htm', 1),
+(19, 37, 1, NULL, 8, NULL, 'external', '', 'http://www.igorliba.sk/documents/bondra-clanok-18-7.pdf', 1),
+(19, 38, 1, NULL, 9, NULL, 'external', '', 'http://kosice.korzar.sme.sk/c/6808337/igor-liba-pokroky-su-badatelne-a-to-nas-zenie-vpred.html', 1),
 (20, 24, 1, NULL, 1, NULL, '', '', '', 1),
 (21, 26, 1, NULL, 1, NULL, '', '', '', 1),
 (21, 27, 1, NULL, 2, NULL, '', '', '', 1),
@@ -924,7 +953,7 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 16, 'rozpis-treningov', '', 'Rozpis tréningov', '', '', '', '', '', '', 1),
 ('sk', 17, 'specialne-brankarske-treningy', '', 'Špeciálne brankárske tréningy', '', '', '', '', NULL, NULL, 1),
 ('sk', 18, 'prihlaska', '', 'Prihláška', '', '', '', '', '', '', 1),
-('sk', 19, 'clanky', '', 'Články', '', '', '', '', NULL, NULL, 1),
+('sk', 19, 'clanky', '', 'Články', '', '', '', '', '', '', 1),
 ('sk', 20, 'reklamne-predmety', '', 'Reklamné predmety', '', '', '', '', '', '', 1),
 ('sk', 21, 'kodex-klubu', '', 'Kódex klubu', '', '', '', '', '', '', 1),
 ('sk', 22, 'desatoro-pre-rodicov', '', 'Desatoro pre rodičov', '', '', '', '', '', '', 1),
@@ -1344,7 +1373,7 @@ CREATE TABLE IF NOT EXISTS `url` (
   `path_ids` varchar(50) DEFAULT NULL,
   `full_path_ids` varchar(50) DEFAULT NULL,
   `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=167 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `url`
@@ -1373,7 +1402,6 @@ INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`,
 (52, 5, 'page', 1, 1, 'sk', 'o-nas', '5', '5', '2015-04-20 13:51:13'),
 (58, 17, 'page', 1, 1, 'sk', 'o-nas/specialne-brankarske-treningy', '5/17', '5/17', '2015-04-20 13:51:14'),
 (59, 18, 'page', 1, 1, 'sk', 'o-nas/prihlaska', '5/18', '5/18', '2015-04-20 13:51:14'),
-(60, 19, 'page', 1, 1, 'sk', 'o-nas/clanky', '5/19', '5/19', '2015-04-20 13:51:14'),
 (76, 34, 'page', 1, 1, 'sk', 'news', '34', '34', '2015-04-20 14:28:28'),
 (84, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-04-21 17:48:38'),
 (85, 15, 'article', 1, 1, 'sk', 'home/uvod', '4/15', '4/15', '2015-04-22 10:03:20'),
@@ -1397,7 +1425,17 @@ INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`,
 (156, 26, 'article', 1, 1, 'sk', 'kodex-klubu/kodex-klubu/kodex-klubu', '6/21/26', '6/21/26', '2015-04-27 17:22:18'),
 (157, 27, 'article', 1, 1, 'sk', 'kodex-klubu/kodex-klubu/ulohy-trenerov', '6/21/27', '6/21/27', '2015-04-27 17:22:19'),
 (165, 22, 'page', 1, 1, 'sk', 'kodex-klubu/desatoro-pre-rodicov', '6/22', '6/22', '2015-04-27 17:24:24'),
-(166, 28, 'article', 1, 1, 'sk', 'kodex-klubu/desatoro-pre-rodicov/desatoro-pre-rodicov', '6/22/28', '6/22/28', '2015-04-27 17:24:24');
+(166, 28, 'article', 1, 1, 'sk', 'kodex-klubu/desatoro-pre-rodicov/desatoro-pre-rodicov', '6/22/28', '6/22/28', '2015-04-27 17:24:24'),
+(183, 19, 'page', 1, 1, 'sk', 'o-nas/clanky', '5/19', '5/19', '2015-04-28 07:20:45'),
+(184, 30, 'article', 1, 1, 'sk', 'o-nas/clanky/rusnak-liba-lukac.-utok-ktor-velebil-aj-tichonov', '5/19/30', '5/19/30', '2015-04-28 07:20:45'),
+(185, 31, 'article', 1, 1, 'sk', 'o-nas/clanky/igor-liba-vychovava-aj-baletky.-mesto-mu-zrejme-znizi-najomne', '5/19/31', '5/19/31', '2015-04-28 08:10:11'),
+(186, 32, 'article', 1, 1, 'sk', 'o-nas/clanky/gretzky-m-stval-nechtl-jit-na-pivo-vzpomina-liba-na-legendu', '5/19/32', '5/19/32', '2015-04-28 08:13:34'),
+(187, 33, 'article', 1, 1, 'sk', 'o-nas/clanky/bude-z-neho-vek-hrac-hovori-liba-o-jurcovi', '5/19/33', '5/19/33', '2015-04-28 08:14:08'),
+(188, 34, 'article', 1, 1, 'sk', 'o-nas/clanky/pan-trener-ja-prsim-pocul-igor-liba-na-treningu', '5/19/34', '5/19/34', '2015-04-28 08:16:19'),
+(189, 35, 'article', 1, 1, 'sk', 'o-nas/clanky/v-libovom-hokejovom-kempe-bol-aj-peter-bondra', '5/19/35', '5/19/35', '2015-04-28 08:16:50'),
+(190, 36, 'article', 1, 1, 'sk', 'o-nas/clanky/bondra-s-libom-po-vyse-dvoch-dekadach-opa-spolu-foto', '5/19/36', '5/19/36', '2015-04-28 08:17:31'),
+(191, 37, 'article', 1, 1, 'sk', 'o-nas/clanky/bondra-navstivil-libov-detsk-kemp', '5/19/37', '5/19/37', '2015-04-28 08:19:20'),
+(192, 38, 'article', 1, 1, 'sk', 'o-nas/clanky/igor-liba-pokroky-su-badatene-a-to-nas-zenie-vpred', '5/19/38', '5/19/38', '2015-04-28 08:20:01');
 
 -- --------------------------------------------------------
 
@@ -1426,7 +1464,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id_user`, `id_role`, `join_date`, `last_visit`, `username`, `screen_name`, `firstname`, `lastname`, `birthdate`, `gender`, `password`, `email`, `salt`) VALUES
-(1, 1, '2015-04-15 09:28:59', '2015-04-27 11:15:21', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'QYWmfVcmcZLZzhB1JcE=', 'frank238238@gmail.com', '0a72e12a518d9523');
+(1, 1, '2015-04-15 09:28:59', '2015-04-28 05:22:12', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'QYWmfVcmcZLZzhB1JcE=', 'frank238238@gmail.com', '0a72e12a518d9523');
 
 --
 -- Indexes for dumped tables
@@ -1738,7 +1776,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `article_comment`
 --
@@ -1868,7 +1906,7 @@ MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=167;
+MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=193;
 --
 -- AUTO_INCREMENT for table `user`
 --
