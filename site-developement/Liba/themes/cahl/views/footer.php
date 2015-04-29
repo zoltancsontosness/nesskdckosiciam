@@ -52,7 +52,7 @@
 					nanMessage: '<ion:lang key="form_numeric_only" />',
 					notValidPhoneMessage: '<ion:lang key="form_not_valid_phone" />'
 				});
-				
+
 				$('form[name="contact"]').jaysValidation({
 					emptyFieldMessage: '<ion:lang key="form_empty_field" />',
 					notValidEmailMessage: '<ion:lang key="form_email_not_valid" />',

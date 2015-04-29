@@ -176,7 +176,7 @@
                         ==================================================== */
                     this.init = function() {
                         createFormObj(context);
-                        context.parent.live('submit', function() {
+                        context.parent.submit(function() {
                             var appContext = context;
                             /*  Check if the form is valid and execute a callback if specified, 
                                 if not specified but valid then submit the form.
@@ -193,12 +193,12 @@
                                 return false;
                             };
                         });
-                        $(context.formElements).live('change', function() {
+                        $(context.formElements).on('change', function() {
                             var that = context,
                                 input = $(this);
                             that.formObj[input.attr('name')].value = input.val();
                             isValidField(that, input.attr('name'));
-                        }).live('focus', function() {
+                        }).on('focus', function() {
                             var input = $(this).attr('name');
                             clearErrorMessage(input);
 
