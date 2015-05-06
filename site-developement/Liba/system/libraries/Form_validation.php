@@ -514,7 +514,7 @@ class CI_Form_validation {
 				{
 					if (FALSE === ($line = $this->CI->lang->line($type)))
 					{
-						$line = 'The field was not set';
+						$line = 'Toto pole je potrebné vyplniť';
 					}
 				}
 				else

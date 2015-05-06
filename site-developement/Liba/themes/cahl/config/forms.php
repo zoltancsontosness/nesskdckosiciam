@@ -13,12 +13,12 @@
 $config['forms'] = array
 (
 	// Contact form
-	'contact' => array
+	'entry' => array
 	(
 		// The method which will process the form
 		// The function name has no importance, it must only be in the declared Tagmanager class
 		// and be "public static"
-		'process' => 'TagManager_Contact::process_data',
+		'process' => 'TagManager_Entry::process_data',
 
 		// Redirection after process. Can be 'home' or 'referer' for the $_SERVER['HTTP_REFERER'] value.
 		// If not set, doesn't redirect
@@ -61,26 +61,197 @@ $config['forms'] = array
 		// Form definition: fields and rules
 		'fields' => array
 		(
-			'name' => array
+			'firstname' => array
 			(
 				// CI validation rules
 				'rules' => 'trim|required|min_length[3]|xss_clean',
 				// Label translated index, as set in language/xx/form_lang.php
 				// Will be used to display the label name in error messages
-				'label' => 'form_label_firstname',
+				'label' => 'Meno',
+			),
+			'lastname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Priezvisko',
+			),
+			'address' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Adresa',
+			),
+			'birthday' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Dátum narodenia',
+			),
+			'adult_firstname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Meno',
+			),
+			'adult_lastname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Priezvisko',
+			),
+			'phone' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Telefónne číslo',
 			),
 			'email' => array(
 				'rules' => 'trim|required|valid_email|xss_clean',
-				'label' => 'form_label_email',
+				'label' => 'Email',
 			),
-			'topic' => array(
-				'rules' => 'trim|required|xss_clean',
-				'label' => 'form_label_topic',
+			'rule' => array(
+                // Can be 'radio', 'checkbox', 'select' or not set for input and textarea
+                'type' => 'checkbox',
+                'rules' => 'required',
+                'label' => 'form_label_heard_on',
+            )
+		)
+	),
+
+// trening form
+	'trening_form' => array
+	(
+		// The method which will process the form
+		// The function name has no importance, it must only be in the declared Tagmanager class
+		// and be "public static"
+		'process' => 'TagManager_Trenings::process_data',
+
+		// Redirection after process. Can be 'home' or 'referer' for the $_SERVER['HTTP_REFERER'] value.
+		// If not set, doesn't redirect
+		'redirect' => 'referer',
+
+		// Messages Language index, as set in language/xx/form_lang.php
+		'messages' => array(
+			'success' => 'form_alert_error_message',
+			'error' => 'form_alert_success_message',
+		),
+		'emails' => array
+		(
+			// To Site Administrator
+			array
+			(
+				// Send the mail to the address filled in in the 'email' input of the form
+				// Values can be :
+				// - One plain Email address : my.name@mydomain.com
+				// - 'form' to send it to the email of the form data
+				// - 'site' to send it to the Email set in Ionize under Settings > Advanced > Email > Website
+				// - 'contact' to send it to the Email set in Ionize under Settings > Advanced > Email > Contact
+				// - 'info' to send it to the Email set in Ionize under Settings > Advanced > Email > Info
+				// - 'technical' to send it to the Email set in Ionize under Settings > Advanced > Email > Info
+				'email' => 'contact',
+
+				// Translation item index
+				'subject' => 'mail_website_contact_subject',
+
+				// Used view : Located in /themes/your_theme/mail/contact.php
+				'view' => 'mail/contact/to_admin',
 			),
-			'message' => array(
-				'rules' => 'trim|required|xss_clean',
-				'label' => 'form_label_message',
-			)
+			// Send to user
+			array
+			(
+				'email' => 'form',
+				'subject' => 'mail_user_contact_subject',
+				'view' => 'mail/contact/to_user',
+			),
+		),
+		// Form definition: fields and rules
+		'fields' => array
+		(
+			'type' => array(
+                // Can be 'radio', 'checkbox', 'select' or not set for input and textarea
+                'type' => 'select',
+                'rules' => 'required',
+                'label' => 'form_label_type',
+            ),
+			'firstname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Meno',
+			),
+			'lastname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Priezvisko',
+			),
+			'address' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Adresa',
+			),
+			'birthday' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Dátum narodenia',
+			),
+			'phone' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Telefónne číslo',
+			),
+			'email' => array(
+				'rules' => 'trim|required|valid_email|xss_clean',
+				'label' => 'Email',
+			),
+			'adult_firstname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Meno',
+			),
+			'adult_lastname' => array
+			(
+				// CI validation rules
+				'rules' => 'trim|required|min_length[3]|xss_clean',
+				// Label translated index, as set in language/xx/form_lang.php
+				// Will be used to display the label name in error messages
+				'label' => 'Priezvisko',
+			),
+			
+			'rule' => array(
+                // Can be 'radio', 'checkbox', 'select' or not set for input and textarea
+                'type' => 'checkbox',
+                'rules' => 'required',
+                'label' => 'form_label_heard_on',
+            )
 		)
 	),
 

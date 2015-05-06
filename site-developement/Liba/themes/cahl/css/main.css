@@ -103,6 +103,11 @@ textarea:focus, input:focus{
 .media{
     border-bottom: 2px solid #ccc;
 }
+.highlight{
+	font-size: 22px;
+	font-weight: bolder;
+	text-decoration: underline;
+}
 /* -----------------------------------------------
    top nav
    ----------------------------------------------- */
@@ -547,6 +552,11 @@ input, textarea {
 	background: #FFFFCC;
 	width: 99%;
 }
+input[type="checkbox"]{
+	height: auto; 
+   	width: auto;
+}
+   
 textarea {
 	height:150px;
 	line-height:18px;
@@ -565,6 +575,9 @@ input[type="submit"] {
 	font-family: 'Capsuula Regular';
 	text-transform: uppercase;
 	cursor:pointer;
+}
+small.error{
+	color: #FF0000;
 }
 /* -----------------------------------------------
    Footer

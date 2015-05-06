@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="index, follow" />
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<ion:theme_url/>css/bootstrap.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="<ion:theme_url/>js/owl.carousel.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -53,11 +53,11 @@
 				<!-- Search -->
 				<ion:page id="15">
 				<div class="search right white-background">
-						<form action="<ion:url />" name="search" method="post">
-							<input type="hidden" name="form" value="search" />
-							<input type="text" name="realm" value="" placeholder="<ion:lang key="search" />..." />
-							<input type="submit" class="ico silver-light submit" value="&#xf002;" />
-						</form>
+					<form action="<ion:url />" name="search" method="post">
+						<input type="hidden" name="form" value="search" />
+						<input type="text" name="realm" value="" placeholder="<ion:lang key="search" />..." />
+						<input type="submit" class="ico silver-light submit" value="&#xf002;" />
+					</form>
 				</div>
 				</ion:page>				
 			</div>

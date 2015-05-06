@@ -12,10 +12,10 @@ $config['module']['sfs'] = array
 	 // Module's config items
 	'api_server' => 'http://www.stopforumspam.com',
 
-	'api_key' => '',
+	'api_key' => 'wepmtuzx7s2v4i',
 
 	// Send the email and IP of one spambot again to stopforumspam.com
-	'track' => true,
+	'track' => false,
 
 	// Input / Textarea which contains the user's send message
 	'evidence_input' => 'message',
@@ -24,7 +24,7 @@ $config['module']['sfs'] = array
 	'username_input' => 'name',
 
 	// Registered events
-	'events' => 'Form.contact.check',
+	'events' => 'Form.entry.check',
 );
 
 return $config['module']['sfs'];
