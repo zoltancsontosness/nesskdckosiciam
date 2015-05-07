@@ -12,7 +12,7 @@
 				<!-- Left button -->
 				<a class="absolute-left white arrow" data-direction="left">&lt;</a>
 				
-				<ion:page id="11">
+				<ion:page id="zero">
 				
 				<!-- Slides -->				
 				<ul id="news-slider">	

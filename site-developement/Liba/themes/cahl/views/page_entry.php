@@ -41,6 +41,12 @@
 
                                             <!-- The form name must be set so the tags identify it -->
                                             <input type="hidden" name="form" value="entry" />
+                                             <!-- Input : firstname -->
+                                            <p>
+                                                <label for="firstname">Meno</label>
+                                                <input name="firstname" type="text" class="validate required" id="firstname" value="<ion:form:entry:error:firstname is="true"><ion:form:entry:field:firstname /></ion:form:entry:error:firstname>"<ion:form:entry:error:firstname is="true"> class="error" </ion:form:entry:error:firstname>/>
+                                                <ion:form:entry:error:firstname tag="small" class="error" />
+                                            </p>
 
                                             <!-- Input : firstname -->
                                             <p>

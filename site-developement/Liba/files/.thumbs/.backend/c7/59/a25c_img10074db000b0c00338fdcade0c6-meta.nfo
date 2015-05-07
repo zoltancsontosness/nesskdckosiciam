@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/img100.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 202444,
+  8 => 1430986931,
+  9 => 1430986931,
+  10 => 1430986931,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 202444,
+  'atime' => 1430986931,
+  'mtime' => 1430986931,
+  'ctime' => 1430986931,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 202444,
+    'filename' => 'img100.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/img100.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 202444,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 667,
+      'compression_ratio' => 0.10117141429285357590028837648787884972989559173583984375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/c7/59/a25c_img10074db000b0c00338fdcade0c6-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 334,
+    2 => 2,
+    3 => 'width="500" height="334"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/c7/59/a25c_img10074db000b0c00338fdcade0c6-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

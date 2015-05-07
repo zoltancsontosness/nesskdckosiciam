@@ -50,7 +50,7 @@
 						*/ ?>
 					</ion:languages>
 				</div>
-				<!-- Search -->
+				<!-- Search 
 				<ion:page id="15">
 				<div class="search right white-background">
 					<form action="<ion:url />" name="search" method="post">
@@ -59,7 +59,7 @@
 						<input type="submit" class="ico silver-light submit" value="&#xf002;" />
 					</form>
 				</div>
-				</ion:page>				
+				</ion:page>	-->			
 			</div>
 		</div>
 		

@@ -26,6 +26,9 @@ a.btn{
 .clearfix {
   zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
+ul{
+  padding: 0;
+}
 
 a:focus, a:hover{
     color: inherit;
@@ -205,7 +208,7 @@ nav ul li a:hover {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin: 0;
-    background-color: #ba1515;
+    background-color: #d98121;
     font-weight: 600;
 }
 .dropdown-menu li{
@@ -533,11 +536,22 @@ aside time{
 }
 
 .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open>.dropdown-toggle.btn-danger{
-	background-color: #d9534f;
-	border-color: #d43f3a;
+	background-color: #d98121;
+	border-color: #d98121;
 }
 .btn-danger{
-	background-color: #ba1515;
+	background-color: #d98121;
+}
+.caption a{
+	text-decoration: none;
+	color: inherit;
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+}
+.caption a:hover{
+	color: inherit;
+	opacity: 0.7;
 }
 /* -----------------------------------------------
    Forms
@@ -545,7 +559,7 @@ aside time{
 label {
 	display:block;
 }
-input, textarea {
+input, textarea, select {
 	height: 30px;
 	line-height: 30px;
 	border: 1px solid #CCC;
@@ -744,7 +758,6 @@ footer .copyright {
 		padding: 0 3%;
 	}
 	#top-nav {
-		width: 94%;
 		height: 53px;
 		line-height: 53px;
 		padding: 0 3%;
@@ -773,7 +786,7 @@ footer .copyright {
 		display:block;
 	}
     .wrapper {
-		width:96%;
+		width:94%;
 	}
 	.wrapper-wide {
 		width:100%;
@@ -785,11 +798,17 @@ footer .copyright {
 		display:block;
 		cursor:pointer;
 	}
+	ul{
+		width: 100%;
+	}
+	.dropdown-menu{
+		position:relative;
+	}
 	nav {
 		height: auto;
 	}
 	nav ul li.mobile {
-		background:#ba1515;
+		background:#d98121;
 	}
 	nav ul li {
 		display:none;
