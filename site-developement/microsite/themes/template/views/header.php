@@ -24,14 +24,14 @@
 
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
   
     <header>
 	
 	  <!-- Navigation -->
 	  <div class="row navigation">	    
 	    <div class="col-lg-3 col-lg-offset-1">
-	      <a class="logo" href="/"><img src="<ion:theme_url/>img/ness-logo.png"></a>
+	      <a class="logo" href="/"><img src="<ion:theme_url/>img/ness-logo.png" alt="Ness Technologies" /></a>
 		</div>
 		<div class="col-lg-6 col-lg-offset-1">
 	      <nav>
@@ -53,4 +53,6 @@
 	    </div>
 	  </div>	  
 	  
-	</header>  
+    </header>
+  
+    <div class="container">  
