@@ -1,0 +1,84 @@
+/* Header */
+header {
+  position: relative;
+}
+
+header .navigation {
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+header .logo img {
+  width: 40px;
+  margin-left: 30px;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+header nav ul li a {
+  color: #FFF;
+}
+
+/* Footer */
+footer {
+  color: #A9A9A9;	  
+}
+
+footer .contact {
+  background: #333 url("../img/google-map-image.png") no-repeat top left; 
+  color: #FFF;
+}
+
+footer .address {
+  display: block;
+  position: relative;
+  margin: 45px auto;
+  font-weight: bold;
+  width: 190px;
+  padding: 15px;
+  background-color: #0095cd;  
+}
+
+footer .address .arrow {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #26a5d4;
+  padding: 15px;    
+}
+
+footer .address .viewIt {
+  padding-left: 30px;
+  color: #FFF;  
+}
+
+footer .links {
+  background-color: #222;
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer .links a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+footer .moreInfo {
+  margin-top: 25px;
+}
+
+footer .moreInfo ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+footer .moreInfo ul li:before {
+  content: "\2023 \0020";
+}
