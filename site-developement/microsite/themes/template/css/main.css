@@ -1,3 +1,38 @@
+/*---------------------------------------------------
+------------------ SHARED STYLES --------------------
+---------------------------------------------------*/
+h1,h2,h3,h4 {
+  font-family: 'Lato', sans-serif;
+}
+.btn {
+  margin-bottom: 4px;
+}
+.btn-green{
+  color: #fff;
+  background-color: #98e053;
+  border-color: #99cc66;
+}
+.btn-green:hover{
+  color: #fff;
+  background-color: #93d94f;
+  border-color: #8fd44d;
+}
+.btn-transparent{
+  color: #fff;
+  background-color: transparent;
+  border-color: #ddd;
+}
+.btn-transparent:hover{
+  color: #fff;
+  background-color: transparent;
+  border-color: #bbb;
+}
+/* Imports */
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+/* Containers */
+.container-fluid {
+  padding: 0;
+}
 /* Header */
 header {
   position: relative;
@@ -5,7 +40,7 @@ header {
 
 header .navigation {
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   top: 15px;
   width: 100%;
   text-align: center;
@@ -24,14 +59,37 @@ header nav ul li {
 header nav ul li a {
   color: #FFF;
 }
-
+div.cover{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: rgba(0,149,205,.6);
+  width:100%;
+  height:100%;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+.slider-text {
+  position: absolute;
+  bottom: 45px;
+  color: #fff;
+}
+.slider-text * {
+  position: relative;
+  z-index: 999;
+  text-align: center;
+}
+.perex {
+  margin-bottom: 30px;
+}
 /* Footer */
 footer {
   color: #A9A9A9;	  
 }
 
 footer .contact {
-  background: #333 url("../img/google-map-image.png") no-repeat top left; 
+  background: #333 url("../img/google-map-image.png") no-repeat top right; 
   color: #FFF;
 }
 
@@ -71,7 +129,8 @@ footer .links a {
 }
 
 footer .moreInfo {
-  margin-top: 25px;
+  background-color: #333;
+  height: 240px;
 }
 
 footer .moreInfo ul {
@@ -81,4 +140,8 @@ footer .moreInfo ul {
 
 footer .moreInfo ul li:before {
   content: "\2023 \0020";
+}
+
+footer .moreInfo h4 {
+  color: #fff;
 }
