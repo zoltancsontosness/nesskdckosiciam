@@ -1,41 +1,24 @@
 /*---------------------------------------------------
 ------------------ SHARED STYLES --------------------
 ---------------------------------------------------*/
+
+/* Imports */
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+
 h1,h2,h3,h4 {
   font-family: 'Lato', sans-serif;
 }
-.btn {
-  margin-bottom: 4px;
-}
-.btn-green{
-  color: #fff;
-  background-color: #98e053;
-  border-color: #99cc66;
-}
-.btn-green:hover{
-  color: #fff;
-  background-color: #93d94f;
-  border-color: #8fd44d;
-}
-.btn-transparent{
-  color: #fff;
-  background-color: transparent;
-  border-color: #ddd;
-}
-.btn-transparent:hover{
-  color: #fff;
-  background-color: transparent;
-  border-color: #bbb;
-}
-/* Imports */
-@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+
 /* Containers */
 .container-fluid {
-  padding: 0;
+
 }
+
 /* Header */
 header {
   position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 header .navigation {
@@ -59,6 +42,7 @@ header nav ul li {
 header nav ul li a {
   color: #FFF;
 }
+
 div.cover{
   position:absolute;
   top:0;
@@ -70,37 +54,95 @@ div.cover{
   padding: 0;
   margin: 0;
 }
+
 .slider-text {
   position: absolute;
   bottom: 45px;
   color: #fff;
 }
+
 .slider-text * {
   position: relative;
   z-index: 999;
   text-align: center;
 }
+
 .perex {
   margin-bottom: 30px;
 }
+
+/* Header buttons */
+.btn {
+  margin-bottom: 4px;
+}
+
+.btn-green{
+  color: #fff;
+  background-color: #98e053;
+  border-color: #99cc66;
+}
+
+.btn-green:hover{
+  color: #fff;
+  background-color: #93d94f;
+  border-color: #8fd44d;
+}
+
+.btn-transparent{
+  color: #fff;
+  background-color: transparent;
+  border-color: #ddd;
+}
+
+.btn-transparent:hover{
+  color: #fff;
+  background-color: transparent;
+  border-color: #bbb;
+}
+
 /* Footer */
 footer {
-  color: #A9A9A9;	  
+  color: #A9A9A9;
+  background-color: #222;	  
+}
+
+footer .row {
+  background-color: #222;;  
 }
 
 footer .contact {
-  background: #333 url("../img/google-map-image.png") no-repeat top right; 
+  background: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: right;
   color: #FFF;
+}
+
+@media (max-width: 767px) {
+  footer .contact {
+    padding-top: 45px;
+    padding-bottom: 45px;  
+  }
 }
 
 footer .address {
   display: block;
   position: relative;
-  margin: 45px auto;
   font-weight: bold;
   width: 190px;
   padding: 15px;
   background-color: #0095cd;  
+}
+
+@media (min-width: 768px) {
+  footer .address {
+    margin: 45px auto;  
+  }
+}
+
+@media (max-width: 767px) {
+  footer .address {
+    margin-left: 15px;  
+  }
 }
 
 footer .address .arrow {
@@ -114,13 +156,23 @@ footer .address .arrow {
 
 footer .address .viewIt {
   padding-left: 30px;
+  font-size: 90%;
   color: #FFF;  
 }
 
-footer .links {
-  background-color: #222;
-  padding: 50px 0;
+footer .copyright {
+  padding-top: 20px;
+}
+
+footer .links .col-md-6 {
+  margin-bottom: 20px;
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  footer .links .col-md-6 {
+    line-height: 52px;
+  }
 }
 
 footer .links a {
@@ -129,8 +181,8 @@ footer .links a {
 }
 
 footer .moreInfo {
-  background-color: #333;
-  height: 240px;
+  width: 150px;
+  margin: 50px auto;
 }
 
 footer .moreInfo ul {
@@ -140,8 +192,4 @@ footer .moreInfo ul {
 
 footer .moreInfo ul li:before {
   content: "\2023 \0020";
-}
-
-footer .moreInfo h4 {
-  color: #fff;
 }
