@@ -9,17 +9,49 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* Colors */
+/* Buttons */
+.btn {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #98e053;
+  border-color: #98e053;
+}
+
+.btn-green:hover {
+  color: #fff;
+  background-color: #86cc43;
+  border-color: #86cc43;
+}
+
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: #ddd;
+}
+
+.btn-transparent:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: rgba(221,221,221,.7);
+}
+
 .blue {
   color: #0095cd !important;
 }
+
 .btn.border-blue {
   border: 1px solid #0095cd !important;
 }
+
 .btn.border-blue:hover {
   border: 1px solid #0095cd !important;
   opacity: 0.7;
 }
+
 /* Header */
 header {
   position: relative;
@@ -81,39 +113,31 @@ div.cover{
   margin-bottom: 30px;
 }
 
-/* Header buttons */
-.btn {
-  margin-bottom: 4px;
-}
-
-.btn-green{
-  color: #fff;
-  background-color: #98e053;
-  border-color: #98e053;
-}
-
-.btn-green:hover{
-  color: #fff;
-  background-color: #86cc43;
-  border-color: #86cc43;
-}
-
-.btn-transparent{
-  color: #fff;
-  background-color: transparent;
-  border-color: #ddd;
-}
-
-.btn-transparent:hover{
-  color: #fff;
-  background-color: transparent;
-  border-color: rgba(221,221,221,.7);
-}
-
-/* Section advantages (130px) */
+/* Section advantages */
 #advantages {
   margin-bottom: 130px;
   border-top: 5px solid #0095cd;
+}
+
+#advantages div {
+  padding: 0px 30px;
+}
+  
+#advantages h2 {
+  margin: 45px 0px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #0095cd;
+}
+
+#advantages p {
+  font-size: 18px;
+  text-align: justify;
+  color: #777;
+}
+
+#advantages .btn {
+  margin-top: 30px;
 }
 
 /* Section news */
