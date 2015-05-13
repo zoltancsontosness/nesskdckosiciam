@@ -10,6 +10,8 @@
 	  <div class="col-lg-6">HOMEPAGE COLUMN 4</div>
 	</div>
 
+<ion:partial view="ourLife" />
+
 <ion:partial view="oportunity" />
 
 <ion:partial view="news" />

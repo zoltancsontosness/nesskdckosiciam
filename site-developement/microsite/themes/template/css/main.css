@@ -8,6 +8,25 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+.hero {
+  font-size: 56px;
+}
+.square {
+  width:270px;
+  height: 270px;
+  background-color: #ddd;
+  float: right;
+  border:1px solid black;
+}
+@media (min-width: 992px) {
+  .square-push-left {
+    padding-left: 80px;
+  }
+}
+.square-double {
+  float: right;
+  width: 540px;
+}
 
 /* Colors */
 .blue {
@@ -249,11 +268,16 @@ footer .moreInfo ul li:before {
 /* Oportunity */
 .oportunity {
   border-top: 5px solid #0095cd;
-  padding: 35px 0;
+  padding: 75px 0;
 }
 .oportunity h1 {
   margin: 0;
 }
 .oportunity .buttons {
-  padding: 15px 0;
+  padding: 30px 0;
 }
+.oportunity .btn{
+  margin-bottom: 35px
+}
+/* Our life */
+.
