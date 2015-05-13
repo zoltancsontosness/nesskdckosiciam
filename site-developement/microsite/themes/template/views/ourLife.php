@@ -1,16 +1,28 @@
-<section class="container" id="ourLife">
+<section id="ourLife">
 	<div class="ourLife">
 		<div class="clearfix">
 			<div class="items">
 				<div class="row">
-					<div class="item col-xs-6 col-sm-3 col-md-2 col-md-offset-4"></div>
-					<div class="item col-xs-6 col-sm-3 col-md-2"></div>
-					<div class="item col-xs-6 col-sm-3 col-md-2"></div>
-					<div class="item col-xs-6 col-sm-3 col-md-2"></div>
+					<div class="item col-xs-6 col-sm-3 col-md-2 col-md-offset-4">
+						<img src="#" alt="">
+					</div>
+					<div class="item col-xs-6 col-sm-3 col-md-2">
+						<img src="#" alt="">
+					</div>
+					<div class="item col-xs-6 col-sm-3 col-md-2">
+						<img src="#" alt="">
+					</div>
+					<div class="item col-xs-6 col-sm-3 col-md-2">
+						<img src="#" alt="">
+					</div>
 				</div>
 				<div class="row">
-					<div class="item col-xs-6 col-sm-3 col-md-2 pull-right"></div>
-					<div class="item col-xs-6 col-sm-3 col-md-2 pull-right"></div>
+					<div class="item col-xs-6 col-sm-3 col-md-2 pull-right">
+						<img src="#" alt="">
+					</div>
+					<div class="item col-xs-6 col-sm-3 col-md-2 pull-right">
+						<img src="#" alt="">
+					</div>
 					<div class=" col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
 						<h1 class="hero text-right">
 							Life in <br/>NESS KDC
