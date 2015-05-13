@@ -133,11 +133,7 @@ div.cover{
 }
 
 .news-item > h2 {
-
-  color: #222;
-}
-
-.news-item > h3 {
+  margin-top: 15px;
   color: #222;
 }
 
