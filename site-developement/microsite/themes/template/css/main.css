@@ -5,14 +5,11 @@
 /* Imports */
 @import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
 
-h1,h2,h3,h4 {
+body {
   font-family: 'Lato', sans-serif;
 }
 
 /* Containers */
-.container-fluid {
-
-}
 
 /* Header */
 header {
@@ -41,6 +38,10 @@ header nav ul li {
 
 header nav ul li a {
   color: #FFF;
+}
+header nav ul li a:hover, header nav ul li a:focus{
+  color: #FFF;
+  text-decoration: underline;
 }
 
 div.cover{
@@ -79,13 +80,13 @@ div.cover{
 .btn-green{
   color: #fff;
   background-color: #98e053;
-  border-color: #99cc66;
+  border-color: #98e053;
 }
 
 .btn-green:hover{
   color: #fff;
-  background-color: #93d94f;
-  border-color: #8fd44d;
+  background-color: #86cc43;
+  border-color: #86cc43;
 }
 
 .btn-transparent{

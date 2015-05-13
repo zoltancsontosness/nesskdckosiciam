@@ -66,4 +66,3 @@
 	  
     </header>
   
-    <div class="container">  

@@ -1,4 +1,4 @@
-    </div><!-- end of .container -->
+
     
     <footer>
       <!-- Google Map and More info -->
