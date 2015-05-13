@@ -110,6 +110,12 @@ div.cover{
   border-color: rgba(221,221,221,.7);
 }
 
+/* Section advantages (130px) */
+#advantages {
+  margin-bottom: 130px;
+  border-top: 5px solid #0095cd;
+}
+
 /* Section news */
 #news {
   background-color: #f2f2f2;
