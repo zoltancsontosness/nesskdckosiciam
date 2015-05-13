@@ -1,5 +1,3 @@
-
-    
     <footer>
       <!-- Google Map and More info -->
       <div class="row">
