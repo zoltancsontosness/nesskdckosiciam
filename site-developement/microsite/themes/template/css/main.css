@@ -9,8 +9,17 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* Containers */
-
+/* Colors */
+.blue {
+  color: #0095cd !important;
+}
+.btn.border-blue {
+  border: 1px solid #0095cd !important;
+}
+.btn.border-blue:hover {
+  border: 1px solid #0095cd !important;
+  opacity: 0.7;
+}
 /* Header */
 header {
   position: relative;
@@ -98,7 +107,7 @@ div.cover{
 .btn-transparent:hover{
   color: #fff;
   background-color: transparent;
-  border-color: #bbb;
+  border-color: rgba(221,221,221,.7);
 }
 
 /* Section news */
@@ -236,4 +245,15 @@ footer .moreInfo ul {
 
 footer .moreInfo ul li:before {
   content: "\2023 \0020";
+}
+/* Oportunity */
+.oportunity {
+  border-top: 5px solid #0095cd;
+  padding: 35px 0;
+}
+.oportunity h1 {
+  margin: 0;
+}
+.oportunity .buttons {
+  padding: 15px 0;
 }
