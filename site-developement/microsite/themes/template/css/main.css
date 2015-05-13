@@ -11,23 +11,19 @@ body {
 .hero {
   font-size: 56px;
 }
-.square {
-  width:270px;
-  height: 270px;
+.item {
+  height: 200px;
   background-color: #ddd;
+}
+span.border {
+  border-bottom: 1px solid #ddd;
+  width: 30%;
+  height: 1px;
+  display: block;
+  margin-top: 48px;
+  margin-right: 60px;
   float: right;
-  border:1px solid black;
 }
-@media (min-width: 992px) {
-  .square-push-left {
-    padding-left: 80px;
-  }
-}
-.square-double {
-  float: right;
-  width: 540px;
-}
-
 /* Colors */
 .blue {
   color: #0095cd !important;
@@ -280,4 +276,21 @@ footer .moreInfo ul li:before {
   margin-bottom: 35px
 }
 /* Our life */
-.
+.items {
+  margin-bottom: 60px;
+}
+.lookInside {
+  margin-bottom: 60px;
+}
+.lookInside .link {
+  line-height: 6;
+  float: right;
+}
+.ourLife .hero {
+  padding-right: 60px;
+}
+@media (min-width: 764px){
+  .ourLife .link{
+    padding-right: 60px;
+  }
+}
