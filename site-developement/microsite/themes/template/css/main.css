@@ -125,29 +125,64 @@ div.cover{
   border-color: rgba(221,221,221,.7);
 }
 
+/* Section advantages (130px) */
+#advantages {
+  margin-bottom: 130px;
+  border-top: 5px solid #0095cd;
+}
+
 /* Section news */
-#news > .row {
+#news {
+  background-color: #f2f2f2;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#news > .container > .row {
   padding-top: 65px;
   padding-bottom: 65px;
-  background-color: #f2f2f2;
 }
 
 .news-item {
+  padding-top: 20px;
   border-top: 8px solid #dbdbdb;
 }
 
-@media (min-width: 768px) {
+.news-item > span {
+  color: #A9A9A9;
+  text-transform: capitalize;
+}
 
-  #news > .row > .col-sm-6:last-child {
-    border-left: 2px solid #e6e6e6;
-  }
-  
-  #news > .row > .col-sm-6:first-child {
+.news-item > h2 {
+  margin-top: 15px;
+  color: #222;
+}
+
+.news-item > p {
+  color: #777;
+}
+
+.big-news-item h2 {
+  font-size: 36px;
+}
+
+.small-news-item {
+  margin-bottom: 15px;
+}
+
+.small-news-item h2 {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
+ 
+  #news > .container > .row > .col-sm-6:first-child {
     padding-left: 30px;
     padding-right: 55px;
   }
   
-  #news > .row > .col-sm-6:last-child {
+  #news > .container > .row > .col-sm-6:last-child {
+    border-left: 2px solid #e6e6e6;
     padding-left: 55px;
     padding-right: 30px;
   }
@@ -156,12 +191,12 @@ div.cover{
 
 @media (min-width: 992px) {
 
-  .small-news-items .news-item:nth-child(odd) {
+  .small-news-item:nth-child(odd) {
     width: 47%;
     margin-right: 3%;
   }
   
-  .small-news-items .news-item:nth-child(even) {
+  .small-news-item:nth-child(even) {
     width: 47%;
     margin-left: 3%;
   }
@@ -224,7 +259,8 @@ footer .address .arrow {
 
 footer .address .viewIt {
   padding-left: 30px;
-  font-size: 90%;
+  font-size: 80%;
+  -webkit-font-smoothing: antialiased;
   color: #FFF;  
 }
 
