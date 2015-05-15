@@ -25,7 +25,7 @@ p {
 }
 
 .item {
-  height: 200px;
+  height: 250px;
   background-color: #ddd;
   padding: 0;
 }
@@ -369,7 +369,7 @@ footer .moreInfo ul li:before {
 /* Our life */
 
 .lookInside .link {
-  line-height: 6;
+  margin: 20px 0;
   float: right;
 }
 
