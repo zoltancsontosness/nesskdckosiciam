@@ -154,9 +154,26 @@ div.cover{
   margin-bottom: 30px;
 }
 
+/* Section about */
+#about {
+  margin-top: 130px;
+}                   
+
+#about p {
+  margin-top: 45px;
+  font-size: 18px;
+  text-align: justify;
+  color: #777;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #about p {
+    margin-top: 20px;
+  }
+}
+
 /* Section advantages */
 #advantages {
-  margin-bottom: 130px;
   border-top: 5px solid #0095cd;
 }
 

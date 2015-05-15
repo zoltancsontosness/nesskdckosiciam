@@ -1,6 +1,7 @@
 <ion:partial view="header" />
 
     <div class="container">
+<ion:partial view="about" />
 <ion:partial view="stories" />
 <ion:partial view="advantages" />
 <ion:partial view="ourLife" />
