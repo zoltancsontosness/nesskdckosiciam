@@ -8,15 +8,36 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+p {
+  margin: 0 0 35px;
+}
+.gutter-bottom {
+  margin-bottom: 130px;
+}
 
 .hero {
   font-size: 56px;
+  font-weight: 900;
+}
+
+.items {
+  margin-bottom: 60px;
 }
 
 .item {
   height: 200px;
   background-color: #ddd;
   padding: 0;
+}
+.item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.link{
+  font-weight: 900;
+  text-decoration: underline;
 }
 
 span.border {
@@ -330,7 +351,7 @@ footer .moreInfo ul li:before {
 /* Oportunity */
 .oportunity {
   border-top: 5px solid #0095cd;
-  padding: 75px 0;
+  padding: 75px 0 0;
 }
 
 .oportunity h1 {
@@ -346,31 +367,30 @@ footer .moreInfo ul li:before {
 }
 
 /* Our life */
-.items {
-  margin-bottom: 60px;
-}
-
-.lookInside {
-  margin-bottom: 125px;
-}
 
 .lookInside .link {
   line-height: 6;
   float: right;
 }
 
-.ourLife .hero {
+#ourLife .hero {
   padding-right: 60px;
-  font-weight: 900;
 }
+
 @media (min-width: 764px){
-  .ourLife .link{
+  #ourLife .link{
     padding-right: 60px;
   }
 }
 
-.ourLife img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+
+/* Stories */
+#stories .hero {
+  padding-left: 60px;
+}
+
+#stories span.border{
+  margin-top: 48px;
+  margin-left: 60px;
+  float: left;
 }
