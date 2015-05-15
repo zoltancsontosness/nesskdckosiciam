@@ -1,4 +1,4 @@
-    <section id="advantages" class="row">
+    <section id="advantages" class="gutter-bottom row">
       <ion:articles limit="3" type="advantages">
         <ion:article>
           <div class="col-sm-4">

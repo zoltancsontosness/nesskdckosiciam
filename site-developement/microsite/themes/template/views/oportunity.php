@@ -1,4 +1,4 @@
-<section id="oportunity">
+<section id="oportunity" class="gutter-bottom">
 	<div class="row">
 		<div class="col-xs-12 col-md-8">
 			<div class="oportunity clearfix">
