@@ -26,8 +26,8 @@
       
       <!-- Copyright and links -->
       <div class="row links copyright">
-        <div class="col-md-6">&copy; 2015 Ness Technologies. All Rights Reserved <a href="#">Legal & Privacy</a></div>
-        <div class="col-md-6">
+        <div class="col-sm-6 col-md-8">&copy; 2015 Ness Technologies. All Rights Reserved <a href="#">Legal & Privacy</a></div>
+        <div class="col-sm-6 col-md-4">
     	  <div class="socialBlock">
     	    <a href="https://www.facebook.com/NessTechnologies" target="_blank"><img src="<ion:theme_url/>img/facebook-icon-small.png"></a>
     		<a href="#" target="_blank"><img src="<ion:theme_url/>img/twitter-icon-small.png"></a>
