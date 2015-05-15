@@ -6,6 +6,7 @@
 					<div class="row">
 						<ion:medias type="picture" range="1,4" size="360,360" method="adaptive">
 							<div class="item col-xs-6 col-sm-3">
+								<div class="overlay overlay-<ion:media:description />"></div>
 								<img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
 							</div>
 						</ion:medias>
@@ -13,6 +14,7 @@
 					<div class="row">
 						<ion:medias type="picture" range="5,6" size="360,360" method="adaptive">
 							<div class="item col-xs-6 col-sm-3">
+								<div class="overlay overlay-<ion:media:description />"></div>
 								<img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
 							</div>
 						</ion:medias>

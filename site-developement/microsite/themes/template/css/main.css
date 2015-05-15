@@ -10,6 +10,8 @@ body {
 }
 p {
   margin: 0 0 35px;
+  color: #777;
+  font-size: 18px;
 }
 .gutter-bottom {
   margin-bottom: 130px;
@@ -30,6 +32,7 @@ p {
 }
 
 .link{
+  font-size: 18px;
   font-weight: 900;
   text-decoration: underline;
 }
@@ -146,6 +149,7 @@ div.cover{
 
 .perex {
   margin-bottom: 30px;
+  color: #fff;
 }
 
 /* Section about */
@@ -380,7 +384,7 @@ footer .moreInfo ul li:before {
 /* Our life */
 
 .lookInside .link {
-  margin: 20px 0;
+  margin: 45px 0;
   float: right;
 }
 
@@ -395,14 +399,44 @@ footer .moreInfo ul li:before {
   }
 }
 
-
 /* Stories */
 #stories .hero {
+  margin-top: 60px;
   padding-left: 60px;
 }
 
-#stories span.border{
-  margin-top: 48px;
+#stories span.border {
   margin-left: 60px;
   float: left;
+}
+
+/* Overlays */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay.overlay-orange {
+  background-color: rgba(255,138,0,.75);
+}
+
+.overlay.overlay-azure {
+  background-color: rgba(59,188,220,.75);
+}
+
+.overlay.overlay-blue {
+  background-color: rgba(36,93,171,.75);
+}
+
+.overlay.overlay-red {
+  background-color: rgba(151,47,60,.75);
+}
+
+.overlay.overlay-green {
+  background-color: rgba(126,214,120,.75);
+}
+
+.overlay.overlay-yellow {
+  background-color: rgba(245,255,139,.75);
 }
