@@ -1,0 +1,156 @@
+<?php
+
+// legal URL: /computers.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 262258,
+  8 => 1431696176,
+  9 => 1431696177,
+  10 => 1431696176,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 262258,
+  'atime' => 1431696176,
+  'mtime' => 1431696177,
+  'ctime' => 1431696176,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/png',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 262258,
+    'filename' => 'computers.png',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/computers.png',
+    'avdataoffset' => 0,
+    'avdataend' => 262258,
+    'fileformat' => 'png',
+    'video' => 
+    array (
+      'dataformat' => 'png',
+      'lossless' => false,
+      'resolution_x' => 483,
+      'resolution_y' => 327,
+      'bits_per_sample' => 32,
+      'compression_ratio' => 0.415120203113820973594982888243976049125194549560546875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/png',
+    'png' => 
+    array (
+      'IHDR' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 13,
+          'type_text' => 'IHDR',
+          'type_raw' => 1229472850,
+          'data' => '' . "\0" . '' . "\0" . 'ã' . "\0" . '' . "\0" . 'G' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 2465866944,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+        ),
+        'width' => 483,
+        'height' => 327,
+        'raw' => 
+        array (
+          'bit_depth' => 8,
+          'color_type' => 6,
+          'compression_method' => 0,
+          'filter_method' => 0,
+          'interlace_method' => 0,
+        ),
+        'compression_method_text' => 'deflate/inflate',
+        'color_type' => 
+        array (
+          'palette' => false,
+          'true_color' => true,
+          'alpha' => true,
+        ),
+      ),
+      'IDAT' => 
+      array (
+        0 => 
+        array (
+          'header' => 
+          array (
+            'data_length' => 7877,
+            'type_text' => 'IDAT',
+            'type_raw' => 1229209940,
+            'crc' => 1899119094,
+            'flags' => 
+            array (
+              'ancilliary' => false,
+              'private' => false,
+              'reserved' => false,
+              'safe_to_copy' => false,
+            ),
+          ),
+        ),
+      ),
+      'IEND' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 0,
+          'type_text' => 'IEND',
+          'type_raw' => 1229278788,
+          'crc' => 2923585666,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+          'data' => '',
+        ),
+      ),
+      'encoding' => 'UTF-8',
+    ),
+  ),
+  'mime_type from file extension' => 'image/png',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/03/fa/a9e2_computers45fe8aa9d949016aba988038-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 483,
+    1 => 327,
+    2 => 3,
+    3 => 'width="483" height="327"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/03/fa/a9e2_computers45fe8aa9d949016aba988038-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 81,
+    2 => 3,
+    3 => 'width="120" height="81"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);
