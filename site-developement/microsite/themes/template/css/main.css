@@ -365,6 +365,10 @@ footer .moreInfo ul li:before {
   content: "\2023 \0020";
 }
 
+footer .socialBlock {
+  
+}
+
 /* Oportunity */
 .oportunity {
   border-top: 5px solid #0095cd;
