@@ -27,17 +27,35 @@
 					</div>
 				</div>
 			</div>
+		</ion:article>
+	</ion:articles>
+
+	<ion:articles type="labs">
+		<ion:article>
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-4">
+				<div class="col-xs-12 col-sm-12 col-md-5">
 					<p>
 						<ion:article:content />
 					</p>
 					<a href="#" class="link"><ion:article:subtitle /></a>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-4">
-					
+				<div class="logos col-xs-12 col-sm-12 col-md-5 col-md-offset-1">
+					<div class="row">
+						<ion:medias type="picture" range="1,4">
+							<div class="logo col-xs-6 col-sm-3">
+								<img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
+							</div>
+						</ion:medias>
+					</div>
+					<div class="row">
+						<ion:medias type="picture" range="5,8">
+							<div class="logo col-xs-6 col-sm-3">
+								<img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
+							</div>
+						</ion:medias>
+					</div>
 				</div>
-			</div>	
+			</div>
 		</ion:article>
-	</ion:articles>
+	</ion:articles>	
 </section>
