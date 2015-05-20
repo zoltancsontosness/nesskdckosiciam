@@ -4,7 +4,7 @@
 <ion:partial view="about" />
 <ion:partial view="stories" />
 <ion:partial view="advantages" />
-<ion:partial view="ourLife" />
+<ion:partial view="ourlife" />
 <ion:partial view="oportunity" />
     </div>
 

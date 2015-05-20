@@ -1,6 +1,6 @@
 <?php
 
-// legal URL: /architect.png
+// legal URL: /perform.png
 
 $statdata = array (
   0 => 2,
@@ -10,10 +10,10 @@ $statdata = array (
   4 => 0,
   5 => 0,
   6 => 2,
-  7 => 456743,
-  8 => 1431700222,
-  9 => 1431700225,
-  10 => 1431700222,
+  7 => 8699,
+  8 => 1431946009,
+  9 => 1431946009,
+  10 => 1431946009,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -23,10 +23,10 @@ $statdata = array (
   'uid' => 0,
   'gid' => 0,
   'rdev' => 2,
-  'size' => 456743,
-  'atime' => 1431700222,
-  'mtime' => 1431700225,
-  'ctime' => 1431700222,
+  'size' => 8699,
+  'atime' => 1431946009,
+  'mtime' => 1431946009,
+  'ctime' => 1431946009,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -36,21 +36,21 @@ $data = array (
   'analysis' => 
   array (
     'GETID3_VERSION' => '1.9.3-20111213',
-    'filesize' => 456743,
-    'filename' => 'architect.png',
+    'filesize' => 8699,
+    'filename' => 'perform.png',
     'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files',
-    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/architect.png',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/perform.png',
     'avdataoffset' => 0,
-    'avdataend' => 456743,
+    'avdataend' => 8699,
     'fileformat' => 'png',
     'video' => 
     array (
       'dataformat' => 'png',
       'lossless' => false,
-      'resolution_x' => 717,
-      'resolution_y' => 477,
+      'resolution_x' => 160,
+      'resolution_y' => 101,
       'bits_per_sample' => 32,
-      'compression_ratio' => 0.333867675996830481910393473299336619675159454345703125,
+      'compression_ratio' => 0.13457611386138612630247735069133341312408447265625,
     ),
     'encoding' => 'UTF-8',
     'mime_type' => 'image/png',
@@ -63,8 +63,8 @@ $data = array (
           'data_length' => 13,
           'type_text' => 'IHDR',
           'type_raw' => 1229472850,
-          'data' => '' . "\0" . '' . "\0" . 'Í' . "\0" . '' . "\0" . 'Ý' . "\0" . '' . "\0" . '' . "\0" . '',
-          'crc' => 3866182791,
+          'data' => '' . "\0" . '' . "\0" . '' . "\0" . ' ' . "\0" . '' . "\0" . '' . "\0" . 'e' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 3404392490,
           'flags' => 
           array (
             'ancilliary' => false,
@@ -73,8 +73,8 @@ $data = array (
             'safe_to_copy' => false,
           ),
         ),
-        'width' => 717,
-        'height' => 477,
+        'width' => 160,
+        'height' => 101,
         'raw' => 
         array (
           'bit_depth' => 8,
@@ -97,10 +97,10 @@ $data = array (
         array (
           'header' => 
           array (
-            'data_length' => 5466,
+            'data_length' => 438,
             'type_text' => 'IDAT',
             'type_raw' => 1229209940,
-            'crc' => 1924164525,
+            'crc' => 4238133432,
             'flags' => 
             array (
               'ancilliary' => false,
@@ -133,23 +133,23 @@ $data = array (
     ),
   ),
   'mime_type from file extension' => 'image/png',
-  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/96/ec/18a3_architect20fe14a97bde78203da2daa7-500x500.png',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/e3/4d/a1a4_perform8c873d5bd9b1ad1250b9782a-500x500.png',
   'thumb250_info' => 
   array (
-    0 => 500,
-    1 => 333,
+    0 => 160,
+    1 => 101,
     2 => 3,
-    3 => 'width="500" height="333"',
+    3 => 'width="160" height="101"',
     'bits' => 8,
     'mime' => 'image/png',
   ),
-  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/96/ec/18a3_architect20fe14a97bde78203da2daa7-120x120.png',
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/e3/4d/a1a4_perform8c873d5bd9b1ad1250b9782a-120x120.png',
   'thumb48_info' => 
   array (
     0 => 120,
-    1 => 80,
+    1 => 76,
     2 => 3,
-    3 => 'width="120" height="80"',
+    3 => 'width="120" height="76"',
     'bits' => 8,
     'mime' => 'image/png',
   ),
