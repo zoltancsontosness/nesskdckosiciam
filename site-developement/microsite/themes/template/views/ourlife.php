@@ -1,4 +1,4 @@
-<section id="ourLife" class="gutter-bottom">
+<section id="ourlife" class="gutter-bottom">
 	<ion:articles type="ourlife">
 		<ion:article>
 			<div class="items row">

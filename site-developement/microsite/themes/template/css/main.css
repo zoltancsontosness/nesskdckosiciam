@@ -97,11 +97,19 @@ header {
   margin-right: -15px;
 }
 
-header .navigation {
+header .navigation-home {
   position: absolute;
   z-index: 999;
   top: 15px;
   width: 100%;
+  text-align: center;
+}
+
+header .navigation {
+  background-color: #0095cd;
+  line-height: 30px;
+  padding: 10px 0;
+  min-height: 60px;
   text-align: center;
 }
 
@@ -282,97 +290,163 @@ div.cover{
 
 /* Footer */
 footer {
-  color: #A9A9A9;
-  background-color: #222;	  
-}
-
-footer .row {
-  background-color: #222;;  
+  margin-left: -15px;
+  margin-right: -15px;
+  color: #FFF;	  
 }
 
 footer .contact {
+  background-color: #333;
+}
+
+@media (min-width: 768px) {
+  footer .contact {
+    height: 380px;
+  }
+}
+
+footer .map {
+  height: 380px;
   background: url("../img/map.png");
   background-repeat: no-repeat;
   background-position: right;
-  color: #FFF;
-}
-
-@media (max-width: 767px) {
-  footer .contact {
-    padding-top: 45px;
-    padding-bottom: 45px;  
-  }
 }
 
 footer .address {
   display: block;
-  position: relative;
+  position: absolute;
+  top: 65px;
+  font-size: 24px;
   font-weight: bold;
-  width: 190px;
+  width: 340px;
+  height: 250px;
   padding: 15px;
   background-color: #0095cd;  
-}
-
-@media (min-width: 768px) {
-  footer .address {
-    margin: 45px auto;  
-  }
-}
-
-@media (max-width: 767px) {
-  footer .address {
-    margin-left: 15px;  
-  }
 }
 
 footer .address .arrow {
   display: block;
   position: absolute;
+  width: 50px;
+  height: 50px; 
   left: 0;
   bottom: 0;
+  font-size: 80%;
+  text-align: center;
+  padding: 12px 0px;
   background-color: #26a5d4;
-  padding: 15px;    
+    
 }
 
 footer .address .viewIt {
-  padding-left: 30px;
+  display: block;
+  position: absolute;
+  left: 60px;
+  bottom: 0; 
   font-size: 80%;
+  line-height: 52px;
   -webkit-font-smoothing: antialiased;
   color: #FFF;  
 }
 
-footer .copyright {
-  padding-top: 20px;
-}
 
-footer .links .col-md-6 {
-  margin-bottom: 20px;
-  text-align: center;
-}
 
-@media (min-width: 992px) {
-  footer .links .col-md-6 {
-    line-height: 52px;
+@media (max-width: 767px) {
+  footer .address {
+    left: 30px;
   }
 }
 
-footer .links a {
-  color: #FFF;
-  text-decoration: underline;
+@media (min-width: 768px) {
+  footer .address {
+    right: 120px;
+  }
 }
 
-footer .moreInfo {
-  width: 150px;
-  margin: 50px auto;
+@media (min-width: 992px) {
+  footer .address {
+    right: 260px;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer .address {
+    right: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .links {
+    height: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .moreInfo {
+    margin: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .moreInfo {
+    margin-top: 100px;
+    margin-left: 20%;
+  }
+}
+
+
+footer .moreInfo h4 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 9px;
+  padding-bottom: 7px;
 }
 
 footer .moreInfo ul {
   padding-left: 0px;
   list-style: none;
+  font-size: 16px;
+}
+
+footer .moreInfo ul li {
+  padding-bottom: 5px;
 }
 
 footer .moreInfo ul li:before {
   content: "\2023 \0020";
+}
+
+footer .copyright {
+  background-color: #222;
+}
+
+footer .socialBlock img {
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  footer .copyright {
+    text-align: center;
+  }
+  
+  footer .container {
+    padding: 30px;
+  }
+  
+  footer .socialBlock img {
+    margin-top: 30px;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  footer .copyright {
+    line-height: 150px;
+  }
+  
+  footer .socialBlock {
+    float: right;
+  }
 }
 
 /* Oportunity */
@@ -400,13 +474,13 @@ footer .moreInfo ul li:before {
   float: right;
 }
 
-#ourLife .hero {
+#ourlife .hero {
   margin-top: 60px;
   padding-right: 60px;
 }
 
 @media (min-width: 764px){
-  #ourLife .link{
+  #ourlife .link{
     padding-right: 60px;
   }
 }
@@ -460,3 +534,12 @@ footer .moreInfo ul li:before {
 .overlay.overlay-yellow {
   background-color: rgba(245,255,139,.75);
 }
+
+/* ======= PAGE SPECIFIC RULES ======= */
+
+/* PAGE /about-us */
+#about.about-us {
+  margin: 80px 0;
+}
+
+/* PAGE /succes-stories */
