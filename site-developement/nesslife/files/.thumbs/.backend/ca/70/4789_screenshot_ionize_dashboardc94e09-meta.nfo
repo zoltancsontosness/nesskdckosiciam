@@ -1,0 +1,110 @@
+<?php
+
+// legal URL: /screenshot_ionize_dashboard.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 200930,
+  8 => 1432120339,
+  9 => 1407617886,
+  10 => 1432120339,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 200930,
+  'atime' => 1432120339,
+  'mtime' => 1407617886,
+  'ctime' => 1432120339,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 200930,
+    'filename' => 'screenshot_ionize_dashboard.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/nesslife/files',
+    'filenamepath' => 'C:/softy/xampp/htdocs/nesslife/files/screenshot_ionize_dashboard.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 200930,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1245,
+      'resolution_y' => 727,
+      'compression_ratio' => 0.073997963426378599027799509713076986372470855712890625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+    'jpg' => 
+    array (
+      'exif' => 
+      array (
+        'FILE' => 
+        array (
+          'FileName' => 'screenshot_ionize_dashboard.jpg',
+          'FileDateTime' => 1407617886,
+          'FileSize' => 200930,
+          'FileType' => 2,
+          'MimeType' => 'image/jpeg',
+          'SectionsFound' => 'IFD0, APP12',
+        ),
+        'COMPUTED' => 
+        array (
+          'html' => 'width="1245" height="727"',
+          'Height' => 727,
+          'Width' => 1245,
+          'IsColor' => 1,
+          'ByteOrderMotorola' => 0,
+        ),
+        'APP12' => 
+        array (
+          'Company' => 'Ducky',
+          'Info' => '',
+        ),
+      ),
+    ),
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesslife/files/.thumbs/.backend/ca/70/4789_screenshot_ionize_dashboardc94e09-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 292,
+    2 => 2,
+    3 => 'width="500" height="292"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesslife/files/.thumbs/.backend/ca/70/4789_screenshot_ionize_dashboardc94e09-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 70,
+    2 => 2,
+    3 => 'width="120" height="70"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
