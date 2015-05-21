@@ -29,7 +29,7 @@
       <div class="container-fluid copyright">
         <div class="container">
           <div class="col-sm-8">
-            &copy; 2015 Ness Technologies. All Rights Reserved <a href="#">Legal & Privacy</a>
+            &copy; 2015 Ness KDC. All Rights Reserved <a href="#">Legal & Privacy</a>
           </div>
           <div class="col-sm-4">
             <div class="socialBlock">
