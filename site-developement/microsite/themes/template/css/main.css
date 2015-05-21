@@ -97,11 +97,19 @@ header {
   margin-right: -15px;
 }
 
-header .navigation {
+header .navigation-home {
   position: absolute;
   z-index: 999;
   top: 15px;
   width: 100%;
+  text-align: center;
+}
+
+header .navigation {
+  background-color: #0095cd;
+  line-height: 30px;
+  padding: 10px 0;
+  min-height: 60px;
   text-align: center;
 }
 
@@ -526,3 +534,12 @@ footer .socialBlock img {
 .overlay.overlay-yellow {
   background-color: rgba(245,255,139,.75);
 }
+
+/* ======= PAGE SPECIFIC RULES ======= */
+
+/* PAGE /about-us */
+#about.about-us {
+  margin: 80px 0;
+}
+
+/* PAGE /succes-stories */

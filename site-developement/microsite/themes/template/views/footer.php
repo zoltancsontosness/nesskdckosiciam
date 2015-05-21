@@ -46,13 +46,15 @@
 <script type="text/javascript" src="<ion:theme_url />js/camera.min.js"></script> 
 
 <script>
-  $('.camera_wrap').camera({
-    navigation: false,
-  	loader: 'none',
-  	pagination: false,
-  	playPause: false,
-  	height: '430px'
-  });
+  if ($('.camera_wrap').length) {
+    $('.camera_wrap').camera({
+      navigation: false,
+  	  loader: 'none',
+  	  pagination: false,
+  	  playPause: false,
+  	  height: '430px'
+    });
+  }
 </script>
 
 </body>
