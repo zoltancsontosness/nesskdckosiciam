@@ -474,13 +474,13 @@ footer .socialBlock img {
   float: right;
 }
 
-#ourLife .hero {
+#ourlife .hero {
   margin-top: 60px;
   padding-right: 60px;
 }
 
 @media (min-width: 764px){
-  #ourLife .link{
+  #ourlife .link{
     padding-right: 60px;
   }
 }
