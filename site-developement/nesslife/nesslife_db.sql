@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Št 21.Máj 2015, 16:18
+-- Čas generovania: Pi 22.Máj 2015, 15:52
 -- Verzia serveru: 5.6.21
 -- Verzia PHP: 5.6.3
 
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `flag` smallint(1) DEFAULT '0',
   `has_url` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `priority` smallint(1) unsigned NOT NULL DEFAULT '5'
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article`
@@ -89,7 +89,14 @@ INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `pu
 (3, '403', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
 (4, 'welcome', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
 (5, 'oznam-cafeteria', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-20 15:20:14', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-20 15:20:52', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(6, 'dobrovonicky-de-v-oaze', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-20 15:22:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-20 15:23:14', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
+(6, 'dobrovonicky-de-v-oaze', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-20 15:22:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-20 15:23:14', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(7, 'timesheets', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 11:42:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 11:46:36', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(8, 'garaz-na-bicykle', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 11:48:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 11:48:47', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(9, 'special-referral-fee', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 12:14:53', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 12:15:16', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(10, 'front-end-javascript-developer', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 13:03:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 13:05:04', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(11, 'c-senior-developer', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 13:05:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 13:23:27', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(12, 'oracle-database-specialist', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 13:07:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 13:07:33', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(13, 'python-developer', 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 13:22:39', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 13:23:15', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -101,6 +108,15 @@ CREATE TABLE IF NOT EXISTS `article_category` (
   `id_article` int(11) unsigned NOT NULL,
   `id_category` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `article_category`
+--
+
+INSERT INTO `article_category` (`id_article`, `id_category`) VALUES
+(7, 2),
+(8, 5),
+(9, 4);
 
 -- --------------------------------------------------------
 
@@ -151,7 +167,14 @@ INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `m
 (3, 'sk', '403', '403', 'Forbidden', NULL, '<p>This content is forbidden.</p>', NULL, NULL, 1),
 (4, 'sk', 'welcome', 'Welcome', NULL, NULL, '<p>For more information about building a website with Ionize, you can:</p> <ul><li>Download & read <a href="http://www.ionizecms.com">the Documentation</a></li><li>Visit <a href="http://www.ionizecms.com/forum">the Community Forum</a></li></ul><p>Have fun !</p>', NULL, NULL, 1),
 (5, 'sk', 'oznam-cafeteria', 'Oznam: Cafeteria', '', '', '', '', '', 1),
-(6, 'sk', 'dobrovonicky-de-v-oaze', 'Dobrovoľnícky deň v Oáze', '', '', '', '', '', 1);
+(6, 'sk', 'dobrovonicky-de-v-oaze', 'Dobrovoľnícky deň v Oáze', '', '', '', '', '', 1),
+(7, 'sk', 'timesheets', 'TIMESHEETS', '', '', '<p>Vyplň a releasni si svoj TMSH za obdobie 1.5.2015- 15.5.2015 /vrátane/ najneskôr 15.5.2015 do 10:00 hod</p>', '', '', 1),
+(8, 'sk', 'garaz-na-bicykle', 'Garáž na bicykle', '', '', '<p>Zajtra t.j. 22.5.2015 prebehne vymena zamku na garazi kde sa odkladaju bicykle. Preto Vas poprosim, aby ste bicykle nedavali do garaze, je mozne si ich vziat do priestorov NESS KDC.</p>', '', '', 1),
+(9, 'sk', 'special-referral-fee', 'SPECIAL REFERRAL FEE', '', '', '<p>Pošli nám tip na skúsených developerov a získaj atraktívnu odmenu - LEN DO KONCA MÁJA!</p>', '', '', 1),
+(10, 'sk', 'front-end-javascript-developer', 'Front End Javascript Developer', '', '', '', '', '', 1),
+(11, 'sk', 'c-senior-developer', 'c# Senior Developer', '', '', '', '', '', 1),
+(12, 'sk', 'oracle-database-specialist', 'Oracle Database Specialist', '', '', '', '', '', 1),
+(13, 'sk', 'python-developer', 'Python Junior Developer', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -174,7 +197,11 @@ CREATE TABLE IF NOT EXISTS `article_media` (
 
 INSERT INTO `article_media` (`id_article`, `id_media`, `online`, `ordering`, `url`, `lang_display`) VALUES
 (5, 1, 1, 1, NULL, NULL),
-(6, 2, 1, 1, NULL, NULL);
+(6, 2, 1, 1, NULL, NULL),
+(10, 3, 1, 1, NULL, NULL),
+(11, 4, 1, 1, NULL, NULL),
+(12, 5, 1, 1, NULL, NULL),
+(13, 6, 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -225,7 +252,18 @@ CREATE TABLE IF NOT EXISTS `category` (
 `id_category` int(11) unsigned NOT NULL,
   `name` varchar(50) NOT NULL,
   `ordering` int(11) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `category`
+--
+
+INSERT INTO `category` (`id_category`, `name`, `ordering`) VALUES
+(1, 'hr', 0),
+(2, 'reception', 0),
+(3, 'ito', 0),
+(4, 'recruitment', 0),
+(5, 'operations', 0);
 
 -- --------------------------------------------------------
 
@@ -240,6 +278,17 @@ CREATE TABLE IF NOT EXISTS `category_lang` (
   `subtitle` varchar(255) NOT NULL DEFAULT '',
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `category_lang`
+--
+
+INSERT INTO `category_lang` (`id_category`, `lang`, `title`, `subtitle`, `description`) VALUES
+(1, 'sk', 'HR', '', ''),
+(2, 'sk', 'Reception', '', ''),
+(3, 'sk', 'ITO', '', ''),
+(4, 'sk', 'Recruitment', '', ''),
+(5, 'sk', 'Operations', '', '');
 
 -- --------------------------------------------------------
 
@@ -514,7 +563,7 @@ CREATE TABLE IF NOT EXISTS `media` (
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Medium date',
   `link` varchar(255) DEFAULT NULL COMMENT 'Link to a resource, attached to this medium',
   `square_crop` enum('tl','m','br') NOT NULL DEFAULT 'm'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `media`
@@ -522,7 +571,11 @@ CREATE TABLE IF NOT EXISTS `media` (
 
 INSERT INTO `media` (`id_media`, `type`, `file_name`, `path`, `base_path`, `copyright`, `provider`, `date`, `link`, `square_crop`) VALUES
 (1, 'picture', 'oznam.jpg', 'files/slideshow/oznam.jpg', 'files/slideshow/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(2, 'picture', 'oaza.jpg', 'files/slideshow/oaza.jpg', 'files/slideshow/', NULL, '', '0000-00-00 00:00:00', NULL, 'm');
+(2, 'picture', 'oaza.jpg', 'files/slideshow/oaza.jpg', 'files/slideshow/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
+(3, 'picture', 'solar.png', 'files/projects/solar.png', 'files/projects/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
+(4, 'picture', 'vix.png', 'files/projects/vix.png', 'files/projects/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
+(5, 'picture', 'opera.png', 'files/projects/opera.png', 'files/projects/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
+(6, 'picture', 'tribal.png', 'files/projects/tribal.png', 'files/projects/', NULL, '', '0000-00-00 00:00:00', NULL, 'm');
 
 -- --------------------------------------------------------
 
@@ -625,7 +678,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
 --
 
 INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `category`, `title`, `content`, `read`) VALUES
-(1, '2015-05-20', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
+(1, '2015-05-22', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
 
 -- --------------------------------------------------------
 
@@ -666,7 +719,7 @@ CREATE TABLE IF NOT EXISTS `page` (
   `priority` int(1) unsigned NOT NULL DEFAULT '5' COMMENT 'Page priority',
   `used_by_module` tinyint(1) unsigned DEFAULT NULL,
   `deny_code` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `page`
@@ -676,17 +729,24 @@ INSERT INTO `page` (`id_page`, `id_parent`, `id_menu`, `id_type`, `id_subnav`, `
 (1, 0, 2, 0, 0, '404', 0, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
 (2, 0, 2, 0, 0, '401', 0, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
 (3, 0, 2, 0, 0, '403', 0, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
-(4, 0, 1, 0, 0, 'home', 0, 0, 1, 1, NULL, 'marek.boros@ness.com', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-20 15:37:47', '0000-00-00 00:00:00', 1, 1, 'page_home', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(5, 0, 1, 0, 0, 'hr', 1, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 14:47:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(6, 5, 1, 0, 0, 'nas-tim', 2, 1, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 14:51:42', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(4, 0, 1, 0, 0, 'home', 1, 0, 1, 1, NULL, 'marek.boros@ness.com', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-20 15:37:47', '0000-00-00 00:00:00', 1, 1, 'page_home', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(5, 15, 1, 0, 0, 'hr', 3, 1, 1, 0, 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-20 14:47:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:34:02', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(6, 5, 1, 0, 0, 'nas-tim', 2, 2, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 14:51:42', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (7, 0, 2, 0, 0, 'slideshow', 1, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:18:41', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(8, 0, 1, 0, 0, 'recruitment', 3, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(9, 0, 1, 0, 0, 'operations', 4, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:16', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(10, 0, 1, 0, 0, 'forum', 5, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:33', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(11, 0, 1, 0, 0, 'aj-ty', 6, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(12, 0, 1, 0, 0, 'dokumenty', 7, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(13, 0, 1, 0, 0, 'galerie', 8, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:37:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(14, 0, 1, 0, 0, 'kontakt', 9, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:37:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL);
+(8, 15, 1, 0, 0, 'recruitment', 4, 1, 1, 0, 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-20 15:36:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:34:23', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(9, 15, 1, 0, 0, 'operations', 5, 1, 1, 0, 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-20 15:36:16', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:35:24', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(10, 0, 1, 0, 0, 'forum', 3, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:33', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(11, 0, 1, 0, 0, 'aj-ty', 4, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(12, 0, 1, 0, 0, 'dokumenty', 5, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:36:59', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(13, 0, 1, 0, 0, 'galerie', 6, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:37:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(14, 0, 1, 0, 0, 'kontakt', 8, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-20 15:37:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(15, 0, 1, 0, 0, 'backoffice', 2, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-22 10:33:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(16, 15, 1, 0, 0, 'finance', 11, 1, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-22 10:36:05', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(17, 9, 1, 0, 0, 'reception', 12, 2, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-22 11:24:09', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(18, 9, 1, 0, 0, 'travel', 13, 2, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-22 11:24:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(19, 9, 1, 0, 0, 'ito', 14, 2, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-22 11:24:40', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(20, 8, 1, 0, 0, 'vone-pozicie', 15, 2, 1, 0, 'marek.boros@ness.com', 'marek.boros@ness.com', '2015-05-22 11:31:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 13:08:14', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(21, 0, 1, 0, 0, 'news', 7, 0, 1, 0, 'marek.boros@ness.com', NULL, '2015-05-22 11:34:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -717,7 +777,14 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (3, 3, 1, NULL, 0, NULL, '', '', '', 0),
 (4, 4, 1, NULL, 0, NULL, '', '', '', 0),
 (7, 5, 1, NULL, 2, NULL, '', '', '', 1),
-(7, 6, 1, NULL, 1, NULL, '', '', '', 1);
+(7, 6, 1, NULL, 1, NULL, '', '', '', 1),
+(20, 10, 1, NULL, 3, NULL, '', '', '', 1),
+(20, 11, 1, NULL, 2, NULL, '', '', '', 1),
+(20, 12, 1, NULL, 1, NULL, '', '', '', 1),
+(20, 13, 1, NULL, 4, NULL, '', '', '', 1),
+(21, 7, 1, NULL, 3, NULL, '', '', '', 1),
+(21, 8, 1, NULL, 2, NULL, '', '', '', 1),
+(21, 9, 1, NULL, 1, NULL, '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -749,16 +816,23 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 2, '401', '', '401', 'Login needed', '', '', NULL, NULL, NULL, 1),
 ('sk', 3, '403', '', '403', 'Forbidden', '', '', NULL, NULL, NULL, 1),
 ('sk', 4, 'home', '', 'Home', '', '', '', '', '', '', 1),
-('sk', 5, 'hr', '', 'HR', '', '', '', '', NULL, NULL, 1),
+('sk', 5, 'hr', '', 'HR', '', '', '', '', '', '', 1),
 ('sk', 6, 'nas-tim', '', 'Náš tím', '', '', '', '', NULL, NULL, 1),
 ('sk', 7, 'slideshow', '', 'SlideShow', '', '', '', '', NULL, NULL, 1),
-('sk', 8, 'recruitment', '', 'Recruitment', '', '', '', '', NULL, NULL, 1),
-('sk', 9, 'operations', '', 'Operations', '', '', '', '', NULL, NULL, 1),
+('sk', 8, 'recruitment', '', 'Recruitment', '', '', '', '', '', '', 1),
+('sk', 9, 'operations', '', 'Operations', '', '', '', '', '', '', 1),
 ('sk', 10, 'forum', '', 'Fórum', '', '', '', '', NULL, NULL, 1),
 ('sk', 11, 'aj-ty', '', 'AJ:TY', '', '', '', '', NULL, NULL, 1),
 ('sk', 12, 'dokumenty', '', 'Dokumenty', '', '', '', '', NULL, NULL, 1),
 ('sk', 13, 'galerie', '', 'Galérie', '', '', '', '', NULL, NULL, 1),
-('sk', 14, 'kontakt', '', 'Kontakt', '', '', '', '', NULL, NULL, 1);
+('sk', 14, 'kontakt', '', 'Kontakt', '', '', '', '', NULL, NULL, 1),
+('sk', 15, 'backoffice', '', 'BackOffice', '', '', '', '', NULL, NULL, 1),
+('sk', 16, 'finance', '', 'Finance', '', '', '', '', NULL, NULL, 1),
+('sk', 17, 'reception', '', 'Reception', '', '', '', '', NULL, NULL, 1),
+('sk', 18, 'travel', '', 'Travel', '', '', '', '', NULL, NULL, 1),
+('sk', 19, 'ito', '', 'ITO', '', '', '', '', NULL, NULL, 1),
+('sk', 20, 'volne-pozicie', '', 'Voľné pozície', '', '', '', '', '', '', 1),
+('sk', 21, 'news', '', 'News', '', '', '', '', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1129,26 +1203,40 @@ CREATE TABLE IF NOT EXISTS `url` (
   `path_ids` varchar(50) DEFAULT NULL,
   `full_path_ids` varchar(50) DEFAULT NULL,
   `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `url`
 --
 
 INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`, `path`, `path_ids`, `full_path_ids`, `creation_date`) VALUES
-(1, 5, 'page', 1, 1, 'sk', 'hr', '5', '5', '2015-05-20 14:47:01'),
-(2, 6, 'page', 1, 1, 'sk', 'hr/nas-tim', '5/6', '5/6', '2015-05-20 14:51:42'),
 (4, 7, 'page', 1, 1, 'sk', 'slideshow', '7', '7', '2015-05-20 15:18:41'),
 (5, 5, 'article', 1, 1, 'sk', 'slideshow/oznam-cafeteria', '7/5', '7/5', '2015-05-20 15:20:14'),
 (6, 6, 'article', 1, 1, 'sk', 'slideshow/dobrovonicky-de-v-oaze', '7/6', '7/6', '2015-05-20 15:22:59'),
-(7, 8, 'page', 1, 1, 'sk', 'recruitment', '8', '8', '2015-05-20 15:36:03'),
-(8, 9, 'page', 1, 1, 'sk', 'operations', '9', '9', '2015-05-20 15:36:16'),
 (9, 10, 'page', 1, 1, 'sk', 'forum', '10', '10', '2015-05-20 15:36:33'),
 (10, 11, 'page', 1, 1, 'sk', 'aj-ty', '11', '11', '2015-05-20 15:36:49'),
 (11, 12, 'page', 1, 1, 'sk', 'dokumenty', '12', '12', '2015-05-20 15:36:59'),
 (12, 13, 'page', 1, 1, 'sk', 'galerie', '13', '13', '2015-05-20 15:37:08'),
 (13, 14, 'page', 1, 1, 'sk', 'kontakt', '14', '14', '2015-05-20 15:37:20'),
-(14, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-05-20 15:37:47');
+(14, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-05-20 15:37:47'),
+(15, 15, 'page', 1, 1, 'sk', 'backoffice', '15', '15', '2015-05-22 10:33:37'),
+(16, 5, 'page', 1, 1, 'sk', 'backoffice/hr', '15/5', '15/5', '2015-05-22 10:34:02'),
+(17, 6, 'page', 1, 1, 'sk', 'backoffice/hr/nas-tim', '15/5/6', '15/5/6', '2015-05-22 10:34:02'),
+(18, 8, 'page', 1, 1, 'sk', 'backoffice/recruitment', '15/8', '15/8', '2015-05-22 10:34:24'),
+(19, 9, 'page', 1, 1, 'sk', 'backoffice/operations', '15/9', '15/9', '2015-05-22 10:35:24'),
+(20, 16, 'page', 1, 1, 'sk', 'backoffice/finance', '15/16', '15/16', '2015-05-22 10:36:05'),
+(21, 17, 'page', 1, 1, 'sk', 'backoffice/operations/reception', '15/9/17', '15/9/17', '2015-05-22 11:24:09'),
+(22, 18, 'page', 1, 1, 'sk', 'backoffice/operations/travel', '15/9/18', '15/9/18', '2015-05-22 11:24:29'),
+(23, 19, 'page', 1, 1, 'sk', 'backoffice/operations/ito', '15/9/19', '15/9/19', '2015-05-22 11:24:40'),
+(25, 21, 'page', 1, 1, 'sk', 'news', '21', '21', '2015-05-22 11:34:11'),
+(26, 7, 'article', 1, 1, 'sk', 'news/timesheets', '21/7', '21/7', '2015-05-22 11:42:13'),
+(27, 8, 'article', 1, 1, 'sk', 'news/garaz-na-bicykle', '21/8', '21/8', '2015-05-22 11:48:11'),
+(28, 9, 'article', 1, 1, 'sk', 'news/special-referral-fee', '21/9', '21/9', '2015-05-22 12:14:53'),
+(32, 20, 'page', 1, 1, 'sk', 'backoffice/recruitment/volne-pozicie', '15/8/20', '15/8/20', '2015-05-22 13:08:14'),
+(33, 10, 'article', 1, 1, 'sk', 'backoffice/recruitment/volne-pozicie/front-end-javascript-developer', '15/8/20/10', '15/8/20/10', '2015-05-22 13:08:14'),
+(34, 11, 'article', 1, 1, 'sk', 'backoffice/recruitment/volne-pozicie/c-senior-developer', '15/8/20/11', '15/8/20/11', '2015-05-22 13:08:14'),
+(35, 12, 'article', 1, 1, 'sk', 'backoffice/recruitment/volne-pozicie/oracle-database-specialist', '15/8/20/12', '15/8/20/12', '2015-05-22 13:08:15'),
+(36, 13, 'article', 1, 1, 'sk', 'backoffice/recruitment/volne-pozicie/python-developer', '15/8/20/13', '15/8/20/13', '2015-05-22 13:22:40');
 
 -- --------------------------------------------------------
 
@@ -1177,7 +1265,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id_user`, `id_role`, `join_date`, `last_visit`, `username`, `screen_name`, `firstname`, `lastname`, `birthdate`, `gender`, `password`, `email`, `salt`) VALUES
-(1, 1, '2015-05-20 11:38:39', '2015-05-21 12:24:55', 'marek.boros@ness.com', 'Marek Boroš', 'Marek', 'Boroš', NULL, NULL, 'uxoJ4+mJ56BOiIS9DWv80bI=', 'marek.boros@ness.com', 'ce2eed574c662a0d');
+(1, 1, '2015-05-20 11:38:39', '2015-05-22 08:30:51', 'marek.boros@ness.com', 'Marek Boroš', 'Marek', 'Boroš', NULL, NULL, 'uxoJ4+mJ56BOiIS9DWv80bI=', 'marek.boros@ness.com', 'ce2eed574c662a0d');
 
 --
 -- Indexes for dumped tables
@@ -1489,7 +1577,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `article_comment`
 --
@@ -1509,7 +1597,7 @@ MODIFY `id_captcha` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-MODIFY `id_category` int(11) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id_category` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `element`
 --
@@ -1554,7 +1642,7 @@ MODIFY `id_item_definition` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
-MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `menu`
 --
@@ -1584,7 +1672,7 @@ MODIFY `id_notification` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT
 -- AUTO_INCREMENT for table `page`
 --
 ALTER TABLE `page`
-MODIFY `id_page` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id_page` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `resource`
 --
@@ -1619,7 +1707,7 @@ MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `url`
 --
 ALTER TABLE `url`
-MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `user`
 --
