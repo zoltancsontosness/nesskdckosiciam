@@ -11,9 +11,9 @@
         <h1 class="hero"><ion:article:title /></h1>
         <div class="row">
           <div class="col-md-8">
-            <ion:media:type is="picture"> 
+            <ion:medias:media size="750,342" type="picture" method="adaptive"> 
               <img src="<ion:media:src/>" class="img-responsive"> 
-            </ion:media:type>          
+            </ion:medias:media>          
             <h3><ion:article:subtitle /></h3> 
             <ion:article:content />
           </div>
