@@ -14,18 +14,16 @@
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<ion:theme_url/>assets/js/bootstrap.min.js"></script>
-    <!-- Camera slideshow -->
-    <link rel='stylesheet' id='camera-css'  href='<ion:theme_url/>assets/camera/css/camera.css' type='text/css' media='all'>
-    <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.min.js'></script>
-    <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.mobile.customized.min.js'></script>
-    <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.easing.1.3.js'></script> 
-    <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/camera.min.js'></script>
-    <!-- Lightbox -->
-    <script src="<ion:theme_url/>assets/lightbox/js/lightbox.min.js"></script>
-    <link href="<ion:theme_url/>assets/lightbox/css/lightbox.css" rel="stylesheet" />
+    <!-- Slider -->
+    <script src="<ion:theme_url/>assets/slider/js/jquery.event.move.js"></script>
+    <script src="<ion:theme_url/>assets/slider/js/responsive-slider.js"></script>
+    <link href="<ion:theme_url/>assets/slider/css/responsive-slider.css" rel="stylesheet" media="screen">
     <!-- Calendar -->
     <script src="<ion:theme_url/>assets/calendar/js/responsive-calendar.js"></script> 
     <link href="<ion:theme_url/>assets/calendar/css/responsive-calendar.css" rel="stylesheet">
+    <!-- Lightbox -->
+    <script src="<ion:theme_url/>assets/lightbox/js/lightbox.min.js"></script>
+    <link href="<ion:theme_url/>assets/lightbox/css/lightbox.css" rel="stylesheet" />
     <!-- Main CSS -->
     <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet">
   </head>
@@ -35,7 +33,7 @@
     <!-- Header -->
     <header class="row">
       <div class="col-sm-6 logo">
-        <a href="#"><img src="<ion:theme_url/>assets/images/nesslife-logo.png" alt="NESSlife"></a>
+        <a href="<ion:home_url />"><img src="<ion:theme_url/>assets/images/nesslife-logo.png" alt="NESSlife"></a>
       </div>
       <div class="col-sm-6 user">
         Logged in: <strong>user</strong><br><small>[<a href="#">Logout</a>]</small>

@@ -3,17 +3,27 @@
     <div class="row">
       <div class="col-sm-9 col-md-9">
         <ion:page id="slideshow">
-          <div class="camera_wrap camera_azure_skin" id="camera_wrap">
-            <ion:articles>
-              <ion:article>
-                <ion:media limit="1">
-                  <div data-src="<ion:media:src />" <!-- data-link="<ion:article:url />" -->>
-                    <div class="camera_caption fadeFromBottom"><ion:article:title /></div>
-                  </div>
-                </ion:media>
-              </ion:article>
-            </ion:articles>
-          </div><!-- /#camera_wrap_1 -->
+          <!-- RESPONSIVE SLIDER - START -->
+          <div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true" data-interval="5000" data-transitiontime="300">
+            <div class="slides" data-group="slides">
+              <ul>
+                <ion:articles>
+                  <ion:article>
+                    <ion:media limit="1">
+                      <li>
+                        <div class="slide-body" data-group="slide">
+                          <img src="<ion:media:src size="825, 330" method="adaptive" />">
+                        </div>
+                      </li>
+                    </ion:media>
+                  </ion:article>
+                </ion:articles>
+              </ul>
+            </div>
+            <a class="slider-control left" href="#" data-jump="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="slider-control right" href="#" data-jump="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+          <!-- RESPONSIVE SLIDER - END -->
         </ion:page>
       </div>
       <div class="col-sm-3 col-md-3 rightMenu">
@@ -26,33 +36,37 @@
         <a href="#" target="_blank" class="btn btn-blue">Služobná cesta</a>
       </div>
     </div><!-- /.row -->
-
-    <script>
-      jQuery('#camera_wrap').camera({
-        time: 2000,
-        height: '40%',
-        playPause: false,
-      	loader: 'none',
-      	pagination: false 
-      });
-    </script>
     
     <div class="row puzzle">
-      <div class="col-sm-4">
+      <div class="col-sm-4 news">
         <h2><span>News</span></h2>
-        <img src="<ion:theme_url/>assets/images/human-resources.jpg" alt="news">
-        <h4>TIMESHEETS</h4>
-        <p>
-          Blíži sa koniec mesiaca, nezabudnite vyplniť timesheety!
-        </p>
+        <ion:page id="news">
+          <ion:articles limit="3">
+            <ion:article>
+              <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+              <ion:article:date format="d/m/Y" tag="span" />
+              <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+              <ion:article:categories:list link="false" separator=" / " tag="span" />
+              <ion:article:content words="15" />
+            </ion:article>
+          </ion:articles>
+        </ion:page>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 positions">
         <h2><span>Recruitment</span></h2>
-        <img src="<ion:theme_url/>assets/images/manual-tester-vix.jpg" alt="news">
-        <h4>Manual Tester</h4>
-        <p>
-          VIX technology
-        </p>
+        <ion:page id="vone-pozicie">
+          <ion:articles limit="4">
+            <ion:article>
+              <div class="clearfix">
+              <ion:media limit="1">
+                <img src="<ion:media:src />" alt="news">
+              </ion:media>
+              <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
+              </div>
+            </ion:article>
+          </ion:articles>
+        </ion:page>
       </div>
       <div class="col-sm-4">
         <h2><span>Event Calendar</span></h2>
