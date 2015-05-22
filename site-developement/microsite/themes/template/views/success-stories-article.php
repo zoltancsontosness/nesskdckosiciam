@@ -10,10 +10,10 @@
       <ion:article>        
         <div class="row">
           <div class="col-md-8">
-            <ion:medias:media size="750,342" type="picture" method="adaptive"> 
             <h1 class="hero"><ion:article:title /></h1>
+            <ion:media:type is="picture"> 
               <img src="<ion:media:src/>" class="img-responsive"> 
-            </ion:medias:media>          
+            </ion:media:type>          
             <h3><ion:article:subtitle /></h3> 
             <ion:article:content />
           </div>
