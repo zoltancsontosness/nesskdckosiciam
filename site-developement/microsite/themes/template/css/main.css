@@ -35,8 +35,30 @@ p {
 }
 
 .item {
-  background-color: #ddd;
   padding: 0;
+}
+
+.item .perex {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+.item:hover .perex {
+  transition: opacity 0.7s ease;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
 }
 
 .link{
@@ -115,7 +137,7 @@ header .navigation-home {
 
 header .navigation {
   background-color: #0095cd;
-  line-height: 30px;
+  line-height: 35px;
   padding: 10px 0;
   min-height: 60px;
   text-align: center;
@@ -300,7 +322,7 @@ div.cover{
 footer {
   margin-left: -15px;
   margin-right: -15px;
-  color: #FFF;	  
+  color: #FFF;    
 }
 
 footer .contact {
@@ -512,34 +534,35 @@ footer .socialBlock img {
   opacity: 0.7;
 }
 
-/* Overlays */
+/* Overlay */
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.overlay.overlay-orange {
+/* Overlay colors */
+.overlay-orange {
   background-color: rgba(255,138,0,.75);
 }
 
-.overlay.overlay-azure {
+.overlay-azure {
   background-color: rgba(59,188,220,.75);
 }
 
-.overlay.overlay-blue {
+.overlay-blue {
   background-color: rgba(36,93,171,.75);
 }
 
-.overlay.overlay-red {
+.overlay-red {
   background-color: rgba(151,47,60,.75);
 }
 
-.overlay.overlay-green {
+.overlay-green {
   background-color: rgba(126,214,120,.75);
 }
 
-.overlay.overlay-yellow {
+.overlay-yellow {
   background-color: rgba(245,255,139,.75);
 }
 
@@ -548,6 +571,49 @@ footer .socialBlock img {
 /* PAGE /about-us */
 #about.about-us {
   margin: 80px 0;
+}
+
+/* PAGE /succes-stories */
+.stories-list {
+  margin: 65px 0 80px;
+}
+
+.stories-list .row {
+  margin-top: 30px;
+}
+
+.stories-list .story a {
+  text-decoration: none;
+}
+
+.stories-list .story img {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.7;
+  -webkit-backface-visibility: hidden;
+}
+
+.stories-list .story img:hover  {
+  opacity: 1;  
+}
+
+.stories-list .story-info {
+  color: #000;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  margin-top: -1px;
+}
+
+@media (max-width: 767px) {  
+  .stories-list .row {
+    margin-top: 0px;
+  }
+  
+  .stories-list .row .story {
+    padding-bottom: 30px;
+    margin-top: 0px;
+  }
 }
 
 /* PAGE /contact */
@@ -560,5 +626,3 @@ footer .socialBlock img {
 #contacts {
   margin: 80px 0;
 }
-
-/* PAGE /succes-stories */
