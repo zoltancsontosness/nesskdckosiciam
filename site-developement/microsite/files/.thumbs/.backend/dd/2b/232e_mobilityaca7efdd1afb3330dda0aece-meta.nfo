@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /stories/mobility.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 75855,
+  8 => 1432217400,
+  9 => 1432217400,
+  10 => 1432217400,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 75855,
+  'atime' => 1432217400,
+  'mtime' => 1432217400,
+  'ctime' => 1432217400,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 75855,
+    'filename' => 'mobility.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories/mobility.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 75855,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 371,
+      'resolution_y' => 186,
+      'compression_ratio' => 0.3664174129785815470228271806263364851474761962890625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/dd/2b/232e_mobilityaca7efdd1afb3330dda0aece-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 371,
+    1 => 186,
+    2 => 2,
+    3 => 'width="371" height="186"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/dd/2b/232e_mobilityaca7efdd1afb3330dda0aece-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 60,
+    2 => 2,
+    3 => 'width="120" height="60"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

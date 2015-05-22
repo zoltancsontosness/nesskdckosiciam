@@ -11,9 +11,9 @@ $statdata = array (
   5 => 0,
   6 => 2,
   7 => 7469,
-  8 => 1431951454,
-  9 => 1431951454,
-  10 => 1431951454,
+  8 => 1432199769,
+  9 => 1432199718,
+  10 => 1432199769,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -24,9 +24,9 @@ $statdata = array (
   'gid' => 0,
   'rdev' => 2,
   'size' => 7469,
-  'atime' => 1431951454,
-  'mtime' => 1431951454,
-  'ctime' => 1431951454,
+  'atime' => 1432199769,
+  'mtime' => 1432199718,
+  'ctime' => 1432199769,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -133,36 +133,6 @@ $data = array (
     ),
   ),
   'mime_type from file extension' => 'image/png',
-  'img_info' => 
-  array (
-    'width' => 120,
-    'height' => 66,
-    'mime' => 'image/png',
-    'ext' => 'png',
-    'fileinfo' => 
-    array (
-      'memory_limit' => 268435456,
-      'mem_in_use' => 5555056,
-      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\microsite/files/.thumbs/.backend/b4/2a/aa85_operab2ca5162e1bf508a6b2612e3-500x500.png',
-      'filesize' => 7469,
-      'imageinfo' => 
-      array (
-        0 => 145,
-        1 => 80,
-        2 => 3,
-        3 => 'width="145" height="80"',
-        'bits' => 8,
-        'mime' => 'image/png',
-      ),
-      'needed' => 58429.62962962963501922786235809326171875,
-      'usage_guestimate' => 163602.9629629629780538380146026611328125,
-      'usage_min_advised' => 5718658.962962962687015533447265625,
-      'will_fit' => true,
-    ),
-  ),
-  'memory used' => '5.8 MB',
-  'memory estimated' => '0.2 MB',
-  'memory suggested' => '5.7 MB',
   'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/b4/2a/aa85_operab2ca5162e1bf508a6b2612e3-500x500.png',
   'thumb250_info' => 
   array (
