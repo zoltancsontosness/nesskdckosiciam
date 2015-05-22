@@ -4,18 +4,27 @@
   </footer>
   </div><!-- /.container -->   
       
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $(".responsive-calendar").responsiveCalendar({
-              time: '2015-05',
-              events: {
-                "2015-04-30": {"url": "http://w3widgets.com/responsive-slider"},
-                "2015-04-26": {"url": "http://w3widgets.com"}, 
-                "2015-05-03": {}, 
-                "2015-06-12": {}}
-            });
-          });
-        </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".responsive-calendar").responsiveCalendar({
+        time: '2015-05',
+        events: {
+          "2015-04-30": {"url": "http://w3widgets.com/responsive-slider"},
+          "2015-04-26": {"url": "http://w3widgets.com"}, 
+          "2015-05-03": {}, 
+          "2015-06-12": {}
+        }
+      });
+    });    
+          
+    $( document ).ready( function() {
+      $('.responsive-slider').responsiveSlider({
+        autoplay: true,
+        interval: 3000,
+        transitionTime: 300
+      });
+    });
+  </script>
  
   <script>
     var navDropdowns = $("ul.nav").children("li").has("ul");

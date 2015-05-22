@@ -19,7 +19,7 @@
       <div class="row">
         <ion:medias type="picture" range="4,6" method="adaptive">
           <div class="col-sm-4 col-xs-12 story">
-            <a href="<ion:media:link />"><img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
+            <a href="<ion:page:url />/<ion:media:link />"><img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
             <div class="story-info overlay-<ion:media:description />"><ion:media:title /></div></a>
           </div>
         </ion:medias>
@@ -27,7 +27,7 @@
       <div class="row">
         <ion:medias type="picture" range="7,9" method="adaptive">
           <div class="col-sm-4 col-xs-12 story">
-            <a href="<ion:media:link />"><img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
+            <a href="<ion:page:url />/<ion:media:link />"><img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive">
             <div class="story-info overlay-<ion:media:description />"><ion:media:title /></div></a>
           </div>      
         </ion:medias>

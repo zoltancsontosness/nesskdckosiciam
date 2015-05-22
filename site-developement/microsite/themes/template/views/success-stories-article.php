@@ -7,17 +7,18 @@
 <div class="container">
   <ion:page>
     <section class="success-stories">
-      <ion:article>     
-        <h1 class="hero"><ion:article:title /></h1>
+      <ion:article>        
         <div class="row">
           <div class="col-md-8">
             <ion:medias:media size="750,342" type="picture" method="adaptive"> 
+            <h1 class="hero"><ion:article:title /></h1>
               <img src="<ion:media:src/>" class="img-responsive"> 
             </ion:medias:media>          
             <h3><ion:article:subtitle /></h3> 
             <ion:article:content />
           </div>
           <div class="col-md-4">
+            <h2>Another stories</h2>
             <ul>
             <ion:articles>            
               <li><a href="<ion:article:url />"><ion:article:title /></a></li>          
