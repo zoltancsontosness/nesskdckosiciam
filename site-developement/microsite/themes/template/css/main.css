@@ -626,3 +626,7 @@ footer .socialBlock img {
 #contacts {
   margin: 80px 0;
 }
+
+#contacts p {
+  margin: 0;
+}
