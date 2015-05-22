@@ -18,7 +18,7 @@
             <ion:article:content />
           </div>
           <div class="col-md-4">
-            <h2>Another stories</h2>
+            <h2>Another articles</h2>
             <ul>
             <ion:articles>            
               <li><a href="<ion:article:url />"><ion:article:title /></a></li>          
