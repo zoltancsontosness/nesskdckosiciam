@@ -44,6 +44,7 @@
   </div><!-- end of .container-fluid -->
 
 <script type="text/javascript" src="<ion:theme_url />js/camera.min.js"></script> 
+<script type="text/javascript" src="<ion:theme_url />js/main.js"></script> 
 
 <script>
   if ($('.camera_wrap').length) {
