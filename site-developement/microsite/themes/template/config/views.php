@@ -5,6 +5,8 @@ $views = array (
   array (
     'homepage' => 'Home',
     'about-us' => 'About us',
+    'success-stories' => 'Success stories',
+    'success-stories-article' => 'Success story article',
   ),
 );
 
