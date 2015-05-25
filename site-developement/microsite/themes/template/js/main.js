@@ -1,17 +1,17 @@
 /* Animations */
 $(".item").hover(
-	function () {
-		var height = $(".overlay p.perex").height();
-		$(this).find(".overlay").animate({
+	function (event) {
+		var height = $(this).find(".perex").outerHeight();
+		$(this).find(".overlay").stop(true, false).animate({
 			height: height,
 			bottom: 0,
 			left: 0,
-		})
+		});
 	},
 	function () {
-		$(this).find(".overlay").animate({
+		$(this).find(".overlay").stop(true, false).animate({
 			height: "100%",
 			bottom: 0,
 			left: 0
-		})
+		});
 	});
