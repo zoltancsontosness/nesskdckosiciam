@@ -33,9 +33,9 @@
           </div>
           <div class="col-sm-4">
             <div class="socialBlock">
-        	    <a href="https://www.facebook.com/NessTechnologies" target="_blank"><img src="<ion:theme_url/>img/facebook-icon-small.png"></a>
-        		  <a href="#" target="_blank"><img src="<ion:theme_url/>img/twitter-icon-small.png"></a>
-        		  <a href="https://www.linkedin.com/company/3050495" target="_blank"><img src="<ion:theme_url/>img/linkedin-icon-small.png"></a>
+        	    <a href="https://www.facebook.com/NessTechnologies" target="_blank"><img src="<ion:theme_url/>img/facebook-icon-small.png" alt=""></a>
+        		  <a href="#" target="_blank"><img src="<ion:theme_url/>img/twitter-icon-small.png" alt=""></a>
+        		  <a href="https://www.linkedin.com/company/3050495" target="_blank"><img src="<ion:theme_url/>img/linkedin-icon-small.png" alt=""></a>
             </div>
           </div>
         </div>

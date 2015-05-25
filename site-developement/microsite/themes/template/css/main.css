@@ -138,19 +138,41 @@ header .navigation-home {
 header .navigation {
   background-color: #0095cd;
   line-height: 35px;
-  padding: 10px 0;
+  padding: 15px 0;
   min-height: 60px;
   text-align: center;
 }
 
+header .logo {
+  float: left;
+}
+
+@media (max-width: 767px) {
+  header .logo {
+    float: none;
+    margin: auto;
+  }
+}
+
+header ul {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  header ul {
+    float: none;
+    margin: auto;
+  }
+}
+
 header .logo img {
   width: 40px;
-  margin-left: 30px;
 }
 
 header nav ul li {
   display: inline-block;
   padding-right: 15px;
+  line-height: 30px;
 }
 
 header nav ul li a {
