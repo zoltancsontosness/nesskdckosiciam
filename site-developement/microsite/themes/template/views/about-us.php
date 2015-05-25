@@ -4,17 +4,28 @@
 </header>
 
 <div class="container">
-  <section id="about" class="about-us">
-    <ion:articles limit="1">
-      <h1 class="hero"><ion:article:title /></h1>
-      <div class="row">     
+  <section id="about-us">
+    <div class="row">
+      <ion:articles limit="1">
         <ion:article>
-          <div class="col-sm-11 col-md-12">
+          <div class="col-xs-12">
+            <ion:article:title tag="h2" />
             <ion:article:content />
           </div>
         </ion:article>
-      </div>      
-    </ion:articles>    
+      </ion:articles>
+    </div>
+    <div class="separator"></div>
+    <div class="row">  
+      <ion:articles range="2,3">
+        <ion:article>
+          <div class="col-sm-6">
+            <ion:article:title tag="h2" />
+            <ion:article:content />
+          </div>
+        </ion:article>
+      </ion:articles>  
+    </div>
   </section>
 </div>
 

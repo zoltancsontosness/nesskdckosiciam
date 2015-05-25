@@ -138,7 +138,7 @@ header .navigation-home {
 
 header .navigation {
   background-color: #0095cd;
-  line-height: 35px;
+  line-height: 30px;
   padding: 15px 0;
   min-height: 60px;
   text-align: center;
@@ -592,8 +592,21 @@ footer .socialBlock img {
 /* ======= PAGE SPECIFIC RULES ======= */
 
 /* PAGE /about-us */
-#about.about-us {
-  margin: 80px 0;
+#about-us h2 {
+  margin: 45px 0px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #0095cd;
+}
+
+#about-us p {
+  font-size: 18px;
+  text-align: justify;
+  color: #777;
+}
+
+#about-us .separator {
+  border-top: 5px solid #0095cd;
 }
 
 /* PAGE /succes-stories */
