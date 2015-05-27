@@ -12,7 +12,7 @@
         <div class="row">
           <ion:medias type="picture" range="1,3" size="725,400" method="adaptive">
             <a href="<ion:page:url />/<ion:media:link />">
-              <div class="item col-xs- col-sm-4">
+              <div class="item col-sm-4">
                 <div class="overlay overlay-<ion:media:description />">
                   <p class="perex"><ion:media:title /></p>
                 </div>
@@ -24,7 +24,7 @@
         <div class="row">
           <ion:medias type="picture" range="4,6" size="725,400" method="adaptive">
             <a href="<ion:page:url />/<ion:media:link />">
-              <div class="item col-xs- col-sm-4">
+              <div class="item col-sm-4">
                 <div class="overlay overlay-<ion:media:description />">
                   <p class="perex"><ion:media:title /></p>
                 </div>
@@ -36,7 +36,7 @@
         <div class="row">
           <ion:medias type="picture" range="7,9" size="725,400" method="adaptive">
             <a href="<ion:page:url />/<ion:media:link />">
-              <div class="item col-xs- col-sm-4">
+              <div class="item col-sm-4">
                 <div class="overlay overlay-<ion:media:description />">
                   <p class="perex"><ion:media:title /></p>
                 </div>
