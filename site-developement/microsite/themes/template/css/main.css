@@ -28,6 +28,10 @@ p {
   }
 }
 
+.separator {
+  border-top: 5px solid #0095cd;
+}
+
 .gutter-bottom {
   margin-bottom: 130px;
 }
@@ -35,6 +39,13 @@ p {
 .hero {
   font-size: 56px;
   font-weight: 900;
+}
+
+.subHero {
+  margin: 45px 0px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #0095cd;
 }
 
 .items {
@@ -531,10 +542,6 @@ footer .socialBlock img {
   font-size: 18px;
   text-align: justify;
   color: #777;
-}
-
-#about-us .separator {
-  border-top: 5px solid #0095cd;
 }
 
 /* PAGE /succes-stories */
