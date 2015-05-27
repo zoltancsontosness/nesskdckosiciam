@@ -494,8 +494,21 @@ footer .socialBlock img {
 }
 
 .overlay-yellow {
-  background-color: rgba(245,255,139,.75);
+  background-color: rgba(255,220,0,.75);
 }
+
+.overlay-silver {
+  background-color: rgba(170,170,170,.75);
+}
+
+.overlay-maroon {
+  background-color: rgba(133,20,75,.75);
+}
+
+.overlay-navy {
+  background-color: rgba(0,31,63,.75);
+}
+
 
 /* ======= PAGE SPECIFIC RULES ======= */
 

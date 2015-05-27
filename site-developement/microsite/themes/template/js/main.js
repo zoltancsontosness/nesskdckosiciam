@@ -1,6 +1,6 @@
 /* Animations */
 $(".item").hover(
-	function (event) {
+	function () {
 		var height = $(this).find(".perex").outerHeight();
 		$(this).find(".overlay").stop(true, false).animate({
 			height: height,
