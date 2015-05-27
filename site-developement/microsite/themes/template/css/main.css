@@ -61,6 +61,11 @@ p {
   -khtml-opacity: 1;
   opacity: 1;
 }
+@media (max-width: 899px) {
+    .item .perex {
+      opacity: 1;
+  }
+}
 
 .link{
   font-size: 18px;
