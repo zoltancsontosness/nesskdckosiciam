@@ -8,83 +8,77 @@
 			<h1 class="hero"><ion:page:title /></h1>
 		</div>
 		<section class="careers gutter-bottom row">
-			<h2 class="subHero">Web Development</h2>
-			<div class="separator"></div>
-			<div class="row">
-				<div class="col-sm-4">
-					<h2>PHP Senior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+			<?php if('<ion:articles:count type="web-development"/>' > 0) : ?>
+				<h2 class="subHero">Web Development</h2>
+				<div class="separator"></div>
+				<div class="row">
+					<ion:articles type="web-development">
+						<ion:article>
+							<div class="col-sm-4">
+								<h2><ion:title /></h2>
+								<ion:content characters="258" />
+								<div>
+									<a href="<ion:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+								</div>
+							</div>
+						</ion:article>
+					</ion:articles>	
 				</div>
-				<div class="col-sm-4">
-					<h2>Javascript Junior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+			<?php endif; ?>
+			<?php if('<ion:articles:count type="c-development"/>' > 0) : ?>
+				<h2 class="subHero">C#/C++/C Developer</h2>
+				<div class="separator"></div>
+				<div class="row">
+					<ion:articles type="c-development">
+						<ion:article>
+							<div class="col-sm-4">
+								<h2><ion:title /></h2>
+								<ion:content characters="258" />
+								<div>
+									<a href="<ion:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+								</div>
+							</div>
+						</ion:article>
+					</ion:articles>	
 				</div>
-				<div class="col-sm-4">
-					<h2>Python Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+			<?php endif; ?>
+			<?php if('<ion:articles:count type="java-oracle-development"/>' > 0) : ?>
+				<h2 class="subHero">Java Developer / Oracle Database Specialist</h2>
+				<div class="separator"></div>
+				<div class="row">
+					<ion:articles type="java-oracle-development">
+						<ion:article>
+							<div class="col-sm-4">
+								<h2><ion:title /></h2>
+								<ion:content characters="258" />
+								<div>
+									<a href="<ion:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+								</div>
+							</div>
+						</ion:article>
+					</ion:articles>	
 				</div>
-			</div>
-			<h2 class="subHero">C#/C++/C Developer</h2>
-			<div class="separator"></div>
-			<div class="row">
-				<div class="col-sm-4">
-					<h2>C# Junior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+			<?php endif; ?>
+			<?php if('<ion:articles:count type="non-it"/>' > 0) : ?>
+				<h2 class="subHero">Non IT</h2>
+				<div class="separator"></div>
+				<div class="row">
+					<ion:articles type="non-it">
+						<ion:article>
+							<div class="col-sm-4">
+								<h2><ion:title /></h2>
+								<ion:content characters="258" />
+								<div>
+									<a href="<ion:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
+								</div>
+							</div>
+						</ion:article>
+					</ion:articles>	
 				</div>
-				<div class="col-sm-4">
-					<h2>C++ Senior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
-				</div>
-				<div class="col-sm-4">
-					<h2>C++ Junior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
-				</div>
-			</div>
-			<h2 class="subHero">Java Developer / Oracle Database Specialist</h2>
-			<div class="separator"></div>
-			<div class="row">
-				<div class="col-sm-4">
-					<h2>Java Senior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
-				</div>
-				<div class="col-sm-4">
-					<h2>Java Junior Developer</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
-				</div>
-				<div class="col-sm-4">
-					<h2>Oracle Database Specialist</h2>
-					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor consectetur maximus. 
-					Quisque sit amet dolor tempus, tempor enim fermentum, sagittis orci. Vivamus imperdiet eros ligula, a consequat 
-					erat maximus quis. Ut eget varius odio...</p>
-					<a href="<ion:article:url />" class="btn btn-transparent btn-lg blue border-blue">More info...</a>
-				</div>
-			</div>
+			<?php endif; ?>
 		</section>
 	</ion:page>
 </div>
+
 
 <ion:partial view="footer" />

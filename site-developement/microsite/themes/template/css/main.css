@@ -48,6 +48,14 @@ p {
   color: #0095cd;
 }
 
+.right-column-heading {
+  padding-top: 25px;
+}
+
+.center {
+  margin: auto;
+}
+
 .items {
   margin-bottom: 60px;
 }
@@ -600,4 +608,15 @@ footer .socialBlock img {
 
 #contacts p {
   margin: 0;
+}
+
+/* PAGE CAREER-LIST */
+.careers p {
+  text-align: justify;
+}
+
+.careers ul {
+  margin: 0 0 35px;
+  color: #777;
+  font-size: 18px;
 }

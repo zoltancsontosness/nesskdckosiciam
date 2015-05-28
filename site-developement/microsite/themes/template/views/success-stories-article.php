@@ -14,8 +14,10 @@
             <ion:media:type is="picture"> 
               <img src="<ion:media:src/>" class="img-responsive"> 
             </ion:media:type>          
-            <h3><ion:article:subtitle /></h3> 
-            <ion:article:content />
+            <h3><ion:article:subtitle /></h3>
+            <div class="text-justify">
+              <ion:article:content />
+            </div> 
           </div>
           <div class="col-md-4">
             <h2>Another stories</h2>
