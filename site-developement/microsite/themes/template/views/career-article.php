@@ -15,9 +15,8 @@
 					<a href="#" class="btn btn-green btn-lg btn-block send-cv">Send Your CV Now!</a>
 				</div>
 				<?php if('<ion:article:medias:count />' > 0) : ?>
-					<div class="separator"></div>
-					<h2 class="right-column-heading text-center subHero">Who Need You?</h2>
-					<ion:article:medias>
+					<div class="separator gutter-bottom"></div>
+					<ion:article:medias type="picture" limit="1">
 						<img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive center"/>
 					</ion:article:medias>
 				<?php endif; ?>
