@@ -36,6 +36,10 @@ p {
   margin-bottom: 130px;
 }
 
+.gutter-bottom-small {
+    margin-bottom: 50px;
+}
+
 .hero {
   font-size: 56px;
   font-weight: 900;
