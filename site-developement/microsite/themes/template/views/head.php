@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="<ion:theme_url/>css/bootstrap.css">
   <link rel="stylesheet" href="<ion:theme_url/>css/main.css">
   <link rel="stylesheet" href="<ion:theme_url/>css/camera.css">
+  <link rel="stylesheet" href="<ion:theme_url/>css/animate.css">
   
   <script type="text/javascript" src="<ion:theme_url/>js/jquery.min.js"></script>
   <script type="text/javascript" src="<ion:theme_url/>js/jquery.easing.1.3.js"></script>

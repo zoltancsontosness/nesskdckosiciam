@@ -15,3 +15,12 @@ $(".item").hover(
 			left: 0
 		});
 	});
+
+/* ---------- Animation for career-article using animate.css ------------- */
+$("a.send-cv").click(function () {
+	$("#content").addClass("animated fadeOutLeft");
+	setTimeout(function () {
+		$("#content").addClass("hide");
+		$("#form").removeClass("hide").addClass("animated fadeInLeft");
+	}, 600);
+});
