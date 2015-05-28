@@ -28,6 +28,10 @@ p {
   }
 }
 
+label {
+  font-size: 18px;
+}
+
 .separator {
   border-top: 5px solid #0095cd;
 }

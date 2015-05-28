@@ -10,11 +10,25 @@
 				<div id="content">
 					<ion:article:content />
 				</div>
-				<div id="form" class="hide">
-					<form action=".">
-						<label for="cv">Here upload your CV</label>
-						<input type="file" id="cv" class="form-control">
-					</form>
+				<div id="form" class="col-sm-12 hide">
+					<div class="row">
+						<form action=".">
+						<div class="form-group">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tellus, dictum sed tincidunt mollis, pharetra nec turpis. Integer vitae facilisis nulla. Aliquam erat volutpat. Donec eu mollis sapien, aliquam efficitur lorem. Donec tincidunt at magna in aliquet. Cras sit amet metus in ligula pulvinar fermentum a eu odio. Nullam ipsum lorem, convallis vel semper et, dictum et ante. Integer vitae enim laoreet, pellentesque eros vel, facilisis lectus.</p>
+							<label for="email">Your Email</label>
+							<input type="text" id="email" class="form-control input-lg" placeholder="Email...">
+						</div>
+						<div class="form-group">
+							<label for="position">Position</label>
+							<input type="text" id="position" class="form-control input-lg" value="<ion:article:title />" readonly="readonly" />
+						</div>
+						<div class="form-group">
+							<label for="cv">Here upload your CV</label>
+							<input type="file" id="cv" class="form-control input-lg">
+						</div>
+							<button type="submit" class="btn btn-green btn-lg btn-block">Send Now!</button>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-3">

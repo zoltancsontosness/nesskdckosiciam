@@ -6,7 +6,7 @@
 
 <div class="container">
   <ion:page>
-  <h1 class="hero"><ion:title /></h1>
+  <h1 class="hero row gutter-bottom-small"><ion:title /></h1>
     <div class="items row">
       <div class="col-sm-12">
         <div class="row">

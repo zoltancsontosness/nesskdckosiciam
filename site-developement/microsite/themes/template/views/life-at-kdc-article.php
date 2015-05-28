@@ -11,7 +11,7 @@
         <div class="row">
           <div class="col-md-8">
             <ion:medias:media size="750,342" type="picture" method="adaptive"> 
-            <h1 class="hero"><ion:article:title /></h1>
+            <h1 class="hero gutter-bottom-small"><ion:article:title /></h1>
               <img src="<ion:media:src/>" class="img-responsive"> 
             </ion:medias:media>          
             <h3><ion:article:subtitle /></h3> 

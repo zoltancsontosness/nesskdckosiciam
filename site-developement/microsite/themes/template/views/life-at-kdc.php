@@ -4,7 +4,7 @@
 </header>
 <div class="container">
 	<ion:page>
-		<h1 class="hero"><ion:page:title /></h1>
+		<h1 class="hero gutter-bottom-small"><ion:page:title /></h1>
 		<section class="stories-list">
 	      	<div class="row">
 		        <ion:medias type="picture" size="756,345" range="1,3" method="adaptive">
