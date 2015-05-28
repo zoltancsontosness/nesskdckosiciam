@@ -2,9 +2,17 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext);
 
 h1, h2, h3, h4, h5, h6 {
-  color: #555;
   font-family: "Open Sans",arial,serif;
   font-weight: normal;
+}
+
+h1 {
+  color: #1D86C8;
+  font-weight: bold;
+}
+
+h2, h4 {
+  color: #555;
 }
 
 body {
@@ -52,9 +60,11 @@ header .user {
   background: url("../assets/images/main_nav_bgr_dark.png") repeat-x scroll left top #393B3C;
 }
 
-.navbar-nav > li {
-  padding-right: 2px;
-  background: url("../images/main_nav_bgr_sep_dark.png") no-repeat scroll right top transparent;
+@media (min-width: 768px) {
+  .navbar-nav > li {
+    padding-right: 2px;
+    background: url("../images/main_nav_bgr_sep_dark.png") no-repeat scroll right top transparent;
+  }
 }
 
 .navbar-nav > li > a {
@@ -123,17 +133,50 @@ header .user {
   
 }
 
+/* Collapsed navigation */
+@media (max-width: 767px) {
+
+  .navbar-toggle {
+    border-color: #FFF;
+  }
+
+  .navbar-toggle:hover,
+  .navbar-toggle:focus {
+    background-color: #009FDE;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #FFF;
+  }
+  
+  .dropdown-menu > li > a {
+    padding: 5px 10px;
+    color: #FFF;
+    background-color: #333;
+  }
+  
+  .dropdown-menu > li > ul > li > a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF;
+  }
+
+}
+
 
 /* Page Home */
+.responsive-slider .slider-control {
+  outline: none;
+}
+
 .responsive-slider .slider-control.right,
 .responsive-slider .slider-control.left {
     opacity: 0.5;
 }
 
 .responsive-slider .slider-control.right:hover,
-.responsive-slider .slider-control.right:focus,
-.responsive-slider .slider-control.left:hover,
-.responsive-slider .slider-control.left:focus {
+.responsive-slider .slider-control.left:hover {
   opacity: 1;
 }
 
@@ -240,6 +283,7 @@ header .user {
 .positions img {
   margin-right: 10px;
   max-width: 100px;
+  border-radius: 0px;
   float: left;
 }
 
@@ -249,6 +293,27 @@ header .user {
   border-bottom: 1px solid #AAA;
 }
 
+/* Page News */
+ul.newsCategories {
+  list-style: none;
+  padding: 0;
+}
+
+ul.newsCategories li {
+  display: inline-block;
+}
+
+ul.newsCategories li:after {
+  content: " / ";
+}
+
+ul.newsCategories li:last-child:after {
+  content: "";
+}
+
+.newsCategoriesActive {
+  font-weight: bold;
+}
 
 /* Footer */
 footer {

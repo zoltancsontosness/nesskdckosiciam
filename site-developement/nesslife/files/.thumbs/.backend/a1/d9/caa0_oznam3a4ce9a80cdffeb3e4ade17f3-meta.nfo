@@ -1,6 +1,6 @@
 <?php
 
-// legal URL: /slideshow/oaza.jpg
+// legal URL: /slideshow/oznam3.jpg
 
 $statdata = array (
   0 => 2,
@@ -10,10 +10,10 @@ $statdata = array (
   4 => 0,
   5 => 0,
   6 => 2,
-  7 => 170864,
-  8 => 1432217963,
-  9 => 1432128187,
-  10 => 1432217963,
+  7 => 153100,
+  8 => 1432623041,
+  9 => 1432623041,
+  10 => 1432623041,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -23,10 +23,10 @@ $statdata = array (
   'uid' => 0,
   'gid' => 0,
   'rdev' => 2,
-  'size' => 170864,
-  'atime' => 1432217963,
-  'mtime' => 1432128187,
-  'ctime' => 1432217963,
+  'size' => 153100,
+  'atime' => 1432623041,
+  'mtime' => 1432623041,
+  'ctime' => 1432623041,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -36,12 +36,12 @@ $data = array (
   'analysis' => 
   array (
     'GETID3_VERSION' => '1.9.3-20111213',
-    'filesize' => 170864,
-    'filename' => 'oaza.jpg',
+    'filesize' => 153100,
+    'filename' => 'oznam3.jpg',
     'filepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/slideshow',
-    'filenamepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/slideshow/oaza.jpg',
+    'filenamepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/slideshow/oznam3.jpg',
     'avdataoffset' => 0,
-    'avdataend' => 170864,
+    'avdataend' => 153100,
     'fileformat' => 'jpg',
     'video' => 
     array (
@@ -49,32 +49,32 @@ $data = array (
       'lossless' => false,
       'bits_per_sample' => 24,
       'pixel_aspect_ratio' => 1,
-      'resolution_x' => 701,
-      'resolution_y' => 256,
-      'compression_ratio' => 0.3173739895387541753990490178694017231464385986328125,
+      'resolution_x' => 826,
+      'resolution_y' => 331,
+      'compression_ratio' => 0.1866576934424750422447658593227970413863658905029296875,
     ),
     'encoding' => 'UTF-8',
     'mime_type' => 'image/jpeg',
   ),
   'mime_type from file extension' => 'image/jpeg',
-  'thumb250_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/fd/c0/811d_oazad189631540a8c7305b1a9c68-500x500.jpg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/a1/d9/caa0_oznam3a4ce9a80cdffeb3e4ade17f3-500x500.jpg',
   'thumb250_info' => 
   array (
     0 => 500,
-    1 => 183,
+    1 => 200,
     2 => 2,
-    3 => 'width="500" height="183"',
+    3 => 'width="500" height="200"',
     'bits' => 8,
     'channels' => 3,
     'mime' => 'image/jpeg',
   ),
-  'thumb48_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/fd/c0/811d_oazad189631540a8c7305b1a9c68-120x120.jpg',
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/a1/d9/caa0_oznam3a4ce9a80cdffeb3e4ade17f3-120x120.jpg',
   'thumb48_info' => 
   array (
     0 => 120,
-    1 => 44,
+    1 => 48,
     2 => 2,
-    3 => 'width="120" height="44"',
+    3 => 'width="120" height="48"',
     'bits' => 8,
     'channels' => 3,
     'mime' => 'image/jpeg',
