@@ -624,3 +624,7 @@ footer .socialBlock img {
   color: #777;
   font-size: 18px;
 }
+
+.btn.send-cv {
+  padding: 25px;
+}
