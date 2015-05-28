@@ -93,5 +93,76 @@
         <!-- Responsive calendar - END -->
       </div>
     </div>
+    
+    <div class="row puzzle">
+      <div class="col-sm-3">
+        <h2><span>Forum</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/forum.jpg" alt="">
+        <p>Nieco na pokecanie...</p>
+      </div>
+      <div class="col-sm-3">
+        <h2><span>Groups</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/groups.jpg" alt="">
+        <p></p>
+      </div>
+      <div class="col-sm-3">
+        <h2><span>Zľavy</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/zlavy.jpg" alt="">
+        <p></p>
+      </div>
+      <div class="col-sm-3">
+        <h2><span>Anketa</span></h2>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="row puzzle">
+      <div class="col-sm-3">
+        <h2><span>NESS KDC Košiciam</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/ness-kosiciam.jpg" alt="">
+        <p></p>
+      </div>
+      <div class="col-sm-3">
+        <h2><span>Summer club</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/summerclub.jpg" alt="">
+        <p></p>
+      </div>
+      <div class="col-sm-3">
+        <h2><span>AJ:TY</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/ajty.jpg" alt="">
+        <p></p>
+      </div>
+      <div class="col-sm-3">
+        <h2><span>PR & CSR</span></h2>
+        <img src="<ion:theme_url/>assets/images/boxes/pr.jpg" alt="">
+        <p></p>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".responsive-calendar").responsiveCalendar({
+          time: '2015-05',
+          events: {
+            <ion:page id="events">
+              <ion:articles>
+                <ion:article>
+                  "<ion:article:date format="Y-m-d" />": {"url": "<ion:article:url />"},
+                </ion:article>
+              </ion:articles>
+            </ion:page>
+            "2015-06-01": {}
+          }
+        });
+      });    
+            
+      $( document ).ready( function() {
+        $('.responsive-slider').responsiveSlider({
+          autoplay: true,
+          interval: 3000,
+          transitionTime: 300
+        });
+      });
+    </script>
 
 <ion:partial view="footer" />
