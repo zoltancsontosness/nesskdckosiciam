@@ -4,9 +4,9 @@
 </header>
 
 <div class="container">
-  <section id="contacts">
+  <section>
     <ion:articles limit="1">
-      <h1 class="hero"><ion:article:title /></h1>
+      <h1 class="hero gutter-bottom-small"><ion:article:title /></h1>
       <div class="row">     
         <ion:article>
           	<div class="col-sm-11 col-md-12">
