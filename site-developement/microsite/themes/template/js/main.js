@@ -18,9 +18,14 @@ $(".item").hover(
 
 /* ---------- Animation for career-article using animate.css ------------- */
 $("a.send-cv").click(function () {
-	$("#content").addClass("animated fadeOutLeft");
+	$("#content").addClass("animated fadeOutDown");
+	$("body").animate({
+		scrollTop: 0
+	});
 	setTimeout(function () {
 		$("#content").addClass("hide");
-		$("#form").removeClass("hide").addClass("animated fadeInLeft");
-	}, 600);
+		$("#form").removeClass("hide").addClass("animated fadeInUp");
+	}, 300);
+
+	return false;
 });

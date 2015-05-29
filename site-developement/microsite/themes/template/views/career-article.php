@@ -14,7 +14,9 @@
 					<div class="row">
 						<form action=".">
 						<div class="form-group">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tellus, dictum sed tincidunt mollis, pharetra nec turpis. Integer vitae facilisis nulla. Aliquam erat volutpat. Donec eu mollis sapien, aliquam efficitur lorem. Donec tincidunt at magna in aliquet. Cras sit amet metus in ligula pulvinar fermentum a eu odio. Nullam ipsum lorem, convallis vel semper et, dictum et ante. Integer vitae enim laoreet, pellentesque eros vel, facilisis lectus.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam felis tellus, dictum sed tincidunt mollis, 
+							pharetra nec turpis. Integer vitae facilisis nulla. Aliquam erat volutpat. Donec eu mollis sapien, aliquam efficitur 
+							lorem. Donec tincidunt at magna in aliquet. Cras sit amet metus in ligula pulvinar fermentum a eu odio.</p>
 							<label for="email">Your Email</label>
 							<input type="text" id="email" class="form-control input-lg" placeholder="Email...">
 						</div>

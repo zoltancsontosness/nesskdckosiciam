@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /depositphotos_25565769_original.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 572990,
+  8 => 1432883849,
+  9 => 1432883853,
+  10 => 1432883849,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 572990,
+  'atime' => 1432883849,
+  'mtime' => 1432883853,
+  'ctime' => 1432883849,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 572990,
+    'filename' => 'depositphotos_25565769_original.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/depositphotos_25565769_original.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 572990,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 929,
+      'compression_ratio' => 0.1713281904078459427775982248931541107594966888427734375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/5f/81/0e24_depositphotos_25565769_originalb7-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 387,
+    2 => 2,
+    3 => 'width="500" height="387"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/5f/81/0e24_depositphotos_25565769_originalb7-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 93,
+    2 => 2,
+    3 => 'width="120" height="93"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
