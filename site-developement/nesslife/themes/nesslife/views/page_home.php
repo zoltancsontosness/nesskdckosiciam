@@ -58,10 +58,23 @@
         <ion:page id="vone-pozicie">
           <ion:articles limit="4">
             <ion:article>
+              <ion:element:rcr-project>
+                <ion:items:rcr-position-project>       
+                  <ion:values>
+                    <?php $lab = '<ion:label />'; ?>
+                  </ion:values>
+                </ion:items:rcr-position-project>
+              </ion:element:rcr-project>
               <div class="clearfix">
-              <ion:media limit="1">
-                <img src="<ion:media:src />" alt="news">
-              </ion:media>
+              <ion:page id="labs">
+                <ion:articles>
+                  <?php if ("<ion:article:name />" == "$lab" ) :?>
+                    <ion:article:medias type="picture" limit="1">
+                      <img src="<ion:media:src />" alt="<?php echo $lab;?>" />
+                    </ion:article:medias>
+                  <?php endif ;?> 
+                </ion:articles>
+              </ion:page>
               <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
               </div>
             </ion:article>

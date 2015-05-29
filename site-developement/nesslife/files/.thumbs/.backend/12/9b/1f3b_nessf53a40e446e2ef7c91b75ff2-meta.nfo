@@ -1,0 +1,210 @@
+<?php
+
+// legal URL: /projects/ness.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 28751,
+  8 => 1432899327,
+  9 => 1432899327,
+  10 => 1432899324,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 28751,
+  'atime' => 1432899327,
+  'mtime' => 1432899327,
+  'ctime' => 1432899324,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 28751,
+    'filename' => 'ness.jpg',
+    'filepath' => 'C:/Software/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/projects',
+    'filenamepath' => 'C:/Software/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/projects/ness.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 28751,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 381,
+      'resolution_y' => 237,
+      'compression_ratio' => 0.10613493988356940966877317578109796158969402313232421875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+    'iptc' => 
+    array (
+      'IPTCApplication' => 
+      array (
+        'ApplicationRecordVersion' => 
+        array (
+          0 => '' . "\0" . '' . "\0" . '',
+        ),
+      ),
+    ),
+    'jpg' => 
+    array (
+      'exif' => 
+      array (
+        'FILE' => 
+        array (
+          'FileName' => 'ness.jpg',
+          'FileDateTime' => 1432899327,
+          'FileSize' => 28751,
+          'FileType' => 2,
+          'MimeType' => 'image/jpeg',
+          'SectionsFound' => 'ANY_TAG, IFD0, THUMBNAIL, EXIF',
+        ),
+        'COMPUTED' => 
+        array (
+          'html' => 'width="381" height="237"',
+          'Height' => 237,
+          'Width' => 381,
+          'IsColor' => 1,
+          'ByteOrderMotorola' => 1,
+          'Thumbnail.FileType' => 2,
+          'Thumbnail.MimeType' => 'image/jpeg',
+        ),
+        'IFD0' => 
+        array (
+          'Orientation' => 1,
+          'XResolution' => 300,
+          'YResolution' => 300,
+          'ResolutionUnit' => 2,
+          'Software' => 'Adobe Photoshop CS3 Windows',
+          'DateTime' => '2015:05:29 13:35:24',
+          'Exif_IFD_Pointer' => 164,
+        ),
+        'THUMBNAIL' => 
+        array (
+          'Compression' => 6,
+          'XResolution' => 72,
+          'YResolution' => 72,
+          'ResolutionUnit' => 2,
+          'JPEGInterchangeFormat' => 302,
+          'JPEGInterchangeFormatLength' => 3020,
+        ),
+        'EXIF' => 
+        array (
+          'ColorSpace' => 1,
+          'ExifImageWidth' => 381,
+          'ExifImageLength' => 237,
+        ),
+      ),
+    ),
+    'xmp' => 
+    array (
+      'xap' => 
+      array (
+        'CreateDate' => '2015-05-29T13:35:24+02:00',
+        'ModifyDate' => '2015-05-29T13:35:24+02:00',
+        'MetadataDate' => '2015-05-29T13:35:24+02:00',
+        'CreatorTool' => 'Adobe Photoshop CS3 Windows',
+      ),
+      'dc' => 
+      array (
+        'format' => 'image/jpeg',
+      ),
+      'photoshop' => 
+      array (
+        'History' => '',
+      ),
+      'xapMM' => 
+      array (
+        'InstanceID' => 'uuid:F35DD8A0F605E511A568A05FFA956A5E',
+        'DocumentID' => 'uuid:F25DD8A0F605E511A568A05FFA956A5E',
+        'DerivedFrom' => '',
+      ),
+      'tiff' => 
+      array (
+        'Orientation' => 1,
+        'XResolution' => 300,
+        'YResolution' => 300,
+        'ResolutionUnit' => 2,
+      ),
+      'exif' => 
+      array (
+        'PixelXDimension' => 381,
+        'PixelYDimension' => 237,
+        'ColorSpace' => 1,
+      ),
+    ),
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 75,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5579984,
+      'path' => 'C:\\Software\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\nesslife/files/.thumbs/.backend/12/9b/1f3b_nessf53a40e446e2ef7c91b75ff2-500x500.jpg',
+      'filesize' => 28751,
+      'imageinfo' => 
+      array (
+        0 => 381,
+        1 => 237,
+        2 => 2,
+        3 => 'width="381" height="237"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 454829.333333333372138440608978271484375,
+      'usage_guestimate' => 636761.06666666665114462375640869140625,
+      'usage_min_advised' => 6216745.0666666664183139801025390625,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.1 MB',
+  'memory estimated' => '0.6 MB',
+  'memory suggested' => '6.2 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/12/9b/1f3b_nessf53a40e446e2ef7c91b75ff2-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 381,
+    1 => 237,
+    2 => 2,
+    3 => 'width="381" height="237"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/12/9b/1f3b_nessf53a40e446e2ef7c91b75ff2-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 75,
+    2 => 2,
+    3 => 'width="120" height="75"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
