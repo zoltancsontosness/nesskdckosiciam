@@ -2,7 +2,7 @@
 <header>
   <ion:partial view="navigation" />
 </header>
-<div class="container">
+<div class="container overflow-hidden">
 	<ion:page>
 		<section class="careers gutter-bottom row">
 			<div class="col-md-9">
@@ -26,7 +26,7 @@
 						</div>
 						<div class="form-group">
 							<label for="cv">Here upload your CV</label>
-							<input type="file" id="cv" class="form-control input-lg">
+							<input type="file" id="cv" class="btn btn-transparent blue" />
 						</div>
 							<button type="submit" class="btn btn-green btn-lg btn-block">Send Now!</button>
 						</form>
@@ -36,10 +36,11 @@
 			<div class="col-md-3">
 				<div class="gutter-bottom-small">
 					<h2 class="right-column-heading text-center">Are you interested? </h2>
-					<a href="#" class="btn btn-green btn-lg btn-block send-cv">Send Your CV Now!</a>
+					<a href="#" id="send-cv" class="btn btn-green btn-lg btn-block send-cv">Send Your CV Now!</a>
+					<a href="#" id="more-info" class="btn btn-transparent blue border-blue btn-lg btn-block send-cv hide">More Info</a>
 				</div>
 				<?php if('<ion:article:medias:count />' > 0) : ?>
-					<div class="separator gutter-bottom"></div>
+					<div class="separator gutter-bottom-small"></div>
 					<ion:article:medias type="picture" limit="1">
 						<img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive center"/>
 					</ion:article:medias>

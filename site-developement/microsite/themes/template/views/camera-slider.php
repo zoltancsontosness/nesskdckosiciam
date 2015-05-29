@@ -12,8 +12,7 @@
     </div>
   </div>
   <div class="camera_wrap">
-    <div data-src="<ion:theme_url/>img/camera/slides/bridge.jpg"></div>
-    <div data-src="<ion:theme_url/>img/camera/slides/leaf.jpg"></div>
-    <div data-src="<ion:theme_url/>img/camera/slides/road.jpg"></div>
+    <div data-src="<ion:theme_url/>img/camera/slides/slider1.jpg"></div>
+    <div data-src="<ion:theme_url/>img/camera/slides/slider2.jpg"></div>
   </div>
 </div>
