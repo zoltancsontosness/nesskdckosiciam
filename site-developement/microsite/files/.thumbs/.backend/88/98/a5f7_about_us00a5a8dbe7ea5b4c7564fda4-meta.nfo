@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /about_us/about_us.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 186049,
+  8 => 1432889976,
+  9 => 1432889976,
+  10 => 1432889976,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 186049,
+  'atime' => 1432889976,
+  'mtime' => 1432889976,
+  'ctime' => 1432889976,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 186049,
+    'filename' => 'about_us.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/about_us',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/about_us/about_us.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 186049,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 751,
+      'resolution_y' => 346,
+      'compression_ratio' => 0.2386657225176963825763465365525917150080204010009765625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 55,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5553592,
+      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-500x500.jpg',
+      'filesize' => 30529,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 230,
+        2 => 2,
+        3 => 'width="500" height="230"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 579259.25925925932824611663818359375,
+      'usage_guestimate' => 810962.962962963036261498928070068359375,
+      'usage_min_advised' => 6364554.962962962687015533447265625,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '7.5 MB',
+  'memory estimated' => '0.8 MB',
+  'memory suggested' => '6.4 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 230,
+    2 => 2,
+    3 => 'width="500" height="230"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 55,
+    2 => 2,
+    3 => 'width="120" height="55"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
