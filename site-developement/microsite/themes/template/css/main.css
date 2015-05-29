@@ -8,11 +8,13 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+/*
 @media (max-width: 767px) {
   body {
     font-size: 80%;
   }
 }
+*/
 
 p {
   margin: 0 0 35px;
@@ -155,6 +157,20 @@ span.border {
   color: #fff;
   background-color: transparent;
   border-color: rgba(221,221,221,.7);
+}
+
+.btn-blue {
+  border: 1px solid #0095cd;
+  background-color: #0095cd !important;
+  color: #fff;
+}
+.btn-blue:hover, .btn-blue:focus {
+  color: #fff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
 }
 
 .blue {
@@ -642,4 +658,28 @@ footer .socialBlock img {
 .btn.send-cv {
   padding: 25px;
   margin-top: 50px;
+}
+
+/* PAGE CAREER-ARTICLE */
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
 }

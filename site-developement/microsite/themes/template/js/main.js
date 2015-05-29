@@ -14,7 +14,8 @@ $(".item").hover(
 			bottom: 0,
 			left: 0
 		});
-	});
+	}
+);
 
 /* ---------- Animation for career-article using animate.css ------------- */
 $("a#send-cv").click(function () {
@@ -31,6 +32,7 @@ $("a#send-cv").click(function () {
 
 	return false;
 });
+
 $("a#more-info").click(function () {
 	$("#form").addClass("animated fadeOutDown");
 	$("body").animate({
@@ -44,4 +46,25 @@ $("a#more-info").click(function () {
 	}, 300);
 
 	return false;
+});
+
+/* Read the uploaded file */
+$(document).on('change', '.btn-file :file', function() {
+  var input = $(this),
+      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+  input.trigger('fileselect', [numFiles, label]);
+});
+
+$(document).ready( function() {
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        var input = $(this).parents('.input-group').find(':text');
+        var log = numFiles > 1 ? numFiles + ' files selected' : label;
+        
+        if( input.length ) {
+            input.val(log);
+        } else {
+            if( log ) alert(log);
+        }        
+    });
 });

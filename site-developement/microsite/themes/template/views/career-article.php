@@ -26,8 +26,15 @@
 						</div>
 						<div class="form-group">
 							<label for="cv">Here upload your CV</label>
-							<input type="file" id="cv" class="btn btn-transparent blue" />
-						</div>
+				            <div class="input-group">
+				                <span class="input-group-btn">
+				                    <span class="btn btn-blue btn-file btn-lg">
+				                        Browse CV&hellip; <input type="file">
+				                    </span>
+				                </span>
+				                <input type="text" class="form-control input-lg" readonly>
+				            </div>
+					    </div>
 							<button type="submit" class="btn btn-green btn-lg btn-block">Send Now!</button>
 						</form>
 					</div>
@@ -37,7 +44,7 @@
 				<div class="gutter-bottom-small">
 					<h2 class="right-column-heading text-center">Are you interested? </h2>
 					<a href="#" id="send-cv" class="btn btn-green btn-lg btn-block send-cv">Send Your CV Now!</a>
-					<a href="#" id="more-info" class="btn btn-transparent blue border-blue btn-lg btn-block send-cv hide">More Info</a>
+					<a href="#" id="more-info" class="btn btn-transparent blue border-blue btn-lg btn-block send-cv hide">Back to info</a>
 				</div>
 				<?php if('<ion:article:medias:count />' > 0) : ?>
 					<div class="separator gutter-bottom-small"></div>
