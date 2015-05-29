@@ -57,37 +57,6 @@ $data = array (
     'mime_type' => 'image/jpeg',
   ),
   'mime_type from file extension' => 'image/jpeg',
-  'img_info' => 
-  array (
-    'width' => 120,
-    'height' => 55,
-    'mime' => 'image/jpeg',
-    'ext' => 'jpeg',
-    'fileinfo' => 
-    array (
-      'memory_limit' => 268435456,
-      'mem_in_use' => 5553592,
-      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-500x500.jpg',
-      'filesize' => 30529,
-      'imageinfo' => 
-      array (
-        0 => 500,
-        1 => 230,
-        2 => 2,
-        3 => 'width="500" height="230"',
-        'bits' => 8,
-        'channels' => 3,
-        'mime' => 'image/jpeg',
-      ),
-      'needed' => 579259.25925925932824611663818359375,
-      'usage_guestimate' => 810962.962962963036261498928070068359375,
-      'usage_min_advised' => 6364554.962962962687015533447265625,
-      'will_fit' => true,
-    ),
-  ),
-  'memory used' => '7.5 MB',
-  'memory estimated' => '0.8 MB',
-  'memory suggested' => '6.4 MB',
   'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-500x500.jpg',
   'thumb250_info' => 
   array (
