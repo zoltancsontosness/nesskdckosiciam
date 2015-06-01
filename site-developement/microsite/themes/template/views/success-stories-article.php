@@ -11,9 +11,9 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="hero gutter-bottom-small"><ion:article:title /></h1>
-            <ion:media:type is="picture"> 
+            <ion:article:media:type is="picture"> 
               <img src="<ion:media:src/>" class="img-responsive"> 
-            </ion:media:type>          
+            </ion:article:media:type>          
             <h3><ion:article:subtitle /></h3>
             <div class="text-justify">
               <ion:article:content />

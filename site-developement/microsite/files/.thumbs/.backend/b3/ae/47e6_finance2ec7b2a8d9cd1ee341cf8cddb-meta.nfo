@@ -1,6 +1,6 @@
 <?php
 
-// legal URL: /stories/media.jpg
+// legal URL: /stories/finance2.jpg
 
 $statdata = array (
   0 => 2,
@@ -10,10 +10,10 @@ $statdata = array (
   4 => 0,
   5 => 0,
   6 => 2,
-  7 => 94782,
-  8 => 1433149813,
-  9 => 1433149813,
-  10 => 1433149773,
+  7 => 174364,
+  8 => 1433148570,
+  9 => 1433148570,
+  10 => 1433148570,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -23,10 +23,10 @@ $statdata = array (
   'uid' => 0,
   'gid' => 0,
   'rdev' => 2,
-  'size' => 94782,
-  'atime' => 1433149813,
-  'mtime' => 1433149813,
-  'ctime' => 1433149773,
+  'size' => 174364,
+  'atime' => 1433148570,
+  'mtime' => 1433148570,
+  'ctime' => 1433148570,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -36,12 +36,12 @@ $data = array (
   'analysis' => 
   array (
     'GETID3_VERSION' => '1.9.3-20111213',
-    'filesize' => 94782,
-    'filename' => 'media.jpg',
+    'filesize' => 174364,
+    'filename' => 'finance2.jpg',
     'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories',
-    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories/media.jpg',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories/finance2.jpg',
     'avdataoffset' => 0,
-    'avdataend' => 94782,
+    'avdataend' => 174364,
     'fileformat' => 'jpg',
     'video' => 
     array (
@@ -49,32 +49,32 @@ $data = array (
       'lossless' => false,
       'bits_per_sample' => 24,
       'pixel_aspect_ratio' => 1,
-      'resolution_x' => 400,
-      'resolution_y' => 400,
-      'compression_ratio' => 0.1974625000000000130118138486068346537649631500244140625,
+      'resolution_x' => 401,
+      'resolution_y' => 401,
+      'compression_ratio' => 0.36144883012750750328478943629306741058826446533203125,
     ),
     'encoding' => 'UTF-8',
     'mime_type' => 'image/jpeg',
   ),
   'mime_type from file extension' => 'image/jpeg',
-  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/cd/89/3d6e_mediae74896ab2b9cd1903d6e07c7-500x500.jpg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/b3/ae/47e6_finance2ec7b2a8d9cd1ee341cf8cddb-500x500.jpg',
   'thumb250_info' => 
   array (
-    0 => 371,
-    1 => 186,
+    0 => 401,
+    1 => 401,
     2 => 2,
-    3 => 'width="371" height="186"',
+    3 => 'width="401" height="401"',
     'bits' => 8,
     'channels' => 3,
     'mime' => 'image/jpeg',
   ),
-  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/cd/89/3d6e_mediae74896ab2b9cd1903d6e07c7-120x120.jpg',
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/b3/ae/47e6_finance2ec7b2a8d9cd1ee341cf8cddb-120x120.jpg',
   'thumb48_info' => 
   array (
     0 => 120,
-    1 => 60,
+    1 => 120,
     2 => 2,
-    3 => 'width="120" height="60"',
+    3 => 'width="120" height="120"',
     'bits' => 8,
     'channels' => 3,
     'mime' => 'image/jpeg',

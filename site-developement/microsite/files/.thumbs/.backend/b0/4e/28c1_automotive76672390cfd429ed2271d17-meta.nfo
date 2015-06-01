@@ -1,6 +1,6 @@
 <?php
 
-// legal URL: /about_us/about_us.jpg
+// legal URL: /stories/articles/automotive.jpg
 
 $statdata = array (
   0 => 2,
@@ -10,10 +10,10 @@ $statdata = array (
   4 => 0,
   5 => 0,
   6 => 2,
-  7 => 256547,
-  8 => 1433155720,
-  9 => 1433155720,
-  10 => 1432889976,
+  7 => 215749,
+  8 => 1433155336,
+  9 => 1433155336,
+  10 => 1433155336,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -23,10 +23,10 @@ $statdata = array (
   'uid' => 0,
   'gid' => 0,
   'rdev' => 2,
-  'size' => 256547,
-  'atime' => 1433155720,
-  'mtime' => 1433155720,
-  'ctime' => 1432889976,
+  'size' => 215749,
+  'atime' => 1433155336,
+  'mtime' => 1433155336,
+  'ctime' => 1433155336,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -36,12 +36,12 @@ $data = array (
   'analysis' => 
   array (
     'GETID3_VERSION' => '1.9.3-20111213',
-    'filesize' => 256547,
-    'filename' => 'about_us.jpg',
-    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/about_us',
-    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/about_us/about_us.jpg',
+    'filesize' => 215749,
+    'filename' => 'automotive.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories/articles',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/stories/articles/automotive.jpg',
     'avdataoffset' => 0,
-    'avdataend' => 256547,
+    'avdataend' => 215749,
     'fileformat' => 'jpg',
     'video' => 
     array (
@@ -49,15 +49,15 @@ $data = array (
       'lossless' => false,
       'bits_per_sample' => 24,
       'pixel_aspect_ratio' => 1,
-      'resolution_x' => 1171,
+      'resolution_x' => 751,
       'resolution_y' => 346,
-      'compression_ratio' => 0.2110632843492955268427380133289261721074581146240234375,
+      'compression_ratio' => 0.276765212215440425946866298545501194894313812255859375,
     ),
     'encoding' => 'UTF-8',
     'mime_type' => 'image/jpeg',
   ),
   'mime_type from file extension' => 'image/jpeg',
-  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-500x500.jpg',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/b0/4e/28c1_automotive76672390cfd429ed2271d17-500x500.jpg',
   'thumb250_info' => 
   array (
     0 => 500,
@@ -68,7 +68,7 @@ $data = array (
     'channels' => 3,
     'mime' => 'image/jpeg',
   ),
-  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/88/98/a5f7_about_us00a5a8dbe7ea5b4c7564fda4-120x120.jpg',
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/b0/4e/28c1_automotive76672390cfd429ed2271d17-120x120.jpg',
   'thumb48_info' => 
   array (
     0 => 120,
