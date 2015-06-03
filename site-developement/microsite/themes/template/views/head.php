@@ -9,6 +9,8 @@
     <meta name="description" content="<ion:meta_description />" />
     <meta name="keywords" content="<ion:meta_keywords />" />
 
+  <link rel="shortcut icon" href="<ion:theme_url/>img/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="<ion:theme_url/>css/bootstrap.css">
   <link rel="stylesheet" href="<ion:theme_url/>css/main.css">
   <link rel="stylesheet" href="<ion:theme_url/>css/camera.css">

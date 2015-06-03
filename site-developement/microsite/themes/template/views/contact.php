@@ -64,4 +64,4 @@
   </section>
 </div>
 
-<ion:partial view="footer-no-map" />
+<ion:partial view="footer" />

@@ -32,6 +32,19 @@ body {
 
 }
 
+ul {
+  padding: 0;
+}
+
+ul.right-nav {
+  padding-left: 20px;
+}
+
+#content ul {
+  padding-left: 20px;
+}
+
+
 p {
   margin: 0 0 35px;
   color: #777;
@@ -86,6 +99,17 @@ label {
 
 .center {
   margin: auto;
+}
+
+.row-centered {
+  text-align:center;
+}
+
+.col-centered {
+  display:inline-block;
+  float:none;
+  text-align:left;
+  margin-right:-4px;
 }
 
 .items {
@@ -255,6 +279,9 @@ header nav ul li {
   display: inline-block;
   padding-right: 15px;
   line-height: 30px;
+}
+header nav ul li:last-child {
+  padding-right: 0;
 }
 
 header nav ul li a {
@@ -426,7 +453,7 @@ div.cover{
 footer {
   margin-left: -15px;
   margin-right: -15px;
-  color: #FFF;    
+  color: #FFF;   
 }
 
 footer .contact {
@@ -436,7 +463,6 @@ footer .contact {
 footer .links {
   list-style-type: none;
   text-align: right;
-  margin: 10px 0;
 }
 
 footer .links li {
@@ -460,6 +486,9 @@ footer .copyright {
 footer .socialBlock img {
   margin-left: 10px;
 }
+footer ul {
+  margin-bottom: 0;
+}
 
 @media (max-width: 767px) {
   footer .copyright {
@@ -482,7 +511,7 @@ footer .socialBlock img {
   }
   
   footer .socialBlock {
-    float: right;
+    float: left;
   }
 }
 

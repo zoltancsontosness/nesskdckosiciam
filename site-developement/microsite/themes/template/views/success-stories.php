@@ -6,10 +6,10 @@
 
 <div class="container">
   <ion:page>
-  <h1 class="hero row gutter-bottom-small"><ion:title /></h1>
-    <div class="items row">
+  <h1 class="hero gutter-bottom-small"><ion:title /></h1>
+    <div class="items">
       <div class="col-sm-12">
-        <div class="row">
+        <div class="row gutter-bottom">
           <ion:medias type="picture" range="1,4" size="400,400" method="adaptive">
             <a href="<ion:page:url />/<ion:media:link />">
               <div class="item small-column col-sm-3">

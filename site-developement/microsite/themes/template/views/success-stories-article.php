@@ -16,12 +16,14 @@
             </ion:article:media:type>          
             <h3><ion:article:subtitle /></h3>
             <div class="text-justify">
+            <div id="content">
               <ion:article:content />
+            </div>
             </div> 
           </div>
           <div class="col-md-4">
             <h2 class="right-column-heading">Another stories</h2>
-            <ul>
+            <ul class="right-nav">
             <ion:articles>            
               <li><a href="<ion:article:url />"><ion:article:title /></a></li>          
             </ion:articles>
