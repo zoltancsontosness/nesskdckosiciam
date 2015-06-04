@@ -267,30 +267,45 @@ header .user {
   line-height: 18px;
 }
 
-.news > span {
-  padding-right: 3px;
-}
-
-.news > p {
-  padding-bottom: 5px;
+.puzzle .newsItem {
+  margin-bottom: 9px;
   border-bottom: 1px solid #AAA;
 }
 
-.positions h4 {
+.puzzle .newsItem > h4 {
+  margin: 0px;
+  height: 22px;
+  overflow: hidden;
+}
+
+.puzzle .newsItem > span {
+  padding-right: 3px;
+  font-size: 12px;
+}
+
+.puzzle .newsItem > p {
+  margin-top: 5px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.puzzle .positions h4 {
 
 }
 
-.positions img {
+.puzzle .positions img {
   margin-right: 10px;
   max-width: 100px;
   border-radius: 0px;
   float: left;
 }
 
-.positions .clearfix {
+.puzzle .positions .clearfix {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #AAA;
+  height: 75px;
+  overflow: hidden;
 }
 
 /* Page News */
@@ -313,6 +328,82 @@ ul.newsCategories li:last-child:after {
 
 .newsCategoriesActive {
   font-weight: bold;
+}
+
+/* Page Team */
+.teamMembers .thumbnail {
+  margin: 0px auto;
+  margin-bottom: 40px;
+  max-width: 380px;
+}
+
+.teamMembers img {
+  margin: 0px auto;
+}
+
+.teamMembers h1 {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;  
+}
+
+@media (min-width: 768px) {
+  .teamMembers h1 {
+    height: 45px;
+  }
+}
+
+.teamMembers h2 {
+  margin-top: 10px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FFF;  
+}
+
+.teamMembers .glyphicon {
+  margin-right: 10px; 
+}
+
+.teamMembers span {
+  color: #FFF;
+  font-size: 14px;
+  margin-bottom: 10px;  
+}
+
+.teamMembers .btn {
+  margin-top: 5px;
+  outline: 0px none;  
+}
+
+.teamMembers .memberInfo {
+  margin: 0px auto;
+  max-width: 370px;
+  padding: 10px;
+  background-color: #1D86C8;
+}
+
+/* Page Positions */
+.positionColumn {
+  margin-bottom: 20px;  
+}
+
+.positionColumn p {
+  padding-top: 10px;
+  border-top: 3px solid #1D86C8;
+}
+
+.positionColumn .btn {
+  margin-top: 10px;
+  border-color: #1D86C8;
+  font-weight: bold;
+}
+
+.positionColumn .btn:hover,
+.positionColumn .btn:focus {
+  color: #FFF;
+  background-color: #1D86C8;
 }
 
 /* Footer */

@@ -41,14 +41,16 @@
       <div class="col-sm-4 news">
         <h2><span>News</span></h2>
         <ion:page id="news">
-          <ion:articles limit="3">
+          <ion:articles limit="4">
             <ion:article>
-              <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
-              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-              <ion:article:date format="d/m/Y" tag="span" />
-              <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-              <ion:article:categories:list link="false" separator=" / " tag="span" />
-              <ion:article:content words="15" />
+              <div class="newsItem">
+                <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
+                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                <ion:article:date format="d/m/Y" tag="span" />
+                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                <ion:article:categories:list link="false" separator=" / " tag="span" />
+                <ion:article:content paragraph="1" />
+              </div>
             </ion:article>
           </ion:articles>
         </ion:page>

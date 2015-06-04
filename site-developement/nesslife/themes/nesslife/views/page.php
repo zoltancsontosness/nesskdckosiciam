@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-md-12">
             <ion:article:title tag="h1" />
+            <ion:article:subtitle tag="h4" />
             <hr />
             <ion:article:content />  
           </div>
