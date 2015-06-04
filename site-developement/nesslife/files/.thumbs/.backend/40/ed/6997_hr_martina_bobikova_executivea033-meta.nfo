@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /faces/hr/hr_martina_bobikova_executive.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 170401,
+  8 => 1433423674,
+  9 => 1433423674,
+  10 => 1433423674,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 170401,
+  'atime' => 1433423674,
+  'mtime' => 1433423674,
+  'ctime' => 1433423674,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 170401,
+    'filename' => 'hr_martina_bobikova_executive.jpg',
+    'filepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/faces/hr',
+    'filenamepath' => 'C:/softy/xampp/htdocs/nesskdckosiciam/site-developement/nesslife/files/faces/hr/hr_martina_bobikova_executive.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 170401,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 464,
+      'resolution_y' => 545,
+      'compression_ratio' => 0.2246137825582621427855656293104402720928192138671875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 102,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5556064,
+      'path' => 'C:\\softy\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\nesslife/files/.thumbs/.backend/40/ed/6997_hr_martina_bobikova_executivea033-500x500.jpg',
+      'filesize' => 43499,
+      'imageinfo' => 
+      array (
+        0 => 426,
+        1 => 500,
+        2 => 2,
+        3 => 'width="426" height="500"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 1072888.888888888992369174957275390625,
+      'usage_guestimate' => 1502044.4444444444961845874786376953125,
+      'usage_min_advised' => 7058108.4444444440305233001708984375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '8.0 MB',
+  'memory estimated' => '1.5 MB',
+  'memory suggested' => '7.1 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/40/ed/6997_hr_martina_bobikova_executivea033-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 426,
+    1 => 500,
+    2 => 2,
+    3 => 'width="426" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/nesslife/files/.thumbs/.backend/40/ed/6997_hr_martina_bobikova_executivea033-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 102,
+    1 => 120,
+    2 => 2,
+    3 => 'width="102" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
