@@ -283,3 +283,11 @@ ERROR - 2015-06-05 13:32:36 --> Could not find the language key : "dateformat_d/
 ERROR - 2015-06-05 13:32:36 --> Could not find the language key : "dateformat_d/m/Y"
 ERROR - 2015-06-05 13:32:36 --> Could not find the language key : "dateformat_Y-m-d"
 ERROR - 2015-06-05 13:32:36 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-05 14:00:25 --> Language file contains no data: language/sk/form_validation_lang
+ERROR - 2015-06-05 14:00:26 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-05 14:00:26 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-05 14:00:26 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-05 14:00:26 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-05 14:00:27 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-05 14:00:27 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-05 14:04:47 --> Severity: Warning  --> filemtime(): stat failed for dbbackup.sql C:\Software\xampp\htdocs\nesskdckosiciam\site-developement\nesslife\system\libraries\Zip.php 91
