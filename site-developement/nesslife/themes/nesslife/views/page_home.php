@@ -1,5 +1,6 @@
 <ion:partial view="header" />
-    
+<ion:user:logged is="true">
+
     <div class="row">
       <div class="col-sm-9 col-md-9">
         <ion:page id="slideshow">
@@ -180,4 +181,8 @@
       });
     </script>
 
+</ion:user:logged>
+<ion:user:logged is="false">
+  <ion:partial view="401" />
+</ion:user:logged>
 <ion:partial view="footer" />

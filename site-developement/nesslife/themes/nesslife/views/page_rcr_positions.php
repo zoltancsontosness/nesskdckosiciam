@@ -1,5 +1,6 @@
 <ion:partial view="header" />
-    
+<ion:user:logged is="true">
+
     <div class="row">
       <div class="col-sm-12">
         <ion:page:title tag="h1" />
@@ -26,4 +27,8 @@
     
     <ion:page:articles:pagination pagination="10" />
 
+</ion:user:logged>
+<ion:user:logged is="false">
+  <ion:partial view="401" />
+</ion:user:logged>
 <ion:partial view="footer" />

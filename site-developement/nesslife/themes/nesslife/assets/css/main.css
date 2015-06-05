@@ -50,7 +50,18 @@ header .logo img {
 }
 
 header .user {
+  margin-bottom: 20px;
   text-align: right;
+}
+
+@media (max-width: 767px) {
+  header .logo {
+    text-align: center;
+  }
+  
+  header .user {
+    text-align: center;
+  }
 }
 
 /* Navigation */
@@ -442,4 +453,20 @@ footer a {
 footer a:hover {
   color: #009FDE;
   text-decoration: none;
+}
+
+/* Login view */
+.loginContainer {
+  position: relative;
+  margin: 30px auto;
+  padding: 15px;
+  max-width: 480px;
+  background-color: #FFF;
+  border: 2px solid #1D86C8;
+}
+
+@media (max-width: 500px) {
+  .loginContainer {
+    margin: 15px;
+  }
 }

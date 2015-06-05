@@ -1,5 +1,6 @@
 <ion:partial view="header" />
-    
+<ion:user:logged is="true">
+
     <ion:articles>
       <ion:article>
         <div class="row">
@@ -22,6 +23,11 @@
         </div>
       </ion:article>
     </ion:articles>
+
+</ion:user:logged>
+<ion:user:logged is="false">
+  <ion:partial view="401" />
+</ion:user:logged>
 
 	<div class="row">
 		<ion:articles type="bloc" authorization="all">
