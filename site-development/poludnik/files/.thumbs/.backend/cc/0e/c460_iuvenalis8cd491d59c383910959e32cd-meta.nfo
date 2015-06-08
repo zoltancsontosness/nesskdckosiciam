@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /iuvenalis.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 31332,
+  8 => 1430902557,
+  9 => 1430902557,
+  10 => 1430902557,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 31332,
+  'atime' => 1430902557,
+  'mtime' => 1430902557,
+  'ctime' => 1430902557,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 31332,
+    'filename' => 'iuvenalis.jpg',
+    'filepath' => 'C:/xampp/htdocs/ionize/files',
+    'filenamepath' => 'C:/xampp/htdocs/ionize/files/iuvenalis.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 31332,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 286,
+      'resolution_y' => 176,
+      'compression_ratio' => 0.207485696122059748436328163734287954866886138916015625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/cc/0e/c460_iuvenalis8cd491d59c383910959e32cd-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 286,
+    1 => 176,
+    2 => 2,
+    3 => 'width="286" height="176"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/cc/0e/c460_iuvenalis8cd491d59c383910959e32cd-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 74,
+    2 => 2,
+    3 => 'width="120" height="74"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /otv18.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 170729,
+  8 => 1432207124,
+  9 => 1432207125,
+  10 => 1432207124,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 170729,
+  'atime' => 1432207124,
+  'mtime' => 1432207125,
+  'ctime' => 1432207124,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 170729,
+    'filename' => 'otv18.jpg',
+    'filepath' => 'C:/xampp/htdocs/ionize/files',
+    'filenamepath' => 'C:/xampp/htdocs/ionize/files/otv18.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 170729,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 600,
+      'resolution_y' => 437,
+      'compression_ratio' => 0.217046783625730987932200832801754586398601531982421875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/69/f1/514f_otv1863c753c7382e8fa0ffcaa46d-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 364,
+    2 => 2,
+    3 => 'width="500" height="364"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/69/f1/514f_otv1863c753c7382e8fa0ffcaa46d-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 87,
+    2 => 2,
+    3 => 'width="120" height="87"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

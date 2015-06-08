@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /miperformonaberdeenstreet2012.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 180469,
+  8 => 1430902939,
+  9 => 1430902940,
+  10 => 1430902939,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 180469,
+  'atime' => 1430902939,
+  'mtime' => 1430902940,
+  'ctime' => 1430902939,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 180469,
+    'filename' => 'miperformonaberdeenstreet2012.jpg',
+    'filepath' => 'C:/xampp/htdocs/ionize/files',
+    'filenamepath' => 'C:/xampp/htdocs/ionize/files/miperformonaberdeenstreet2012.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 180469,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 732,
+      'resolution_y' => 411,
+      'compression_ratio' => 0.199953243898439547709955377285950817167758941650390625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/39/c7/1c81_miperformonaberdeenstreet2012e905-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 281,
+    2 => 2,
+    3 => 'width="500" height="281"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/39/c7/1c81_miperformonaberdeenstreet2012e905-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 67,
+    2 => 2,
+    3 => 'width="120" height="67"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

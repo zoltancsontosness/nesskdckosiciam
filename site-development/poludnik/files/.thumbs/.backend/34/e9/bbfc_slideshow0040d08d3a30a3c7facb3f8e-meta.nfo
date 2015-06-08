@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /slideshow/slideshow00.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 654976,
+  8 => 1432637697,
+  9 => 1432637698,
+  10 => 1432637697,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 654976,
+  'atime' => 1432637697,
+  'mtime' => 1432637698,
+  'ctime' => 1432637697,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 654976,
+    'filename' => 'slideshow00.jpg',
+    'filepath' => 'C:/xampp/htdocs/ionize/files/slideshow',
+    'filenamepath' => 'C:/xampp/htdocs/ionize/files/slideshow/slideshow00.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 654976,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 675,
+      'compression_ratio' => 0.26953744855967076698988194038975052535533905029296875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/34/e9/bbfc_slideshow0040d08d3a30a3c7facb3f8e-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 281,
+    2 => 2,
+    3 => 'width="500" height="281"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/34/e9/bbfc_slideshow0040d08d3a30a3c7facb3f8e-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 67,
+    2 => 2,
+    3 => 'width="120" height="67"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
