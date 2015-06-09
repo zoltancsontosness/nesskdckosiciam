@@ -305,13 +305,13 @@ header ul {
 }
 
 header .logo img {
-  width: 40px;
+  width: 80px;
 }
 
 header nav ul li {
   display: inline-block;
   padding-right: 15px;
-  line-height: 30px;
+  line-height: 80px;
 }
 header nav ul li:last-child {
   padding-right: 0;
