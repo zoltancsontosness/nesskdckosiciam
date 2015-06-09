@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /thumb_spravodaj1tatry_web_5.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 22988,
+  8 => 1431676524,
+  9 => 1431676525,
+  10 => 1431676524,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 22988,
+  'atime' => 1431676524,
+  'mtime' => 1431676525,
+  'ctime' => 1431676524,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 22988,
+    'filename' => 'thumb_spravodaj1tatry_web_5.jpg',
+    'filepath' => 'C:/xampp/htdocs/ionize/files',
+    'filenamepath' => 'C:/xampp/htdocs/ionize/files/thumb_spravodaj1tatry_web_5.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 22988,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 105,
+      'resolution_y' => 150,
+      'compression_ratio' => 0.486518518518518516824400421683094464242458343505859375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/a6/a3/6886_thumb_spravodaj1tatry_web_56227f1-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 105,
+    1 => 150,
+    2 => 2,
+    3 => 'width="105" height="150"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/a6/a3/6886_thumb_spravodaj1tatry_web_56227f1-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 84,
+    1 => 120,
+    2 => 2,
+    3 => 'width="84" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
