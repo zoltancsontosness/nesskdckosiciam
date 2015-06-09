@@ -28,7 +28,7 @@
     <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet">
   </head>
   <body>
-
+<ion:user:logged is="true">
   <div class="container">
     <!-- Header -->
     <header class="row">
@@ -36,7 +36,11 @@
         <a href="<ion:home_url />"><img src="<ion:theme_url/>assets/images/nesslife-logo.png" alt="NESSlife"></a>
       </div>
       <div class="col-sm-6 user">
-        Logged in: <strong>user</strong><br><small>[<a href="#">Logout</a>]</small>
+        Logged in: <strong><ion:user:firstname /> <ion:user:lastname /></strong>
+        <form method="post" action="">
+          <input type="hidden" name="form" value="logout" />
+          <input type="submit" value="Logout" class="btn btn-xs" />
+        </form>
       </div>
       <div class="col-xs-12">
         <!-- Navigation -->
@@ -59,7 +63,4 @@
         </nav>
       </div>
     </header>
-  
-  
-
-    
+</ion:user:logged>

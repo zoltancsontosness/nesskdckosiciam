@@ -1,0 +1,28 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-06-09 09:17:30 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:17:31 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:17:31 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:17:31 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:17:32 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 09:17:32 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 09:54:40 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:54:40 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:54:40 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:54:40 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 09:54:40 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 09:54:40 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 13:14:16 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 13:14:16 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 13:14:16 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 13:14:16 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 13:14:17 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 13:14:17 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 14:16:18 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 14:16:18 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 14:16:18 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 14:16:18 --> Could not find the language key : "dateformat_d/m/Y"
+ERROR - 2015-06-09 14:16:19 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 14:16:19 --> Could not find the language key : "dateformat_Y-m-d"
+ERROR - 2015-06-09 14:31:56 --> Severity: Warning  --> filemtime(): stat failed for dbbackup.sql C:\softy\xampp\htdocs\nesskdckosiciam\site-developement\nesslife\system\libraries\Zip.php 91
+ERROR - 2015-06-09 14:38:45 --> Severity: Warning  --> filemtime(): stat failed for dbbackup.sql C:\softy\xampp\htdocs\nesskdckosiciam\site-developement\nesslife\system\libraries\Zip.php 91

@@ -1,5 +1,6 @@
 <ion:partial view="header" />
-    
+<ion:user:logged is="true">
+
     <div class="row">
       <div class="col-sm-9 col-md-9">
         <ion:page id="slideshow">
@@ -41,14 +42,16 @@
       <div class="col-sm-4 news">
         <h2><span>News</span></h2>
         <ion:page id="news">
-          <ion:articles limit="3">
+          <ion:articles limit="4">
             <ion:article>
-              <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
-              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-              <ion:article:date format="d/m/Y" tag="span" />
-              <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-              <ion:article:categories:list link="false" separator=" / " tag="span" />
-              <ion:article:content words="15" />
+              <div class="newsItem">
+                <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
+                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                <ion:article:date format="d/m/Y" tag="span" />
+                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                <ion:article:categories:list link="false" separator=" / " tag="span" />
+                <ion:article:content paragraph="1" />
+              </div>
             </ion:article>
           </ion:articles>
         </ion:page>
@@ -68,11 +71,11 @@
               <div class="clearfix">
               <ion:page id="labs">
                 <ion:articles>
-                  <?php if ("<ion:article:name />" == "$lab" ) :?>
+                  <?php if (strtolower("<ion:article:title />") == $lab):?>
                     <ion:article:medias type="picture" limit="1">
                       <img src="<ion:media:src />" alt="<?php echo $lab;?>" />
                     </ion:article:medias>
-                  <?php endif ;?> 
+                  <?php endif;?> 
                 </ion:articles>
               </ion:page>
               <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>
@@ -178,4 +181,8 @@
       });
     </script>
 
+</ion:user:logged>
+<ion:user:logged is="false">
+  <ion:partial view="401" />
+</ion:user:logged>
 <ion:partial view="footer" />

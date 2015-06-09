@@ -1,5 +1,6 @@
 <ion:partial view="header" />
-    
+<ion:user:logged is="true">
+
     <div class="row">
       <div class="col-sm-12">
         <ion:page:title tag="h1" />
@@ -11,11 +12,14 @@
       <ion:page>
         <ion:articles pagination="10">
           <ion:article>
-            <div class="col-sm-12">
+            <div class="col-md-4 positionColumn">
               <h3><a href="<ion:article:url />"><ion:article:title /></a></h3>
               <ion:article:content words="50" />
-              <hr />
+              <div class="clearfix">
+                <a href="<ion:article:url />" class="btn pull-right">Read more...</a>
+              </div>
             </div>
+            <ion:article:index expression="index%3==0"></div><div class="row"></ion:article:index>
           </ion:article>
         </ion:articles>
       </ion:page>
@@ -23,4 +27,8 @@
     
     <ion:page:articles:pagination pagination="10" />
 
+</ion:user:logged>
+<ion:user:logged is="false">
+  <ion:partial view="401" />
+</ion:user:logged>
 <ion:partial view="footer" />
