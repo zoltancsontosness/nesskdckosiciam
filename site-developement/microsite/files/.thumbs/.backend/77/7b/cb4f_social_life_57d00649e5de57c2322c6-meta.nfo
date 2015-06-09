@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /life_at_kdc/social_life_5.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 158772,
+  8 => 1433500373,
+  9 => 1433500373,
+  10 => 1433500373,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 158772,
+  'atime' => 1433500373,
+  'mtime' => 1433500373,
+  'ctime' => 1433500373,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 158772,
+    'filename' => 'social_life_5.jpg',
+    'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/life_at_kdc',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/microsite/files/life_at_kdc/social_life_5.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 158772,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 401,
+      'resolution_y' => 401,
+      'compression_ratio' => 0.329127306422223764315049265860579907894134521484375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5555160,
+      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\microsite/files/.thumbs/.backend/77/7b/cb4f_social_life_57d00649e5de57c2322c6-500x500.jpg',
+      'filesize' => 158772,
+      'imageinfo' => 
+      array (
+        0 => 401,
+        1 => 401,
+        2 => 2,
+        3 => 'width="401" height="401"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 809960.59259259258396923542022705078125,
+      'usage_guestimate' => 1133944.82962962961755692958831787109375,
+      'usage_min_advised' => 6689104.8296296298503875732421875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.5 MB',
+  'memory estimated' => '1.1 MB',
+  'memory suggested' => '6.7 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/77/7b/cb4f_social_life_57d00649e5de57c2322c6-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 401,
+    1 => 401,
+    2 => 2,
+    3 => 'width="401" height="401"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/microsite/files/.thumbs/.backend/77/7b/cb4f_social_life_57d00649e5de57c2322c6-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 120,
+    2 => 2,
+    3 => 'width="120" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

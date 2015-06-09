@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm-3">
               <ul class="links">
-                <li><a target="_blank" href="http://www.ness-ses.com/">Ness-ses</a></li>
+                <li><a target="_blank" href="http://www.ness-ses.com/">NESS-SESS</a></li>
                 <li><a href="/contacts">Contact</a></li>
               </ul> 
             </div>

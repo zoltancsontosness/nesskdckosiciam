@@ -15,12 +15,12 @@
               <img src="<ion:media:src/>" class="img-responsive" /> 
             </ion:medias:media>          
             <h3><ion:article:subtitle /></h3> 
-            <div class="text-justify">
+            <div class="text-justify content">
               <ion:article:content />
             </div>
           </div>
           <div class="col-md-4">
-            <h2 class="right-column-heading">Another articles</h2>
+            <h2 class="right-column-heading">Other articles</h2>
             <ul class="right-nav">
               <ion:articles>            
                 <li><a href="<ion:article:url />"><ion:article:title /></a></li>          

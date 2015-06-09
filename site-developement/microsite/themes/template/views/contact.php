@@ -23,7 +23,7 @@
 		                    <ion:lang key="form_alert_success_title" tag="h4" />
 		                    <ion:lang key="form_alert_success_message" tag="p" />
 		                </div>
-			        </ion:form:contact:validation:success>
+			         </ion:form:contact:validation:success>
 
 			        <ion:form:contact:validation:error is="true" >
 		                <!--
@@ -48,8 +48,8 @@
 	                    <input name="email" type="text" class="input-lg form-control form-group" id="email" value="<ion:form:contact:field:email />"<ion:form:contact:error:email is="true"> class="error" </ion:form:contact:error:email> placeholder="Email..." />
 	                    <ion:form:contact:error:email tag="small" class="error" />
 	                	<!-- Input : Message -->
-						<textarea name="message" id="message" class="input-lg form-control form-group" rows="7" placeholder="Message..." /><ion:form:contact:error:message is="true"> class="error" </ion:form:contact:error:message><ion:form:contact:field:message /></textarea>
-						<ion:form:contact:error:message tag="small" class="error" />
+						        <textarea name="message" id="message" class="input-lg form-control form-group" rows="7" placeholder="Message..." /><ion:form:contact:error:message is="true"> class="error" </ion:form:contact:error:message><ion:form:contact:field:message /></textarea>
+						        <ion:form:contact:error:message tag="small" class="error" />
 
 	                    <input type="submit" class="btn btn-lg btn-block btn-green" value="Send" />
 		            </form>

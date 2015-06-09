@@ -24,7 +24,9 @@
 						</ion:medias>
 						<div class=" col-xs-12 col-sm-6">
 							<h1 class="hero">
-								<ion:article:title />
+								<a href="<ion:base_url />success-stories">
+									<ion:article:title />
+								</a>
 							</h1>
 							<span class="border"></span>
 						</div>
@@ -41,7 +43,6 @@
 					<p>
 						<ion:article:content />
 					</p>
-					<a href="#" class="link"><ion:article:subtitle /></a>
 				</div>
 				<div class="logos col-xs-12 col-sm-12 col-md-5 col-md-offset-1">
 					<div class="row">

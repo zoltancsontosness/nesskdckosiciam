@@ -7,8 +7,8 @@
       We have 40 jobs open. Seek your oportunity or apply for Ness Academy to grow your skills faster.
     </p>
     <div class="buttons col-xs-12">
-	  <a href="#" class="btn btn-green btn-lg">Seek for your oportunity</a>
-      <a href="#" class="btn btn-transparent btn-lg">Apply for Ness Academy</a>
+	  <a href="<ion:base_url />careers/vacancies" class="btn btn-green btn-lg">Seek for your oportunity</a>
+      <a href="<ion:base_url />careers/ness-academy" class="btn btn-transparent btn-lg">Apply for Ness Academy</a>
     </div>
   </div>
   <div class="camera_wrap">

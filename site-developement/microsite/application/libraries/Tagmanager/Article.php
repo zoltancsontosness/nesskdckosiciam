@@ -137,7 +137,7 @@ class TagManager_Article extends TagManager
 		// @TODO : Find a way to display articles from a given category : filter ?
 		$from_categories = $tag->getAttribute('from_categories');
 		$from_categories_condition = ($tag->getAttribute('from_categories_condition') != NULL && $tag->attr['from_categories_condition'] != 'or') ? 'and' : 'or';
-
+		
 		/*
 		 * Preparing WHERE on articles
 		 * From where do we get the article : from a page, from the parent page or from the all website ?

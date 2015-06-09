@@ -5,13 +5,28 @@
 /* Imports */
 @import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
 
+/* Sticky footer 
+html {
+	position: relative;
+  min-height: 100%;
+}
+
+footer {  
+	position: absolute;
+  width: 100%;
+  bottom: 0;
+}*/
+.push-footer-bottom {
+	min-height: 615px;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 45px !important;
+    font-size: 35px !important;
   }
 
   h2 {
@@ -30,7 +45,13 @@ body {
     padding-top: 0 !important;
   }
 
+  header .btn {
+    margin: 5px auto !important;
+    min-width: 100%;
+  }
 }
+
+/* Reduce font size for extra small devieces */
 
 ul {
   padding: 0;
@@ -78,12 +99,13 @@ label {
 }
 
 .gutter-bottom-small {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 
 .hero {
   font-size: 56px;
   font-weight: 900;
+	margin: 0;
 }
 
 .subHero {
@@ -91,6 +113,10 @@ label {
   font-size: 36px;
   font-weight: bold;
   color: #0095cd;
+}
+
+.vacancy-title {
+  min-height: 66px;
 }
 
 .right-column-heading {
@@ -169,6 +195,12 @@ span.border {
   float: right;
 }
 
+@media (max-width: 900px) {
+	span.border {
+		display: none;
+	}	
+}
+
 /* Buttons */
 .btn {
   margin-bottom: 4px;
@@ -231,6 +263,7 @@ header {
   position: relative;
   margin-left: -15px;
   margin-right: -15px;
+	margin-bottom: 39px;
 }
 
 header .navigation-home {
@@ -373,6 +406,8 @@ div.cover{
   color: #777;
 }
 
+@
+
 #advantages .btn {
   margin-top: 30px;
 }
@@ -485,7 +520,14 @@ footer .copyright {
 
 footer .socialBlock img {
   margin-left: 10px;
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
 }
+
+footer .socialBlock img:hover {
+  transform: rotateY(360deg);
+}
+
 footer ul {
   margin-bottom: 0;
 }
@@ -538,6 +580,13 @@ footer ul {
 .lookInside .link {
   margin: 45px 0;
   float: right;
+}
+
+@media (max-width: 767px) {
+	.lookInside .link {
+		margin-bottom: 35px;
+  	float: none;
+	}
 }
 
 #ourlife .hero {
@@ -727,4 +776,44 @@ footer ul {
 input[readonly] {
   background-color: white !important;
   cursor: text !important;
+}
+
+.column-item {
+	position: relative;
+	min-height: 250px;
+}
+
+@media(min-width: 400px) and (max-width: 767px) {
+	.column-item {
+		min-height: 250px;
+	}
+}
+
+@media(min-width: 768px) and (max-width: 989px) {
+	.column-item {
+		min-height: 480px;
+	}
+}
+
+@media (min-width: 990px) {
+	.column-item {
+		min-height: 370px;
+	}
+}
+
+.column-item .more-info {
+	position: absolute;
+	bottom: 0;
+}
+
+@media(max-width: 767px) {
+	.column-item .more-info {
+		position: relative;
+	}
+}
+
+/* PAGE Life at kdc */
+.content img {
+	float: right;
+	margin: 0 0 0 20px;
 }

@@ -28,7 +28,7 @@
 			<div class="row lookInside">
 				<div class="col-sm-11 col-sm-offset-1">
 					<div class="col-sm-6">
-						<a href="#" class="link"><ion:article:subtitle /></a>
+						<a href="<ion:base_url />life-at-kdc" class="link"><ion:article:subtitle /></a>
 					</div>
 					<div class="col-sm-6">
 						<ion:article:content />
