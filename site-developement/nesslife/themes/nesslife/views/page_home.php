@@ -71,11 +71,11 @@
               <div class="clearfix">
               <ion:page id="labs">
                 <ion:articles>
-                  <?php if ("<ion:article:name />" == "$lab" ) :?>
+                  <?php if (strtolower("<ion:article:title />") == $lab):?>
                     <ion:article:medias type="picture" limit="1">
                       <img src="<ion:media:src />" alt="<?php echo $lab;?>" />
                     </ion:article:medias>
-                  <?php endif ;?> 
+                  <?php endif;?> 
                 </ion:articles>
               </ion:page>
               <h4><a href="<ion:article:url />"><ion:article:title /></a></h4>

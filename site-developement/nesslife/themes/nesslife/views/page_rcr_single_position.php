@@ -16,19 +16,19 @@
         <ion:article:element:rcr-project>
           <ion:items:rcr-position-project>       
             <ion:values>
-              <?php $lab = '<ion:label />'; ?>
+              <?php $lab = '<ion:label />';?>
             </ion:values>
           </ion:items:rcr-position-project>
         </ion:article:element:rcr-project>
         <ion:page id="labs">
           <ion:articles>
-            <?php if ("<ion:article:name />" == "$lab" ) :?>
+            <?php if (strtolower("<ion:article:title />") == $lab):?>
               <ion:article:medias type="picture" limit="1">
                 <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive" />
               </ion:article:medias>
               <ion:article:title tag="b" />
               <ion:article:content />
-            <?php endif ;?> 
+            <?php endif;?>
           </ion:articles>
         </ion:page>
       </div>
