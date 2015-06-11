@@ -4,25 +4,23 @@
   <ion:page:title tag="h1" class="page_title" />
 </div>
 
+<?php $act_year=date( "Y") ; ?>
+
 <div class="row">
   <ion:page id="tlacove-spravy">
+   
     <div class="col-md-12">
       <ion:page:title tag="h2" />
     </div>
-    <ion:articles>
-      <ion:article:index is="1">
-        <?php $first_art='<ion:extend:date:value format="Y"/>' ; ?>
-      </ion:article:index>
 
+    <ion:articles order_by="date DESC">
       <ion:article>
-        <?php if( '<ion:extend:date:value format="Y" />'==$first_art) : ?>
-
+        <?php if( '<ion:date format="Y" />'==$act_year) : ?>
         <ion:medias type="file" limit="1">
           <a href="<ion:media:src />" target="_blank">
             <ion:partial view="press_article" />
           </a>
         </ion:medias>
-
         <?php endif ?>
       </ion:article>
     </ion:articles>
@@ -43,13 +41,9 @@
       <ion:page:title tag="h2" />
     </div>
 
-    <ion:articles>
-      <ion:article:index is="1">
-        <?php $first_art='<ion:extend:date:value format="Y"/>' ; ?>
-      </ion:article:index>
-
+    <ion:articles order_by="date DESC">
       <ion:article>
-        <?php if( '<ion:extend:date:value format="Y"/>'==$first_art) : ?>
+        <?php if( '<ion:date format="Y"/>'==$act_year) : ?>
 
         <a href="<ion:url />" target="_blank">
           <ion:partial view="press_article" />
@@ -57,7 +51,6 @@
 
         <?php endif ?>
       </ion:article>
-
     </ion:articles>
 
     <button type="button" class="btn btn-primary btn-custom" onclick="window.location.href='<ion:page:url/>'">

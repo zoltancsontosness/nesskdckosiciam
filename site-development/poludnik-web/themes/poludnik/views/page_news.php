@@ -4,9 +4,9 @@
   <ion:page:title tag="h1" class="page_title" />
 </div>
 
-<div class="row">
-  <ion:articles>
-    <div class="col-md-6 responsive-element">
+<div class="row panel-news">
+  <ion:articles order_by="created DESC">
+    <div class="col-md-6 col-xs-12 responsive-element">
       <ion:partial view="news" />
     </div>
   </ion:articles>

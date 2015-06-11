@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-  <ion:articles>
+  <ion:articles order_by="date DESC">
     <ion:article:medias type="file" limit="1">
       <a href="<ion:media:src />" target="_blank">
         <ion:partial view="press_article" />

@@ -320,7 +320,6 @@ div#header-container {
         overflow: hidden;
         height: 150px;
         & img {
-          width: 100%;
           margin-top: -20%;
         }
       }
@@ -353,9 +352,10 @@ p.no-wrap {
 }
 
 div.article-row {
-  margin-top: 10px;
   &:first-child {
-    margin-top: 0px;
+    & img {
+      width: 100%;
+    }
   }
 }
 
@@ -438,9 +438,13 @@ div.promoters-panel {
 }
 
 .home-panel {
-  .home-panel-news();
+  .panel-news();
   & span {
     font-size: 1em;
+    margin-top: 7px;
+    &:first-child {
+      margin-top: 0px;
+    }
   }
   & h2 {
     text-transform: uppercase;
@@ -452,15 +456,15 @@ div.promoters-panel {
   }
 }
 
-.home-panel-news {
+.panel-news {
   margin-bottom: 25px;
   & img {
     width: 100%;
   }
-  & > div {
-    margin-top: 7px;
-    &:first-child {
-      margin-top: 0;
+  & .article-row {
+    margin-top: 15px;
+    & div:first-child {
+      margin-top: 0px;
     }
   }
 }

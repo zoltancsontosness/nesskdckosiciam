@@ -40,18 +40,13 @@
     });
   });
 </script>
-<!--
 
-<div class="page-header">
-  <ion:page:title tag="h1" class="page_title" />
-</div>
--->
 <br />
 <div class="row">
-  <div class="col-md-7 col-xs-12 home-panel-news">
+  <div class="col-md-7 col-xs-12 panel-news">
     <ion:page id="news">
 
-      <ion:page:articles limit="4">
+      <ion:page:articles limit="4" order_by="created DESC">
         <ion:partial view="news" />
       </ion:page:articles>
 
@@ -64,40 +59,42 @@
     </ion:page>
   </div>
 
-  <div class="col-md-5 col-xs-12 home-panel">
-    <ion:page id="events">
-      <ion:title tag="h2" />
-      <ion:articles limit="1">
-        <ion:article:medias type="picture" limit="1">
-          <a href="<ion:media:src />" data-lightbox="roadtrip" data-title="<ion:media:title />">
+  <div class="col-md-5 col-xs-12">
+    <div class="home-panel">
+      <ion:page id="events">
+        <ion:title tag="h2" />
+        <ion:articles limit="1">
+          <ion:article:medias type="picture" limit="1">
+            <a href="<ion:media:src />" data-lightbox="roadtrip" data-title="<ion:media:title />">
             <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive no-drag" />
           </a>
-        </ion:article:medias>
-      </ion:articles>
-    </ion:page>
-  </div>
+          </ion:article:medias>
+        </ion:articles>
+      </ion:page>
+    </div>
 
-  <div class="col-md-5 col-xs-12 home-panel">
-    <ion:page id="napisali-o-festivale">
-      <ion:title tag="h2" />
+    <div class="home-panel">
+      <ion:page id="napisali-o-festivale">
+        <ion:title tag="h2" />
 
-      <ion:articles limit="4">
-        <div class="col-md-12 mini-news">
-          <a href="<ion:article:url />" target="_blank">
-            <ion:article:title characters="42" tag="span" />
-            <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
-          </a>
-        </div>
-      </ion:articles>
+        <ion:articles limit="4">
+          <div class="col-xs-12">
+            <a href="<ion:article:url />" target="_blank">
+              <ion:article:title characters="42" tag="span" />
+              <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+            </a>
+          </div>
+        </ion:articles>
 
-      <hr class="splitter" />
+        <hr class="splitter" />
 
-      <button type="button" class="btn btn-primary btn-custom" onclick="window.location.href='<ion:page:url />'">
-        <ion:lang key="btn_show_more" />
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      </button>
+        <button type="button" class="btn btn-primary btn-custom" onclick="window.location.href='<ion:page:url />'">
+          <ion:lang key="btn_show_more" />
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </button>
 
-    </ion:page>
+      </ion:page>
+    </div>
   </div>
 </div>
 
