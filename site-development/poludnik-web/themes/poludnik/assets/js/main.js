@@ -10,7 +10,7 @@ navDropdowns.children("ul").addClass("dropdown-menu").attr({
 });
 
 //images no-drag script
-elements = document.getElementsByClassName('no-drag');
+var elements = document.getElementsByClassName('no-drag');
 for (var i = 0; i < elements.length; i++) {
   elements.item(i).draggable = false;
 }
@@ -25,12 +25,7 @@ jQuery(function ($) {
 
   }, function () {
     $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
-
   });
-
-//      $('.navbar .dropdown > a').click(function() {
-//          location.href = this.href;
-//      });
 });
 
 //same-height collumn script : 
