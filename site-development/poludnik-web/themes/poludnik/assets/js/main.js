@@ -28,9 +28,9 @@ jQuery(function ($) {
 
   });
 
-  //    $('.navbar .dropdown > a').click(function() {
-  //        location.href = this.href;
-  //    });
+//      $('.navbar .dropdown > a').click(function() {
+//          location.href = this.href;
+//      });
 });
 
 //same-height collumn script : 

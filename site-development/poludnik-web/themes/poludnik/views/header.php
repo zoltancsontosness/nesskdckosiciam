@@ -11,6 +11,7 @@
   <meta name="description" content="<ion:meta_description />" />
   <meta name="keywords" content="<ion:meta_keywords />" />
 
+  <link rel="icon" type="image/png" href="<ion:theme_url/>assets/images/iuvenalis-ico.png" />
   <link href="<ion:theme_url/>assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="<ion:theme_url/>assets/less/main.css" rel="stylesheet">
   <link href="<ion:theme_url/>assets/css/lightbox.css" rel="stylesheet" />

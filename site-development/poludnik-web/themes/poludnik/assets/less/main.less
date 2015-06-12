@@ -165,7 +165,7 @@ body {
 
 .container {
   background-color: whitesmoke;
-  background-image: url('../images/pattern.png');
+  //  background-image: url('../images/pattern.png');
 }
 
 .article_hoverable {
@@ -267,9 +267,9 @@ div.container-organizatori {
 
 div#header-container {
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/pattern3.jpg') repeat;
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/pattern3.jpg') repeat;
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/pattern3.jpg') repeat;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
   padding-top: 25px;
   padding-bottom: 25px;
   & img.header-logo {
@@ -442,9 +442,6 @@ div.promoters-panel {
   & span {
     font-size: 1em;
     margin-top: 7px;
-    &:first-child {
-      margin-top: 0px;
-    }
   }
   & h2 {
     text-transform: uppercase;
@@ -453,6 +450,12 @@ div.promoters-panel {
     margin-bottom: 15px;
     color: whitesmoke;
     margin-top: 0;
+  }
+  & .home-panel-row {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 7px;
   }
 }
 

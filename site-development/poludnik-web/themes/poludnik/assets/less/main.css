@@ -136,7 +136,6 @@ body {
 }
 .container {
   background-color: whitesmoke;
-  background-image: url('../images/pattern.png');
 }
 .article_hoverable {
   transition: all 0.3s ease-in-out 0s;
@@ -225,9 +224,9 @@ div.container-organizatori {
 }
 div#header-container {
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/pattern3.jpg') repeat;
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/pattern3.jpg') repeat;
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/pattern3.jpg') repeat;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, #f5f5f5 100%), url('../images/header-pattern.png') repeat;
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -383,9 +382,6 @@ div.promoters-panel a > img {
   font-size: 1em;
   margin-top: 7px;
 }
-.home-panel span:first-child {
-  margin-top: 0px;
-}
 .home-panel h2 {
   text-transform: uppercase;
   background-color: #658582;
@@ -393,6 +389,12 @@ div.promoters-panel a > img {
   margin-bottom: 15px;
   color: whitesmoke;
   margin-top: 0;
+}
+.home-panel .home-panel-row {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 7px;
 }
 .panel-news {
   margin-bottom: 25px;

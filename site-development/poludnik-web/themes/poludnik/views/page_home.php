@@ -78,12 +78,17 @@
         <ion:title tag="h2" />
 
         <ion:articles limit="4">
-          <div class="col-xs-12">
-            <a href="<ion:article:url />" target="_blank">
-              <ion:article:title characters="42" tag="span" />
+          <ion:article>
+            <div class="col-xs-11 home-panel-row">
+              <a href="<ion:url />" target="_blank">
+                <ion:title tag="span" />
+              </a>
+            </div>
+
+            <div class="col-xs-1">
               <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
-            </a>
-          </div>
+            </div>
+          </ion:article>
         </ion:articles>
 
         <hr class="splitter" />
