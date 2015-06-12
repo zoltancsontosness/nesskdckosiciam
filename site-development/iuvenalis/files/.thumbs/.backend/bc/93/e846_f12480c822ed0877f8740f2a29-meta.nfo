@@ -1,0 +1,110 @@
+<?php
+
+// legal URL: /spanielsko_2008/f1.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 59601,
+  8 => 1431668754,
+  9 => 1431418362,
+  10 => 1431668754,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 59601,
+  'atime' => 1431668754,
+  'mtime' => 1431418362,
+  'ctime' => 1431668754,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 59601,
+    'filename' => 'f1.png',
+    'filepath' => 'C:/Xampp/htdocs/vlastny/files/spanielsko_2008',
+    'filenamepath' => 'C:/Xampp/htdocs/vlastny/files/spanielsko_2008/f1.png',
+    'avdataoffset' => 0,
+    'avdataend' => 59601,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 640,
+      'resolution_y' => 480,
+      'compression_ratio' => 0.0646712239583333292625155763744260184466838836669921875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/png',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 90,
+    'mime' => 'image/png',
+    'ext' => 'png',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5543160,
+      'path' => 'C:\\Xampp\\htdocs\\vlastny/files/.thumbs/.backend/bc/93/e846_f12480c822ed0877f8740f2a29-500x500.png',
+      'filesize' => 294615,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 375,
+        2 => 3,
+        3 => 'width="500" height="375"',
+        'bits' => 8,
+        'mime' => 'image/png',
+      ),
+      'needed' => 944444.4444444444961845874786376953125,
+      'usage_guestimate' => 2644444.4444444444961845874786376953125,
+      'usage_min_advised' => 8187604.4444444440305233001708984375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '8.2 MB',
+  'memory estimated' => '2.6 MB',
+  'memory suggested' => '8.2 MB',
+  'thumb250_direct' => '/vlastny/files/.thumbs/.backend/bc/93/e846_f12480c822ed0877f8740f2a29-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 375,
+    2 => 3,
+    3 => 'width="500" height="375"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/vlastny/files/.thumbs/.backend/bc/93/e846_f12480c822ed0877f8740f2a29-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 90,
+    2 => 3,
+    3 => 'width="120" height="90"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);

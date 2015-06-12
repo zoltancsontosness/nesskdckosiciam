@@ -1,0 +1,110 @@
+<?php
+
+// legal URL: /Koncerty/luciebila2012_1.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 212165,
+  8 => 1432191603,
+  9 => 1432191632,
+  10 => 1432191631,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 212165,
+  'atime' => 1432191603,
+  'mtime' => 1432191632,
+  'ctime' => 1432191631,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 212165,
+    'filename' => 'luciebila2012_1.png',
+    'filepath' => 'C:/Xampp/htdocs/ionize/files/Koncerty',
+    'filenamepath' => 'C:/Xampp/htdocs/ionize/files/Koncerty/luciebila2012_1.png',
+    'avdataoffset' => 0,
+    'avdataend' => 212165,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1024,
+      'resolution_y' => 641,
+      'compression_ratio' => 0.10774434883645345184532970961299724876880645751953125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/png',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 75,
+    'mime' => 'image/png',
+    'ext' => 'png',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5540840,
+      'path' => 'C:\\Xampp\\htdocs\\ionize/files/.thumbs/.backend/d2/c9/36cc_luciebila2012_169227fc1440a0030f7-500x500.png',
+      'filesize' => 289081,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 313,
+        2 => 3,
+        3 => 'width="500" height="313"',
+        'bits' => 8,
+        'mime' => 'image/png',
+      ),
+      'needed' => 788296.296296296291984617710113525390625,
+      'usage_guestimate' => 2207229.629629629664123058319091796875,
+      'usage_min_advised' => 7748069.629629629664123058319091796875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '9.7 MB',
+  'memory estimated' => '2.2 MB',
+  'memory suggested' => '7.7 MB',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/d2/c9/36cc_luciebila2012_169227fc1440a0030f7-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 313,
+    2 => 3,
+    3 => 'width="500" height="313"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/d2/c9/36cc_luciebila2012_169227fc1440a0030f7-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 75,
+    2 => 3,
+    3 => 'width="120" height="75"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);

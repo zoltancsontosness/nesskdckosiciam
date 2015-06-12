@@ -1,0 +1,80 @@
+<?php
+
+// legal URL: /Aktuality/vianocny2012.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 144148,
+  8 => 1433397382,
+  9 => 1433397426,
+  10 => 1433397424,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 144148,
+  'atime' => 1433397382,
+  'mtime' => 1433397426,
+  'ctime' => 1433397424,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 144148,
+    'filename' => 'vianocny2012.png',
+    'filepath' => 'C:/Xampp/htdocs/ionize/files/Aktuality',
+    'filenamepath' => 'C:/Xampp/htdocs/ionize/files/Aktuality/vianocny2012.png',
+    'avdataoffset' => 0,
+    'avdataend' => 144148,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 690,
+      'resolution_y' => 399,
+      'compression_ratio' => 0.1745281077088857435430924169850186444818973541259765625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/png',
+  'thumb250_direct' => '/ionize/files/.thumbs/.backend/89/fe/2276_vianocny2012da7e1142fa566ac7151e3-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 289,
+    2 => 3,
+    3 => 'width="500" height="289"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/ionize/files/.thumbs/.backend/89/fe/2276_vianocny2012da7e1142fa566ac7151e3-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 69,
+    2 => 3,
+    3 => 'width="120" height="69"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);
