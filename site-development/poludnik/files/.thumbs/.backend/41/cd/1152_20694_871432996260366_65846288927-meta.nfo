@@ -1,0 +1,156 @@
+<?php
+
+// legal URL: /partners_logos/20694_871432996260366_6584628892717922040_n.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 3112,
+  8 => 1434373265,
+  9 => 1434373265,
+  10 => 1434373265,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 3112,
+  'atime' => 1434373265,
+  'mtime' => 1434373265,
+  'ctime' => 1434373265,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/png',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 3112,
+    'filename' => '20694_871432996260366_6584628892717922040_n.png',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/partners_logos',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/partners_logos/20694_871432996260366_6584628892717922040_n.png',
+    'avdataoffset' => 0,
+    'avdataend' => 3112,
+    'fileformat' => 'png',
+    'video' => 
+    array (
+      'dataformat' => 'png',
+      'lossless' => false,
+      'resolution_x' => 133,
+      'resolution_y' => 133,
+      'bits_per_sample' => 32,
+      'compression_ratio' => 0.043982135790604330594089077521857689134776592254638671875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/png',
+    'png' => 
+    array (
+      'IHDR' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 13,
+          'type_text' => 'IHDR',
+          'type_raw' => 1229472850,
+          'data' => '' . "\0" . '' . "\0" . '' . "\0" . '…' . "\0" . '' . "\0" . '' . "\0" . '…' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 1977236284,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+        ),
+        'width' => 133,
+        'height' => 133,
+        'raw' => 
+        array (
+          'bit_depth' => 8,
+          'color_type' => 6,
+          'compression_method' => 0,
+          'filter_method' => 0,
+          'interlace_method' => 0,
+        ),
+        'compression_method_text' => 'deflate/inflate',
+        'color_type' => 
+        array (
+          'palette' => false,
+          'true_color' => true,
+          'alpha' => true,
+        ),
+      ),
+      'IDAT' => 
+      array (
+        0 => 
+        array (
+          'header' => 
+          array (
+            'data_length' => 3055,
+            'type_text' => 'IDAT',
+            'type_raw' => 1229209940,
+            'crc' => 2370798690,
+            'flags' => 
+            array (
+              'ancilliary' => false,
+              'private' => false,
+              'reserved' => false,
+              'safe_to_copy' => false,
+            ),
+          ),
+        ),
+      ),
+      'IEND' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 0,
+          'type_text' => 'IEND',
+          'type_raw' => 1229278788,
+          'crc' => 2923585666,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+          'data' => '',
+        ),
+      ),
+      'encoding' => 'UTF-8',
+    ),
+  ),
+  'mime_type from file extension' => 'image/png',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/41/cd/1152_20694_871432996260366_65846288927-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 133,
+    1 => 133,
+    2 => 3,
+    3 => 'width="133" height="133"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/41/cd/1152_20694_871432996260366_65846288927-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 120,
+    2 => 3,
+    3 => 'width="120" height="120"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);
