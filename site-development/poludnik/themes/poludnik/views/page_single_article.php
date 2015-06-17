@@ -7,12 +7,16 @@
 <ion:article>
   <div class="row">
     <div class="col-md-12">
-      <div class="col-md-4 col-sm-4 col-xs-6">
+
+      <div id="data" class="Column1 col-md-6">
+        <ion:content tag="p" />
+      </div>
+      <div id="Column2" class="col-md-6">
         <ion:article:media type="picture" limit="1">
-          <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive center-block img-article-right">
+          <img src="<ion:media:src method="adaptive" />" alt="<ion:media:alt />" class="img-responsive center-block">
         </ion:article:media>
       </div>
-      <ion:article:content tag="p"/>
+
     </div>
   </div>
   <hr />

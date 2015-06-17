@@ -11,7 +11,7 @@
   <meta name="description" content="<ion:meta_description />" />
   <meta name="keywords" content="<ion:meta_keywords />" />
 
-  <link rel="icon" type="image/png" href="<ion:theme_url/>assets/images/iuvenalis-ico.png" />
+  <link rel="icon" type="image/png" href="<ion:theme_url/>assets/images/iuvenalis-ico.ico" />
   <link href="<ion:theme_url/>assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="<ion:theme_url/>assets/less/main.css" rel="stylesheet">
   <link href="<ion:theme_url/>assets/css/lightbox.css" rel="stylesheet" />
@@ -33,7 +33,6 @@
     <div class="row text-center" id="header-container">
 
       <div class="col-lg-2 visible-lg">
-        <!--        <img src="<ion:theme_url />assets/images/musicaiuvenalis.png" class="hidden-xs hidden-sm desaturate no-drag header-logo" alt="Musica Iuvenalis" />-->
       </div>
 
       <div class="col-lg-2 col-xs-12 col-lg-push-8">

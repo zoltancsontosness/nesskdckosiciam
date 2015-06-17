@@ -65,7 +65,12 @@
         <ion:title tag="h2" />
         <ion:articles limit="1">
           <ion:article:medias type="picture" limit="1">
+            <!--
             <a href="<ion:media:src />" data-lightbox="roadtrip" data-title="<ion:media:title />">
+            <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive no-drag" />
+          </a>
+-->
+            <a href="<ion:article:url />">
             <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive no-drag" />
           </a>
           </ion:article:medias>

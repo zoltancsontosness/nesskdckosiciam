@@ -13,10 +13,10 @@
           <ion:page:title tag="h1" class="page_title" />
         </div>
 
-        <div id="data" class="Column1 col-md-6">
+        <div id="1to1-data" class="1to1-col1 col-md-6">
           <ion:content />
         </div>
-        <div id="Column2" class="col-md-6"></div>
+        <div id="1to1-col2" class="col-md-6"></div>
 
         <p class="pull-right">
           <b>

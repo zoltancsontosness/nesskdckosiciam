@@ -10,10 +10,12 @@
     </div>
 
     <div class="col-sm-9">
-      <ion:article:title tag="h2" class="media-heading" />
+      <a href="<ion:article:url />">
+        <ion:article:title tag="h2" class="media-heading" />
+      </a>
 
       <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-        <ion:article:date format="complete" tag="span" class="bold" />
+      <ion:article:date format="complete" tag="span" class="bold" />
 
       <div class="col-xs-12">
         <ion:article:content characters="200" />

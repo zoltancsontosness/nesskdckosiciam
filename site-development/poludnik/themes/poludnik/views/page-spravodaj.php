@@ -11,7 +11,7 @@
       <ion:article>
 
         <ion:medias type="file" limit="1" extension="pdf">
-          <a href="<ion:media:src />" target="_blank">
+          <a href="<ion:article:url />" >
             <div class="col-md-3 col-sm-4">
               <div class="thumbnail article_hoverable responsive-element text-center">
                 <div class="caption">
