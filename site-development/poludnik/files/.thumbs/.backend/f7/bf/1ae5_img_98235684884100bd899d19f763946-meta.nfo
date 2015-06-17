@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /partners_logos/promoters/img_98235684884100.jpeg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 86028,
+  8 => 1434373697,
+  9 => 1434373697,
+  10 => 1434373697,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 86028,
+  'atime' => 1434373697,
+  'mtime' => 1434373697,
+  'ctime' => 1434373697,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 86028,
+    'filename' => 'img_98235684884100.jpeg',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/partners_logos/promoters',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/partners_logos/promoters/img_98235684884100.jpeg',
+    'avdataoffset' => 0,
+    'avdataend' => 86028,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 399,
+      'resolution_y' => 619,
+      'compression_ratio' => 0.11610609723015130612111533991992473602294921875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/f7/bf/1ae5_img_98235684884100bd899d19f763946-500x500.jpeg',
+  'thumb250_info' => 
+  array (
+    0 => 322,
+    1 => 500,
+    2 => 2,
+    3 => 'width="322" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/f7/bf/1ae5_img_98235684884100bd899d19f763946-120x120.jpeg',
+  'thumb48_info' => 
+  array (
+    0 => 77,
+    1 => 120,
+    2 => 2,
+    3 => 'width="77" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

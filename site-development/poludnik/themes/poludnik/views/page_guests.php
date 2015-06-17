@@ -43,9 +43,11 @@
         <a href="<ion:article:url />">
           <div class="col-md-4 col-sm-6 ">
             <div class="thumbnail article_hoverable responsive-element text-center">
-              <ion:medias type="picture" limit="1">
-                <img src="<ion:media:src size="200" method="adaptive"  />" alt="<ion:article:title />" />
-              </ion:medias>
+              <div class="img-wrapper">
+                <ion:medias type="picture" limit="1">
+                  <img src="<ion:media:src method="height" />" alt="<ion:article:title />" />
+                </ion:medias>
+              </div>
               <div class="caption">
                 <ion:title tag="h2" class="dark" />
               </div>

@@ -3,6 +3,7 @@
 $lang['btn_more'] = 'Read more';
 $lang['btn_older'] = 'Older ';
 $lang['btn_show_more'] = 'Show more';
+$lang['bulletin'] = 'Festival bulletin';
 $lang['events_date'] = 'Date';
 $lang['events_musicians'] = 'Musicians';
 $lang['events_place'] = 'Place';

@@ -5,7 +5,7 @@
 </div>
 
 <div class="row panel-news">
-  <ion:articles order_by="created DESC">
+  <ion:articles order_by="date DESC">
     <div class="col-md-6 col-xs-12 responsive-element">
       <ion:partial view="news" />
     </div>

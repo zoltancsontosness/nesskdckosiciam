@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /pictures/iuvenalis.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 31332,
+  8 => 1434470435,
+  9 => 1434470436,
+  10 => 1434470435,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 31332,
+  'atime' => 1434470435,
+  'mtime' => 1434470436,
+  'ctime' => 1434470435,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 31332,
+    'filename' => 'iuvenalis.jpg',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/pictures',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/pictures/iuvenalis.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 31332,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 286,
+      'resolution_y' => 176,
+      'compression_ratio' => 0.207485696122059748436328163734287954866886138916015625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 74,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5544208,
+      'path' => 'C:\\xampp\\htdocs\\poludnik/files/.thumbs/.backend/f3/dd/d32a_iuvenalise5f7290de3793b3119c8bb60-500x500.jpg',
+      'filesize' => 31332,
+      'imageinfo' => 
+      array (
+        0 => 286,
+        1 => 176,
+        2 => 2,
+        3 => 'width="286" height="176"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 253544.296296296291984617710113525390625,
+      'usage_guestimate' => 354962.01481481478549540042877197265625,
+      'usage_min_advised' => 5899170.01481481455266475677490234375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '5.9 MB',
+  'memory estimated' => '0.4 MB',
+  'memory suggested' => '5.9 MB',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/f3/dd/d32a_iuvenalise5f7290de3793b3119c8bb60-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 286,
+    1 => 176,
+    2 => 2,
+    3 => 'width="286" height="176"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/f3/dd/d32a_iuvenalise5f7290de3793b3119c8bb60-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 74,
+    2 => 2,
+    3 => 'width="120" height="74"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

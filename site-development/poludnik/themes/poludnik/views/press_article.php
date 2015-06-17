@@ -1,6 +1,6 @@
 <div class="col-md-12 article_hoverable">
   <div class="col-md-2">
-    <ion:article:date format="complete" tag="p" class="bold" />
+    <ion:article:date format="medium" tag="p" class="bold" />
   </div>
 
   <div class="col-md-7">

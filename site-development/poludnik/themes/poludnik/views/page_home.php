@@ -46,7 +46,7 @@
   <div class="col-md-7 col-xs-12 panel-news">
     <ion:page id="news">
 
-      <ion:page:articles limit="4" order_by="created DESC">
+      <ion:page:articles limit="4" order_by="date DESC">
         <ion:partial view="news" />
       </ion:page:articles>
 
@@ -73,7 +73,7 @@
       </ion:page>
     </div>
 
-    <div class="home-panel">
+    <div class="home-panel hidden-xs">
       <ion:page id="wrote-page">
         <ion:title tag="h2" />
 

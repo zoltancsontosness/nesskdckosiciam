@@ -1,0 +1,177 @@
+<?php
+
+// legal URL: /pictures/mukacevo_3.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 502000,
+  8 => 1434464778,
+  9 => 1434464778,
+  10 => 1434464778,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 502000,
+  'atime' => 1434464778,
+  'mtime' => 1434464778,
+  'ctime' => 1434464778,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 502000,
+    'filename' => 'mukacevo_3.jpg',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/pictures',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/pictures/mukacevo_3.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 502000,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 769,
+      'compression_ratio' => 0.1813321774310070744196110581469838507473468780517578125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+    'iptc' => 
+    array (
+      'IPTCApplication' => 
+      array (
+        'ApplicationRecordVersion' => 
+        array (
+          0 => 'âº',
+        ),
+      ),
+    ),
+    'jpg' => 
+    array (
+      'exif' => 
+      array (
+        'FILE' => 
+        array (
+          'FileName' => 'mukacevo_3.jpg',
+          'FileDateTime' => 1434464778,
+          'FileSize' => 502000,
+          'FileType' => 2,
+          'MimeType' => 'image/jpeg',
+          'SectionsFound' => 'ANY_TAG, IFD0, THUMBNAIL, EXIF',
+        ),
+        'COMPUTED' => 
+        array (
+          'html' => 'width="1200" height="769"',
+          'Height' => 769,
+          'Width' => 1200,
+          'IsColor' => 1,
+          'ByteOrderMotorola' => 1,
+          'Thumbnail.FileType' => 2,
+          'Thumbnail.MimeType' => 'image/jpeg',
+        ),
+        'IFD0' => 
+        array (
+          'Orientation' => 1,
+          'XResolution' => 150,
+          'YResolution' => 150,
+          'ResolutionUnit' => 2,
+          'Software' => 'Adobe Photoshop CS3 Windows',
+          'DateTime' => '2012:04:15 20:17:29',
+          'Exif_IFD_Pointer' => 164,
+        ),
+        'THUMBNAIL' => 
+        array (
+          'Compression' => 6,
+          'XResolution' => 72,
+          'YResolution' => 72,
+          'ResolutionUnit' => 2,
+          'JPEGInterchangeFormat' => 302,
+          'JPEGInterchangeFormatLength' => 7919,
+        ),
+        'EXIF' => 
+        array (
+          'ColorSpace' => 65535,
+          'ExifImageWidth' => 1200,
+          'ExifImageLength' => 769,
+        ),
+      ),
+    ),
+    'xmp' => 
+    array (
+      'xap' => 
+      array (
+        'CreateDate' => '2012-04-15T20:12:59+02:00',
+        'ModifyDate' => '2012-04-15T20:17:29+02:00',
+        'MetadataDate' => '2012-04-15T20:17:29+02:00',
+        'CreatorTool' => 'Adobe Photoshop CS3 Windows',
+      ),
+      'dc' => 
+      array (
+        'format' => 'image/jpeg',
+      ),
+      'photoshop' => 
+      array (
+        'History' => '',
+      ),
+      'xapMM' => 
+      array (
+        'InstanceID' => 'uuid:5C6F44292787E1118EB4DA39BD39C4DC',
+      ),
+      'tiff' => 
+      array (
+        'Orientation' => 1,
+        'XResolution' => 150,
+        'YResolution' => 150,
+        'ResolutionUnit' => 2,
+      ),
+      'exif' => 
+      array (
+        'PixelXDimension' => 1200,
+        'PixelYDimension' => 769,
+        'ColorSpace' => '-1',
+      ),
+    ),
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/f4/fb/498f_mukacevo_3e918662bb4882fb32738900-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 320,
+    2 => 2,
+    3 => 'width="500" height="320"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/f4/fb/498f_mukacevo_3e918662bb4882fb32738900-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 77,
+    2 => 2,
+    3 => 'width="120" height="77"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

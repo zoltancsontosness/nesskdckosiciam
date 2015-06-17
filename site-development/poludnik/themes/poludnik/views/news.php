@@ -13,7 +13,7 @@
       <ion:article:title tag="h2" class="media-heading" />
 
       <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-        <ion:article:created format="complete" tag="span" class="bold" />
+        <ion:article:date format="complete" tag="span" class="bold" />
 
       <div class="col-xs-12">
         <ion:article:content characters="200" />

@@ -64,9 +64,36 @@ h2.article_title {
   margin-left: 50px;
 }
 
+a {
+  -moz-transition: all 0.1s ease-in-out 0s;
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  -o-transition: all 0.1s ease-in-out 0s;
+  -ms-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+a:link {
+  color: black;
+  text-decoration: none !important;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: @theme-color;
+}
+
 p {
   font-size: 1em;
   .contents();
+  a:link, a:visited {
+    color: @theme-color;
+  }
+  a:hover {
+    color: darkgray;
+  }
 }
 
 span {
@@ -74,10 +101,6 @@ span {
   .contents();
   margin: 0 2px;
   display: inline;
-}
-
-p.article_more {
-  text-align: right;
 }
 
 .crop {
@@ -139,11 +162,10 @@ div.footer-block img {
   margin: 10px;
 }
 
-a {
-  text-decoration: none !important;
-  color: black;
-  &:hover {
-    color: black;
+p.article_more {
+  text-align: right;
+  a {
+    color: red;
   }
 }
 
@@ -155,10 +177,6 @@ body {
   background: linear-gradient(#8f9e8b, #292929);
   background-image: url('../images/background.jpg');
   background-size: cover;
-}
-
-.news a {
-  text-decoration: none;
 }
 
 .container {
@@ -177,14 +195,14 @@ body {
   }
 }
 
-.hoverable(@color) {
+.hoverable {
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   -ms-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   &:hover {
-    color: @theme-color;
+    color: @theme-color !important;
   }
 }
 
@@ -206,12 +224,12 @@ button.btn-custom {
   -o-transition: all 0.1s ease-in-out 0s, transform 0.1s ease-in;
   -ms-transition: all 0.1s ease-in-out 0s, transform 0.1s ease-in;
   &:hover {
-    transform: scale(1.02);
+    //    transform: scale(1.02);
     background-color: @theme-color;
     border-color: @theme-color;
   }
   &:active {
-    transform: scale(1);
+    //    transform: scale(1);
     background-color: @theme-color;
     border-color: @theme-color;
   }
@@ -228,6 +246,11 @@ button.btn-light {
   &:focus {
     background-color: @light-gray-color;
     border-color: @light-gray-color;
+    color: black;
+  }
+  &:active {
+    background-color: @light-gray-color;
+    border-color: @light-gray-color;
   }
 }
 
@@ -237,6 +260,10 @@ button.btn-lang {
   margin: 0;
   img {
     width: 25px;
+  }
+  &:focus {
+    background-color: rgba(41, 41, 41, .65);
+    border-color: rgba(41, 41, 41, .65);
   }
 }
 
@@ -484,6 +511,17 @@ div.promoters-panel {
     margin-top: 15px;
     & div:first-child {
       margin-top: 0px;
+    }
+  }
+}
+
+.thumbnail {
+  & > div.img-wrapper {
+    max-height: 150px;
+    overflow: hidden;
+    width: 100%;
+    & > img {
+      width: 100%;
     }
   }
 }

@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /pictures/23.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 291547,
+  8 => 1434469739,
+  9 => 1434469739,
+  10 => 1434469739,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 291547,
+  'atime' => 1434469739,
+  'mtime' => 1434469739,
+  'ctime' => 1434469739,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 291547,
+    'filename' => '23.jpg',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/pictures',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/pictures/23.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 291547,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 677,
+      'resolution_y' => 450,
+      'compression_ratio' => 0.318996662837135513957065313661587424576282501220703125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/a1/31/6158_236644a6f816cc5ed6efa06d15-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 332,
+    2 => 2,
+    3 => 'width="500" height="332"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/a1/31/6158_236644a6f816cc5ed6efa06d15-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

@@ -1,0 +1,186 @@
+<?php
+
+// legal URL: /partners_logos/promoters/logo_musica_iuvenalis_ness_2.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 217808,
+  8 => 1434468731,
+  9 => 1434468732,
+  10 => 1434468731,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 217808,
+  'atime' => 1434468731,
+  'mtime' => 1434468732,
+  'ctime' => 1434468731,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/png',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 217808,
+    'filename' => 'logo_musica_iuvenalis_ness_2.png',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/partners_logos/promoters',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/partners_logos/promoters/logo_musica_iuvenalis_ness_2.png',
+    'avdataoffset' => 0,
+    'avdataend' => 217808,
+    'fileformat' => 'png',
+    'video' => 
+    array (
+      'dataformat' => 'png',
+      'lossless' => false,
+      'resolution_x' => 1000,
+      'resolution_y' => 1002,
+      'bits_per_sample' => 32,
+      'compression_ratio' => 0.054343313373253494813486241810096544213593006134033203125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/png',
+    'png' => 
+    array (
+      'IHDR' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 13,
+          'type_text' => 'IHDR',
+          'type_raw' => 1229472850,
+          'data' => '' . "\0" . '' . "\0" . 'è' . "\0" . '' . "\0" . 'ê' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 7042543,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+        ),
+        'width' => 1000,
+        'height' => 1002,
+        'raw' => 
+        array (
+          'bit_depth' => 8,
+          'color_type' => 6,
+          'compression_method' => 0,
+          'filter_method' => 0,
+          'interlace_method' => 0,
+        ),
+        'compression_method_text' => 'deflate/inflate',
+        'color_type' => 
+        array (
+          'palette' => false,
+          'true_color' => true,
+          'alpha' => true,
+        ),
+      ),
+      'IDAT' => 
+      array (
+        0 => 
+        array (
+          'header' => 
+          array (
+            'data_length' => 4447,
+            'type_text' => 'IDAT',
+            'type_raw' => 1229209940,
+            'crc' => 3067448746,
+            'flags' => 
+            array (
+              'ancilliary' => false,
+              'private' => false,
+              'reserved' => false,
+              'safe_to_copy' => false,
+            ),
+          ),
+        ),
+      ),
+      'IEND' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 0,
+          'type_text' => 'IEND',
+          'type_raw' => 1229278788,
+          'crc' => 2923585666,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+          'data' => '',
+        ),
+      ),
+      'encoding' => 'UTF-8',
+    ),
+  ),
+  'mime_type from file extension' => 'image/png',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 120,
+    'mime' => 'image/png',
+    'ext' => 'png',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5543608,
+      'path' => 'C:\\xampp\\htdocs\\poludnik/files/.thumbs/.backend/42/3f/9678_logo_musica_iuvenalis_ness_292f27-500x500.png',
+      'filesize' => 124286,
+      'imageinfo' => 
+      array (
+        0 => 499,
+        1 => 500,
+        2 => 3,
+        3 => 'width="499" height="500"',
+        'bits' => 8,
+        'mime' => 'image/png',
+      ),
+      'needed' => 1256740.74074074067175388336181640625,
+      'usage_guestimate' => 3518874.074074073694646358489990234375,
+      'usage_min_advised' => 9062482.07407407462596893310546875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '19.7 MB',
+  'memory estimated' => '3.5 MB',
+  'memory suggested' => '9.1 MB',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/42/3f/9678_logo_musica_iuvenalis_ness_292f27-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 499,
+    1 => 500,
+    2 => 3,
+    3 => 'width="499" height="500"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/42/3f/9678_logo_musica_iuvenalis_ness_292f27-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 120,
+    2 => 3,
+    3 => 'width="120" height="120"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);

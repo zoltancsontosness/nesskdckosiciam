@@ -3,6 +3,7 @@
 $lang['btn_more'] = 'Čítať celý článok';
 $lang['btn_older'] = 'Staršie príspevky';
 $lang['btn_show_more'] = 'Zobraziť viac';
+$lang['bulletin'] = 'Festivalový spravodaj';
 $lang['events_date'] = 'Dátum';
 $lang['events_musicians'] = 'Vystupujúci';
 $lang['events_place'] = 'Miesto';

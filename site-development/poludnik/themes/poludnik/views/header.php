@@ -33,7 +33,7 @@
     <div class="row text-center" id="header-container">
 
       <div class="col-lg-2 visible-lg">
-        <img src="<ion:theme_url />assets/images/musicaiuvenalis.png" class="hidden-xs hidden-sm desaturate no-drag header-logo" alt="Musica Iuvenalis" />
+        <!--        <img src="<ion:theme_url />assets/images/musicaiuvenalis.png" class="hidden-xs hidden-sm desaturate no-drag header-logo" alt="Musica Iuvenalis" />-->
       </div>
 
       <div class="col-lg-2 col-xs-12 col-lg-push-8">
@@ -48,7 +48,7 @@
 
       <div id="header-title-wrapper" class="col-lg-8 col-xs-12 col-lg-pull-2 ">
         <a href="<ion:home_url />">
-          <h1 class="hoverable"><ion:site_title tag=""/></h1>
+          <h1 class="hoverable"><ion:site_title/></h1>
           <h3><ion:meta_description tag=""/></h3>
         </a>
       </div>
@@ -64,7 +64,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      
+
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ion:tree_navigation active_class="active" tag="ul" class="nav navbar-nav" menu="main">
           <li>

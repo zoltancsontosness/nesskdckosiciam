@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /pictures/grejtakova.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 136639,
+  8 => 1434465285,
+  9 => 1434465285,
+  10 => 1434465285,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 136639,
+  'atime' => 1434465285,
+  'mtime' => 1434465285,
+  'ctime' => 1434465285,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 136639,
+    'filename' => 'grejtakova.jpg',
+    'filepath' => 'C:/xampp/htdocs/poludnik/files/pictures',
+    'filenamepath' => 'C:/xampp/htdocs/poludnik/files/pictures/grejtakova.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 136639,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 483,
+      'resolution_y' => 676,
+      'compression_ratio' => 0.1394953058832657522003728445270098745822906494140625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/poludnik/files/.thumbs/.backend/a4/90/15a3_grejtakova92cf06a7a1be459877efdd0-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 357,
+    1 => 500,
+    2 => 2,
+    3 => 'width="357" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/poludnik/files/.thumbs/.backend/a4/90/15a3_grejtakova92cf06a7a1be459877efdd0-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 86,
+    1 => 120,
+    2 => 2,
+    3 => 'width="86" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

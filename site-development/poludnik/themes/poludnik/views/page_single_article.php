@@ -12,7 +12,7 @@
           <img src="<ion:media:src />" alt="<ion:media:title />" class="img-responsive center-block img-article-right">
         </ion:article:media>
       </div>
-      <ion:article:content tag="p" />
+      <ion:article:content tag="p"/>
     </div>
   </div>
   <hr />

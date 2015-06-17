@@ -133,36 +133,6 @@ $data = array (
     ),
   ),
   'mime_type from file extension' => 'image/png',
-  'img_info' => 
-  array (
-    'width' => 120,
-    'height' => 59,
-    'mime' => 'image/png',
-    'ext' => 'png',
-    'fileinfo' => 
-    array (
-      'memory_limit' => 268435456,
-      'mem_in_use' => 5542424,
-      'path' => 'C:\\xampp\\htdocs\\poludnik/files/.thumbs/.backend/e3/4d/58dd_logochestries0dd03a02fd523c6b1421-500x500.png',
-      'filesize' => 46440,
-      'imageinfo' => 
-      array (
-        0 => 500,
-        1 => 244,
-        2 => 3,
-        3 => 'width="500" height="244"',
-        'bits' => 8,
-        'mime' => 'image/png',
-      ),
-      'needed' => 614518.518518518540076911449432373046875,
-      'usage_guestimate' => 1720651.85185185191221535205841064453125,
-      'usage_min_advised' => 7263075.851851851679384708404541015625,
-      'will_fit' => true,
-    ),
-  ),
-  'memory used' => '15.4 MB',
-  'memory estimated' => '1.7 MB',
-  'memory suggested' => '7.3 MB',
   'thumb250_direct' => '/poludnik/files/.thumbs/.backend/e3/4d/58dd_logochestries0dd03a02fd523c6b1421-500x500.png',
   'thumb250_info' => 
   array (
