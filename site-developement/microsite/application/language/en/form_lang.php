@@ -47,6 +47,8 @@ $lang['form_label_login'] = 'Login';
 $lang['form_label_password'] = 'Password';
 $lang['form_label_password_confirmation'] = 'Password confirm';
 $lang['form_label_delete_account'] = 'Delete account';
+$lang['form_label_friend_email'] = 'Your Friend Email';
+$lang['form_label_sender_email'] = 'Your Email';
 
 
 /*
@@ -134,10 +136,10 @@ $lang['mail_automatic_message_warning'] = "This message was automatically genera
 */
 $lang['form_not_logged'] = "You're not logged in.";
 
-$lang['form_alert_success_title'] = 'Success !';
-$lang['form_alert_success_message'] = 'Everything was OK !';
-$lang['form_alert_error_title'] = 'Oups ! We got one error !';
-$lang['form_alert_error_message'] = 'Check the form, something is perhaps missing....';
+$lang['form_alert_success_title'] = 'Thank You !';
+$lang['form_alert_success_message'] = 'Form was sent successfully !';
+$lang['form_alert_error_title'] = 'Oups ! Something went wrong !';
+$lang['form_alert_error_message'] = 'Send the correct form again';
 
 $lang['form_login_success_message'] = "You successfully logged in.";
 $lang['form_login_error_message'] = "Error : Check your login / password.";

@@ -4,9 +4,9 @@
 </header>
 
 
-<div class="container">
+<div class="container gutter-bottom push-footer-bottom">
   <ion:page>
-    <section class="success-stories gutter-bottom-small">
+    <section class="success-stories">
       <ion:article>        
         <div class="row">
           <div class="col-md-8">            
@@ -17,9 +17,9 @@
         </div>
         <div class="row">
           <div class="col-md-8">
-            <ion:article:media type="picture" range="2"> 
+            <ion:article:medias type="picture" limit="1"> 
               <img src="<ion:media:src/>" class="img-responsive heading-img" alt=""> 
-            </ion:article:media>          
+            </ion:article:medias>          
             <ion:article:subtitle tag="h3"/>
             <div class="text-justify">
               <div id="content">
@@ -28,14 +28,14 @@
             </div> 
           </div>
           <div class="col-md-4">
-            <h2 class="right-column-heading">Other stories</h2>
-            <ul class="right-nav">
+            <h2 class="right-column-heading">Other News</h2>
+            <ul class="right-nav news-nav">
             <ion:articles>            
-              <li><a href="<ion:article:url />"><ion:article:title /></a></li>          
+              <li><div class="big-letters"><ion:article:date format="M"/>/<ion:article:date format="d/Y"/></div>  <a href="<ion:article:url />"><ion:article:title /></a></li> 
             </ion:articles>
             </ul>
-          </div>   
-        </div>  
+          </div>
+        </div>      
       </ion:article>
     </section> 
   </ion:page>

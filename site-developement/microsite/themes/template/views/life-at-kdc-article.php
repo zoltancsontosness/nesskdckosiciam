@@ -6,15 +6,21 @@
 
 <div class="container">
   <ion:page>
-    <section class="success-stories">
+    <section class="success-stories gutter-bottom-small">
       <ion:article>        
+        <div class="row">
+          <div class="col-md-8">            
+            <h1 class="hero hero-gutter"><ion:article:title /></h1>
+            <ion:breadcrumb separator="" tag="ol" child-tag="li" class="breadcrumb" home="true" article="true"/>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
         <div class="row">
           <div class="col-md-8">
             <ion:medias:media size="750,342" type="picture" method="adaptive"> 
-            <h1 class="hero gutter-bottom-small"><ion:article:title /></h1>
-              <img src="<ion:media:src/>" class="img-responsive" /> 
+              <img src="<ion:media:src/>" class="img-responsive heading-img" alt=""/> 
             </ion:medias:media>          
-            <h3><ion:article:subtitle /></h3> 
+            <ion:article:subtitle tag="h3"/>
             <div class="text-justify content">
               <ion:article:content />
             </div>
@@ -26,8 +32,8 @@
                 <li><a href="<ion:article:url />"><ion:article:title /></a></li>          
               </ion:articles>
             </ul>
-          </div>      
-        </div>
+          </div>
+        </div>      
       </ion:article>
     </section> 
   </ion:page>

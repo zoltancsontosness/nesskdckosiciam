@@ -8,7 +8,25 @@
     <title><ion:meta_title /></title>
     <meta name="description" content="<ion:meta_description />" />
     <meta name="keywords" content="<ion:meta_keywords />" />
-
+   	<!-- OG tags -->
+		<?php $title = "<ion:page:article:title />" ?>
+   	<?php if(addslashes($title)) : ?>
+			<meta property="og:title" content="<ion:page:article:title />"/>
+		<?php else : ?>
+			<meta property="og:title" content="<ion:page:title />"/>
+		<?php endif; ?>
+		
+		<?php if('<ion:page:article:url />' != '') : ?>
+			<meta property="og:url" content="<ion:page:article:url />" />
+		<?php else : ?>
+			<meta property="og:url" content="<ion:page:url />" />
+		<?php endif; ?>
+		
+		<meta property="og:image" content="<ion:theme_url />img/kdc-horizontal.jpg" />
+		<meta property="og:image:width" content="300" />
+		<meta property="og:type" content="website" />
+		
+		
   <link rel="shortcut icon" href="<ion:theme_url/>img/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="<ion:theme_url/>css/bootstrap.css">

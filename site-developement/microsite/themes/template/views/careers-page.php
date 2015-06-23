@@ -5,7 +5,8 @@
 
 <div class="container gutter-bottom push-footer-bottom">
   <ion:page>
-    <h1 class="hero gutter-bottom-small"><ion:title /></h1>
+    <h1 class="hero hero-gutter"><ion:title /></h1>
+    <ion:breadcrumb separator="" tag="ol" child-tag="li" class="breadcrumb" home="true" article="true"/>
     <div class="items">
       <div class="col-sm-12">
         <div class="row gutter-bottom-small">

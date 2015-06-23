@@ -9,7 +9,8 @@
       <ion:articles limit="1">
         <ion:article>
           <div class="col-xs-12">
-            <ion:article:title tag="h1" class="hero gutter-bottom-small" />
+            <ion:article:title tag="h1" class="hero hero-gutter" />
+            <ion:breadcrumb separator="" tag="ol" child-tag="li" class="breadcrumb" home="true" article="true"/>
             <ion:page:medias limit="1">
               <img src="<ion:media:src />" alt="<ion:media:alt />" class="img-responsive gutter-bottom-small" />
             </ion:page:medias>

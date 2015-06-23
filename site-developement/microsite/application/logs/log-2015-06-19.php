@@ -1,0 +1,18 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-06-19 09:12:27 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:12:27 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:12:27 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:12:27 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:12:27 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:15:36 --> Could not find the language key : "Seek your opportunity, apply for job"
+ERROR - 2015-06-19 09:16:49 --> Could not find the language key : "Seek your opportunity, apply for job"
+ERROR - 2015-06-19 09:17:05 --> Could not find the language key : "Seek your opportunity, apply for job"
+ERROR - 2015-06-19 09:18:07 --> Could not find the language key : "Seek your opportunity, apply for job"
+ERROR - 2015-06-19 09:18:07 --> Could not find the language key : "Seek your opportunity, apply for job"
+ERROR - 2015-06-19 09:19:18 --> Could not find the language key : "Seek your opportunity, apply for job"
+ERROR - 2015-06-19 09:27:32 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:27:32 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:27:32 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:27:32 --> Could not find the language key : "dateformat_F d, Y"
+ERROR - 2015-06-19 09:27:32 --> Could not find the language key : "dateformat_F d, Y"
