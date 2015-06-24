@@ -448,6 +448,9 @@ div.promoters-panel a > img {
   overflow: hidden;
   margin-top: 7px;
 }
+.home-panel img {
+  padding: 10px 0;
+}
 .panel-news {
   margin-bottom: 25px;
 }
@@ -467,4 +470,7 @@ div.promoters-panel a > img {
 }
 .thumbnail > div.img-wrapper > img {
   width: 100%;
+}
+.column {
+  padding: 5px;
 }

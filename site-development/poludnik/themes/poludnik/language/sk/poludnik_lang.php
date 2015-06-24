@@ -1,5 +1,6 @@
 <?php
 
+$lang['btn_download'] = 'Stiahnúť pdf';
 $lang['btn_more'] = 'Čítať celý článok';
 $lang['btn_older'] = 'Staršie príspevky';
 $lang['btn_show_more'] = 'Zobraziť viac';

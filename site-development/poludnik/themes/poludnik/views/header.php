@@ -24,8 +24,10 @@
     <![endif]-->
 
   <script type="text/javascript" src="<ion:theme_url/>assets/js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="<ion:theme_url/>assets/js/jquery.columnizer.js"></script>
   <script src='<ion:theme_url/>assets/js/grids.min.js'></script>
   <script src='<ion:theme_url/>assets/js/jquery.bootstrap-autohidingnavbar.js'></script>
+
 </head>
 
 <body>

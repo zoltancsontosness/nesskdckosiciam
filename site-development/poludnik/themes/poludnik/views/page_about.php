@@ -13,16 +13,26 @@
           <ion:page:title tag="h1" class="page_title" />
         </div>
 
-        <div id="1to1-data" class="1to1-col1 col-md-6">
-          <ion:content />
-        </div>
-        <div id="1to1-col2" class="col-md-6"></div>
+        <script>
+          $(function () {
+            $('#columnize-about').columnize({
+              width:"600",
+              lastNeverTallest: true
+            });
+          });
+        </script>
 
-        <p class="pull-right">
-          <b>
+        <div id="columnize-about">
+          <div class="column">
+            <ion:content tag="p" />
+            <p class="pull-right">
+              <b>
             <ion:subtitle />
           </b>
-        </p>
+            </p>
+          </div>
+        </div>
+
       </div>
     </ion:article>
   </ion:articles>

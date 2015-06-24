@@ -27,22 +27,3 @@ jQuery(function ($) {
     $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
   });
 });
-
-//same-height collumn script : 
-$(document).ready(function () {
-  size = $("#data > p").size();
-  $(".Column1 > p").each(function (index) {
-    if (index - 1 >= size / 2) {
-      $(this).appendTo("#Column2");
-    }
-  });
-});
-
-$(document).ready(function () {
-  size = $("#1to1-data > p").size();
-  $(".1to1-col1 > p").each(function (index) {
-    if (index >= size / 2) {
-      $(this).appendTo("#1to1-col2");
-    }
-  });
-});

@@ -8,13 +8,26 @@
   <div class="row">
     <div class="col-md-12">
 
-      <div id="data" class="Column1 col-md-6">
-        <ion:content tag="p" />
-      </div>
-      <div id="Column2" class="col-md-6">
-        <ion:article:media type="picture" limit="1">
-          <img src="<ion:media:src method="adaptive" />" alt="<ion:media:alt />" class="img-responsive center-block">
-        </ion:article:media>
+      <script>
+        $(function () {
+          $('wide').find('table, thead, tbody, tfoot, colgroup, caption, label, legend, script, style, textarea, button, object, embed, tr, th, td, li, h1, h2, h3, h4, h5, h6, form').addClass('dontsplit');
+          $('.wide').find('h1, h2, h3, h4, h5, h6').addClass('dontend');
+          $('.wide').find('br').addClass('removeiflast').addClass('removeiffirst');
+
+          $('h1').addClass("dontend");
+          $('.wide').columnize({
+            lastNeverTallest: true
+          });
+        });
+      </script>
+
+      <div class="wide">
+        <div class="column">
+          <ion:content tag="p" />
+          <ion:article:media type="picture" limit="1">
+            <img src="<ion:media:src method=" adaptive " />" alt="<ion:media:alt />" class="img-responsive center-block">
+          </ion:article:media>
+        </div>
       </div>
 
     </div>
