@@ -7,10 +7,9 @@
 <div class="row footer-block article-divider">
   <ion:articles>
     <ion:article:index is="1">
-      <div class="col-sm-10">
+      <div class="col-md-3 footer-col">
         <ion:article>
-          <br />
-          <br />
+          <ion:title tag="h2" class="page_title" />
 
           <ion:article:medias type="picture">
             <img src="<ion:media:src />" class="img-footer-partner no-drag desaturate" alt="<ion:media:title />" />
@@ -20,7 +19,19 @@
     </ion:article:index>
 
     <ion:article:index is="2">
-      <div class="col-sm-2 promoters-panel">
+      <div class="col-md-7 footer-col">
+        <ion:article>
+          <ion:title tag="h2" class="page_title" />
+
+          <ion:article:medias type="picture">
+            <img src="<ion:media:src />" class="img-footer-partner no-drag desaturate" alt="<ion:media:title />" />
+          </ion:article:medias>
+        </ion:article>
+      </div>
+    </ion:article:index>
+
+    <ion:article:index is="3">
+      <div class="col-md-2 promoters-panel footer-col">
         <ion:article>
           <ion:title tag="h2" class="page_title" />
           <ion:medias type="picture">
@@ -31,6 +42,7 @@
         </ion:article>
       </div>
     </ion:article:index>
+
   </ion:articles>
 </div>
 

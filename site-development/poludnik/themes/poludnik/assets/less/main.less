@@ -127,12 +127,6 @@ span {
   max-height: 75px;
 }
 
-img.desaturate {
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
-  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
-}
-
 div.footer-container {
   background: -webkit-linear-gradient(top, rgba(245, 245, 245, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%), url('../images/pattern1.png') repeat;
   background: -moz-linear-gradient(top, rgba(245, 245, 245, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%), url('../images/pattern1.png') repeat;
@@ -271,8 +265,8 @@ button.btn-lang {
   margin: 0 auto;
 }
 
-.article-divider > div:nth-of-type(odd) {
-  border-right: 1px solid gray;
+.article-divider > div:not(:last-child) {
+  border-right: 1px solid #cbcbcb;
 }
 
 .dropdown-menu > .active > a,
@@ -337,7 +331,11 @@ div#header-container {
   }
 }
 
-@media (max-width: 979px) {}
+@media (max-width: 992px) {
+  .article-divider > div:not(:last-child) {
+    border-right: none;
+  }
+}
 
 @media (min-width: 768px) {
   body {
@@ -500,10 +498,9 @@ div.promoters-panel {
     overflow: hidden;
     margin-top: 7px;
   }
-  
   & img {
-    padding:10px 0;
-  } 
+    padding: 10px 0;
+  }
 }
 
 .panel-news {
@@ -529,6 +526,24 @@ div.promoters-panel {
     }
   }
 }
+
 .column {
   padding: 5px;
+}
+
+div.footer-col {
+  & img.desaturate {
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+  }
+  &:hover {
+    & img.desaturate {
+    }
+  }
 }

@@ -1,6 +1,6 @@
 <?php
 
-$lang['btn_download'] = 'Download pdf';
+$lang['btn_download'] = 'Download PDF';
 $lang['btn_more'] = 'Read more';
 $lang['btn_older'] = 'Older ';
 $lang['btn_show_more'] = 'Show more';
