@@ -309,3 +309,70 @@ ERROR - 2015-06-29 14:49:52 --> Could not find the language key : "dateformat_d.
 ERROR - 2015-06-29 14:49:52 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-06-29 14:49:53 --> Could not find the language key : "dateformat_d.m.Y"
 ERROR - 2015-06-29 14:49:53 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:17:59 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:17:59 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:17:59 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:18:16 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:18:16 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:18:16 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:18:40 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:18:41 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:18:41 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:18:48 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:18:49 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:18:49 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:00 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:19:00 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:00 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:23 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:19:23 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:23 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:32 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:19:33 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:33 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:44 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:19:44 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:19:44 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:21:53 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:21:54 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:21:54 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:22:30 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:22:31 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:22:31 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:22:42 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:22:43 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:22:43 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:23:11 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:23:11 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:23:11 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:23:21 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:23:21 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:23:21 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:23:41 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:23:41 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:23:41 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:26:02 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:26:02 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:26:02 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:27:02 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:27:03 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:27:03 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:28:04 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:28:04 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:28:04 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:29:12 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:29:12 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:29:12 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:29:24 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:29:24 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:29:24 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:29:45 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:29:45 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:29:45 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:30:31 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:30:32 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:30:32 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:31:23 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-29 16:31:23 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:31:23 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-29 16:54:35 --> Language file contains no data: language/sk/user_lang
