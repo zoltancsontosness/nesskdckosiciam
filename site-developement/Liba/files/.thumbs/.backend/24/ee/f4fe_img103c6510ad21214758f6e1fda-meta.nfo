@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /galeria/treningy/skupina1/img1.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 572892677,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 267401,
+  8 => 1432283500,
+  9 => 1432283500,
+  10 => 1432283877,
+  11 => 4096,
+  12 => 528,
+  'dev' => 64784,
+  'ino' => 572892677,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 267401,
+  'atime' => 1432283500,
+  'mtime' => 1432283500,
+  'ctime' => 1432283877,
+  'blksize' => 4096,
+  'blocks' => 528,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 267401,
+    'filename' => 'img1.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/treningy/skupina1',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/treningy/skupina1/img1.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 267401,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 667,
+      'compression_ratio' => 0.133633683158420779601982530948589555919170379638671875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/files/.thumbs/.backend/24/ee/f4fe_img103c6510ad21214758f6e1fda-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 334,
+    2 => 2,
+    3 => 'width="500" height="334"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/24/ee/f4fe_img103c6510ad21214758f6e1fda-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

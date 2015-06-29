@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /galeria/turnaje/turnaj_o_cenu_primatorky_sabinov_skupina_3/img16.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 839874323,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 274292,
+  8 => 1432280881,
+  9 => 1432280881,
+  10 => 1432280881,
+  11 => 4096,
+  12 => 536,
+  'dev' => 64784,
+  'ino' => 839874323,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 274292,
+  'atime' => 1432280881,
+  'mtime' => 1432280881,
+  'ctime' => 1432280881,
+  'blksize' => 4096,
+  'blocks' => 536,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 274292,
+    'filename' => 'img16.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_o_cenu_primatorky_sabinov_skupina_3',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_o_cenu_primatorky_sabinov_skupina_3/img16.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 274292,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 667,
+      'compression_ratio' => 0.137077461269365319385116208650288172066211700439453125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/files/.thumbs/.backend/e9/24/3bc7_img1682347cf2bc01ee2450a29bd1-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 334,
+    2 => 2,
+    3 => 'width="500" height="334"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/e9/24/3bc7_img1682347cf2bc01ee2450a29bd1-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/turnaje/turnaj_29.12.2012_trebisov/707.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 805593152,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 400137,
+  8 => 1432282992,
+  9 => 1432282992,
+  10 => 1432282992,
+  11 => 4096,
+  12 => 784,
+  'dev' => 64784,
+  'ino' => 805593152,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 400137,
+  'atime' => 1432282992,
+  'mtime' => 1432282992,
+  'ctime' => 1432282992,
+  'blksize' => 4096,
+  'blocks' => 784,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 400137,
+    'filename' => '707.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_29.12.2012_trebisov',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_29.12.2012_trebisov/707.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 400137,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 640,
+      'compression_ratio' => 0.2084046874999999909849890400437288917601108551025390625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 77,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9420600,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/f4/db/dec8_707e5d5245d904e45b74e3c65a3-500x500.jpg',
+      'filesize' => 67851,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 320,
+        2 => 2,
+        3 => 'width="500" height="320"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 805925.925925925956107676029205322265625,
+      'usage_guestimate' => 1128296.2962962961755692958831787109375,
+      'usage_min_advised' => 10548896.29629629664123058319091796875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '13.6 MB',
+  'memory estimated' => '1.1 MB',
+  'memory suggested' => '10.5 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/f4/db/dec8_707e5d5245d904e45b74e3c65a3-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 320,
+    2 => 2,
+    3 => 'width="500" height="320"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/f4/db/dec8_707e5d5245d904e45b74e3c65a3-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 77,
+    2 => 2,
+    3 => 'width="120" height="77"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

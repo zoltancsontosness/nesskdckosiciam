@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/turnaje/turnaj_30.12.2013_snv/img1.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 39538629,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 319585,
+  8 => 1432282091,
+  9 => 1432282091,
+  10 => 1432282091,
+  11 => 4096,
+  12 => 632,
+  'dev' => 64784,
+  'ino' => 39538629,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 319585,
+  'atime' => 1432282091,
+  'mtime' => 1432282091,
+  'ctime' => 1432282091,
+  'blksize' => 4096,
+  'blocks' => 632,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 319585,
+    'filename' => 'img1.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_30.12.2013_snv',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_30.12.2013_snv/img1.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 319585,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 691,
+      'compression_ratio' => 0.15416546068499759059022835572250187397003173828125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 83,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9419048,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/9f/b1/12cf_img17461b38e942f160c963e97e4-500x500.jpg',
+      'filesize' => 53523,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 346,
+        2 => 2,
+        3 => 'width="500" height="346"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 871407.40740740741603076457977294921875,
+      'usage_guestimate' => 1219970.370370370335876941680908203125,
+      'usage_min_advised' => 10639018.3703703694045543670654296875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '13.9 MB',
+  'memory estimated' => '1.2 MB',
+  'memory suggested' => '10.6 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/9f/b1/12cf_img17461b38e942f160c963e97e4-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 346,
+    2 => 2,
+    3 => 'width="500" height="346"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/9f/b1/12cf_img17461b38e942f160c963e97e4-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 83,
+    2 => 2,
+    3 => 'width="120" height="83"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/turnaje/turnaj_pod_zastitou_primatorky_gelnica_skupina_3/img16.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 277996875,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 601987,
+  8 => 1432281158,
+  9 => 1432281159,
+  10 => 1432281159,
+  11 => 4096,
+  12 => 1176,
+  'dev' => 64784,
+  'ino' => 277996875,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 601987,
+  'atime' => 1432281158,
+  'mtime' => 1432281159,
+  'ctime' => 1432281159,
+  'blksize' => 4096,
+  'blocks' => 1176,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 601987,
+    'filename' => 'img16.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_pod_zastitou_primatorky_gelnica_skupina_3',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/turnaj_pod_zastitou_primatorky_gelnica_skupina_3/img16.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 601987,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 800,
+      'resolution_y' => 1200,
+      'compression_ratio' => 0.2090232638888888938577537146557006053626537322998046875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 80,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9421512,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/df/c1/751b_img16bcfca34ecc7cdf506d0cd7dd-500x500.jpg',
+      'filesize' => 40090,
+      'imageinfo' => 
+      array (
+        0 => 333,
+        1 => 500,
+        2 => 2,
+        3 => 'width="333" height="500"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 838666.66666666674427688121795654296875,
+      'usage_guestimate' => 1174133.33333333325572311878204345703125,
+      'usage_min_advised' => 10595645.33333333395421504974365234375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '15.3 MB',
+  'memory estimated' => '1.2 MB',
+  'memory suggested' => '10.6 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/df/c1/751b_img16bcfca34ecc7cdf506d0cd7dd-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 333,
+    1 => 500,
+    2 => 2,
+    3 => 'width="333" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/df/c1/751b_img16bcfca34ecc7cdf506d0cd7dd-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 80,
+    1 => 120,
+    2 => 2,
+    3 => 'width="80" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

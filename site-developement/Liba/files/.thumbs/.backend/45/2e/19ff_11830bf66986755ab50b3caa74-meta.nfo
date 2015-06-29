@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/kempy/letny_hokejovy_kemp_2013/11.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 572892659,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 269027,
+  8 => 1432283243,
+  9 => 1432283243,
+  10 => 1432283243,
+  11 => 4096,
+  12 => 528,
+  'dev' => 64784,
+  'ino' => 572892659,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 269027,
+  'atime' => 1432283243,
+  'mtime' => 1432283243,
+  'ctime' => 1432283243,
+  'blksize' => 4096,
+  'blocks' => 528,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 269027,
+    'filename' => '11.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/kempy/letny_hokejovy_kemp_2013',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/kempy/letny_hokejovy_kemp_2013/11.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 269027,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 671,
+      'compression_ratio' => 0.1336448087431693909632457462066668085753917694091796875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 81,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9419736,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/45/2e/19ff_11830bf66986755ab50b3caa74-500x500.jpg',
+      'filesize' => 44966,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 336,
+        2 => 2,
+        3 => 'width="500" height="336"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 846222.22222222224809229373931884765625,
+      'usage_guestimate' => 1184711.111111111007630825042724609375,
+      'usage_min_advised' => 10604447.111111111938953399658203125,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '13.8 MB',
+  'memory estimated' => '1.2 MB',
+  'memory suggested' => '10.6 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/45/2e/19ff_11830bf66986755ab50b3caa74-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 336,
+    2 => 2,
+    3 => 'width="500" height="336"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/45/2e/19ff_11830bf66986755ab50b3caa74-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 81,
+    2 => 2,
+    3 => 'width="120" height="81"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/treningy/prve_treningy/29.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 897260385,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 495574,
+  8 => 1432284218,
+  9 => 1432284218,
+  10 => 1432284218,
+  11 => 4096,
+  12 => 968,
+  'dev' => 64784,
+  'ino' => 897260385,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 495574,
+  'atime' => 1432284218,
+  'mtime' => 1432284218,
+  'ctime' => 1432284218,
+  'blksize' => 4096,
+  'blocks' => 968,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 495574,
+    'filename' => '29.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/treningy/prve_treningy',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/treningy/prve_treningy/29.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 495574,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 900,
+      'resolution_y' => 1200,
+      'compression_ratio' => 0.152954938271604945487780469193239696323871612548828125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 90,
+    'height' => 120,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9420328,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/b6/72/a002_290f25cdf8cbeec8b6937a82c1-500x500.jpg',
+      'filesize' => 32709,
+      'imageinfo' => 
+      array (
+        0 => 375,
+        1 => 500,
+        2 => 2,
+        3 => 'width="375" height="500"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 944444.4444444444961845874786376953125,
+      'usage_guestimate' => 1322222.22222222224809229373931884765625,
+      'usage_min_advised' => 10742550.22222222201526165008544921875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '16.0 MB',
+  'memory estimated' => '1.3 MB',
+  'memory suggested' => '10.7 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/b6/72/a002_290f25cdf8cbeec8b6937a82c1-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 375,
+    1 => 500,
+    2 => 2,
+    3 => 'width="375" height="500"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/b6/72/a002_290f25cdf8cbeec8b6937a82c1-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 90,
+    1 => 120,
+    2 => 2,
+    3 => 'width="90" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

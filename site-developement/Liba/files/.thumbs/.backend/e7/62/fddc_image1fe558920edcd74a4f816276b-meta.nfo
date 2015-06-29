@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/treningy/fotogaleria_trening_s_rodicmi_28.12.2012/image1.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 333036696,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 311561,
+  8 => 1432283809,
+  9 => 1432283809,
+  10 => 1432283809,
+  11 => 4096,
+  12 => 616,
+  'dev' => 64784,
+  'ino' => 333036696,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 311561,
+  'atime' => 1432283809,
+  'mtime' => 1432283809,
+  'ctime' => 1432283809,
+  'blksize' => 4096,
+  'blocks' => 616,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 311561,
+    'filename' => 'image1.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/treningy/fotogaleria_trening_s_rodicmi_28.12.2012',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/treningy/fotogaleria_trening_s_rodicmi_28.12.2012/image1.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 311561,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 746,
+      'compression_ratio' => 0.139214030384271658657979742201860062777996063232421875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 90,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9421448,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/e7/62/fddc_image1fe558920edcd74a4f816276b-500x500.jpg',
+      'filesize' => 49241,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 373,
+        2 => 2,
+        3 => 'width="500" height="373"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 939407.40740740741603076457977294921875,
+      'usage_guestimate' => 1315170.370370370335876941680908203125,
+      'usage_min_advised' => 10736618.3703703694045543670654296875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '14.3 MB',
+  'memory estimated' => '1.3 MB',
+  'memory suggested' => '10.7 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/e7/62/fddc_image1fe558920edcd74a4f816276b-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 373,
+    2 => 2,
+    3 => 'width="500" height="373"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/e7/62/fddc_image1fe558920edcd74a4f816276b-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 90,
+    2 => 2,
+    3 => 'width="120" height="90"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

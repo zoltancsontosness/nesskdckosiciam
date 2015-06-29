@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/turnaje/l.a.11_dudince_zapas_legiend/img46.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 848788079,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 259741,
+  8 => 1432281347,
+  9 => 1432281347,
+  10 => 1432281347,
+  11 => 4096,
+  12 => 512,
+  'dev' => 64784,
+  'ino' => 848788079,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 259741,
+  'atime' => 1432281347,
+  'mtime' => 1432281347,
+  'ctime' => 1432281347,
+  'blksize' => 4096,
+  'blocks' => 512,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 259741,
+    'filename' => 'img46.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/l.a.11_dudince_zapas_legiend',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/l.a.11_dudince_zapas_legiend/img46.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 259741,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 667,
+      'compression_ratio' => 0.1298055972013993086822125633261748589575290679931640625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 80,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9420048,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/f1/a6/4796_img464a9a0c1899690a65a042391a-500x500.jpg',
+      'filesize' => 45620,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 334,
+        2 => 2,
+        3 => 'width="500" height="334"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 841185.1851851851679384708404541015625,
+      'usage_guestimate' => 1177659.25925925909541547298431396484375,
+      'usage_min_advised' => 10597707.25925925932824611663818359375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '13.8 MB',
+  'memory estimated' => '1.2 MB',
+  'memory suggested' => '10.6 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/f1/a6/4796_img464a9a0c1899690a65a042391a-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 334,
+    2 => 2,
+    3 => 'width="500" height="334"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/f1/a6/4796_img464a9a0c1899690a65a042391a-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

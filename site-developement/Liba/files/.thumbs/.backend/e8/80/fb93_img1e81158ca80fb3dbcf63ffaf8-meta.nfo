@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /galeria/turnaje/prazdninovy_hokejovy_turnaj_v_cani_chlapci_skupina_2/img1.jpg
+
+$statdata = array (
+  0 => 64784,
+  1 => 12832619,
+  2 => 33206,
+  3 => 1,
+  4 => 97930,
+  5 => 97930,
+  6 => 0,
+  7 => 271462,
+  8 => 1432280637,
+  9 => 1432280637,
+  10 => 1432280637,
+  11 => 4096,
+  12 => 536,
+  'dev' => 64784,
+  'ino' => 12832619,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 97930,
+  'gid' => 97930,
+  'rdev' => 0,
+  'size' => 271462,
+  'atime' => 1432280637,
+  'mtime' => 1432280637,
+  'ctime' => 1432280637,
+  'blksize' => 4096,
+  'blocks' => 536,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 271462,
+    'filename' => 'img1.jpg',
+    'filepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/prazdninovy_hokejovy_turnaj_v_cani_chlapci_skupina_2',
+    'filenamepath' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/galeria/turnaje/prazdninovy_hokejovy_turnaj_v_cani_chlapci_skupina_2/img1.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 271462,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 667,
+      'compression_ratio' => 0.1356631684157920958444520920238574035465717315673828125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 80,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 9419400,
+      'path' => '/nfsmnt/hosting1_2/c/d/cdd69d2b-564f-4777-bafb-16e85485cadb/nesskdc.sk/sub/liba/files/.thumbs/.backend/e8/80/fb93_img1e81158ca80fb3dbcf63ffaf8-500x500.jpg',
+      'filesize' => 47748,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 334,
+        2 => 2,
+        3 => 'width="500" height="334"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 841185.1851851851679384708404541015625,
+      'usage_guestimate' => 1177659.25925925909541547298431396484375,
+      'usage_min_advised' => 10597059.25925925932824611663818359375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '13.8 MB',
+  'memory estimated' => '1.2 MB',
+  'memory suggested' => '10.6 MB',
+  'thumb250_direct' => '/files/.thumbs/.backend/e8/80/fb93_img1e81158ca80fb3dbcf63ffaf8-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 334,
+    2 => 2,
+    3 => 'width="500" height="334"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/files/.thumbs/.backend/e8/80/fb93_img1e81158ca80fb3dbcf63ffaf8-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 80,
+    2 => 2,
+    3 => 'width="120" height="80"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);
