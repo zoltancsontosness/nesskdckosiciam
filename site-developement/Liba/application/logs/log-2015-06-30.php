@@ -94,3 +94,7 @@ ERROR - 2015-06-30 08:55:48 --> Could not find the language key : "dateformat_d.
 ERROR - 2015-06-30 08:55:51 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-06-30 08:55:52 --> Could not find the language key : "dateformat_d.m.Y"
 ERROR - 2015-06-30 08:55:52 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-30 09:10:53 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 09:13:32 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 09:13:32 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-30 09:13:32 --> Could not find the language key : "dateformat_d.m.Y"

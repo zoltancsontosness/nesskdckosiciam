@@ -1,6 +1,6 @@
 <?php
 
-// legal URL: /sponsors/ness_logo.png
+// legal URL: /sponsors/logo_final.png
 
 $statdata = array (
   0 => 2,
@@ -10,10 +10,10 @@ $statdata = array (
   4 => 0,
   5 => 0,
   6 => 2,
-  7 => 71008,
-  8 => 1435581262,
-  9 => 1435581262,
-  10 => 1435581262,
+  7 => 15853,
+  8 => 1435648315,
+  9 => 1435648316,
+  10 => 1435648315,
   11 => -1,
   12 => -1,
   'dev' => 2,
@@ -23,10 +23,10 @@ $statdata = array (
   'uid' => 0,
   'gid' => 0,
   'rdev' => 2,
-  'size' => 71008,
-  'atime' => 1435581262,
-  'mtime' => 1435581262,
-  'ctime' => 1435581262,
+  'size' => 15853,
+  'atime' => 1435648315,
+  'mtime' => 1435648316,
+  'ctime' => 1435648315,
   'blksize' => -1,
   'blocks' => -1,
 );
@@ -36,21 +36,21 @@ $data = array (
   'analysis' => 
   array (
     'GETID3_VERSION' => '1.9.3-20111213',
-    'filesize' => 71008,
-    'filename' => 'ness_logo.png',
+    'filesize' => 15853,
+    'filename' => 'logo_final.png',
     'filepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors',
-    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/ness_logo.png',
+    'filenamepath' => 'C:/xampp/htdocs/nesskdckosiciam/site-developement/Liba/files/sponsors/logo_final.png',
     'avdataoffset' => 0,
-    'avdataend' => 71008,
+    'avdataend' => 15853,
     'fileformat' => 'png',
     'video' => 
     array (
       'dataformat' => 'png',
       'lossless' => false,
-      'resolution_x' => 500,
-      'resolution_y' => 500,
+      'resolution_x' => 408,
+      'resolution_y' => 105,
       'bits_per_sample' => 32,
-      'compression_ratio' => 0.07100800000000000167243996429533581249415874481201171875,
+      'compression_ratio' => 0.092512838468720826057278827647678554058074951171875,
     ),
     'encoding' => 'UTF-8',
     'mime_type' => 'image/png',
@@ -63,8 +63,8 @@ $data = array (
           'data_length' => 13,
           'type_text' => 'IHDR',
           'type_raw' => 1229472850,
-          'data' => '' . "\0" . '' . "\0" . 'ô' . "\0" . '' . "\0" . 'ô' . "\0" . '' . "\0" . '' . "\0" . '',
-          'crc' => 3419856778,
+          'data' => '' . "\0" . '' . "\0" . '˜' . "\0" . '' . "\0" . '' . "\0" . 'i' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 125973853,
           'flags' => 
           array (
             'ancilliary' => false,
@@ -73,8 +73,8 @@ $data = array (
             'safe_to_copy' => false,
           ),
         ),
-        'width' => 500,
-        'height' => 500,
+        'width' => 408,
+        'height' => 105,
         'raw' => 
         array (
           'bit_depth' => 8,
@@ -97,10 +97,10 @@ $data = array (
         array (
           'header' => 
           array (
-            'data_length' => 5319,
+            'data_length' => 7592,
             'type_text' => 'IDAT',
             'type_raw' => 1229209940,
-            'crc' => 3987534461,
+            'crc' => 2008958936,
             'flags' => 
             array (
               'ancilliary' => false,
@@ -133,23 +133,53 @@ $data = array (
     ),
   ),
   'mime_type from file extension' => 'image/png',
-  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/e5/88/ca36_ness_logo3ffc91502caaf7f16a9ddbe3-500x500.png',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 31,
+    'mime' => 'image/png',
+    'ext' => 'png',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5672072,
+      'path' => 'C:\\xampp\\htdocs\\nesskdckosiciam\\site-developement\\Liba/files/.thumbs/.backend/a5/20/9fb5_logo_finalb9ce6b364c3674a936575be-500x500.png',
+      'filesize' => 15853,
+      'imageinfo' => 
+      array (
+        0 => 408,
+        1 => 105,
+        2 => 3,
+        3 => 'width="408" height="105"',
+        'bits' => 8,
+        'mime' => 'image/png',
+      ),
+      'needed' => 215786.6666666666860692203044891357421875,
+      'usage_guestimate' => 604202.666666666627861559391021728515625,
+      'usage_min_advised' => 6276274.666666666977107524871826171875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '6.3 MB',
+  'memory estimated' => '0.6 MB',
+  'memory suggested' => '6.3 MB',
+  'thumb250_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/a5/20/9fb5_logo_finalb9ce6b364c3674a936575be-500x500.png',
   'thumb250_info' => 
   array (
-    0 => 500,
-    1 => 500,
+    0 => 408,
+    1 => 105,
     2 => 3,
-    3 => 'width="500" height="500"',
+    3 => 'width="408" height="105"',
     'bits' => 8,
     'mime' => 'image/png',
   ),
-  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/e5/88/ca36_ness_logo3ffc91502caaf7f16a9ddbe3-120x120.png',
+  'thumb48_direct' => '/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/a5/20/9fb5_logo_finalb9ce6b364c3674a936575be-120x120.png',
   'thumb48_info' => 
   array (
     0 => 120,
-    1 => 120,
+    1 => 31,
     2 => 3,
-    3 => 'width="120" height="120"',
+    3 => 'width="120" height="31"',
     'bits' => 8,
     'mime' => 'image/png',
   ),
