@@ -134,6 +134,9 @@ article{
   transition: all 0.3s ease-in-out;
 }
 
+.navbar-default .navbar-nav > li:focus > a{
+  color: #fff;
+}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
   color: #fff;
   background-color: #6f563d;
