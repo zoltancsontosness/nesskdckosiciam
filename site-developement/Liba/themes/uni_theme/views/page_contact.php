@@ -61,7 +61,15 @@
             Success message
             Displayed if the form was successfully validated
         -->
-    <ion:form:contact:validation:success tag="p" class="green" />
+    <ion:form:contact:validation:success is="true">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="alert alert-success fade in">
+          <a href="#" class="close" data-dismiss="alert">&times;</a>
+          <strong><ion:lang key="form_contact_success_title" /></strong>
+          <ion:lang key="form_contact_success_message" />
+        </div>
+      </div>
+    </ion:form:contact:validation:success>
 
     <!--
             Error message
@@ -128,10 +136,12 @@
 
       <!--Submit : Button-->
       <div class="row">
-        <div class="col-md-3 col-md-offset-9">
-          <button type="submit" class="btn btn-success btn-block">
-            <ion:lang key="form_button_send_message" />
-          </button>
+        <div class="col-md-12">
+          <div class="col-md-3 col-md-offset-9">
+            <button type="submit" class="btn btn-success btn-block">
+              <ion:lang key="form_button_send_message" />
+            </button>
+          </div>
         </div>
       </div>
 
