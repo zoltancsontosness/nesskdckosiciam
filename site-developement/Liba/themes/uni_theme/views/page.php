@@ -3,11 +3,11 @@
     <ion:articles>
       <ion:article>
 
-          <article class="col-md-12">
+          <div class="col-md-12">
             <ion:article:title tag="h1" />
             <hr />
             <ion:article:content />  
-          </article>
+          </div>
 
 
           <ion:article:medias type="picture">
