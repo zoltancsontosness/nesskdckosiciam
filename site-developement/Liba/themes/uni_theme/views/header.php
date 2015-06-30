@@ -14,13 +14,13 @@
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<ion:theme_url/>assets/js/bootstrap.min.js"></script>
+    <script src="<ion:theme_url/>assets/js/hover-dropdown.min.js"></script>
     <link rel='stylesheet' id='camera-css'  href='<ion:theme_url/>assets/camera/css/camera.css' type='text/css' media='all'>
     <script src="<ion:theme_url/>assets/js/owl.carousel.min.js"></script>
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.min.js'></script>
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.mobile.customized.min.js'></script>
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/jquery.easing.1.3.js'></script> 
     <script type='text/javascript' src='<ion:theme_url/>assets/camera/scripts/camera.min.js'></script>
-    <script src="<ion:theme_url/>assets/lightbox/js/lightbox.min.js"></script>
     <link href="<ion:theme_url/>assets/lightbox/css/lightbox.css" rel="stylesheet" />
     <link href="<ion:theme_url/>assets/css/custom.css" rel="stylesheet">
     <link href="<ion:theme_url/>assets/css/owl.carousel.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <div class="row">
       <div class="col-md-12">
         <a href="<ion:home_url />">
-          <img src="<ion:theme_url />assets/images/liba-logo.jpg" alt="Ness KDC Košiciam" class="img-responsive img-logo">
+          <img src="<ion:theme_url />assets/images/liba-header.png" alt="Ness KDC Košiciam" class="img-responsive img-logo">
         </a>
       </div>
     </div><!-- /.row -->

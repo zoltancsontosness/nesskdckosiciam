@@ -29,7 +29,7 @@
 
   <script>
     var navDropdowns = $("ul.nav").children("li").has("ul");
-    navDropdowns.addClass("dropdown").children("a").addClass("dropdown-toggle").attr({"data-toggle": "dropdown", role: "button", "aria-expanded": "false"}).append(' <b class="caret"></b>');
+    navDropdowns.addClass("dropdown").children("a").addClass("dropdown-toggle").attr({"data-toggle": "dropdown","data-hover": "dropdown", role: "button", "aria-expanded": "false"}).append(' <b class="caret"></b>');
     navDropdowns.children("ul").addClass("dropdown-menu").attr({role: "menu"});
 
     /** Add to all tables responsive view **/
