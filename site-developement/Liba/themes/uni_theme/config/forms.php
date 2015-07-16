@@ -26,10 +26,29 @@ $config['forms'] = array
  
         // Messages Language index, as set in language/xx/form_lang.php
         'messages' => array(
-            'success' => 'form_message_success',
-            'error' => 'form_message_error',
+            'success' => 'form_contact_success_title',
+            'error' => 'form_contact_error_message',
         ),
  
+        'emails' => array
+        (
+            array
+            (
+                // - 'form' to send it to the email of the form data
+                // - 'site' to send it to the Email set in Ionize under Settings > Advanced > Email > Website
+                // - 'contact' to send it to the Email set in Ionize under Settings > Advanced > Email > Contact
+                // - 'info' to send it to the Email set in Ionize under Settings > Advanced > Email > Info
+                // - 'technical' to send it to the Email set in Ionize under Settings > Advanced > Email > Technical
+                'email' => 'contact',
+ 
+                // Subject : Translation item index of the subject
+                'subject' => 'mail_contact_subject',
+ 
+                // Used view : Located in /themes/your_theme/mail/contact.php
+                'view' => 'mail/contact',
+            ),
+        ),
+      
         // Form definition: fields and rules
         'fields' => array
         (

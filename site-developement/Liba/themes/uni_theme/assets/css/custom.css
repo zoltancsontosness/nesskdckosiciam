@@ -7,7 +7,7 @@ h1 {
   color: #1962B5;
 }
 
-h4,h2 {
+h4,h2,h3 {
   font-family: 'Alegreya', serif;
   color: #003399;
 }
@@ -199,3 +199,28 @@ article{
   padding: 3px;
 }
 
+.thumb-gallery-item {
+  height: 225px;
+  transition: all 0.2s;
+}
+
+.thumb-gallery-item a {
+  text-decoration: none !important;
+}
+
+.thumb-gallery-item:hover {
+  opacity: .75;
+}
+
+.thumb-gallery-item > .thumb-img-wrapper{
+  max-height: 125px;
+  overflow: hidden;
+}
+
+.thumb-gallery-item img {
+  width: 100%;
+}
+
+a.no-decorations {
+  text-decoration: none; 
+}

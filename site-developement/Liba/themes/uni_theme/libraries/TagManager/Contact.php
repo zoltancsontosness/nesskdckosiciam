@@ -33,12 +33,13 @@ class TagManager_Contact extends TagManager
             // trace($posted);
             // log_message('error', print_r($posted, TRUE));
  
- 
+
             // ... Here ... you do what you want with the data ...
  
             // Add one custom Success message
             // Get the messages key defined in : /themes/your_theme/config/forms.php
             // You can also set directly one lang translated key
+            TagManager_Email::send_form_emails($tag, $form_name, $posted);
             $message = TagManager_Form::get_form_message('success');
             TagManager_Form::set_additional_success($form_name, $message);
  
