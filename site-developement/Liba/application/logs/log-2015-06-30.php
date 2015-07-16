@@ -181,3 +181,14 @@ ERROR - 2015-06-30 12:07:43 --> Language file contains no data: language/sk/user
 ERROR - 2015-06-30 12:07:53 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-06-30 12:07:57 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-06-30 12:08:07 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:11:21 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:11:28 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:11:47 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:25:30 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:25:37 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:25:40 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:25:41 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-30 12:25:41 --> Could not find the language key : "dateformat_d.m.Y"
+ERROR - 2015-06-30 12:25:49 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:25:51 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-06-30 12:40:10 --> Language file contains no data: language/sk/user_lang
