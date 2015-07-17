@@ -28,7 +28,7 @@
     <div class="col-md-3">
       <div class="btn-group-vertical btn-block" role="group">
         <ion:pages parent="fotogaleria">
-          <a class="btn btn-default" href="<ion:page:url />">
+          <a class="btn btn-primary" href="<ion:page:url />">
             <ion:page:title />
           </a>
         </ion:pages>

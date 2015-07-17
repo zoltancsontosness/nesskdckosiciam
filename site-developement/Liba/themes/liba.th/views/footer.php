@@ -11,6 +11,7 @@
 <script src="<ion:theme_url />assets/js/jquery.stellar.js"></script>
 <script src="<ion:theme_url />assets/js/lightbox.min.js"></script>
 <script src="<ion:theme_url />assets/js/jquery.columnizer.js"></script>
+<script src="<ion:theme_url />assets/js/grids.min.js"></script>
 <script src="<ion:theme_url />assets/js/scripts.js"></script>
 </body>
 

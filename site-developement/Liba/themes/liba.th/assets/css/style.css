@@ -49,7 +49,7 @@ body {
   padding-top: 20px;
 }
 #header-image {
-  background: url('../img/header.jpg');
+  background: url('../img/bg0.jpg');
   height: 250px;
   background-position: 50% 0px;
   position: relative;
@@ -98,6 +98,60 @@ a.no-decorations {
   height: 400px;
   width: 100%;
 }
-.columnize * {
-  padding: 5px;
+.columnize > .column {
+  padding: 10px;
+}
+.tournament-media-element {
+  background-color: #f0f0f0;
+  padding-left: 15px;
+  margin-left: -15px;
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+}
+.tournament-media-element a:link:first-child {
+  color: #000;
+}
+.tournament-media-element .media-body {
+  padding: 15px 10px 15px 0;
+}
+.tournament-media-element .btn {
+  padding-right: 125px;
+}
+.tournament-state-row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0;
+}
+.tournament-state-row h1.state {
+  font-weight: bolder;
+  font-size: 100px;
+  margin: 20px;
+}
+.site-header {
+  background: url('../img/liba-hbw.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.site-header > * {
+  position: absolute;
+  bottom: 0px;
+  text-transform: uppercase;
+  font-family: impact;
+}
+.site-header > span {
+  font-size: 100px;
+}
+.site-header > small {
+  color: #ff9901;
+  font-size: 27px;
+  left: 155px;
+}
+.players-list {
+  background-color: #f0f0f0;
+  margin: 10px;
+  padding: 25px;
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
 }

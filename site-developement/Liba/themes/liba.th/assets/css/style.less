@@ -1,5 +1,6 @@
 @theme-color: #FF9901;
 @theme-minor: #3e3f3a;
+@light-gray: #f0f0f0;
 body {
   background: url('../img/concrete_seamless.png');
 }
@@ -61,14 +62,14 @@ body {
 @media only screen and (min-width: 1200px) {}
 
 #qoute-row {
-//  background: url('../img/concrete_seamless.png');
+  //  background: url('../img/concrete_seamless.png');
   padding-top: 20px;
-//  background-color: #1e7145;
-//  color: #bcbcbc;
+  //  background-color: #1e7145;
+  //  color: #bcbcbc;
 }
 
 #header-image {
-  background: url('../img/header.jpg');
+  background: url('../img/bg0.jpg');
   height: 250px;
   background-position: 50% 0px;
   position: relative;
@@ -116,14 +117,74 @@ a.no-decorations {
     background: none !important;
   }
 }
+
 #gmap-wrapper {
-  overflow:hidden;
-  height:400px;
-  width:100%;
+  overflow: hidden;
+  height: 400px;
+  width: 100%;
 }
 
 .columnize {
-  & * {
-    padding: 5px;
+  > .column {
+    padding: 10px;
   }
 }
+
+.tournament-media-element {
+  background-color: #f0f0f0;
+  padding-left: 15px;
+  margin-left: -15px;
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+  & a:link:first-child {
+    color: #000;
+  }
+  & .media-body {
+    padding: 15px 10px 15px 0;
+  }
+  & .btn {
+    padding-right: 125px;
+  }
+}
+
+.tournament-state-row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: @light-gray;
+  & h1.state {
+    font-weight: bolder;
+    font-size: 100px;
+    margin: 20px;
+  }
+}
+
+.site-header {
+  background: url('../img/liba-hbw.png');
+  background-position: center;
+  background-attachment: fixed;
+//  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  & > * {
+    position: absolute;
+    bottom: 0px;
+    text-transform: uppercase;
+    font-family: impact;
+  }
+  & > span {
+    font-size: 100px;
+  }
+  & > small {
+    color: @theme-color;
+    font-size: 27px;
+    left: 155px;
+  }
+}
+.players-list {
+  background-color: @light-gray;
+  margin: 10px;
+  padding: 25px;
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+}
+

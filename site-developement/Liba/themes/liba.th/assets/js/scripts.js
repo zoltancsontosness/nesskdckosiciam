@@ -36,11 +36,14 @@ $("table").addClass("table");
 
 $(function () {
   $('.columnize').find('table, thead, tbody, tfoot, colgroup, caption, label, legend, script, style, textarea, button, object, embed, tr, th, td, li, h1, h2, h3, h4, h5, h6, form').addClass('dontsplit');
-  $('.wide').find('h1, h2, h3, h4, h5, h6').addClass('dontend');
-  $('.wide').find('br').addClass('removeiflast').addClass('removeiffirst');
+  $('.columnize').find('h1, h2, h3, h4, h5, h6').addClass('dontend');
+  $('.columnize').find('br').addClass('removeiflast').addClass('removeiffirst');
 
   $('h2').addClass("dontend");
   $('.columnize').columnize({
-    lastNeverTallest: true
+    lastNeverTallest: true,
+    width:600,
   });
 });
+
+$('.same-height').responsiveEqualHeightGrid();

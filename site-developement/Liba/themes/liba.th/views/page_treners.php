@@ -5,24 +5,21 @@
     <ion:title tag="h1" />
   </div>
 
-  <ion:articles>
-    <ion:article>
-
-      <div class="row">
-        <div class="col-md-12">
-          <ion:title tag="h2" />
-        </div>
-        <div class="col-md-12 columnize">
+  <div class="row">
+    <ion:articles>
+      <ion:article>
+        <div class="col-md-6 same-height">
           <ion:medias limit="1" type="picture">
-            <img src="<ion:media:src size='225' method='width' />" alt="<ion:media:alt />" class="img-responsive img-thumbnail center-block" />
+            <img src="<ion:media:src size='225' method='width' />" alt="<ion:media:alt />" class="img-responsive img-thumbnail pull-left" />
           </ion:medias>
-          <ion:content />
+          <ion:title tag="h2" />
+          <ion:content tag="p" class="text-justify" />
         </div>
-      </div>
-      <hr />
+      </ion:article>
+    </ion:articles>
+  </div>
+  <hr />
 
-    </ion:article>
-  </ion:articles>
 </ion:page>
 
 <ion:partial view="footer" />

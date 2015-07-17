@@ -44,7 +44,7 @@
 
               <small class="text-muted">
                 <i class="fa fa-clock-o fa-fw"></i>
-                <ion:date />
+                <ion:date format="complete"/>
               </small>
 
               <ion:content tag="p" />

@@ -19,7 +19,6 @@
   <link href="<ion:theme_url />assets/css/font-awesome.min.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/owl.carousel.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/lightbox.css" rel="stylesheet">
-<!--  <link href="<ion:theme_url />assets/css/screen.css" rel="stylesheet">-->
   <link href="<ion:theme_url />assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -31,7 +30,11 @@
       <div class="col-md-12" id="header">
 
         <div id="header-image" data-stellar-background-ratio="0.5">
-          <div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9  logo-wrapper">
+          <div class="col-sm-8 col-md-9 site-header" data-stellar-background-ratio="0.75">
+            <span><ion:site_title /></span>
+            <small><ion:meta_description /></small>
+          </div>
+          <div class="col-sm-4 col-md-3 hidden-xs logo-wrapper">
             <img src="<ion:theme_url />assets/img/la_logo.png" alt="" class="img-responsive" />
           </div>
         </div>
