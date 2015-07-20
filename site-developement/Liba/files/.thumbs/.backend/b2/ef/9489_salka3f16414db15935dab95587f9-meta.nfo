@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /reklamne_predmety/salka.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 492575,
+  8 => 1437397151,
+  9 => 1437397152,
+  10 => 1437397151,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 492575,
+  'atime' => 1437397151,
+  'mtime' => 1437397152,
+  'ctime' => 1437397151,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 492575,
+    'filename' => 'salka.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety/salka.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 492575,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 783,
+      'compression_ratio' => 0.174746345962821070241233201159047894179821014404296875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/b2/ef/9489_salka3f16414db15935dab95587f9-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 326,
+    2 => 2,
+    3 => 'width="500" height="326"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/b2/ef/9489_salka3f16414db15935dab95587f9-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 78,
+    2 => 2,
+    3 => 'width="120" height="78"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

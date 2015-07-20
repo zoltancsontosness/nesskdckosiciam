@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /reklamne_predmety/univerzitna_mikina.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 216475,
+  8 => 1437397156,
+  9 => 1437397156,
+  10 => 1437397156,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 216475,
+  'atime' => 1437397156,
+  'mtime' => 1437397156,
+  'ctime' => 1437397156,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 216475,
+    'filename' => 'univerzitna_mikina.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety/univerzitna_mikina.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 216475,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 958,
+      'resolution_y' => 687,
+      'compression_ratio' => 0.10963879341868419670102952068191370926797389984130859375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/03/86/3ac9_univerzitna_mikinaffaff6781153059-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 359,
+    2 => 2,
+    3 => 'width="500" height="359"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/03/86/3ac9_univerzitna_mikinaffaff6781153059-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 86,
+    2 => 2,
+    3 => 'width="120" height="86"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

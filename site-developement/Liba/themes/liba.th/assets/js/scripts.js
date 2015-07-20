@@ -8,11 +8,15 @@ $(function () {
 });
 
 /* Owl carousel initial configuration. */
-$('.owl-carousel').owlCarousel({
-  autoplay: true,
-  autoplayTimeout: 3500,
-  loop: true,
-  items: 1,
+$(document).ready(function () {
+  var owl = $("#footer-slider");
+  owl.owlCarousel({
+    margin: 20,
+    loop: true,
+    autoWidth: true,
+    autoplay:true,
+    autoplayTimeout:800,
+  });
 });
 
 /* Apply bootstrap dropdown classes to tree organized navigation bars. */
@@ -42,7 +46,7 @@ $(function () {
   $('h2').addClass("dontend");
   $('.columnize').columnize({
     lastNeverTallest: true,
-    width:600,
+    width: 600,
   });
 });
 

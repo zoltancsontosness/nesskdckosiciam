@@ -8,9 +8,6 @@ body {
 #header {
   padding: 0px;
 }
-#header img {
-  width: 100%;
-}
 #header .logo-wrapper {
   padding: 0;
 }
@@ -19,20 +16,26 @@ body {
   padding-top: 30px;
   width: 50%;
 }
+#footer-row {
+  margin-top: 25px;
+  background-color: #f0f0f0;
+  color: #fff;
+}
 #footer {
   background-color: #3e3f3a;
   padding: 30px 10px;
-  margin-top: 25px;
 }
 #footer > img {
   margin: 0px auto;
   max-width: 65%;
 }
-#slider {
-  padding: 0;
+#footer-slider .item {
+  padding: 30px 0px;
+  margin: 10px;
 }
-#slider img {
-  width: 100%;
+#footer-slider .item > img {
+  height: 50px;
+  width: auto;
 }
 @media only screen and (min-width: 768px) {
   #footer img {
@@ -45,11 +48,8 @@ body {
     margin-bottom: 50px;
   }
 }
-#qoute-row {
-  padding-top: 20px;
-}
 #header-image {
-  background: url('../img/bg0.jpg');
+  background: url('../img/header-bg.jpg');
   height: 250px;
   background-position: 50% 0px;
   position: relative;
@@ -59,9 +59,6 @@ body {
 .padding-0 {
   padding-left: 0px;
   padding-right: 0px;
-}
-a.no-decorations {
-  text-decoration: none;
 }
 .thumb-gallery-item {
   height: 225px;
@@ -101,38 +98,14 @@ a.no-decorations {
 .columnize > .column {
   padding: 10px;
 }
-.tournament-media-element {
-  background-color: #f0f0f0;
-  padding-left: 15px;
-  margin-left: -15px;
-  -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
-  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
-}
-.tournament-media-element a:link:first-child {
-  color: #000;
-}
-.tournament-media-element .media-body {
-  padding: 15px 10px 15px 0;
-}
-.tournament-media-element .btn {
-  padding-right: 125px;
-}
-.tournament-state-row {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: #f0f0f0;
-}
-.tournament-state-row h1.state {
-  font-weight: bolder;
-  font-size: 100px;
-  margin: 20px;
-}
 .site-header {
   background: url('../img/liba-hbw.png');
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .site-header > * {
   position: absolute;
@@ -154,4 +127,19 @@ a.no-decorations {
   padding: 25px;
   -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
   clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
+}
+.padding-15 {
+  padding: 15px;
+}
+.news-row h4 {
+  color: #ff9901;
+}
+.product-thumbnail {
+  min-height: 60px;
+}
+#camp-image-wrapper {
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 350px;
 }

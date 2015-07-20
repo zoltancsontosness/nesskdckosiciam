@@ -1,91 +1,119 @@
 <ion:partial view="header" />
 
 <div class="row">
-  <div class="col-md-12" id="qoute-row">
-    <blockquote class="blockquote-reverse text-right">
-      <p>
-        Tak ako v zahraničí existuje veľa mimoklubových výberov, aj na Slovensku začína fungovať mnoho výberov hráčov rôznych ročníkov, niektoré fungujú skvele, iné horšie. Našou prioritou je podpora talentovaných jedincov zo širokej športovej oblasti od útleho veku, ktorí majú o svoj športový rast predovšetkým vlastný záujem, bez ohľadu na klubovú príslušnosť. Jedná sa o celoročnú spoluprácu vhodne doplňujúcu "klubové povinosti" bez konfliktu.
-      </p>
-      <footer>Liba Academy
-      </footer>
-    </blockquote>
-  </div>
-</div>
-
-<ion:page id="slideshow">
-  <div class="row">
-    <div class="col-md-12 padding-0">
-      <div class="owl-carousel">
-        <ion:articles:article>
-          <ion:medias type="picture" limit="1">
-            <div class="item">
-              <img src="<ion:media:src size='1170,300' method='adaptive' />" alt="<ion:media:alt />" class="img-responsive" />
-            </div>
-          </ion:medias>
-        </ion:articles:article>
-      </div>
-    </div>
-  </div>
-</ion:page>
-
-<div class="row">
   <div class="col-md-12">
-    <h1>Domov</h1>
+    <h1><ion:lang key="title_news" /></h1>
     <hr/>
   </div>
   <div class="col-md-8">
 
     <ion:page id="news">
-      <ion:articles limit="10">
+      <ion:articles limit="15" order_by="date DESC">
         <ion:article>
-          <div class="media">
-            <div class="media-body">
-              <ion:title tag="h4" class="media-heading" />
+          <div class="row news-row">
+            <?php $count=0<ion:medias:count />; if($count >=1): ?>
+            <div class="col-sm-3">
+              <ion:medias type="picture" limit="1">
+                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail" />
+              </ion:medias>
+            </div>
+            <?php endif ?>
 
-              <small class="text-muted">
+            <?php if($count>=1): ?>
+            <div class="col-sm-9">
+              <?php else: ?>
+              <div class="col-md-12">
+                <?php endif; ?>
+                <?php $length=strlen( '<ion:content />'); if ($length>= 350): ?>
+                <a href="<ion:url />">
+                  <ion:title tag="h4" class="media-heading" />
+                </a>
+                <?php else: ?>
+                <ion:title tag="h4" class="media-heading" />
+                <?php endif; ?>
+
+                <small class="text-muted">
                 <i class="fa fa-clock-o fa-fw"></i>
                 <ion:date format="complete"/>
               </small>
 
-              <ion:content tag="p" />
+                <ion:content tag="p" characters="350" />
+                <?php if ($length>= 350): ?>
+                <a href="<ion:url />" class="pull-right">
+                  <ion:lang key="btn_readmore" />
+                </a>
+                <?php endif ?>
+              </div>
             </div>
+        </ion:article>
+      </ion:articles>
+    </ion:page>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <ion:page id="matches">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <ion:page:title class="panel-title" />
+            <ion:lang key="span_notplayed" />
           </div>
-        </ion:article>
-      </ion:articles>
-    </ion:page>
+          <div class="panel-body">
+            <ion:articles order_by="date ASC" limit="1">
+              <ion:article>
+                <ion:title tag="h4" />
+                <br />
 
+                <ion:element:match:items tag="ul" class="list-unstyled">
+                  <?php if(!<ion:played:value/>): ?>
+                  <li>
+                    <strong><ion:date:value format="short"/></strong> :
+                    <ion:home:value/> -
+                    <ion:guests:value />
+                  </li>
+                  <?php endif; ?>
+                </ion:element:match:items>
 
-    <ion:page id="rozpis-treningov">
-      <ion:articles limit="1">
-        <ion:article>
-          <ion:title tag="h2" />
-          <hr />
-          <ion:content />
-        </ion:article>
-      </ion:articles>
+              </ion:article>
+            </ion:articles>
+            <a href="<ion:url />" class="btn btn-default btn-sm pull-right">
+              <ion:lang key="btn_showall" />
+            </a>
+          </div>
+        </div>
+      </ion:page>
 
-    </ion:page>
+      <ion:page id="tournaments">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <ion:page:title class="panel-title" />
+            <ion:lang key="span_notplayed" />
+          </div>
+          <div class="panel-body">
+            <ion:articles order_by="date ASC" limit="1">
+              <ion:article>
+                <ion:title tag="h4" />
+                <br />
 
+                <ion:element:tournament:items tag="ul" class="list-unstyled">
+                  <?php if(!<ion:played:value/>): ?>
+                  <li>
+                    <strong><ion:date:value format="short"/></strong> :
+                    <ion:name:value />
+                  </li>
+                  <?php endif; ?>
+                </ion:element:tournament:items>
+              </ion:article>
+            </ion:articles>
+            <a href="<ion:url />" class="btn btn-default btn-sm pull-right">
+              <ion:lang key="btn_showall" />
+            </a>
+          </div>
+        </div>
+      </ion:page>
+
+    </div>
   </div>
-  <div class="col-md-4">
 
-    <ion:page id="zapasy-1">
-      <ion:articles order_by="date ASC" limit="1">
-        <ion:article>
-          <ion:partial view="view_helpers/panel_home" />
-        </ion:article>
-      </ion:articles>
-    </ion:page>
-
-    <ion:page id="turnaje">
-      <ion:articles order_by="date ASC" limit="1">
-        <ion:article>
-          <ion:partial view="view_helpers/panel_home" />
-        </ion:article>
-      </ion:articles>
-    </ion:page>
-
-  </div>
-</div>
-
-<ion:partial view="footer" />
+  <ion:partial view="footer" />

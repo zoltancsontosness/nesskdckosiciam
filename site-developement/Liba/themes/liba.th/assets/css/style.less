@@ -11,9 +11,6 @@ body {
 
 #header {
   padding: 0px;
-  & img {
-    width: 100%;
-  }
   & .logo-wrapper {
     padding: 0;
     & img {
@@ -24,20 +21,30 @@ body {
   }
 }
 
+#footer-row {
+  margin-top: 25px;
+  background-color: @light-gray;
+  color: #fff;
+}
+
 #footer {
   background-color: @theme-minor;
   padding: 30px 10px;
-  margin-top: 25px;
   & > img {
     margin: 0px auto;
     max-width: 65%;
   }
 }
 
-#slider {
-  padding: 0;
-  & img {
-    width: 100%;
+//OWL CAROUSEL
+#footer-slider {
+  & .item {
+    padding: 30px 0px;
+    margin: 10px;
+    & > img {
+      height: 50px;
+      width: auto;
+    }
   }
 }
 
@@ -61,15 +68,8 @@ body {
 
 @media only screen and (min-width: 1200px) {}
 
-#qoute-row {
-  //  background: url('../img/concrete_seamless.png');
-  padding-top: 20px;
-  //  background-color: #1e7145;
-  //  color: #bcbcbc;
-}
-
 #header-image {
-  background: url('../img/bg0.jpg');
+  background: url('../img/header-bg.jpg');
   height: 250px;
   background-position: 50% 0px;
   position: relative;
@@ -80,10 +80,6 @@ body {
 .padding-0 {
   padding-left: 0px;
   padding-right: 0px;
-}
-
-a.no-decorations {
-  text-decoration: none;
 }
 
 .thumb-gallery-item {
@@ -130,41 +126,14 @@ a.no-decorations {
   }
 }
 
-.tournament-media-element {
-  background-color: #f0f0f0;
-  padding-left: 15px;
-  margin-left: -15px;
-  -webkit-clip-path: polygon(100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
-  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
-  & a:link:first-child {
-    color: #000;
-  }
-  & .media-body {
-    padding: 15px 10px 15px 0;
-  }
-  & .btn {
-    padding-right: 125px;
-  }
-}
-
-.tournament-state-row {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: @light-gray;
-  & h1.state {
-    font-weight: bolder;
-    font-size: 100px;
-    margin: 20px;
-  }
-}
-
 .site-header {
   background: url('../img/liba-hbw.png');
   background-position: center;
   background-attachment: fixed;
-//  background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
   & > * {
     position: absolute;
     bottom: 0px;
@@ -180,6 +149,7 @@ a.no-decorations {
     left: 155px;
   }
 }
+
 .players-list {
   background-color: @light-gray;
   margin: 10px;
@@ -188,3 +158,24 @@ a.no-decorations {
   clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 0%);
 }
 
+.padding-15 {
+  padding: 15px;
+}
+
+.news-row {
+  & h4 {
+    color: @theme-color;
+  }
+}
+
+.product-thumbnail {
+  min-height: 60px;
+}
+
+#camp-image-wrapper {
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  height: 350px;
+}
