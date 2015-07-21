@@ -1,0 +1,186 @@
+<?php
+
+// legal URL: /default_avatar.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 8168,
+  8 => 1437460085,
+  9 => 1437460086,
+  10 => 1437460085,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 8168,
+  'atime' => 1437460085,
+  'mtime' => 1437460086,
+  'ctime' => 1437460085,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/png',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 8168,
+    'filename' => 'default_avatar.png',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/default_avatar.png',
+    'avdataoffset' => 0,
+    'avdataend' => 8168,
+    'fileformat' => 'png',
+    'video' => 
+    array (
+      'dataformat' => 'png',
+      'lossless' => false,
+      'resolution_x' => 336,
+      'resolution_y' => 336,
+      'bits_per_sample' => 32,
+      'compression_ratio' => 0.0180874433106575950580552358815111801959574222564697265625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/png',
+    'png' => 
+    array (
+      'IHDR' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 13,
+          'type_text' => 'IHDR',
+          'type_raw' => 1229472850,
+          'data' => '' . "\0" . '' . "\0" . 'P' . "\0" . '' . "\0" . 'P' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 3924305625,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+        ),
+        'width' => 336,
+        'height' => 336,
+        'raw' => 
+        array (
+          'bit_depth' => 8,
+          'color_type' => 6,
+          'compression_method' => 0,
+          'filter_method' => 0,
+          'interlace_method' => 0,
+        ),
+        'compression_method_text' => 'deflate/inflate',
+        'color_type' => 
+        array (
+          'palette' => false,
+          'true_color' => true,
+          'alpha' => true,
+        ),
+      ),
+      'IDAT' => 
+      array (
+        0 => 
+        array (
+          'header' => 
+          array (
+            'data_length' => 8111,
+            'type_text' => 'IDAT',
+            'type_raw' => 1229209940,
+            'crc' => 2680546248,
+            'flags' => 
+            array (
+              'ancilliary' => false,
+              'private' => false,
+              'reserved' => false,
+              'safe_to_copy' => false,
+            ),
+          ),
+        ),
+      ),
+      'IEND' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 0,
+          'type_text' => 'IEND',
+          'type_raw' => 1229278788,
+          'crc' => 2923585666,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+          'data' => '',
+        ),
+      ),
+      'encoding' => 'UTF-8',
+    ),
+  ),
+  'mime_type from file extension' => 'image/png',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 120,
+    'mime' => 'image/png',
+    'ext' => 'png',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5684392,
+      'path' => 'C:\\xampp\\htdocs\\liba\\nesskdckosiciam\\site-developement\\Liba/files/.thumbs/.backend/bc/19/ca95_default_avatar150f2f2db020957a0c6-500x500.png',
+      'filesize' => 8168,
+      'imageinfo' => 
+      array (
+        0 => 336,
+        1 => 336,
+        2 => 3,
+        3 => 'width="336" height="336"',
+        'bits' => 8,
+        'mime' => 'image/png',
+      ),
+      'needed' => 568661.333333333372138440608978271484375,
+      'usage_guestimate' => 1592251.733333333395421504974365234375,
+      'usage_min_advised' => 7276643.733333333395421504974365234375,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '7.3 MB',
+  'memory estimated' => '1.6 MB',
+  'memory suggested' => '7.3 MB',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/bc/19/ca95_default_avatar150f2f2db020957a0c6-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 336,
+    1 => 336,
+    2 => 3,
+    3 => 'width="336" height="336"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/bc/19/ca95_default_avatar150f2f2db020957a0c6-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 120,
+    2 => 3,
+    3 => 'width="120" height="120"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);

@@ -1,5 +1,6 @@
 <?php
 
+$lang['btn_details'] = 'Podrobnosti';
 $lang['span_notplayed'] = '(Ešte sa nekonali)';
 $lang['btn_showall'] = 'Zobraziť všetky';
 $lang['title_news'] = 'Aktuality';

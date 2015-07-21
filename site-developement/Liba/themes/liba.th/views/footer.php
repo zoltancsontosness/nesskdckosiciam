@@ -4,7 +4,7 @@
       <div id="footer-slider" class="owl-carousel owl-theme">
         <ion:medias type="picture" size="200" method="height" refresh="true">
           <div class="item">
-            <img src="<ion:media:src/>">
+            <img src="<ion:media:src/>" alt="<ion:media:alt />">
           </div>
         </ion:medias>
       </div>

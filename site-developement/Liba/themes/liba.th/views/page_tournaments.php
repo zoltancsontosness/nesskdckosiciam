@@ -15,7 +15,7 @@
             <ion:element:tournament>
               <thead>
                 <tr>
-                  <th>
+                  <th scope="row">
                     Dátum
                   </th>
                   <th>
@@ -39,7 +39,7 @@
               <tbody>
                 <ion:items>
                   <tr>
-                    <td scope="row">
+                    <td>
                       <ion:date:value format="short" />
                     </td>
                     <td>

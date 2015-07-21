@@ -14,7 +14,7 @@
             <?php $count=0<ion:medias:count />; if($count >=1): ?>
             <div class="col-sm-3">
               <ion:medias type="picture" limit="1">
-                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail" />
+                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail" alt="<ion:media:alt />"/>
               </ion:medias>
             </div>
             <?php endif ?>
@@ -37,7 +37,7 @@
                 <ion:date format="complete"/>
               </small>
 
-                <ion:content tag="p" characters="350" />
+                <ion:content characters="350" tag="p" />
                 <?php if ($length>= 350): ?>
                 <a href="<ion:url />" class="pull-right">
                   <ion:lang key="btn_readmore" />
@@ -52,7 +52,6 @@
     </div>
 
     <div class="col-md-4">
-
       <ion:page id="matches">
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -77,7 +76,7 @@
 
               </ion:article>
             </ion:articles>
-            <a href="<ion:url />" class="btn btn-default btn-sm pull-right">
+            <a href="<ion:url />" class="btn btn-primary btn-sm pull-right">
               <ion:lang key="btn_showall" />
             </a>
           </div>
@@ -106,7 +105,7 @@
                 </ion:element:tournament:items>
               </ion:article>
             </ion:articles>
-            <a href="<ion:url />" class="btn btn-default btn-sm pull-right">
+            <a href="<ion:url />" class="btn btn-primary btn-sm pull-right">
               <ion:lang key="btn_showall" />
             </a>
           </div>
