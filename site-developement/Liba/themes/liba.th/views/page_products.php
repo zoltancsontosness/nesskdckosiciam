@@ -17,8 +17,10 @@
         <ion:medias type="picture">
           <a href="<ion:media:src />" data-lightbox="roadtrip" data-title="<ion:media:title />">
             <div class="col-xs-6 col-sm-3 col-md-2">
-              <div class="thumbnail ">
-                <img src="<ion:media:src size='250' method='square' />" alt="<ion:media:title />">
+              <div class="thumbnail same-height text-center thumb-gallery-item">
+                <div class="thumb-img-wrapper">
+                  <img src="<ion:media:src size='250' method='square' />" alt="<ion:media:title />">
+                </div>
                 <div class="caption text-center product-thumbnail">
                   <strong><ion:media:title tag="span" /></strong>
                 </div>

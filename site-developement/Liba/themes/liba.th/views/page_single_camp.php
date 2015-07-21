@@ -11,8 +11,10 @@
       </div>
     </ion:medias>
 
-    <div class="col-md-12">
+    <div class="col-md-12 columnize">
+      <div class="column">
       <ion:content tag="p" />
+      </div>
     </div>
   </div>
 

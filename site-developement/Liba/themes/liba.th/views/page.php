@@ -15,12 +15,10 @@
           <ion:article:title tag="h2" />
           <?php endif; ?>
 
-          <div class="column">
-            <ion:content />
-            <ion:medias limit="1" type="picture">
-              <img src="<ion:media:src />" alt="<ion:media:alt />" />
-            </ion:medias>
-          </div>
+          <ion:content />
+          <ion:medias limit="1" type="picture">
+            <img src="<ion:media:src />" alt="<ion:media:alt />" />
+          </ion:medias>
         </div>
       </div>
 
