@@ -133,36 +133,6 @@ $data = array (
     ),
   ),
   'mime_type from file extension' => 'image/png',
-  'img_info' => 
-  array (
-    'width' => 120,
-    'height' => 120,
-    'mime' => 'image/png',
-    'ext' => 'png',
-    'fileinfo' => 
-    array (
-      'memory_limit' => 268435456,
-      'mem_in_use' => 5684392,
-      'path' => 'C:\\xampp\\htdocs\\liba\\nesskdckosiciam\\site-developement\\Liba/files/.thumbs/.backend/bc/19/ca95_default_avatar150f2f2db020957a0c6-500x500.png',
-      'filesize' => 8168,
-      'imageinfo' => 
-      array (
-        0 => 336,
-        1 => 336,
-        2 => 3,
-        3 => 'width="336" height="336"',
-        'bits' => 8,
-        'mime' => 'image/png',
-      ),
-      'needed' => 568661.333333333372138440608978271484375,
-      'usage_guestimate' => 1592251.733333333395421504974365234375,
-      'usage_min_advised' => 7276643.733333333395421504974365234375,
-      'will_fit' => true,
-    ),
-  ),
-  'memory used' => '7.3 MB',
-  'memory estimated' => '1.6 MB',
-  'memory suggested' => '7.3 MB',
   'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/bc/19/ca95_default_avatar150f2f2db020957a0c6-500x500.png',
   'thumb250_info' => 
   array (

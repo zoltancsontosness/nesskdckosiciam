@@ -19,7 +19,7 @@ body {
 #footer-row {
   margin-top: 25px;
   background-color: #f0f0f0;
-  color: #fff;
+  color: #7f8177;
 }
 #footer {
   background-color: #3e3f3a;
@@ -39,7 +39,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   #footer img {
-    max-width: 525px;
+    max-width: 367px;
   }
   .container {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
@@ -69,7 +69,6 @@ body {
   padding-right: 0px;
 }
 .thumb-gallery-item {
-  height: 225px;
   transition: all 0.15s;
 }
 .thumb-gallery-item > .thumb-img-wrapper {
@@ -119,11 +118,14 @@ body {
 }
 .site-header > span {
   font-size: 100px;
+  text-shadow: 1px -1px 25px rgba(165, 165, 165, 0.6);
+  bottom: 10px;
 }
 .site-header > small {
   color: #ff9901;
   font-size: 27px;
   left: 155px;
+  text-shadow: -1px 0 #3e3f3a, 0 1px #3e3f3a, 1px 0 #3e3f3a, 0 -1px #3e3f3a;
 }
 .players-list {
   background-color: #f0f0f0;

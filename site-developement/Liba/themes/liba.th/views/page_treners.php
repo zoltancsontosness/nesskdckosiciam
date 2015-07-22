@@ -19,7 +19,6 @@
               </ion:medias>
               <div class="caption">
                 <ion:title tag="h5" />
-                <!--              <ion:content tag="p" class="text-justify" characters="150" />-->
                 <p>
                 </p>
               </div>

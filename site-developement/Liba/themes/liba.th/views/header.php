@@ -15,7 +15,7 @@
   <meta name="keywords" content="<ion:meta_keywords />" />
   <link rel="icon" type="image/png" href="<ion:theme_url />assets/img/la_logo.ico">
 
-  <link href="<ion:theme_url />assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<ion:theme_url />assets/css/bootstrap.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/bootstrap-theme.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/font-awesome.min.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/owl.carousel.css" rel="stylesheet">

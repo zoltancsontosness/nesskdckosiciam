@@ -1,9 +1,13 @@
 <ion:partial view="header" />
 
 <ion:article>
-    <div class="page-header">
-      <ion:title tag="h1" />
-    </div>
+  <div class="page-header">
+    <ion:title tag="h1" />
+    <small class="text-muted">
+    <ion:date format="medium"/>
+    - <ion:subtitle />
+    </small>
+  </div>
 
   <div class="row">
     <ion:article:medias type="picture">

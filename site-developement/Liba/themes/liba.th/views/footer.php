@@ -1,13 +1,15 @@
 <div class="row text-center" id="footer-row">
   <div class="col-md-12">
-    <ion:page id="sponsors">
-      <div id="footer-slider" class="owl-carousel owl-theme">
-        <ion:medias type="picture" size="200" method="height" refresh="true">
-          <div class="item">
-            <img src="<ion:media:src/>" alt="<ion:media:alt />">
-          </div>
-        </ion:medias>
-      </div>
+    <ion:page id="partners">
+      <a href="<ion:page:url/>">
+        <div id="footer-slider" class="owl-carousel owl-theme">
+          <ion:medias type="picture" size='100,100' method='height' refresh="true">
+            <div class="item">
+              <img src="<ion:media:src/>" alt="<ion:media:alt />">
+            </div>
+          </ion:medias>
+        </div>
+      </a>
     </ion:page>
   </div>
   <div class="col-md-12" id="footer">
