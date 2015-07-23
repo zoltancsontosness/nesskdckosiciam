@@ -21,6 +21,9 @@
   <link href="<ion:theme_url />assets/css/owl.carousel.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/lightbox.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/style.css" rel="stylesheet">
+  
+  <script src="<ion:theme_url />assets/js/jquery.min.js"></script>
+
 </head>
 
 <body>

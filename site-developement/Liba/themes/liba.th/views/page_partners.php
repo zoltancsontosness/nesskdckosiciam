@@ -5,24 +5,28 @@
     <ion:title tag="h1" />
   </div>
 
-
   <div class="row">
-    <div class="col-md-12 columnize">
-      <div class="column">
-
-        <ion:medias type="picture" size='65,100' method='height'>
-
-<!--          <b> <ion:media:title tag="p" class="lead"/></b>-->
-          <img src="<ion:media:src />" alt="<ion:media:alt/>" />
-          <small class="muted">
-          <ion:media:description /><br/>
-        </small>
-
+    <div class="col-md-12">
+      <div class="partners-wrapper">
+        <ion:medias type="picture" size='50,100' method='height'>
+          <ion:media:link is_not="">
+            <a href="<ion:media:link />" target="_blank" data-toggle="tooltip" data-placement="top" title="<ion:media:title /> - <ion:media:description />">
+              <img src="<ion:media:src />" alt="<ion:media:alt/>" />
+            </a>
+          </ion:media:link>
+          <ion:else>
+            <img src="<ion:media:src />" alt="<ion:media:alt/>" data-toggle="tooltip" data-placement="top" title="<ion:media:title /> - <ion:media:description />"/>
+          </ion:else>
         </ion:medias>
       </div>
     </div>
   </div>
-
 </ion:page>
 
-<ion:partial view="footer" />
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+<ion:partial view="footer" partners="false" />

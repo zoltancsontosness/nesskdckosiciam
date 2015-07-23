@@ -12,9 +12,9 @@
         <ion:article>
           <div class="row news-row">
             <?php $count=0<ion:medias:count />; if($count >=1): ?>
-            <div class="col-sm-3">
+            <div class="col-sm-3 hidden-xs">
               <ion:medias type="picture" limit="1">
-                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail" alt="<ion:media:alt />"/>
+                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail center-block" alt="<ion:media:alt />"/>
               </ion:medias>
             </div>
             <?php endif ?>
@@ -41,6 +41,7 @@
                 <?php if ($length>= 350): ?>
                 <a href="<ion:url />" class="pull-right">
                   <ion:lang key="btn_readmore" />
+                  <i class="fa fa-angle-right fa-fw"></i>
                 </a>
                 <?php endif ?>
               </div>

@@ -59,7 +59,11 @@
                       </ion:gallery:links>
                     </td>
                     <td>
-                      <ion:other:value/>
+                      <ion:other:medias>
+                        <a href="<ion:media:src />" target="_blank">
+                          <ion:media:title />,
+                        </a>
+                      </ion:other:medias>
                     </td>
                   </tr>
                 </ion:items>

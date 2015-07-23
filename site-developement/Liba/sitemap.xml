@@ -137,6 +137,13 @@
 	</url>
 
 	<url>
+		<loc>http://localhost/liba/nesskdckosiciam/site-developement/Liba/fotogaleria/turnaje</loc>
+		<lastmod>2015-07-22T15:53:32+02:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+
+	<url>
 		<loc>http://localhost/liba/nesskdckosiciam/site-developement/Liba/fotogaleria/cas-mimo-adu</loc>
 		<lastmod>2015-06-30T12:01:49+02:00</lastmod>
 		<changefreq>weekly</changefreq>
@@ -188,13 +195,6 @@
 	<url>
 		<loc>http://localhost/liba/nesskdckosiciam/site-developement/Liba/partners</loc>
 		<lastmod>2015-07-22T15:36:06+02:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.5</priority>
-	</url>
-
-	<url>
-		<loc>http://localhost/liba/nesskdckosiciam/site-developement/Liba/fotogaleria/turnaje</loc>
-		<lastmod>2015-07-22T15:53:32+02:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
