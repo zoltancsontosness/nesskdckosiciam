@@ -8,13 +8,47 @@ body {
 #header {
   padding: 0px;
 }
-#header .logo-wrapper {
-  padding: 0;
-}
 #header .logo-wrapper img {
   margin: 0px auto;
   padding-top: 30px;
   width: 50%;
+}
+#header > .header-image {
+  background: url('../img/header-bg.jpg');
+  height: 250px;
+  background-position: 50% 0px;
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.site-header {
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.site-header > * {
+  position: absolute;
+  bottom: 0px;
+  text-transform: uppercase;
+  font-family: impact;
+}
+.site-header > span {
+  font-size: 100px;
+  text-shadow: 1px -1px 25px rgba(165, 165, 165, 0.6);
+  bottom: 10px;
+}
+.site-header > small {
+  color: #ff9901;
+  font-size: 27px;
+  left: 155px;
+  text-shadow: -1px 0 #3e3f3a, 0 1px #3e3f3a, 1px 0 #3e3f3a, 0 -1px #3e3f3a;
+}
+#header-wrapper {
+  height: 100%;
+  background: url('../img/site-header.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 #footer-row {
   margin-top: 25px;
@@ -42,13 +76,16 @@ body {
     max-width: 367px;
   }
   .container {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-    box-shadow: 1px 1px 5px #707070;
+    -webkit-box-shadow: 0 0 12px #707070;
+    -moz-box-shadow: 0 0 12px #707070;
+    box-shadow: 0 0 12px #707070;
     margin-top: 50px;
     margin-bottom: 50px;
   }
   .thumb-gallery-item {
-    opacity: .8;
+    -webkit-opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity: 0.8;
   }
   .thumb-gallery-item > .thumb-img-wrapper > img {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -56,20 +93,15 @@ body {
     -webkit-filter: grayscale(75%);
   }
 }
-#header-image {
-  background: url('../img/header-bg.jpg');
-  height: 250px;
-  background-position: 50% 0px;
-  position: relative;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
 .padding-0 {
   padding-left: 0px;
   padding-right: 0px;
 }
 .thumb-gallery-item {
-  transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -ms-transition: all 0.15s;
+  -o-transition: all 0.15s;
 }
 .thumb-gallery-item > .thumb-img-wrapper {
   max-height: 125px;
@@ -79,6 +111,8 @@ body {
   width: 100%;
 }
 .thumb-gallery-item:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
   opacity: 1;
 }
 .thumb-gallery-item:hover .thumb-img-wrapper > img {
@@ -100,32 +134,6 @@ body {
 }
 .columnize > .column {
   padding: 10px;
-}
-.site-header {
-  background: url('../img/liba-hbw.png');
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.site-header > * {
-  position: absolute;
-  bottom: 0px;
-  text-transform: uppercase;
-  font-family: impact;
-}
-.site-header > span {
-  font-size: 100px;
-  text-shadow: 1px -1px 25px rgba(165, 165, 165, 0.6);
-  bottom: 10px;
-}
-.site-header > small {
-  color: #ff9901;
-  font-size: 27px;
-  left: 155px;
-  text-shadow: -1px 0 #3e3f3a, 0 1px #3e3f3a, 1px 0 #3e3f3a, 0 -1px #3e3f3a;
 }
 .players-list {
   background-color: #f0f0f0;

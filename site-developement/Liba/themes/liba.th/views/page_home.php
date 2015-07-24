@@ -14,7 +14,7 @@
             <?php $count=0<ion:medias:count />; if($count >=1): ?>
             <div class="col-sm-3 hidden-xs">
               <ion:medias type="picture" limit="1">
-                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail center-block" alt="<ion:media:alt />"/>
+                <img src="<ion:media:src size='200' method='square' />" class="img-responsive img-thumbnail center-block" alt="<ion:media:alt />" />
               </ion:medias>
             </div>
             <?php endif ?>

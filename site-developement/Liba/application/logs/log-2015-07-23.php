@@ -109,3 +109,6 @@ ERROR - 2015-07-23 16:18:55 --> Language file contains no data: language/sk/user
 ERROR - 2015-07-23 16:18:56 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-07-23 16:20:14 --> Language file contains no data: language/sk/user_lang
 ERROR - 2015-07-23 16:20:21 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-07-23 16:47:24 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-07-23 16:47:38 --> Language file contains no data: language/sk/user_lang
+ERROR - 2015-07-23 16:47:48 --> Language file contains no data: language/sk/user_lang

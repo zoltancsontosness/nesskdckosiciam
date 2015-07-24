@@ -21,7 +21,7 @@
   <link href="<ion:theme_url />assets/css/owl.carousel.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/lightbox.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/style.css" rel="stylesheet">
-  
+
   <script src="<ion:theme_url />assets/js/jquery.min.js"></script>
 
 </head>
@@ -40,14 +40,15 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12" id="header">
-
-        <div id="header-image" data-stellar-background-ratio="0.5">
-          <div class="col-sm-8 col-md-9 site-header" data-stellar-background-ratio="0.75">
-            <span><ion:site_title /></span>
-            <small><ion:meta_description /></small>
-          </div>
-          <div class="col-sm-4 col-md-3 hidden-xs logo-wrapper">
-            <img src="<ion:theme_url />assets/img/la_logo.png" alt="" class="img-responsive" />
+        <div class="header-image" data-stellar-background-ratio="0.5">
+          <div id="header-wrapper" data-stellar-background-ratio="0.75">
+            <div class="col-sm-8 col-md-9 col-xs-12 site-header">
+              <span><ion:site_title /></span>
+              <small><ion:meta_description /></small>
+            </div>
+            <div class="col-sm-4 col-md-3 hidden-xs logo-wrapper">
+              <img src="<ion:theme_url />assets/img/la_logo.png" alt="" class="img-responsive" />
+            </div>
           </div>
         </div>
 

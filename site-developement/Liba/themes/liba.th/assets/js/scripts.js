@@ -9,13 +9,24 @@ $(function () {
 
 /* Owl carousel initial configuration. */
 $(document).ready(function () {
-  var owl = $("#footer-slider");
-  owl.owlCarousel({
+  var fs = $("#footer-slider");
+  var ss = $("#sidebar-slider");
+
+  fs.owlCarousel({
     margin: 20,
     loop: true,
     autoWidth: true,
-    autoplay:true,
-    autoplayTimeout:800,
+    autoplay: true,
+    autoplayTimeout: 800,
+  });
+
+  ss.owlCarousel({
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    loop: true,
+    nav: false,
+    navText: ['<i class="fa fa-chevron-left fa-2x"></i>','<i class="fa fa-chevron-right fa-2x"></i>']
   });
 });
 
