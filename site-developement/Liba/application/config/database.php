@@ -4,9 +4,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'liba';
+$db['default']['username'] = 'libaacad';
+$db['default']['password'] = 'L1b4Acad';
+$db['default']['database'] = 'libaacad';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['swap_pre'] = '';
