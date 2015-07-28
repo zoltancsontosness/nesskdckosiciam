@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /reklamne_predmety/siltovka.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 340430,
+  8 => 1437397152,
+  9 => 1437397153,
+  10 => 1437397152,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 340430,
+  'atime' => 1437397152,
+  'mtime' => 1437397153,
+  'ctime' => 1437397152,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 340430,
+    'filename' => 'siltovka.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety/siltovka.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 340430,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 849,
+      'compression_ratio' => 0.11138267242507525478512064864844433031976222991943359375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/06/eb/b757_siltovka5722061c7f8a8c442f0a9c07-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 354,
+    2 => 2,
+    3 => 'width="500" height="354"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/06/eb/b757_siltovka5722061c7f8a8c442f0a9c07-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 85,
+    2 => 2,
+    3 => 'width="120" height="85"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

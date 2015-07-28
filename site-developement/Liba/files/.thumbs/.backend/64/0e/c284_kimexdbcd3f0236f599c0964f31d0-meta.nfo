@@ -1,0 +1,156 @@
+<?php
+
+// legal URL: /partneri/kimex.png
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 106525,
+  8 => 1437576427,
+  9 => 1437576427,
+  10 => 1437576427,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 106525,
+  'atime' => 1437576427,
+  'mtime' => 1437576427,
+  'ctime' => 1437576427,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/png',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 106525,
+    'filename' => 'kimex.png',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/partneri',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/partneri/kimex.png',
+    'avdataoffset' => 0,
+    'avdataend' => 106525,
+    'fileformat' => 'png',
+    'video' => 
+    array (
+      'dataformat' => 'png',
+      'lossless' => false,
+      'resolution_x' => 1015,
+      'resolution_y' => 253,
+      'bits_per_sample' => 32,
+      'compression_ratio' => 0.10370626375124125662097185340826399624347686767578125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/png',
+    'png' => 
+    array (
+      'IHDR' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 13,
+          'type_text' => 'IHDR',
+          'type_raw' => 1229472850,
+          'data' => '' . "\0" . '' . "\0" . '÷' . "\0" . '' . "\0" . '' . "\0" . 'ý' . "\0" . '' . "\0" . '' . "\0" . '',
+          'crc' => 4193617716,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+        ),
+        'width' => 1015,
+        'height' => 253,
+        'raw' => 
+        array (
+          'bit_depth' => 8,
+          'color_type' => 6,
+          'compression_method' => 0,
+          'filter_method' => 0,
+          'interlace_method' => 0,
+        ),
+        'compression_method_text' => 'deflate/inflate',
+        'color_type' => 
+        array (
+          'palette' => false,
+          'true_color' => true,
+          'alpha' => true,
+        ),
+      ),
+      'IDAT' => 
+      array (
+        0 => 
+        array (
+          'header' => 
+          array (
+            'data_length' => 8020,
+            'type_text' => 'IDAT',
+            'type_raw' => 1229209940,
+            'crc' => 3305176759,
+            'flags' => 
+            array (
+              'ancilliary' => false,
+              'private' => false,
+              'reserved' => false,
+              'safe_to_copy' => false,
+            ),
+          ),
+        ),
+      ),
+      'IEND' => 
+      array (
+        'header' => 
+        array (
+          'data_length' => 0,
+          'type_text' => 'IEND',
+          'type_raw' => 1229278788,
+          'crc' => 2923585666,
+          'flags' => 
+          array (
+            'ancilliary' => false,
+            'private' => false,
+            'reserved' => false,
+            'safe_to_copy' => false,
+          ),
+          'data' => '',
+        ),
+      ),
+      'encoding' => 'UTF-8',
+    ),
+  ),
+  'mime_type from file extension' => 'image/png',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/64/0e/c284_kimexdbcd3f0236f599c0964f31d0-500x500.png',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 125,
+    2 => 3,
+    3 => 'width="500" height="125"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/64/0e/c284_kimexdbcd3f0236f599c0964f31d0-120x120.png',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 30,
+    2 => 3,
+    3 => 'width="120" height="30"',
+    'bits' => 8,
+    'mime' => 'image/png',
+  ),
+);

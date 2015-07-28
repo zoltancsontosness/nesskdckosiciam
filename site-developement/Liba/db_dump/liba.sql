@@ -1,11 +1,11 @@
-﻿-- phpMyAdmin SQL Dump
--- version 4.2.11
+-- phpMyAdmin SQL Dump
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Út 30.Jún 2015, 09:14
--- Verzia serveru: 5.6.21
--- Verzia PHP: 5.6.3
+-- Čas generovania: Št 23.Júl 2015, 16:23
+-- Verzia serveru: 5.6.24
+-- Verzia PHP: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `api_key` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `key` varchar(40) NOT NULL,
   `level` int(2) NOT NULL,
   `ignore_limits` tinyint(1) NOT NULL DEFAULT '0',
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `api_key` (
 --
 
 CREATE TABLE IF NOT EXISTS `api_log` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `uri` varchar(255) NOT NULL,
   `method` varchar(6) NOT NULL,
   `params` text,
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `api_log` (
 --
 
 CREATE TABLE IF NOT EXISTS `article` (
-`id_article` int(11) unsigned NOT NULL,
+  `id_article` int(11) unsigned NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `author` varchar(55) DEFAULT NULL,
   `updater` varchar(55) DEFAULT NULL,
@@ -77,34 +77,32 @@ CREATE TABLE IF NOT EXISTS `article` (
   `flag` smallint(1) DEFAULT '0',
   `has_url` tinyint(1) unsigned NOT NULL DEFAULT '1',
   `priority` smallint(1) unsigned NOT NULL DEFAULT '5'
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article`
 --
 
 INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `publish_on`, `publish_off`, `updated`, `logical_date`, `indexed`, `id_category`, `comment_allow`, `comment_autovalid`, `comment_expire`, `flag`, `has_url`, `priority`) VALUES
-(1, '404', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
+(1, '404', '', 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 14:10:07', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (2, '401', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
 (3, '403', NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', NULL, 0, 1, 5),
 (5, 'zapasy', 'admin', 'admin', '2015-04-17 10:51:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 10:57:36', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (6, 'turnaje', 'admin', 'admin', '2015-04-17 10:57:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 10:58:07', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (7, 'toto-je-nas-tim', 'admin', 'admin', '2015-04-17 10:58:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-17 10:59:04', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (8, 'filozofia-skoly-1', 'admin', 'admin', '2015-04-20 13:49:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:07:49', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(11, 'zoznam-hracov', 'admin', 'admin', '2015-04-21 15:02:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 16:03:51', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (12, 'igor-liba', 'admin', 'admin', '2015-04-21 17:02:43', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 17:03:22', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (13, 'pavel-valko-st.', 'admin', 'admin', '2015-04-21 17:10:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 15:59:05', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (14, 'jaromir-dragan', 'admin', 'admin', '2015-04-21 17:12:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 13:42:28', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (15, 'uvod', 'admin', NULL, '2015-04-22 10:03:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-22 10:03:20', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(16, 'oznam-1', 'admin', NULL, '2015-04-22 13:03:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-22 13:03:48', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(17, 'oznam', 'admin', NULL, '2015-04-22 13:04:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-22 13:04:06', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(16, 'oznam-1', 'admin', 'admin', '2015-04-22 13:03:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 13:24:56', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(17, 'oznam', 'admin', 'admin', '2015-04-22 13:04:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 13:24:44', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (18, NULL, NULL, NULL, '2015-04-24 17:07:53', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:07:53', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (19, 'pavel-valko-st.-1', 'admin', 'admin', '2015-04-27 13:44:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 13:45:39', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (20, 'pavel-valko-st.-2', 'admin', NULL, '2015-04-27 13:46:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 13:46:19', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(21, 'pavel-valko-st.-3', 'admin', NULL, '2015-04-27 14:11:09', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 14:11:09', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(22, 'jaromir-dragan-1', 'admin', 'admin', '2015-04-27 14:13:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 14:15:22', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(23, 'slavomir-ilavsk', 'admin', NULL, '2015-04-27 14:19:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 14:19:04', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(24, 'reklamne-predmety', 'admin', 'admin', '2015-04-27 14:45:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 16:52:38', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(21, 'pavel-valko-st.-3', 'admin', 'admin', '2015-04-27 14:11:09', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:54:56', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(22, 'jaromir-dragan-1', 'admin', 'admin', '2015-04-27 14:13:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 10:38:45', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(23, 'slavomir-ilavsk', 'admin', 'admin', '2015-04-27 14:19:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 10:39:49', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (25, 'rozpis-treningov', 'admin', 'admin', '2015-04-27 17:17:56', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:19:02', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (26, 'kodex-klubu', 'admin', 'admin', '2015-04-27 17:20:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:25:01', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (27, 'ulohy-trenerov', 'admin', 'admin', '2015-04-27 17:22:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:24:53', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
@@ -117,30 +115,56 @@ INSERT INTO `article` (`id_article`, `name`, `author`, `updater`, `created`, `pu
 (34, 'sezona-2014-2015-1', 'admin', NULL, '2015-05-07 09:40:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:40:48', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (35, 'sezona-2013-2014-1', 'admin', NULL, '2015-05-07 09:41:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:41:13', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (36, 'sezona-2012-2013-1', 'admin', NULL, '2015-05-07 09:41:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:41:36', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(37, 'kempy', 'admin', NULL, '2015-05-07 09:43:32', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:43:32', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (38, '2-z-dani', 'admin', 'admin', '2015-05-07 09:48:47', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:50:39', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(39, '17.04.2014-vekonocn-turnaj-caa-chlapci-skupina-1', 'admin', 'admin', '2015-05-07 10:06:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:17:37', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(40, 'medzinarodn-hokejov-turnaj-miskolc-07.04.2014', 'admin', 'admin', '2015-05-07 10:57:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:17:59', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(39, '17.04.2014-vekonocn-turnaj-caa-chlapci-skupina-1', 'admin', 'admin', '2015-05-07 10:06:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:41:10', '2014-04-17 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(40, 'medzinarodn-hokejov-turnaj-miskolc-07.04.2014', 'admin', 'admin', '2015-05-07 10:57:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:53:48', '2014-04-07 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (41, 'skupina-4', 'admin', NULL, '2015-05-07 11:00:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 11:00:03', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (42, 'letn-hokejov-kemp-2014', 'admin', 'admin', '2015-05-07 11:01:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 11:01:22', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (43, 'mikulas-2013', 'admin', 'admin', '2015-05-07 11:02:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 11:03:08', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (44, 'kontakt', 'admin', 'admin', '2015-05-07 12:49:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 13:44:12', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(45, 'basf-cup-2014-hokejovy-turnaj-5-sht-v-ziline-chlapci-skupina-23', 'admin', 'admin', '2015-05-22 09:19:33', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 09:58:46', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(46, 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-3', 'admin', 'admin', '2015-05-22 09:33:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 09:59:07', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(47, 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-2', 'admin', 'admin', '2015-05-22 09:42:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 09:59:28', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(48, 'turnaj-o-cenu-primatorky-sabinov-skupina-3', 'admin', 'admin', '2015-05-22 09:46:58', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:00:20', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(49, 'turnaj-pod-zastitou-primatorky-gelnica-skupina-3', 'admin', 'admin', '2015-05-22 09:50:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:00:52', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(50, 'l.a.11-dudince-zapas-legiend', 'admin', 'admin', '2015-05-22 09:54:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:01:10', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(51, 'turnaj-04.01.2014-cana', 'admin', NULL, '2015-05-22 10:02:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:02:15', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(52, 'turnaj-30.12.2013-snv', 'admin', NULL, '2015-05-22 10:05:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:05:37', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(53, 'turnaj-29.12.2013-trebisov', 'admin', NULL, '2015-05-22 10:09:12', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:09:12', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(54, 'turnaj-22.2.2013-sabinov', 'admin', NULL, '2015-05-22 10:10:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:10:52', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(55, 'turnaj-28.3.2013-snv', 'admin', NULL, '2015-05-22 10:14:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:14:34', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(56, 'turnaj-29.12.2012-trebisov', 'admin', NULL, '2015-05-22 10:20:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:20:11', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(45, 'basf-cup-2014-hokejovy-turnaj-5-sht-v-ziline-chlapci-skupina-23', 'admin', 'admin', '2015-05-22 09:19:33', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:44:55', '2014-04-05 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(46, 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-3', 'admin', 'admin', '2015-05-22 09:33:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:45:49', '2014-03-06 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(47, 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-2', 'admin', 'admin', '2015-05-22 09:42:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:46:21', '2014-03-03 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(48, 'turnaj-o-cenu-primatorky-sabinov-skupina-3', 'admin', 'admin', '2015-05-22 09:46:58', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:46:43', '2014-03-02 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(49, 'turnaj-pod-zastitou-primatorky-gelnica-skupina-3', 'admin', 'admin', '2015-05-22 09:50:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:46:59', '2014-02-23 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(50, 'l.a.11-dudince-zapas-legiend', 'admin', 'admin', '2015-05-22 09:54:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:47:24', '2014-02-21 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(51, 'turnaj-04.01.2014-cana', 'admin', 'admin', '2015-05-22 10:02:15', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:49:23', '2014-01-04 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(52, 'turnaj-30.12.2013-snv', 'admin', 'admin', '2015-05-22 10:05:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:49:15', '2013-12-30 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(53, 'turnaj-29.12.2013-trebisov', 'admin', 'admin', '2015-05-22 10:09:12', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:49:37', '2013-12-29 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(54, 'turnaj-22.2.2013-sabinov', 'admin', 'admin', '2015-05-22 10:10:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:49:55', '2013-02-22 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(55, 'turnaj-28.3.2013-snv', 'admin', 'admin', '2015-05-22 10:14:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:50:15', '2013-03-28 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(56, 'turnaj-29.12.2012-trebisov', 'admin', 'admin', '2015-05-22 10:20:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:50:47', '2012-12-29 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (57, 'letny-hokejovy-kemp-2013', 'admin', NULL, '2015-05-22 10:25:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:25:48', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
 (58, 'trening-skupina-1', 'admin', 'admin', '2015-05-22 10:29:09', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:32:16', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(59, 'fotogaleria-trening-s-rodicmi-28.12.2012', 'admin', NULL, '2015-05-22 10:34:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:34:19', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
-(60, 'prve-treningy', 'admin', NULL, '2015-05-22 10:41:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:41:06', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
+(59, 'fotogaleria-trening-s-rodicmi-28.12.2012', 'admin', 'admin', '2015-05-22 10:34:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:51:26', '2012-12-28 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(60, 'prve-treningy', 'admin', NULL, '2015-05-22 10:41:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-22 10:41:06', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(61, 'hgdhgd', 'admin', NULL, '2015-06-30 11:53:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 11:53:08', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(62, 'skupina-1', 'admin', 'admin', '2015-07-15 16:29:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 10:48:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(63, 'skupina-2', 'admin', 'admin', '2015-07-15 16:30:40', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 10:47:49', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(64, 'turnaj-o-pohar-starostu-obce-caa-skupina', 'admin', 'admin', '2015-07-16 15:37:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-16 16:07:46', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(65, 'novoro-ny-turnaj-skupina-2', 'admin', 'admin', '2015-07-16 16:08:57', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 07:14:32', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(66, 'rusnak-liba-lukac.-utok-ktor-velebil-aj-tichonov', 'admin', 'admin', '2015-07-17 10:56:05', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 10:56:43', '2015-04-21 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(67, 'igor-liba-vychovava-aj-baletky.-mesto-mu-zrejme-znizi-najomne', 'admin', 'admin', '2015-07-17 10:56:58', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 10:57:13', '2015-04-20 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(68, 'gretzky-m-stval-nechtl-jit-na-pivo-vzpomina-liba-na-legendu', 'admin', 'admin', '2015-07-17 10:58:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 10:58:36', '2015-04-09 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(69, 'lorem-ipsum', 'admin', 'admin', '2015-07-20 08:11:32', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 08:43:00', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(70, 'lorem-ipsum1', 'admin', 'admin', '2015-07-20 09:05:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 14:10:07', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(71, 'desatoro-pre-rodicov-1', 'admin', NULL, '2015-07-20 10:18:56', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 10:18:56', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(72, 'sezona-2014-2015-2', 'admin', NULL, '2015-07-20 12:32:29', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 12:32:29', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(73, 'sezona-2013-2014-2', 'admin', NULL, '2015-07-20 12:34:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 12:34:37', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(74, 'sezona-2014-2015-3', 'admin', NULL, '2015-07-20 12:49:40', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 12:49:40', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(75, 'apparel', 'admin', 'admin', '2015-07-20 14:54:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 15:05:59', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(76, 'souvenirs', 'admin', NULL, '2015-07-20 14:55:39', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 14:55:39', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(77, 'other', 'admin', NULL, '2015-07-20 15:14:41', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 15:14:41', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(78, 'letn-hokejov-kemp-2014-1', 'admin', 'admin', '2015-07-20 15:31:40', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 15:35:49', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(79, 'severim-gonci', 'admin', 'admin', '2015-07-21 08:15:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:16:28', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(80, 'pavol-valko-ml.', 'admin', NULL, '2015-07-21 08:17:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:17:07', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(81, 'tomas-bugos', 'admin', NULL, '2015-07-21 08:18:01', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:18:01', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(82, 'diana-riskova-krasokorcuovanie', 'admin', NULL, '2015-07-21 08:18:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:18:48', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(83, 'lucia-kupcova-krasokorcuovanie', 'admin', NULL, '2015-07-21 08:19:32', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:19:32', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(84, 'alexandra-dulakova-krasokorcuovanie', 'admin', NULL, '2015-07-21 08:20:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:20:31', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(85, 'mirka-lipcakova-krasokorcuovanie', 'admin', NULL, '2015-07-21 08:21:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:21:20', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(86, 'skupina-3', 'admin', 'admin', '2015-07-21 10:44:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 10:48:10', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5),
+(87, 'skupina-5', 'admin', 'admin', '2015-07-21 10:47:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 10:48:22', '0000-00-00 00:00:00', 0, NULL, '0', '0', '0000-00-00 00:00:00', 0, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -160,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `article_category` (
 --
 
 CREATE TABLE IF NOT EXISTS `article_comment` (
-`id_article_comment` int(11) unsigned NOT NULL,
+  `id_article_comment` int(11) unsigned NOT NULL,
   `id_article` int(11) unsigned NOT NULL DEFAULT '0',
   `author` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
@@ -197,26 +221,24 @@ CREATE TABLE IF NOT EXISTS `article_lang` (
 --
 
 INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `meta_title`, `content`, `meta_keywords`, `meta_description`, `online`) VALUES
-(1, 'sk', '404', '404', NULL, NULL, '<p>The content you asked for was not found !</p>', NULL, NULL, 1),
+(1, 'sk', '404', '404', '', '', '<p>Ľutujeme. Stránka, ktorú sa pokúšate otvoriť sa nenašla.</p>', '', '', 1),
 (2, 'sk', '401', '401', 'Please login', NULL, '<p>Please login to see this content.</p>', NULL, NULL, 1),
 (3, 'sk', '403', '403', 'Forbidden', NULL, '<p>This content is forbidden.</p>', NULL, NULL, 1),
 (5, 'sk', 'zapasy', 'Zápasy', '', '', '', '', '', 1),
 (6, 'sk', 'turnaje', 'Turnaje', '', '', '', '', '', 1),
 (7, 'sk', 'toto-je-nas-tim', 'Toto je náš tím', '', '', '', '', '', 1),
 (8, 'sk', 'filozofia-skoly-1', 'Filozofia školy', '', '', '<p>Tak ako v zahraničí existuje veľa mimoklubových výberov, aj na Slovensku začína fungovať mnoho výberov hráčov rôznych ročníkov, niektoré fungujú skvele, iné horšie. Našou prioritou je podpora talentovaných jedincov zo širokej športovej oblasti od útleho veku, ktorí majú o svoj športový rast predovšetkým vlastný záujem, bez ohľadu na klubovú príslušnosť. Jedná sa o celoročnú spoluprácu vhodne doplňujúcu "klubové povinosti" bez konfliktu.</p>\n<p>Týmto športovcom sa Hockey Liba Academy bude snažiť vytvárať čo najoptimálnejšie podmienky na rozvíjanie ich talentu nasledujúcimi spôsobmi:</p>\n<ul class="liba">\n<li>rôznymi formami tréningov</li>\n<li>organizovaním campov</li>\n<li>sústredeniami</li>\n<li>individuálnou prípravou</li>\n<li>poradenskou činnosťou</li>\n<li>zdravotnými prehliadkami</li>\n</ul>\n<p>Budeme sa snažiť prezentovať ich talent na kvalitných slovenských i medzinárodných akciách.</p>\n<p></p>\n<p><strong>Hokejová akadémia Igora Libu</strong> je špeciálne zameraná na mladých hráčov hneď od začiatku ich hokejového vývoja, tak, aby získali čo najlepšie návyky pre svoj hokejový rast.</p>\n<ul class="liba">\n<li>Ponúkame komplexnú starostlivosť v najrýchlejšom tímovom športe na svete</li>\n<li>U nás môžete očakávať pozitívny prístup trénerov. Našou snahou je, aby sa každý hráč v našej akadémii cítil dobre, zbavil sa strachu z chýb, ktorých sa všetci zákonite v priebehu učenia nových zručností dopúšťame.</li>\n<li>Trpezlivá práca s každým. Našou snahou je vytvoriť v jej priebehu dostatok času a priestoru na učenie sa novým hokejovým schopnostiam, ich opakovanie a zdokonaľovanie. Iba tak môže každý získať a následne rozvíjať správne pohybové a herné návyky, ktoré mu neskôr umožní jeho ďalší hokejový rast</li>\n<li>Odovzdávanie najnovších poznatkov a použitie efektívnych metód tréningu z celého sveta</li>\n<li>Svojím individuálnym prístupom sa snažíme u chlapcov aj dievčat o čo najväčšie posilnenie sebadôvery. Tým, že každému pomôžeme uvedomiť si svoje prednosti a spoznať svoje nedostatky mu umožníme, aby mohol sám svoje prednosti ďalej rozvíjať a svoje nedostatky postupne odstraňovať. Samozrejmosťou je potom plné rešpektovanie vekovej a výkonnostnej úrovne každého hráča.</li>\n<li>Podrobne sa zoznámite s našim individuálnym tréningovým procesom a môžete tak niektoré veci rozvíjať aj Vy mimo tréningový proces v domácich podmienkach</li>\n</ul>', NULL, NULL, 1),
-(11, 'sk', 'zoznam-hracov', 'Zoznam hráčov', '', '', '<h2>SKUPINA 1</h2>\n<ul>\n<li><strong>ročníky: 2007, 2006, 2005</strong></li>\n<li><strong>tréningy: pondelok – 16.30 hod., štvrtok– 15.15 hod. a sobota – 9.30 hod.</strong></li>\n</ul>\n<ol>\n<li> Baksay Marko</li>\n<li> Bálint Samuel</li>\n<li> Buchla Peter</li>\n<li> Barakat Andree</li>\n<li> Binda Mathias</li>\n<li> Eštok Martin - <strong>HC Michalovce</strong></li>\n<li> Haluška Matej</li>\n<li> Hudák Jakub</li>\n<li> Janke Šimon</li>\n<li> Komendát Richard</li>\n<li> Krajcár Matúš</li>\n<li> Levkanič Adam</li>\n<li> Oravec Marek</li>\n<li> Ruščák Richard</li>\n<li> Slivkár Šimon</li>\n<li> Ujjobbágy Pavol</li>\n<li> Vasilík Ľuboslav</li>\n<li> Vindiš Martin</li>\n<li> Vizner Lukáš - <strong>HC Košice </strong></li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Baltes Eduard</li>\n<li>Barakat Alex</li>\n<li>Buróci Šimon</li>\n</ul>\n<h2></h2>\n<h2>SKUPINA 2</h2>\n<ul>\n<li><strong>ročníky: 2004, 2003</strong></li>\n<li><strong>tréningy: streda – 16.30 hod., piatok – 15.15 hod. a sobota – 8.00 hod.</strong></li>\n</ul>\n<ol>\n<li> Čelko Ferencech Šimon</li>\n<li> Domby Matej</li>\n<li> Droppa Patrik</li>\n<li> Fedor Alex</li>\n<li> Haluška Branislav</li>\n<li> Hanušovský Kristián</li>\n<li> Hegyi Kristián</li>\n<li> Horváth Dušan</li>\n<li> Kissi Tomáš</li>\n<li> Kočiš Róbert</li>\n<li> Lauff Eduard</li>\n<li> Marušiak Peter</li>\n<li> Pillár Sebastián</li>\n<li> Pollák Maxim</li>\n<li> Rohun Oliver</li>\n<li> Spišák Róbert</li>\n<li> Szilasi Tomáš</li>\n<li> Šelepský Sebastián</li>\n<li> Timko Frederik</li>\n<li> Tomčo Jakub</li>\n<li> Ujjobbágy Samuel</li>\n<li> Valent Jakub</li>\n<li> Vizner Jakub</li>\n<li> Zajac Štefan</li>\n</ol>\n<p><strong> Brankári: </strong></p>\n<ul>\n<li>Pataki Samuel</li>\n<li>Trnka Matúš</li>\n<li>Youssef Štefan</li>\n</ul>', '', '', 1),
 (12, 'sk', 'igor-liba', 'Igor LIBA', '', '', '<p>Často považovaný za najvšestrannejšieho česko-slovenského hokejistu 80. rokov – výborný korčuliar, fyzicky i technicky dokonale vybavený s vyváženou útočnou a obrannou činnosťou.</p>\n<p>S hokejom začínal ako desaťročný, je odchovancom klubu ZPA Prešov. Hráč VSŽ Košice, Dukly Jihlava, Zelttwegu a HK Spišská Nová Ves. V NHL hráč Minnesota North Stars, Los Angeles Kings (kde jeho spoluhráčom v útoku bol fenomenálny Wayne Gretzky), New York Rangers. Bol draftovaný v roku 1983 tímom Calgary Flames v 5. kole z 91. miesta.</p>\n<p>Je držiteľom striebornej medaily zo ZOH 1984 a bronzovej zo ZOH 1992. Majster sveta 1985, strieborný z MS 1982 – 83. Reprezentačný dres ČSSR obliekol 211-krát, najviac spomedzi všetkých slovenských hráčov. Tromfol hokejistu storočia Dzurillu, legendárneho Golonku, Pašeka, Rusnáka i Lukáča. Raz (v roku 1993 proti Francúzom) nastúpil aj v reprezentačnom tíme Slovenska. Na Majstrovstvách sveta 1985 prispel významným spôsobom k zlatej medaile.</p>\n<p>V oranžovo - čiernom drese Košíc sa dvakrát radoval z československého titulu (1986 a 1988). V roku 1999 sa dočkal aj titulu majstra Slovenska, keď dokázal zomknúť partiu proti bratislavskému Slovanu. Vtedy si ako prvý mohol so slzami v očiach poťažkať nový pohár určený pre víťaza extraligy. Počas kariéry ho sprevádzalo číslo 11. Nosil ho nielen v reprezentácii, ale aj v spomínaných Košiciach a nevynechal ani zahraničie. Iba v zámorí mu prischli čísla 26 respektíve 23.</p>', '', '', 1),
 (13, 'sk', 'pavel-valko-st.', 'Pavel VALKO st.', '', '', '<p>Hráčska kariéra:<br />1. Československá liga – Košice (1985 až 1987 a 1989 až 1993), Trenčín ( 1987 až 1989 )<br />2. Slovenská liga – Košice (1993 až 1997), Nitra, Skalica<br />3. Česká liga - Znojmo, Zlín ( 1999 až 2001 ) <br />4. Švédska liga - Karlskrona, Motal<br />5. Anglická liga – Romford<br />6. Maďarská liga – Szekesfehervar<br />7. Rumunská liga – Mercuria Ciuc<br /><br />Reprezentácia:<br />1. ME 18 ( za Československo ) – 3. miesto ( Duseldorf – Nemecko )<br />2. MS 20 ( za Československo ) – 4. miesto ( Moskva )<br />3. 3 štarty za Slovensko <br /><br />Úspechy:<br />1. Majster Československa – VSŽ Košice – 1986<br />2. 2. miesto ( Československá liga ) – Trenčín – 1989<br />3. Majster Slovenska – HC Košice – 1995 a 1996<br />4. 1. miesto ( Švédska liga ) – Karlskrona – 2006<br />5. 1. miesto ( Maďarská liga ) – Szekesfehervar <br />6. 1. miesto ( Rumunska liga ) – Mercuria Ciuc <br /><br />Trénerska kariéra:<br />- seniori Michalovce<br />- juniori Motala Švédsko<br />- dorast Trebišov<br />- dorast Romford Anglicko</p>', '', '', 1),
 (14, 'sk', 'jaromir-dragan', 'Jaromír Dragan', '', '', '<p>- bývalý slovenský hokejový brankár <br /><br />Hráčska kariera: <br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br />Reprezentácia: <br />1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku 1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.<br /><br />MS: <br />1996 10. miesto<br />1997 9. miesto<br /><br />ZOH: <br />1992 3. miesto<br />1994 6. miesto<br /><br />OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br />Prehľad medailí: <br />BRONZ ZOH 1992 ČSFR<br />ZLATO MS skupiny C 1994<br />MS skupiny B 1995<br />Československá liga 1987/1988<br />Slovenská liga 1994/1995, 1995/1996<br /><br />TRENERSKA KARIERA:<br />1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári <br />2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /<br />2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /<br />2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori <br />2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18 </p>', '', '', 1),
 (15, 'sk', 'uvod', 'Úvod', '', '', '<p>Stiahnite si: <strong>VYHLÁSENIE o poukázaní sumy do výšky 2% (3 %) zaplatenej dane</strong> <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne.rtf" target="_blank">word dokument</a>, <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne-2.pdf" target="_blank">pdf dokument</a><br /><br />Rozpis tréningov od 3. 11. 2014 </p>\n<table border="1" cellpadding="3" align="center" class="center" id="trainings">\n<thead>\n<tr align="center" valign="middle" class="center">\n<td align="center" valign="middle" class="center"></td>\n<th align="center" valign="middle">8:00-9:15</th><th align="center" valign="middle">9:30-10:30</th><th align="center" valign="middle">10:45-11:45</th><th align="center" valign="middle">12:00-13:00</th><th align="center" valign="middle">15:15-16:15</th><th align="center" valign="middle">16:30-17:30</th><th align="center" valign="middle">20:15-21:15</th></tr>\n</thead>\n<tbody>\n<tr>\n<td>Pondelok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Utorok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Streda</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Štvrtok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Piatok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Sobota</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n<tr>\n<td>Nedeľa</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n</tbody>\n</table>\n<p><br />POZOR, v nedeľu možné zmeny podľa zápasov hokejových prípraviek HP 5,<br />zmeny budú oznamované prostredníctvom web. stránky a facebooku.</p>\n<p></p>\n<p>Zmeny tréningov - apríl 2015 </p>', NULL, NULL, 1),
-(16, 'sk', 'oznam-1', 'Oznam', '', '', '<p>Dňa 28.03.2015 sa uskutoční turnaj v Sabinove. Skupina 1. Zraz o 6:00 hod pred zimným štadiónom v Čani. </p>', NULL, NULL, 1),
-(17, 'sk', 'oznam', 'Oznam', '', '', '<p>Dňa 7.4.2015 z dôvodu konania Veľkonočného turnaja skupina 3 (15:15 hod.) nebude mať tréning.</p>', NULL, NULL, 1),
+(16, 'sk', 'oznam-1', 'Oznam', '', '', 'Dňa 28.03.2015 sa uskutoční turnaj v Sabinove. Skupina 1. Zraz o 6:00 hod pred zimným štadiónom v Čani. ', '', '', 1),
+(17, 'sk', 'oznam', 'Oznam', '', '', 'Dňa 7.4.2015 z dôvodu konania Veľkonočného turnaja skupina 3 (15:15 hod.) nebude mať tréning.', '', '', 1),
 (19, 'sk', 'pavel-valko-st.-1', 'Pavel VALKO st.', '', '', '<p>- bývalý slovenský hokejový brankár <br /><br />Hráčska kariera: <br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br />Reprezentácia: <br />1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku 1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.<br /><br />MS: <br />1996 10. miesto<br />1997 9. miesto<br /><br />ZOH: <br />1992 3. miesto<br />1994 6. miesto<br /><br />OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br />Prehľad medailí: <br />BRONZ ZOH 1992 ČSFR<br />ZLATO MS skupiny C 1994<br />MS skupiny B 1995<br />Československá liga 1987/1988<br />Slovenská liga 1994/1995, 1995/1996<br /><br />TRENERSKA KARIERA:<br />1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári <br />2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /<br />2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /<br />2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori <br />2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18 </p>', '', '', 1),
 (20, 'sk', 'pavel-valko-st.', 'Pavel VALKO st.', '', '', '<p>- bývalý slovenský hokejový brankár <br /><br />Hráčska kariera: <br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br />Reprezentácia: <br />1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku 1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.<br /><br />MS: <br />1996 10. miesto<br />1997 9. miesto<br /><br />ZOH: <br />1992 3. miesto<br />1994 6. miesto<br /><br />OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br />Prehľad medailí: <br />BRONZ ZOH 1992 ČSFR<br />ZLATO MS skupiny C 1994<br />MS skupiny B 1995<br />Československá liga 1987/1988<br />Slovenská liga 1994/1995, 1995/1996<br /><br />TRENERSKA KARIERA:<br />1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári <br />2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /<br />2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /<br />2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori <br />2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18 </p>', NULL, NULL, 1),
-(21, 'sk', 'pavel-valko-st.', 'Pavel VALKO st.', '', '', '<p>Hráčska kariéra:<br />1. Československá liga – Košice (1985 až 1987 a 1989 až 1993), Trenčín ( 1987 až 1989 )<br />2. Slovenská liga – Košice (1993 až 1997), Nitra, Skalica<br />3. Česká liga - Znojmo, Zlín ( 1999 až 2001 ) <br />4. Švédska liga - Karlskrona, Motal<br />5. Anglická liga – Romford<br />6. Maďarská liga – Szekesfehervar<br />7. Rumunská liga – Mercuria Ciuc<br /><br />Reprezentácia:<br />1. ME 18 ( za Československo ) – 3. miesto ( Duseldorf – Nemecko )<br />2. MS 20 ( za Československo ) – 4. miesto ( Moskva )<br />3. 3 štarty za Slovensko <br /><br />Úspechy:<br />1. Majster Československa – VSŽ Košice – 1986<br />2. 2. miesto ( Československá liga ) – Trenčín – 1989<br />3. Majster Slovenska – HC Košice – 1995 a 1996<br />4. 1. miesto ( Švédska liga ) – Karlskrona – 2006<br />5. 1. miesto ( Maďarská liga ) – Szekesfehervar <br />6. 1. miesto ( Rumunska liga ) – Mercuria Ciuc <br /><br />Trénerska kariéra:<br />- seniori Michalovce<br />- juniori Motala Švédsko<br />- dorast Trebišov<br />- dorast Romford Anglicko</p>', NULL, NULL, 1),
-(22, 'sk', 'jaromir-dragan', 'Jaromír Dragan', '', '', '<p>- bývalý slovenský hokejový brankár <br /><br />Hráčska kariera: <br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br />Reprezentácia: <br />1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku 1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.<br /><br />MS: <br />1996 10. miesto<br />1997 9. miesto<br /><br />ZOH: <br />1992 3. miesto<br />1994 6. miesto<br /><br />OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br />Prehľad medailí:</p>\n<p>BRONZ ZOH 1992 ČSFR<br />ZLATO MS skupiny C 1994<br />MS skupiny B 1995<br />Československá liga 1987/1988<br />Slovenská liga 1994/1995, 1995/1996<br /><br />TRENERSKA KARIERA:<br />1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári <br />2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /<br />2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /<br />2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori /<br />2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18</p>', '', '', 1),
-(23, 'sk', 'slavomir-ilavsk', 'Slavomír Ilavský', '', '', '<p>Hráčska kariéra:<br />- Československá liga - -3 sezóny VSŽ Košice<br />- Slovenska liga - -5 sezón HC Košice<br />- Švédsko<br />- Francúzsko<br />- Rumunsko<br />- Reprezentácia Slovenska - 24 zápasov<br />- Taliánsky pohár 1993<br />- Tele Cup Nórsko 1993<br />- Svetový pohár Canada-USA 1996<br />- Úspechy - majster Slovenska HC Košice 1995,1996,1999<br />- majster Rumunska 2007<br />- All Stars Slovenska - stredný útočník 1995-1996<br /><br />Trénerska kariéra:<br />- CS Megeve - mládež<br />- CO Courbevoie - seniori a mládež</p>', NULL, NULL, 1),
-(24, 'sk', 'reklamne-predmety', 'Reklamné predmety', '', '', '', '', '', 1),
+(21, 'sk', 'pavel-valko-st.', 'Pavel VALKO st.', '', '', '<p><strong>Hráčska kariéra:</strong></p>\n<ol>\n<li>Československá liga – Košice (1985 až 1987 a 1989 až 1993), Trenčín ( 1987 až 1989 )</li>\n<li>Slovenská liga – Košice (1993 až 1997), Nitra, Skalica</li>\n<li>Česká liga - Znojmo, Zlín ( 1999 až 2001 ) </li>\n<li>Švédska liga - Karlskrona, Motal</li>\n<li>Anglická liga – Romford</li>\n<li>Maďarská liga – Szekesfehervar</li>\n<li>Rumunská liga – Mercuria Ciuc</li>\n</ol>\n<p><strong>Reprezentácia:</strong></p>\n<ol>\n<li>ME 18 ( za Československo ) – 3. miesto ( Duseldorf – Nemecko )</li>\n<li>MS 20 ( za Československo ) – 4. miesto ( Moskva )</li>\n<li>3 štarty za Slovensko </li>\n</ol>\n<p><strong>Úspechy:</strong></p>\n<ul>\n<li>Majster Československa – VSŽ Košice – 1986</li>\n<li>2. miesto ( Československá liga ) – Trenčín – 1989</li>\n<li>Majster Slovenska – HC Košice – 1995 a 1996</li>\n<li>1. miesto ( Švédska liga ) – Karlskrona – 2006</li>\n<li>1. miesto ( Maďarská liga ) – Szekesfehervar </li>\n<li>1. miesto ( Rumunska liga ) – Mercuria Ciuc </li>\n</ul>\n<p><strong>Trénerska kariéra:</strong></p>\n<ul>\n<li>seniori Michalovce</li>\n<li>juniori Motala Švédsko</li>\n<li>dorast Trebišov</li>\n<li>dorast Romford Anglicko</li>\n</ul>', '', '', 1),
+(22, 'sk', 'jaromir-dragan', 'Jaromír Dragan', '', '', '<ul>\n<li>bývalý slovenský hokejový brankár </li>\n</ul>\n<p><strong>Hráčska kariera: </strong><br />Liptovský Mikuláš, Slovan Bratislava, Topoľčany, Košice, Zvolen, Zlin, Ferencvaros Budapešť <br /><strong>Reprezentácia:</strong></p>\n<ul>\n<li>1992 za Česko-Slovensko bronz na zimných olympijských hrách v Albertville. Za slovenskú reprezentáciu odohral celkom 56 zápasov. Na majstrovstvách sveta v roku </li>\n<li>1995, kedy Slovensko hralo ešte v skupine B, dopomohol k postupu do najvyššej skupiny po výhre 4:3 nad Lotyšskom.</li>\n</ul>\n<p>MS: </p>\n<ul>\n<li>1996 10. miesto</li>\n<li>1997 9. miesto</li>\n</ul>\n<p>ZOH: </p>\n<ul>\n<li>1992 3. miesto</li>\n<li>1994 6. miesto</li>\n</ul>\n<p>OCENENIA: 1995/1996 najlepší hokejista Slovenska<br /><br /><strong>Prehľad medailí:</strong></p>\n<ul>\n<li>BRONZ ZOH 1992 ČSFR</li>\n<li>ZLATO MS skupiny C 1994</li>\n<li>MS skupiny B 1995</li>\n<li>Československá liga 1987/1988</li>\n<li>Slovenská liga 1994/1995, 1995/1996</li>\n</ul>\n<p><strong>TRENERSKA KARIERA:</strong></p>\n<ul>\n<li>1999 – 2006 HC Košice tréner mládeže ,/ žiaci, juniori, brankári </li>\n<li>2006 – 2007 MHC Martin tréner mládeže , / dorast, brankári /</li>\n<li>2007 – 2008 HC Nitra tréner mládeže , / juniori, brankári /</li>\n<li>2008 – 2011 PHK Prešov tréner mládeže, / žiaci, dorast, juniori /</li>\n<li>2003 – 2009 Reprezentácia SR / tréner brankárov SR 16,17, 18</li>\n</ul>', '', '', 1),
+(23, 'sk', 'slavomir-ilavsk', 'Slavomír Ilavský', '', '', '<p><strong>Hráčska kariéra:</strong></p>\n<ul>\n<li>Československá liga - -3 sezóny VSŽ Košice</li>\n<li>Slovenska liga - -5 sezón HC Košice</li>\n<li>Švédsko</li>\n<li>Francúzsko</li>\n<li>Rumunsko</li>\n<li>Reprezentácia Slovenska - 24 zápasov</li>\n<li>Taliánsky pohár 1993</li>\n<li>Tele Cup Nórsko 1993</li>\n<li>Svetový pohár Canada-USA 1996</li>\n<li>Úspechy - majster Slovenska HC Košice 1995,1996,1999</li>\n<li>majster Rumunska 2007</li>\n<li>All Stars Slovenska - stredný útočník 1995-1996</li>\n</ul>\n<p><strong>Trénerska kariéra:</strong></p>\n<ul>\n<li>CS Megeve - mládež</li>\n<li>CO Courbevoie - seniori a mládež</li>\n</ul>', '', '', 1),
 (25, 'sk', 'rozpis-treningov', 'Rozpis tréningov', '', '', '<p></p>\n<table border="1" cellpadding="3" align="center" class="center" id="trainings">\n<thead>\n<tr align="center" valign="middle" class="center">\n<td align="center" valign="middle" class="center"></td>\n<th align="center" valign="middle">8:00-9:15</th><th align="center" valign="middle">9:30-10:30</th><th align="center" valign="middle">10:45-11:45</th><th align="center" valign="middle">12:00-13:00</th><th align="center" valign="middle">15:15-16:15</th><th align="center" valign="middle">16:30-17:30</th><th align="center" valign="middle">20:15-21:15</th></tr>\n</thead>\n<tbody>\n<tr>\n<td>Pondelok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Utorok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Streda</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Štvrtok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Piatok</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n</tr>\n<tr>\n<td>Sobota</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n<tr>\n<td>Nedeľa</td>\n<td>x</td>\n<td>x</td>\n<td></td>\n<td></td>\n<td>x</td>\n<td>x</td>\n<td>x</td>\n</tr>\n</tbody>\n</table>', '', '', 1),
 (26, 'sk', 'kodex-klubu', 'Kódex rodičov', '', '', '<ol>\n<li>Dávajú prednosť dlhodobému a zdravému športovému vývoju dieťaťa pred vlastnými ambíciami.</li>\n<li>Umožňujú svojim deťom vykonávať aj iné aktivity,veľmi dôležitá je regenerácia.</li>\n<li>Nenútia deti do športových výkonov proti ich vôli.Deti by mali športovať pre svoje vlastné potešenie,hra je určená pre deti ,nie pre rodičov.</li>\n<li>Kladú dôraz na správnu životosprávu detí,nechajú riadne doliečiť zranenia,choroby i drobné nachladenia.</li>\n<li>Pri zápasoch deťom fandia a aktívne ich povzbudzujú.Ak chcú ,aby deti hrali ako tím,musia rodičia vystupovať tiež ako tím.</li>\n<li>Zdôrazňujú vplyv poctivého tréningu na výkon dieťaťa v zápase.</li>\n<li>Trénerovi dôverujú ,deťom nedávajú pokyny v rozpore s pokynmi trénera a neznižujú jeho autoritu.</li>\n<li>Nikdy nezasahajú do kompetencií trénera pri tréningu a zápase.Nevstupujú do priestorov striedačiek a nevynucujú si zaradenie svojho dieťaťa do zostavy.</li>\n<li>Nepostávajú pri mantineli a nevolajú svoje dieťa po rady.Nepokrikujú po rozhodcoch.</li>\n<li>Pokiaľ majú výhrady,riešia ich najprv s hlavným trénerom a potom s vedením klubu.</li>\n<li>Slušne sa vyjadruje a nepoužíva vulgarizmy.</li>\n</ol>', '', '', 1),
 (27, 'sk', 'ulohy-trenerov', 'Úlohy trénerov', '', '', '<ol>\n<li>Organizujú a vedú tréningový proces pridelených mužstiev v LIBA ACADEMY 11.</li>\n<li>Spolupracujú s ostatnými trénermi mládežnickych mužstiev,podľa možností ich prípravu a zápasy.</li>\n<li>Sledujú prospech v škole a udržujú kontakt s rodičmi.</li>\n<li>Vedú pridelené mužstvo v zápase,určujú zostavu a nasadzovanie hráčov.Iba tréner je oprávnený udeľovať zaväzné pokyny vedúcim mužstva a jeho hráčom.</li>\n<li>Dbajú o zdravie a fyzickú pripravenosť členov svojho mužstva,vedú ich k dodržiavaniu životosprávy,výživy,hygieny,regenerácie,rehabilitácie a športovej etiky.</li>\n<li>Pracujú na zdokonaľovaní tréningových metód a sú príkladom pre svojich hráčov.</li>\n<li>Uverňujú na internetových stránkach LIBA ACADEMY 11 týždenné plány mužstiev/prehľad zápasov,výsledkov,termínov zrazov,aktuálne informácie atď/</li>\n<li>Usilujú sa o spravodlivosť,čo sa týka sympatií a pozornosti.</li>\n<li>Budovať u hráčov sebadôveru ale aj sebakontrolu.</li>\n<li>Učiť umeniu koncentrácie a relaxácie.</li>\n<li>Slušne sa vyadruje a nepoužíva vulgarizmy</li>\n</ol>', '', '', 1),
@@ -229,30 +251,57 @@ INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `m
 (34, 'sk', 'sezona-2014-2015', 'Sezóna 2014/2015', '', '', '<p>11.1. a 18.1.2015 - Turnaj o pohár starostu obce Čaňa - skupina 4 - 2. miesto</p>\n<p>5.1.2015 - Novoročný turnaj - skupina 2 - 2. miesto</p>\n<p>29.12.2014 - Vianočný turnaj - skupina 3 - <a href="http://www.igorliba.sk/documents/vianocny2014.pdf" target="_blank">propozície</a> - 3.miesto</p>\n<p>22.12.2014 - 3. ročník hokejového turnaja tretiakov - skupina 1 - 6. miesto</p>\n<p>7.12.2014 - Mikulášsky turnaj Rimavská Sobota - chlapci skupina 1 - <a href="http://www.igorliba.sk/documents/141207_pozvanka.pdf" target="_blank">pozvánka</a>,<a href="http://www.igorliba.sk/documents/141207_podmienky.pdf" target="_blank">podmienky</a></p>\n<p>17.11.2014 - Turnaj v minihokeji - chlapci skupina 1 - <a href="http://www.igorliba.sk/documents/pozvanka141117.pdf" target="_blank">propozície</a> - <a href="http://www.igorliba.sk/documents/zapasy141117.pdf" target="_blank">rozpis zápasov</a> -<a href="http://www.igorliba.sk/documents/vysledky141117.pdf" target="_blank">výsledková tabuľa</a> - galéria</p>', NULL, NULL, 1),
 (35, 'sk', 'sezona-2013-2014', 'Sezóna 2013/2014', '', '', '<p>17.04.2014 - Veľkonočný turnaj Čaňa - chlapci skupina 1 - <a href="http://www.igorliba.sk/documents/propozicieVT2014.pdf" target="_blank">propozície</a>, <a href="http://www.igorliba.sk/documents/rozpisVT2014.pdf" target="_blank">rozpis</a>,<a href="http://www.igorliba.sk/fotogaleria-vn2014-sk1.php">galéria</a> | Boli sme v <a href="http://www.radiosport.sk/" target="_blank">Rádiu Šport</a> - <a href="http://www.igorliba.sk/documents/radio_sport/Junior_Klub_19.4.2014_vstup1.mp3" target="_blank">vstup 1</a>, <a href="http://www.igorliba.sk/documents/radio_sport/Junior_Klub_19.4.2014_vstup2.mp3" target="_blank">vstup 2</a></p>\n<p>07.04.2014 - Medzinárodný hokejový turnaj Miskolc ľadový medveď - chlapci skupina 2 - <a href="http://www.igorliba.sk/documents/miskolc-april2014-ucastnici.pdf" target="_blank">účastníci</a>, <a href="http://www.igorliba.sk/documents/miskolc-april2014-vyhodnotenie.pdf" target="_blank">vyhodnotenie</a>, <a href="http://www.igorliba.sk/documents/miskolc-april2014-hraci.pdf" target="_blank">zoznam hráčov</a>, <a href="http://www.igorliba.sk/fotogaleria-miskolc-07042014.php">galéria</a></p>\n<p>05.-06.04.2014 - BASF CUP 2014 - hokejový turnaj 5.ŠHT v Žiline chlapci skupina 2+3 - <a href="http://www.igorliba.sk/documents/basf2014.pdf" target="_blank">propozície</a>, <a href="http://www.igorliba.sk/documents/basf2014v.pdf" target="_blank">vyhodnotenie</a>, <a href="http://www.igorliba.sk/fotogaleria-basf2014.php">galéria</a></p>\n<p>06.03.2014 - Prázdninový hokejový turnaj v Čani - chlapci skupina 3 - <a href="http://www.igorliba.sk/fotogaleria-prazdniny06032014.php">galéria</a></p>\n<p>03.03.2014 - Prázdninový hokejový turnaj v Čani - chlapci skupina 2 - <a href="http://www.igorliba.sk/fotogaleria-prazdniny03032014.php">galéria</a></p>\n<p>02.03.2014 - Turnaj o cenu primátorky Sabinov - chlapci skupina 3 - <a href="http://www.igorliba.sk/fotogaleria-sabinov02032014.php">galéria</a></p>\n<p>23.02.2014 - Turnaj pod záštitou primátorky Gelnica - chlapci skupina 3 - <a href="http://www.igorliba.sk/fotogaleria-gelnica23022014.php">galéria</a>,<a href="http://www.igorliba.sk/documents/propozicie23022014.pdf" target="_blank">propozície</a></p>\n<p>09.02.2014 - Turnaj Orange Minihokej Tour Michalovce - chlapci skupina 2 -<a href="http://www.igorliba.sk/documents/propozicie09022014.pdf" target="_blank">propozície</a>, <a href="http://www.igorliba.sk/documents/rozlosovanie09022014.pdf" target="_blank">rozlosovanie</a></p>\n<p>04.01.2014 - MiniTurnaj v Čani - chlapci skupina 2 - <a href="http://www.igorliba.sk/fotogaleria-cana-040114">galeria</a></p>\n<p>30.12.2013 - Turnaj v Spišskej Novej Vsi - chlapci skupina 3 - <a href="http://www.igorliba.sk/fotogaleria-snv-301213.php">galéria</a></p>\n<p>29.12.2013 - Turnaj v Trebišove - chlapci skupina 3 - <a href="http://www.igorliba.sk/fotogaleria-trebisov-291213.php">galéria</a></p>\n<p>27.12.2013 - Turnaj v Spišskej Novej Vsi - chlapci skupina 2 - <a href="http://www.igorliba.sk/documents/propozicie27122013.pdf" target="_blank">propozície</a></p>\n<p>23-25.8.2013 - MULTI ŠPORT CUP 2013 - <a href="http://www.igorliba.sk/documents/rozpis_zapasov_2013_7_druzstiev.pdf" target="_blank">Rozpis zápasov.</a>, <a href="http://www.igorliba.sk/documents/Casovy_rozpis_turnaja.pdf" target="_blank">Časový rozpis turnaja</a></p>', NULL, NULL, 1),
 (36, 'sk', 'sezona-2012-2013', 'Sezóna 2012/2013', '', '', '<p>29.03.2013 - Turnaj, Čaňa - <a href="http://www.igorliba.sk/documents/cana29032013/Pozvanka.pdf" target="_blank">pozvánka</a>, <a href="http://www.igorliba.sk/documents/cana29032013/supisky.pdf" target="_blank">súpisky</a>, <a href="http://www.igorliba.sk/documents/cana29032013/zapasy.pdf" target="_blank">zápasy</a>, <a href="http://www.igorliba.sk/fotogaleria-29-3-gelnica-sabinov">galéria Gelnica - Sabinov</a>,<a href="http://www.igorliba.sk/fotogaleria-29-3-gelnica-trebisov">galéria Gelnica - Trebišov</a>, <a href="http://www.igorliba.sk/fotogaleria-29-3-la-sabinov">galéria Liba Academy - Sabinov</a>, <a href="http://www.igorliba.sk/fotogaleria-29-3-vyhodnotenie">galéria Vyhodnotenie</a></p>\n<p>28.03.2013 - Turnaj v Spišskej Novej Vsi - chlapci skupina B - vyhrali svoj prvý zápas s Topolčanmi - <a href="http://www.igorliba.sk/fotogaleria-28-3-snv-turnaj">galéria</a>, <a href="http://www.igorliba.sk/documents/snv28032013/vysledky.pdf" target="_blank">výsledky</a></p>\n<p>03.03.2013 - Turnaj v Gelnici - chlapci skupina B a C, Michalovce, Miškolc a Gelnica</p>\n<p>29.12.2012 - Prvý turnaj, Trebišov - chlapci B skupina, <a href="http://www.hokej.sk/liga_exd/clanok104108-Vianocny_turnaj_piatakov_koristou_Bardejovcanov__FOTO.htm?utm_source=rss" target="_blank">info</a>, <a href="http://www.igorliba.sk/fotogaleria-turnaj-29-12-trebisov">galéria</a></p>', NULL, NULL, 1),
-(37, 'sk', 'kempy', 'Kempy', '', '', '<p>Letný hokejový kemp 2013 - <a href="http://www.igorliba.sk/documents/kemp2013/KOKK_0719_023FB.pdf" target="_blank">článok 1</a>, <a href="http://www.igorliba.sk/documents/kemp2013/KOKV_0726_018-FB.pdf" target="_blank">článok 2</a> + <a href="http://www.igorliba.sk/fotogaleria-kemp-2013">galéria</a></p>\n<p>Letný hokejový kemp 2014 - <a href="http://www.igorliba.sk/documents/kemp2014.pdf" target="_blank">Informácie</a> + <a href="http://www.igorliba.sk/letny-hokejovy-kemp-prihlaska">Prihláška do kempu</a></p>', NULL, NULL, 1),
 (38, 'sk', '2-z-dani', '2% z dani', '', '', '<p>Stiahnite si: <strong>VYHLÁSENIE o poukázaní sumy do výšky 2% (3 %) zaplatenej dane</strong> <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne.rtf" target="_blank">word dokument</a>, <a href="http://www.igorliba.sk/documents/vyhlasenie_2perc_2014-editovatelne-2.pdf" target="_blank">pdf dokument</a><img src="http://www.igorliba.sk/pictures/igorliba_dve_percenta.jpg" style="-webkit-user-select: none;" /></p>', '', '', 1),
-(39, 'sk', '17.04.2014-vekonocny-turnaj-cana-chlapci-skupina-1', '17.04.2014 - Veľkonočný turnaj Čaňa - chlapci skupina 1', '', '', '', '', '', 1),
-(40, 'sk', 'medzinarodny-hokejovy-turnaj-miskolc-07.04.2014', 'Medzinárodný hokejový turnaj Miskolc 07.04.2014', '', '', '', '', '', 1),
+(39, 'sk', '17.04.2014-vekonocny-turnaj-cana-chlapci-skupina-1', 'Veľkonočný turnaj Čaňa', 'chlapci skupina 1', '', '', '', '', 1),
+(40, 'sk', 'medzinarodny-hokejovy-turnaj-miskolc-07.04.2014', 'Medzinárodný hokejový turnaj Miskolc', 'Miskolc', '', '', '', '', 1),
 (41, 'sk', 'skupina-4', 'Skupina 4', '', '', '', NULL, NULL, 1),
 (42, 'sk', 'letn-hokejov-kemp-2014', 'Letný hokejový kemp 2014', '', '', '', '', '', 1),
 (43, 'sk', 'mikulas-2013', 'Mikuláš 2013', '', '', '', '', '', 1),
 (44, 'sk', 'kontakt', 'Kontakt', '', '', '<p><strong>LIBA ACADEMY 11</strong><br /><br />Národná trieda 48<br />040 01 Košice<br /><br /><strong>IČO:</strong> 35539208<br /><strong>DIČ:</strong> 2021634461<br /><br /><strong>Bankové spojenie:</strong> TATRABANKA a.s.<br /><strong>Číslo účtu:</strong> 2620710408/1100<br /><br /><strong>Mobil:</strong> 0903 626 876, 0905 409 042<br /><br /><strong>email:</strong> <a href="mailto:info@igorliba.sk">info@igorliba.sk</a><br /><br />Pre kontakt môžete využiť aj následujúci formulár. <br />Odpovieme Vám v čo najkratšom možnom čase.</p>', '', '', 1),
-(45, 'sk', 'basf-cup-2014-hokejovy-turnaj-5-sht-v-ziline-chlapci-skupina-23', '05.-06.04.2014 - BASF CUP 2014 - hokejový turnaj 5.ŠHT v Žiline chlapci skupina 2+3', '', '', '', '', '', 1),
-(46, 'sk', 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-3', '06.03.2014 - Prázdninový hokejový turnaj v Čani - chlapci skupina 3', '', '', '', '', '', 1),
-(47, 'sk', 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-2', '03.03.2014 - Prázdninový hokejový turnaj v Čani - chlapci skupina 2', '', '', '', '', '', 1),
-(48, 'sk', 'turnaj-o-cenu-primatorky-sabinov-skupina-3', '02.03.2014 - Turnaj o cenu primátorky Sabinov - chlapci skupina 3', '', '', '', '', '', 1),
-(49, 'sk', 'turnaj-pod-zastitou-primatorky-gelnica-skupina-3', '23.02.2014 - Turnaj pod záštitou primátorky Gelnica - chlapci skupina 3', '', '', '', '', '', 1),
-(50, 'sk', 'l.a.11-dudince-zapas-legiend', '21.02.2014 - L.A.11 - Dudince, Zápas legiend', '', '', '', '', '', 1),
-(51, 'sk', 'turnaj-04.01.2014-cana', 'Turnaj 04.01.2014 Čaňa', '', '', '', NULL, NULL, 1),
-(52, 'sk', 'turnaj-30.12.2013-snv', 'Turnaj 30.12.2013 SNV', '', '', '', NULL, NULL, 1),
-(53, 'sk', 'turnaj-29.12.2013-trebisov', 'Turnaj 29.12.2013 Trebišov', '', '', '', NULL, NULL, 1),
-(54, 'sk', 'turnaj-22.2.2013-sabinov', 'Turnaj 22.2.2013 Sabinov', '', '', '', NULL, NULL, 1),
-(55, 'sk', 'turnaj-28.3.2013-snv', 'Turnaj 28.3.2013 SNV', '', '', '', NULL, NULL, 1),
-(56, 'sk', 'turnaj-29.12.2012-trebisov', 'Turnaj 29.12.2012 Trebišov', '', '', '', NULL, NULL, 1),
+(45, 'sk', 'basf-cup-2014-hokejovy-turnaj-5-sht-v-ziline-chlapci-skupina-23', 'BASF CUP 2014 - hokejový turnaj 5.ŠHT v Žiline', 'chlapci skupina 2+3', '', '', '', '', 1),
+(46, 'sk', 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-3', 'Prázdninový hokejový turnaj v Čani', 'chlapci skupina 3', '', '', '', '', 1),
+(47, 'sk', 'prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-2', 'Prázdninový hokejový turnaj v Čani', 'chlapci skupina 2', '', '', '', '', 1),
+(48, 'sk', 'turnaj-o-cenu-primatorky-sabinov-skupina-3', 'Turnaj o cenu primátorky Sabinov', 'chlapci skupina 3', '', '', '', '', 1),
+(49, 'sk', 'turnaj-pod-zastitou-primatorky-gelnica-skupina-3', 'Turnaj pod záštitou primátorky Gelnica', 'chlapci skupina 3', '', '', '', '', 1),
+(50, 'sk', 'l.a.11-dudince-zapas-legiend', 'L.A.11 - Dudince, Zápas legiend', '', '', '', '', '', 1),
+(51, 'sk', 'turnaj-04.01.2014-cana', 'Turnaj Čaňa', 'Čaňa', '', '', '', '', 1),
+(52, 'sk', 'turnaj-30.12.2013-snv', 'Turnaj SNV', 'SNV', '', '', '', '', 1),
+(53, 'sk', 'turnaj-29.12.2013-trebisov', 'Turnaj Trebišov', 'Trebišov', '', '', '', '', 1),
+(54, 'sk', 'turnaj-22.2.2013-sabinov', 'Turnaj Sabinov', 'Sabinov', '', '', '', '', 1),
+(55, 'sk', 'turnaj-28.3.2013-snv', 'Turnaj SNV', 'SNV', '', '', '', '', 1),
+(56, 'sk', 'turnaj-29.12.2012-trebisov', 'Turnaj Trebišov', 'Trebišov', '', '', '', '', 1),
 (57, 'sk', 'letny-hokejovy-kemp-2013', 'Letný hokejový kemp 2013', '', '', '', NULL, NULL, 1),
 (58, 'sk', 'skupina-1', 'Skupina 1', '', '', '', '', '', 1),
-(59, 'sk', 'fotogaleria-trening-s-rodicmi-28.12.2012', 'Fotogaléria Tréning s rodičmi 28.12.2012', '', '', '', NULL, NULL, 1),
-(60, 'sk', 'prve-treningy', 'Prvé tréningy', '', '', '', NULL, NULL, 1);
+(59, 'sk', 'fotogaleria-trening-s-rodicmi-28.12.2012', 'Tréning s rodičmi', '', '', '', '', '', 1),
+(60, 'sk', 'prve-treningy', 'Prvé tréningy', '', '', '', NULL, NULL, 1),
+(61, 'sk', 'hgdhgd', 'hgdhgd', '', '', '', NULL, NULL, 1),
+(62, 'sk', 'skupina-1', 'Skupina 1', '', '', '<ul>\n<li><strong>ročníky:</strong> 2007, 2006, 2005</li>\n<li><strong>tréningy: </strong>pondelok – 16.30 hod., štvrtok– 15.15 hod. a sobota – 9.30 hod.</li>\n</ul>\n<ol>\n<li> Baksay Marko</li>\n<li> Bálint Samuel</li>\n<li> Buchla Peter</li>\n<li> Barakat Andree</li>\n<li> Binda Mathias</li>\n<li> Eštok Martin - <strong>HC Michalovce</strong></li>\n<li> Haluška Matej</li>\n<li> Hudák Jakub</li>\n<li> Janke Šimon</li>\n<li> Komendát Richard</li>\n<li> Krajcár Matúš</li>\n<li> Levkanič Adam</li>\n<li> Oravec Marek</li>\n<li> Ruščák Richard</li>\n<li> Slivkár Šimon</li>\n<li> Ujjobbágy Pavol</li>\n<li> Vasilík Ľuboslav</li>\n<li> Vindiš Martin</li>\n<li> Vizner Lukáš - <strong>HC Košice </strong></li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Baltes Eduard</li>\n<li>Barakat Alex</li>\n<li>Buróci Šimon</li>\n</ul>', '', '', 1),
+(63, 'sk', 'skupina-2', 'Skupina 2', '', '', '<ul>\n<li><strong>ročníky:</strong> 2004, 2003</li>\n<li><strong>tréningy:</strong> streda – 16.30 hod., piatok – 15.15 hod. a sobota – 8.00 hod.</li>\n</ul>\n<ol>\n<li> Čelko Ferencech Šimon</li>\n<li> Domby Matej</li>\n<li> Droppa Patrik</li>\n<li> Fedor Alex</li>\n<li> Haluška Branislav</li>\n<li> Hanušovský Kristián</li>\n<li> Hegyi Kristián</li>\n<li> Horváth Dušan</li>\n<li> Kissi Tomáš</li>\n<li> Kočiš Róbert</li>\n<li> Lauff Eduard</li>\n<li> Marušiak Peter</li>\n<li> Pillár Sebastián</li>\n<li> Pollák Maxim</li>\n<li> Rohun Oliver</li>\n<li> Spišák Róbert</li>\n<li> Szilasi Tomáš</li>\n<li> Šelepský Sebastián</li>\n<li> Timko Frederik</li>\n<li> Tomčo Jakub</li>\n<li> Ujjobbágy Samuel</li>\n<li> Valent Jakub</li>\n<li> Vizner Jakub</li>\n<li> Zajac Štefan</li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Pataki Samuel</li>\n<li>Trnka Matúš</li>\n<li>Youssef Štefan</li>\n</ul>', '', '', 1),
+(64, 'sk', 'turnaj-o-pohar-starostu-obce-caa-skupina', 'Turnaj o pohár starostu obce Čaňa - skupina', '', '', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolo</p>', '', '', 1),
+(65, 'sk', 'novoro-ny-turnaj-skupina-2', 'Novoročný turnaj - skupina 2', '', '', '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolo</p>\n<p><a href="{{article:27.48}}">Prejsť na galériu</a></p>', '', '', 1),
+(66, 'sk', 'rusnak-liba-lukac.-utok-ktor-velebil-aj-tichonov', 'Rusnák, Liba, Lukáč. Útok, ktorý velebil aj Tichonov', '', '', '', '', '', 1),
+(67, 'sk', 'igor-liba-vychovava-aj-baletky.-mesto-mu-zrejme-znizi-najomne', 'Igor Liba vychováva aj baletky. Mesto mu zrejme zníži nájomné', '', '', '', '', '', 1),
+(68, 'sk', 'gretzky-m-stval-nechtl-jit-na-pivo-vzpomina-liba-na-legendu', 'Gretzky mě štval, nechtěl jít na pivo, vzpomíná Liba na legendu', '', '', '', '', '', 1),
+(69, 'sk', 'lorem-ipsum', 'Lorem ipsum', '', '', '<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>\n<h4>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>\n<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>\n<h4>1914 translation by H. Rackham</h4>\n<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>', '', '', 1),
+(70, 'sk', 'lorem-ipsum1', 'Lorem ipsum', '', '', '<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>\n<h4>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h4>\n<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>\n<h4>1914 translation by H. Rackham</h4>\n<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>', '', '', 1),
+(71, 'sk', 'desatoro-pre-rodicov', 'Desatoro pre rodičov', '', '', '<ol>\n<li>Pozitívne motivovať chlapcov pred tréningom a nezaťažovať ich radami, čo majú robiť.</li>\n<li>Po tréningu pochváliť a povzbudiť bez ohľadu na výkon chlapca.</li>\n<li>Nezasahovať do činnosti trénera pri tréningu a zápase.</li>\n<li>Nevynucovať si zaradenie svojho syna do zostavy.</li>\n<li>Nepostávať pri mantineloch, nevolať chlapcov a neradiť im.</li>\n<li>Nevstupovať do priestorov striedačky a do priestorov šatní.</li>\n<li>Nepokrikovať na rozhodcov.</li>\n<li>Nenosiť chlapcom výstroj.</li>\n<li>Nenarušovať dochádzku na tréningy a zápasy počas víkendov (odchod na chaty a výlety...)</li>\n<li>Nezabúdať na pravidelnú kontrolu výstroja a svojho syna (ribaná, dresy, korčule...)</li>\n</ol>\n<p>Čas strávený s Vašimi deťmi počas tréningov a zápasov bude pre všetkých príjemný. Majte na pamäti, že sú to len Vaše deti.</p>', NULL, NULL, 1),
+(72, 'sk', 'sezona-2014-2015', 'Sezóna 2014/2015', '', '', '', NULL, NULL, 1),
+(73, 'sk', 'sezona-2013-2014', 'Sezóna 2013/2014', '', '', '', NULL, NULL, 1),
+(74, 'sk', 'sezona-2014-2015', 'Sezóna 2014/2015', '', '', '', NULL, NULL, 1),
+(75, 'sk', 'apparel', 'Oblečenie', '', '', '', '', '', 1),
+(76, 'sk', 'souvenirs', 'Suveníry', '', '', '', NULL, NULL, 1),
+(77, 'sk', 'other', 'Ostatné', '', '', '', NULL, NULL, 1),
+(78, 'sk', 'letn-hokejov-kemp-2014', 'Letný hokejový kemp 2014', '', '', '<p><strong>Termín:</strong> 27. 07. 2014 – 02. 08. 2014</p>\n<p><strong>Cieľ :</strong> Zlepšiť a zdokonaliť individuálne a herné činnosti jednotlivca. Vytvárať pozitívne vzťahy, socializovať deti v inom prostredí. Zmysluplne využívať voľný čas počas prázdnin.</p>\n<p><strong>Úloha KEMPu:</strong> Pripraviť hráčov a brankárov v rámci leta na novú hokejovú sezónu.</p>\n<p><strong>Zodpovedný hlavný vedúci:</strong> Pavol Valko Tréneri: Igor Liba, Jaromír Dragan, Slavomír Ilavský, Severín Gonci</p>\n<p><strong>Počet detí:</strong> 40</p>\n<p><strong>Vek detí:</strong> od 10 do 15 rokov</p>\n<p><strong>Skupina 1:</strong> vek 10 - 12, maximálny počet 20 vrátane brankárov</p>\n<p><strong>Skupina 2:</strong> vek 13 – 15 maximálny počet 20 vrátane brankárov</p>\n<p><strong>Program:</strong> 2 x denne príprava na ľade 2 x denne príprava na suchu, športové hry 3 x počas kempu špeciálny tréning brankárov a strelecký tréning Spoločenský program PREKVAPENIE KEMPu.</p>\n<p><strong>Cena:</strong> 300,- € (v cene je zahrnutý komplexný program vrátane ubytovania a stravy) Záloha 100,- € splatná s odoslaním prihlášky, doplatenie pri zahájení KEMPu. V prípade zrušenia účasti sa záloha nevráti!</p>\n<p><strong>Stravovanie, ubytovanie :</strong> Penzión Pláž Čaňa</p>\n<p><strong>Informácie o KEMPe:</strong> Uzávierka prihlášok do: 30. 06. 2014.</p>\n<ol>\n<li>Po vyplnení prihlášky Vám bude doručené emailové potvrdenie, kde budú uvedené aj detaily pre zaplatenie zálohy za kemp </li>\n<li>Dôležité potvrdenia:</li>\n</ol>\n<p>a) Čestné vyhlásenie </p>\n<p>b) Kópia karty poistenca </p>\n<p>c) Potvrdenie o vyplatení KEMPu </p>\n<p><strong>Číslo účtu na zaplatenie zálohy:</strong> IBAN: SK 33 1100 0000 0026 2071 0408 Kontakt: info@igorliba.sk, www.igorliba.sk</p>', '', '', 1),
+(79, 'sk', 'severim-gonci', 'Severím GöNCI', '', '', '<p><strong>Hráčska kariéra:</strong></p>\n<ul>\n<li>HK VTJ Michalovce - vojenčina</li>\n<li>HC Košice</li>\n<li>HC Spišská Nová Ves</li>\n<li>HK Prešov</li>\n<li>HK Trebišov</li>\n</ul>\n<p><br /><strong>Reprezentácia:</strong></p>\n<ul>\n<li>mládežnícke výbery 16 rokov, 17 rokov, 18 rokov</li>\n<li>Svetová zimná univerziáda Torino</li>\n</ul>\n<p><br /><strong>Trénerská kariéra:</strong></p>\n<ul>\n<li>HK Prešov - mládež</li>\n</ul>', '', '', 1),
+(80, 'sk', 'pavol-valko-ml.', 'Pavol VALKO ml.', '', '', '<p><strong>Hráčska kariéra:</strong></p>\n<ul>\n<li>HC Košice od žiakov až po dorast</li>\n<li>juniori Motala Švédsko</li>\n<li>seniori Motala Švédsko</li>\n<li>seniori Milton King Anglicko</li>\n<li>seniori Trebišov</li>\n</ul>\n<p><strong>Trenérska kariéra:</strong></p>\n<ul>\n<li>žiaci Milton King AnglickoO</li>\n<li>prípravka Motala Švédsko</li>\n<li>HDC Košice</li>\n</ul>', NULL, NULL, 1),
+(81, 'sk', 'tomas-bugos', 'Tomáš BUGOŠ', '', '', '<p><strong>Hráčska kariéra:</strong> </p>\n<ul>\n<li>HC Košice od žiakov až po dorast</li>\n</ul>\n<p><strong>Trénerska kariéra:</strong></p>\n<ul>\n<li>mladý začinajúci tréner</li>\n</ul>', NULL, NULL, 1),
+(82, 'sk', 'diana-riskova-krasokorcuovanie', 'Diana RIŠKOVÁ (krasokorčuľovanie)', '', '', '<ul>\n<li>od roku 1997 reprezentantka Slovenska športové dvojice</li>\n<li>viacnásobná majsterka Slovenska</li>\n<li>3-krát účastníčka majstrovstiev sveta</li>\n<li>profesionálka v Holliday on ice -tv show Belgicko, tv show Francúzsko, tv show Mexiko, Český Mrázik</li>\n<li>držiteľka trénerskej licencie - medzinárodná špecialistka pre športové dvojice jediná na Slovensku</li>\n</ul>', NULL, NULL, 1),
+(83, 'sk', 'lucia-kupcova-krasokorcuovanie', 'Lucia KUPČOVÁ (krasokorčuľovanie)', '', '', '<p>Od roku 1998 vymenila súťažnú kariéru za trénersku:</p>\n<ul>\n<li>kraso centrum Košice</li>\n<li>HDC Košice - prípravka</li>\n<li>Figure Skating Club Košice</li>\n</ul>', NULL, NULL, 1),
+(84, 'sk', 'alexandra-dulakova-krasokorcuovanie', 'Alexandra DULÁKOVÁ (krasokorčuľovanie)', '', '', '<p>Od roku 2005 až po rok 2011  bola členkou krasokorčuliarského klubu Kraso Centrum v Košiciach<br />Zúčastňovala sa viacerých súťaži na Slovensku aj v zahraničí a 6-krát sa zúčastnila  aj Majstrovstiev Slovenska<br />Vyhovela  krasokorčuliarským výkonným testom až po  6. Úroveň<br />2-krát bola účinkujúcou v show Jevgenija Pľuščenka v Košiciach a aj vystúpenia  pri príležitosti 10. Výročia U.S. Steel Košice</p>\n<p><strong>Úspechy:</strong><br /><em>4. Miesto – Majstrovstvá Slovenska 2008 a 2009</em> <br /><em>5. Miesto – Majstrovstvá Slovenska 2010</em> <br /><em>1. Miesto – Miskolc- 2007</em> <br /><em>2. Miesto – Miskolc- 2009</em></p>\n<p><strong>Trénerská kariéra:</strong><br />V sezóne 2011/2012 bola  trénerka v krasokorčuliarskej pripravke Figure Skating Club  v Košiciach<br />Od roku 2012 trénerka v hokejovom klube Hockey Liba Academy  a trénerka  v kurze korčuľovania pod vedením hlavnej trénerky Diany Riškovej v Čani.</p>', NULL, NULL, 1),
+(85, 'sk', 'mirka-lipcakova-krasokorcuovanie', 'Mirka LIPČÁKOVÁ (krasokorčuľovanie)', '', '', '<ul>\n<li>bohatá pretekárska kariéra</li>\n<li>1x majsterka SR v roku 1988</li>\n<li>2x striebro na majstrovstvách SR v roku 1987 - 1992 </li>\n<li>1x bronz na majstrovstvách SR v roku 1993</li>\n<li>ukončenie pretekárskej činnosti v roku 1994 a prechod k profesionálom Holliday on ice 2 roky </li>\n<li>profesionálna trénerka s licenciou od roku 1996</li>\n</ul>', NULL, NULL, 1),
+(86, 'sk', 'skupina-3', 'Skupina 3', '', '', '<ul>\n<li><strong>ročníky:</strong> 2003, 2002, 2001, 2000</li>\n<li><strong>tréningy:</strong> utorok – 15.15 hod., streda – 15.15 hod. a piatok – 16.30 hod. </li>\n</ul>\n<ol>\n<li>Bakši Šimon</li>\n<li>Boldižár Erik </li>\n<li>Cehlár Gabriel </li>\n<li>Eliaš Radoslav</li>\n<li>Gergeľ Nicolas</li>\n<li>Gregoire Ezra </li>\n<li>Helcmanovský Daniel </li>\n<li>Helcmanovský Róbert </li>\n<li>Hodor Radovan </li>\n<li>Hvizdoš Dominik </li>\n<li>Kišdučák Kristián </li>\n<li>Krišš Dávid 1</li>\n<li>Kukľa Matej </li>\n<li>Madáč Maroš</li>\n<li>Mišľan Filip </li>\n<li>Molnár Hugo </li>\n<li>Padyšák Daniel </li>\n<li>Pápay Márk </li>\n<li>Papcúň Marek </li>\n<li>Peko Daniel </li>\n<li>Pillár Sebastián </li>\n<li>Piroško Adam </li>\n<li>Pribula Tomáš </li>\n<li>Ridarčík Adam </li>\n<li>Ruščák Damián </li>\n<li>Slota Adam </li>\n<li>Solej Martin </li>\n<li>Šándor Denis </li>\n<li>Šeleng Martin </li>\n<li>Timko Ondrej </li>\n<li>Tomko Filip </li>\n<li>Vaco Daniel </li>\n<li>Zlaczki Benjamín </li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Goliáš Oliver </li>\n<li>Hancin Rastislav </li>\n<li>Ujjobbágy Teodor</li>\n</ul>', '', '', 1);
+INSERT INTO `article_lang` (`id_article`, `lang`, `url`, `title`, `subtitle`, `meta_title`, `content`, `meta_keywords`, `meta_description`, `online`) VALUES
+(87, 'sk', 'skupina-4', 'Skupina 4', '', '', '<ul>\n<li><strong>ročníky:</strong> 1999, 1998, 1997, 1996, 1995, .... </li>\n<li><strong>tréningy:</strong> utorok – 16.30 hod., streda – 20.15 hod. a sobota – 12.00 hod. (AHL) </li>\n</ul>\n<ol>\n<li>Bačo Adam </li>\n<li>Balog Tomáš </li>\n<li>Bidovský Jakub </li>\n<li>Fajdek Denis </li>\n<li>Fajfer Adam</li>\n<li>Gabaš Martin </li>\n<li>Gergely Adam </li>\n<li>Gregorovič Peter </li>\n<li>Hamrák Erik </li>\n<li>Hanušovský Vladimír </li>\n<li>Hegeduš Michal </li>\n<li>Herich Richard </li>\n<li>Ivan Martin </li>\n<li>Juhás Jozef </li>\n<li>Kissi Michal </li>\n<li>Kolesár Denis </li>\n<li>Kondáš Filip </li>\n<li>Kuchár Kristián </li>\n<li>Kulik Maroš </li>\n<li>Majer Richard </li>\n<li>Majorovič Matúš </li>\n<li>Munka Erik </li>\n<li>Ondášová Karolína </li>\n<li>Pačut Milan </li>\n<li>Pavlo Matej </li>\n<li>Petrová Lýdia </li>\n<li>Planeta Štefan </li>\n<li>Puha Ján </li>\n<li>Ráková Erika </li>\n<li>Ruščák Roland </li>\n<li>Sedlák Matúš </li>\n<li>Semančík Lukáš </li>\n<li>Takáč Patrik </li>\n<li>Tóth Dominik </li>\n<li>Vaňo Michal </li>\n<li>Vargovčák Ronald </li>\n<li>Vašš Marián </li>\n<li>Vojtko Martin </li>\n<li>Vozár Kristián </li>\n</ol>\n<p><strong>Brankári:</strong></p>\n<ul>\n<li>Gučík Dávid</li>\n<li>Kraus Peter </li>\n<li>Stašek Michal</li>\n</ul>', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -285,13 +334,6 @@ INSERT INTO `article_media` (`id_article`, `id_media`, `online`, `ordering`, `ur
 (21, 34, 1, 1, NULL, NULL),
 (22, 35, 1, 1, NULL, NULL),
 (23, 36, 1, 1, NULL, NULL),
-(24, 44, 1, 2, NULL, NULL),
-(24, 45, 1, 3, NULL, NULL),
-(24, 46, 1, 4, NULL, NULL),
-(24, 47, 1, 5, NULL, NULL),
-(24, 48, 1, 6, NULL, NULL),
-(24, 49, 1, 7, NULL, NULL),
-(24, 50, 1, 1, NULL, NULL),
 (39, 52, 1, 1, NULL, NULL),
 (39, 53, 1, 2, NULL, NULL),
 (39, 54, 1, 3, NULL, NULL),
@@ -435,7 +477,48 @@ INSERT INTO `article_media` (`id_article`, `id_media`, `online`, `ordering`, `ur
 (60, 192, 1, 5, NULL, NULL),
 (60, 193, 1, 6, NULL, NULL),
 (60, 194, 1, 7, NULL, NULL),
-(60, 195, 1, 8, NULL, NULL);
+(60, 195, 1, 8, NULL, NULL),
+(64, 171, 1, 2, NULL, NULL),
+(65, 128, 1, 1, NULL, NULL),
+(69, 176, 1, 1, NULL, NULL),
+(69, 177, 1, 2, NULL, NULL),
+(69, 178, 1, 3, NULL, NULL),
+(69, 179, 1, 4, NULL, NULL),
+(69, 180, 1, 5, NULL, NULL),
+(69, 181, 1, 6, NULL, NULL),
+(75, 46, 1, 5, NULL, NULL),
+(75, 48, 1, 12, NULL, NULL),
+(75, 49, 1, 6, NULL, NULL),
+(75, 198, 1, 1, NULL, NULL),
+(75, 199, 1, 2, NULL, NULL),
+(75, 200, 1, 3, NULL, NULL),
+(75, 201, 1, 4, NULL, NULL),
+(75, 202, 1, 7, NULL, NULL),
+(75, 203, 1, 8, NULL, NULL),
+(75, 204, 1, 9, NULL, NULL),
+(75, 205, 1, 10, NULL, NULL),
+(75, 206, 1, 11, NULL, NULL),
+(75, 207, 1, 13, NULL, NULL),
+(76, 44, 1, 1, NULL, NULL),
+(76, 45, 1, 2, NULL, NULL),
+(76, 47, 1, 9, NULL, NULL),
+(76, 208, 1, 3, NULL, NULL),
+(76, 209, 1, 4, NULL, NULL),
+(76, 210, 1, 5, NULL, NULL),
+(76, 211, 1, 6, NULL, NULL),
+(76, 212, 1, 7, NULL, NULL),
+(76, 213, 1, 8, NULL, NULL),
+(76, 214, 1, 11, NULL, NULL),
+(76, 215, 1, 12, NULL, NULL),
+(77, 50, 1, 1, NULL, NULL),
+(78, 74, 1, 1, NULL, NULL),
+(79, 216, 1, 1, NULL, NULL),
+(80, 217, 1, 1, NULL, NULL),
+(81, 218, 1, 1, NULL, NULL),
+(82, 219, 1, 1, NULL, NULL),
+(83, 221, 1, 1, NULL, NULL),
+(84, 220, 1, 1, NULL, NULL),
+(85, 223, 1, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -455,19 +538,20 @@ CREATE TABLE IF NOT EXISTS `article_tag` (
 --
 
 CREATE TABLE IF NOT EXISTS `article_type` (
-`id_type` int(11) unsigned NOT NULL,
+  `id_type` int(11) unsigned NOT NULL,
   `type` varchar(50) NOT NULL,
   `ordering` int(11) DEFAULT '0',
   `description` text,
   `type_flag` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `article_type`
 --
 
 INSERT INTO `article_type` (`id_type`, `type`, `ordering`, `description`, `type_flag`) VALUES
-(1, 'slideshow', 0, '', 17);
+(1, 'slideshow', 0, '', 17),
+(2, 'eyecatcher', 0, '', 8);
 
 -- --------------------------------------------------------
 
@@ -476,7 +560,7 @@ INSERT INTO `article_type` (`id_type`, `type`, `ordering`, `description`, `type_
 --
 
 CREATE TABLE IF NOT EXISTS `captcha` (
-`id_captcha` int(11) unsigned NOT NULL,
+  `id_captcha` int(11) unsigned NOT NULL,
   `question` varchar(255) NOT NULL DEFAULT '',
   `answer` varchar(255) NOT NULL DEFAULT '',
   `lang` varchar(8) NOT NULL DEFAULT '',
@@ -490,7 +574,7 @@ CREATE TABLE IF NOT EXISTS `captcha` (
 --
 
 CREATE TABLE IF NOT EXISTS `category` (
-`id_category` int(11) unsigned NOT NULL,
+  `id_category` int(11) unsigned NOT NULL,
   `name` varchar(50) NOT NULL,
   `ordering` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -516,12 +600,42 @@ CREATE TABLE IF NOT EXISTS `category_lang` (
 --
 
 CREATE TABLE IF NOT EXISTS `element` (
-`id_element` int(11) unsigned NOT NULL,
+  `id_element` int(11) unsigned NOT NULL,
   `id_element_definition` int(11) unsigned NOT NULL,
   `parent` varchar(50) NOT NULL,
   `id_parent` int(11) NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `element`
+--
+
+INSERT INTO `element` (`id_element`, `id_element_definition`, `parent`, `id_parent`, `ordering`) VALUES
+(1, 1, 'article', 72, 6),
+(2, 1, 'article', 72, 5),
+(3, 1, 'article', 72, 4),
+(4, 1, 'article', 72, 3),
+(5, 1, 'article', 72, 2),
+(6, 1, 'article', 72, 1),
+(7, 1, 'article', 73, 13),
+(8, 1, 'article', 73, 12),
+(9, 1, 'article', 73, 11),
+(10, 1, 'article', 73, 10),
+(11, 1, 'article', 73, 9),
+(12, 1, 'article', 73, 8),
+(13, 1, 'article', 73, 7),
+(14, 1, 'article', 73, 6),
+(15, 1, 'article', 73, 5),
+(16, 1, 'article', 73, 4),
+(17, 1, 'article', 73, 3),
+(18, 1, 'article', 73, 2),
+(19, 1, 'article', 73, 1),
+(20, 2, 'article', 74, 1),
+(21, 2, 'article', 74, 2),
+(22, 2, 'article', 74, 3),
+(23, 2, 'article', 74, 4),
+(24, 2, 'article', 74, 5);
 
 -- --------------------------------------------------------
 
@@ -530,11 +644,19 @@ CREATE TABLE IF NOT EXISTS `element` (
 --
 
 CREATE TABLE IF NOT EXISTS `element_definition` (
-`id_element_definition` int(11) unsigned NOT NULL,
+  `id_element_definition` int(11) unsigned NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` text,
   `ordering` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `element_definition`
+--
+
+INSERT INTO `element_definition` (`id_element_definition`, `name`, `description`, `ordering`) VALUES
+(1, 'tournament', '', 0),
+(2, 'match', '', 0);
 
 -- --------------------------------------------------------
 
@@ -548,6 +670,14 @@ CREATE TABLE IF NOT EXISTS `element_definition_lang` (
   `title` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Sťahujem dáta pre tabuľku `element_definition_lang`
+--
+
+INSERT INTO `element_definition_lang` (`id_element_definition`, `lang`, `title`) VALUES
+(1, 'sk', 'Turnaj'),
+(2, 'sk', 'Zápas');
+
 -- --------------------------------------------------------
 
 --
@@ -555,7 +685,7 @@ CREATE TABLE IF NOT EXISTS `element_definition_lang` (
 --
 
 CREATE TABLE IF NOT EXISTS `event_log` (
-`id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL,
   `status` varchar(50) DEFAULT NULL,
   `message` text,
   `id_user` int(11) DEFAULT NULL,
@@ -572,7 +702,7 @@ CREATE TABLE IF NOT EXISTS `event_log` (
 --
 
 CREATE TABLE IF NOT EXISTS `extend_field` (
-`id_extend_field` int(11) unsigned NOT NULL,
+  `id_extend_field` int(11) unsigned NOT NULL,
   `name` varchar(255) NOT NULL,
   `type` int(3) unsigned NOT NULL,
   `description` varchar(255) DEFAULT '',
@@ -584,7 +714,28 @@ CREATE TABLE IF NOT EXISTS `extend_field` (
   `default_value` varchar(255) DEFAULT NULL,
   `global` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `main` smallint(1) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `extend_field`
+--
+
+INSERT INTO `extend_field` (`id_extend_field`, `name`, `type`, `description`, `parent`, `id_parent`, `ordering`, `translated`, `value`, `default_value`, `global`, `main`) VALUES
+(1, 'date', 7, '', 'element', 1, 2, '0', '', '', 0, 0),
+(2, 'name', 1, '', 'element', 1, 1, '0', '', '', 0, 0),
+(3, 'group', 4, '', 'element', 1, 3, '0', '1:1\n2:2\n3:3\n4:4', '', 0, 0),
+(4, 'place', 100, '', 'element', 1, 4, '0', '', '', 0, 0),
+(5, 'gallery', 130, '', 'element', 1, 6, '0', '', '', 0, 0),
+(6, 'other', 8, '', 'element', 1, 7, '0', '', '', 0, 0),
+(7, 'date', 7, '', 'element', 2, 1, '0', '', '', 0, 0),
+(8, 'home', 1, '', 'element', 2, 2, '0', '', '', 0, 0),
+(9, 'guests', 1, '', 'element', 2, 4, '0', '', '', 0, 0),
+(10, 'result', 1, '', 'element', 2, 3, '0', '', '', 0, 0),
+(11, 'gallery', 130, '', 'element', 2, 7, '0', '', '', 0, 0),
+(12, 'group', 4, '', 'element', 2, 6, '0', '1:skupina 1\n2:skupina 2\n3:skupina 3\n4:skupina 4', '', 0, 0),
+(13, 'note', 1, '', 'element', 2, 8, '0', '', '', 0, 0),
+(14, 'played', 5, '', 'element', 2, 5, '0', 'false:ešte nie\ntrue:už áno', 'false', 0, 0),
+(15, 'played', 5, '', 'element', 1, 5, '0', 'false:ešte nie\ntrue:už áno', 'false', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -593,14 +744,148 @@ CREATE TABLE IF NOT EXISTS `extend_field` (
 --
 
 CREATE TABLE IF NOT EXISTS `extend_fields` (
-`id_extend_fields` int(11) unsigned NOT NULL,
+  `id_extend_fields` int(11) unsigned NOT NULL,
   `id_extend_field` int(11) unsigned NOT NULL,
   `parent` varchar(50) NOT NULL DEFAULT '',
   `id_parent` int(11) unsigned NOT NULL,
   `lang` varchar(8) NOT NULL DEFAULT '',
   `content` text,
   `ordering` int(11) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8;
+
+--
+-- Sťahujem dáta pre tabuľku `extend_fields`
+--
+
+INSERT INTO `extend_fields` (`id_extend_fields`, `id_extend_field`, `parent`, `id_parent`, `lang`, `content`, `ordering`) VALUES
+(1, 1, 'element', 1, '', '2014-11-17', 0),
+(2, 2, 'element', 1, '', 'Turnaj v minihokeji', 0),
+(4, 4, 'element', 1, '', '', 0),
+(6, 5, 'element', 1, '', 'article:27.39', 0),
+(8, 1, 'element', 2, '', '2014-12-07', 0),
+(9, 2, 'element', 2, '', 'Mikulášsky turnaj Rimavská Sobota', 0),
+(11, 4, 'element', 2, '', '', 0),
+(12, 1, 'element', 3, '', '2014-12-22', 0),
+(13, 2, 'element', 3, '', '3. ročník hokejového turnaja tretiakov', 0),
+(15, 4, 'element', 3, '', '6', 0),
+(16, 1, 'element', 4, '', '2014-12-29', 0),
+(17, 2, 'element', 4, '', 'Vianočný turnaj', 0),
+(19, 4, 'element', 4, '', '3', 0),
+(20, 1, 'element', 5, '', '2015-01-05', 0),
+(21, 2, 'element', 5, '', 'Novoročný turnaj ', 0),
+(23, 4, 'element', 5, '', '2', 0),
+(24, 1, 'element', 6, '', '2015-01-18', 0),
+(25, 2, 'element', 6, '', 'Turnaj o pohár starostu obce Čaňa', 0),
+(27, 4, 'element', 6, '', '2', 0),
+(28, 1, 'element', 7, '', '2013-08-25', 0),
+(29, 2, 'element', 7, '', 'MULTI ŠPORT CUP 2013', 0),
+(30, 4, 'element', 7, '', '', 0),
+(31, 1, 'element', 8, '', '2013-12-27', 0),
+(32, 2, 'element', 8, '', 'Turnaj v Spišskej Novej Vsi', 0),
+(33, 3, 'element', 8, '', '2', 0),
+(34, 4, 'element', 8, '', '', 0),
+(35, 1, 'element', 9, '', '2013-12-29', 0),
+(36, 2, 'element', 9, '', 'Turnaj v Trebišove', 0),
+(38, 4, 'element', 9, '', '', 0),
+(39, 1, 'element', 10, '', '2013-12-30', 0),
+(40, 2, 'element', 10, '', 'Turnaj v Spišskej Novej Vsi', 0),
+(42, 4, 'element', 10, '', '', 0),
+(43, 1, 'element', 11, '', '2014-01-04', 0),
+(44, 2, 'element', 11, '', ' MiniTurnaj v Čani', 0),
+(46, 4, 'element', 11, '', '', 0),
+(47, 1, 'element', 12, '', '2014-02-09', 0),
+(48, 2, 'element', 12, '', 'Turnaj Orange Minihokej Tour Michalovce', 0),
+(49, 3, 'element', 12, '', '2', 0),
+(50, 4, 'element', 12, '', '', 0),
+(51, 1, 'element', 13, '', '2014-02-23', 0),
+(52, 2, 'element', 13, '', 'Turnaj pod záštitou primátorky Gelnica', 0),
+(54, 4, 'element', 13, '', '', 0),
+(55, 1, 'element', 14, '', '2014-03-02', 0),
+(56, 2, 'element', 14, '', ' Turnaj o cenu primátorky Sabinov', 0),
+(58, 4, 'element', 14, '', '', 0),
+(59, 1, 'element', 15, '', '2014-03-03', 0),
+(60, 2, 'element', 15, '', 'Prázdninový hokejový turnaj v Čani', 0),
+(62, 4, 'element', 15, '', '', 0),
+(63, 1, 'element', 16, '', '2014-03-06', 0),
+(64, 2, 'element', 16, '', 'Prázdninový hokejový turnaj v Čani', 0),
+(66, 4, 'element', 16, '', '', 0),
+(67, 1, 'element', 17, '', '2014-04-06', 0),
+(68, 2, 'element', 17, '', 'BASF CUP 2014 - hokejový turnaj 5.ŠHT v Žiline', 0),
+(70, 4, 'element', 17, '', '', 0),
+(71, 1, 'element', 18, '', '2014-04-07', 0),
+(72, 2, 'element', 18, '', 'Medzinárodný hokejový turnaj Miskolc ľadový medveď', 0),
+(74, 4, 'element', 18, '', '', 0),
+(75, 1, 'element', 19, '', '2015-04-17', 0),
+(76, 2, 'element', 19, '', 'Veľkonočný turnaj Čaňa', 0),
+(78, 4, 'element', 19, '', '', 0),
+(79, 5, 'element', 9, '', 'article:27.56', 0),
+(80, 3, 'element', 9, '', '3', 0),
+(81, 5, 'element', 10, '', 'article:27.52', 0),
+(82, 3, 'element', 10, '', '3', 0),
+(83, 5, 'element', 11, '', 'article:27.51', 0),
+(84, 3, 'element', 11, '', '2', 0),
+(85, 5, 'element', 13, '', 'article:27.49', 0),
+(86, 3, 'element', 13, '', '3', 0),
+(87, 5, 'element', 14, '', 'article:27.48', 0),
+(88, 3, 'element', 14, '', '3', 0),
+(89, 5, 'element', 15, '', 'article:27.47', 0),
+(90, 3, 'element', 15, '', '2', 0),
+(91, 5, 'element', 16, '', 'article:27.46', 0),
+(92, 3, 'element', 16, '', '3', 0),
+(93, 5, 'element', 17, '', 'article:27.45', 0),
+(94, 3, 'element', 17, '', '2,3', 0),
+(95, 5, 'element', 18, '', 'article:27.40', 0),
+(96, 3, 'element', 18, '', '2', 0),
+(97, 5, 'element', 19, '', 'article:27.39', 0),
+(98, 3, 'element', 19, '', '1', 0),
+(99, 7, 'element', 20, '', '2014-12-14', 0),
+(100, 8, 'element', 20, '', 'L.A.11', 0),
+(101, 9, 'element', 20, '', 'Gelnica', 0),
+(102, 10, 'element', 20, '', '3 : 4pp', 0),
+(105, 7, 'element', 21, '', '2014-12-04', 0),
+(106, 8, 'element', 21, '', 'L.A.11', 0),
+(107, 9, 'element', 21, '', 'ICE DREAM', 0),
+(108, 10, 'element', 21, '', '6 : 3', 0),
+(110, 7, 'element', 22, '', '2014-11-23', 0),
+(111, 8, 'element', 22, '', 'L.A.11', 0),
+(112, 9, 'element', 22, '', 'ICE DREAM', 0),
+(113, 10, 'element', 22, '', '8 : 6', 0),
+(115, 7, 'element', 23, '', '2014-11-09', 0),
+(116, 8, 'element', 23, '', 'L.A.11', 0),
+(117, 9, 'element', 23, '', 'ICE DREAM', 0),
+(118, 10, 'element', 23, '', '3 : 3', 0),
+(120, 7, 'element', 24, '', '2014-10-30', 0),
+(121, 8, 'element', 24, '', 'L.A.11', 0),
+(122, 9, 'element', 24, '', 'ICE DREAM', 0),
+(123, 10, 'element', 24, '', '7 : 5', 0),
+(126, 13, 'element', 20, '', '', 0),
+(127, 14, 'element', 20, '', 'false', 0),
+(128, 12, 'element', 21, '', '3', 0),
+(129, 13, 'element', 21, '', '', 0),
+(130, 14, 'element', 21, '', 'true', 0),
+(131, 12, 'element', 22, '', '3', 0),
+(132, 13, 'element', 22, '', '', 0),
+(133, 14, 'element', 22, '', 'true', 0),
+(134, 12, 'element', 23, '', '3', 0),
+(135, 13, 'element', 23, '', '', 0),
+(136, 14, 'element', 23, '', 'true', 0),
+(137, 12, 'element', 24, '', '3,4', 0),
+(138, 13, 'element', 24, '', '', 0),
+(139, 14, 'element', 24, '', 'true', 0),
+(140, 12, 'element', 20, '', '3', 0),
+(141, 3, 'element', 4, '', '3', 0),
+(142, 15, 'element', 4, '', 'true', 0),
+(143, 3, 'element', 3, '', '1', 0),
+(144, 15, 'element', 3, '', 'true', 0),
+(145, 3, 'element', 2, '', '1', 0),
+(146, 15, 'element', 2, '', 'true', 0),
+(147, 3, 'element', 1, '', '1', 0),
+(148, 15, 'element', 1, '', 'true', 0),
+(149, 3, 'element', 5, '', '2', 0),
+(150, 15, 'element', 5, '', 'false', 0),
+(151, 3, 'element', 6, '', '4', 0),
+(152, 15, 'element', 6, '', 'false', 0),
+(153, 6, 'element', 2, '', '4,223', 0);
 
 -- --------------------------------------------------------
 
@@ -614,6 +899,27 @@ CREATE TABLE IF NOT EXISTS `extend_field_lang` (
   `label` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Sťahujem dáta pre tabuľku `extend_field_lang`
+--
+
+INSERT INTO `extend_field_lang` (`id_extend_field`, `lang`, `label`) VALUES
+(1, 'sk', 'Dátum'),
+(2, 'sk', 'Názov'),
+(3, 'sk', 'Skupina'),
+(4, 'sk', 'Umiestnenie'),
+(5, 'sk', 'Galéria'),
+(6, 'sk', 'Príloha'),
+(7, 'sk', 'Dátum'),
+(8, 'sk', 'Domáci'),
+(9, 'sk', 'Hostia'),
+(10, 'sk', 'Výsledok'),
+(11, 'sk', 'Galéria'),
+(12, 'sk', 'Skupina'),
+(13, 'sk', 'Poznámka'),
+(14, 'sk', 'Odohralo sa'),
+(15, 'sk', 'Odohralo sa');
+
 -- --------------------------------------------------------
 
 --
@@ -621,7 +927,7 @@ CREATE TABLE IF NOT EXISTS `extend_field_lang` (
 --
 
 CREATE TABLE IF NOT EXISTS `extend_field_type` (
-`id_extend_field_type` int(11) unsigned NOT NULL,
+  `id_extend_field_type` int(11) unsigned NOT NULL,
   `type_name` varchar(50) NOT NULL DEFAULT '',
   `default_values` smallint(1) NOT NULL DEFAULT '0',
   `values` smallint(1) NOT NULL DEFAULT '0',
@@ -674,7 +980,7 @@ CREATE TABLE IF NOT EXISTS `ion_sessions` (
 --
 
 CREATE TABLE IF NOT EXISTS `item` (
-`id_item` int(11) unsigned NOT NULL,
+  `id_item` int(11) unsigned NOT NULL,
   `id_item_definition` int(10) unsigned NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   `description` text,
@@ -701,7 +1007,7 @@ CREATE TABLE IF NOT EXISTS `items` (
 --
 
 CREATE TABLE IF NOT EXISTS `item_definition` (
-`id_item_definition` int(11) unsigned NOT NULL,
+  `id_item_definition` int(11) unsigned NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   `description` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Items definition table';
@@ -770,9 +1076,7 @@ CREATE TABLE IF NOT EXISTS `login_tracker` (
 --
 
 INSERT INTO `login_tracker` (`ip_address`, `first_time`, `failures`) VALUES
-('0.0.0.0', 1435576600, 9),
-('85.248.108.6', 1432278591, 1),
-('85.248.108.7', 1432278556, 3);
+('0.0.0.0', 1437458178, 2);
 
 -- --------------------------------------------------------
 
@@ -781,7 +1085,7 @@ INSERT INTO `login_tracker` (`ip_address`, `first_time`, `failures`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `media` (
-`id_media` int(11) unsigned NOT NULL,
+  `id_media` int(11) unsigned NOT NULL,
   `type` varchar(10) NOT NULL DEFAULT '',
   `file_name` varchar(255) NOT NULL DEFAULT '' COMMENT 'file_name',
   `path` varchar(500) NOT NULL COMMENT 'Complete path to the medium, including media file name, excluding host name',
@@ -791,56 +1095,20 @@ CREATE TABLE IF NOT EXISTS `media` (
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Medium date',
   `link` varchar(255) DEFAULT NULL COMMENT 'Link to a resource, attached to this medium',
   `square_crop` enum('tl','m','br') NOT NULL DEFAULT 'm'
-) ENGINE=InnoDB AUTO_INCREMENT=197 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=255 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `media`
 --
 
 INSERT INTO `media` (`id_media`, `type`, `file_name`, `path`, `base_path`, `copyright`, `provider`, `date`, `link`, `square_crop`) VALUES
-(1, 'picture', 'liba_uvod.jpg', 'files/liba_dokumenty/liba_uvod.jpg', 'files/liba_dokumenty/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (2, 'picture', 'slider_zapasy.jpg', 'files/liba_dokumenty/slider_zapasy.jpg', 'files/liba_dokumenty/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (3, 'picture', 'slider_turnaje.jpg', 'files/liba_dokumenty/slider_turnaje.jpg', 'files/liba_dokumenty/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(4, 'picture', 'slider_tim.jpg', 'files/liba_dokumenty/slider_tim.jpg', 'files/liba_dokumenty/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(5, 'picture', '3b.jpg', 'files/sponsors/3b.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(6, 'picture', 'bauer.jpg', 'files/sponsors/bauer.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(7, 'picture', 'ekolor.jpg', 'files/sponsors/ekolor.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(8, 'picture', 'empe_sport.jpg', 'files/sponsors/empe_sport.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(9, 'picture', 'kimex.gif', 'files/sponsors/kimex.gif', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(10, 'picture', 'intercars.jpg', 'files/sponsors/intercars.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(11, 'picture', 'hireklama.jpg', 'files/sponsors/hireklama.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(12, 'picture', 'fafrak.jpg', 'files/sponsors/fafrak.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(13, 'picture', 'ledo.jpg', 'files/sponsors/ledo.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(14, 'picture', 'll.jpg', 'files/sponsors/ll.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(15, 'picture', 'mitaka.jpg', 'files/sponsors/mitaka.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(16, 'picture', 'montrur.jpg', 'files/sponsors/montrur.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(17, 'picture', 'moris.png', 'files/sponsors/moris.png', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(18, 'picture', 'neonet.jpg', 'files/sponsors/neonet.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(19, 'picture', 'ness_kdc_kosiciam_h.jpg', 'files/sponsors/ness_kdc_kosiciam_h.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(20, 'picture', 'profa.gif', 'files/sponsors/profa.gif', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(21, 'picture', 'rabaka.jpg', 'files/sponsors/rabaka.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(22, 'picture', 'regnum_bavaria.jpg', 'files/sponsors/regnum_bavaria.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(23, 'picture', 'revco.jpg', 'files/sponsors/revco.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(24, 'picture', 'rwe.jpg', 'files/sponsors/rwe.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(25, 'picture', 'sonaplus.jpg', 'files/sponsors/sonaplus.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(26, 'picture', 'sport_do_ke.jpg', 'files/sponsors/sport_do_ke.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(27, 'picture', 'stav_ruskov.jpg', 'files/sponsors/stav_ruskov.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(28, 'picture', 'strabag.jpg', 'files/sponsors/strabag.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(29, 'picture', 'svet_sportu.jpg', 'files/sponsors/svet_sportu.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(30, 'picture', 'tp.jpg', 'files/sponsors/tp.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(31, 'picture', 'vehra.jpg', 'files/sponsors/vehra.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(32, 'picture', 'vsbm.jpg', 'files/sponsors/vsbm.jpg', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
+(4, 'picture', 'slider_tim.jpg', 'files/liba_dokumenty/slider_tim.jpg', 'files/liba_dokumenty/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (33, 'picture', 'igor_liba.jpg', 'files/treneri/igor_liba.jpg', 'files/treneri/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (34, 'picture', 'pavel_valko.jpg', 'files/treneri/pavel_valko.jpg', 'files/treneri/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (35, 'picture', 'jaromir_dragan.jpg', 'files/treneri/jaromir_dragan.jpg', 'files/treneri/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (36, 'picture', 'slavomir_ilavsky.jpg', 'files/treneri/slavomir_ilavsky.jpg', 'files/treneri/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(37, 'picture', 'biely_odznak_small.jpg', 'files/reklamne_predmety/biely_odznak_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(38, 'picture', 'cierny_odznak_small.jpg', 'files/reklamne_predmety/cierny_odznak_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(39, 'picture', 'nase_dresy_small.jpg', 'files/reklamne_predmety/nase_dresy_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(40, 'picture', 'nase_vlajocky_small.jpg', 'files/reklamne_predmety/nase_vlajocky_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(41, 'picture', 'nas_banner_small.jpg', 'files/reklamne_predmety/nas_banner_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(42, 'picture', 'oranzove_tricko_small.jpg', 'files/reklamne_predmety/oranzove_tricko_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(43, 'picture', 'treningove_dresy_small.jpg', 'files/reklamne_predmety/treningove_dresy_small.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (44, 'picture', 'biely_odznak.jpg', 'files/reklamne_predmety/biely_odznak.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (45, 'picture', 'cierny_odznak.jpg', 'files/reklamne_predmety/cierny_odznak.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (46, 'picture', 'nase_dresy.jpg', 'files/reklamne_predmety/nase_dresy.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
@@ -848,7 +1116,6 @@ INSERT INTO `media` (`id_media`, `type`, `file_name`, `path`, `base_path`, `copy
 (48, 'picture', 'treningove_dresy.jpg', 'files/reklamne_predmety/treningove_dresy.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (49, 'picture', 'oranzove_tricko.jpg', 'files/reklamne_predmety/oranzove_tricko.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
 (50, 'picture', 'nas_banner.jpg', 'files/reklamne_predmety/nas_banner.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
-(51, 'picture', 'ness_logo.png', 'files/sponsors/ness_logo.png', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (52, 'picture', 'img1.jpg', 'files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/img1.jpg', 'files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (53, 'picture', 'img10.jpg', 'files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/img10.jpg', 'files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (54, 'picture', 'img100.jpg', 'files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/img100.jpg', 'files/galeria/turnaje/17.04.2014_velkonocny_turnaj_cana_chlapci_skupina_1/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
@@ -993,7 +1260,62 @@ INSERT INTO `media` (`id_media`, `type`, `file_name`, `path`, `base_path`, `copy
 (193, 'picture', '41.jpg', 'files/galeria/treningy/prve_treningy/41.jpg', 'files/galeria/treningy/prve_treningy/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (194, 'picture', '48.jpg', 'files/galeria/treningy/prve_treningy/48.jpg', 'files/galeria/treningy/prve_treningy/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
 (195, 'picture', '55.jpg', 'files/galeria/treningy/prve_treningy/55.jpg', 'files/galeria/treningy/prve_treningy/', NULL, '', '0000-00-00 00:00:00', NULL, 'm'),
-(196, 'picture', 'logo_final.png', 'files/sponsors/logo_final.png', 'files/sponsors/', NULL, '', '0000-00-00 00:00:00', NULL, 'm');
+(198, 'picture', 'bunda.jpg', 'files/reklamne_predmety/bunda.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(199, 'picture', 'ciapka.jpg', 'files/reklamne_predmety/ciapka.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(200, 'picture', 'kratke_nohavice.jpg', 'files/reklamne_predmety/kratke_nohavice.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(201, 'picture', 'mikina.jpg', 'files/reklamne_predmety/mikina.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(202, 'picture', 'polokosela.jpg', 'files/reklamne_predmety/polokosela.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(203, 'picture', 'ribano.jpg', 'files/reklamne_predmety/ribano.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(204, 'picture', 'sal.jpg', 'files/reklamne_predmety/sal.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(205, 'picture', 'siltovka.jpg', 'files/reklamne_predmety/siltovka.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(206, 'picture', 'stulpne.jpg', 'files/reklamne_predmety/stulpne.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(207, 'picture', 'univerzitna_mikina.jpg', 'files/reklamne_predmety/univerzitna_mikina.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(208, 'picture', 'dres_ciarovy.jpg', 'files/reklamne_predmety/dres_ciarovy.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(209, 'picture', 'dres_hlavny.jpg', 'files/reklamne_predmety/dres_hlavny.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(210, 'picture', 'hrncek_cierny.jpg', 'files/reklamne_predmety/hrncek_cierny.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(211, 'picture', 'hrncek_oranzovy.jpg', 'files/reklamne_predmety/hrncek_oranzovy.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(212, 'picture', 'klucenky_magnetky.jpg', 'files/reklamne_predmety/klucenky_magnetky.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(213, 'picture', 'minidres.jpg', 'files/reklamne_predmety/minidres.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(214, 'picture', 'puk.jpg', 'files/reklamne_predmety/puk.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(215, 'picture', 'salka.jpg', 'files/reklamne_predmety/salka.jpg', 'files/reklamne_predmety/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(216, 'picture', 'severin_gonci.jpg', 'files/treneri/severin_gonci.jpg', 'files/treneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(217, 'picture', 'valko_ml.jpg', 'files/treneri/valko_ml.jpg', 'files/treneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(218, 'picture', 'tomas_bugos.jpg', 'files/treneri/tomas_bugos.jpg', 'files/treneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(219, 'picture', 'diana_riskova.jpg', 'files/treneri/diana_riskova.jpg', 'files/treneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(220, 'picture', 'alexandra_dulakova.jpg', 'files/treneri/alexandra_dulakova.jpg', 'files/treneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(221, 'picture', 'lucia_kupcova.jpg', 'files/treneri/lucia_kupcova.jpg', 'files/treneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(223, 'picture', 'default_avatar.png', 'files/default_avatar.png', 'files/', '', '', '0000-00-00 00:00:00', '', 'm'),
+(224, 'picture', '3b.png', 'files/partneri/3b.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.3b.sk/', 'm'),
+(225, 'picture', 'bauer.png', 'files/partneri/bauer.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.bauerhockey.sk/', 'm'),
+(226, 'picture', 'dianatech.png', 'files/partneri/dianatech.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.dianatech.sk/', 'm'),
+(227, 'picture', 'ekolor.png', 'files/partneri/ekolor.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.ekolor.sk/', 'm'),
+(228, 'picture', 'empe_sport.png', 'files/partneri/empe_sport.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.profihockey.sk/', 'm'),
+(229, 'picture', 'fafrak.png', 'files/partneri/fafrak.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://fafrak.webnode.sk/', 'm'),
+(230, 'picture', 'faithsport.png', 'files/partneri/faithsport.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.faithsport.sk/', 'm'),
+(231, 'picture', 'hireklama.png', 'files/partneri/hireklama.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.hi-reklama.sk/', 'm'),
+(232, 'picture', 'intercars.png', 'files/partneri/intercars.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.intercars.sk/', 'm'),
+(233, 'picture', 'kimex.png', 'files/partneri/kimex.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.kimex.sk/', 'm'),
+(234, 'picture', 'kinnov.png', 'files/partneri/kinnov.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.stavebninyruskov.sk/', 'm'),
+(235, 'picture', 'ledo.png', 'files/partneri/ledo.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(236, 'picture', 'lltrading.png', 'files/partneri/lltrading.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.l-ltrade.sk/', 'm'),
+(237, 'picture', 'lynx.png', 'files/partneri/lynx.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.lynx.sk/', 'm'),
+(238, 'picture', 'mitaka.png', 'files/partneri/mitaka.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.mitaka.sk/', 'm'),
+(239, 'picture', 'montrur.png', 'files/partneri/montrur.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.montrur.sk/', 'm'),
+(240, 'picture', 'moris.png', 'files/partneri/moris.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.moris.sk/', 'm'),
+(241, 'picture', 'neonet.png', 'files/partneri/neonet.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://neonet.sk/', 'm'),
+(242, 'picture', 'profa.png', 'files/partneri/profa.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(243, 'picture', 'rabaka.png', 'files/partneri/rabaka.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.reklamnepanely.sk/', 'm'),
+(244, 'picture', 'revco.png', 'files/partneri/revco.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.revco.sk/', 'm'),
+(245, 'picture', 'sonaplus.png', 'files/partneri/sonaplus.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', NULL, 'm'),
+(246, 'picture', 'sportdokosic.png', 'files/partneri/sportdokosic.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.sportdokosic.sk/', 'm'),
+(247, 'picture', 'strabag.png', 'files/partneri/strabag.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.strabag.sk/', 'm'),
+(248, 'picture', 'svet_sportu.png', 'files/partneri/svet_sportu.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.svetsportu11.sk/', 'm'),
+(249, 'picture', 'tepen.png', 'files/partneri/tepen.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.tepen.sk/', 'm'),
+(250, 'picture', 'transpetrol.png', 'files/partneri/transpetrol.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.transpetrol.sk/', 'm'),
+(251, 'picture', 'vehrastav.png', 'files/partneri/vehrastav.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.vehrastav.sk/', 'm'),
+(252, 'picture', 'vsbm.png', 'files/partneri/vsbm.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.vsbm.sk/', 'm'),
+(253, 'picture', 'vse.png', 'files/partneri/vse.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.vse.sk/', 'm'),
+(254, 'picture', 'regnum.png', 'files/partneri/regnum.png', 'files/partneri/', '', '', '0000-00-00 00:00:00', 'http://www.regnum-bavaria.sk/', 'm');
 
 -- --------------------------------------------------------
 
@@ -1014,20 +1336,70 @@ CREATE TABLE IF NOT EXISTS `media_lang` (
 --
 
 INSERT INTO `media_lang` (`lang`, `id_media`, `title`, `alt`, `description`) VALUES
-('sk', 37, 'Biely odznak', '', ''),
-('sk', 38, 'Čierny odznak', '', ''),
-('sk', 39, 'Z&aacute;pasov&eacute; dresy', '', ''),
-('sk', 40, 'Vlajočky', '', ''),
-('sk', 41, 'N&aacute;&scaron; banner na &scaron;tadi&oacute;ne v Čani', '', ''),
-('sk', 42, 'Oranžov&eacute; tričko', '', ''),
-('sk', 43, 'Tr&eacute;ningov&eacute; dresy', '', ''),
+('sk', 4, 'pozv&aacute;nka', '', ''),
 ('sk', 44, 'Biely odznak', '', ''),
 ('sk', 45, 'Čierny odznak', '', ''),
 ('sk', 46, 'Z&aacute;pasov&eacute; dresy', '', ''),
 ('sk', 47, 'Vlajočky', '', ''),
 ('sk', 48, 'Tr&eacute;ningov&eacute; dresy', '', ''),
 ('sk', 49, 'Oranžov&eacute; tričko', '', ''),
-('sk', 50, 'N&aacute;&scaron; banner na &scaron;tadi&oacute;ne v Čani', '', '');
+('sk', 50, 'N&aacute;&scaron; banner na &scaron;tadi&oacute;ne v Čani', '', ''),
+('sk', 198, 'Bunda', '', ''),
+('sk', 199, 'Čiapka', '', ''),
+('sk', 200, 'Kr&aacute;tke nohavice', '', ''),
+('sk', 201, 'Mikina', '', ''),
+('sk', 202, 'Poloko&scaron;eľa', '', ''),
+('sk', 203, 'Ribano', '', ''),
+('sk', 204, '&Scaron;&aacute;l', '', ''),
+('sk', 205, '&Scaron;iltovka', '', ''),
+('sk', 206, '&Scaron;tulpne', '', ''),
+('sk', 207, 'Univerzitn&aacute; mikina', '', ''),
+('sk', 208, 'Dres čiarov&eacute;ho rozhodcu', '', ''),
+('sk', 209, 'Dres hlavn&eacute;ho rozhodcu', '', ''),
+('sk', 210, 'Hrnček čierny', '', ''),
+('sk', 211, 'Hrnček oranžov&yacute;', '', ''),
+('sk', 212, 'Kľ&uacute;čenky a magnetky ', '', ''),
+('sk', 213, 'Minidres', '', ''),
+('sk', 214, 'Puk', '', ''),
+('sk', 215, 'Šálka', '', ''),
+('sk', 216, '', '', ''),
+('sk', 217, '', '', ''),
+('sk', 218, '', '', ''),
+('sk', 219, '', '', ''),
+('sk', 220, '', '', ''),
+('sk', 221, '', '', ''),
+('sk', 223, 'gal&eacute;ria', '', ''),
+('sk', 224, '3b', '3b', 'centrum &scaron;portu a reklamy'),
+('sk', 225, 'BAUER', 'BAUER', 'Hokejov&aacute; v&yacute;stroj.'),
+('sk', 226, 'Dianatech', 'tvorba web str&aacute;nok', 'tvorba web str&aacute;nok'),
+('sk', 227, 'EKOLOR s.r.o.', 'EKOLOR s.r.o.', 'v&scaron;etko pre Va&scaron;e steny'),
+('sk', 228, 'EMPE SPORT', 'EMPE SPORT', 'kompletn&eacute; hokejov&eacute; vybavenie'),
+('sk', 229, 'Fafr&aacute;k', 'Fafr&aacute;k', 'v&yacute;roba n&aacute;bytku'),
+('sk', 230, 'FAITH SPORT', 'FAITH SPORT', 'Hokejov&yacute; obchod. V&scaron;etko pre hokej. Skvel&eacute; ceny a v&yacute;ber.'),
+('sk', 231, 'HI-reklama', 'HI-reklama', 'reklamn&aacute; agent&uacute;ra'),
+('sk', 232, 'Inter cars', 'Inter cars', 'automobilov&eacute; diely'),
+('sk', 233, 'Kimex a.s.', 'Kimex a.s.', 'obchod s nerastn&yacute;mi surovinami technologick&yacute;mi zariadeniami, priemyseln&yacute;m, stroj&aacute;rskym a spotrebn&yacute;m tovarom'),
+('sk', 234, 'Stavebniny Ruskov', 'Stavebniny Ruskov', 'kompletn&eacute; služby v danom odbore na&scaron;ej p&ocirc;sobnosti'),
+('sk', 235, 'LEDO', 'LEDO', 'predaj potravín'),
+('sk', 236, 'L &amp; L Trading, s.r.o.', 'L &amp; L Trading, s.r.o.', 'predaj stavebn&eacute;ho materi&aacute;lu, veľkoobchod-maloobchod, realitn&aacute; činnosť'),
+('sk', 237, 'LYNX ', 'LYNX ', 'popredn&yacute; poskytovateľ služieb v oblasti projektovania, v&yacute;stavby, prev&aacute;dzkovania a bezpečnosti informačn&yacute;ch syst&eacute;mov'),
+('sk', 238, 'MITAKA s.r.o. ', 'MITAKA s.r.o. ', 'poradensk&aacute; a konzultačn&aacute; spoločnosť'),
+('sk', 239, 'MONTR&Uacute;R', 'MONTR&Uacute;R', 'realiz&aacute;cia plynovodn&yacute;ch, vodovodn&yacute;ch, hor&uacute;covodn&yacute;ch a kanalizačn&yacute;ch sieti a rozvodov'),
+('sk', 240, 'MORIS', 'MORIS', 'NOV&Eacute; MOTORY, NOV&Aacute; ENERGIA'),
+('sk', 241, 'Neonet', 'Neonet', '&Scaron;pecialista na &scaron;&iacute;renie internetu pomocou mikrovlnn&yacute;ch technol&oacute;gi&iacute;'),
+('sk', 242, 'Profa', 'Profa', 'realizácia stavieb'),
+('sk', 243, 'RABAKA', 'RABAKA', 'reklamn&eacute; panely'),
+('sk', 244, 'REVCO', 'REVCO', 'vitajte vo svete kr&aacute;snych fas&aacute;d'),
+('sk', 245, 'SONA PLUS, s.r.o.', 'SONA PLUS, s.r.o.', 'účtovnícke služby'),
+('sk', 246, 'Vr&aacute;ťme ďetom &scaron;port do Ko&scaron;&iacute;c', 'Vr&aacute;ťme ďetom &scaron;port do Ko&scaron;&iacute;c', 'občianske združenie'),
+('sk', 247, 'STRABAG s.r.o.', 'STRABAG s.r.o.', 'je jedn&yacute;m z l&iacute;drov na slovenskom stavebnom trhu'),
+('sk', 248, 'Svet &scaron;portu', 'Svet &scaron;portu', '&scaron;portov&yacute; magaz&iacute;n '),
+('sk', 249, 'TEPEN', 'TEPEN', 'Pozemn&eacute; stavyby, energetick&eacute; stavby, ekologick&eacute; stavby.'),
+('sk', 250, 'Transpetrol', 'Transpetrol', 'Vn&uacute;tro&scaron;t&aacute;tna preprava a z&aacute;sobovanie ropy'),
+('sk', 251, 'VEHRASTAV s.r.o.', 'VEHRASTAV s.r.o.', 'realiz&aacute;cia stavieb ak&eacute;hokoľvek druhu'),
+('sk', 252, 'VYSOK&Aacute; &Scaron;KOLA BEZPEČNOSTN&Eacute;HO MANAŽ&Eacute;RSTVA s.r.o.', 'VYSOK&Aacute; &Scaron;KOLA BEZPEČNOSTN&Eacute;HO MANAŽ&Eacute;RSTVA s.r.o.', ''),
+('sk', 253, 'VSE, RWE Group', 'VSE, RWE Group', 'Energia pre va&scaron;e pohodlie'),
+('sk', 254, 'Regnum Bavaria', 'Regnum Bavaria', 'predaj vozidiel BMW');
 
 -- --------------------------------------------------------
 
@@ -1036,7 +1408,7 @@ INSERT INTO `media_lang` (`lang`, `id_media`, `title`, `alt`, `description`) VAL
 --
 
 CREATE TABLE IF NOT EXISTS `menu` (
-`id_menu` int(11) NOT NULL,
+  `id_menu` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
   `ordering` int(11) DEFAULT NULL
@@ -1057,7 +1429,7 @@ INSERT INTO `menu` (`id_menu`, `name`, `title`, `ordering`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `module` (
-`id_module` int(11) unsigned NOT NULL,
+  `id_module` int(11) unsigned NOT NULL,
   `name` varchar(100) NOT NULL DEFAULT '',
   `with_admin` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `version` varchar(10) NOT NULL DEFAULT '',
@@ -1074,7 +1446,7 @@ CREATE TABLE IF NOT EXISTS `module` (
 --
 
 CREATE TABLE IF NOT EXISTS `module_setting` (
-`id_module_setting` int(11) NOT NULL,
+  `id_module_setting` int(11) NOT NULL,
   `id_module` int(11) NOT NULL,
   `name` varchar(50) NOT NULL COMMENT 'Setting name',
   `content` varchar(255) NOT NULL COMMENT 'Setting content',
@@ -1088,7 +1460,7 @@ CREATE TABLE IF NOT EXISTS `module_setting` (
 --
 
 CREATE TABLE IF NOT EXISTS `note` (
-`id_note` int(11) NOT NULL,
+  `id_note` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `type` varchar(10) NOT NULL,
@@ -1102,21 +1474,23 @@ CREATE TABLE IF NOT EXISTS `note` (
 --
 
 CREATE TABLE IF NOT EXISTS `notification` (
-`id_notification` int(11) unsigned NOT NULL,
+  `id_notification` int(11) unsigned NOT NULL,
   `date_creation` date DEFAULT NULL,
   `code` varchar(50) DEFAULT NULL,
   `category` varchar(25) DEFAULT NULL,
   `title` varchar(50) DEFAULT NULL,
   `content` text,
   `read` smallint(1) DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `notification`
 --
 
 INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `category`, `title`, `content`, `read`) VALUES
-(1, '2015-06-30', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 0);
+(1, '2015-06-30', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 1),
+(2, '2015-07-21', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 1),
+(3, '2015-07-22', 'sitemap_refresh', 'System', 'Sitemap refresh', 'Sitemap needs to be refreshed.<br/> Go to <b>Tools > System Diagnosis > Tools</b> and click on <b>"Refresh Sitemap"</b>.', 1);
 
 -- --------------------------------------------------------
 
@@ -1125,7 +1499,7 @@ INSERT INTO `notification` (`id_notification`, `date_creation`, `code`, `categor
 --
 
 CREATE TABLE IF NOT EXISTS `page` (
-`id_page` int(11) unsigned NOT NULL,
+  `id_page` int(11) unsigned NOT NULL,
   `id_parent` int(11) unsigned NOT NULL DEFAULT '0',
   `id_menu` int(11) unsigned NOT NULL DEFAULT '0',
   `id_type` smallint(2) NOT NULL DEFAULT '0',
@@ -1157,7 +1531,7 @@ CREATE TABLE IF NOT EXISTS `page` (
   `priority` int(1) unsigned NOT NULL DEFAULT '5' COMMENT 'Page priority',
   `used_by_module` tinyint(1) unsigned DEFAULT NULL,
   `deny_code` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `page`
@@ -1167,36 +1541,34 @@ INSERT INTO `page` (`id_page`, `id_parent`, `id_menu`, `id_type`, `id_subnav`, `
 (1, 0, 2, 0, 0, '404', 2, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
 (2, 0, 2, 0, 0, '401', 3, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
 (3, 0, 2, 0, 0, '403', 4, 0, 1, 0, NULL, NULL, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, NULL, NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 0, NULL, NULL),
-(4, 0, 1, 0, 0, 'home', 1, 0, 1, 1, NULL, 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-21 17:48:38', '0000-00-00 00:00:00', 1, 1, 'page_home', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(5, 0, 1, 0, 0, 'o-nas', 2, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:41:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-20 13:51:13', '0000-00-00 00:00:00', 1, 1, 'page_single_article', 'page_single_article', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(6, 0, 1, 0, 0, 'kodex-klubu', 3, 0, 1, 0, 'admin', NULL, '2015-04-15 11:41:39', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
+(4, 0, 1, 0, 0, 'home', 1, 0, 1, 1, NULL, 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 12:08:38', '0000-00-00 00:00:00', 1, 1, 'page_home', '', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(5, 0, 1, 0, 0, 'o-nas', 3, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:41:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-20 13:51:13', '0000-00-00 00:00:00', 1, 1, 'page_single_article', 'page_single_article', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (7, 0, 1, 0, 0, 'zapasy', 4, 0, 1, 0, 'admin', NULL, '2015-04-15 11:41:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
 (8, 0, 1, 0, 0, 'sportoviska', 5, 0, 1, 0, 'admin', NULL, '2015-04-15 11:42:09', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(9, 0, 1, 0, 0, '2-z-dani', 6, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:42:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:49:24', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', '', '', '', 'ordering', 'ASC', '2% z dani', 'article', '9.38', 0, 5, 0, '404'),
-(10, 0, 1, 0, 0, 'fotogaleria', 7, 0, 1, 0, 'admin', NULL, '2015-04-15 11:42:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(11, 0, 1, 0, 0, 'kontakt', 9, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:42:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-15 15:53:16', '0000-00-00 00:00:00', 1, 1, 'page_contact', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(9, 0, 1, 0, 0, '2-z-dani', 7, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:42:19', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:49:24', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', '', '', '', 'ordering', 'ASC', '2% z dani', 'article', '9.38', 0, 5, 0, '404'),
+(10, 0, 1, 0, 0, 'fotogaleria', 6, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:42:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 10:16:50', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(11, 0, 1, 0, 0, 'kontakt', 8, 0, 1, 0, 'admin', 'admin', '2015-04-15 11:42:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-15 15:53:16', '0000-00-00 00:00:00', 1, 1, 'page_contact', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (13, 5, 1, 0, 0, 'filozofia-skoly', 8, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:25:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:09:19', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', 'page_blog_post', '', '', 'ordering', 'ASC', 'Filozofia školy', 'article', '13.8', 0, 5, 0, '404'),
-(14, 5, 1, 0, 0, 'zoznam-hracov', 9, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:26:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 17:06:35', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', 'page_blog_post', '', '', 'ordering', 'ASC', 'Zoznam hráčov', 'article', '14.11', 0, 5, 0, '404'),
-(15, 5, 1, 0, 0, 'treneri', 10, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:29:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-24 13:18:53', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(14, 5, 1, 0, 0, 'zoznam-hracov', 9, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:26:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 07:50:49', '0000-00-00 00:00:00', 1, 1, 'page_players', '', '', '', 'ordering', 'ASC', '', '', '', 0, 5, 0, '404'),
+(15, 5, 1, 0, 0, 'treneri', 10, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:29:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-21 08:38:54', '0000-00-00 00:00:00', 1, 1, 'page_treners', 'page_trener', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (16, 5, 1, 0, 0, 'rozpis-treningov', 11, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:29:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:19:33', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', '', '', '', 'ordering', 'ASC', 'Rozpis tréningov', 'article', '16.25', 0, 5, 0, '404'),
 (17, 5, 1, 0, 0, 'specialne-brankarske-treningy', 12, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:31:56', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 08:55:25', '0000-00-00 00:00:00', 1, 1, 'page_trenings_form', '', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (18, 5, 1, 0, 0, 'prihlasky', 13, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-06 15:14:28', '0000-00-00 00:00:00', 1, 1, 'page_entry', '', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(19, 5, 1, 0, 0, 'clanky', 14, 1, 1, 0, 'admin', NULL, '2015-04-15 13:32:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(20, 5, 1, 0, 0, 'reklamne-predmety', 15, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 13:36:55', '0000-00-00 00:00:00', 1, 1, 'page_gallery', 'page_gallery', '', '', 'ordering', 'ASC', 'Reklamné predmety', 'article', '20.24', 0, 5, 0, '404'),
-(21, 6, 1, 0, 0, 'kodex-klubu-1', 16, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:41:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:22:18', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(22, 6, 1, 0, 0, 'desatoro-pre-rodicov', 17, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:41:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-27 17:24:24', '0000-00-00 00:00:00', 1, 1, '', 'page_blog_post', '', '', 'ordering', 'ASC', 'Desatoro pre rodičov', 'article', '22.28', 0, 5, 0, '404'),
-(23, 7, 1, 0, 0, 'zapasy-1', 18, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:42:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:31:54', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(24, 7, 1, 0, 0, 'turnaje', 19, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:42:17', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:44:02', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(25, 7, 1, 0, 0, 'kempy', 20, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:42:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:44:10', '0000-00-00 00:00:00', 1, 1, 'page_blog_post', '', '', '', 'ordering', 'ASC', 'Kempy', 'article', '25.37', 0, 5, 0, '404'),
+(19, 5, 1, 0, 0, 'clanky', 14, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-17 10:57:40', '0000-00-00 00:00:00', 1, 1, 'page_press', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(20, 5, 1, 0, 0, 'reklamne-predmety', 15, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:32:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 14:53:42', '0000-00-00 00:00:00', 1, 1, 'page_products', '', '', '', 'ordering', 'ASC', '', '', '', 0, 5, 0, '404'),
+(21, 5, 1, 0, 0, 'kodex-klubu-1', 16, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:41:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 10:17:41', '0000-00-00 00:00:00', 1, 1, '', '', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(25, 7, 1, 0, 0, 'kempy', 3, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:42:26', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 15:50:07', '0000-00-00 00:00:00', 1, 1, 'page_camps', 'page_single_camp', '', '', 'ordering', 'ASC', '', '', '', 0, 5, 0, '404'),
 (26, 8, 1, 0, 0, 'zimny-stadion-cana', 21, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:43:23', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-04-15 13:46:11', '0000-00-00 00:00:00', 1, 1, '', '', NULL, NULL, 'ordering', 'ASC', 'http://www.zimnystadioncana.sk/', 'external', '0', 0, 5, 0, '404'),
-(27, 10, 1, 0, 0, 'turnaje-1', 22, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:46:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 10:39:16', '0000-00-00 00:00:00', 1, 1, 'page_gallery_posts', 'page_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(28, 10, 1, 0, 0, 'cas-mimo-adu', 23, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:46:57', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 10:58:50', '0000-00-00 00:00:00', 1, 1, 'page_gallery_posts', 'page_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(29, 10, 1, 0, 0, 'treningy', 24, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:47:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 10:59:11', '0000-00-00 00:00:00', 1, 1, 'page_gallery_posts', 'page_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(30, 10, 1, 0, 0, 'kempy-1', 25, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:47:21', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 10:59:27', '0000-00-00 00:00:00', 1, 1, 'page_gallery_posts', 'page_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(31, 10, 1, 0, 0, 'ostatne', 26, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:47:32', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 10:59:40', '0000-00-00 00:00:00', 1, 1, 'page_gallery_posts', 'page_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(27, 10, 1, 0, 0, 'turnaje-1', 22, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:46:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:53:32', '0000-00-00 00:00:00', 1, 1, 'page_gallery', 'page_single_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(28, 10, 1, 0, 0, 'cas-mimo-adu', 23, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:46:57', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 12:01:49', '0000-00-00 00:00:00', 1, 1, 'page_gallery', 'page_single_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(29, 10, 1, 0, 0, 'treningy', 24, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:47:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 12:01:58', '0000-00-00 00:00:00', 1, 1, 'page_gallery', 'page_single_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(30, 10, 1, 0, 0, 'kempy-1', 25, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:47:21', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 12:02:07', '0000-00-00 00:00:00', 1, 1, 'page_gallery', 'page_single_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(31, 10, 1, 0, 0, 'ostatne', 26, 1, 1, 0, 'admin', 'admin', '2015-04-15 13:47:32', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 12:02:15', '0000-00-00 00:00:00', 1, 1, 'page_gallery', 'page_single_gallery', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
 (32, 0, 2, 0, 0, 'slideshow', 5, 0, 1, 0, 'admin', NULL, '2015-04-17 11:04:06', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 1, '0', NULL, NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, NULL, NULL),
-(33, 0, 2, 0, 0, 'sponsors', 6, 0, 1, 0, 'admin', 'admin', '2015-04-17 13:43:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-06-30 09:12:21', '0000-00-00 00:00:00', 1, 1, '', '', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
-(34, 0, 1, 0, 0, 'news', 8, 0, 1, 0, 'admin', 'admin', '2015-04-20 13:59:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-05-07 09:53:44', '0000-00-00 00:00:00', 1, 1, 'page_blog', 'page_blog_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404');
+(34, 0, 1, 0, 0, 'news', 2, 0, 1, 0, 'admin', 'admin', '2015-04-20 13:59:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 08:10:17', '0000-00-00 00:00:00', 0, 1, '', 'page_post', '', '', 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(35, 7, 1, 0, 0, 'tournaments', 2, 1, 1, 0, 'admin', 'admin', '2015-07-20 11:55:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 11:55:24', '0000-00-00 00:00:00', 1, 1, 'page_tournaments', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(36, 7, 1, 0, 0, 'matches', 1, 1, 1, 0, 'admin', 'admin', '2015-07-20 12:49:24', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-20 13:01:22', '0000-00-00 00:00:00', 1, 1, 'page-matches', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404'),
+(37, 0, 1, 0, 0, 'partners', 27, 0, 1, 0, 'admin', 'admin', '2015-07-22 15:35:36', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2015-07-22 15:36:06', '0000-00-00 00:00:00', 0, 1, 'page_partners', '', NULL, NULL, 'ordering', 'ASC', '', NULL, '', 0, 5, 0, '404');
 
 -- --------------------------------------------------------
 
@@ -1222,32 +1594,41 @@ CREATE TABLE IF NOT EXISTS `page_article` (
 --
 
 INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering`, `id_type`, `link_type`, `link_id`, `link`, `main_parent`) VALUES
-(1, 1, 1, NULL, 0, NULL, '', '', '', 0),
-(2, 2, 1, NULL, 0, NULL, '', '', '', 0),
-(3, 3, 1, NULL, 0, NULL, '', '', '', 0),
+(1, 1, 1, NULL, 0, NULL, '', '', '', 1),
+(2, 2, 1, NULL, 0, NULL, '', '', '', 1),
+(3, 3, 1, NULL, 0, NULL, '', '', '', 1),
 (4, 15, 1, NULL, 1, NULL, '', '', '', 1),
 (9, 38, 1, NULL, 1, NULL, '', '', '', 1),
 (11, 44, 1, NULL, 1, NULL, '', '', '', 1),
 (13, 8, 1, NULL, 1, NULL, '', '', '', 1),
-(14, 11, 1, NULL, 1, NULL, '', '', '', 1),
+(14, 62, 1, NULL, 1, NULL, '', '', '', 1),
+(14, 63, 1, NULL, 3, NULL, '', '', '', 1),
+(14, 86, 1, NULL, 3, NULL, '', '', '', 1),
+(14, 87, 1, NULL, 4, NULL, '', '', '', 1),
 (15, 12, 1, NULL, 1, NULL, '', '', '', 1),
 (15, 21, 1, NULL, 2, NULL, '', '', '', 1),
 (15, 22, 1, NULL, 3, NULL, '', '', '', 1),
 (15, 23, 1, NULL, 4, NULL, '', '', '', 1),
+(15, 79, 1, NULL, 5, NULL, '', '', '', 1),
+(15, 80, 1, NULL, 6, NULL, '', '', '', 1),
+(15, 81, 1, NULL, 7, NULL, '', '', '', 1),
+(15, 82, 1, NULL, 8, NULL, '', '', '', 1),
+(15, 83, 1, NULL, 9, NULL, '', '', '', 1),
+(15, 84, 1, NULL, 10, NULL, '', '', '', 1),
+(15, 85, 1, NULL, 11, NULL, '', '', '', 1),
 (16, 25, 1, NULL, 1, NULL, '', '', '', 1),
 (17, 30, 1, NULL, 1, NULL, '', '', '', 1),
 (18, 29, 1, NULL, 1, NULL, '', '', '', 1),
-(20, 24, 1, NULL, 1, NULL, '', '', '', 1),
+(19, 66, 1, NULL, 1, NULL, 'external', '', 'http://www.hokej.sk/reprezentacia/clanok130733-Rusnak_Liba_Lukac_Utok_ktory_velebil_aj_Tichonov.htm', 1),
+(19, 67, 1, NULL, 2, NULL, 'external', '', 'http://kosice.korzar.sme.sk/c/7749534/igor-liba-vychovava-aj-baletky-mesto-mu-zrejme-znizi-najomne.html', 1),
+(19, 68, 1, NULL, 3, NULL, 'external', '', 'http://hokej.idnes.cz/igor-liba-c68-/reprezentace.aspx?c=A150409_2154010_reprezentace_ald', 1),
+(20, 75, 1, NULL, 1, NULL, '', '', '', 1),
+(20, 76, 1, NULL, 2, NULL, '', '', '', 1),
+(20, 77, 1, NULL, 3, NULL, '', '', '', 1),
 (21, 26, 1, NULL, 1, NULL, '', '', '', 1),
 (21, 27, 1, NULL, 2, NULL, '', '', '', 1),
-(22, 28, 1, NULL, 1, NULL, '', '', '', 1),
-(23, 31, 1, NULL, 1, NULL, '', '', '', 1),
-(23, 32, 1, NULL, 2, NULL, '', '', '', 1),
-(23, 33, 1, NULL, 3, NULL, '', '', '', 1),
-(24, 34, 1, NULL, 1, NULL, '', '', '', 1),
-(24, 35, 1, NULL, 2, NULL, '', '', '', 1),
-(24, 36, 1, NULL, 3, NULL, '', '', '', 1),
-(25, 37, 1, NULL, 1, NULL, '', '', '', 1),
+(21, 71, 1, NULL, 3, NULL, '', '', '', 1),
+(25, 78, 1, NULL, 2, NULL, '', '', '', 1),
 (27, 39, 1, NULL, 1, NULL, '', '', '', 1),
 (27, 40, 1, NULL, 2, NULL, '', '', '', 1),
 (27, 45, 1, NULL, 3, NULL, '', '', '', 1),
@@ -1259,8 +1640,8 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (27, 51, 1, NULL, 9, NULL, '', '', '', 1),
 (27, 52, 1, NULL, 10, NULL, '', '', '', 1),
 (27, 53, 1, NULL, 11, NULL, '', '', '', 1),
-(27, 54, 1, NULL, 12, NULL, '', '', '', 1),
-(27, 55, 1, NULL, 13, NULL, '', '', '', 1),
+(27, 54, 1, NULL, 13, NULL, '', '', '', 1),
+(27, 55, 1, NULL, 12, NULL, '', '', '', 1),
 (27, 56, 1, NULL, 14, NULL, '', '', '', 1),
 (29, 41, 1, NULL, 1, NULL, '', '', '', 1),
 (29, 58, 1, NULL, 2, NULL, '', '', '', 1),
@@ -1272,8 +1653,13 @@ INSERT INTO `page_article` (`id_page`, `id_article`, `online`, `view`, `ordering
 (32, 5, 1, NULL, 3, 1, '', '', '', 1),
 (32, 6, 1, NULL, 2, 1, '', '', '', 1),
 (32, 7, 1, NULL, 1, 1, '', '', '', 1),
-(34, 16, 1, NULL, 2, NULL, '', '', '', 1),
-(34, 17, 1, NULL, 1, NULL, '', '', '', 1);
+(34, 16, 1, NULL, 4, NULL, '', '', '', 1),
+(34, 17, 1, NULL, 3, NULL, '', '', '', 1),
+(34, 69, 1, NULL, 2, NULL, '', '', '', 1),
+(34, 70, 1, '0', 1, 0, '', '', '', 1),
+(35, 72, 1, NULL, 1, NULL, '', '', '', 1),
+(35, 73, 1, NULL, 2, NULL, '', '', '', 1),
+(36, 74, 1, NULL, 1, NULL, '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -1306,11 +1692,10 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 3, '403', '', '403', 'Forbidden', '', '', NULL, NULL, NULL, 1),
 ('sk', 4, 'home', '', 'Úvod', '', '', '', '', '', '', 1),
 ('sk', 5, 'o-nas', '', 'O Nás', '', '', '', '', '', '', 1),
-('sk', 6, 'kodex-klubu', '', 'Kódex klubu', '', '', '', '', NULL, NULL, 1),
 ('sk', 7, 'zapasy', '', 'Zápasy', '', '', '', '', NULL, NULL, 1),
 ('sk', 8, 'sportoviska', '', 'Športoviská', '', '', '', '', NULL, NULL, 1),
 ('sk', 9, '2-z-dani', '', '2% z daní', '', '', '', '', '', '', 1),
-('sk', 10, 'fotogaleria', '', 'Fotogaléria', '', '', '', '', NULL, NULL, 1),
+('sk', 10, 'fotogaleria', '', 'Fotogaléria', '', '', '', '', '', '', 1),
 ('sk', 11, 'kontakt', '', 'Kontakt', '', '', '', '', '', '', 1),
 ('sk', 13, 'filozofia-skoly', '', 'Filozofia školy', '', '', '', '', '', '', 1),
 ('sk', 14, 'zoznam-hracov', '', 'Zoznam hráčov', '', '', '', '', '', '', 1),
@@ -1318,12 +1703,9 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 16, 'rozpis-treningov', '', 'Rozpis tréningov', '', '', '', '', '', '', 1),
 ('sk', 17, 'specialne-brankarske-treningy', '', 'Špeciálne brankárske tréningy', '', '', '', '', '', '', 1),
 ('sk', 18, 'prihlaska', '', 'Prihláška', '', '', '', '', '', '', 1),
-('sk', 19, 'clanky', '', 'Články', '', '', '', '', NULL, NULL, 1),
+('sk', 19, 'clanky', '', 'Články', '', '', '', '', '', '', 1),
 ('sk', 20, 'reklamne-predmety', '', 'Reklamné predmety', '', '', '', '', '', '', 1),
 ('sk', 21, 'kodex-klubu', '', 'Kódex klubu', '', '', '', '', '', '', 1),
-('sk', 22, 'desatoro-pre-rodicov', '', 'Desatoro pre rodičov', '', '', '', '', '', '', 1),
-('sk', 23, 'zapasy', '', 'Zápasy', '', '', '', '', '', '', 1),
-('sk', 24, 'turnaje', '', 'Turnaje', '', '', '', '', '', '', 1),
 ('sk', 25, 'kempy', '', 'Kempy', '', '', '', '', '', '', 1),
 ('sk', 26, 'zimny-stadion-cana', '', 'Zimný štadión Čaňa', '', '', '', '', '', '', 1),
 ('sk', 27, 'turnaje', '', 'Turnaje', '', '', '', '', '', '', 1),
@@ -1332,8 +1714,10 @@ INSERT INTO `page_lang` (`lang`, `id_page`, `url`, `link`, `title`, `subtitle`, 
 ('sk', 30, 'kempy', '', 'Kempy', '', '', '', '', '', '', 1),
 ('sk', 31, 'ostatne', '', 'Ostatné', '', '', '', '', '', '', 1),
 ('sk', 32, 'slideshow', '', 'slideshow', '', '', '', '', NULL, NULL, 1),
-('sk', 33, 'sponsors', '', 'sponsors', '', '', '', '', '', '', 1),
-('sk', 34, 'news', '', 'Aktuality', '', '', '', '', '', '', 1);
+('sk', 34, 'news', '', 'Aktuality', '', '', '', '', '', '', 1),
+('sk', 35, 'tournaments', '', 'Turnaje', '', '', '', '', '', '', 1),
+('sk', 36, 'matches', '', 'Zápasy', '', '', '', '', '', '', 1),
+('sk', 37, 'partners', '', 'Partneri', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -1354,34 +1738,37 @@ CREATE TABLE IF NOT EXISTS `page_media` (
 --
 
 INSERT INTO `page_media` (`id_page`, `id_media`, `online`, `ordering`, `lang_display`) VALUES
-(33, 5, 1, 2, NULL),
-(33, 6, 1, 3, NULL),
-(33, 7, 1, 4, NULL),
-(33, 8, 1, 5, NULL),
-(33, 9, 1, 6, NULL),
-(33, 10, 1, 7, NULL),
-(33, 11, 1, 8, NULL),
-(33, 12, 1, 9, NULL),
-(33, 13, 1, 10, NULL),
-(33, 14, 1, 11, NULL),
-(33, 15, 1, 12, NULL),
-(33, 16, 1, 13, NULL),
-(33, 17, 1, 14, NULL),
-(33, 18, 1, 15, NULL),
-(33, 20, 1, 16, NULL),
-(33, 21, 1, 17, NULL),
-(33, 22, 1, 18, NULL),
-(33, 23, 1, 19, NULL),
-(33, 24, 1, 20, NULL),
-(33, 25, 1, 21, NULL),
-(33, 26, 1, 22, NULL),
-(33, 27, 1, 23, NULL),
-(33, 28, 1, 24, NULL),
-(33, 29, 1, 25, NULL),
-(33, 30, 1, 26, NULL),
-(33, 31, 1, 27, NULL),
-(33, 32, 1, 28, NULL),
-(33, 196, 1, 1, NULL);
+(37, 224, 1, 1, NULL),
+(37, 225, 1, 2, NULL),
+(37, 226, 1, 3, NULL),
+(37, 227, 1, 4, NULL),
+(37, 228, 1, 5, NULL),
+(37, 229, 1, 6, NULL),
+(37, 230, 1, 7, NULL),
+(37, 231, 1, 8, NULL),
+(37, 232, 1, 9, NULL),
+(37, 233, 1, 10, NULL),
+(37, 234, 1, 11, NULL),
+(37, 235, 1, 12, NULL),
+(37, 236, 1, 13, NULL),
+(37, 237, 1, 14, NULL),
+(37, 238, 1, 15, NULL),
+(37, 239, 1, 16, NULL),
+(37, 240, 1, 17, NULL),
+(37, 241, 1, 18, NULL),
+(37, 242, 1, 19, NULL),
+(37, 243, 1, 20, NULL),
+(37, 244, 1, 22, NULL),
+(37, 245, 1, 23, NULL),
+(37, 246, 1, 24, NULL),
+(37, 247, 1, 25, NULL),
+(37, 248, 1, 26, NULL),
+(37, 249, 1, 27, NULL),
+(37, 250, 1, 28, NULL),
+(37, 251, 1, 29, NULL),
+(37, 252, 1, 30, NULL),
+(37, 253, 1, 31, NULL),
+(37, 254, 1, 21, NULL);
 
 -- --------------------------------------------------------
 
@@ -1390,7 +1777,7 @@ INSERT INTO `page_media` (`id_page`, `id_media`, `online`, `ordering`, `lang_dis
 --
 
 CREATE TABLE IF NOT EXISTS `resource` (
-`id_resource` int(11) NOT NULL,
+  `id_resource` int(11) NOT NULL,
   `id_parent` int(11) unsigned DEFAULT NULL,
   `resource` varchar(255) NOT NULL DEFAULT '',
   `actions` varchar(500) DEFAULT '',
@@ -1461,7 +1848,7 @@ INSERT INTO `resource` (`id_resource`, `id_parent`, `resource`, `actions`, `titl
 --
 
 CREATE TABLE IF NOT EXISTS `role` (
-`id_role` smallint(4) unsigned NOT NULL,
+  `id_role` smallint(4) unsigned NOT NULL,
   `role_level` int(11) DEFAULT NULL,
   `role_code` varchar(25) NOT NULL,
   `role_name` varchar(100) NOT NULL,
@@ -1596,7 +1983,7 @@ INSERT INTO `rule` (`id_role`, `resource`, `actions`, `permission`, `id_element`
 --
 
 CREATE TABLE IF NOT EXISTS `setting` (
-`id_setting` int(11) unsigned NOT NULL,
+  `id_setting` int(11) unsigned NOT NULL,
   `name` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `lang` varchar(8) NOT NULL DEFAULT ''
@@ -1610,7 +1997,7 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 (1, 'ionize_version', '1.0.7', ''),
 (2, 'site_email', 'frank238238@gmail.com', ''),
 (3, 'files_path', 'files', ''),
-(4, 'theme', 'uni_theme', ''),
+(4, 'theme', 'liba.th', ''),
 (5, 'theme_admin', 'admin', ''),
 (6, 'google_analytics', '', ''),
 (7, 'filemanager', 'mootools-filemanager', ''),
@@ -1647,16 +2034,16 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 (38, 'backend_ui_style', 'original', ''),
 (39, 'notification', '1', ''),
 (40, 'notification_date', '', ''),
-(41, 'site_title', 'My website', 'sk'),
-(42, 'last_notification_refresh', '2015-06-29 13:23:37', ''),
+(41, 'site_title', 'Igor Liba', 'sk'),
+(42, 'last_notification_refresh', '2015-07-23 15:36:12', ''),
 (43, 'last_version', '1.0.7', ''),
 (44, 'meta_keywords', '', 'sk'),
-(45, 'meta_description', '', 'sk'),
+(45, 'meta_description', 'Hockey liba academy', 'sk'),
 (46, 'google_analytics_id', '', ''),
 (47, 'google_analytics_profile_id', '', ''),
 (48, 'google_analytics_url', '', ''),
 (49, 'google_analytics_email', 'admin', ''),
-(50, 'google_analytics_password', '123456', ''),
+(50, 'google_analytics_password', 'papatr3s', ''),
 (51, 'dashboard_google', '', ''),
 (52, 'email_technical', '', ''),
 (53, 'email_contact', 'frank238238@gmail.com', ''),
@@ -1669,7 +2056,7 @@ INSERT INTO `setting` (`id_setting`, `name`, `content`, `lang`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tag` (
-`id_tag` int(11) unsigned NOT NULL,
+  `id_tag` int(11) unsigned NOT NULL,
   `tag_name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1695,7 +2082,7 @@ CREATE TABLE IF NOT EXISTS `tracker` (
 --
 
 CREATE TABLE IF NOT EXISTS `type` (
-`id_type` int(11) unsigned NOT NULL,
+  `id_type` int(11) unsigned NOT NULL,
   `code` varchar(50) NOT NULL,
   `parent` char(20) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -1712,7 +2099,7 @@ CREATE TABLE IF NOT EXISTS `type` (
 --
 
 CREATE TABLE IF NOT EXISTS `ui_element` (
-`id_ui_element` int(11) unsigned NOT NULL,
+  `id_ui_element` int(11) unsigned NOT NULL,
   `id_company` int(11) unsigned DEFAULT NULL,
   `type` enum('tab','table','list') DEFAULT NULL,
   `panel` varchar(25) DEFAULT NULL COMMENT 'UI context',
@@ -1739,7 +2126,7 @@ CREATE TABLE IF NOT EXISTS `ui_element_lk_extend` (
 --
 
 CREATE TABLE IF NOT EXISTS `url` (
-`id_url` int(11) unsigned NOT NULL,
+  `id_url` int(11) unsigned NOT NULL,
   `id_entity` int(11) unsigned NOT NULL,
   `type` varchar(10) NOT NULL,
   `canonical` smallint(1) NOT NULL DEFAULT '0',
@@ -1749,94 +2136,110 @@ CREATE TABLE IF NOT EXISTS `url` (
   `path_ids` varchar(50) DEFAULT NULL,
   `full_path_ids` varchar(50) DEFAULT NULL,
   `creation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=249 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=910 DEFAULT CHARSET=utf8;
 
 --
 -- Sťahujem dáta pre tabuľku `url`
 --
 
 INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`, `path`, `path_ids`, `full_path_ids`, `creation_date`) VALUES
-(3, 6, 'page', 1, 1, 'sk', 'kodex-klubu', '6', '6', '2015-04-15 11:41:39'),
-(4, 7, 'page', 1, 1, 'sk', 'zapasy', '7', '7', '2015-04-15 11:41:50'),
-(5, 8, 'page', 1, 1, 'sk', 'sportoviska', '8', '8', '2015-04-15 11:42:09'),
-(7, 10, 'page', 1, 1, 'sk', 'fotogaleria', '10', '10', '2015-04-15 11:42:34'),
-(29, 26, 'page', 1, 1, 'sk', 'sportoviska/zimny-stadion-cana', '8/26', '8/26', '2015-04-15 13:46:11'),
-(35, 11, 'page', 1, 1, 'sk', 'kontakt', '11', '11', '2015-04-15 15:53:16'),
-(41, 5, 'article', 1, 1, 'sk', 'slideshow/zapasy', '32/5', '32/5', '2015-04-17 10:59:47'),
-(42, 6, 'article', 1, 1, 'sk', 'slideshow/turnaje', '32/6', '32/6', '2015-04-17 10:59:47'),
-(43, 7, 'article', 1, 1, 'sk', 'slideshow/toto-je-nas-tim', '32/7', '32/7', '2015-04-17 10:59:47'),
-(44, 32, 'page', 1, 1, 'sk', 'slideshow', '32', '32', '2015-04-17 11:04:07'),
-(52, 5, 'page', 1, 1, 'sk', 'o-nas', '5', '5', '2015-04-20 13:51:13'),
-(60, 19, 'page', 1, 1, 'sk', 'o-nas/clanky', '5/19', '5/19', '2015-04-20 13:51:14'),
-(84, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-04-21 17:48:38'),
-(85, 15, 'article', 1, 1, 'sk', 'home/uvod', '4/15', '4/15', '2015-04-22 10:03:20'),
-(108, 15, 'page', 1, 1, 'sk', 'o-nas/treneri', '5/15', '5/15', '2015-04-24 13:18:54'),
-(109, 12, 'article', 1, 1, 'sk', 'o-nas/treneri/igor-liba', '5/15/12', '5/15/12', '2015-04-24 13:18:54'),
-(129, 14, 'page', 1, 1, 'sk', 'o-nas/zoznam-hracov', '5/14', '5/14', '2015-04-24 17:06:35'),
-(130, 11, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/zoznam-hracov', '5/14/11', '5/14/11', '2015-04-24 17:06:35'),
-(132, 13, 'page', 1, 1, 'sk', 'o-nas/filozofia-skoly', '5/13', '5/13', '2015-04-24 17:09:19'),
-(133, 8, 'article', 1, 1, 'sk', 'o-nas/filozofia-skoly/filozofia-skoly-1', '5/13/8', '5/13/8', '2015-04-24 17:09:19'),
-(136, 21, 'article', 1, 1, 'sk', 'o-nas/treneri/pavel-valko-st.', '5/15/21', '5/15/21', '2015-04-27 14:11:10'),
-(137, 22, 'article', 1, 1, 'sk', 'o-nas/treneri/jaromir-dragan', '5/15/22', '5/15/22', '2015-04-27 14:13:09'),
-(138, 23, 'article', 1, 1, 'sk', 'o-nas/treneri/slavomir-ilavsk', '5/15/23', '5/15/23', '2015-04-27 14:19:04'),
-(147, 16, 'page', 1, 1, 'sk', 'o-nas/rozpis-treningov', '5/16', '5/16', '2015-04-27 17:19:33'),
-(148, 25, 'article', 1, 1, 'sk', 'o-nas/rozpis-treningov/rozpis-treningov', '5/16/25', '5/16/25', '2015-04-27 17:19:34'),
-(155, 21, 'page', 1, 1, 'sk', 'kodex-klubu/kodex-klubu', '6/21', '6/21', '2015-04-27 17:22:18'),
-(156, 26, 'article', 1, 1, 'sk', 'kodex-klubu/kodex-klubu/kodex-klubu', '6/21/26', '6/21/26', '2015-04-27 17:22:18'),
-(157, 27, 'article', 1, 1, 'sk', 'kodex-klubu/kodex-klubu/ulohy-trenerov', '6/21/27', '6/21/27', '2015-04-27 17:22:19'),
-(165, 22, 'page', 1, 1, 'sk', 'kodex-klubu/desatoro-pre-rodicov', '6/22', '6/22', '2015-04-27 17:24:24'),
-(166, 28, 'article', 1, 1, 'sk', 'kodex-klubu/desatoro-pre-rodicov/desatoro-pre-rodicov', '6/22/28', '6/22/28', '2015-04-27 17:24:24'),
-(170, 18, 'page', 1, 1, 'sk', 'o-nas/prihlaska', '5/18', '5/18', '2015-05-06 15:14:28'),
-(171, 29, 'article', 1, 1, 'sk', 'o-nas/prihlaska/prihlaska', '5/18/29', '5/18/29', '2015-05-06 15:14:28'),
-(173, 17, 'page', 1, 1, 'sk', 'o-nas/specialne-brankarske-treningy', '5/17', '5/17', '2015-05-07 08:55:26'),
-(174, 30, 'article', 1, 1, 'sk', 'o-nas/specialne-brankarske-treningy/specialne-treningy', '5/17/30', '5/17/30', '2015-05-07 08:55:26'),
-(179, 23, 'page', 1, 1, 'sk', 'zapasy/zapasy', '7/23', '7/23', '2015-05-07 09:31:54'),
-(180, 31, 'article', 1, 1, 'sk', 'zapasy/zapasy/sezona-2014-2015', '7/23/31', '7/23/31', '2015-05-07 09:31:54'),
-(181, 32, 'article', 1, 1, 'sk', 'zapasy/zapasy/sezona-2013-2014', '7/23/32', '7/23/32', '2015-05-07 09:31:54'),
-(182, 33, 'article', 1, 1, 'sk', 'zapasy/zapasy/sezona-2012-2013', '7/23/33', '7/23/33', '2015-05-07 09:39:23'),
-(187, 24, 'page', 1, 1, 'sk', 'zapasy/turnaje', '7/24', '7/24', '2015-05-07 09:44:03'),
-(188, 34, 'article', 1, 1, 'sk', 'zapasy/turnaje/sezona-2014-2015', '7/24/34', '7/24/34', '2015-05-07 09:44:03'),
-(189, 35, 'article', 1, 1, 'sk', 'zapasy/turnaje/sezona-2013-2014', '7/24/35', '7/24/35', '2015-05-07 09:44:03'),
-(190, 36, 'article', 1, 1, 'sk', 'zapasy/turnaje/sezona-2012-2013', '7/24/36', '7/24/36', '2015-05-07 09:44:03'),
-(191, 25, 'page', 1, 1, 'sk', 'zapasy/kempy', '7/25', '7/25', '2015-05-07 09:44:10'),
-(192, 37, 'article', 1, 1, 'sk', 'zapasy/kempy/kempy', '7/25/37', '7/25/37', '2015-05-07 09:44:10'),
-(194, 9, 'page', 1, 1, 'sk', '2-z-dani', '9', '9', '2015-05-07 09:49:24'),
-(195, 38, 'article', 1, 1, 'sk', '2-z-dani/2-z-dani', '9/38', '9/38', '2015-05-07 09:49:24'),
-(199, 34, 'page', 1, 1, 'sk', 'news', '34', '34', '2015-05-07 09:53:44'),
-(200, 16, 'article', 1, 1, 'sk', 'news/oznam-1', '34/16', '34/16', '2015-05-07 09:53:44'),
-(201, 17, 'article', 1, 1, 'sk', 'news/oznam', '34/17', '34/17', '2015-05-07 09:53:44'),
-(215, 27, 'page', 1, 1, 'sk', 'fotogaleria/turnaje', '10/27', '10/27', '2015-05-07 10:39:16'),
-(216, 39, 'article', 1, 0, 'sk', 'fotogaleria/turnaje/17.04.2014-vekonocn-turnaj-caa-chlapci-skupina-1', '10/27/39', '10/27/39', '2015-05-07 10:39:16'),
-(217, 40, 'article', 1, 0, 'sk', 'fotogaleria/turnaje/medzinarodn-hokejov-turnaj-miskolc-07.04.2014', '10/27/40', '10/27/40', '2015-05-07 10:57:45'),
-(218, 28, 'page', 1, 1, 'sk', 'fotogaleria/cas-mimo-adu', '10/28', '10/28', '2015-05-07 10:58:50'),
-(219, 29, 'page', 1, 1, 'sk', 'fotogaleria/treningy', '10/29', '10/29', '2015-05-07 10:59:12'),
-(220, 30, 'page', 1, 1, 'sk', 'fotogaleria/kempy', '10/30', '10/30', '2015-05-07 10:59:28'),
-(221, 31, 'page', 1, 1, 'sk', 'fotogaleria/ostatne', '10/31', '10/31', '2015-05-07 10:59:40'),
-(222, 41, 'article', 1, 1, 'sk', 'fotogaleria/treningy/skupina-4', '10/29/41', '10/29/41', '2015-05-07 11:00:03'),
-(223, 42, 'article', 1, 1, 'sk', 'fotogaleria/kempy/letn-hokejov-kemp-2014', '10/30/42', '10/30/42', '2015-05-07 11:01:04'),
-(224, 43, 'article', 1, 1, 'sk', 'fotogaleria/ostatne/mikulas-2013', '10/31/43', '10/31/43', '2015-05-07 11:02:45'),
-(225, 44, 'article', 1, 1, 'sk', 'kontakt/kontakt', '11/44', '11/44', '2015-05-07 12:49:07'),
-(228, 20, 'page', 1, 1, 'sk', 'o-nas/reklamne-predmety', '5/20', '5/20', '2015-05-07 13:36:55'),
-(229, 24, 'article', 1, 1, 'sk', 'o-nas/reklamne-predmety/reklamne-predmety', '5/20/24', '5/20/24', '2015-05-07 13:36:55'),
-(230, 45, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/basf-cup-2014-hokejovy-turnaj-5-sht-v-ziline-chlapci-skupina-23', '10/27/45', '10/27/45', '2015-05-22 09:19:33'),
-(231, 46, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-3', '10/27/46', '10/27/46', '2015-05-22 09:33:35'),
-(232, 47, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-2', '10/27/47', '10/27/47', '2015-05-22 09:42:46'),
-(233, 48, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-o-cenu-primatorky-sabinov-skupina-3', '10/27/48', '10/27/48', '2015-05-22 09:46:58'),
-(234, 49, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-pod-zastitou-primatorky-gelnica-skupina-3', '10/27/49', '10/27/49', '2015-05-22 09:50:20'),
-(235, 50, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/l.a.11-dudince-zapas-legiend', '10/27/50', '10/27/50', '2015-05-22 09:54:04'),
-(236, 51, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-04.01.2014-cana', '10/27/51', '10/27/51', '2015-05-22 10:02:15'),
-(237, 52, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-30.12.2013-snv', '10/27/52', '10/27/52', '2015-05-22 10:05:37'),
-(238, 53, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-29.12.2013-trebisov', '10/27/53', '10/27/53', '2015-05-22 10:09:12'),
-(239, 54, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-22.2.2013-sabinov', '10/27/54', '10/27/54', '2015-05-22 10:10:53'),
-(240, 55, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-28.3.2013-snv', '10/27/55', '10/27/55', '2015-05-22 10:14:35'),
-(241, 39, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/17.04.2014-vekonocny-turnaj-cana-chlapci-skupina-1', '10/27/39', '10/27/39', '2015-05-22 10:17:37'),
-(242, 40, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/medzinarodny-hokejovy-turnaj-miskolc-07.04.2014', '10/27/40', '10/27/40', '2015-05-22 10:17:59'),
-(243, 56, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-29.12.2012-trebisov', '10/27/56', '10/27/56', '2015-05-22 10:20:11'),
-(244, 57, 'article', 1, 1, 'sk', 'fotogaleria/kempy/letny-hokejovy-kemp-2013', '10/30/57', '10/30/57', '2015-05-22 10:25:48'),
-(245, 58, 'article', 1, 1, 'sk', 'fotogaleria/treningy/skupina-1', '10/29/58', '10/29/58', '2015-05-22 10:29:09'),
-(246, 59, 'article', 1, 1, 'sk', 'fotogaleria/treningy/fotogaleria-trening-s-rodicmi-28.12.2012', '10/29/59', '10/29/59', '2015-05-22 10:34:19'),
-(247, 60, 'article', 1, 1, 'sk', 'fotogaleria/treningy/prve-treningy', '10/29/60', '10/29/60', '2015-05-22 10:41:07'),
-(248, 33, 'page', 1, 1, 'sk', 'sponsors', '33', '33', '2015-06-30 09:12:21');
+(813, 1, 'page', 1, 1, 'sk', '404', '1', '1', '2015-07-23 15:37:53'),
+(814, 1, 'article', 1, 1, 'sk', '404/404', '1/1', '1/1', '2015-07-23 15:37:53'),
+(815, 2, 'page', 1, 1, 'sk', '401', '2', '2', '2015-07-23 15:37:53'),
+(816, 2, 'article', 1, 1, 'sk', '401/401', '2/2', '2/2', '2015-07-23 15:37:54'),
+(817, 3, 'page', 1, 1, 'sk', '403', '3', '3', '2015-07-23 15:37:54'),
+(818, 3, 'article', 1, 1, 'sk', '403/403', '3/3', '3/3', '2015-07-23 15:37:54'),
+(819, 4, 'page', 1, 1, 'sk', 'home', '4', '4', '2015-07-23 15:37:54'),
+(820, 15, 'article', 1, 1, 'sk', 'home/uvod', '4/15', '4/15', '2015-07-23 15:37:54'),
+(821, 5, 'page', 1, 1, 'sk', 'o-nas', '5', '5', '2015-07-23 15:37:54'),
+(822, 13, 'page', 1, 1, 'sk', 'o-nas/filozofia-skoly', '5/13', '5/13', '2015-07-23 15:37:55'),
+(823, 8, 'article', 1, 1, 'sk', 'o-nas/filozofia-skoly/filozofia-skoly-1', '5/13/8', '5/13/8', '2015-07-23 15:37:55'),
+(824, 14, 'page', 1, 1, 'sk', 'o-nas/zoznam-hracov', '5/14', '5/14', '2015-07-23 15:37:55'),
+(825, 62, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/skupina-1', '5/14/62', '5/14/62', '2015-07-23 15:37:55'),
+(826, 63, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/skupina-2', '5/14/63', '5/14/63', '2015-07-23 15:37:55'),
+(827, 86, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/skupina-3', '5/14/86', '5/14/86', '2015-07-23 15:37:56'),
+(828, 87, 'article', 1, 1, 'sk', 'o-nas/zoznam-hracov/skupina-4', '5/14/87', '5/14/87', '2015-07-23 15:37:56'),
+(829, 15, 'page', 1, 1, 'sk', 'o-nas/treneri', '5/15', '5/15', '2015-07-23 15:37:56'),
+(830, 12, 'article', 1, 1, 'sk', 'o-nas/treneri/igor-liba', '5/15/12', '5/15/12', '2015-07-23 15:37:57'),
+(831, 21, 'article', 1, 1, 'sk', 'o-nas/treneri/pavel-valko-st.', '5/15/21', '5/15/21', '2015-07-23 15:37:57'),
+(832, 22, 'article', 1, 1, 'sk', 'o-nas/treneri/jaromir-dragan', '5/15/22', '5/15/22', '2015-07-23 15:37:57'),
+(833, 23, 'article', 1, 1, 'sk', 'o-nas/treneri/slavomir-ilavsk', '5/15/23', '5/15/23', '2015-07-23 15:37:57'),
+(834, 79, 'article', 1, 1, 'sk', 'o-nas/treneri/severim-gonci', '5/15/79', '5/15/79', '2015-07-23 15:37:57'),
+(835, 80, 'article', 1, 1, 'sk', 'o-nas/treneri/pavol-valko-ml.', '5/15/80', '5/15/80', '2015-07-23 15:37:57'),
+(836, 81, 'article', 1, 1, 'sk', 'o-nas/treneri/tomas-bugos', '5/15/81', '5/15/81', '2015-07-23 15:37:58'),
+(837, 82, 'article', 1, 1, 'sk', 'o-nas/treneri/diana-riskova-krasokorcuovanie', '5/15/82', '5/15/82', '2015-07-23 15:37:58'),
+(838, 83, 'article', 1, 1, 'sk', 'o-nas/treneri/lucia-kupcova-krasokorcuovanie', '5/15/83', '5/15/83', '2015-07-23 15:37:58'),
+(839, 84, 'article', 1, 1, 'sk', 'o-nas/treneri/alexandra-dulakova-krasokorcuovanie', '5/15/84', '5/15/84', '2015-07-23 15:37:58'),
+(840, 85, 'article', 1, 1, 'sk', 'o-nas/treneri/mirka-lipcakova-krasokorcuovanie', '5/15/85', '5/15/85', '2015-07-23 15:37:58'),
+(841, 16, 'page', 1, 1, 'sk', 'o-nas/rozpis-treningov', '5/16', '5/16', '2015-07-23 15:37:58'),
+(842, 25, 'article', 1, 1, 'sk', 'o-nas/rozpis-treningov/rozpis-treningov', '5/16/25', '5/16/25', '2015-07-23 15:37:58'),
+(843, 17, 'page', 1, 1, 'sk', 'o-nas/specialne-brankarske-treningy', '5/17', '5/17', '2015-07-23 15:37:58'),
+(844, 30, 'article', 1, 1, 'sk', 'o-nas/specialne-brankarske-treningy/specialne-treningy', '5/17/30', '5/17/30', '2015-07-23 15:37:59'),
+(845, 18, 'page', 1, 1, 'sk', 'o-nas/prihlaska', '5/18', '5/18', '2015-07-23 15:37:59'),
+(846, 29, 'article', 1, 1, 'sk', 'o-nas/prihlaska/prihlaska', '5/18/29', '5/18/29', '2015-07-23 15:37:59'),
+(847, 19, 'page', 1, 1, 'sk', 'o-nas/clanky', '5/19', '5/19', '2015-07-23 15:37:59'),
+(848, 66, 'article', 1, 1, 'sk', 'o-nas/clanky/rusnak-liba-lukac.-utok-ktor-velebil-aj-tichonov', '5/19/66', '5/19/66', '2015-07-23 15:37:59'),
+(849, 67, 'article', 1, 1, 'sk', 'o-nas/clanky/igor-liba-vychovava-aj-baletky.-mesto-mu-zrejme-znizi-najomne', '5/19/67', '5/19/67', '2015-07-23 15:37:59'),
+(850, 68, 'article', 1, 1, 'sk', 'o-nas/clanky/gretzky-m-stval-nechtl-jit-na-pivo-vzpomina-liba-na-legendu', '5/19/68', '5/19/68', '2015-07-23 15:37:59'),
+(851, 20, 'page', 1, 1, 'sk', 'o-nas/reklamne-predmety', '5/20', '5/20', '2015-07-23 15:37:59'),
+(852, 75, 'article', 1, 1, 'sk', 'o-nas/reklamne-predmety/apparel', '5/20/75', '5/20/75', '2015-07-23 15:38:00'),
+(853, 76, 'article', 1, 1, 'sk', 'o-nas/reklamne-predmety/souvenirs', '5/20/76', '5/20/76', '2015-07-23 15:38:00'),
+(854, 77, 'article', 1, 1, 'sk', 'o-nas/reklamne-predmety/other', '5/20/77', '5/20/77', '2015-07-23 15:38:00'),
+(855, 21, 'page', 1, 1, 'sk', 'o-nas/kodex-klubu', '5/21', '5/21', '2015-07-23 15:38:00'),
+(856, 26, 'article', 1, 1, 'sk', 'o-nas/kodex-klubu/kodex-klubu', '5/21/26', '5/21/26', '2015-07-23 15:38:01'),
+(857, 27, 'article', 1, 1, 'sk', 'o-nas/kodex-klubu/ulohy-trenerov', '5/21/27', '5/21/27', '2015-07-23 15:38:01'),
+(858, 71, 'article', 1, 1, 'sk', 'o-nas/kodex-klubu/desatoro-pre-rodicov', '5/21/71', '5/21/71', '2015-07-23 15:38:01'),
+(859, 7, 'page', 1, 1, 'sk', 'zapasy', '7', '7', '2015-07-23 15:38:01'),
+(860, 25, 'page', 1, 1, 'sk', 'zapasy/kempy', '7/25', '7/25', '2015-07-23 15:38:01'),
+(861, 78, 'article', 1, 1, 'sk', 'zapasy/kempy/letn-hokejov-kemp-2014', '7/25/78', '7/25/78', '2015-07-23 15:38:01'),
+(862, 35, 'page', 1, 1, 'sk', 'zapasy/tournaments', '7/35', '7/35', '2015-07-23 15:38:01'),
+(863, 72, 'article', 1, 1, 'sk', 'zapasy/tournaments/sezona-2014-2015', '7/35/72', '7/35/72', '2015-07-23 15:38:01'),
+(864, 73, 'article', 1, 1, 'sk', 'zapasy/tournaments/sezona-2013-2014', '7/35/73', '7/35/73', '2015-07-23 15:38:01'),
+(865, 36, 'page', 1, 1, 'sk', 'zapasy/matches', '7/36', '7/36', '2015-07-23 15:38:02'),
+(866, 74, 'article', 1, 1, 'sk', 'zapasy/matches/sezona-2014-2015', '7/36/74', '7/36/74', '2015-07-23 15:38:02'),
+(867, 8, 'page', 1, 1, 'sk', 'sportoviska', '8', '8', '2015-07-23 15:38:02'),
+(868, 26, 'page', 1, 1, 'sk', 'sportoviska/zimny-stadion-cana', '8/26', '8/26', '2015-07-23 15:38:02'),
+(869, 9, 'page', 1, 1, 'sk', '2-z-dani', '9', '9', '2015-07-23 15:38:02'),
+(870, 38, 'article', 1, 1, 'sk', '2-z-dani/2-z-dani', '9/38', '9/38', '2015-07-23 15:38:02'),
+(871, 10, 'page', 1, 1, 'sk', 'fotogaleria', '10', '10', '2015-07-23 15:38:02'),
+(872, 27, 'page', 1, 1, 'sk', 'fotogaleria/turnaje', '10/27', '10/27', '2015-07-23 15:38:03'),
+(873, 39, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/17.04.2014-vekonocny-turnaj-cana-chlapci-skupina-1', '10/27/39', '10/27/39', '2015-07-23 15:38:03'),
+(874, 40, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/medzinarodny-hokejovy-turnaj-miskolc-07.04.2014', '10/27/40', '10/27/40', '2015-07-23 15:38:03'),
+(875, 45, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/basf-cup-2014-hokejovy-turnaj-5-sht-v-ziline-chlapci-skupina-23', '10/27/45', '10/27/45', '2015-07-23 15:38:03'),
+(876, 46, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-3', '10/27/46', '10/27/46', '2015-07-23 15:38:03'),
+(877, 47, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/prazdninovy-hokejovy-turnaj-v-cani-chlapci-skupina-2', '10/27/47', '10/27/47', '2015-07-23 15:38:03'),
+(878, 48, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-o-cenu-primatorky-sabinov-skupina-3', '10/27/48', '10/27/48', '2015-07-23 15:38:04'),
+(879, 49, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-pod-zastitou-primatorky-gelnica-skupina-3', '10/27/49', '10/27/49', '2015-07-23 15:38:04'),
+(880, 50, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/l.a.11-dudince-zapas-legiend', '10/27/50', '10/27/50', '2015-07-23 15:38:04'),
+(881, 51, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-04.01.2014-cana', '10/27/51', '10/27/51', '2015-07-23 15:38:04'),
+(882, 52, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-30.12.2013-snv', '10/27/52', '10/27/52', '2015-07-23 15:38:04'),
+(883, 53, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-29.12.2013-trebisov', '10/27/53', '10/27/53', '2015-07-23 15:38:04'),
+(884, 54, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-22.2.2013-sabinov', '10/27/54', '10/27/54', '2015-07-23 15:38:04'),
+(885, 55, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-28.3.2013-snv', '10/27/55', '10/27/55', '2015-07-23 15:38:05'),
+(886, 56, 'article', 1, 1, 'sk', 'fotogaleria/turnaje/turnaj-29.12.2012-trebisov', '10/27/56', '10/27/56', '2015-07-23 15:38:05'),
+(887, 28, 'page', 1, 1, 'sk', 'fotogaleria/cas-mimo-adu', '10/28', '10/28', '2015-07-23 15:38:05'),
+(888, 29, 'page', 1, 1, 'sk', 'fotogaleria/treningy', '10/29', '10/29', '2015-07-23 15:38:05'),
+(889, 41, 'article', 1, 1, 'sk', 'fotogaleria/treningy/skupina-4', '10/29/41', '10/29/41', '2015-07-23 15:38:05'),
+(890, 58, 'article', 1, 1, 'sk', 'fotogaleria/treningy/skupina-1', '10/29/58', '10/29/58', '2015-07-23 15:38:05'),
+(891, 59, 'article', 1, 1, 'sk', 'fotogaleria/treningy/fotogaleria-trening-s-rodicmi-28.12.2012', '10/29/59', '10/29/59', '2015-07-23 15:38:05'),
+(892, 60, 'article', 1, 1, 'sk', 'fotogaleria/treningy/prve-treningy', '10/29/60', '10/29/60', '2015-07-23 15:38:05'),
+(893, 30, 'page', 1, 1, 'sk', 'fotogaleria/kempy', '10/30', '10/30', '2015-07-23 15:38:05'),
+(894, 42, 'article', 1, 1, 'sk', 'fotogaleria/kempy/letn-hokejov-kemp-2014', '10/30/42', '10/30/42', '2015-07-23 15:38:06'),
+(895, 57, 'article', 1, 1, 'sk', 'fotogaleria/kempy/letny-hokejovy-kemp-2013', '10/30/57', '10/30/57', '2015-07-23 15:38:06'),
+(896, 31, 'page', 1, 1, 'sk', 'fotogaleria/ostatne', '10/31', '10/31', '2015-07-23 15:38:06'),
+(897, 43, 'article', 1, 1, 'sk', 'fotogaleria/ostatne/mikulas-2013', '10/31/43', '10/31/43', '2015-07-23 15:38:06'),
+(898, 11, 'page', 1, 1, 'sk', 'kontakt', '11', '11', '2015-07-23 15:38:06'),
+(899, 44, 'article', 1, 1, 'sk', 'kontakt/kontakt', '11/44', '11/44', '2015-07-23 15:38:06'),
+(900, 32, 'page', 1, 1, 'sk', 'slideshow', '32', '32', '2015-07-23 15:38:06'),
+(901, 5, 'article', 1, 1, 'sk', 'slideshow/zapasy', '32/5', '32/5', '2015-07-23 15:38:06'),
+(902, 6, 'article', 1, 1, 'sk', 'slideshow/turnaje', '32/6', '32/6', '2015-07-23 15:38:06'),
+(903, 7, 'article', 1, 1, 'sk', 'slideshow/toto-je-nas-tim', '32/7', '32/7', '2015-07-23 15:38:07'),
+(904, 34, 'page', 1, 1, 'sk', 'news', '34', '34', '2015-07-23 15:38:07'),
+(905, 16, 'article', 1, 1, 'sk', 'news/oznam-1', '34/16', '34/16', '2015-07-23 15:38:07'),
+(906, 17, 'article', 1, 1, 'sk', 'news/oznam', '34/17', '34/17', '2015-07-23 15:38:07'),
+(907, 69, 'article', 1, 1, 'sk', 'news/lorem-ipsum', '34/69', '34/69', '2015-07-23 15:38:07'),
+(908, 70, 'article', 1, 1, 'sk', 'news/lorem-ipsum1', '34/70', '34/70', '2015-07-23 15:38:07'),
+(909, 37, 'page', 1, 1, 'sk', 'partners', '37', '37', '2015-07-23 15:38:07');
 
 -- --------------------------------------------------------
 
@@ -1845,7 +2248,7 @@ INSERT INTO `url` (`id_url`, `id_entity`, `type`, `canonical`, `active`, `lang`,
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-`id_user` int(11) unsigned NOT NULL,
+  `id_user` int(11) unsigned NOT NULL,
   `id_role` smallint(4) unsigned NOT NULL,
   `join_date` timestamp NULL DEFAULT NULL,
   `last_visit` timestamp NULL DEFAULT NULL,
@@ -1865,454 +2268,454 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id_user`, `id_role`, `join_date`, `last_visit`, `username`, `screen_name`, `firstname`, `lastname`, `birthdate`, `gender`, `password`, `email`, `salt`) VALUES
-(1, 1, '2015-04-15 09:28:59', '2015-06-30 07:11:05', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'QYWmfVcmcZLZzhB1JcE=', 'frank238238@gmail.com', '0a72e12a518d9523');
+(1, 1, '2015-04-15 09:28:59', '2015-07-21 05:56:26', 'admin', 'admin admin', 'admin', 'admin', NULL, NULL, 'QYWmfVcmcZLZzhB1JcE=', 'frank238238@gmail.com', '0a72e12a518d9523');
 
 --
--- Indexes for dumped tables
+-- Kľúče pre exportované tabuľky
 --
 
 --
--- Indexes for table `api_key`
+-- Indexy pre tabuľku `api_key`
 --
 ALTER TABLE `api_key`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `api_log`
+-- Indexy pre tabuľku `api_log`
 --
 ALTER TABLE `api_log`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `article`
+-- Indexy pre tabuľku `article`
 --
 ALTER TABLE `article`
- ADD PRIMARY KEY (`id_article`);
+  ADD PRIMARY KEY (`id_article`);
 
 --
--- Indexes for table `article_comment`
+-- Indexy pre tabuľku `article_comment`
 --
 ALTER TABLE `article_comment`
- ADD PRIMARY KEY (`id_article_comment`);
+  ADD PRIMARY KEY (`id_article_comment`);
 
 --
--- Indexes for table `article_lang`
+-- Indexy pre tabuľku `article_lang`
 --
 ALTER TABLE `article_lang`
- ADD PRIMARY KEY (`id_article`,`lang`);
+  ADD PRIMARY KEY (`id_article`,`lang`);
 
 --
--- Indexes for table `article_media`
+-- Indexy pre tabuľku `article_media`
 --
 ALTER TABLE `article_media`
- ADD PRIMARY KEY (`id_article`,`id_media`);
+  ADD PRIMARY KEY (`id_article`,`id_media`);
 
 --
--- Indexes for table `article_tag`
+-- Indexy pre tabuľku `article_tag`
 --
 ALTER TABLE `article_tag`
- ADD PRIMARY KEY (`id_article`,`id_tag`);
+  ADD PRIMARY KEY (`id_article`,`id_tag`);
 
 --
--- Indexes for table `article_type`
+-- Indexy pre tabuľku `article_type`
 --
 ALTER TABLE `article_type`
- ADD PRIMARY KEY (`id_type`);
+  ADD PRIMARY KEY (`id_type`);
 
 --
--- Indexes for table `captcha`
+-- Indexy pre tabuľku `captcha`
 --
 ALTER TABLE `captcha`
- ADD PRIMARY KEY (`id_captcha`);
+  ADD PRIMARY KEY (`id_captcha`);
 
 --
--- Indexes for table `category`
+-- Indexy pre tabuľku `category`
 --
 ALTER TABLE `category`
- ADD PRIMARY KEY (`id_category`);
+  ADD PRIMARY KEY (`id_category`);
 
 --
--- Indexes for table `category_lang`
+-- Indexy pre tabuľku `category_lang`
 --
 ALTER TABLE `category_lang`
- ADD PRIMARY KEY (`id_category`,`lang`);
+  ADD PRIMARY KEY (`id_category`,`lang`);
 
 --
--- Indexes for table `element`
+-- Indexy pre tabuľku `element`
 --
 ALTER TABLE `element`
- ADD PRIMARY KEY (`id_element`), ADD KEY `idx_element_id_element_definition` (`id_element_definition`), ADD KEY `idx_element_id_parent` (`id_parent`), ADD KEY `idx_element_parent` (`parent`);
+  ADD PRIMARY KEY (`id_element`), ADD KEY `idx_element_id_element_definition` (`id_element_definition`), ADD KEY `idx_element_id_parent` (`id_parent`), ADD KEY `idx_element_parent` (`parent`);
 
 --
--- Indexes for table `element_definition`
+-- Indexy pre tabuľku `element_definition`
 --
 ALTER TABLE `element_definition`
- ADD PRIMARY KEY (`id_element_definition`);
+  ADD PRIMARY KEY (`id_element_definition`);
 
 --
--- Indexes for table `element_definition_lang`
+-- Indexy pre tabuľku `element_definition_lang`
 --
 ALTER TABLE `element_definition_lang`
- ADD PRIMARY KEY (`id_element_definition`,`lang`);
+  ADD PRIMARY KEY (`id_element_definition`,`lang`);
 
 --
--- Indexes for table `event_log`
+-- Indexy pre tabuľku `event_log`
 --
 ALTER TABLE `event_log`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `extend_field`
+-- Indexy pre tabuľku `extend_field`
 --
 ALTER TABLE `extend_field`
- ADD PRIMARY KEY (`id_extend_field`), ADD KEY `idx_extend_field_parent` (`parent`), ADD KEY `idx_extend_field_id_parent` (`id_parent`);
+  ADD PRIMARY KEY (`id_extend_field`), ADD KEY `idx_extend_field_parent` (`parent`), ADD KEY `idx_extend_field_id_parent` (`id_parent`);
 
 --
--- Indexes for table `extend_fields`
+-- Indexy pre tabuľku `extend_fields`
 --
 ALTER TABLE `extend_fields`
- ADD PRIMARY KEY (`id_extend_fields`), ADD KEY `idx_extend_fields_id_parent` (`id_parent`), ADD KEY `idx_extend_fields_lang` (`lang`), ADD KEY `idx_extend_fields_id_extend_field` (`id_extend_field`);
+  ADD PRIMARY KEY (`id_extend_fields`), ADD KEY `idx_extend_fields_id_parent` (`id_parent`), ADD KEY `idx_extend_fields_lang` (`lang`), ADD KEY `idx_extend_fields_id_extend_field` (`id_extend_field`);
 
 --
--- Indexes for table `extend_field_lang`
+-- Indexy pre tabuľku `extend_field_lang`
 --
 ALTER TABLE `extend_field_lang`
- ADD PRIMARY KEY (`id_extend_field`,`lang`);
+  ADD PRIMARY KEY (`id_extend_field`,`lang`);
 
 --
--- Indexes for table `extend_field_type`
+-- Indexy pre tabuľku `extend_field_type`
 --
 ALTER TABLE `extend_field_type`
- ADD PRIMARY KEY (`id_extend_field_type`);
+  ADD PRIMARY KEY (`id_extend_field_type`);
 
 --
--- Indexes for table `ion_sessions`
+-- Indexy pre tabuľku `ion_sessions`
 --
 ALTER TABLE `ion_sessions`
- ADD PRIMARY KEY (`session_id`);
+  ADD PRIMARY KEY (`session_id`);
 
 --
--- Indexes for table `item`
+-- Indexy pre tabuľku `item`
 --
 ALTER TABLE `item`
- ADD PRIMARY KEY (`id_item`);
+  ADD PRIMARY KEY (`id_item`);
 
 --
--- Indexes for table `items`
+-- Indexy pre tabuľku `items`
 --
 ALTER TABLE `items`
- ADD PRIMARY KEY (`id_item`,`parent`,`id_parent`);
+  ADD PRIMARY KEY (`id_item`,`parent`,`id_parent`);
 
 --
--- Indexes for table `item_definition`
+-- Indexy pre tabuľku `item_definition`
 --
 ALTER TABLE `item_definition`
- ADD PRIMARY KEY (`id_item_definition`);
+  ADD PRIMARY KEY (`id_item_definition`);
 
 --
--- Indexes for table `item_definition_lang`
+-- Indexy pre tabuľku `item_definition_lang`
 --
 ALTER TABLE `item_definition_lang`
- ADD PRIMARY KEY (`id_item_definition`,`lang`);
+  ADD PRIMARY KEY (`id_item_definition`,`lang`);
 
 --
--- Indexes for table `item_lang`
+-- Indexy pre tabuľku `item_lang`
 --
 ALTER TABLE `item_lang`
- ADD PRIMARY KEY (`id_item`,`lang`);
+  ADD PRIMARY KEY (`id_item`,`lang`);
 
 --
--- Indexes for table `lang`
+-- Indexy pre tabuľku `lang`
 --
 ALTER TABLE `lang`
- ADD PRIMARY KEY (`lang`);
+  ADD PRIMARY KEY (`lang`);
 
 --
--- Indexes for table `login_tracker`
+-- Indexy pre tabuľku `login_tracker`
 --
 ALTER TABLE `login_tracker`
- ADD PRIMARY KEY (`ip_address`);
+  ADD PRIMARY KEY (`ip_address`);
 
 --
--- Indexes for table `media`
+-- Indexy pre tabuľku `media`
 --
 ALTER TABLE `media`
- ADD PRIMARY KEY (`id_media`);
+  ADD PRIMARY KEY (`id_media`);
 
 --
--- Indexes for table `media_lang`
+-- Indexy pre tabuľku `media_lang`
 --
 ALTER TABLE `media_lang`
- ADD PRIMARY KEY (`id_media`,`lang`);
+  ADD PRIMARY KEY (`id_media`,`lang`);
 
 --
--- Indexes for table `menu`
+-- Indexy pre tabuľku `menu`
 --
 ALTER TABLE `menu`
- ADD PRIMARY KEY (`id_menu`), ADD UNIQUE KEY `name` (`name`);
+  ADD PRIMARY KEY (`id_menu`), ADD UNIQUE KEY `name` (`name`);
 
 --
--- Indexes for table `module`
+-- Indexy pre tabuľku `module`
 --
 ALTER TABLE `module`
- ADD PRIMARY KEY (`id_module`), ADD KEY `i_module_name` (`name`);
+  ADD PRIMARY KEY (`id_module`), ADD KEY `i_module_name` (`name`);
 
 --
--- Indexes for table `module_setting`
+-- Indexy pre tabuľku `module_setting`
 --
 ALTER TABLE `module_setting`
- ADD PRIMARY KEY (`id_module_setting`);
+  ADD PRIMARY KEY (`id_module_setting`);
 
 --
--- Indexes for table `note`
+-- Indexy pre tabuľku `note`
 --
 ALTER TABLE `note`
- ADD PRIMARY KEY (`id_note`);
+  ADD PRIMARY KEY (`id_note`);
 
 --
--- Indexes for table `notification`
+-- Indexy pre tabuľku `notification`
 --
 ALTER TABLE `notification`
- ADD PRIMARY KEY (`id_notification`);
+  ADD PRIMARY KEY (`id_notification`);
 
 --
--- Indexes for table `page`
+-- Indexy pre tabuľku `page`
 --
 ALTER TABLE `page`
- ADD PRIMARY KEY (`id_page`), ADD KEY `idx_page_id_parent` (`id_parent`), ADD KEY `idx_page_level` (`level`), ADD KEY `idx_page_menu` (`id_menu`);
+  ADD PRIMARY KEY (`id_page`), ADD KEY `idx_page_id_parent` (`id_parent`), ADD KEY `idx_page_level` (`level`), ADD KEY `idx_page_menu` (`id_menu`);
 
 --
--- Indexes for table `page_article`
+-- Indexy pre tabuľku `page_article`
 --
 ALTER TABLE `page_article`
- ADD PRIMARY KEY (`id_page`,`id_article`), ADD KEY `idx_page_article_id_type` (`id_type`);
+  ADD PRIMARY KEY (`id_page`,`id_article`), ADD KEY `idx_page_article_id_type` (`id_type`);
 
 --
--- Indexes for table `page_lang`
+-- Indexy pre tabuľku `page_lang`
 --
 ALTER TABLE `page_lang`
- ADD PRIMARY KEY (`id_page`,`lang`);
+  ADD PRIMARY KEY (`id_page`,`lang`);
 
 --
--- Indexes for table `page_media`
+-- Indexy pre tabuľku `page_media`
 --
 ALTER TABLE `page_media`
- ADD PRIMARY KEY (`id_page`,`id_media`);
+  ADD PRIMARY KEY (`id_page`,`id_media`);
 
 --
--- Indexes for table `resource`
+-- Indexy pre tabuľku `resource`
 --
 ALTER TABLE `resource`
- ADD PRIMARY KEY (`id_resource`), ADD UNIQUE KEY `resource_key` (`resource`);
+  ADD PRIMARY KEY (`id_resource`), ADD UNIQUE KEY `resource_key` (`resource`);
 
 --
--- Indexes for table `role`
+-- Indexy pre tabuľku `role`
 --
 ALTER TABLE `role`
- ADD PRIMARY KEY (`id_role`), ADD UNIQUE KEY `role_code` (`role_code`);
+  ADD PRIMARY KEY (`id_role`), ADD UNIQUE KEY `role_code` (`role_code`);
 
 --
--- Indexes for table `rule`
+-- Indexy pre tabuľku `rule`
 --
 ALTER TABLE `rule`
- ADD PRIMARY KEY (`id_role`,`resource`,`actions`);
+  ADD PRIMARY KEY (`id_role`,`resource`,`actions`);
 
 --
--- Indexes for table `setting`
+-- Indexy pre tabuľku `setting`
 --
 ALTER TABLE `setting`
- ADD PRIMARY KEY (`id_setting`), ADD UNIQUE KEY `idx_unq_setting` (`name`,`lang`);
+  ADD PRIMARY KEY (`id_setting`), ADD UNIQUE KEY `idx_unq_setting` (`name`,`lang`);
 
 --
--- Indexes for table `tag`
+-- Indexy pre tabuľku `tag`
 --
 ALTER TABLE `tag`
- ADD PRIMARY KEY (`id_tag`);
+  ADD PRIMARY KEY (`id_tag`);
 
 --
--- Indexes for table `type`
+-- Indexy pre tabuľku `type`
 --
 ALTER TABLE `type`
- ADD PRIMARY KEY (`id_type`);
+  ADD PRIMARY KEY (`id_type`);
 
 --
--- Indexes for table `ui_element`
+-- Indexy pre tabuľku `ui_element`
 --
 ALTER TABLE `ui_element`
- ADD PRIMARY KEY (`id_ui_element`);
+  ADD PRIMARY KEY (`id_ui_element`);
 
 --
--- Indexes for table `ui_element_lk_extend`
+-- Indexy pre tabuľku `ui_element_lk_extend`
 --
 ALTER TABLE `ui_element_lk_extend`
- ADD PRIMARY KEY (`id_ui_element`,`id_extend`);
+  ADD PRIMARY KEY (`id_ui_element`,`id_extend`);
 
 --
--- Indexes for table `url`
+-- Indexy pre tabuľku `url`
 --
 ALTER TABLE `url`
- ADD PRIMARY KEY (`id_url`), ADD KEY `idx_url_type` (`type`), ADD KEY `idx_url_active` (`active`), ADD KEY `idx_url_lang` (`lang`);
+  ADD PRIMARY KEY (`id_url`), ADD KEY `idx_url_type` (`type`), ADD KEY `idx_url_active` (`active`), ADD KEY `idx_url_lang` (`lang`);
 
 --
--- Indexes for table `user`
+-- Indexy pre tabuľku `user`
 --
 ALTER TABLE `user`
- ADD PRIMARY KEY (`id_user`), ADD UNIQUE KEY `username` (`username`), ADD KEY `id_role` (`id_role`);
+  ADD PRIMARY KEY (`id_user`), ADD UNIQUE KEY `username` (`username`), ADD KEY `id_role` (`id_role`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pre exportované tabuľky
 --
 
 --
--- AUTO_INCREMENT for table `api_key`
+-- AUTO_INCREMENT pre tabuľku `api_key`
 --
 ALTER TABLE `api_key`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `api_log`
+-- AUTO_INCREMENT pre tabuľku `api_log`
 --
 ALTER TABLE `api_log`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `article`
+-- AUTO_INCREMENT pre tabuľku `article`
 --
 ALTER TABLE `article`
-MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=61;
+  MODIFY `id_article` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=88;
 --
--- AUTO_INCREMENT for table `article_comment`
+-- AUTO_INCREMENT pre tabuľku `article_comment`
 --
 ALTER TABLE `article_comment`
-MODIFY `id_article_comment` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_article_comment` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `article_type`
+-- AUTO_INCREMENT pre tabuľku `article_type`
 --
 ALTER TABLE `article_type`
-MODIFY `id_type` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_type` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `captcha`
+-- AUTO_INCREMENT pre tabuľku `captcha`
 --
 ALTER TABLE `captcha`
-MODIFY `id_captcha` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_captcha` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `category`
+-- AUTO_INCREMENT pre tabuľku `category`
 --
 ALTER TABLE `category`
-MODIFY `id_category` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_category` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `element`
+-- AUTO_INCREMENT pre tabuľku `element`
 --
 ALTER TABLE `element`
-MODIFY `id_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_element` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
--- AUTO_INCREMENT for table `element_definition`
+-- AUTO_INCREMENT pre tabuľku `element_definition`
 --
 ALTER TABLE `element_definition`
-MODIFY `id_element_definition` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_element_definition` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `event_log`
+-- AUTO_INCREMENT pre tabuľku `event_log`
 --
 ALTER TABLE `event_log`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `extend_field`
+-- AUTO_INCREMENT pre tabuľku `extend_field`
 --
 ALTER TABLE `extend_field`
-MODIFY `id_extend_field` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_extend_field` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT for table `extend_fields`
+-- AUTO_INCREMENT pre tabuľku `extend_fields`
 --
 ALTER TABLE `extend_fields`
-MODIFY `id_extend_fields` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_extend_fields` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=154;
 --
--- AUTO_INCREMENT for table `extend_field_type`
+-- AUTO_INCREMENT pre tabuľku `extend_field_type`
 --
 ALTER TABLE `extend_field_type`
-MODIFY `id_extend_field_type` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=131;
+  MODIFY `id_extend_field_type` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=131;
 --
--- AUTO_INCREMENT for table `item`
+-- AUTO_INCREMENT pre tabuľku `item`
 --
 ALTER TABLE `item`
-MODIFY `id_item` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_item` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `item_definition`
+-- AUTO_INCREMENT pre tabuľku `item_definition`
 --
 ALTER TABLE `item_definition`
-MODIFY `id_item_definition` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_item_definition` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `media`
+-- AUTO_INCREMENT pre tabuľku `media`
 --
 ALTER TABLE `media`
-MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=197;
+  MODIFY `id_media` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=255;
 --
--- AUTO_INCREMENT for table `menu`
+-- AUTO_INCREMENT pre tabuľku `menu`
 --
 ALTER TABLE `menu`
-MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id_menu` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `module`
+-- AUTO_INCREMENT pre tabuľku `module`
 --
 ALTER TABLE `module`
-MODIFY `id_module` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_module` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `module_setting`
+-- AUTO_INCREMENT pre tabuľku `module_setting`
 --
 ALTER TABLE `module_setting`
-MODIFY `id_module_setting` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_module_setting` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `note`
+-- AUTO_INCREMENT pre tabuľku `note`
 --
 ALTER TABLE `note`
-MODIFY `id_note` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_note` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `notification`
+-- AUTO_INCREMENT pre tabuľku `notification`
 --
 ALTER TABLE `notification`
-MODIFY `id_notification` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_notification` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `page`
+-- AUTO_INCREMENT pre tabuľku `page`
 --
 ALTER TABLE `page`
-MODIFY `id_page` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
+  MODIFY `id_page` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
--- AUTO_INCREMENT for table `resource`
+-- AUTO_INCREMENT pre tabuľku `resource`
 --
 ALTER TABLE `resource`
-MODIFY `id_resource` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=304;
+  MODIFY `id_resource` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=304;
 --
--- AUTO_INCREMENT for table `role`
+-- AUTO_INCREMENT pre tabuľku `role`
 --
 ALTER TABLE `role`
-MODIFY `id_role` smallint(4) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id_role` smallint(4) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT for table `setting`
+-- AUTO_INCREMENT pre tabuľku `setting`
 --
 ALTER TABLE `setting`
-MODIFY `id_setting` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
+  MODIFY `id_setting` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
 --
--- AUTO_INCREMENT for table `tag`
+-- AUTO_INCREMENT pre tabuľku `tag`
 --
 ALTER TABLE `tag`
-MODIFY `id_tag` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tag` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `type`
+-- AUTO_INCREMENT pre tabuľku `type`
 --
 ALTER TABLE `type`
-MODIFY `id_type` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_type` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `ui_element`
+-- AUTO_INCREMENT pre tabuľku `ui_element`
 --
 ALTER TABLE `ui_element`
-MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ui_element` int(11) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `url`
+-- AUTO_INCREMENT pre tabuľku `url`
 --
 ALTER TABLE `url`
-MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=249;
+  MODIFY `id_url` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=910;
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT pre tabuľku `user`
 --
 ALTER TABLE `user`
-MODIFY `id_user` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

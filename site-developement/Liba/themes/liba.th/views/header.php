@@ -13,30 +13,46 @@
   <meta name="description" content="<ion:meta_description />" />
   <meta name="author" content="NESS KDC Košiciam">
   <meta name="keywords" content="<ion:meta_keywords />" />
+  <link rel="icon" type="image/png" href="<ion:theme_url />assets/img/la_logo.ico">
 
-  <link href="<ion:theme_url />assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<ion:theme_url />assets/css/bootstrap.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/bootstrap-theme.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/font-awesome.min.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/owl.carousel.css" rel="stylesheet">
   <link href="<ion:theme_url />assets/css/lightbox.css" rel="stylesheet">
-<!--  <link href="<ion:theme_url />assets/css/screen.css" rel="stylesheet">-->
   <link href="<ion:theme_url />assets/css/style.css" rel="stylesheet">
+
+  <script src="<ion:theme_url />assets/js/jquery.min.js"></script>
 
 </head>
 
 <body>
+  <noscript>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="alert alert-danger text-center">
+          Je nám ľúto ale pre správne fungovanie stránky je potrebné, aby ste si aktovovali <strong>Javascript</strong>.
+        </div>
+      </div>
+    </div>
+  </noscript>
 
   <div class="container">
     <div class="row">
       <div class="col-md-12" id="header">
-
-        <div id="header-image" data-stellar-background-ratio="0.5">
-          <div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 col-md-3 col-md-offset-9  logo-wrapper">
-            <img src="<ion:theme_url />assets/img/la_logo.png" alt="" class="img-responsive" />
+        <div class="header-image" data-stellar-background-ratio="0.5">
+          <div id="header-wrapper" data-stellar-background-ratio="0.75">
+            <div class="col-sm-8 col-md-9 col-xs-12 site-header">
+              <span><ion:site_title /></span>
+              <small><ion:meta_description /></small>
+            </div>
+            <div class="col-sm-4 col-md-3 hidden-xs logo-wrapper">
+              <img src="<ion:theme_url />assets/img/la_logo.png" alt="" class="img-responsive" />
+            </div>
           </div>
         </div>
 
-        <nav class="navbar navbar-default" role="navigation">
+        <nav class="navbar navbar-default">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>

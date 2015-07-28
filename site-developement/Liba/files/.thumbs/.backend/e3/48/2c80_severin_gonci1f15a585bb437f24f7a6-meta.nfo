@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /treneri/severin_gonci.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 11300,
+  8 => 1437459372,
+  9 => 1437459372,
+  10 => 1437459372,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 11300,
+  'atime' => 1437459372,
+  'mtime' => 1437459372,
+  'ctime' => 1437459372,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 11300,
+    'filename' => 'severin_gonci.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/treneri',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/treneri/severin_gonci.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 11300,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 100,
+      'resolution_y' => 128,
+      'compression_ratio' => 0.294270833333333314829616256247390992939472198486328125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/e3/48/2c80_severin_gonci1f15a585bb437f24f7a6-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 100,
+    1 => 128,
+    2 => 2,
+    3 => 'width="100" height="128"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/e3/48/2c80_severin_gonci1f15a585bb437f24f7a6-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 94,
+    1 => 120,
+    2 => 2,
+    3 => 'width="94" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

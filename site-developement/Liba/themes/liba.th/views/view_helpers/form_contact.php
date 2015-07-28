@@ -80,11 +80,9 @@
   <!--Submit : Button-->
   <div class="row">
     <div class="col-md-12">
-      <div class="col-md-3 col-md-offset-9">
-        <button type="submit" class="btn btn-primary btn-block">
+        <button type="submit" class="btn btn-primary pull-right">
           <ion:lang key="form_button_send_message" />
         </button>
-      </div>
     </div>
   </div>
 

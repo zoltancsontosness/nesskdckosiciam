@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /reklamne_predmety/minidres.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 166763,
+  8 => 1437397149,
+  9 => 1437397149,
+  10 => 1437397149,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 166763,
+  'atime' => 1437397149,
+  'mtime' => 1437397149,
+  'ctime' => 1437397149,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 166763,
+    'filename' => 'minidres.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/reklamne_predmety/minidres.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 166763,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1000,
+      'resolution_y' => 525,
+      'compression_ratio' => 0.10588126984126984553302719405110110528767108917236328125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/f8/a6/573b_minidres85608665ac3c2eded30eb957-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 263,
+    2 => 2,
+    3 => 'width="500" height="263"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/f8/a6/573b_minidres85608665ac3c2eded30eb957-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 63,
+    2 => 2,
+    3 => 'width="120" height="63"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

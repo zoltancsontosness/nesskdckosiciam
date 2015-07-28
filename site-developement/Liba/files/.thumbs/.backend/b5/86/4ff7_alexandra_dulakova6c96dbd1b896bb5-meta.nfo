@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /treneri/alexandra_dulakova.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 13155,
+  8 => 1437459644,
+  9 => 1437459644,
+  10 => 1437459644,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 13155,
+  'atime' => 1437459644,
+  'mtime' => 1437459644,
+  'ctime' => 1437459644,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 13155,
+    'filename' => 'alexandra_dulakova.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/treneri',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/treneri/alexandra_dulakova.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 13155,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 100,
+      'resolution_y' => 128,
+      'compression_ratio' => 0.342578125000000011102230246251565404236316680908203125,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/b5/86/4ff7_alexandra_dulakova6c96dbd1b896bb5-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 100,
+    1 => 128,
+    2 => 2,
+    3 => 'width="100" height="128"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/b5/86/4ff7_alexandra_dulakova6c96dbd1b896bb5-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 94,
+    1 => 120,
+    2 => 2,
+    3 => 'width="94" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

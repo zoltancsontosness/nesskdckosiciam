@@ -7,6 +7,9 @@ a:focus {
   color: #ff9901;
   text-decoration: none;
 }
+blockquote {
+  font-size: 14px;
+}
 .navbar {
   margin-bottom: 0;
 }

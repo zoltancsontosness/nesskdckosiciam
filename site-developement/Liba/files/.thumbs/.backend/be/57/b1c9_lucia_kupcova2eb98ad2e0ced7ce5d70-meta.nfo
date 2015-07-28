@@ -1,0 +1,82 @@
+<?php
+
+// legal URL: /treneri/lucia_kupcova.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 8719,
+  8 => 1437459586,
+  9 => 1437459586,
+  10 => 1437459586,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 8719,
+  'atime' => 1437459586,
+  'mtime' => 1437459586,
+  'ctime' => 1437459586,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 8719,
+    'filename' => 'lucia_kupcova.jpg',
+    'filepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/treneri',
+    'filenamepath' => 'C:/xampp/htdocs/liba/nesskdckosiciam/site-developement/Liba/files/treneri/lucia_kupcova.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 8719,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 100,
+      'resolution_y' => 128,
+      'compression_ratio' => 0.227057291666666660745477201999165117740631103515625,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/be/57/b1c9_lucia_kupcova2eb98ad2e0ced7ce5d70-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 100,
+    1 => 128,
+    2 => 2,
+    3 => 'width="100" height="128"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/liba/nesskdckosiciam/site-developement/Liba/files/.thumbs/.backend/be/57/b1c9_lucia_kupcova2eb98ad2e0ced7ce5d70-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 94,
+    1 => 120,
+    2 => 2,
+    3 => 'width="94" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

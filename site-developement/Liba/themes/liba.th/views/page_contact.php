@@ -24,16 +24,17 @@
         function init_map() {
           var myOptions = {
             zoom: 15,
-            center: new google.maps.LatLng(48.7184123, 21.21552930000007),
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            center: new google.maps.LatLng(48.7376024,21.2528024),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
           };
           map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
           marker = new google.maps.Marker({
             map: map,
-            position: new google.maps.LatLng(48.7184123, 21.21552930000007)
+            position: new google.maps.LatLng(48.7376024,21.2528024)
           });
           infowindow = new google.maps.InfoWindow({
-            content: "<b>Dom &#318;udov&eacute;ho tanca</b><br/> Starozagorsk&aacute; 10 <br/> 040 23  Ko&scaron;ice"
+            content: "<b>LIBA ACADEMY 11</b><br/> Národná trieda 48 <br/> 040 01  Ko&scaron;ice"
           });
           google.maps.event.addListener(marker, "click", function () {
             infowindow.open(map, marker);

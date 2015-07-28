@@ -8,11 +8,26 @@ $(function () {
 });
 
 /* Owl carousel initial configuration. */
-$('.owl-carousel').owlCarousel({
-  autoplay: true,
-  autoplayTimeout: 3500,
-  loop: true,
-  items: 1,
+$(document).ready(function () {
+  var fs = $("#footer-slider");
+  var ss = $("#sidebar-slider");
+
+  fs.owlCarousel({
+    margin: 20,
+    loop: true,
+    autoWidth: true,
+    autoplay: true,
+    autoplayTimeout: 800,
+  });
+
+  ss.owlCarousel({
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    loop: true,
+    nav: false,
+    navText: ['<i class="fa fa-chevron-left fa-2x"></i>','<i class="fa fa-chevron-right fa-2x"></i>']
+  });
 });
 
 /* Apply bootstrap dropdown classes to tree organized navigation bars. */
@@ -36,11 +51,14 @@ $("table").addClass("table");
 
 $(function () {
   $('.columnize').find('table, thead, tbody, tfoot, colgroup, caption, label, legend, script, style, textarea, button, object, embed, tr, th, td, li, h1, h2, h3, h4, h5, h6, form').addClass('dontsplit');
-  $('.wide').find('h1, h2, h3, h4, h5, h6').addClass('dontend');
-  $('.wide').find('br').addClass('removeiflast').addClass('removeiffirst');
+  $('.columnize').find('h1, h2, h3, h4, h5, h6').addClass('dontend');
+  $('.columnize').find('br').addClass('removeiflast').addClass('removeiffirst');
 
   $('h2').addClass("dontend");
   $('.columnize').columnize({
-    lastNeverTallest: true
+    lastNeverTallest: true,
+    width: 600,
   });
 });
+
+$('.same-height').responsiveEqualHeightGrid();
