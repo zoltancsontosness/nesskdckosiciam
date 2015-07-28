@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Št 23.Júl 2015, 16:23
+-- Čas generovania: Po 27.Júl 2015, 08:27
 -- Verzia serveru: 5.6.24
 -- Verzia PHP: 5.6.8
 

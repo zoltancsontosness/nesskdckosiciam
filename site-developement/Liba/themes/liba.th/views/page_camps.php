@@ -10,7 +10,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          `<a href="<ion:url />">
+          <a href="<ion:url />">
             <ion:title />
           </a>
         </div>
