@@ -3,9 +3,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'mariadb55.websupport.sk';
-$db['default']['username'] = 'ems2016';
-$db['default']['password'] = 'Biest0ob=';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'ems2016';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
