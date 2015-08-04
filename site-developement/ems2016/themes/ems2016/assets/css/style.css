@@ -5579,7 +5579,7 @@ form.search{
   border: none;
 }
 
-input:not([type="submit"]),textarea{
+input[type="text"],input[type="checkbox"],input[type="radio"],input[type="number"],input[type="date"],input[type="email"],textarea{
   width: 100%;
   display: inline-block;
   background: #fff;
@@ -5637,7 +5637,7 @@ input[type="checkbox"] + label:before{
   margin-right: 9px;
   width: 22px;
   height: 23px;
-  background: url("../images/checkbox.png") no-repeat;
+  background: url("../img/checkbox.png") no-repeat;
 }
 
 input[type="checkbox"]:checked + label:after{

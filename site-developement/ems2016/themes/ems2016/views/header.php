@@ -24,6 +24,7 @@
     <!-- Main styles -->
     <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet" />
     <!--modernizr-->
+    <script src="<ion:theme_url/>assets/js/jquery.modernizr.js"></script>
   </head>
   <body>
   <!-- WRAPPER -->
