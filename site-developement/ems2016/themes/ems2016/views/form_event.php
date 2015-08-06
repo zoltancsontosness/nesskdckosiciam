@@ -1,7 +1,7 @@
 <ion:partial view="header" /> 
   <h1 class="section_title section_title_medium"><ion:page:title /></h1>
   <div class="clearfix">
-    <form action="" class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2">
+    <form action="" class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2" method="POST">
       <div class="row">
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Názov organizátora:</label>

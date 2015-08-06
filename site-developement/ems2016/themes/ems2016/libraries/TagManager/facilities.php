@@ -12,14 +12,13 @@ class TagManager_Facilities extends TagManager
     
     
     $form_name = self::$ci->input->post('form');
-    var_dump($_POST);
-    die;
+    
     if (TagManager_Form::validate($form_name))
     {
-      
-    /*
+    
       $posted = self::$ci->input->post();
-      $title = $posted['title'];
+
+      $title = $posted['facility'];
 
       $data = array (
         'id_article' => '',
@@ -36,8 +35,8 @@ class TagManager_Facilities extends TagManager
           'lang' => 'sk',
           'url' => self::clean($title),
           'title' => $title,
-          'subtitle' => $posted['subtitle'],
-          'content' => $posted['content'],
+          'subtitle' => $posted['operator'],
+          'content' => $posted['desc'],
           'online' => 0,
           'meta_title' => '',
         ),
@@ -51,7 +50,7 @@ class TagManager_Facilities extends TagManager
 
       //LINKING ARTICLE TO PAGE
       $data['online'] = 0;
-      $data['main_parent'] = 8;
+      $data['main_parent'] = 5;
       self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
 
       //CORRECT INTEGRITY
@@ -62,20 +61,20 @@ class TagManager_Facilities extends TagManager
       self::$ci->article_model->save_urls($article_id);
 
       //SAVE THE SITEMAP
-      self::$ci->structure->build_sitemap();
+      //self::$ci->structure->build_sitemap();
 
       //ADDING LANG DATA 
       $articles = array($article);
       self::$ci->article_model->add_lang_data($articles);
-*/
+
       $message = TagManager_Form::get_form_message('success');
       TagManager_Form::set_additional_success($form_name, $message);
 
       $redirect = TagManager_Form::get_form_redirect();
       if ($redirect !== FALSE) redirect($redirect);
     }
-  //}
-/*
+  }
+
   public static function clean($string) {
     $result = '';
     self::$ci->load->helper('text');
@@ -83,6 +82,6 @@ class TagManager_Facilities extends TagManager
     $result = convert_accented_characters($string);
     $result = strtolower($result);
     $result = str_replace(' ', '-', $result);
-    return $result;*/
+    return $result;
   }
 }
