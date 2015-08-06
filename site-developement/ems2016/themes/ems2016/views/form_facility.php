@@ -1,5 +1,6 @@
 <ion:partial view="header" />
-  <div class="row">
+  <h1 class="section_title section_title_medium"><ion:page:title /></h1>
+  <div class="clearfix">
     <form action="" class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2">
     <input type="hidden" name="form" value="facilities">
     <div class="row">
