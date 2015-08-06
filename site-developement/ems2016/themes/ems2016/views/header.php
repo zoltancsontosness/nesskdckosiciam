@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" />
 
     <!-- Theme styles -->
+    <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/style.css" />
     <link rel="stylesheet" href="<ion:theme_url/>assets/css/font-awesome.min.css" />
