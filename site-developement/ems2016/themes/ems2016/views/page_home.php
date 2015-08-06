@@ -1,254 +1,101 @@
 <ion:partial view="header" />
 
   <div class="section_2">
-    <h3 class="section_title section_title_medium"><ion:page:title /></h3>
-    <div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
-      <!--tabs navigation-->
-      <div class="clearfix tabs_container">
-        <ul class="tabs_nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
-          <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tab-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="#tab-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1"><h3>Športovisko</h3></a></li>
-          <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tab-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="#tab-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2"><h3>Event</h3></a></li>
-        </ul>
-      </div>
-      <!--tabs content-->
-      <div class="tabs_content clearfix">
-        <div id="tab-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
-          <form action="." class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2">
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Názov prevádzkara:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">IČO:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Názov športoviska:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Adresa:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Kontaktný telefón:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Kontaktný e-mail:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Webová stránka:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Facebook link:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12">
-                <label class="control-label">Popis:</label>
-                <div class="controls">
-                  <textarea name="textinput"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12">
-                <label class="control-label">Fotografie:</label>
-                <div class="controls">
-                  <!-- Foto 1 -->
-                  <div class="input-group control-group input-profiles">
-                    <span class="input-group-btn">
-                      <span class="button btn-file button_orange">
-                        Vyberte foto ...
-                        <input name="cv" type="file" id="cv">
-                      </span>
-                    </span>
-                    <input type="text" readonly="" class="file-reader form-control" />
-                  </div>
-
-                  <!-- Foto 2 -->
-                  <div class="input-group control-group input-profiles">
-                    <span class="input-group-btn">
-                      <span class="button btn-file button_orange">
-                        Vyberte foto ...
-                        <input name="cv" type="file" id="cv">
-                      </span>
-                    </span>
-                    <input type="text" readonly="" class="file-reader" />
-                  </div>
-
-                  <!-- Foto 3 -->
-                  <div class="input-group control-group input-profiles">
-                    <span class="input-group-btn">
-                      <span class="button btn-file button_orange">
-                        Vyberte foto ...
-                        <input name="cv" type="file" id="cv">
-                      </span>
-                    </span>
-                    <input type="text" readonly="" class="file-reader" />
-                  </div>
-
-                  <!-- Foto 4 -->
-                  <div class="input-group control-group input-profiles">
-                    <span class="input-group-btn">
-                      <span class="button btn-file button_orange">
-                        Vyberte foto ...
-                        <input name="cv" type="file" id="cv">
-                      </span>
-                    </span>
-                    <input type="text" readonly="" class="file-reader" />
-                  </div>
-
-                  <!-- Foto 5 -->
-                  <div class="input-group control-group input-profiles">
-                    <span class="input-group-btn">
-                      <span class="button btn-file button_orange">
-                        Vyberte foto ...
-                        <input name="cv" type="file" id="cv">
-                      </span>
-                    </span>
-                    <input type="text" readonly="" class="file-reader" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <input name="rules_1" type="checkbox" id="rules_1">
-                <label for="rules_1">Súhlasím s <a href="none">podmienkami pridávania športoviska</a></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <input name="rules_2" type="checkbox" id="rules_2">
-                <label for="rules_2">Súhlas so spracovaním a zverejnením kontaktných údajov</label>
-              </div>
-            </div>
-            <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať športovisko</button>
-          </form>
-        </div>
-        <div id="tab-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
-          <form action="." class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2">
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Názov organizátora:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">IČO:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Názov akcie:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Miesto konania akcie:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Dátum konania:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Čas konania:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12 col-sm-6">
-                <label class="control-label">Dĺžka trvania:</label>
-                <div class="controls">
-                  <input name="textinput" type="text">
-                </div>
-              </div>
-
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12">
-                <label class="control-label">Popis:</label>
-                <div class="controls">
-                  <textarea name="textinput"></textarea>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="control-group input_profiles col-xs-12">
-                <label class="control-label">Príloha:</label>
-                <div class="controls">
-                  <!-- Foto 1 -->
-                  <div class="input-group control-group input-profiles">
-                    <span class="input-group-btn">
-                      <span class="button btn-file button_orange">
-                        Vyberte prílohu ...
-                        <input name="cv" type="file" id="cv">
-                      </span>
-                    </span>
-                    <input type="text" readonly="" class="file-reader form-control" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <input name="rules_1" type="checkbox" id="rules_1">
-                <label for="rules_1">Súhlasím s <a href="none">podmienkami pridávania športoviska</a></label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <input name="rules_2" type="checkbox" id="rules_2">
-                <label for="rules_2">Súhlas so spracovaním a zverejnením kontaktných údajov</label>
-              </div>
-            </div>
-            <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať športovisko</button>
-          </form>
-        </div>
-      </div>
+    <ul class="social_media_list button-list row">
+      <li class="col-xs-12 col-md-4 col-md-offset-2">
+        <a href="#" class="btn-block rss">
+          <i class="fa fa-pencil"></i>
+          <div>Pridanie športoviska</div>
+          <br />
+          <p>Registrujte športovisko</p>
+        </a>
+      </li>
+      <li class="col-xs-12 col-md-4">
+        <a href="#" class="btn-block bg-yellowgreen">
+          <i class="fa fa-pencil"></i>
+          <div>Pridanie eventu</div>
+          <br />
+          <p>Registrujte event a jednorazové aktivity</p>
+        </a>
+      </li>
+      <!--
+      <li class="col-xs-12 col-md-4">
+        <a href="#" class="btn-block bg-yellowgreen">
+          <i class="fa fa-pencil"></i>
+          <div>Pridanie klubu</div>
+          <br />
+          <p>Registrujte klub</p>
+        </a>
+      </li>
+      -->
+    </ul>      
+  </div>
+  <div class="section_2 row">
+    <h1 class="section_title text-center">O Projekte</h1>
+    <div class="col-xs-12 text-justify block-underline">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+       pretium sodales velit, sit amet congue enim porta varius. Duis 
+       congue elit at mi imperdiet, eu pellentesque velit eleifend. Ut ornare 
+       sapien enim, eget imperdiet magna tincidunt vitae. Vivamus eget erat 
+       non tellus maximus consequat a ut lacus. Etiam sollicitudin luctus
+        mauris et pellentesque. In imperdiet, ipsum id ultrices sodales,
+         neque augue semper ipsum, sed venenatis risus lacus sed quam.
+          Aenean nisi mauris, luctus ut rutrum in, tempus sed ex. 
+          Maecenas iaculis iaculis ipsum. Nam non porttitor tellus, 
+          id rutrum leo. Vivamus aliquet magna eu diam tempus, 
+          sed aliquet libero sagittis.Vestibulum quis lorem urna. 
+          Duis vel mauris at nulla cursus vestibulum nec et diam. 
+          Ut rhoncus dolor nec porttitor porta. Etiam scelerisque 
+          eget enim sed tincidunt. Nunc id dictum augue. Praesent malesuada 
+           tincidunt eros, quis rutrum turpis tempus non. Nam sit
+           amet lacus mollis, aliquam metus eget, sagittis augue. 
+           Nam mattis sapien nec urna tempor vehicula. Vivamus dictum 
+           ipsum sed velit malesuada faucibus. Phasellus semper ut leo 
+           nec bibendum. Duis vitae metus id enim cursus tempus.
+           Etiam ultricies cursus nibh a suscipit. Donec lobortis, 
+           velit ornare sollicitudin semper, elit lorem euismod purus, 
+           sed placerat nisi ipsum id leo. Integer id mauris congue, 
+           commodo nisi et, rutrum ante. In tempus, odio vel malesuada 
+           euismod, orci turpis iaculis diam, non condimentum lorem tellus 
+           ut enim. Proin scelerisque venenatis diam, vitae eleifend arcu
+            vestibulum ac. Proin in maximus neque. Praesent dolor eros, 
+            auctor in ex non, porta pharetra sem. Morbi tristique sem in 
+            mi iaculis interdum. Class aptent taciti sociosqu ad litora 
+            torquent per conubia nostra, per inceptos himenaeos. Proin sed 
+            molestie est, sit amet malesuada diam. Interdum et malesuada 
+            fames ac ante ipsum primis in faucibus. Pellentesque habitant 
+            morbi tristique senectus et netus et malesuada fames ac turpis 
+            egestas. Proin nec feugiat sem. Sed egestas, magna non tincidunt 
+            maximus, mauris velit blandit augue, et sagittis dui augue at 
+            odio. Donec ultrices risus at placerat iaculis.
     </div>
   </div>
+  <div class="section_2 row">
+    <h1 class="section_title text-center">Povedali O Nás</h1>
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="owl-demo-2 owl-carousel_2 var2">
+        <div class="item">
+          <div class="blockquotes">
+            <div>“Maecenas rhoncus orci nisl, ac pellentesque magna vestibulum a. Duis arcu mauris, suscipit vitae pretium vitae, mollis ac metus. In hac habitasse platea dictumst. Suspendisse feugiat metus eu eros iaculis sodales. Phasellus at dignissim arcu, sit amet tincidunt tortor. Donec molestie, nunc ut cursus fermentum, risus libero consectetur lectus, in pulvinar quam risus non libero. Maecenas lectus lorem, ornare non tellus quis, convallis fermentum ligula.”</div>
+            <div>Zuzana Želinská, NESS KDC</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="blockquotes">
+            <div>“Etiam ultricies cursus nibh a suscipit. Donec lobortis, velit ornare sollicitudin semper, elit lorem euismod purus, sed placerat nisi ipsum id leo. Curabitur sed quam risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Etiam eu felis imperdiet, bibendum urna tincidunt, luctus lacus. Nunc rhoncus velit a ligula sollicitudin scelerisque. Ut et nisl at quam sollicitudin fermentum ut in mi. Nam pulvinar justo sed sem feugiat luctus. Donec eu convallis nisl.”</div>
+            <div>Richard Raši, Primátor mesta Košice</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="blockquotes">
+            <div>“Ut ut ex non purus placerat mattis. Curabitur in tristique leo. Etiam a neque vitae lectus finibus lacinia. Cras eu tristique sem. Donec a hendrerit augue, et malesuada nulla. Aenean eu venenatis nibh. Morbi tincidunt commodo suscipit. Integer dictum placerat ipsum eget ornare. Quisque tristique ornare turpis et pharetra. Aliquam dui urna, volutpat vitae sagittis eget, lobortis a sapien. Curabitur et dui lectus. Phasellus non fermentum lectus, ut placerat orci.”</div>
+            <div>Štefan Kudla, NESS KDC</div>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+  </div>
+ 
 
 <ion:partial view="footer" />

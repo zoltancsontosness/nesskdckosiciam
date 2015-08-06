@@ -18,9 +18,47 @@
   1. Basic classes and elements 
 -------------------------------------*/
 
+@import url(http://fonts.googleapis.com/css?family=Sarala&subset=latin,latin-ext);
+
+body {
+  font-family: 'Sarala', sans-serif;
+}
+
+.bg-seagreen {
+  background-color: #b3f2f0;
+  color: #00ada7;
+}
+
+.bg-seagreen:hover {
+  background-color: #00ada7;
+  color: #fff; 
+}
+
+.bg-yellowgreen {
+  background-color: #e8f9c6;
+  color: #96ca2d;
+}
+
+.bg-yellowgreen:hover {
+  background-color: #96ca2d;
+  color: #fff; 
+}
+
+
 /* ------------------------------------
   2. Typography 
 -------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.section_title {
+  padding-top: 18px; 
+}
 
 /* ------------------------------------
   3. Header 
@@ -57,6 +95,16 @@
 .input-group .form-control, .input-group-addon, .input-group-btn {
     display: table-cell;
 }
+
+.button-list li {
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.button-list li a div {
+  font-family: 'Sarala', sans-serif;
+}
+
 /* ------------------------------------
   6. Sliders 
 -------------------------------------*/
