@@ -25,7 +25,6 @@
       </div>
       </footer>
       <!-- Scripts -->
-      <script src="<ion:theme_url/>assets/js/jquery-2.1.0.min.js"></script>
       <script src="<ion:theme_url/>assets/js/jquery-ui.min.js"></script>
       <script src="<ion:theme_url/>assets/js/jquery.queryloader2.min.js"></script>
       <script src="<ion:theme_url/>assets/js/jflickrfeed.js"></script>

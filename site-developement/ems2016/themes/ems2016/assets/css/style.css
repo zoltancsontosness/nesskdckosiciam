@@ -2845,9 +2845,13 @@ p a:hover{
   
   .weather_widget .date_list{
     text-align: center;
-    background: #52585e;
+    background: #3e454c;
     padding: 10px 0;
   }
+
+.info_list {
+  background: #52585e !important;
+}
 
     .weather_widget .date_list ul li{
       float: left;
