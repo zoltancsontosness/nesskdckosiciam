@@ -243,7 +243,6 @@ img{
 ------------------------------------- */
 
 h1,h2,h3,h4,h5{
-  font-family: 'Droid Serif', serif;
   color: #212428;
   line-height: 1.3em;
   font-weight: bold;
@@ -2649,6 +2648,7 @@ p a:hover{
     color: #ffffff;
   }
 
+
   .tabs_content.side_bar_tabs.comment_tabs ul li{
     margin-top: 0;
   }
@@ -2662,8 +2662,8 @@ p a:hover{
       background: #f2f2f2;
       color: #3e454c;
       text-align: center;
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 18px;
+      font-weight: lighter;
       margin-right: 15px;
       float: left;
 
@@ -2671,6 +2671,8 @@ p a:hover{
       -o-transition: all .4s ease;
       transition: all .4s ease;
     }
+
+
 
 .social_tabs > [id*="tab-"] p{
   float: left;

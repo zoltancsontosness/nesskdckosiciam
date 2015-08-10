@@ -10,7 +10,7 @@
   </div>
 
   <div class="col-lg-8 col-md-8 col-sm-12">
-    <!--NEWS LIST HERE -->
+    <ion:partial view="modules/panel_articles" />
   </div>
 
 </div>

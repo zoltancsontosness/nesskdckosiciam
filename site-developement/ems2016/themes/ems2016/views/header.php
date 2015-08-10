@@ -14,8 +14,7 @@
   <meta name="description" content="<ion:meta_description />" />
   <meta name="keywords" content="<ion:meta_keywords />" />
   <!-- FONTS -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700" />
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
   <!-- Theme styles -->
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/bootstrap.css">
