@@ -21,15 +21,14 @@
               <ion:articles:article>
                 <li class="post_text">
                   <div class="comment_number">
-                    <ion:date format="d"/>.
-                    <ion:date format="m" />
+                    <ion:date format="d.m"/>
                     <br/>
                     <small><ion:date format="Y" /></small>
                   </div>
                   <div class="wrapper">
                     <a href="<ion:url />"><h4><ion:title /></h4></a>
                     <div class="event_date">
-                      <ion:content characters="80" />
+                      <ion:content characters="85" />
                     </div>
                   </div>
                 </li>

@@ -21,7 +21,7 @@
   </div>
 
   <div class="col-sm-6 col-md-4">
-    <!--GALLERY HERE-->
+    <ion:partial view="modules/panel_gallery" />
   </div>
 
   <div class="col-sm-6 col-md-4">

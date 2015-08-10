@@ -1,12 +1,11 @@
-<div class="section appear-animation fadeInDown appear-animation-visible" data-appear-animation="fadeInDown" data-appear-animation-delay="1150" style="animation-delay: 1150ms;">
-  <h3 class="section_title"><ion:lang key='asset_title' /></h3>
+<div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="1150">
+  <h3 class="section_title"><ion:lang key='asset_title'/></h3>
   <div class="weather_widget">
     <div class="weather_info clearfix">
       <div>
-        <h2 id="header">Košice</h2>
+        <h2>Košice</h2>
         <div class="day_number">
-          <span id="temp"></span>
-          <span class="degree"><ion:lang key='degree' /></span>
+          <span id="temp"></span><span class="degree">&deg;C</span>
         </div>
       </div>
       <div>
