@@ -9,13 +9,9 @@ class TagManager_Facilities extends TagManager
 
   public static function process_data(FTL_Binding $tag)
   {
-    
-    
     $form_name = self::$ci->input->post('form');
-    
     if (TagManager_Form::validate($form_name))
     {
-    
       $posted = self::$ci->input->post();
 
       $title = $posted['facility'];
@@ -42,11 +38,21 @@ class TagManager_Facilities extends TagManager
         ),
       );
 
+      $extend_data = array(
+        'address' => $posted['address'],
+        'phone' => $posted['phone'],
+        'email' => $posted['email'],
+        'webpage' => $posted['webpage'],
+        'fblink' => $posted['fblink'],
+      );
+
       //LOADING MODEL
       self::load_model('article_model');
+      self::load_model('extend_field_model');
 
       //SAVING TO DB
       $article_id = self::$ci->article_model->save($data,$lang_data);
+      self::$ci->extend_field_model->save_data('article', $article_id, $extend_data,false);
 
       //LINKING ARTICLE TO PAGE
       $data['online'] = 0;
@@ -54,22 +60,18 @@ class TagManager_Facilities extends TagManager
       self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
 
       //CORRECT INTEGRITY
-      $article = self::$ci->article_model->get_by_id($article_id);
-      self::$ci->article_model->correct_integrity($data, $lang_data);
+      //$article = self::$ci->article_model->get_by_id($article_id);
+      //self::$ci->article_model->correct_integrity($data, $lang_data);
 
       //SAVE URLs
-      self::$ci->article_model->save_urls($article_id);
-
-      //SAVE THE SITEMAP
-      //self::$ci->structure->build_sitemap();
-
+      //self::$ci->article_model->save_urls($article_id);
+     
       //ADDING LANG DATA 
-      $articles = array($article);
-      self::$ci->article_model->add_lang_data($articles);
-
+      //$articles = array($article);
+      //self::$ci->article_model->add_lang_data($articles);
+      //
       $message = TagManager_Form::get_form_message('success');
       TagManager_Form::set_additional_success($form_name, $message);
-
       $redirect = TagManager_Form::get_form_redirect();
       if ($redirect !== FALSE) redirect($redirect);
     }
@@ -78,7 +80,6 @@ class TagManager_Facilities extends TagManager
   public static function clean($string) {
     $result = '';
     self::$ci->load->helper('text');
-
     $result = convert_accented_characters($string);
     $result = strtolower($result);
     $result = str_replace(' ', '-', $result);
