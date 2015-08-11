@@ -18,7 +18,7 @@
               </ion:medias>
               <ion:subtitle is_not="">
                 <div class="post_image_buttons">
-                  <a href="<ion:url />" class="button banner_button entertainment">
+                  <a href="<ion:url />" class="button banner_button travel">
                     <ion:subtitle />
                   </a>
                 </div>

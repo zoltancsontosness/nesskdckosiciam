@@ -1658,7 +1658,7 @@ p a:hover{
   background: #00ada7;
 }
 
-.button.business{
+.button.events{
   background: #13b7ff;
 }
 
@@ -1666,7 +1666,7 @@ p a:hover{
   background: #feb41c;
 }
 
-.button.fashion{
+.button.articles{
   background: #a13d63;
 }
 
@@ -1674,7 +1674,7 @@ p a:hover{
   background: #ec2913;
 }
 
-.button.food{
+.button.news{
   background: #96ca2d;
 }
 
@@ -2662,10 +2662,12 @@ p a:hover{
       background: #f2f2f2;
       color: #3e454c;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
+      line-height: 16px;
       font-weight: lighter;
       margin-right: 15px;
       float: left;
+      width: 79px;
 
       -webkit-transition: all .4s ease;
       -o-transition: all .4s ease;

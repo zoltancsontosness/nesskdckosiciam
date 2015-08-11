@@ -21,7 +21,7 @@
               <ion:articles:article>
                 <li class="post_text">
                   <div class="comment_number">
-                    <ion:date format="d.m"/>
+                    <ion:date format="d.m." />
                     <br/>
                     <small><ion:date format="Y" /></small>
                   </div>

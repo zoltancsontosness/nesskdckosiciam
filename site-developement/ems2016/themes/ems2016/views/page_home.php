@@ -1,12 +1,11 @@
 <ion:partial view="header" />
 
-<div class="row">
-  <!--SLIDER HERE-->
+<ion:partial view="modules/panel_slider" />
 
+<div class="row">
   <div class="col-lg-4 col-md-4 col-sm-12">
     <ion:partial view="modules/panel_categories" count="2" />
-
-    <!--SOCIAL PANEL HERE-->
+    <ion:partial view="modules/panel_socials" />
   </div>
 
   <div class="col-lg-8 col-md-8 col-sm-12">

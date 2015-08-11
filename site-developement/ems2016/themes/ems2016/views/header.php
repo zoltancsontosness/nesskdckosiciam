@@ -35,7 +35,6 @@
 </head>
 
 <body>
-  <!-- WRAPPER -->
   <div class="wrapper_container">
 
     <!-- Header -->
@@ -45,46 +44,22 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="clearfix">
-                <a href="<ion:base_url />" class="f_left logo"><img src="<ion:theme_url/>assets/img/KE2016_horizont_eng.jpg" alt=""></a>
+                <a href="<ion:home_url />" class="f_left logo"><img src="<ion:theme_url/>assets/img/KE2016_horizont_eng.jpg" alt=""></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--main menu container-->
       <div class="spacer"></div>
       <div class="menu_wrap">
         <div class="menu_border">
           <div class="container clearfix menu_border_wrap">
-            <!--button for responsive menu-->
             <button id="menu_button">
               Menu
             </button>
-            <!--main menu-->
             <nav role="navigation" class="main_menu menu_var2">
-              <ul>
-                <li><a href="<ion:base_url />">Home<span class="plus"><i class="fa fa-plus-square-o"></i><i class="fa fa-minus-square-o"></i></span></a>
-                </li>
-              </ul>
+              <ion:tree_navigation active_class="current" tag="ul" id="navbar" />
             </nav>
-            <!--
-          <div class="search-holder">
-            <div class="search_box">
-              <button class="search_button button button_orange_hover">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-            search form
-            <div class="searchform_wrap var2">
-              <div class="container vc_child h_inherit relative">
-                <form role="search">
-                  <input type="text" name="search" placeholder="Type search text and hit enter">
-                </form>
-                <button class="close_search_form">
-                  <i class="fa fa-times"></i>
-                </button>
-              </div>
-            </div>-->
           </div>
         </div>
       </div>
