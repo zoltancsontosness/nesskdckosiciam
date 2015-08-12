@@ -18,21 +18,23 @@
         <ion:page>
           <div id="tab-<ion:id />">
             <ul class="comments_list">
-              <ion:articles:article>
-                <li class="post_text">
-                  <div class="comment_number">
-                    <ion:date format="d.m." />
-                    <br/>
-                    <small><ion:date format="Y" /></small>
-                  </div>
-                  <div class="wrapper">
-                    <a href="<ion:url />"><h4><ion:title /></h4></a>
-                    <div class="event_date">
-                      <ion:content characters="85" />
+              <ion:articles order_by="date DESC" limit="10">
+                <ion:article>
+                  <li class="post_text">
+                    <div class="comment_number">
+                      <ion:date format="d.m." />
+                      <br/>
+                      <small><ion:date format="Y" /></small>
                     </div>
-                  </div>
-                </li>
-              </ion:articles:article>
+                    <div class="wrapper">
+                      <a href="<ion:url />"><h4><ion:title /></h4></a>
+                      <div class="event_date">
+                        <ion:content characters="85" />
+                      </div>
+                    </div>
+                  </li>
+                </ion:article>
+              </ion:articles>
             </ul>
           </div>
         </ion:page>

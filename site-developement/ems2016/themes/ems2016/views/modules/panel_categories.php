@@ -7,7 +7,7 @@
     <?php $n=0 ; ?>
     <ul class="categories_list">
       <li>
-        <ion:categories tag="ul">
+        <ion:categories tag="ul" order_by_nb="true">
           <?php if($n<<ion:attr key="count" />): $n++; ?>
           <li>
             <a href="<ion:category:url />" style="color: #4B4D50;">
