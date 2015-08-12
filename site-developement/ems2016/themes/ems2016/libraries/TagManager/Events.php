@@ -1,5 +1,5 @@
 <?php
-class TagManager_Facilities extends TagManager
+class TagManager_Events extends TagManager
 {
   protected static $processed = FALSE;
 
@@ -15,19 +15,19 @@ class TagManager_Facilities extends TagManager
     {
       $posted = self::$ci->input->post();
 
-      $title = $posted['facility'];
+      $title = $posted['event_name'];
       // Config for files
-      $config['upload_path'] = 'files/sportoviska/' . self::clean($title);
+      $config['upload_path'] = 'files/podujatia/' . self::clean($title);
 
       //$config['allowed_types'] = 'pdf|doc|docx';
       $config['allowed_extensions'] = array('jpg', 'jpeg', 'png');
-      $config['max_size'] = '300';
+      $config['max_size'] = '1024';
       $config['max_width'] = '0';
       $config['max_height'] = '0';
 
       $data = array (
         'id_article' => '',
-        'author' => $posted['email'],
+        'author' => $posted['organizer'],
         'name' => self::clean($title),
         'has_url' => 1,
         'priority' => 5,
@@ -40,7 +40,7 @@ class TagManager_Facilities extends TagManager
           'lang' => 'sk',
           'url' => self::clean($title),
           'title' => $title,
-          'subtitle' => $posted['operator'],
+          'subtitle' => $posted['organizer'],
           'content' => $posted['desc'],
           'online' => 0,
           'meta_title' => '',
@@ -48,12 +48,13 @@ class TagManager_Facilities extends TagManager
       );
 
       $extend_data = array(
-        'ico' => $posted['ico'],
         'address' => $posted['address'],
-        'phone' => $posted['phone'],
+        'ico' => $posted['ico'],
         'email' => $posted['email'],
         'webpage' => $posted['webpage'],
-        'fblink' => $posted['fblink'],
+        'date' => $posted['date'],
+        'time' => $posted['time'],
+        'length' => $posted['length'],
       );
 
       $element = array('ordering' => 0);
@@ -67,20 +68,21 @@ class TagManager_Facilities extends TagManager
 
       //SAVING TO DB
       $article_id = self::$ci->article_model->save($data,$lang_data);
-      $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 1, $element);
+      $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 2, $element);
       self::$ci->extend_field_model->save_data('element', $element_id, $extend_data,false);
       //LINKING ARTICLE TO PAGE
       $data['online'] = 0;
-      $data['main_parent'] = 5;
+      $data['main_parent'] = 9;
       self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
       // Do upload and link to article
       $files = $_FILES;
-      foreach ($_FILES['photos']['name'] as $key => $value) {
-        $_FILES['photos']['name']= $files['photos']['name'][$key];
-        $_FILES['photos']['type']= $files['photos']['type'][$key];
-        $_FILES['photos']['tmp_name']= $files['photos']['tmp_name'][$key];
-        $_FILES['photos']['error']= $files['photos']['error'][$key];
-        $_FILES['photos']['size']= $files['photos']['size'][$key];  
+
+      foreach ($_FILES['attachment']['name'] as $key => $value) {
+        $_FILES['attachment']['name']= $files['attachment']['name'][$key];
+        $_FILES['attachment']['type']= $files['attachment']['type'][$key];
+        $_FILES['attachment']['tmp_name']= $files['attachment']['tmp_name'][$key];
+        $_FILES['attachment']['error']= $files['attachment']['error'][$key];
+        $_FILES['attachment']['size']= $files['attachment']['size'][$key];  
 
         $isUploaded = self::$ci->upload->do_upload();
         if ($isUploaded){

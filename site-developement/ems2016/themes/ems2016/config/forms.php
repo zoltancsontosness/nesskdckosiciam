@@ -19,19 +19,19 @@ $config['forms'] = array
                 'label' => 'form_label_title',
             ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]',
+                'rules' => 'trim|xss_clean|min_length[5]|required',
                 'label' => 'form_label_subtitle',
             ),
             'facility' => array(
-                'rules' => 'trim|xss_clean|min_length[5]',
+                'rules' => 'trim|xss_clean|min_length[5]|required',
                 'label' => 'form_label_subtitle',
             ),
             'address' => array(
-                'rules' => 'trim|xss_clean|min_length[5]',
+                'rules' => 'trim|xss_clean|min_length[5]|required',
                 'label' => 'form_label_subtitle',
             ),
             'phone' => array(
-                'rules' => 'trim|xss_clean|min_length[5]',
+                'rules' => 'trim|xss_clean|min_length[5]|required',
                 'label' => 'form_label_subtitle',
             ),
             'email' => array(
@@ -47,10 +47,70 @@ $config['forms'] = array
                 'label' => 'form_label_content',
             ),
             'desc' => array(
-                'rules' => 'required',
+                'rules' => 'required|min_length[5]',
                 'label' => 'form_label_content',
             ),
+            'photos' => array(
+                'rules' => 'trim',
+                'label' => 'form_label_photo'
+            ),
             
+        )
+    ),
+    
+    //EVENTS
+    'events' => array
+    (
+        'process' => 'TagManager_Events::process_data',
+        'redirect' => 'referer',
+        'messages' => array(
+            'success' => 'new_article_message_success',
+            'error' => 'new_article_message_error',
+        ),
+
+        'fields' => array
+        (
+            'organizer' => array
+            (
+                'rules' => 'trim|required|min_length[3]|xss_clean',
+                'label' => 'form_label_title',
+            ),
+            'ico' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'event_name' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'address' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'date' => array(
+                'rules' => 'xss_clean|required',
+                'label' => 'form_label_date',
+            ),
+            'time' => array(
+                'rules' => 'xss_clean|required',
+                'label' => 'form_label_time',
+            ),
+            'length' => array(
+                'rules' => 'xss_clean|required',
+                'label' => 'form_label_length',
+            ),
+            'attachment' => array(
+                'rules' => 'xss_clean',
+                'label' => 'form_label_attachment',
+            ),
+            'webpage' => array(
+                'rules' => 'xss_clean',
+                'label' => 'form_label_webpage',
+            ),
+            'desc' => array(
+                'rules' => 'xss_clean|required|min_length[5]',
+                'label' => 'form_label_desc',
+            ),
         )
     ),
 );

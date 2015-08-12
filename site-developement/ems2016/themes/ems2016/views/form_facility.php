@@ -1,19 +1,27 @@
 <ion:partial view="header" />
   <h1 class="section_title section_title_medium"><ion:page:title /></h1>
   <div class="clearfix">
-    <form action="" class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2" method="POST">
+<ion:form:facilities:validation:error is="true" >
+    <span class="red">
+        Error : Some form data are missing or seem to be incorrect.
+    </span>
+</ion:form:facilities:validation:error>
+
+    <form name="facilities" action="" class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="form" value="facilities">
     <div class="row">
       <div class="control-group input_profiles col-xs-12 col-sm-6">
         <label class="control-label">Názov prevádzkara:</label>
         <div class="controls">
           <input name="operator" type="text">
+           <ion:form:facilities:error:operator tag="p" class="input-error" />
         </div>
       </div>
       <div class="control-group input_profiles col-xs-12 col-sm-6">
         <label class="control-label">IČO:</label>
         <div class="controls">
           <input name="ico" type="text">
+           <ion:form:facilities:error:ico tag="p" class="input-error" />
         </div>
       </div>
     </div>
@@ -22,12 +30,14 @@
         <label class="control-label">Názov športoviska:</label>
         <div class="controls">
           <input name="facility" type="text">
+           <ion:form:facilities:error:facility tag="p" class="input-error" />
         </div>
       </div>
       <div class="control-group input_profiles col-xs-12 col-sm-6">
         <label class="control-label">Adresa:</label>
         <div class="controls">
           <input name="address" type="text">
+           <ion:form:facilities:error:address tag="p" class="input-error" />
         </div>
       </div>
     </div>
@@ -36,12 +46,14 @@
         <label class="control-label">Kontaktný telefón:</label>
         <div class="controls">
           <input name="phone" type="text">
+           <ion:form:facilities:error:phone tag="p" class="input-error" />
         </div>
       </div>
       <div class="control-group input_profiles col-xs-12 col-sm-6">
         <label class="control-label">Kontaktný e-mail:</label>
         <div class="controls">
           <input name="email" type="text">
+           <ion:form:facilities:error:email tag="p" class="input-error" />
         </div>
       </div>
     </div>
@@ -50,12 +62,14 @@
         <label class="control-label">Webová stránka:</label>
         <div class="controls">
           <input name="webpage" type="text">
+           <ion:form:facilities:error:webpage tag="p" class="input-error" />
         </div>
       </div>
       <div class="control-group input_profiles col-xs-12 col-sm-6">
         <label class="control-label">Facebook link:</label>
         <div class="controls">
           <input name="fblink" type="text">
+           <ion:form:facilities:error:fblink tag="p" class="input-error" />
         </div>
       </div>
     </div>
@@ -64,6 +78,7 @@
         <label class="control-label">Popis:</label>
         <div class="controls">
           <textarea name="desc"></textarea>
+           <ion:form:facilities:error:desc tag="p" class="input-error" />
         </div>
       </div>
     </div>
@@ -76,55 +91,60 @@
             <span class="input-group-btn">
               <span class="button btn-file button_orange">
                 Vyberte foto ...
-                <input name="photo[]" type="file" id="cv">
+                <input name="photos[]" type="file" id="cv">
               </span>
             </span>
-            <input type="text" readonly="" class="file-reader form-control" />
+            <input type="text" readonly="" class="file-reader" />
           </div>
+          <ion:form:facilities:error:photos tag="p" class="input-error" />
 
           <!-- Foto 2 -->
           <div class="input-group control-group input-profiles">
             <span class="input-group-btn">
               <span class="button btn-file button_orange">
                 Vyberte foto ...
-                <input name="photo[]" type="file" id="cv">
+                <input name="photos[]" type="file" id="cv">
               </span>
             </span>
             <input type="text" readonly="" class="file-reader" />
           </div>
+          <ion:form:facilities:error:photos tag="p" class="input-error" />
 
           <!-- Foto 3 -->
           <div class="input-group control-group input-profiles">
             <span class="input-group-btn">
               <span class="button btn-file button_orange">
                 Vyberte foto ...
-                <input name="photo[]" type="file" id="cv">
+                <input name="photos[]" type="file" id="cv">
               </span>
             </span>
             <input type="text" readonly="" class="file-reader" />
           </div>
+          <ion:form:facilities:error:photos tag="p" class="input-error" />
 
           <!-- Foto 4 -->
           <div class="input-group control-group input-profiles">
             <span class="input-group-btn">
               <span class="button btn-file button_orange">
                 Vyberte foto ...
-                <input name="photo[]" type="file" id="cv">
+                <input name="photos[]" type="file" id="cv">
               </span>
             </span>
             <input type="text" readonly="" class="file-reader" />
           </div>
+          <ion:form:facilities:error:photos tag="p" class="input-error" />
 
           <!-- Foto 5 -->
           <div class="input-group control-group input-profiles">
             <span class="input-group-btn">
               <span class="button btn-file button_orange">
                 Vyberte foto ...
-                <input name="photo[]" type="file" id="cv">
+                <input name="photos[]" type="file" id="cv">
               </span>
             </span>
             <input type="text" readonly="" class="file-reader" />
           </div>
+          <ion:form:facilities:error:photos tag="p" class="input-error" />
         </div>
       </div>
     </div>
