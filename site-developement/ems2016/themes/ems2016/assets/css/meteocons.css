@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'MeteoconsRegular';
+  src: url('../fonts/meteocons-webfont.eot');
+  src: url('../fonts/meteocons-webfont.eot?#iefix') format('../fonts/embedded-opentype'), url('../fonts/meteocons-webfont.woff') format('woff'), url('../fonts/meteocons-webfont.ttf') format('truetype'), url('../fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mc {
+  display: inline-block;
+  font: normal normal normal 32px/1 MeteoconsRegular;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mc-lg {
+  font-size: 6em;
+}
+
+.mc-01d:before {
+  content: "B";
+}
+
+.mc-01n:before {
+  content: "2";
+}
+
+.mc-02d:before {
+  content: "H";
+}
+
+.mc-02n:before {
+  content: "4";
+}
+
+.mc-03d:before {
+  content: "N";
+}
+
+.mc-03n:before {
+  content: "5";
+}
+
+.mc-04d:before {
+  content: "Y";
+}
+
+
+.mc-04n:before {
+  content: "%";
+}
+
+.mc-09d:before {
+  content: "R";
+}
+
+.mc-09n:before {
+  content: "8";
+}
+
+.mc-10d:before {
+  content: "H";
+}
+
+.mc-10n:before {
+  content: "4";
+}
+
+.mc-11d:before {
+  content: "0";
+}
+
+.mc-11n:before {
+  content: "6";
+}
+
+.mc-13d:before {
+  content: "X";
+}
+
+.mc-13n:before {
+  content: "$";
+}
+
+.mc-50d:before {
+  content: "J";
+}
+
+.mc-50n:before {
+  content: "K";
+}

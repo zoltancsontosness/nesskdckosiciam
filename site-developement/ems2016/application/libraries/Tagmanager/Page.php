@@ -754,6 +754,7 @@ class TagManager_Page extends TagManager
 		$mode = $tag->getAttribute('mode', 'flat');
 		$levels = $tag->getAttribute('levels');
 		$menu_name = $tag->getAttribute('menu');
+    $page_ids = $tag->getAttribute('pages');
 		$parent_page = NULL;
 		// Display hidden navigation elements ?
 		$display_hidden = $tag->getAttribute('display_hidden', FALSE);
@@ -818,6 +819,28 @@ class TagManager_Page extends TagManager
 			}
 
 			$pages = array_values($pages);
+		}
+    
+    // Limit pages to a certain page ids #by Patrik
+		if (!is_null($page_ids))
+		{
+      $page_ids = explode(',',$page_ids);
+      for($i = 0; $i < count($page_ids);$i++){
+        $page_ids[$i] = trim($page_ids[$i],' ');
+      }
+ 
+      $result = array();
+ 
+      foreach ($page_ids as $name) {
+        foreach($pages as $page) {
+          if($page['name']==$name) {
+            array_push($result,$page);
+            unset($page_ids[$name]);
+          }
+        }
+      }
+      
+			$pages = array_values($result);
 		}
 
 		if ($display_hidden == FALSE)

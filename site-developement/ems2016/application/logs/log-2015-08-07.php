@@ -1,5 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
+<<<<<<< HEAD
 ERROR - 2015-08-07 10:19:19 --> Language file contains no data: language/sk/form_validation_lang
 ERROR - 2015-08-07 10:19:35 --> Language file contains no data: language/sk/form_validation_lang
 ERROR - 2015-08-07 10:47:12 --> Could not find the language key : "ionize_message_article_not_exist"
@@ -142,3 +143,7 @@ ERROR - 2015-08-07 13:56:20 --> Could not find the language key : "form_label_su
 ERROR - 2015-08-07 13:56:57 --> Language file contains no data: language/sk/form_validation_lang
 ERROR - 2015-08-07 13:56:57 --> Could not find the language key : "min_length"
 ERROR - 2015-08-07 13:56:57 --> Could not find the language key : "form_label_subtitle"
+=======
+ERROR - 2015-08-07 10:31:28 --> Could not find the language key : "asset_title"
+ERROR - 2015-08-07 10:31:28 --> Could not find the language key : "degree"
+>>>>>>> 6ec48ef8efb963ccf33d6797892cebdc851a4842

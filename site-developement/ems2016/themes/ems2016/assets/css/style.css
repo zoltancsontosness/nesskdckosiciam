@@ -243,7 +243,6 @@ img{
 ------------------------------------- */
 
 h1,h2,h3,h4,h5{
-  font-family: 'Droid Serif', serif;
   color: #212428;
   line-height: 1.3em;
   font-weight: bold;
@@ -1659,7 +1658,7 @@ p a:hover{
   background: #00ada7;
 }
 
-.button.business{
+.button.events{
   background: #13b7ff;
 }
 
@@ -1667,7 +1666,7 @@ p a:hover{
   background: #feb41c;
 }
 
-.button.fashion{
+.button.articles{
   background: #a13d63;
 }
 
@@ -1675,7 +1674,7 @@ p a:hover{
   background: #ec2913;
 }
 
-.button.food{
+.button.news{
   background: #96ca2d;
 }
 
@@ -2649,6 +2648,7 @@ p a:hover{
     color: #ffffff;
   }
 
+
   .tabs_content.side_bar_tabs.comment_tabs ul li{
     margin-top: 0;
   }
@@ -2662,15 +2662,19 @@ p a:hover{
       background: #f2f2f2;
       color: #3e454c;
       text-align: center;
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: lighter;
       margin-right: 15px;
       float: left;
+      width: 79px;
 
       -webkit-transition: all .4s ease;
       -o-transition: all .4s ease;
       transition: all .4s ease;
     }
+
+
 
 .social_tabs > [id*="tab-"] p{
   float: left;
@@ -2845,9 +2849,13 @@ p a:hover{
   
   .weather_widget .date_list{
     text-align: center;
-    background: #52585e;
+    background: #3e454c;
     padding: 10px 0;
   }
+
+.info_list {
+  background: #52585e !important;
+}
 
     .weather_widget .date_list ul li{
       float: left;
