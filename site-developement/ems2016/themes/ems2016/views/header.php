@@ -18,7 +18,6 @@
 
   <!-- Theme styles -->
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/style.css" />
   <link rel="stylesheet" href="<ion:theme_url/>assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="<ion:theme_url/>assets/css/meteocons.css">
@@ -32,6 +31,9 @@
   <!--modernizr-->
   <script src="<ion:theme_url/>assets/js/jquery.modernizr.js"></script>
   <script src="<ion:theme_url/>assets/js/jquery-2.1.0.min.js"></script>
+  <script src="<ion:theme_url/>assets/js/bootstrap.js"></script>
+    <!-- Date & Time picker -->
+  <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/datepicker/css/bootstrap-datetimepicker.css" />
 </head>
 
 <body>

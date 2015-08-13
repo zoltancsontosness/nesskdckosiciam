@@ -2,7 +2,7 @@
 
   <div class="section_2">
     <ul class="social_media_list button-list row">
-      <li class="col-xs-12 col-md-4 col-md-offset-2">
+      <li class="col-xs-12 col-md-4">
         <a href="<ion:page:url id="pridanie-sportoviska"/>" class="btn-block rss">
           <i class="fa fa-pencil"></i>
           <div><ion:page:title id="pridanie-sportoviska"/></div>
@@ -18,16 +18,14 @@
           <p><ion:page:subtitle id="pridanie-podujatia"/></p>
         </a>
       </li>
-      <!--
       <li class="col-xs-12 col-md-4">
-        <a href="#" class="btn-block bg-yellowgreen">
+        <a href="<ion:page:url id="pridanie-klubu"/>" class="btn-block bg-seagreen">
           <i class="fa fa-pencil"></i>
-          <div>Pridanie klubu</div>
+          <div><ion:page:title id="pridanie-klubu"/></div>
           <br />
-          <p>Registrujte klub</p>
+          <p><ion:page:subtitle id="pridanie-klubu"/></p>
         </a>
       </li>
-      -->
     </ul>      
   </div>
   <div class="section_2 row">

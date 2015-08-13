@@ -5791,11 +5791,6 @@ input::-ms-clear {
   margin-bottom: 0;
 }
 
-[class*="form_type_"] .control-group table tr td:last-child,
-[class*="form_type_"] .control-group table{
-  width: 100%;
-}
-
   .form_type_1 .control-group .control-label{
     width: 95px;
     float: left;
@@ -5846,16 +5841,16 @@ input::-ms-clear {
     }
 
     .form_type_1 .control-group.input_profiles .controls table tr td{
-      width: 50%;
       text-align: center;
       font-size: 14px;
       font-weight: normal;
     }
-
+/*
     .form_type_1 .control-group.input_profiles .controls table tr td:last-child{
       padding: 10px 0 0 10px;
       text-align: left;
     }
+    */
 
     .form_type_1 .control-group.input_profiles .controls table.warning tr td,
     .form_type_1 .control-group.input_profiles .controls table.warning tr td input,
@@ -5893,15 +5888,16 @@ input::-ms-clear {
     padding-bottom: 5px;
     padding-top: 0;
   }
-
+/*
   .form_type_1.type_2 .control-group.input_profiles .controls table tr td:last-child{
     padding: 0;
   }
+  
 
   .form_type_1.type_2 .control-group.input_profiles .controls table tr:last-child td{
     text-align: left;
     padding-top: 5px;
-  }
+  }*/
 
 /* -----------------------------------
 
