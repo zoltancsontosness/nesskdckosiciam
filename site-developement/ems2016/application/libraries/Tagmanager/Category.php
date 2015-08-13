@@ -163,6 +163,7 @@ class TagManager_Category extends TagManager
 	 */
 	public static function tag_categories(FTL_Binding $tag)
 	{
+    $order_by_nb = (bool)$tag->getAttribute('order_by_nb');
 		// Tag cache
 		if (($str = self::get_cache($tag)) !== FALSE)
 			return $str;
@@ -174,6 +175,11 @@ class TagManager_Category extends TagManager
 		$tag->set('categories', $categories);
 		$tag->set('count', $count);
 
+    // Sorting categories by article_nb
+    if (!is_null($order_by_nb) && $order_by_nb) {
+      uasort($categories,'self::compare_nb');
+    }
+    
 		// Child tags loop and expand
 		foreach($categories as $key => $category)
 		{
@@ -194,6 +200,13 @@ class TagManager_Category extends TagManager
 
 		return $output;
 	}
+  
+  private static function compare_nb($a, $b) {
+    if ($a == $b) {
+        return 0;
+    }
+    return ($a['nb'] > $b['nb']) ? -1 : 1;
+  }
 
 
 	// ------------------------------------------------------------------------
