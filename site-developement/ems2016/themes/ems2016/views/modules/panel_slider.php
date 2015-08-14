@@ -32,7 +32,7 @@
                             </div>
                           </div>
                           <a href="<ion:url />"><h2><ion:title /></h2></a>
-                          <ion:content characters="200" />
+                          <ion:content characters="200" function="strip_tags"/>
                         </div>
                       </div>
                     </div>
