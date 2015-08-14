@@ -54,6 +54,14 @@ $config['forms'] = array
                 'rules' => 'trim',
                 'label' => 'form_label_photo'
             ),
+            'rules_1' => array(
+                'rules' => 'required|xss_clean',
+                'label' => 'form_label_rules_1'
+            ),
+            'rules_2' => array(
+                'rules' => 'xss_clean|required',
+                'label' => 'form_label_rules_2'
+            ),
             
         )
     ),
@@ -91,10 +99,6 @@ $config['forms'] = array
                 'rules' => 'xss_clean|required',
                 'label' => 'form_label_date',
             ),
-            'time' => array(
-                'rules' => 'xss_clean|required',
-                'label' => 'form_label_time',
-            ),
             'length' => array(
                 'rules' => 'xss_clean|required',
                 'label' => 'form_label_length',
@@ -110,6 +114,58 @@ $config['forms'] = array
             'desc' => array(
                 'rules' => 'xss_clean|required|min_length[5]',
                 'label' => 'form_label_desc',
+            ),
+            'rules_1' => array(
+                'rules' => 'required|xss_clean',
+                'label' => 'form_label_rules_1'
+            ),
+            'rules_2' => array(
+                'rules' => 'xss_clean|required',
+                'label' => 'form_label_rules_2'
+            ),
+        )
+    ),
+
+    //CLUBS
+    'clubs' => array
+    (
+        'process' => 'TagManager_Clubs::process_data',
+        'redirect' => 'referer',
+        'messages' => array(
+            'success' => 'new_article_message_success',
+            'error' => 'new_article_message_error',
+        ),
+
+        'fields' => array
+        (
+            'organizer' => array
+            (
+                'rules' => 'trim|required|min_length[3]|xss_clean',
+                'label' => 'form_label_title',
+            ),
+            'ico' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'club_name' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'webpage' => array(
+                'rules' => 'xss_clean',
+                'label' => 'form_label_webpage',
+            ),
+            'desc' => array(
+                'rules' => 'xss_clean|required|min_length[5]',
+                'label' => 'form_label_desc',
+            ),
+            'rules_1' => array(
+                'rules' => 'required|xss_clean',
+                'label' => 'form_label_rules_1'
+            ),
+            'rules_2' => array(
+                'rules' => 'xss_clean|required',
+                'label' => 'form_label_rules_2'
             ),
         )
     ),

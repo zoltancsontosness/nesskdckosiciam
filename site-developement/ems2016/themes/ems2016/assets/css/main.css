@@ -183,8 +183,12 @@ body {
   margin-bottom: 0;
 }
 
-input[type="checkbox"] + label {
-  margin-bottom: 20px;
+.control-group > label {
+  margin-bottom: 0;
+}
+
+.error-input.alert-danger {
+  background: #ffe8ba;
 }
 /* ------------------------------------
   10. Icons
