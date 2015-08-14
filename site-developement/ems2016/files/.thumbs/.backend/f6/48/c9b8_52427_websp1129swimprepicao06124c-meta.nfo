@@ -1,0 +1,113 @@
+<?php
+
+// legal URL: /pictures/52427_websp1129swimprepicao.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 784806,
+  8 => 1439553309,
+  9 => 1439553311,
+  10 => 1439553309,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 784806,
+  'atime' => 1439553309,
+  'mtime' => 1439553311,
+  'ctime' => 1439553309,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 784806,
+    'filename' => '52427_websp1129swimprepicao.jpg',
+    'filepath' => 'C:/xampp/htdocs/ems2016/nesskdckosiciam/site-developement/ems2016/files/pictures',
+    'filenamepath' => 'C:/xampp/htdocs/ems2016/nesskdckosiciam/site-developement/ems2016/files/pictures/52427_websp1129swimprepicao.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 784806,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 1200,
+      'resolution_y' => 822,
+      'compression_ratio' => 0.265208840227088404883915018217521719634532928466796875,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'img_info' => 
+  array (
+    'width' => 120,
+    'height' => 82,
+    'mime' => 'image/jpeg',
+    'ext' => 'jpeg',
+    'fileinfo' => 
+    array (
+      'memory_limit' => 268435456,
+      'mem_in_use' => 5569032,
+      'path' => 'C:\\xampp\\htdocs\\ems2016\\nesskdckosiciam\\site-developement\\ems2016/files/.thumbs/.backend/f6/48/c9b8_52427_websp1129swimprepicao06124c-500x500.jpg',
+      'filesize' => 55263,
+      'imageinfo' => 
+      array (
+        0 => 500,
+        1 => 343,
+        2 => 2,
+        3 => 'width="500" height="343"',
+        'bits' => 8,
+        'channels' => 3,
+        'mime' => 'image/jpeg',
+      ),
+      'needed' => 863851.85185185191221535205841064453125,
+      'usage_guestimate' => 1209392.59259259258396923542022705078125,
+      'usage_min_advised' => 6778424.592592592351138591766357421875,
+      'will_fit' => true,
+    ),
+  ),
+  'memory used' => '11.4 MB',
+  'memory estimated' => '1.2 MB',
+  'memory suggested' => '6.8 MB',
+  'thumb250_direct' => '/ems2016/nesskdckosiciam/site-developement/ems2016/files/.thumbs/.backend/f6/48/c9b8_52427_websp1129swimprepicao06124c-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 500,
+    1 => 343,
+    2 => 2,
+    3 => 'width="500" height="343"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ems2016/nesskdckosiciam/site-developement/ems2016/files/.thumbs/.backend/f6/48/c9b8_52427_websp1129swimprepicao06124c-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 120,
+    1 => 82,
+    2 => 2,
+    3 => 'width="120" height="82"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

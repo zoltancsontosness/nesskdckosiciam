@@ -11,7 +11,7 @@
           <div class="item">
             
             <div class="scale_image_container">
-              <ion:medias type="picture" limit="1">
+              <ion:medias type="picture" limit="1" size="555,374" method="adaptive">
                 <a href="<ion:url />">
                   <img src="<ion:media:src />" alt="<ion:media:title />" class="scale_image">
                 </a>

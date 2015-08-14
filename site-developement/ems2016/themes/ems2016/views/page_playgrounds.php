@@ -52,9 +52,11 @@
           </div>
         </div>
 
-        <div class="pagination_block">
-          <ion:page:articles:pagination pagination="24" />
-        </div>
+        <?php if('<ion:articles:pagination pagination="24" />' != ''): ?>
+          <div class="pagination_block">
+            <ion:articles:pagination pagination="24" />
+          </div>
+          <?php endif; ?>
       </ion:page>
     </div>
   </div>

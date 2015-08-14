@@ -5,7 +5,9 @@
 <div class="row">
   <div class="col-lg-4 col-md-4 col-sm-12">
     <ion:partial view="modules/panel_categories" count="2" />
-    <ion:partial view="modules/panel_socials" />
+    <div class="hidden-xs">
+      <ion:partial view="modules/panel_socials" />
+    </div>
   </div>
 
   <div class="col-lg-8 col-md-8 col-sm-12">
@@ -25,6 +27,10 @@
 
   <div class="col-sm-6 col-md-4">
     <!--CALENDAR HERE-->
+  </div>
+
+  <div class="col-xs-12 visible-xs">
+    <ion:partial view="modules/panel_socials" />
   </div>
 </div>
 
