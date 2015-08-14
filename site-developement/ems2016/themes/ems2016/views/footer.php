@@ -1,6 +1,7 @@
         </div> <!-- /.container -->
-      </div> <!-- /.content.section_5 -->     
-      <!-- FOOTER -->
+      </div> <!-- /.content.section_5 -->           
+    </div> <!-- /.wrapper-container -->
+    <!-- FOOTER -->
       <footer class="footer footer_3">
         <div class="footer_bottom_part">
         <div class="container clearfix">
@@ -37,7 +38,5 @@
       <script src="<ion:theme_url/>assets/js/plugins.js"></script>
       <script src="<ion:theme_url/>assets/js/script.js"></script>
       <script src="<ion:theme_url/>assets/js/custom.js"></script>
-      
-    </div> <!-- /.wrapper-container -->
   </body>
 </html>

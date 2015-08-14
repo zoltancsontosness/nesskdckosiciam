@@ -6025,6 +6025,10 @@ li:hover .tooltip,a:hover .tooltip,button:hover .tooltip{
 .footer{
   background: #3e454c;
   color: #f2f2f2;
+      position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 68px;
 }
 
 .footer-main{
