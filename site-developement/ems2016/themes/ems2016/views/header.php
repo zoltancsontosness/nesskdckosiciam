@@ -37,7 +37,27 @@
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/datepicker/css/bootstrap-datetimepicker.css" />
 </head>
 
-<body>
+<body class="wide_layout">
+  <div class="loader"></div>
+  <!--[if (lt IE 9) | IE 9]>
+    <div class="ie_message_block">
+      <div class="container">
+        <div class="wrapper">
+          <div class="clearfix"><i class="fa fa-exclamation-triangle f_left"></i><b>Attention!</b> This page may   not display correctly. You are using an outdated version of Internet Explorer. For a faster, safer browsing experience.<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode" class="button button_type_3 button_grey_light f_right" target="_blank">Update Now!</a></div>
+        </div>
+      </div>
+    </div>
+  <![endif]-->
+
+  <!--cookie-->
+  <!-- <div class="cookie">
+          <div class="container">
+            <div class="clearfix">
+              <span>Please note this website requires cookies in order to function correctly, they do not store any specific information about you personally.</span>
+              <div class="f_right"><a href="#" class="button button_type_3 button_orange">Accept Cookies</a><a href="#" class="button button_type_3 button_grey_light">Read More</a></div>
+            </div>
+          </div>
+        </div>-->
   <div class="wrapper_container">
 
     <!-- Header -->
@@ -53,7 +73,6 @@
           </div>
         </div>
       </div>
-      <div class="spacer"></div>
       <div class="menu_wrap">
         <div class="menu_border">
           <div class="container clearfix menu_border_wrap">
