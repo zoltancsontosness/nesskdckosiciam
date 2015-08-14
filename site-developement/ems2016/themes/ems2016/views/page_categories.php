@@ -50,9 +50,10 @@
           <h2 class="section_title section_title_big"><ion:page:title /></h2>
           <ion:page id="playgrounds">
             <div class="margin-top-20">
-              <ion:categories>
+              <ion:categories order_by_nb="true">
                 <a class="button button_type_2 button_grey_light" href="<ion:category:url />">
                   <ion:category:title tag="span" />
+                  <span class="badge"><ion:category:nb_articles /></span>
                 </a>
               </ion:categories>
             </div>

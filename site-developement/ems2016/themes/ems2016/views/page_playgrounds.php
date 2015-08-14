@@ -47,9 +47,6 @@
                             <a href="<ion:url />" class="button banner_button politics">
                               <ion:categories:list separator=", " />
                             </a>
-                            <a href="#" class="icon_box">
-                              <i class="fa fa-picture-o"></i>
-                            </a>
                           </div>
                         </div>
                         <a href="<ion:url />">

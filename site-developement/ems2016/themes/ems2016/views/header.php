@@ -26,6 +26,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/owl.carousel.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/flexslider/flexslider.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/animate.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/jackbox.min.css" />
 
   <!-- Main styles -->
   <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet" />
@@ -64,5 +65,16 @@
         </div>
       </div>
     </header>
+    
+    <ion:attr key="breadcrumb" is="true">
+    <div class="breadcrumb">
+      <div class="container">
+        <div>
+          <ion:page:breadcrumb article="true" child-tag="span" separator=" / " home="true"/>
+        </div>
+      </div>
+    </div>
+    </ion:attr>
+    
     <div class="content section_5">
       <div class="container">
