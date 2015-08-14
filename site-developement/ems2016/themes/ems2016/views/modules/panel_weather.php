@@ -1,4 +1,4 @@
-<div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="1150">
+<div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
   <h3 class="section_title"><ion:lang key='asset_title'/></h3>
   <div class="weather_widget">
     <div class="weather_info clearfix">

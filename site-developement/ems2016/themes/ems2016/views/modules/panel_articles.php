@@ -1,4 +1,4 @@
-<div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="1150">
+<div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="500">
   <div class="tabs">
 
     <div class="clearfix tabs_conrainer">

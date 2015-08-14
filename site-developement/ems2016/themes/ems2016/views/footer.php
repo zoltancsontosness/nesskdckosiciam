@@ -30,6 +30,7 @@
       <script src="<ion:theme_url/>assets/js/jflickrfeed.js"></script>
       <script src="<ion:theme_url/>assets/js/jackbox-packed.min.js"></script>
       <script src="<ion:theme_url/>assets/js/retina.js"></script>
+      <script src="<ion:theme_url/>assets/js/apear.js"></script>
       <script src="<ion:theme_url/>assets/plugins/flexslider/jquery.flexslider-min.js"></script>
       <script src="<ion:theme_url/>assets/js/owl.carousel.min.js"></script>
       <script src="<ion:theme_url/>assets/plugins/twitter/jquery.tweet.min.js"></script>
