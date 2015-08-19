@@ -902,10 +902,10 @@
 				$("#zoom_image").elevateZoom({
 					gallery:'thumbnails',
 					galleryActiveClass: 'active',
-					zoomType: "inner",
-					cursor: "crosshair",
+					zoomType: "none",
+					cursor: "cursor",
 					responsive:true,
-				    zoomWindowFadeIn: 500,
+				  zoomWindowFadeIn: 500,
 					zoomWindowFadeOut: 500,
 					easing:true,
 					lensFadeIn: 500,

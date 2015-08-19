@@ -13,8 +13,13 @@
   </title>
   <meta name="description" content="<ion:meta_description />" />
   <meta name="keywords" content="<ion:meta_keywords />" />
+
+  <!-- ICONS -->
+  <link rel="shortcut icon" href="<ion:theme_url/>assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<ion:theme_url/>assets/img/favicon.ico" type="image/x-icon">
+
   <!-- FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
   <!-- Theme styles -->
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/bootstrap.css">
@@ -26,6 +31,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/flexslider/flexslider.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/animate.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/jackbox.min.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/jquery.fancybox-1.3.4.css" />
 
   <!-- Main styles -->
   <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet" />
@@ -33,7 +39,7 @@
   <script src="<ion:theme_url/>assets/js/jquery.modernizr.js"></script>
   <script src="<ion:theme_url/>assets/js/jquery-2.1.0.min.js"></script>
   <script src="<ion:theme_url/>assets/js/bootstrap.js"></script>
-    <!-- Date & Time picker -->
+  <!-- Date & Time picker -->
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/datepicker/css/bootstrap-datetimepicker.css" />
 </head>
 
@@ -86,16 +92,16 @@
         </div>
       </div>
     </header>
-    
+
     <ion:attr key="breadcrumb" is="true">
-    <div class="breadcrumb">
-      <div class="container">
-        <div>
-          <ion:page:breadcrumb article="true" child-tag="span" separator=" / " home="true"/>
+      <div class="breadcrumb">
+        <div class="container">
+          <div>
+            <ion:page:breadcrumb article="true" child-tag="span" separator=" / " home="true" />
+          </div>
         </div>
       </div>
-    </div>
     </ion:attr>
-    
+
     <div class="content section_5">
       <div class="container">

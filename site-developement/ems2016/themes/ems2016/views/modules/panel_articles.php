@@ -38,8 +38,8 @@
             </ul>
 
             <div class="col-xs-12 margin-top-20" >
-              <a href="<ion:url/>" class="button button_type_3 button_grey pull-right">
-                Zobraziť všetky <ion:title /> <i class="fa fa-angle-right fa-fw"></i>
+              <a href="<ion:url/>" class="button button_type_icon_small button_grey pull-right">
+                Zobraziť všetky <ion:title /> <i class="fa fa-angle-right"></i>
               </a>
             </div>
           </div>

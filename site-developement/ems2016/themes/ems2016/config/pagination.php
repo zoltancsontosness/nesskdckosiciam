@@ -2,7 +2,7 @@
 
     $config['pagination'] = array
     (
-        'full_tag_open' => 		'<ul class="pagination">',
+        'full_tag_open' => 		'<ul class="pagination clearfix">',
         'full_tag_close' => 	'</ul>',
         'first_tag_open' => 	'<li>',
         'first_tag_close' => 	'</li>',

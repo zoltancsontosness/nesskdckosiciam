@@ -28,12 +28,13 @@
       <!-- Scripts -->
       <script src="<ion:theme_url/>assets/js/jquery-ui.min.js"></script>
       <script src="<ion:theme_url/>assets/js/jquery.queryloader2.min.js"></script>
-      <script src="<ion:theme_url/>assets/js/jflickrfeed.js"></script>
-      <script src="<ion:theme_url/>assets/js/jackbox-packed.min.js"></script>
+      <script src="<ion:theme_url/>assets/js/owl.carousel.min.js"></script>
       <script src="<ion:theme_url/>assets/js/retina.js"></script>
+      <script src="<ion:theme_url/>assets/js/jquery.fancybox-1.3.4.js"></script>
+      <script src="<ion:theme_url/>assets/js/elevatezoom.min.js"></script>
+      <script src="<ion:theme_url/>assets/js/jackbox-packed.min.js"></script>
       <script src="<ion:theme_url/>assets/js/apear.js"></script>
       <script src="<ion:theme_url/>assets/plugins/flexslider/jquery.flexslider-min.js"></script>
-      <script src="<ion:theme_url/>assets/js/owl.carousel.min.js"></script>
       <script src="<ion:theme_url/>assets/plugins/twitter/jquery.tweet.min.js"></script>
       <script src="<ion:theme_url/>assets/js/plugins.js"></script>
       <script src="<ion:theme_url/>assets/js/script.js"></script>

@@ -1509,7 +1509,7 @@ p a:hover{
   right: 0;
   top: 0;
   height: 100%;
-  font-weight: bold;
+/*  font-weight: bold;*/
   font-style: inherit;
 
   -webkit-transition: background .4s ease;

@@ -216,3 +216,16 @@ body {
 /* ------------------------------------
   11. Footer
 -------------------------------------*/
+.table-vertical tr td:first-child {
+  font-weight: bold !important;
+}
+
+.btn-fb {
+            background: #edeff6;
+          color: #4c66a3;
+}
+
+.btn-fb:hover {
+            background: #4c66a3;
+color: #fff;
+}

@@ -27,8 +27,8 @@
 
   <ion:page id="categories">
     <?php if($n < $categories_count): ?>
-      <a href="<ion:url />" class="button button_type_2 button_grey btn-block margin-top-20">
-        <ion:lang key="btn_allcategories" /><i class="fa fa-angle-right fa-fw"></i>
+      <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block margin-top-20">
+        <ion:lang key="btn_allcategories" /><i class="fa fa-list fa-lg"></i>
       </a>
       <?php endif; ?>
   </ion:page>
