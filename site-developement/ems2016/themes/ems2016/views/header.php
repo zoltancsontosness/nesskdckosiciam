@@ -35,6 +35,7 @@
   <script src="<ion:theme_url/>assets/js/bootstrap.js"></script>
     <!-- Date & Time picker -->
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/datepicker/css/bootstrap-datetimepicker.css" />
+  <script async src='//www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body class="wide_layout">

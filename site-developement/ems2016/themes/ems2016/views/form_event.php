@@ -14,7 +14,7 @@
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12 col-sm-6">
-          <label class="control-label">Názov organizátora:</label>
+          <label class="control-label">Meno organizátora:</label>
           <div class="controls">
             <input name="organizer" type="text">
             <ion:form:events:error:organizer tag="p" class="error-input alert-danger" />
@@ -83,6 +83,7 @@
       <div class="row">
         <div class="control-group input_profiles col-xs-12">
           <label class="control-label">Príloha:</label>
+          <small class="help-block">(povolené prípony len <span class="warning">jpg</span>, <span class="warning">jpeg</span> a <span class="warning">png</span> o veľkosti max. 1MB)</small>
           <div class="controls">
             <!-- Foto 1 -->
             <div class="input-group control-group input-profiles">
@@ -112,6 +113,16 @@
           <ion:form:events:error:rules_2 tag="p" class="error-input alert-danger" />
         </div>   
       </div>
+      <div class="row">
+        <div class="control-group input_profiles col-xs-12">
+          <div class="g-recaptcha" data-sitekey="6Le-dAsTAAAAAMFkOVKzrWM84QF5t0BVw6wTL5Gn"></div>
+        </div>
+      </div>
+      <?php if(isset($_POST['g-recaptcha-response'])): ?>
+        <?php if($_POST['g-recaptcha-response'] === ""): ?>
+          <p class="error-input alert-danger">Captcha nebola vyplnená</p>
+        <?php endif; ?>
+      <?php endif; ?>
       <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať športovisko</button>
     </form>
   </div>

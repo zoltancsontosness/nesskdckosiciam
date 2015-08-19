@@ -18,6 +18,9 @@
 -------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Sarala:400,700&subset=latin,latin-ext);
+html {
+  position: relative;
+}
 body {
   font-family: 'Sarala', sans-serif;
 }
@@ -46,6 +49,13 @@ body {
 /* ------------------------------------
   2. Typography 
 -------------------------------------*/
+.title-success {
+  font-size: 67px;
+  line-height: 1.1;
+  color: #ff680d;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
 
 .text-center {
   text-align: center;
@@ -81,6 +91,46 @@ body {
 /* ------------------------------------
   3. Header 
 -------------------------------------*/
+.main_menu.menu_var2 > ul > li:nth-child(1) > a.current {
+  background:#ff680d;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(2) > a.current {
+  background:#13b7ff;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(3) > a.current {
+  background:#854ec2;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(4) > a.current {
+  background:#feb41c;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(5) > a.current {
+  background:#ec2913;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(6) > a.current {
+  background:#00ada7;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(7) > a.current {
+  background:#197bbe;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(8) > a.current {
+  background:#a13d63;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(9) > a.current {
+  background:#96ca2d;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(10) > a.current {
+  background:#d1008b;
+}
+
 
 
 /* ------------------------------------
@@ -205,6 +255,7 @@ body {
 
 .error-input.alert-danger {
   background: #ffe8ba;
+  margin-bottom: 10px;
 }
 
 
@@ -216,3 +267,8 @@ body {
 /* ------------------------------------
   11. Footer
 -------------------------------------*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
