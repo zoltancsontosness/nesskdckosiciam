@@ -21,7 +21,7 @@
         </div>
 
         <h2 class="section_title section_title_big"><ion:title /></h2>
-        <div class="text_post_block">
+        <div class="text_post_block text-content">
           <div class="scale_image_container">
             <ion:medias limit="1" type="picture">
               <img src="<ion:media:src size='750,375' method='adaptive'/>" alt="<ion:media:title />">
@@ -30,12 +30,13 @@
           <ion:content tag="p" />
         </div>
 
-        <div class="text_post_section post_controls">
+        <div class="text_post_section post_controls hidden-xs">
           <div class="clearfix">
             <ion:prev>
               <div class="prev_post">
                 <a href="<ion:url />" class="button button_type_icon_medium button_grey_light">
-                  <ion:lang key="btn_previous_post" /><i class="fa fa-angle-left"></i></a>
+                  <ion:lang key="btn_previous_post" />
+                  <i class="fa fa-angle-left"></i></a>
                 <a href="<ion:url />"><h5><ion:title characters="50" /></h5></a>
               </div>
             </ion:prev>
@@ -56,10 +57,12 @@
               <div id="owl-demo-10">
                 <ion:medias type="picture">
                   <div class="item scale_image_container with_buttons">
-                    <a href="#"><img src="<ion:media:src size='555,374' method='adaptive' />" alt="<ion:media:title/>" class="scale_image"></a>
-                    <div class="open_buttons clearfix">
+                    <a href="<ion:media:src />" class="">
+                      <img src="<ion:media:src size='555,374' method='adaptive' />" alt="<ion:media:title/>" class="scale_image">
+                    </a>
+                    <div class="open_buttons clearfix hidden-xs">
                       <div class="f_left">
-                        <a href="<ion:media:src />" role="button" class="jackbox jackbox_button button button_grey_light" data-group="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
+                        <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
                       </div>
                     </div>
                   </div>
@@ -71,8 +74,9 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <!--      SIDEBAR-->
+      <ion:partial view="modules/panel_related_articles" />
       <ion:partial view="modules/panel_socials" />
+      <ion:partial view="modules/panel_gallery" />
     </div>
   </div>
 

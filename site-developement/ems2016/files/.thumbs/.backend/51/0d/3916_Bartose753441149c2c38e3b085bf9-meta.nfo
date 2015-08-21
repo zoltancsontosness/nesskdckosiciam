@@ -1,0 +1,264 @@
+<?php
+
+// legal URL: /pictures/Bartos.jpg
+
+$statdata = array (
+  0 => 2,
+  1 => 0,
+  2 => 33206,
+  3 => 1,
+  4 => 0,
+  5 => 0,
+  6 => 2,
+  7 => 76239,
+  8 => 1439556746,
+  9 => 1439541461,
+  10 => 1439556746,
+  11 => -1,
+  12 => -1,
+  'dev' => 2,
+  'ino' => 0,
+  'mode' => 33206,
+  'nlink' => 1,
+  'uid' => 0,
+  'gid' => 0,
+  'rdev' => 2,
+  'size' => 76239,
+  'atime' => 1439556746,
+  'mtime' => 1439541461,
+  'ctime' => 1439556746,
+  'blksize' => -1,
+  'blocks' => -1,
+);
+
+$data = array (
+  'mime_type' => 'image/jpeg',
+  'analysis' => 
+  array (
+    'GETID3_VERSION' => '1.9.3-20111213',
+    'filesize' => 76239,
+    'filename' => 'Bartos.jpg',
+    'filepath' => 'C:/xampp/htdocs/ems2016/nesskdckosiciam/site-developement/ems2016/files/pictures',
+    'filenamepath' => 'C:/xampp/htdocs/ems2016/nesskdckosiciam/site-developement/ems2016/files/pictures/Bartos.jpg',
+    'avdataoffset' => 0,
+    'avdataend' => 76239,
+    'fileformat' => 'jpg',
+    'video' => 
+    array (
+      'dataformat' => 'jpg',
+      'lossless' => false,
+      'bits_per_sample' => 24,
+      'pixel_aspect_ratio' => 1,
+      'resolution_x' => 300,
+      'resolution_y' => 450,
+      'compression_ratio' => 0.188244444444444436470575965358875691890716552734375,
+    ),
+    'encoding' => 'UTF-8',
+    'mime_type' => 'image/jpeg',
+    'iptc' => 
+    array (
+      'IPTCApplication' => 
+      array (
+        'ObjectName' => 
+        array (
+          0 => ' ',
+        ),
+      ),
+    ),
+    'jpg' => 
+    array (
+      'exif' => 
+      array (
+        'FILE' => 
+        array (
+          'FileName' => 'Bartos.jpg',
+          'FileDateTime' => 1439541461,
+          'FileSize' => 76239,
+          'FileType' => 2,
+          'MimeType' => 'image/jpeg',
+          'SectionsFound' => 'ANY_TAG, IFD0, THUMBNAIL, EXIF, GPS, INTEROP',
+        ),
+        'COMPUTED' => 
+        array (
+          'html' => 'width="300" height="450"',
+          'Height' => 450,
+          'Width' => 300,
+          'IsColor' => 1,
+          'ByteOrderMotorola' => 0,
+          'CCDWidth' => '2mm',
+          'ApertureFNumber' => 'f/4.0',
+          'UserComment' => NULL,
+          'UserCommentEncoding' => 'UNDEFINED',
+          'Thumbnail.FileType' => 2,
+          'Thumbnail.MimeType' => 'image/jpeg',
+        ),
+        'IFD0' => 
+        array (
+          'Make' => 'Canon',
+          'Model' => 'Canon EOS-1D Mark III',
+          'Orientation' => 1,
+          'XResolution' => 72,
+          'YResolution' => 72,
+          'ResolutionUnit' => 2,
+          'Software' => 'ACD Systems Digital Imaging',
+          'DateTime' => '2011:08:22 21:19:37',
+          'YCbCrPositioning' => 1,
+          'Exif_IFD_Pointer' => 238,
+          'GPS_IFD_Pointer' => 1012,
+        ),
+        'THUMBNAIL' => 
+        array (
+          'Compression' => 6,
+          'JPEGInterchangeFormat' => 1080,
+          'JPEGInterchangeFormatLength' => 6854,
+        ),
+        'EXIF' => 
+        array (
+          'ExposureTime' => 0.008000000000000000166533453693773481063544750213623046875,
+          'FNumber' => 4,
+          'ExposureProgram' => 3,
+          'ISOSpeedRatings' => 1600,
+          'ExifVersion' => 221,
+          'DateTimeOriginal' => '2011:04:07 19:55:48',
+          'DateTimeDigitized' => '2011:04:07 19:55:48',
+          'ComponentsConfiguration' => '',
+          'ShutterSpeedValue' => 7,
+          'ApertureValue' => 4,
+          'ExposureBiasValue' => 0,
+          'MeteringMode' => 5,
+          'Flash' => 0,
+          'FocalLength' => 24,
+          'UserComment' => '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '' . "\0" . '',
+          'SubSecTime' => 151,
+          'SubSecTimeOriginal' => 0,
+          'SubSecTimeDigitized' => 0,
+          'FlashPixVersion' => 100,
+          'ColorSpace' => 1,
+          'ExifImageWidth' => 300,
+          'ExifImageLength' => 450,
+          'InteroperabilityOffset' => 966,
+          'FocalPlaneXResolution' => 3512.1951219512193347327411174774169921875,
+          'FocalPlaneYResolution' => 3521.73913043478250983753241598606109619140625,
+          'FocalPlaneResolutionUnit' => 2,
+          'CustomRendered' => 0,
+          'ExposureMode' => 0,
+          'WhiteBalance' => 0,
+          'SceneCaptureType' => 0,
+        ),
+        'GPS' => 
+        array (
+          'GPSVersion' => '2.2.0.0',
+          'computed' => 
+          array (
+            'version' => 'v50.46.50.46',
+          ),
+        ),
+        'INTEROP' => 
+        array (
+          'InterOperabilityIndex' => 'R98',
+          'InterOperabilityVersion' => '0100',
+        ),
+      ),
+    ),
+    'xmp' => 
+    array (
+      'tiff' => 
+      array (
+        'Orientation' => 1,
+        'YCbCrPositioning' => 2,
+        'XResolution' => 72,
+        'YResolution' => 72,
+        'ResolutionUnit' => 2,
+        'Make' => 'Canon',
+        'Model' => 'Canon EOS-1D Mark III',
+      ),
+      'xap' => 
+      array (
+        'ModifyDate' => '2011-04-12T19:39:51.0+1:00',
+        'CreateDate' => '2011-04-12T20:39:51+02:00',
+        'MetadataDate' => '2011-04-12T20:39:51+02:00',
+        'CreatorTool' => 'Adobe Photoshop CS3 Windows',
+      ),
+      'exif' => 
+      array (
+        'ExifVersion' => 221,
+        'FlashpixVersion' => 100,
+        'ColorSpace' => 1,
+        'PixelXDimension' => 2592,
+        'PixelYDimension' => 3888,
+        'DateTimeOriginal' => '2011-04-07T19:55:48.0+1:00',
+        'DateTimeDigitized' => '2011-04-07T19:55:48.0+1:00',
+        'ExposureTime' => 0.008000000000000000166533453693773481063544750213623046875,
+        'FNumber' => 4,
+        'ExposureProgram' => 3,
+        'ShutterSpeedValue' => 7,
+        'ApertureValue' => 4,
+        'ExposureBiasValue' => 0,
+        'MeteringMode' => 5,
+        'FocalLength' => 24,
+        'FocalPlaneXResolution' => 3512.1951219512193347327411174774169921875,
+        'FocalPlaneYResolution' => 3521.73913043478250983753241598606109619140625,
+        'FocalPlaneResolutionUnit' => 2,
+        'CustomRendered' => 0,
+        'ExposureMode' => 0,
+        'WhiteBalance' => 0,
+        'SceneCaptureType' => 0,
+        'GPSVersionID' => 2.20000000000000017763568394002504646778106689453125,
+        'Fired' => 'False',
+        'Return' => 0,
+        'Mode' => 0,
+        'Function' => 'False',
+        'RedEyeMode' => 'False',
+        'ISOSpeedRatings' => 
+        array (
+          0 => '1600',
+        ),
+        'ComponentsConfiguration' => 
+        array (
+          0 => '1',
+        ),
+      ),
+      'dc' => 
+      array (
+        'format' => 'image/jpeg',
+        'title' => 
+        array (
+          0 => ' ',
+        ),
+      ),
+      'photoshop' => 
+      array (
+        'History' => '',
+      ),
+      'xapMM' => 
+      array (
+        'InstanceID' => 'uuid:15B06C283465E011A0409534923C5141',
+        'DocumentID' => 'uuid:14B06C283465E011A0409534923C5141',
+        'DerivedFrom' => '',
+      ),
+    ),
+  ),
+  'mime_type from file extension' => 'image/jpeg',
+  'thumb250_direct' => '/ems2016/nesskdckosiciam/site-developement/ems2016/files/.thumbs/.backend/51/0d/3916_Bartose753441149c2c38e3b085bf9-500x500.jpg',
+  'thumb250_info' => 
+  array (
+    0 => 300,
+    1 => 450,
+    2 => 2,
+    3 => 'width="300" height="450"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+  'thumb48_direct' => '/ems2016/nesskdckosiciam/site-developement/ems2016/files/.thumbs/.backend/51/0d/3916_Bartose753441149c2c38e3b085bf9-120x120.jpg',
+  'thumb48_info' => 
+  array (
+    0 => 80,
+    1 => 120,
+    2 => 2,
+    3 => 'width="80" height="120"',
+    'bits' => 8,
+    'channels' => 3,
+    'mime' => 'image/jpeg',
+  ),
+);

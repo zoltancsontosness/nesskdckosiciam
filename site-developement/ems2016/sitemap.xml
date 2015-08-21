@@ -40,14 +40,14 @@
 
 	<url>
 		<loc>http://localhost/ems2016/nesskdckosiciam/site-developement/ems2016/sportoviska</loc>
-		<lastmod>2015-08-14T09:25:03+02:00</lastmod>
+		<lastmod>2015-08-17T12:58:17+02:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 
 	<url>
 		<loc>http://localhost/ems2016/nesskdckosiciam/site-developement/ems2016/podujatia</loc>
-		<lastmod>2015-08-14T10:56:54+02:00</lastmod>
+		<lastmod>2015-08-14T14:54:56+02:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -68,14 +68,14 @@
 
 	<url>
 		<loc>http://localhost/ems2016/nesskdckosiciam/site-developement/ems2016/novinky</loc>
-		<lastmod>2015-08-14T10:54:10+02:00</lastmod>
+		<lastmod>2015-08-17T12:47:29+02:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 
 	<url>
 		<loc>http://localhost/ems2016/nesskdckosiciam/site-developement/ems2016/clanky</loc>
-		<lastmod>2015-08-14T10:53:35+02:00</lastmod>
+		<lastmod>2015-08-17T12:13:46+02:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -96,7 +96,7 @@
 
 	<url>
 		<loc>http://localhost/ems2016/nesskdckosiciam/site-developement/ems2016/sportoviska/sed-ipsum-inventore-odit-quam-sed-et-ipsum-porro-ducimus-rerum-dolores-esse-occaecat-impedit</loc>
-		<lastmod>2015-08-14T14:42:35+02:00</lastmod>
+		<lastmod>2015-08-17T13:29:50+02:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>

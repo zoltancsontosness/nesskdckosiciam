@@ -1509,7 +1509,7 @@ p a:hover{
   right: 0;
   top: 0;
   height: 100%;
-  font-weight: bold;
+/*  font-weight: bold;*/
   font-style: inherit;
 
   -webkit-transition: background .4s ease;
@@ -1658,10 +1658,6 @@ p a:hover{
   background: #00ada7;
 }
 
-.button.events{
-  background: #13b7ff;
-}
-
 .button.health{
   background: #feb41c;
 }
@@ -1670,12 +1666,16 @@ p a:hover{
   background: #a13d63;
 }
 
-.button.entertainment{
-  background: #ec2913;
+.button.events{
+  background: #13b7ff;
 }
 
 .button.news{
   background: #96ca2d;
+}
+
+.button.entertainment{
+  background: #ec2913;
 }
 
 .button.education{
@@ -4659,7 +4659,7 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .product_description .button{
-  margin-top: 20px;
+/*  margin-top: 20px;*/
 }
 
 .product_description .category{
@@ -5209,9 +5209,19 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
       color: #ec2913;
     }
 
-  .section_post_left .section_title.bussiness{
-    color: #13b7ff;
+  .section_post_left .section_title.articles{
+    border-color: #a13d63;
+    color: #a13d63;
+  }
+
+  .section_post_left .section_title.events{
     border-color: #13b7ff;
+    color: #13b7ff;
+  }
+
+  .section_post_left .section_title.news{
+    border-color: #96ca2d;
+    color: #96ca2d;
   }
 
   [class*="section_post_"] .section_title{

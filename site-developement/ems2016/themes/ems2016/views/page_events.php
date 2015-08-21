@@ -4,11 +4,12 @@
   <div class="section read_post_list tabs_content type_2">
     <h2 class="section_title section_title_big"><ion:title /></h2>
 
-    <?php $counter=0; ?>
+    <?php $counter=0; $columns=2; ?>
+    
       <ion:articles:article>
-        <?php if($counter == 0): $counter++; ?>
+        <?php if($counter == 0): ?>
           <ul class="row">
-            <?php else: $counter++; endif; ?>
+            <?php endif; $counter++; ?>
               <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 
                 <div class="section_post_left">
@@ -40,10 +41,13 @@
                 </div>
 
               </li>
-              <?php if($counter == 2) : $counter=0; ?>
+              <?php if($counter==$columns) : $counter=0; ?>
           </ul>
           <?php endif; ?>
       </ion:articles:article>
+    <?php if($counter < $columns): ?>
+    </ul>
+    <?php endif; ?>
   </div>
   <?php if('<ion:articles:pagination />' != ''): ?>
     <div class="pagination_block">

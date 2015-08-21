@@ -19,36 +19,43 @@
 
         <div class="read_post_list">
           <div class="small_post_list">
-            <div class="row">
 
-              <ion:articles pagination="24" order_by="title ASC">
-                <ion:article>
+            <?php $counter=0; $columns=4; ?>
+              <ion:articles:article pagination="24" order_by="title ASC">
+                <?php if($counter == 0): ?>
 
-                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-list-item">
-                    <div class="scale_image_container">
-                      <a href="<ion:url />">
-                        <ion:medias type="picture" limit="1" size="300,200" method="adaptive">
-                          <img src="<ion:media:src />" alt="<ion:media:alt />" class="scale_image">
-                        </ion:medias>
-                      </a>
-                      <div class="post_image_buttons">
-                        <a href="<ion:url />" class="button banner_button politics">
-                          <ion:categories:list separator=", " />
+                  <ul class="row">
+                    <?php endif; $counter++; ?>
+
+                      <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-list-item">
+                        <div class="scale_image_container">
+                          <a href="<ion:url />">
+                            <ion:medias type="picture" limit="1" size="300,200" method="adaptive">
+                              <img src="<ion:media:src />" alt="<ion:media:alt />" class="scale_image">
+                            </ion:medias>
+                          </a>
+                          <div class="post_image_buttons">
+                            <a href="<ion:url />" class="button banner_button politics">
+                              <ion:categories:list separator=", " />
+                            </a>
+                          </div>
+                        </div>
+                        <a href="<ion:url />">
+                          <ion:title tag="h4" />
                         </a>
-                      </div>
-                    </div>
-                    <a href="<ion:url />">
-                      <ion:title tag="h4" />
-                    </a>
+                        <!--
                     <div class="event_date">
                       <ion:date format="long" />
                     </div>
-                  </div>
-
-                </ion:article>
-              </ion:articles>
-
-            </div>
+-->
+                      </li>
+                      <?php if($counter == $columns) : $counter=0; ?>
+                  </ul>
+                  <?php endif; ?>
+              </ion:articles:article>
+              <?php if($counter < $columns): ?>
+                </ul>
+              <?php endif; ?>
           </div>
         </div>
 
