@@ -8,4 +8,9 @@ $(document).ready(function(){
   */
  var footerHeight = $("footer.footer").outerHeight() + 40;
  $("body").css("margin-bottom", footerHeight);
+
+ /**
+  * Tooltips
+  */
+ $('[data-toggle="popover"]').popover();
 });

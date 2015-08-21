@@ -4181,7 +4181,7 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   background: #ff680d;
 }
 
-/* Tooltips */
+/* Tooltips 
 
 .tooltips a{
   color: #c5c6c8;
@@ -4248,6 +4248,7 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   background: #ff680d;
   color: #fff;
 }
+*/
 
 /* Emphasis */
 
@@ -5813,7 +5814,7 @@ input::-ms-clear {
   }
 
   .form_type_1 .control-group .controls{
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
 
   .form_type_1 .control-group .controls .postcode_elements li{
@@ -5939,7 +5940,7 @@ i[class^="fa "]{
 .widget_social_icons ul .flickr:hover a{background:#ff0084;}
 .widget_social_icons ul .envelope:hover a,.sw_button.contact{background:#1abc9c;}
 
-/* ToolTip */
+/* ToolTip 
 
 .tooltip{
   position:absolute;
@@ -6014,7 +6015,7 @@ li:hover .tooltip,a:hover .tooltip,button:hover .tooltip{
 
 .widget_social_icons.type_2.type_border ul li a{
   border: 1px solid #e8e8e8;
-}
+}*/
 
 /* -----------------------------------
 

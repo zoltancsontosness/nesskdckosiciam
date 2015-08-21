@@ -17,15 +17,21 @@
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Správca ihriska:</label>
           <div class="controls">
-            <input name="operator" type="text">
-             <ion:form:facilities:error:operator tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="operator" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:operator tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
-          <label class="control-label">IČO:</label>
+          <label class="control-label">IČO: </label>
           <div class="controls">
-            <input name="ico" type="text">
-             <ion:form:facilities:error:ico tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="ico" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:ico tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>
@@ -33,14 +39,20 @@
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Názov športoviska:</label>
           <div class="controls">
-            <input name="facility" type="text">
-             <ion:form:facilities:error:facility tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="facility" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:facility tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Adresa:</label>
           <div class="controls">
-            <input name="address" type="text">
+            <div class="inner-addon right-addon">
+              <input name="address" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
              <ion:form:facilities:error:address tag="p" class="error-input alert-danger" />
           </div>
         </div>
@@ -49,15 +61,21 @@
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Kontaktný telefón:</label>
           <div class="controls">
-            <input name="phone" type="text">
-             <ion:form:facilities:error:phone tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="phone" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:phone tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Kontaktný e-mail:</label>
           <div class="controls">
-            <input name="email" type="text">
-             <ion:form:facilities:error:email tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="email" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:email tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>
@@ -65,15 +83,21 @@
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Webová stránka:</label>
           <div class="controls">
-            <input name="webpage" type="text">
-             <ion:form:facilities:error:webpage tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="webpage" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:webpage tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Facebook link:</label>
           <div class="controls">
-            <input name="fblink" type="text">
-             <ion:form:facilities:error:fblink tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <input name="fblink" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:fblink tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>
@@ -81,8 +105,11 @@
         <div class="control-group input_profiles col-xs-12">
           <label class="control-label">Popis:</label>
           <div class="controls">
-            <textarea name="desc"></textarea>
-             <ion:form:facilities:error:desc tag="p" class="error-input alert-danger" />
+            <div class="inner-addon right-addon">
+              <textarea name="desc"></textarea>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+            <ion:form:facilities:error:desc tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>
@@ -184,6 +211,8 @@
 
   <script src="<ion:theme_url/>assets/plugins/tinymce/tinymce.min.js"></script>
   <script src="<ion:theme_url/>assets/plugins/tinymce/langs/sk.js"></script>
-  <script>tinymce.init({selector:'textarea'});</script>
+  <script>
+    tinymce.init({selector:'textarea'});
+  </script>
 
 <ion:partial view="footer" />

@@ -30,7 +30,6 @@
   <!-- Main styles -->
   <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet" />
   <!--modernizr-->
-  <script src="<ion:theme_url/>assets/js/jquery.modernizr.js"></script>
   <script src="<ion:theme_url/>assets/js/jquery-2.1.0.min.js"></script>
   <script src="<ion:theme_url/>assets/js/bootstrap.js"></script>
     <!-- Date & Time picker -->

@@ -16,14 +16,20 @@
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Meno organizátora:</label>
           <div class="controls">
-            <input name="organizer" type="text">
+            <div class="inner-addon right-addon">
+              <input name="organizer" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:organizer tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">IČO:</label>
           <div class="controls">
-            <input name="ico" type="text">
+            <div class="inner-addon right-addon">
+              <input name="ico" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:ico tag="p" class="error-input alert-danger" />
           </div>
         </div>
@@ -32,14 +38,20 @@
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Názov akcie:</label>
           <div class="controls">
-            <input name="event_name" type="text">
+            <div class="inner-addon right-addon">
+              <input name="event_name" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:event_name tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Miesto konania akcie:</label>
           <div class="controls">
-            <input name="address" type="text">
+            <div class="inner-addon right-addon">
+              <input name="address" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:address tag="p" class="error-input alert-danger" />
           </div>
         </div>
@@ -48,7 +60,10 @@
         <div class="control-group input_profiles col-xs-12 col-sm-12">
           <label class="control-label">Dátum a čas konania:</label>
           <div class="controls">
-            <input name="date" type="text" id="datetimepicker-from">
+            <div class="inner-addon right-addon">
+              <input name="date" type="text" id="datetimepicker-from">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:date tag="p" class="error-input alert-danger" />
           </div>
         </div>
@@ -57,7 +72,10 @@
         <div class="control-group input_profiles col-xs-12 col-sm-12">
           <label class="control-label">Dĺžka trvania do:</label>
           <div class="controls">
-            <input name="length" type="text" id="datetimepicker-to">
+            <div class="inner-addon right-addon">
+              <input name="length" type="text" id="datetimepicker-to">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:length tag="p" class="error-input alert-danger" />
           </div>
         </div>
@@ -66,7 +84,10 @@
         <div class="control-group input_profiles col-xs-12 col-sm-12">
           <label class="control-label">Webstránka:</label>
           <div class="controls">
-            <input name="webpage" type="text">
+            <div class="inner-addon right-addon">
+              <input name="webpage" type="text">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:webpage tag="p" class="error-input alert-danger" />
           </div>
         </div>
@@ -75,7 +96,10 @@
         <div class="control-group input_profiles col-xs-12">
           <label class="control-label">Popis:</label>
           <div class="controls">
-            <textarea name="desc"></textarea>
+            <div class="inner-addon right-addon">
+              <textarea name="desc"></textarea>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
             <ion:form:events:error:desc tag="p" class="error-input alert-danger" />
           </div>
         </div>

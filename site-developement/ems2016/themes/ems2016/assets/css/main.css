@@ -258,6 +258,30 @@ body {
   margin-bottom: 10px;
 }
 
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .icon {
+    position: absolute;
+    display: block;
+    padding: 9px;
+    pointer-events: auto;
+    cursor: pointer;
+    font-size:20px;
+    opacity: 0.5;
+}
+.inner-addon .icon:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* align icon */
+.left-addon .icon  { left:  0px;}
+.right-addon .icon { right: 0px;}
+
 
 /* ------------------------------------
   10. Icons
