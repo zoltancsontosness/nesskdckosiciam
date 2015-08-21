@@ -18,6 +18,10 @@
 -------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Sarala:400,700&subset=latin,latin-ext);
+html {
+  position: relative;
+}
+
 body {
   font-family: 'Sarala', sans-serif;
 }
@@ -47,6 +51,14 @@ body {
   2. Typography 
 -------------------------------------*/
 
+.title-success {
+  font-size: 67px;
+  line-height: 1.1;
+  color: #ff680d;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -68,11 +80,6 @@ body {
   margin-top: 20px;
 }
 
-.post-list-item {
-  height: 200px;
-}
-
-
 /* ------------------------------------
   2. Typography 
 -------------------------------------*/
@@ -81,6 +88,46 @@ body {
 /* ------------------------------------
   3. Header 
 -------------------------------------*/
+
+.main_menu.menu_var2 > ul > li:nth-child(1) > a.current {
+  background: #ff680d;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(2) > a.current {
+  background: #13b7ff;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(3) > a.current {
+  background: #854ec2;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(4) > a.current {
+  background: #feb41c;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(5) > a.current {
+  background: #ec2913;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(6) > a.current {
+  background: #00ada7;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(7) > a.current {
+  background: #197bbe;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(8) > a.current {
+  background: #a13d63;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(9) > a.current {
+  background: #96ca2d;
+}
+
+.main_menu.menu_var2 > ul > li:nth-child(10) > a.current {
+  background: #d1008b;
+}
 
 
 /* ------------------------------------
@@ -128,6 +175,16 @@ body {
   font-family: 'Sarala', sans-serif;
 }
 
+.btn-fb {
+  background: #edeff6;
+  color: #4c66a3;
+}
+
+.btn-fb:hover {
+  background: #4c66a3;
+  color: #fff;
+}
+
 
 /* ------------------------------------
   6. Sliders 
@@ -142,10 +199,54 @@ body {
   7. Main Content Elements 
 -------------------------------------*/
 
+.related_articles_list li:not(:last-child) {
+  padding-bottom: 25px;
+  border-bottom: 2px solid #feb41c;
+  margin-bottom: 25px;
+}
+
+ul.related_articles_list li.events {
+  border-color: #13b7ff;
+}
+
+ul.related_articles_list li.news {
+  border-color: #96ca2d;
+}
+
+ul.related_articles_list li.articles {
+  border-color: #a13d63;
+}
+
 
 /* ------------------------------------
   8. Main Content 
 -------------------------------------*/
+
+.table-vertical tr td:first-child {
+  font-weight: bold !important;
+  text-align: right;
+}
+
+.table-vertical tr:first-child td {
+  border-top: 0px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.text-content ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 10px;
+  -webkit-padding-start: 40px;
+}
+
+.text-content p {
+  margin: 0 0 10px;
+}
 
 
 /* ------------------------------------
@@ -205,6 +306,7 @@ body {
 
 .error-input.alert-danger {
   background: #ffe8ba;
+  margin-bottom: 10px;
 }
 
 
@@ -216,16 +318,11 @@ body {
 /* ------------------------------------
   11. Footer
 -------------------------------------*/
-.table-vertical tr td:first-child {
-  font-weight: bold !important;
+ul.socials-list li {
+  min-width: 0;
+  width: 30%;
 }
 
-.btn-fb {
-            background: #edeff6;
-          color: #4c66a3;
-}
-
-.btn-fb:hover {
-            background: #4c66a3;
-color: #fff;
+ul.socials-list li > a {
+  width: 100%;
 }

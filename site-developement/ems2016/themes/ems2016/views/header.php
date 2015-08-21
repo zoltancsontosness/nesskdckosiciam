@@ -30,7 +30,6 @@
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/owl.carousel.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/flexslider/flexslider.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/animate.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/jackbox.min.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/jquery.fancybox-1.3.4.css" />
 
   <!-- Main styles -->
@@ -41,6 +40,7 @@
   <script src="<ion:theme_url/>assets/js/bootstrap.js"></script>
   <!-- Date & Time picker -->
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/datepicker/css/bootstrap-datetimepicker.css" />
+  <script async src='//www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body class="wide_layout">

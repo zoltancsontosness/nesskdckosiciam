@@ -286,7 +286,7 @@ Based on:
 							}, 500); // act rarely to stay fast
 						}
 					};
-					html.style.height = 'auto';
+					//html.style.height = 'auto';
 					setTimeout(refresh, 10);
 
 					var config = {

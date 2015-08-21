@@ -3,7 +3,7 @@
 
   <ion:page id="playgrounds">
     <ion:articles limit="4" order_by="date DESC">
-      <ion:article:medias limit="1" type="picture" size="500,250" method="adaptive">
+      <ion:article:medias limit="1" type="picture" size="500,225" method="adaptive">
         <div class="scale_image_container">
           <a href="<ion:article:url />">
             <img src="<ion:media:src />" alt="<ion:media:alt />" class="scale_image">

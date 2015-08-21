@@ -946,4 +946,6 @@ $(document).ready(function() {
             if( log ) alert(log);
         }
     });
+  
+  $("a.fancy-image").fancybox();
 });

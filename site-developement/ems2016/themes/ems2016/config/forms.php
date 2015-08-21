@@ -5,10 +5,10 @@ $config['forms'] = array
     'facilities' => array
     (
         'process' => 'TagManager_Facilities::process_data',
-        'redirect' => 'referer',
         'messages' => array(
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
+            'captcha_error' => 'bad_captcha',
         ),
  
         'fields' => array
@@ -70,10 +70,10 @@ $config['forms'] = array
     'events' => array
     (
         'process' => 'TagManager_Events::process_data',
-        'redirect' => 'referer',
         'messages' => array(
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
+            'captcha_error' => 'bad_captcha',
         ),
 
         'fields' => array
@@ -130,10 +130,10 @@ $config['forms'] = array
     'clubs' => array
     (
         'process' => 'TagManager_Clubs::process_data',
-        'redirect' => 'referer',
         'messages' => array(
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
+            'captcha_error' => 'bad_captcha',
         ),
 
         'fields' => array
