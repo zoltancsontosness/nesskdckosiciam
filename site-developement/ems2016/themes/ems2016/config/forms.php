@@ -19,7 +19,7 @@ $config['forms'] = array
                 'label' => 'form_label_title',
             ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
             ),
             'facility' => array(
@@ -84,7 +84,7 @@ $config['forms'] = array
                 'label' => 'form_label_title',
             ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
             ),
             'event_name' => array(
@@ -144,7 +144,7 @@ $config['forms'] = array
                 'label' => 'form_label_title',
             ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
             ),
             'club_name' => array(
