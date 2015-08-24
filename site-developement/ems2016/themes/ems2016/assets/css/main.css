@@ -80,6 +80,7 @@ body {
   margin-top: 20px;
 }
 
+
 /* ------------------------------------
   2. Typography 
 -------------------------------------*/
@@ -248,6 +249,20 @@ ul.related_articles_list li.articles {
   margin: 0 0 10px;
 }
 
+.weather_widget .date_list > ul li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /*IE7*/
+  *zoom: 1;
+  /*IE7*/
+  padding-left: 0px;
+}
+
+.weather_widget .date_list > ul li:not(:first-child) {
+  margin-left: 7%;
+}
+
 
 /* ------------------------------------
   9. Forms 
@@ -309,29 +324,41 @@ ul.related_articles_list li.articles {
   margin-bottom: 10px;
 }
 
+
 /* enable absolute positioning */
+
 .inner-addon {
-    position: relative;
+  position: relative;
 }
+
 
 /* style icon */
+
 .inner-addon .icon {
-    position: absolute;
-    display: block;
-    padding: 9px;
-    pointer-events: auto;
-    cursor: pointer;
-    font-size:20px;
-    opacity: 0.5;
-}
-.inner-addon .icon:hover {
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
+  position: absolute;
+  display: block;
+  padding: 9px;
+  pointer-events: auto;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.5;
 }
 
+.inner-addon .icon:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+
 /* align icon */
-.left-addon .icon  { left:  0px;}
-.right-addon .icon { right: 0px;}
+
+.left-addon .icon {
+  left: 0px;
+}
+
+.right-addon .icon {
+  right: 0px;
+}
 
 
 /* ------------------------------------
@@ -342,6 +369,7 @@ ul.related_articles_list li.articles {
 /* ------------------------------------
   11. Footer
 -------------------------------------*/
+
 ul.socials-list li {
   min-width: 0;
   width: 30%;
@@ -349,4 +377,5 @@ ul.socials-list li {
 
 ul.socials-list li > a {
   width: 100%;
+  min-width: 0;
 }

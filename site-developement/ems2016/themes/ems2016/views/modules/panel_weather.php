@@ -8,12 +8,12 @@
           <span id="temp"></span><span class="degree">&deg;C</span>
         </div>
       </div>
-      <div>
+      <div class="hidden-md">
         <i id="icon" class="mc"></i>
       </div>
     </div>
     <div class="date_list info_list">
-      <ul class="clearfix">
+      <ul class="clearfix" >
         <li>
           <i class="fa fa-leaf fa-fw"></i>
           <span id="wind"></span>

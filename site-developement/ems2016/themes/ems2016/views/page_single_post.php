@@ -75,8 +75,7 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
       <ion:partial view="modules/panel_related_articles" />
-      <ion:partial view="modules/panel_socials" />
-      <ion:partial view="modules/panel_gallery" />
+      <ion:partial view="modules/panel_share" />
     </div>
   </div>
 

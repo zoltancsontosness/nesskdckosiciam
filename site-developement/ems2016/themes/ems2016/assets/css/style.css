@@ -2853,13 +2853,14 @@ p a:hover{
     padding: 10px 0;
   }
 
+
 .info_list {
   background: #52585e !important;
 }
 
     .weather_widget .date_list ul li{
       float: left;
-      font-size: 24px;
+      font-size: 18px;
       text-align: center;
       color: #fff;
       padding-left: 7.5%;
