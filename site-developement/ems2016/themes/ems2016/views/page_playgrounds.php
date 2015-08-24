@@ -43,11 +43,12 @@
                         <a href="<ion:url />">
                           <ion:title tag="h4" />
                         </a>
-                        <!--
-                    <div class="event_date">
-                      <ion:date format="long" />
-                    </div>
--->
+
+                        <div class="event_date">
+                          pridané
+                          <ion:date format="short" />
+                        </div>
+
                       </li>
                       <?php if($counter == $columns) : $counter=0; ?>
                   </ul>
@@ -55,7 +56,7 @@
               </ion:articles:article>
               <?php if($counter < $columns): ?>
                 </ul>
-              <?php endif; ?>
+                <?php endif; ?>
           </div>
         </div>
 

@@ -5,7 +5,7 @@
     <h2 class="section_title section_title_big"><ion:title /></h2>
 
     <?php $counter=0; $columns=2; ?>
-    
+
       <ion:articles:article>
         <?php if($counter == 0): ?>
           <ul class="row">
@@ -45,9 +45,9 @@
           </ul>
           <?php endif; ?>
       </ion:articles:article>
-    <?php if($counter < $columns): ?>
-    </ul>
-    <?php endif; ?>
+      <?php if($counter < $columns): ?>
+        </ul>
+        <?php endif; ?>
   </div>
   <?php if('<ion:articles:pagination />' != ''): ?>
     <div class="pagination_block">

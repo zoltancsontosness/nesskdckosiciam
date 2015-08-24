@@ -1,4 +1,4 @@
-<div class="section_post_left">
+<div class="section_post_left" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
   <ul class="related_articles_list">
     <ion:pages:page page="news,articles,events" display_hidden="true">
       <ion:articles:article type="headline" limit="1">

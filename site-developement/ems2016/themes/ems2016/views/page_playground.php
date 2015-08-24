@@ -101,7 +101,7 @@
         </div>
         <?php if(isset($address_enc)): ?>
           <div class="clearfix">
-            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&zoom=17&size=555x374&maptype=roadmap" />
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&amp;zoom=17&amp;size=555x374&amp;maptype=roadmap" alt="mapa"/>
           </div>
           <?php endif; ?>
       </div>

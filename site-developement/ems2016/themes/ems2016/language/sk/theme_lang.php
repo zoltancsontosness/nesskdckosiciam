@@ -9,5 +9,6 @@ $lang['title_socials'] = 'Sociálne siete';
 $lang['btn_prevpage'] = 'Predchádzajúca strana';
 $lang['btn_gohome'] = 'Domov';
 $lang['show_all'] = 'Zobraziť všetky';
+$lang['btn_showmore'] = 'Zobraziť viac';
 
 ?>

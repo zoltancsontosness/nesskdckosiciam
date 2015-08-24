@@ -1,4 +1,4 @@
-<div class="section side_bar_banners clearfix">
+<div class="section side_bar_banners clearfix" data-appear-animation="fadeInDown" data-appear-animation-delay="500">
   <h3 class="section_title">Naposledy pridané</h3>
 
   <ion:page id="playgrounds">

@@ -2,7 +2,7 @@
 
   <div class="section_2">
     <ul class="social_media_list button-list row">
-      <li class="col-xs-12 col-md-4">
+      <li class="col-xs-12 col-md-4" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
         <a href="<ion:page:url id="pridanie-sportoviska"/>" class="btn-block rss">
           <i class="fa fa-pencil"></i>
           <div><ion:page:title id="pridanie-sportoviska"/></div>
@@ -10,7 +10,7 @@
           <p><ion:page:subtitle id="pridanie-sportoviska"/></p>
         </a>
       </li>
-      <li class="col-xs-12 col-md-4">
+      <li class="col-xs-12 col-md-4" data-appear-animation="fadeInDown" data-appear-animation-delay="500">
         <a href="<ion:page:url id="pridanie-podujatia"/>" class="btn-block bg-yellowgreen">
           <i class="fa fa-pencil"></i>
           <div><ion:page:title id="pridanie-podujatia"/></div>
@@ -18,7 +18,7 @@
           <p><ion:page:subtitle id="pridanie-podujatia"/></p>
         </a>
       </li>
-      <li class="col-xs-12 col-md-4">
+      <li class="col-xs-12 col-md-4" data-appear-animation="fadeInDown" data-appear-animation-delay="750">
         <a href="<ion:page:url id="pridanie-klubu"/>" class="btn-block bg-seagreen">
           <i class="fa fa-pencil"></i>
           <div><ion:page:title id="pridanie-klubu"/></div>
