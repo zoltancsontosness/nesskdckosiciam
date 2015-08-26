@@ -7,7 +7,7 @@
             <div class="scale_image_container">
               <a href="<ion:article:url />"><img src="<ion:media:src />" alt="<ion:media:title />" class="scale_image"></a>
               <div class="post_image_buttons">
-                <a href="#" class="button banner_button <ion:page:name />">
+                <a href="<ion:page:url />" class="button banner_button <ion:page:name />">
                   <ion:page:title />
                 </a>
               </div>

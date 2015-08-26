@@ -24,11 +24,16 @@
                             <div class="event_date">
                               <ion:page:name is="events">
                                 <i class="fa fa-calendar fa-fw"></i>
+                                <ion:article:element:event-info>
+                                  <ion:items>
+                                    <ion:date:value format="complete" />
+                                  </ion:items>
+                                </ion:article:element:event-info>
                               </ion:page:name>
                               <ion:else>
                                 <i class="fa fa-pencil fa-fw"></i>
+                                <ion:date format="complete" />
                               </ion:else>
-                              <ion:date format="complete" />
                             </div>
                           </div>
                           <a href="<ion:url />"><h2><ion:title /></h2></a>
@@ -71,11 +76,16 @@
                     <div class="event_date">
                       <ion:page:name is="events">
                         <i class="fa fa-calendar fa-fw"></i>
+                        <ion:article:element:event-info>
+                          <ion:items>
+                            <ion:date:value format="long" />
+                          </ion:items>
+                        </ion:article:element:event-info>
                       </ion:page:name>
                       <ion:else>
                         <i class="fa fa-pencil fa-fw"></i>
+                        <ion:date format="long" />
                       </ion:else>
-                      <ion:date format="long" />
                     </div>
                   </div>
                 </li>

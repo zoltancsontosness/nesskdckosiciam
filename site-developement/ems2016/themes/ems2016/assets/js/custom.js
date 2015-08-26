@@ -13,4 +13,9 @@ $(document).ready(function () {
    * Tooltips
    */
   $('[data-toggle="popover"]').popover();
+
+  /** Add to all tables responsive bootstrap view. **/
+  $("table").wrap('<div class="table"></div>');
+  $("table").removeAttr("border")
+  $("table").addClass("table");
 });

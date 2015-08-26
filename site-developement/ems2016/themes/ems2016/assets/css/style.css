@@ -2285,6 +2285,7 @@ p a:hover{
 
   .event_date{
     text-transform: uppercase;
+    overflow-x: hidden;
   }
 
   .event_activity{

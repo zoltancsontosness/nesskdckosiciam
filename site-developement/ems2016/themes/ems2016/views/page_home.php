@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="col-lg-4 col-md-4 col-sm-12">
-    <ion:partial view="modules/panel_categories" count="2" />
+    <ion:partial view="modules/panel_categories" count="10" />
     <div class="hidden-xs">
       <ion:partial view="modules/panel_socials" />
     </div>

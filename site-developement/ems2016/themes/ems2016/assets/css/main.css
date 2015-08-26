@@ -263,6 +263,13 @@ ul.related_articles_list li.articles {
   margin-left: 7%;
 }
 
+.side_bar_tabs.comment_tabs ul li:hover .comment_number.active {
+  background: #96ca2d;
+}
+
+.side_bar_tabs.comment_tabs ul li:hover .comment_number.passive {
+  background: #feb41c;
+}
 
 /* ------------------------------------
   9. Forms 
