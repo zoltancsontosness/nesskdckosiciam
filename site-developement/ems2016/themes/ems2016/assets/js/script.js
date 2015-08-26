@@ -515,7 +515,7 @@
 		});
     
 		// Sticky and Go-top
-
+/*
 		(function ($, window) {
 
 			function Temp(el, options) {
@@ -600,8 +600,9 @@
 				}
 			}
 
+
 			/* Temp Plugin
-			 * ================================== */
+			 * ================================== 
 
 			$.fn.Temp = function (option) {
 				return this.each(function () {
@@ -617,7 +618,7 @@
 				sticky: true
 			});
 
-		})(jQuery, window);
+		})(jQuery, window);*/
 
 		/* ---------------------------------------------------- */
         /*	SmoothScroll										*/
@@ -648,7 +649,7 @@
 			}
 			else{
 				for(var i = 0,len = select.children('option').length;i < len;i++){
-					list.append('<li>'+select.children('option').eq(i).text()+'</li>')
+					list.append('<li data-value="'+select.children('option').eq(i).val()+'">'+select.children('option').eq(i).text()+'</li>')
 				}
 			}
 			select.hide();
@@ -663,8 +664,9 @@
 			// selected option
 
 			list.on('click','li',function(){
-				var val = $(this).text();
-				title.text(val);
+				var val = $(this).data('value');
+				var text = $(this).text();
+				title.text(text);
 				list.slideUp(400);
 				select.val(val);
 				title.toggleClass('active');

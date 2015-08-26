@@ -83,6 +83,16 @@ $config['forms'] = array
                 'rules' => 'trim|required|min_length[3]|xss_clean',
                 'label' => 'form_label_title',
             ),
+            'sport_type' => array
+            (
+                'rules' => 'trim|required|min_length[3]|xss_clean',
+                'label' => 'form_label_sport_type',
+            ),
+            'is_active' => array
+            (
+                'rules' => 'trim|required|xss_clean',
+                'label' => 'form_label_is_active',
+            ),
             'ico' => array(
                 'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',

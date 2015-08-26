@@ -50,7 +50,7 @@ class TagManager_Events extends TagManager
             'lang' => 'sk',
             'url' => self::clean($title),
             'title' => $title,
-            'subtitle' => $posted['organizer'],
+            'subtitle' => $posted['sport_type'],
             'content' => $posted['desc'],
             'online' => 0,
             'meta_title' => '',
@@ -58,6 +58,7 @@ class TagManager_Events extends TagManager
         );
 
         $extend_data = array(
+          'organizer' => $posted['organizer'],
           'address' => $posted['address'],
           'ico' => $posted['ico'],
           'email' => $posted['email'],
@@ -65,6 +66,7 @@ class TagManager_Events extends TagManager
           'date' => $posted['date'],
           'time' => $posted['time'],
           'length' => $posted['length'],
+          'is-active' => $posted['is_active']
         );
 
         $element = array('ordering' => 0);
