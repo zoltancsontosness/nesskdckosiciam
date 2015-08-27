@@ -44,11 +44,13 @@
                           <ion:title tag="h4" />
                         </a>
 
-                        <div class="event_date">
-                          pridané
-                          <ion:date format="short" />
-                        </div>
-
+                        <ion:element:facility-info>
+                          <ion:items>
+                            <div class="event_date text-nowrap" title="<ion:address:value />">
+                              <ion:address:value />
+                            </div>
+                          </ion:items>
+                        </ion:element:facility-info>
                       </li>
                       <?php if($counter == $columns) : $counter=0; ?>
                   </ul>
@@ -70,8 +72,7 @@
   </div>
 
   <div class="col-lg-4 col-md-4 col-sm-12">
-    <ion:partial view="modules/panel_categories" count="10" />
-    <ion:partial view="modules/panel_recently_added" />
+    <ion:partial view="modules/panel_categories" />
   </div>
 </div>
 

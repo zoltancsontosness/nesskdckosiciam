@@ -100,8 +100,8 @@
           </ion:element:facility-info>
         </div>
         <?php if(isset($address_enc)): ?>
-          <div class="clearfix">
-            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&amp;zoom=17&amp;size=555x374&amp;maptype=roadmap" alt="mapa"/>
+          <div class="clearfix hidden-sm">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&amp;zoom=17&amp;size=555x374&amp;maptype=roadmap" alt="mapa" class="img-responsive"/>
           </div>
           <?php endif; ?>
       </div>
