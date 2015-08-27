@@ -90,7 +90,7 @@
                           <?php echo parse_url('<ion:webpage:value />')['host']; ?>
                         </a>
                   </td>
-                </tr>
+                </tr>                
               </table>
               <a href="<ion:fblink:value />" class="button button_type_icon_medium btn-block btn-fb" target="_blank">
                 Facebook

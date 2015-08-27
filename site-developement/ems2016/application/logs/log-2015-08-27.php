@@ -396,3 +396,30 @@ ERROR - 2015-08-27 09:56:28 --> Could not find the language key : "dateformat_d.
 ERROR - 2015-08-27 09:56:28 --> Could not find the language key : "dateformat_Y"
 ERROR - 2015-08-27 09:56:28 --> Could not find the language key : "dateformat_d.m."
 ERROR - 2015-08-27 09:56:28 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 11:06:11 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:07:26 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:10:00 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:10:59 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:13:24 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:24:51 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:33:52 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 11:39:20 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_d.m."
+ERROR - 2015-08-27 12:02:41 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-08-27 12:46:07 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 12:57:42 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
+ERROR - 2015-08-27 12:58:11 --> Severity: Notice  --> Undefined index: host C:\Xampp\htdocs\ems2016\nesskdckosiciam\site-developement\ems2016\application\libraries\ftl\parser.php(327) : eval()'d code 195
