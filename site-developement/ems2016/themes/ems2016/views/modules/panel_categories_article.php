@@ -4,7 +4,7 @@
     <ion:page:title />
     <ion:category:current:title expression="!=''">     
       <a href="<ion:url />" class="button button_grey view_button float-right">     
-        <ion:lang key="btn_allcategories" />
+        Všetky športoviská
       </a>
     </ion:category:current:title>      
     </h3>
