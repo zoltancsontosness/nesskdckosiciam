@@ -22,7 +22,7 @@
         </li>
       </ul>
 
-      <?php $categories_count=<ion:categories:count /> ?>
+      <?php $categories_count='<ion:categories:count />' ?>
   </ion:page>
 
   <ion:page id="categories">
