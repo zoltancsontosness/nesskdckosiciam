@@ -60,7 +60,9 @@ class TagManager_Facilities extends TagManager
         $extend_data = array(
           'operator' => $posted['operator'],
           'ico' => $posted['ico'],
-          'address' => $posted['address'],
+          'city' => $posted['city'],
+          'number' => $posted['number'],
+          'street' => $posted['street'],
           'phone' => $posted['phone'],
           'email' => $posted['email'],
           'webpage' => $posted['webpage'],

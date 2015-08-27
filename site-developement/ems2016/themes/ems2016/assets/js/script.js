@@ -515,7 +515,7 @@
 		});
     
 		// Sticky and Go-top
-/*
+
 		(function ($, window) {
 
 			function Temp(el, options) {
@@ -545,11 +545,11 @@
 						if (base.options.sticky) {
 							base.sticky.stickyInit.call(base, e.currentTarget);
 						}
-						base.gotoTop.scrollHandler.call(base, e.currentTarget);
+						//base.gotoTop.scrollHandler.call(base, e.currentTarget);
 					});
 
 					// Click Handler Button GotoTop
-					base.gotoTop.clickHandler(base);
+					//base.gotoTop.clickHandler(base);
 				},
 				sticky: {
 					stickySet: function () {
@@ -584,25 +584,12 @@
 							}
 						}
 					}
-				},
-				gotoTop: {
-					scrollHandler: function (win) {
-						$(win).scrollTop() > 200 ?
-							this.goTop.addClass('go-top-visible'):
-							this.goTop.removeClass('go-top-visible');
-					},
-					clickHandler: function (self) {
-						self.goTop.on('click', function (e) {
-							e.preventDefault();
-							$('html, body').animate({ scrollTop: 0 }, 800);
-						});
-					}
 				}
 			}
 
 
 			/* Temp Plugin
-			 * ================================== 
+			 * ================================== */
 
 			$.fn.Temp = function (option) {
 				return this.each(function () {
@@ -618,7 +605,7 @@
 				sticky: true
 			});
 
-		})(jQuery, window);*/
+		})(jQuery, window);
 
 		/* ---------------------------------------------------- */
         /*	SmoothScroll										*/

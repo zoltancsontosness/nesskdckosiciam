@@ -77,8 +77,8 @@
                 </ul>
                 <select name="is_active" class="d_none" style="display: none;">
                   <option value="">Vyberte jednu z možností ...</option>
-                  <option value="aktivny">Áno</option>
-                  <option value="pasivny">Nie</option>
+                  <option value="active">Áno</option>
+                  <option value="passive">Nie</option>
                 </select>
               </div>
             </div>

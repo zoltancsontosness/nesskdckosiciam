@@ -26,8 +26,16 @@ $config['forms'] = array
                 'rules' => 'trim|xss_clean|min_length[5]|required',
                 'label' => 'form_label_subtitle',
             ),
-            'address' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+            'city' => array(
+                'rules' => 'trim|xss_clean|min_length[3]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'street' => array(
+                'rules' => 'trim|xss_clean|min_length[3]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'number' => array(
+                'rules' => 'trim|xss_clean|min_length[1]|required',
                 'label' => 'form_label_subtitle',
             ),
             'phone' => array(

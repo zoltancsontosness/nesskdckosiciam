@@ -47,13 +47,35 @@
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
-          <label class="control-label">Adresa:</label>
+          <label class="control-label">Mesto (obec):</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <input name="address" type="text"value="<ion:form:facilities:field:address />">
+              <input name="city" type="text"value="<ion:form:facilities:field:city />">
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
             </div>
-             <ion:form:facilities:error:address tag="p" class="error-input alert-danger" />
+            <ion:form:facilities:error:city tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="control-group input_profiles col-xs-12 col-sm-9">
+          <label class="control-label">Ulica:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="street" type="text"value="<ion:form:facilities:field:street />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+             <ion:form:facilities:error:street tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+        <div class="control-group input_profiles col-xs-12 col-sm-3">
+          <label class="control-label">Číslo:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="number" type="text"value="<ion:form:facilities:field:number />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+            </div>
+             <ion:form:facilities:error:number tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>

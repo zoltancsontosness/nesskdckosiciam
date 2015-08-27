@@ -46,8 +46,8 @@
 
                         <ion:element:facility-info>
                           <ion:items>
-                            <div class="event_date text-nowrap" title="<ion:address:value />">
-                              <ion:address:value />
+                            <div class="event_date text-nowrap" title="<ion:street:value /> <ion:number:value />">
+                              <ion:street:value /> <ion:number:value />
                             </div>
                           </ion:items>
                         </ion:element:facility-info>
