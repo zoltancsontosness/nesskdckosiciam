@@ -17,7 +17,7 @@
           <label class="control-label">Meno prevadzkára:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <input name="organizer" type="text">
+              <input name="organizer" type="text"value="<ion:form:clubs:field:organizer />">
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
             </div>
             <ion:form:clubs:error:organizer tag="p" class="error-input alert-danger" />
@@ -27,7 +27,7 @@
           <label class="control-label">IČO:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <input name="ico" type="text">
+              <input name="ico" type="text"value="<ion:form:clubs:field:ico />">
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
             </div>
             <ion:form:clubs:error:ico tag="p" class="error-input alert-danger" />
@@ -39,7 +39,7 @@
           <label class="control-label">Názov klubu:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <input name="club_name" type="text">
+              <input name="club_name" type="text"value="<ion:form:clubs:field:club_name />">
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
             </div>
             <ion:form:clubs:error:club_name tag="p" class="error-input alert-danger" />
@@ -49,7 +49,7 @@
           <label class="control-label">Webstránka:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <input name="webpage" type="text">
+              <input name="webpage" type="text"value="<ion:form:clubs:field:webpage />">
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
             </div>
             <ion:form:clubs:error:webpage tag="p" class="error-input alert-danger" />
@@ -61,7 +61,7 @@
           <label class="control-label">Popis:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <textarea name="desc"></textarea>
+              <textarea name="desc"><ion:form:clubs:field:desc /></textarea>
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
             </div>
             <ion:form:clubs:error:desc tag="p" class="error-input alert-danger" />
