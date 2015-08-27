@@ -80,6 +80,10 @@ body {
   margin-top: 20px;
 }
 
+.float-right {
+  float: right;
+}
+
 
 /* ------------------------------------
   2. Typography 

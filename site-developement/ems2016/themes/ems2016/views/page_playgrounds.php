@@ -72,7 +72,7 @@
   </div>
 
   <div class="col-lg-4 col-md-4 col-sm-12">
-    <ion:partial view="modules/panel_categories" />
+    <ion:partial view="modules/panel_categories_article" />
   </div>
 </div>
 
