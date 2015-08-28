@@ -53,7 +53,7 @@
   function handleRequest(result) {
     var today = result['list'][0];
 
-    document.getElementById("temp").innerHTML = today.temp.max;
+    document.getElementById("temp").innerHTML = Math.round(today.temp.max);
     document.getElementById("icon").className += " mc-" + today['weather'][0].icon + " mc-lg";
     document.getElementById("wind").innerHTML = today.speed + "";
     document.getElementById("humidity").innerHTML = today.humidity + "%";

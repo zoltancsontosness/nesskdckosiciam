@@ -275,6 +275,15 @@ ul.related_articles_list li.articles {
   background: #feb41c;
 }
 
+.side_bar_tabs.comment_tabs .post_theme.active {
+  background: #96ca2d;
+}
+
+.side_bar_tabs.comment_tabs .post_theme.passive {
+  background: #feb41c;
+}
+
+
 /* ------------------------------------
   9. Forms 
 -------------------------------------*/

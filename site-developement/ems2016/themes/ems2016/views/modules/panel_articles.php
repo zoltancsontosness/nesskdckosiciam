@@ -18,16 +18,25 @@
         <ion:page>
           <div id="tab-<ion:id />">
             <ul class="comments_list">
-              <ion:articles order_by="date DESC" limit="10">
+              <ion:articles order_by="date DESC" limit="8">
                 <ion:article>
                   <li class="post_text">
                     <ion:page:name is="events">
                       <ion:article:element:event-info>
                         <ion:items>
-                          <div class="comment_number <ion:is-active:value />">
+                          <div class="comment_number active <ion:is-active:value />">
                             <ion:date:value format="d.m." />
                             <br/>
                             <small><ion:date:value format="Y" /></small>
+                          </div>
+                          <div class="wrapper">
+                            <div class="post_theme <ion:is-active:value />">
+                              <ion:is-active:values:label />
+                            </div>
+                            <a href="<ion:url />"><h4><ion:article:title /></h4></a>
+                            <div class="event_date">
+                              <ion:article:content characters="85" function="strip_tags" />
+                            </div>
                           </div>
                         </ion:items>
                       </ion:article:element:event-info>
@@ -38,13 +47,13 @@
                         <br/>
                         <small><ion:date format="Y" /></small>
                       </div>
-                    </ion:else>
-                    <div class="wrapper">
-                      <a href="<ion:url />"><h4><ion:title /></h4></a>
-                      <div class="event_date">
-                        <ion:content characters="85" function="strip_tags" />
+                      <div class="wrapper">
+                        <a href="<ion:url />"><h4><ion:title /></h4></a>
+                        <div class="event_date">
+                          <ion:content characters="85" function="strip_tags" />
+                        </div>
                       </div>
-                    </div>
+                    </ion:else>
                   </li>
                 </ion:article>
               </ion:articles>
