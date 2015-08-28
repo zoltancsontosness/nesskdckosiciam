@@ -32,7 +32,7 @@
           <div class="pagination_block">
             <ion:articles:pagination />
           </div>
-          <?php endif; ?>
+        <?php endif; ?>
       </div>
 
     </div>

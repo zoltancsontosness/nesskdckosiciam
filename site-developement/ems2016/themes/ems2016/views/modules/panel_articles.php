@@ -18,7 +18,7 @@
         <ion:page>
           <div id="tab-<ion:id />">
             <ul class="comments_list">
-              <ion:articles order_by="date DESC" limit="10">
+              <ion:articles order_by="date DESC" limit="8">
                 <ion:article>
                   <li class="post_text">
                     <ion:page:name is="events">
