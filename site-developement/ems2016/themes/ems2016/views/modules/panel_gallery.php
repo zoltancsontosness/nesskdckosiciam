@@ -1,8 +1,9 @@
 <div class="section photo_gallery side_bar" data-appear-animation="fadeInDown" data-appear-animation-delay="500">
   <ion:page id="gallery">
     <h3 class="section_title"><ion:title /></h3>
-    <a href="<ion:url />" class="button button_grey view_button">
-      <ion:lang key="btn_viewall" />
+    <a href="<ion:url />" class="button button_type_icon_small button_grey_light view_button">
+      <ion:lang key="btn_viewall" /> 
+      <i class="fa fa-angle-right"></i>
     </a>
 
     <div class="owl-demo-2">

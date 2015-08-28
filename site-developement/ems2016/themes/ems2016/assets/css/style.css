@@ -1639,7 +1639,7 @@ p a:hover{
 }
 
 .button.view_button{
-  padding: 1px 11px;
+/*  padding: 1px 11px;*/
   background: #f2f2f2;
   color: #3e454c;
   font-size: 12px;
@@ -5185,7 +5185,7 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 
     .photo_gallery .button.view_button{
-      margin-top: 2px;
+/*      margin-top: 2px;*/
     }
 
   .photo_gallery.side_bar .scale_image_container{
