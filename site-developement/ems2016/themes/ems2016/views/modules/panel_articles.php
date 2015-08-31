@@ -33,7 +33,7 @@
                             <div class="post_theme <ion:is-active:value />">
                               <ion:is-active:values:label />
                             </div>
-                            <a href="<ion:url />"><h4><ion:article:title /></h4></a>
+                            <a href="<ion:article:url />"><h4><ion:article:title /></h4></a>
                             <div class="event_date">
                               <ion:article:content characters="85" function="strip_tags" />
                             </div>

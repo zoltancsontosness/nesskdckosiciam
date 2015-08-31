@@ -8,7 +8,7 @@
           <div class="caption_inner">
             <div class="clearfix">
 
-              <div class="event_date">
+              <div class="event_date text-nowrap">
                 <i class="fa fa-calendar fa-fw"></i>
                 <ion:article:element:event-info>
                   <ion:items>
@@ -22,6 +22,9 @@
                 </ion:article:element:event-info>
               </div>
               <ion:article:title tag="h3" />
+              <p class="event_date">
+                <ion:article:subtitle />
+              </p>
             </div>
           </div>
         </div>

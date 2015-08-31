@@ -12,7 +12,7 @@
           <ul>
             <ion:articles:article>
               <?php if('<ion:element:event-info:items:is-active:value />' == 'active') : ?>
-                <li>
+                <li class="no-margin">
                   <ion:partial view="helpers/tile_event" />
                 </li>
                 <?php endif; ?>
@@ -27,7 +27,7 @@
           <ul>
             <ion:articles:article>
               <?php if('<ion:element:event-info:items:is-active:value />' == 'passive') : ?>
-                <li>
+                <li class="no-margin">
                   <ion:partial view="helpers/tile_event" />
                 </li>
                 <?php endif; ?>
@@ -37,9 +37,10 @@
       </div>
 
       <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
-          <h3 class="section_title">Calendar</h3>
-         
+        <div class="section calendar" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
+          <h3 class="section_title">Kalendár udalostí</h3>
+        
+           
         </div>
       </div>
 
