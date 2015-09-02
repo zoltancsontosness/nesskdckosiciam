@@ -399,3 +399,6 @@ ul.socials-list li > a {
   width: 100%;
   min-width: 0;
 }
+.sort {
+  cursor: pointer;
+}
