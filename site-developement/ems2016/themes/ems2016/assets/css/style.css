@@ -3174,9 +3174,14 @@ p a:hover{
   margin-top: 35px;
 }
 
+.read_post_list ul li.no-margin {
+  margin-top: 0px;
+}
+
 .read_post_list ul li:first-child{
   margin-top: 35px;
 }
+
 
 .read_post_list.var2 ul li{
   margin-top: 40px;
