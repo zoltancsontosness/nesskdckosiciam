@@ -58,7 +58,7 @@
               </ion:articles:article>
               <?php if($counter < $columns): ?>
                 </ul>
-                <?php endif; ?>
+              <?php endif; ?>
           </div>
         </div>
 
@@ -66,7 +66,7 @@
           <div class="pagination_block">
             <ion:articles:pagination pagination="24" />
           </div>
-          <?php endif; ?>
+        <?php endif; ?>
       </ion:page>
     </div>
   </div>
