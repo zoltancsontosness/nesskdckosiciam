@@ -912,3 +912,10 @@ ERROR - 2015-09-02 09:21:13 --> Could not find the language key : "dateformat_d.
 ERROR - 2015-09-02 09:21:13 --> Could not find the language key : "dateformat_Y"
 ERROR - 2015-09-02 09:21:13 --> Could not find the language key : "dateformat_d.m."
 ERROR - 2015-09-02 09:21:13 --> Could not find the language key : "dateformat_Y"
+ERROR - 2015-09-02 12:50:09 --> User: Many tries to login with the identification email:"frantisek.ferko@ness.com" from ip "0.0.0.0", try no 3
+ERROR - 2015-09-02 12:50:11 --> User: Many tries to login with the identification email:"frantisek.ferko@ness.com" from ip "0.0.0.0", try no 4
+ERROR - 2015-09-02 12:50:20 --> User: Many tries to login with the identification email:"frantisek.ferko@ness.com" from ip "0.0.0.0", try no 5
+ERROR - 2015-09-02 12:50:49 --> User: Many tries to login with the identification username:"admin" from ip "0.0.0.0", try no 6
+ERROR - 2015-09-02 12:50:52 --> User: Many tries to login with the identification email:"frantisek.ferko@ness.com" from ip "0.0.0.0", try no 7
+ERROR - 2015-09-02 12:50:53 --> User: Many tries to login with the identification email:"frantisek.ferko@ness.com" from ip "0.0.0.0", try no 8
+ERROR - 2015-09-02 12:52:41 --> User: Many tries to login with the identification email:"frantisek.ferko@ness.com" from ip "0.0.0.0", try no 2
