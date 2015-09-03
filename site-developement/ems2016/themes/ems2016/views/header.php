@@ -41,12 +41,12 @@
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/datepicker/css/bootstrap-datetimepicker.css" />
   <script async src='//www.google.com/recaptcha/api.js'></script>
   <script src="<ion:theme_url/>assets/js/list.min.js"></script>
-
+  <script src="<ion:theme_url/>assets/js/list.pagination.min.js"></script>
   <meta property="og:title" content="<ion:article:title />" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="<ion:article:medias:media:src limit='1' type='picture' />" />
   <meta property="og:url" content="<ion:article:url />" />
-  <meta property="og:description" content="<ion:article:content />" />
+ <!-- <meta property="og:description" content="<ion:article:content function="strip_tags" />" /> -->
 </head>
 
 <body class="wide_layout">

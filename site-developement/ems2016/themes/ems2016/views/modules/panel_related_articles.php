@@ -3,7 +3,7 @@
     <ion:pages pages="news,articles,events" display_hidden="true">
       <ion:page>
         <?php if ($current_page != '<ion:name />' && !$displayed): $displayed=true; ?>
-          <h3 class="section_title <ion:name />"><ion:title /><a href="<ion:url />" class="button button_grey view_button"><ion:lang key="show_all"/> <ion:title /></a></h3>
+          <h3 class="section_title <ion:name />"><ion:title /><a href="<ion:url />" class="button button_grey view_button pull-right"><ion:lang key="show_all"/> <ion:title /></a></h3>
 
           <ion:articles:article limit="1">
             <ion:medias limit="1" type="picture" size="555,225" method="adaptive">

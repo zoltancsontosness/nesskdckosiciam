@@ -190,6 +190,9 @@ body {
   color: #fff;
 }
 
+.button.view_button:not(.button_type_icon_small){
+ padding: 1px 11px; 
+}
 
 /* ------------------------------------
   6. Sliders 
