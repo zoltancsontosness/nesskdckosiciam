@@ -572,7 +572,6 @@ p a:hover{
   }
 
   .spacer{
-    display: none;
     height: 0;
     -webkit-transition: height .25s ease;
     transition: height .25s ease;

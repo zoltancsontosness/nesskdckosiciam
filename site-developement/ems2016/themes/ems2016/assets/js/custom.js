@@ -70,7 +70,6 @@ for (var i = 0; i < lists.length; i++) {
   sortList();
 }
 
-
 function sortList() {
   for (var i = 0; i < lists.length; i++) {
     lists[i].sort('date', {
