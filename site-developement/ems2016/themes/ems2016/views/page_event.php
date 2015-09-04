@@ -9,30 +9,42 @@
 
       <div class="section_7 product_page">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <div class="product_preview">
-              <ion:medias type="picture" limit="1">
-                <div class="qv_preview product_item">
-                  <img id="zoom_image" src="<ion:media:src size='360,280' method='adaptive' />" data-zoom-image="<ion:media:src />" alt="<ion:media:title />">
-                  <a href="<ion:media:src />" role="button" class="jackbox jackbox_button button button_grey_light">
-                    <i class="fa fa-search-plus"></i>
-                  </a>
-                </div>
-              </ion:medias>
-              <div class="product_thumbnails_wrap relative m_bottom_3">
-                <div class="product_carousel" id="thumbnails">
-                  <ion:medias type="picture">
-                    <a href="#" data-image="<ion:media:src size='360,280' method='adaptive'/>" data-zoom-image="<ion:media:src />" class="active">
-                      <img src="<ion:media:src size='100,100' method='adaptive' />" alt="<ion:media:title />">
-                    </a>
-                  </ion:medias>
+         
+<!--
+          <div class="col-xs-12">
+            <ion:medias type="picture" limit="1">
+              <div class="scale_image_container with_buttons pull-left" style="width:360px; margin-right:20px; margin-bottom:20px">
+                <img src="<ion:media:src size='360' method='width' />" alt="<ion:media:title/>" class="scale_image img-responsive">
+                <div class="open_buttons clearfix">
+                  <div class="f_left">
+                    <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
+                  </div>
                 </div>
               </div>
+            </ion:medias>
+
+            <div class="text-content text-justify">
+            <ion:content />
             </div>
+          </div>
+-->
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <ion:medias type="picture" limit="1">
+              <div class="scale_image_container with_buttons">
+                <a href="#"><img src="<ion:media:src size='555' method='width' />" alt="<ion:media:title/>" class="scale_image"></a>
+                <div class="open_buttons clearfix">
+                  <div class="f_left">
+                    <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+            </ion:medias>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-justify text-content">
             <ion:content />
           </div>
+          
         </div>
       </div>
     </div>
@@ -44,7 +56,6 @@
           <ion:element:event-info>
             <ion:items>
               <table class="table table-vertical">
-
                 <tr>
                   <td>
                     <ion:organizer:label />

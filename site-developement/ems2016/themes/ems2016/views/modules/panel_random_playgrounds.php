@@ -1,8 +1,8 @@
-<div class="section side_bar_banners clearfix" data-appear-animation="fadeInDown" data-appear-animation-delay="500">
-  <h3 class="section_title">Naposledy pridané</h3>
+<div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
+  <h3 class="section_title"><ion:lang key="title_random_playgrounds" /></h3>
 
   <ion:page id="playgrounds">
-    <ion:articles limit="4" order_by="date DESC">
+    <ion:articles limit="4" order_by="RAND()">
       <ion:article:medias limit="1" type="picture" size="500,225" method="adaptive">
         <div class="scale_image_container">
           <a href="<ion:article:url />">
