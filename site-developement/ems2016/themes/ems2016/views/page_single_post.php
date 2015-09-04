@@ -74,8 +74,13 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="visible-xs">
+        <ion:partial view="modules/panel_share" />
+      </div>
       <ion:partial view="modules/panel_related_articles" />
-      <ion:partial view="modules/panel_share" />
+      <div class="hidden-xs">
+        <ion:partial view="modules/panel_share" />
+      </div>
     </div>
   </div>
 
