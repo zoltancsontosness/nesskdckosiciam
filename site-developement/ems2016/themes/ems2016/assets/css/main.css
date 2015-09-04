@@ -190,9 +190,10 @@ body {
   color: #fff;
 }
 
-.button.view_button:not(.button_type_icon_small){
- padding: 1px 11px; 
+.button.view_button:not(.button_type_icon_small) {
+  padding: 1px 11px;
 }
+
 
 /* ------------------------------------
   6. Sliders 
@@ -402,21 +403,44 @@ ul.socials-list li > a {
   width: 100%;
   min-width: 0;
 }
+
 .sort {
   cursor: pointer;
 }
+
 .tag-list li {
   display: inline-block;
   margin-bottom: 10px;
 }
 
 .tag-list {
-   text-align: justify;
+  text-align: justify;
 }
 
 ul.tag-list::after {
-  width: 100%; 
-  display: inline-block; 
-  content: "."; 
+  width: 100%;
+  display: inline-block;
+  content: ".";
   visibility: hidden
+}
+
+.search-input {
+  margin-bottom: 25px;
+}
+
+.search-input button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-height: 40px;
+  width: 40px;
+  background: transparent;
+  color: #b0b2b4;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.search-input button:hover {
+  color: #ff680d;
 }

@@ -5,7 +5,8 @@
       <div>
         <h2>Košice</h2>
         <div class="day_number">
-          <span id="temp"></span><span class="degree">&deg;C</span>
+          <span id="temp_day"></span><span class="degree">&deg;C</span>/
+          <span id="temp_night"></span><span class="degree">&deg;C</span>
         </div>
       </div>
       <div class="hidden-md">
@@ -13,7 +14,7 @@
       </div>
     </div>
     <div class="date_list info_list">
-      <ul class="clearfix" >
+      <ul class="clearfix">
         <li>
           <i class="fa fa-leaf fa-fw"></i>
           <span id="wind"></span>
@@ -36,38 +37,39 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    var url = "http://api.openweathermap.org/data/2.5/forecast/daily?id=724443&units=metric";
-    var xmlhttp = new XMLHttpRequest();
+    $.ajax({
+      url: 'http://api.openweathermap.org/data/2.5/forecast/daily',
+      jsonp: 'callback',
+      dataType: 'jsonp',
+      cache: false,
+      data: {
+        q:'kosice',
+        units: 'Metric',
+        APPID:'8a599ad2eabe8cea39f227601083f799',
+      },
 
-    xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var result = JSON.parse(xmlhttp.responseText);
-        handleRequest(result);
-      }
-    }
+      error: function (jqXHR, status) {
+        console.error('error getting weather data !'+status);
+      },
+      
+      success: function (response) {
+        var today = response.list[0];
+        $('#temp_day').text(Math.round(today.temp.day));
+        $('#temp_night').text(Math.round(today.temp.night));
+        document.getElementById("icon").className += " mc-" + today.weather[0].icon + " mc-lg";
+        $('#wind').text(today.speed + "");
+        $('#humidity').text(today.humidity + '%');
+        $('#pressure').text(Math.round(today.pressure));
 
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+        for (index = 1; index <= 5; index++) {
+          day = response.list[index];
+          weekday = new Date(day.dt * 1000);
+         
+          var days = ['NED','PON', 'UTO', 'STR', 'ŠTV', 'PIA', 'SOB'];
+
+          $('#date_list').append('<li><div>' + Math.round(day.temp.max) + '<span class="degree">°C</span></div><div>' + days[weekday.getDay()] + '</div></li>')
+        }
+      },
+    });
   });
-
-  function handleRequest(result) {
-    var today = result['list'][0];
-
-    document.getElementById("temp").innerHTML = Math.round(today.temp.max);
-    document.getElementById("icon").className += " mc-" + today['weather'][0].icon + " mc-lg";
-    document.getElementById("wind").innerHTML = today.speed + "";
-    document.getElementById("humidity").innerHTML = today.humidity + "%";
-    document.getElementById("pressure").innerHTML = Math.round(today.pressure);
-
-    date_list = document.getElementById("date_list");
-
-    for (index = 0; index < 5; index++) {
-      day = result['list'][index];
-      weekday = new Date(day.dt * 1000);
-
-      var days = ['PON', 'UTO', 'STR', 'ŠTV', 'PIA', 'SOB', 'NED'];
-
-      $('#date_list').append('<li><div>' + Math.round(day.temp.day) + '<span class="degree">°C</span></div><div>' + days[weekday.getDay()] + '</div></li>')
-    }
-  }
 </script>
