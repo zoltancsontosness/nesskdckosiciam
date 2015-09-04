@@ -573,7 +573,7 @@
 					stickyAction: function (data, win, base) {
 						var scrollTop = $(win).scrollTop();
 						if (scrollTop > data.offset) {
-							base.spacer.css({ height: data.height });
+							base.spacer.css({ height: data.height / 2 });
 							if (!base.menuWrap.hasClass('sticky')) {
 								base.menuWrap.addClass('sticky');
 							}
