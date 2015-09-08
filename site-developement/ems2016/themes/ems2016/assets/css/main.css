@@ -80,6 +80,10 @@ body {
   margin-top: 20px;
 }
 
+.float-right {
+  float: right;
+}
+
 
 /* ------------------------------------
   2. Typography 
@@ -186,6 +190,10 @@ body {
   color: #fff;
 }
 
+.button.view_button:not(.button_type_icon_small) {
+  padding: 1px 11px;
+}
+
 
 /* ------------------------------------
   6. Sliders 
@@ -261,6 +269,22 @@ ul.related_articles_list li.articles {
 
 .weather_widget .date_list > ul li:not(:first-child) {
   margin-left: 7%;
+}
+
+.side_bar_tabs.comment_tabs ul li:hover .comment_number.active {
+  background: #96ca2d;
+}
+
+.side_bar_tabs.comment_tabs ul li:hover .comment_number.passive {
+  background: #feb41c;
+}
+
+.side_bar_tabs.comment_tabs .post_theme.active {
+  background: #96ca2d;
+}
+
+.side_bar_tabs.comment_tabs .post_theme.passive {
+  background: #feb41c;
 }
 
 
@@ -378,4 +402,45 @@ ul.socials-list li {
 ul.socials-list li > a {
   width: 100%;
   min-width: 0;
+}
+
+.sort {
+  cursor: pointer;
+}
+
+.tag-list li {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.tag-list {
+  text-align: justify;
+}
+
+ul.tag-list::after {
+  width: 100%;
+  display: inline-block;
+  content: ".";
+  visibility: hidden
+}
+
+.search-input {
+  margin-bottom: 25px;
+}
+
+.search-input button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-height: 40px;
+  width: 40px;
+  background: transparent;
+  color: #b0b2b4;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.search-input button:hover {
+  color: #ff680d;
 }

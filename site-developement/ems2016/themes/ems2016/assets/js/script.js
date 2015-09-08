@@ -545,11 +545,11 @@
 						if (base.options.sticky) {
 							base.sticky.stickyInit.call(base, e.currentTarget);
 						}
-						base.gotoTop.scrollHandler.call(base, e.currentTarget);
+						//base.gotoTop.scrollHandler.call(base, e.currentTarget);
 					});
 
 					// Click Handler Button GotoTop
-					base.gotoTop.clickHandler(base);
+					//base.gotoTop.clickHandler(base);
 				},
 				sticky: {
 					stickySet: function () {
@@ -573,7 +573,7 @@
 					stickyAction: function (data, win, base) {
 						var scrollTop = $(win).scrollTop();
 						if (scrollTop > data.offset) {
-							base.spacer.css({ height: data.height });
+							base.spacer.css({ height: data.height / 2 });
 							if (!base.menuWrap.hasClass('sticky')) {
 								base.menuWrap.addClass('sticky');
 							}
@@ -584,21 +584,9 @@
 							}
 						}
 					}
-				},
-				gotoTop: {
-					scrollHandler: function (win) {
-						$(win).scrollTop() > 200 ?
-							this.goTop.addClass('go-top-visible'):
-							this.goTop.removeClass('go-top-visible');
-					},
-					clickHandler: function (self) {
-						self.goTop.on('click', function (e) {
-							e.preventDefault();
-							$('html, body').animate({ scrollTop: 0 }, 800);
-						});
-					}
 				}
 			}
+
 
 			/* Temp Plugin
 			 * ================================== */
@@ -648,7 +636,7 @@
 			}
 			else{
 				for(var i = 0,len = select.children('option').length;i < len;i++){
-					list.append('<li>'+select.children('option').eq(i).text()+'</li>')
+					list.append('<li data-value="'+select.children('option').eq(i).val()+'">'+select.children('option').eq(i).text()+'</li>')
 				}
 			}
 			select.hide();
@@ -663,8 +651,9 @@
 			// selected option
 
 			list.on('click','li',function(){
-				var val = $(this).text();
-				title.text(val);
+				var val = $(this).data('value');
+				var text = $(this).text();
+				title.text(text);
 				list.slideUp(400);
 				select.val(val);
 				title.toggleClass('active');

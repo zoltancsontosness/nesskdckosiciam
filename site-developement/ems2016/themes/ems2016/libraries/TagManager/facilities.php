@@ -50,7 +50,7 @@ class TagManager_Facilities extends TagManager
             'lang' => 'sk',
             'url' => self::clean($title),
             'title' => $title,
-            'subtitle' => $posted['operator'],
+            'subtitle' => '',
             'content' => $posted['desc'],
             'online' => 0,
             'meta_title' => '',
@@ -58,8 +58,11 @@ class TagManager_Facilities extends TagManager
         );
 
         $extend_data = array(
+          'operator' => $posted['operator'],
           'ico' => $posted['ico'],
-          'address' => $posted['address'],
+          'city' => $posted['city'],
+          'number' => $posted['number'],
+          'street' => $posted['street'],
           'phone' => $posted['phone'],
           'email' => $posted['email'],
           'webpage' => $posted['webpage'],

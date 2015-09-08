@@ -572,7 +572,6 @@ p a:hover{
   }
 
   .spacer{
-    display: none;
     height: 0;
     -webkit-transition: height .25s ease;
     transition: height .25s ease;
@@ -1639,7 +1638,7 @@ p a:hover{
 }
 
 .button.view_button{
-  padding: 1px 11px;
+/*  padding: 1px 11px;*/
   background: #f2f2f2;
   color: #3e454c;
   font-size: 12px;
@@ -2131,7 +2130,7 @@ p a:hover{
   }
 
     .caption_inner{
-      background:rgba(34,34,38,.3);
+      background:rgba(34,34,38,.5);
       padding:17px 20px 20px;
     }
 
@@ -2285,6 +2284,7 @@ p a:hover{
 
   .event_date{
     text-transform: uppercase;
+    overflow-x: hidden;
   }
 
   .event_activity{
@@ -3173,9 +3173,14 @@ p a:hover{
   margin-top: 35px;
 }
 
+.read_post_list ul li.no-margin {
+  margin-top: 0px;
+}
+
 .read_post_list ul li:first-child{
   margin-top: 35px;
 }
+
 
 .read_post_list.var2 ul li{
   margin-top: 40px;
@@ -3338,6 +3343,7 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
   border-top: 1px solid #3e454c;
   padding-top: 5px;
+  margin-bottom: 25px;
 }
 
 .pagination_block.var2{
@@ -5184,7 +5190,7 @@ box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 
     .photo_gallery .button.view_button{
-      margin-top: 2px;
+/*      margin-top: 2px;*/
     }
 
   .photo_gallery.side_bar .scale_image_container{

@@ -13,7 +13,7 @@
       <ul class="activity_list">
         <ion:articles:article>
           <li>
-            <div class="post_photo">
+            <div class="post_photo hidden-xs">
               <ion:medias size="80,80" method="adaptive" limit="1" type="picture">
                 <img src="<ion:media:src />" alt="<ion:media:title />">
               </ion:medias>

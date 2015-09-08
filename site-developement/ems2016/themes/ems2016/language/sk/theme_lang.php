@@ -10,5 +10,8 @@ $lang['btn_prevpage'] = 'Predchádzajúca strana';
 $lang['btn_gohome'] = 'Domov';
 $lang['show_all'] = 'Zobraziť všetky';
 $lang['btn_showmore'] = 'Zobraziť viac';
+$lang['title_details'] = 'Informácie';
+$lang['title_random_playgrounds'] = 'Náhodne vybrané';
+$lang['btn_show_all'] = 'Zobraziť všetky';
 
 ?>

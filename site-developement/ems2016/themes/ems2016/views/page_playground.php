@@ -56,11 +56,25 @@
 -->
                 <tr>
                   <td>
-                    <ion:address:label />
+                    <ion:street:label />
                   </td>
                   <td>
-                    <ion:address:value />
-                    <?php $address_enc = urlencode ("<ion:address:value />"); ?>
+                    <ion:street:value /> <ion:number:value />
+                    <?php
+                    $street = "<ion:street:value />";  
+                    $number = "<ion:number:value />";
+                    $city = "<ion:city:value />";
+
+                    $address_enc = urlencode($street . " " . $number . " " . $city);
+                    ?>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ion:city:label />
+                  </td>
+                  <td>
+                    <ion:city:value />
                   </td>
                 </tr>
                 <tr>
@@ -83,25 +97,50 @@
                 </tr>
                 <tr>
                   <td>
-                    <ion:webpage:label />
+                    <?php
+                      $url = "<ion:webpage:value />";
+                      if($url !== ''){
+                        $url = checkUrl($url);                  
+                      }
+                     ?>
+                    <?php if($url === ''): ?>
+                      <ion:webpage:label tag="span" class="text-muted"/>
+                    <?php else: ?>
+                      <ion:webpage:label />
+                    <?php endif; ?>
                   </td>
                   <td>
-                    <a href="<ion:webpage:value />" target="_blank">
-                          <?php echo parse_url('<ion:webpage:value />')['host']; ?>
-                        </a>
+                  
+                    <a href="<?= $url ?>" target="_blank">
+                      <?php
+                        if($url !== ''){
+                          $url = parse_url($url);
+                          echo $url['host'];
+                        }
+                      ?>
+                    </a>
                   </td>
-                </tr>
+                </tr>                
               </table>
-              <a href="<ion:fblink:value />" class="button button_type_icon_medium btn-block btn-fb" target="_blank">
-                Facebook
-                <i class="fa fa-facebook"></i>
-              </a>
+              <?php 
+                $url = "<ion:fblink:value />";
+                if($url !== ''){
+                  $url = checkUrl($url);                  
+                }
+              ?>
+
+              <?php if($url !== ''): ?>
+                <a href="<?= $url ?>" class="button button_type_icon_medium btn-block btn-fb" target="_blank">
+                  Facebook
+                  <i class="fa fa-facebook"></i>
+                </a>
+              <?php endif; ?>
             </ion:items>
           </ion:element:facility-info>
         </div>
         <?php if(isset($address_enc)): ?>
-          <div class="clearfix">
-            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&amp;zoom=17&amp;size=555x374&amp;maptype=roadmap" alt="mapa"/>
+          <div class="clearfix hidden-sm">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&amp;zoom=17&amp;size=555x374&amp;maptype=roadmap&amp;markers=icon:<ion:theme_url />assets/img/marker.png%7Ccolor:red%7Clabel:A%7C<?php echo $address_enc; ?>" alt="mapa" class="img-responsive"/>
           </div>
           <?php endif; ?>
       </div>
@@ -111,3 +150,18 @@
 </ion:article>
 
 <ion:partial view="footer" />
+
+<?php 
+  function checkUrl($url){
+    $url = parse_url($url);
+    if(!array_key_exists('scheme', $url)){
+      $url['scheme'] = 'http';
+      $url['host'] = '';
+    }
+    if(!array_key_exists('path', $url)){
+       $url['path'] = '';
+    }
+
+    return $url['scheme'] . "://" . $url['host'] . $url['path'];
+  }
+?>

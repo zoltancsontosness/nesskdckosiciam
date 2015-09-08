@@ -44,7 +44,7 @@ class TagManager_Clubs extends TagManager
             'lang' => 'sk',
             'url' => self::clean($title),
             'title' => $title,
-            'subtitle' => $posted['organizer'],
+            'subtitle' => '',
             'content' => $posted['desc'],
             'online' => 0,
             'meta_title' => '',
@@ -52,6 +52,7 @@ class TagManager_Clubs extends TagManager
         );
 
         $extend_data = array(
+          'organizer' => $posted['organizer'],
           'ico' => $posted['ico'],
           'webpage' => $posted['webpage'],
         );

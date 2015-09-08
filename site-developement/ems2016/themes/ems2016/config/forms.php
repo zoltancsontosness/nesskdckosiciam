@@ -19,15 +19,23 @@ $config['forms'] = array
                 'label' => 'form_label_title',
             ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
             ),
             'facility' => array(
                 'rules' => 'trim|xss_clean|min_length[5]|required',
                 'label' => 'form_label_subtitle',
             ),
-            'address' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+            'city' => array(
+                'rules' => 'trim|xss_clean|min_length[3]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'street' => array(
+                'rules' => 'trim|xss_clean|min_length[3]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'number' => array(
+                'rules' => 'trim|xss_clean|min_length[1]|required',
                 'label' => 'form_label_subtitle',
             ),
             'phone' => array(
@@ -83,8 +91,18 @@ $config['forms'] = array
                 'rules' => 'trim|required|min_length[3]|xss_clean',
                 'label' => 'form_label_title',
             ),
+            'sport_type' => array
+            (
+                'rules' => 'trim|required|min_length[3]|xss_clean',
+                'label' => 'form_label_sport_type',
+            ),
+            'is_active' => array
+            (
+                'rules' => 'trim|required|xss_clean',
+                'label' => 'form_label_is_active',
+            ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
             ),
             'event_name' => array(
@@ -144,7 +162,7 @@ $config['forms'] = array
                 'label' => 'form_label_title',
             ),
             'ico' => array(
-                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
             ),
             'club_name' => array(

@@ -1,14 +1,21 @@
 <div class="widget widget_categories" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
   <ion:page id="playgrounds">
     <h3 class="widget_title">
-    <ion:page:title />
+      <ion:page:title />
+      <ion:attr key="on_page" is="true">
+      <ion:category:current:title expression="!=''">     
+        <a href="<ion:url />" class="button button_grey view_button float-right">     
+          <ion:lang key="btn_show_all" />
+        </a>
+        </ion:category:current:title>      
+      </ion:attr>
     </h3>
 
     <?php $n=0 ; ?>
       <ul class="categories_list">
         <li>
           <ion:categories tag="ul" order_by_nb="true">
-            <?php if($n<<ion:attr key="count" />): $n++; ?>
+            <?php if($n<'<ion:attr key="count" />' or null == '<ion:attr key="count" />'): $n++; ?>
               <li>
                 <a href="<ion:category:url />">
                   <ion:category:title />
@@ -22,7 +29,7 @@
         </li>
       </ul>
 
-      <?php $categories_count=<ion:categories:count /> ?>
+      <?php $categories_count='<ion:categories:count />' ?>
   </ion:page>
 
   <ion:page id="categories">

@@ -44,11 +44,13 @@
                           <ion:title tag="h4" />
                         </a>
 
-                        <div class="event_date">
-                          pridané
-                          <ion:date format="short" />
-                        </div>
-
+                        <ion:element:facility-info>
+                          <ion:items>
+                            <div class="event_date text-nowrap" title="<ion:street:value /> <ion:number:value />">
+                              <ion:street:value /> <ion:number:value />
+                            </div>
+                          </ion:items>
+                        </ion:element:facility-info>
                       </li>
                       <?php if($counter == $columns) : $counter=0; ?>
                   </ul>
@@ -56,7 +58,7 @@
               </ion:articles:article>
               <?php if($counter < $columns): ?>
                 </ul>
-                <?php endif; ?>
+              <?php endif; ?>
           </div>
         </div>
 
@@ -64,14 +66,13 @@
           <div class="pagination_block">
             <ion:articles:pagination pagination="24" />
           </div>
-          <?php endif; ?>
+        <?php endif; ?>
       </ion:page>
     </div>
   </div>
 
   <div class="col-lg-4 col-md-4 col-sm-12">
-    <ion:partial view="modules/panel_categories" count="10" />
-    <ion:partial view="modules/panel_recently_added" />
+    <ion:partial view="modules/panel_categories" on_page="true"/>
   </div>
 </div>
 
