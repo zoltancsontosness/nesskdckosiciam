@@ -2,11 +2,12 @@
 
 class Json extends MY_Controller
 {
-
-  	function __construct()
+    
+    function __construct()
   	{
     		parent::__construct();
         $this->load->model('json_model');
+        header('Content-Type: text/html; charset=utf-8');
   	}
   
   	public function index()
