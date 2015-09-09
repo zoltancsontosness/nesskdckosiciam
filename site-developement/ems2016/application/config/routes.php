@@ -63,9 +63,11 @@ $route['picture(/.*)?'] = 'picture/$1';
 /*
  * Route to the Json controller
  */
-$route['json'] = "json/index";
-$route['json/(:any)'] = 'json/index/$1';
-$route['json/(:any)/(:num)'] = 'json/index/$1/$2';
+$route['json/list/(:any)'] = 'json/getList/$1';
+$route['json/list/(:any)/(:num)'] = 'json/getList/$1/$2';
+$route['json/versions'] = 'json/getVersions';
+$route['json/(:any)'] = 'json/getArticle/$1';
+$route['json/(:any)/(:num)'] = 'json/getArticle/$1/$2';
 
 /*
  * Route to default controller
