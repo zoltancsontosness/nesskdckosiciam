@@ -35,6 +35,8 @@
 <script src="<ion:theme_url/>assets/plugins/twitter/jquery.tweet.min.js"></script>
 <script src="<ion:theme_url/>assets/js/plugins.js"></script>
 <script src="<ion:theme_url/>assets/js/script.js"></script>
+<script src="<ion:theme_url/>assets/js/list.min.js"></script>
+<script src="<ion:theme_url/>assets/js/list.pagination.min.js"></script>
 <script src="<ion:theme_url/>assets/js/custom.js"></script>
 </body>
 

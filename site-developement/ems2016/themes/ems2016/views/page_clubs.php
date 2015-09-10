@@ -30,13 +30,17 @@
                   </div>
                   <ion:content characters="175" function="strip_tags" />
                 </div>
-                <a href="<ion:url />" class="button button_type_icon_small button_orange margin-top-20 pull-right">
+                <a href="<ion:url />" class="button button_type_icon_small button_grey margin-top-20 pull-right">
                   <ion:lang key="btn_showmore" />
                   <i class="fa fa-angle-right fa-fw"></i>
                 </a>
               </li>
             </ion:articles:article>
           </ul>
+          
+          <div class="text-center clearfix">
+          <ul class="pagination"></ul>
+          </div>
         </div>
 
         <?php if('<ion:articles:pagination />' != ''): ?>
@@ -57,7 +61,11 @@
   $(document).ready(function () {
     options = {
       listClass: 'activity_list',
-      valueNames: ['title']
+      valueNames: ['title'],
+      page: 2,
+      plugins: [
+      ListPagination({}),
+    ]
     };
 
     var clubsList = new List('activity_list', options);
@@ -67,7 +75,7 @@
     document.getElementById('search').value = '';
 
     var e = jQuery.Event("keydown");
-    e.which = 50; 
+    e.which = 50;
     $("#search").trigger(e);
   }
 </script>
