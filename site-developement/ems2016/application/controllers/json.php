@@ -73,17 +73,19 @@ class Json extends MY_Controller
   */
   public function getVersions()
   {      
-    $this->getThumbnail(54,'small');
     print_r(json_encode($this->json_model->getVersions(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 
   /*
     $media_id - identification numbur of picture user requires.
     $size - [small/medium/large] size of result image.
-    Returns image HTML dom tags.
+    Function automaticaly redirects page to image.
   */
   public function getThumbnail($media_id, $size) {
-    $data = $this->json_model->getMedia($media_id)[0];
+    $data = $this->json_model->getMedia($media_id);
+    if  (count($data) != 1) throw new Exception('Požadovaný obrázok sa nenašiel, prosím skontrolujte, či je identifikátor správny !');
+    $data = $data[0];
+
     $abs_path = getcwd().'/'.$data['base_path'];
 
     $resolutions = array(
@@ -91,6 +93,8 @@ class Json extends MY_Controller
       'medium' => ['1280','720'],
       'large' => ['1920','1080']
     );
+
+    if (!array_key_exists($size,$resolutions)) throw new Exception('Nepodporovaná veľkosť obrázka. Prosím použite jednu z možností [small,medium,big].');
 
     $size = $resolutions[$size];
 
@@ -123,8 +127,8 @@ class Json extends MY_Controller
     $this->image_lib->resize(); 
     $this->image_lib->clear(); 
 
-    echo '<img src="'.$result.' ">';
-    die;
-    return;
+    header('Content-type: image/jpeg');
+    readfile($result);
+    exit;
   }
-}    
+}
