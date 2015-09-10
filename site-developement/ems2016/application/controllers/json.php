@@ -12,12 +12,17 @@ class Json extends MY_Controller
 
   public function index()
   {      
-    return false;	     
+    return;	     
   }
 
+  /**
+   * It returns complete lists of articles with basic data.
+   * @param  string  $type       type of article
+   * @param  integer $start_date timestamp of date starting point
+   * @return boolean success of query.
+   */
   public function getList($type, $start_date = NULL)
   {
-
     switch ($type) {
       case "news":
         $table = "news_list";
@@ -42,7 +47,7 @@ class Json extends MY_Controller
       default:
         return false;
     }
-
+    return true;
   }
 
   private function getAllResults($table)
@@ -56,31 +61,36 @@ class Json extends MY_Controller
     print_r(json_encode($this->json_model->getListFromDate($table, $start_date), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 
+  /**
+   * Writes complete data of all types of articles to output.
+   * @param  string  $type type od article
+   * @param  integer $id   article id     
+   * @return boolean success of query
+   */
   public function getArticle($type, $id = NULL)
   {
-
     $accessible = array("categories", "news", "events", "articles", "playgrounds", "clubs");
     if (in_array($type, $accessible)) {
       print_r(json_encode($this->json_model->getArticle($type, $id), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     } else {
       return false;
     }
-
+    return true;
   }
 
-  /*
-    Return json string of data_versions table.
-  */
+  /**
+   * It returns json string of data_versions table.
+   */
   public function getVersions()
   {      
     print_r(json_encode($this->json_model->getVersions(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 
-  /*
-    $media_id - identification numbur of picture user requires.
-    $size - [small/medium/large] size of result image.
-    Function automaticaly redirects page to image.
-  */
+  /**
+   * By calling this function with right parameters page will be redirected to picture user require.
+   * @param integer $media_id identification numbur of picture user requires.
+   * @param integer $size     [small/medium/large] size of result image thumbnail.  
+   */
   public function getThumbnail($media_id, $size) {
     $data = $this->json_model->getMedia($media_id);
     if  (count($data) != 1) throw new Exception('Požadovaný obrázok sa nenašiel, prosím skontrolujte, či je identifikátor správny !');
