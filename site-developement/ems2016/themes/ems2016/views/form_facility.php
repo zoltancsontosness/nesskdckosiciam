@@ -212,7 +212,7 @@
       <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_2" type="checkbox" id="rules_2">
-          <label for="rules_2">Súhlas so spracovaním a zverejnením kontaktných údajov</label>
+          <label for="rules_2">Súhlasím so spracovaním a zverejnením kontaktných údajov</label>
           <ion:form:facilities:error:rules_2 tag="p" class="error-input alert-danger" />
         </div>   
       </div>

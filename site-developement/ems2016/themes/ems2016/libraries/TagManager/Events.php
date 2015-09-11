@@ -42,7 +42,7 @@ class TagManager_Events extends TagManager
           'has_url' => 1,
           'priority' => 5,
           'flag' => 0,
-          'indexed' => 1
+          'indexed' => 1,
         );
 
         $lang_data = array (
@@ -59,14 +59,10 @@ class TagManager_Events extends TagManager
 
         $extend_data = array(
           'organizer' => $posted['organizer'],
-          'city' => $posted['city'],
-          'street' => $posted['street'],
-          'number' => $posted['number'],
+          'address' => $posted['address'],
           'ico' => $posted['ico'],
-          'email' => $posted['email'],
           'webpage' => $posted['webpage'],
           'date' => $posted['date'],
-          'time' => $posted['time'],
           'length' => $posted['length'],
           'is-active' => $posted['is_active']
         );
@@ -83,6 +79,7 @@ class TagManager_Events extends TagManager
 
         //SAVING TO DB
         $article_id = self::$ci->article_model->save($data,$lang_data);
+        self::$ci->article_model->add_category($article_id, $posted['category']);
         $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 2, $element);
         self::$ci->extend_field_model->save_data('element', $element_id, $extend_data,false);
         //LINKING ARTICLE TO PAGE

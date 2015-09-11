@@ -78,7 +78,7 @@
       <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_2" type="checkbox" id="rules_2">
-          <label for="rules_2">Súhlas so spracovaním a zverejnením kontaktných údajov</label>
+          <label for="rules_2">Súhlasím so spracovaním a zverejnením kontaktných údajov</label>
           <ion:form:clubs:error:rules_2 tag="p" class="error-input alert-danger" />
         </div>   
       </div>
@@ -92,7 +92,7 @@
           <p class="error-input alert-danger">Captcha nebola vyplnená</p>
         <?php endif; ?>
       <?php endif; ?>
-      <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať športovisko</button>
+      <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať klub</button>
     </form>
   </div>
 

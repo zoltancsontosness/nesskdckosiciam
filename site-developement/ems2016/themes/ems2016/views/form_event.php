@@ -85,6 +85,25 @@
             <ion:form:events:error:is_active tag="p" class="error-input alert-danger" />
           </div>
         </div>
+        <div class="control-group input_profiles col-xs-12 col-sm-12">
+          <label class="control-label">Kategória športu:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <div class="custom_select">
+                <div class="select_title">Vyberte jednu z možností ...</div>
+                <ul id="menu_type" class="select_list" style="display: none;">
+                </ul>
+                <select name="category" class="d_none" style="display: none;">
+                  <option value="">Vyberte jednu z možností ...</option>
+                  <ion:categories>
+                    <option value="<ion:category:id />"><ion:category:name /></option>
+                  </ion:categories>
+                </select>
+              </div>
+            </div>
+            <ion:form:events:error:category tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12 col-sm-12">
@@ -163,7 +182,7 @@
       <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_2" type="checkbox" id="rules_2">
-          <label for="rules_2">Súhlas so spracovaním a zverejnením kontaktných údajov</label>
+          <label for="rules_2">Súhlasím so spracovaním a zverejnením kontaktných údajov</label>
           <ion:form:events:error:rules_2 tag="p" class="error-input alert-danger" />
         </div>   
       </div>
@@ -177,7 +196,7 @@
           <p class="error-input alert-danger">Captcha nebola vyplnená</p>
         <?php endif; ?>
       <?php endif; ?>
-      <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať športovisko</button>
+      <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať podujatie</button>
     </form>
   </div>
 

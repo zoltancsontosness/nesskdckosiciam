@@ -3,14 +3,14 @@
 <ion:article>
   <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-12">
-      <div class="section">
+      <div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
         <h2 class="section_title section_title_big"><ion:title /></h2>
       </div>
 
       <div class="section_7 product_page">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <div class="product_preview">
+            <div class="product_preview" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
               <ion:medias type="picture" limit="1">
                 <div class="qv_preview product_item">
                   <img id="zoom_image" src="<ion:media:src size='360,280' method='adaptive' />" data-zoom-image="<ion:media:src />" alt="<ion:media:title />">
@@ -30,14 +30,14 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-justify text-content">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-justify text-content" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
             <ion:content />
           </div>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="section side_bar_banners clearfix">
+      <div class="section side_bar_banners clearfix" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
         <h3 class="section_title">Informácie</h3>
 
         <div class="product_description">
@@ -143,6 +143,7 @@
             <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $address_enc; ?>&amp;zoom=17&amp;size=555x374&amp;maptype=roadmap&amp;markers=icon:<ion:theme_url />assets/img/marker.png%7Ccolor:red%7Clabel:A%7C<?php echo $address_enc; ?>" alt="mapa" class="img-responsive"/>
           </div>
           <?php endif; ?>
+        <ion:partial view="modules/panel_share" />
       </div>
     </div>
   </div>

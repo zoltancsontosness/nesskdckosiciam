@@ -141,6 +141,10 @@ $config['forms'] = array
                 'rules' => 'xss_clean|required',
                 'label' => 'form_label_rules_2'
             ),
+            'category' => array(
+                'rules' => 'xss_clean|required|trim',
+                'label' => 'form_label_category'
+            ),
         )
     ),
 

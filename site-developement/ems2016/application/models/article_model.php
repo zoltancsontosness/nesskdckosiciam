@@ -641,6 +641,21 @@ class Article_model extends Base_model
 
 
 	// ------------------------------------------------------------------------
+	/**
+	 * Custom function for add article to category in registration form
+	 * @param id $id_article  id of article
+	 * @param id $id_category id of one category
+	 */
+		public function add_category($id_article = NULL, $id_category = NULL){
+			if(($id_article !== NULL) && ($id_category !== NULL)){
+				// Get categories articles table content
+				$query = $this->db->insert("article_category", array(
+						'id_article' => $id_article,
+						'id_category' => $id_category
+					));
+			}
+		}
+  // ------------------------------------------------------------------------
 
 
 	/**
