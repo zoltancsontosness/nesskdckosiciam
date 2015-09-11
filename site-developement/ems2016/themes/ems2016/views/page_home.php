@@ -26,7 +26,7 @@
   </div>
 
   <div class="col-sm-6 col-md-4">
-    <!--CALENDAR HERE-->
+    <ion:partial view="modules/panel_calendar" />
   </div>
 
   <div class="col-xs-12 visible-xs">
