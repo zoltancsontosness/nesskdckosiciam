@@ -71,7 +71,7 @@
       <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_1" type="checkbox" id="rules_1">
-          <label for="rules_1">Súhlasím s <a href="none">podmienkami pridávania klubu</a></label>
+          <label for="rules_1">Súhlasím s <a href="<ion:theme_url />assets/files/pravna-zodpovednost.pdf" target="_blank">podmienkami pridávania klubu</a></label>
           <ion:form:clubs:error:rules_1 tag="p" class="error-input alert-danger" />
         </div> 
       </div>
