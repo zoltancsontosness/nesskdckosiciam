@@ -1,9 +1,13 @@
 <ion:partial view="header" />
 <div class="content">
-  <div class="container box-titles">
-    <ion:page:title tag="h1" class="section_title section_title_big" />
+  <div class="container row">
+    <div class="col-xs-12">
+      <ion:page:title tag="h1" class="section_title section_title_big" />
+    </div>
+  </div>
+  <div class="row">
     <ion:articles:article limit="3">
-      <div class="col-md-4">
+      <div class="col-md-4 box-titles">
         <div class="section text_post_block" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
           <ion:title tag="h3" />
           <ion:content />

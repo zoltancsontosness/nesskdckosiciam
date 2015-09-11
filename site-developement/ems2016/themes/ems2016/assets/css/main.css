@@ -287,10 +287,18 @@ ul.related_articles_list li.articles {
   background: #feb41c;
 }
 
-.box-title h2 {
-  padding: 5px;
+.section_title {
+  padding-top: 25px;
+}
+
+.box-titles h3 {
+  padding: 10px;
   color: #FFF;
 }
+
+.row > .box-titles:nth-child(1) > div > h3 { background-color: #c8d23a; }
+.row > .box-titles:nth-child(2) > div > h3 { background-color: #f68933; }
+.row > .box-titles:nth-child(3) > div > h3 { background-color: #70cbd2; }
 
 
 /* ------------------------------------
