@@ -287,6 +287,11 @@ ul.related_articles_list li.articles {
   background: #feb41c;
 }
 
+.box-title h2 {
+  padding: 5px;
+  color: #FFF;
+}
+
 
 /* ------------------------------------
   9. Forms 
