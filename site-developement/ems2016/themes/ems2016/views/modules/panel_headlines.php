@@ -1,4 +1,4 @@
-<div class="section_post_left" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
+<div class="section_7" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
   <?php $count = 0; $show = 3; $already_shown = array(); $timeout = 0; ?>
     <ul class="related_articles_list">
       <?php while ($count < $show) : ?>

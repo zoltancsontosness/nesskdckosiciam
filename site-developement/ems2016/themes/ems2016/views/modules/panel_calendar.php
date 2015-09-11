@@ -3,7 +3,7 @@
   width: 14.2857%;
 }
 </style>
-                <div class="section calendar" data-appear-animation="fadeInDown" data-appear-animation-delay="1150">
+                <div class="section calendar" data-appear-animation="fadeInDown" data-appear-animation-delay="750">
                   <h3 class="section_title">Calendar</h3>
                   <table id="calendarHeader">
                     <thead>

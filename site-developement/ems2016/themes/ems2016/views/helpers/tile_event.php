@@ -23,7 +23,7 @@
             </div>
             <ion:article:title tag="h3" class="title" />
             <p class="event_date type">
-              <ion:article:subtitle />
+              <ion:article:categories:list separator=", " />
             </p>
           </div>
         </div>

@@ -12,8 +12,8 @@
           <div class="search-input">
             <div class="control-group ">
               <div class="controls">
-                <input id="search" class="search" type="text" placeholder="Hľadať" />
-                <button onclick="clearFields();"><i class="fa fa-times fa-lg"></i></button>
+                <input id="search" class="search hasclear" type="text" placeholder="Hľadať" />
+                <button class="clearer"><i class="fa fa-times fa-lg"></i></button>
               </div>
             </div>
           </div>
@@ -37,9 +37,9 @@
               </li>
             </ion:articles:article>
           </ul>
-          
+
           <div class="text-center clearfix">
-          <ul class="pagination"></ul>
+            <ul class="pagination"></ul>
           </div>
         </div>
 
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <!--SIDEBAR-->
+      <ion:partial view="modules/panel_headlines" />
     </div>
   </div>
 
@@ -62,7 +62,7 @@
     options = {
       listClass: 'activity_list',
       valueNames: ['title'],
-      page: 2,
+      page: 8,
       plugins: [
       ListPagination({}),
     ]
@@ -71,13 +71,17 @@
     var clubsList = new List('activity_list', options);
   })
 
-  function clearFields() {
-    document.getElementById('search').value = '';
+  $(".hasclear").keyup(function () {
+    var t = $(this);
+    t.next('button').toggle(Boolean(t.val()));
+  });
 
-    var e = jQuery.Event("keydown");
-    e.which = 50;
-    $("#search").trigger(e);
-  }
+  $(".clearer").hide($(this).prev('input').val());
+
+  $(".clearer").click(function () {
+    $(this).prev('input').val('').focus();
+    $(this).hide();
+  });
 </script>
 
 <ion:partial view="footer" />
