@@ -8,6 +8,7 @@ create or replace view  `news_list` as (
   left join media on media.id_media = 
   (SELECT id_media from article_media
    where id_article = pa.id_article
+   order by ordering asc
    LIMIT 1) 
   where page.name = 'news' and pa.online = 1
   order by date desc
@@ -23,6 +24,7 @@ create or replace view  `articles_list` as (
   left join media on media.id_media = 
   (SELECT id_media from article_media
    where id_article = pa.id_article
+   order by ordering asc
    LIMIT 1) 
   where page.name = 'articles' and pa.online = 1
   order by date desc
@@ -46,6 +48,7 @@ create or replace view `playgrounds_list` as (
     select id_media 
     from article_media
     where id_article = a.id_article
+    order by ordering asc
     limit 1)
   where a.id_article in (
     select id_article from page_article pa
@@ -80,6 +83,7 @@ create or replace view `events_list` as (
     select id_media 
     from article_media
     where id_article = a.id_article
+    order by ordering asc
     limit 1)
   where a.id_article in (
     select id_article from page_article pa
@@ -97,7 +101,8 @@ create or replace view `articles` as (
   join article_lang on a.id_article = article_lang.id_article 
   left join media on media.id_media = 
   (SELECT id_media from article_media
-   where id_article = a.id_article 
+   where id_article = a.id_article
+   order by ordering asc
    LIMIT 1) 
   where a.id_article in (
     select id_article from page_article pa
@@ -114,6 +119,7 @@ create or replace view `news` as (
   left join media on media.id_media = 
   (SELECT id_media from article_media
    where id_article = a.id_article 
+   order by ordering asc
    LIMIT 1) 
   where a.id_article in (
     select id_article from page_article pa
@@ -149,6 +155,7 @@ create or replace view `events` as (
     select id_media 
     from article_media
     where id_article = a.id_article
+    order by ordering asc
     limit 1)
   where a.id_article in (
     select id_article from page_article pa
@@ -180,6 +187,7 @@ create or replace view `playgrounds` as (
     select id_media 
     from article_media
     where id_article = a.id_article
+    order by ordering asc
     limit 1)
   where a.id_article in (
     select id_article from page_article pa

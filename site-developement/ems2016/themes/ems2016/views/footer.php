@@ -8,18 +8,22 @@
 <footer class="footer footer_3">
   <div class="footer_bottom_part">
     <div class="container clearfix">
-      <p>© 2015 <span>NESS KDC</span>. All Rights Reserved.</p>
       <div class="mobile_menu">
         <nav>
-          <ion:navigation tag="ul" display_hidden="true">
-            <li>
-              <a href="<ion:url />">
-                <ion:title />
-              </a>
-            </li>
-          </ion:navigation>
+          <ul>
+            <ion:pages parent="o-projekte">
+              <ion:page>
+                <li>
+                  <a href="<ion:url />">
+                    <ion:title />
+                  </a>
+                </li>
+              </ion:page>
+            </ion:pages>
+          </ul>
         </nav>
       </div>
+      <p>© 2015 <span>NESS KDC</span>. All Rights Reserved.</p>
     </div>
   </div>
 </footer>

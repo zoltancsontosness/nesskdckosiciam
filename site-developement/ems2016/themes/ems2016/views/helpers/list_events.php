@@ -1,7 +1,10 @@
 <?php $active = '<ion:attr key="active" />'; ?>
-  <div id="events_list_<?php echo $active?>">
-    <button class="button button_grey_light button_type_3" onclick="showHistory('<?= $active ?>');">Historia</button>
+  <button class="button button_type_icon_small button_grey_light view_button pull-right" onclick="showHistoryOfState('<?= $active ?>');">
+    <ion:lang key="btn_history" />
+    <i class="fa fa-clock-o"></i>
+  </button>
 
+  <div id="events_list_<?php echo $active?>">
     <ul class="list">
       <ion:articles:article>
         <?php if('<ion:element:event-info:items:is-active:value />' == $active) : ?>

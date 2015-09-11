@@ -20,59 +20,20 @@ $(document).ready(function () {
   $("table").addClass("table");
 });
 
-function showHistory(state) {
-  switch (state) {
-  case 'active':
-    events_list_active.date.setMonth(events_list_active.date.getMonth() - 1);
-    events_list_active.filter(function (item) {
-      return (new Date(item._values.date) > events_list_active.date);
-    });
-    console.log('act' + events_list_active.date);
-    break;
-  case 'passive':
-    events_list_passive.date.setMonth(events_list_passive.date.getMonth() - 1);
-    events_list_passive.filter(function (item) {
-      return (new Date(item._values.date) > events_list_passive.date);
-    });
-    console.log('pas' + events_list_passive.date);
-    break;
-  }
+/**
+ * Filter list for events page by date.
+ * @param   {Object}   list      list to filter
+ * @param   {Number}   direction depending on number direction of showing history
+ */
+function filterList(list, direction) {
+  list.date.setMonth(list.date.getMonth() + direction);
+  list.filter(function (item) {
+    return (new Date(item._values.date) > list.date);
+  });
 
-  for (var i = 0; i < lists.length; i++) {
-    lists[i].sort('date', {
+  for (var i = 0; i < list.length; i++) {
+    list[i].sort('date', {
       order: "asc"
     });
-  }
-}
-
-var options = {
-  date: new Date(),
-  valueNames: ['title', 'date'],
-  page: 10,
-  plugins: [
-      ListPagination({}),
-    ],
-};
-
-var options1 = {
-  date: new Date(),
-  valueNames: ['title', 'date'],
-  page: 10,
-  plugins: [
-      ListPagination({}),
-    ],
-};
-
-var events_list_active = new List('events_list_active', options);
-var events_list_passive = new List('events_list_passive', options1);
-var lists = [events_list_active, events_list_passive];
-
-for (var i = 0; i < lists.length; i++) {
-  lists[i].filter(function (item) {
-    return (new Date(item._values.date) > lists[i].date);
-  });
-
-  lists[i].sort('date', {
-    order: "asc"
-  });
+  };
 }
