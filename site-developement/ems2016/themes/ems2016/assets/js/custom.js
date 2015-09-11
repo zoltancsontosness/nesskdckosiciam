@@ -37,3 +37,27 @@ function filterList(list, direction) {
     });
   };
 }
+
+/*
+  Equalize Heights of elements
+*/
+function equalize(elementClass) {
+  var elements = $('.' + elementClass);
+  if ( $( window ).width() >= 992 ) {
+    var maxHeight = 0;
+    elements.each(function(){
+       if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+    elements.height(maxHeight);
+  } else {
+    elements.removeAttr( "style" );
+  }
+};
+
+equalize("box-title");
+equalize("box-content");
+
+$( window ).resize(function(){
+  equalize("box-title");
+  equalize("box-content");
+});

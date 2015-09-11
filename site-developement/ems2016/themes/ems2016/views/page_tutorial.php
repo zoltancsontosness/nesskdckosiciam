@@ -9,8 +9,10 @@
     <ion:articles:article limit="3">
       <div class="col-md-4 box-titles">
         <div class="section text_post_block" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
-          <ion:title tag="h3" />
-          <ion:content />
+          <ion:title tag="h3" class="box-title" />
+          <div class="box-content">
+            <ion:content />
+          </div>
           <ion:medias>
             <img src="<ion:media:src size="690" />" alt="<ion:article:name />" class="margin-top-20" />
           </ion:medias>
