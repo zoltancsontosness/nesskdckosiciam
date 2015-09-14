@@ -28,14 +28,33 @@
       </li>
     </ul>      
   </div>
-  <div class="section_2 row">
-    <h1 class="section_title text-center"><ion:page:articles:article:title limit="1"/></h1>
+  
+  <div class="row">
     <div class="col-xs-12 text-justify block-underline">
+      <h1 class="section_title text-center"><ion:page:articles:article:title limit="1"/></h1>
       <ion:page:articles:article:content limit="1"/>
     </div>
   </div>
+  <div class="row section_2">
+    <ion:page id="postup-zverejnenia-informacii">
+      <ion:articles:article limit="3">
+        <div class="col-md-4 section box-titles">
+          <div class="text_post_block" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
+            <ion:title tag="h3" class="box-title" />
+            <div class="box-content">
+              <ion:content />
+            </div>
+            <ion:medias>
+              <img src="<ion:media:src size="690" />" alt="<ion:article:name />" class="margin-top-20" />
+            </ion:medias>
+          </div>
+        </div>
+      </ion:articles:article>
+    </ion:page>
+  </div>
+  
   <div class="section_2 row">
-    <h1 class="section_title text-center"><ion:page:title id="napisali-o-nas"/></h1>
+    <h1 class="section_title text-center"><ion:page:title id="napisali-o-nas" /></h1>
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <div class="owl-demo-2 owl-carousel_2 var2">
         <ion:page id="napisali-o-nas">
