@@ -6,6 +6,21 @@
 <!-- /.wrapper-container -->
 <!-- FOOTER -->
 <footer class="footer footer_3">
+  <div class="footer_top_part">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 widget">
+        <div class="logo-ke img-responsive"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4 widget">
+          <div class="logo-aceseu img-responsive"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4 widget">
+          <!--<img src="<ion:theme_url />assets/img/aceseu-logo.png">-->
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="footer_bottom_part">
     <div class="container clearfix">
       <div class="mobile_menu">

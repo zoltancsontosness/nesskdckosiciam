@@ -31,7 +31,7 @@ class TagManager_Clubs extends TagManager
 
         $data = array (
           'id_article' => '',
-          'author' => $posted['organizer'],
+          'author' => self::clean($title),
           'name' => self::clean($title),
           'has_url' => 1,
           'priority' => 5,
@@ -52,7 +52,6 @@ class TagManager_Clubs extends TagManager
         );
 
         $extend_data = array(
-          'organizer' => $posted['organizer'],
           'ico' => $posted['ico'],
           'webpage' => $posted['webpage'],
         );

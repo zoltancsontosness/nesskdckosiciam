@@ -14,13 +14,13 @@
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12 col-sm-6">
-          <label class="control-label">Meno prevadzkára:</label>
+          <label class="control-label">Meno klubu, zväzu, organizácie:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
-              <input name="organizer" type="text"value="<ion:form:clubs:field:organizer />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <input name="club_name" type="text"value="<ion:form:clubs:field:club_name />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Meno klubu, zväzu, organizácie" data-content="Uveďte oficiálny názov organizácie."></i>
             </div>
-            <ion:form:clubs:error:organizer tag="p" class="error-input alert-danger" />
+            <ion:form:clubs:error:club_name tag="p" class="error-input alert-danger" />
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-6">
@@ -28,29 +28,19 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="ico" type="text"value="<ion:form:clubs:field:ico />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="IČO" data-content="Uveďte IČO organizácie."></i>
             </div>
             <ion:form:clubs:error:ico tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="control-group input_profiles col-xs-12 col-sm-6">
-          <label class="control-label">Názov klubu:</label>
-          <div class="controls">
-            <div class="inner-addon right-addon">
-              <input name="club_name" type="text"value="<ion:form:clubs:field:club_name />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
-            </div>
-            <ion:form:clubs:error:club_name tag="p" class="error-input alert-danger" />
-          </div>
-        </div>
-        <div class="control-group input_profiles col-xs-12 col-sm-6">
+        <div class="control-group input_profiles col-xs-12 col-sm-12">
           <label class="control-label">Webstránka:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="webpage" type="text"value="<ion:form:clubs:field:webpage />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Webstránka" data-content="Uveďte adresu webovej stránky organizácie."></i>
             </div>
             <ion:form:clubs:error:webpage tag="p" class="error-input alert-danger" />
           </div>
@@ -62,7 +52,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <textarea name="desc"><ion:form:clubs:field:desc /></textarea>
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popis" data-content="Uveďte popis činnosti organizácie."></i>
             </div>
             <ion:form:clubs:error:desc tag="p" class="error-input alert-danger" />
           </div>
@@ -74,13 +64,6 @@
           <label for="rules_1">Súhlasím s <a href="<ion:theme_url />assets/files/pravna-zodpovednost.pdf" target="_blank">podmienkami pridávania klubu</a></label>
           <ion:form:clubs:error:rules_1 tag="p" class="error-input alert-danger" />
         </div> 
-      </div>
-      <div class="row">
-        <div class="col-xs-12 control-group">
-          <input name="rules_2" type="checkbox" id="rules_2">
-          <label for="rules_2">Súhlasím so spracovaním a zverejnením kontaktných údajov</label>
-          <ion:form:clubs:error:rules_2 tag="p" class="error-input alert-danger" />
-        </div>   
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12">
