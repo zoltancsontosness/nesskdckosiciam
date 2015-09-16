@@ -18,7 +18,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="organizer" type="text" value="<ion:form:events:field:organizer />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Meno organizátora" data-content="Uveďte meno právnickej osoby, ktorá podujatie organizuje."></i>
             </div>
             <ion:form:events:error:organizer tag="p" class="error-input alert-danger" />
           </div>
@@ -28,7 +28,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="ico" type="text" value="<ion:form:events:field:ico />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="IČO" data-content="Uveďte IČO organizátora."></i>
             </div>
             <ion:form:events:error:ico tag="p" class="error-input alert-danger" />
           </div>
@@ -40,7 +40,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="event_name" type="text" value="<ion:form:events:field:event_name />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Názov akcie" data-content="Uveďte názov podujatia, pod ktorým sa zobrazí na tejto webovej stránke."></i>
             </div>
             <ion:form:events:error:event_name tag="p" class="error-input alert-danger" />
           </div>
@@ -50,25 +50,25 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="address" type="text" value="<ion:form:events:field:address />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Miesto konania akcie" data-content="Uveďte presnú adresu miesta konania akcie alebo štartu akcie."></i>
             </div>
             <ion:form:events:error:address tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="control-group input_profiles col-xs-12 col-sm-6">
+        <div class="control-group input_profiles col-xs-12 col-md-6">
           <label class="control-label">Typ športu:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="sport_type" type="text" value="<ion:form:events:field:sport_type />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Typ športu" data-content="Napíšte názvy športov, ktoré budú súčasťou podujatia."></i>
             </div>
             <ion:form:events:error:sport_type tag="p" class="error-input alert-danger" />
           </div>
         </div>
-        <div class="control-group input_profiles col-xs-12 col-sm-6">
-          <label class="control-label">Je šport aktívny?:</label>
+        <div class="control-group input_profiles col-xs-12 col-md-6">
+          <label class="control-label">Je podujatie aktívne?</label>
           <div class="controls">
             <div class="inner-addon right-addon">
               <div class="custom_select">
@@ -77,8 +77,8 @@
                 </ul>
                 <select name="is_active" class="d_none" style="display: none;">
                   <option value="">Vyberte jednu z možností ...</option>
-                  <option value="active">Áno</option>
-                  <option value="passive">Nie</option>
+                  <option value="active">Áno - verejnosť môže športovať</option>
+                  <option value="passive">Nie - verejnosť sa zúčastní ako divák</option>
                 </select>
               </div>
             </div>
@@ -86,7 +86,7 @@
           </div>
         </div>
         <div class="control-group input_profiles col-xs-12 col-sm-12">
-          <label class="control-label">Kategória športu:</label>
+          <label class="control-label">Hlavná kategória športu:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
               <div class="custom_select">
@@ -111,7 +111,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="date" type="text" id="datetimepicker-from" value="<ion:form:events:field:date />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Dátum a čas konania" data-content="Uveďte dátum a čas konania akcie."></i>
             </div>
             <ion:form:events:error:date tag="p" class="error-input alert-danger" />
           </div>
@@ -123,7 +123,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="length" type="text" id="datetimepicker-to" value="<ion:form:events:field:length />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Dĺžka trvania" data-content="Uveďte približnú dĺžku trvania akcie."></i>
             </div>
             <ion:form:events:error:length tag="p" class="error-input alert-danger" />
           </div>
@@ -135,7 +135,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <input name="webpage" type="text" value="<ion:form:events:field:webpage />">
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Webstránka" data-content="Uveďte adresu webovej stránky, na ktorej je možné získať ďalšie informácie o podujatí."></i>
             </div>
             <ion:form:events:error:webpage tag="p" class="error-input alert-danger" />
           </div>
@@ -147,7 +147,7 @@
           <div class="controls">
             <div class="inner-addon right-addon">
               <textarea name="desc"> <ion:form:events:field:desc /></textarea>
-              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"></i>
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popis" data-content="Do popisu uveďte všetky informácie dôležité pre účastníkov podujatia ako napríklad: špeciálne podmienky a obmedzenia účasti, kategórie účastníkov, miesto či trasu podujatia, dostupnosť šatní a spŕch, dostupnosť občerstvenia, atď. "></i>
             </div>
             <ion:form:events:error:desc tag="p" class="error-input alert-danger" />
           </div>
@@ -155,8 +155,8 @@
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12">
-          <label class="control-label">Príloha:</label>
-          <small class="help-block">(povolené prípony len <span class="warning">jpg</span>, <span class="warning">jpeg</span> a <span class="warning">png</span> o veľkosti max. 1MB)</small>
+          <label class="control-label">Príloha (reklamný leták):</label>
+          <small class="help-block">(formát <span class="warning">jpg</span>, <span class="warning">jpeg</span> a <span class="warning">png</span> o veľkosti max. 1MB)</small>
           <div class="controls">
             <!-- Foto 1 -->
             <div class="input-group control-group input-profiles">
@@ -175,16 +175,9 @@
       <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_1" type="checkbox" id="rules_1">
-          <label for="rules_1">Súhlasím s <a href="none">podmienkami pridávania podujatí</a></label>
+          <label for="rules_1">Súhlasím s <a href="<ion:theme_url />assets/files/pravna-zodpovednost.pdf" target="_blank">podmienkami pridávania podujatí</a></label>
           <ion:form:events:error:rules_1 tag="p" class="error-input alert-danger" />
         </div> 
-      </div>
-      <div class="row">
-        <div class="col-xs-12 control-group">
-          <input name="rules_2" type="checkbox" id="rules_2">
-          <label for="rules_2">Súhlasím so spracovaním a zverejnením kontaktných údajov</label>
-          <ion:form:events:error:rules_2 tag="p" class="error-input alert-danger" />
-        </div>   
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12">

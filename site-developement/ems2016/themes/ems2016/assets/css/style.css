@@ -236,6 +236,36 @@ img{
   width: 100%;
 }
 
+.logo-ke {
+  background-image: url("../img/kosice-logo.png");
+  background-repeat: no-repeat;
+  background-position: 0 -211px;
+  transition: background-position 0.5s ease-in-out;
+  background-size:100%;
+  height: 211px;
+}
+
+.logo-ke:hover {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.logo-aceseu {
+  background-image: url("../img/aceseu-logo.png");
+  background-repeat: no-repeat;
+  background-position: 0 -211px;
+  transition: background-position 0.5s ease-in-out;
+  background-size:100%;
+  height: 211px;
+}
+
+.logo-aceseu:hover {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transition: background-position 0.5s ease-in-out;
+}
+
 /* -----------------------------------
 
   3. Typography
@@ -5857,7 +5887,7 @@ input::-ms-clear {
   }
 
     .form_type_1 .control-group.input_profiles .control-label{
-      width: 140px;
+      width: 200px;
     }
 
     .form_type_1 .control-group.input_profiles .controls table tr td{

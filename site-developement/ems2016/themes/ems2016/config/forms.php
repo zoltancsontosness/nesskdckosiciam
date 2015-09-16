@@ -66,10 +66,6 @@ $config['forms'] = array
                 'rules' => 'required|xss_clean',
                 'label' => 'form_label_rules_1'
             ),
-            'rules_2' => array(
-                'rules' => 'xss_clean|required',
-                'label' => 'form_label_rules_2'
-            ),
             
         )
     ),
@@ -137,10 +133,6 @@ $config['forms'] = array
                 'rules' => 'required|xss_clean',
                 'label' => 'form_label_rules_1'
             ),
-            'rules_2' => array(
-                'rules' => 'xss_clean|required',
-                'label' => 'form_label_rules_2'
-            ),
             'category' => array(
                 'rules' => 'xss_clean|required|trim',
                 'label' => 'form_label_category'
@@ -160,11 +152,6 @@ $config['forms'] = array
 
         'fields' => array
         (
-            'organizer' => array
-            (
-                'rules' => 'trim|required|min_length[3]|xss_clean',
-                'label' => 'form_label_title',
-            ),
             'ico' => array(
                 'rules' => 'trim|xss_clean|max_length[8]|required',
                 'label' => 'form_label_subtitle',
@@ -185,9 +172,42 @@ $config['forms'] = array
                 'rules' => 'required|xss_clean',
                 'label' => 'form_label_rules_1'
             ),
-            'rules_2' => array(
-                'rules' => 'xss_clean|required',
-                'label' => 'form_label_rules_2'
+        )
+    ),
+
+    //Contact
+    'contact' => array
+    (
+        'process' => 'TagManager_Contact::process_data',
+        'messages' => array(
+            'success' => 'contact_message_success',
+            'error' => 'contact_message_error',
+            'captcha_error' => 'bad_captcha',
+        ),
+        'emails' => array(
+            array(
+                'email' => 'contact'
+            ),
+        ),
+
+        'fields' => array
+        (
+            'cf_name' => array
+            (
+                'rules' => 'trim|required|min_length[3]|xss_clean',
+                'label' => 'form_label_name',
+            ),
+            'cf_email' => array(
+                'rules' => 'trim|xss_clean|valid_email|required',
+                'label' => 'form_label_email',
+            ),
+            'cf_subject' => array(
+                'rules' => 'trim|xss_clean|min_length[3]|required',
+                'label' => 'form_label_subject',
+            ),
+            'cf_message' => array(
+                'rules' => 'trim|xss_clean|min_length[10]|required',
+                'label' => 'form_label_message',
             ),
         )
     ),

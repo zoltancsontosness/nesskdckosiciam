@@ -3,7 +3,7 @@
 <ion:article>
   <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-12">
-      <div class="section" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
+      <div class="section">
         <h2 class="section_title section_title_big"><ion:title /></h2>
       </div>
 
@@ -21,7 +21,7 @@
               </div>
             </ion:medias>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-justify text-content" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-justify text-content">
             <ion:content />
           </div>
           
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="section side_bar_banners clearfix" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
+      <div class="section side_bar_banners clearfix">
         <h3 class="section_title"><ion:lang key="title_details" /></h3>
 
         <div class="product_description">
