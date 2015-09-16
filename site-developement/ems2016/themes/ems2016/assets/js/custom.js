@@ -20,44 +20,26 @@ $(document).ready(function () {
   $("table").addClass("table");
 });
 
-/**
- * Filter list for events page by date.
- * @param   {Object}   list      list to filter
- * @param   {Number}   direction depending on number direction of showing history
- */
-function filterList(list, direction) {
-  list.date.setMonth(list.date.getMonth() + direction);
-  list.filter(function (item) {
-    return (new Date(item._values.date) > list.date);
-  });
-
-  for (var i = 0; i < list.length; i++) {
-    list[i].sort('date', {
-      order: "asc"
-    });
-  };
-}
-
 /*
   Equalize Heights of elements
 */
 function equalize(elementClass) {
   var elements = $('.' + elementClass);
-  if ( $( window ).width() >= 992 ) {
+  if ($(window).width() >= 992) {
     var maxHeight = 0;
-    elements.each(function(){
-       if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    elements.each(function () {
+      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
     });
     elements.height(maxHeight);
   } else {
-    elements.removeAttr( "style" );
+    elements.removeAttr("style");
   }
 };
 
 equalize("box-title");
 equalize("box-content");
 
-$( window ).resize(function(){
+$(window).resize(function () {
   equalize("box-title");
   equalize("box-content");
 });
