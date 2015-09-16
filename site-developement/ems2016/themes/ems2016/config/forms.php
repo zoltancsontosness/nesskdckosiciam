@@ -10,6 +10,13 @@ $config['forms'] = array
             'error' => 'new_article_message_error',
             'captcha_error' => 'bad_captcha',
         ),
+        'emails' => array(
+            array(
+                'email' => 'technical',
+                'subject' => 'Registrácia',
+                'view' => 'mail/registration_alert_facilities',
+            ),
+        ),
  
         'fields' => array
         (
@@ -78,6 +85,13 @@ $config['forms'] = array
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
             'captcha_error' => 'bad_captcha',
+        ),
+        'emails' => array(
+            array(
+                'email' => 'technical',
+                'subject' => 'Registrácia',
+                'view' => 'mail/registration_alert_events',
+            ),
         ),
 
         'fields' => array
@@ -149,6 +163,13 @@ $config['forms'] = array
             'error' => 'new_article_message_error',
             'captcha_error' => 'bad_captcha',
         ),
+        'emails' => array(
+            array(
+                'email' => 'technical',
+                'subject' => 'Registrácia',
+                'view' => 'mail/registration_alert_clubs',
+            ),
+        ),
 
         'fields' => array
         (
@@ -171,6 +192,14 @@ $config['forms'] = array
             'rules_1' => array(
                 'rules' => 'required|xss_clean',
                 'label' => 'form_label_rules_1'
+            ),
+            'email' => array(
+                'rules' => 'trim|xss_clean|valid_email|required',
+                'label' => 'form_label_email',
+            ),
+            'address' => array(
+                'rules' => 'trim|xss_clean|required',
+                'label' => 'form_label_address',
             ),
         )
     ),
