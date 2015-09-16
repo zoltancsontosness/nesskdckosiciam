@@ -1,20 +1,20 @@
 /* ---------- Main Styles------------
-  1. Basic classes and elements 
-  2. Typography
-  3. Header
-  4. List and Navigation
-  5. Buttons
-  6. Sliders
-  7. Main Content Elements
-  8. Main Content
-  9. Forms
-  10. Icons
-  11. Footer
+1. Basic classes and elements 
+2. Typography
+3. Header
+4. List and Navigation
+5. Buttons
+6. Sliders
+7. Main Content Elements
+8. Main Content
+9. Forms
+10. Icons
+11. Footer
 -------------------------------------*/
 
 
 /* ------------------------------------
-  1. Basic classes and elements 
+1. Basic classes and elements 
 -------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Sarala:400,700&subset=latin,latin-ext);
@@ -46,9 +46,18 @@ body {
   color: #fff;
 }
 
+img.grayscale {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  /* Firefox 10+, Firefox on Android */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
 
 /* ------------------------------------
-  2. Typography 
+2. Typography 
 -------------------------------------*/
 
 .title-success {
@@ -63,13 +72,14 @@ body {
   text-align: center;
 }
 
-.text-justify, .justify {
+.text-justify,
+.justify {
   text-align: justify;
 }
 
 
 /* ------------------------------------
-  3. Header 
+3. Header 
 -------------------------------------*/
 
 .logo {
@@ -86,12 +96,12 @@ body {
 
 
 /* ------------------------------------
-  2. Typography 
+2. Typography 
 -------------------------------------*/
 
 
 /* ------------------------------------
-  3. Header 
+3. Header 
 -------------------------------------*/
 
 .main_menu.menu_var2 > ul > li:nth-child(1) > a.current {
@@ -136,7 +146,7 @@ body {
 
 
 /* ------------------------------------
-  5. Buttons
+5. Buttons
 -------------------------------------*/
 
 .btn-block {
@@ -194,9 +204,24 @@ body {
   padding: 1px 11px;
 }
 
+.button.active {
+  background: #96ca2d;
+}
+
+.button.active:hover,
+.button.passive:hover {}
+
+.button.passive {
+  background: #feb41c;
+}
+
+.event-buttons-list * {
+  margin-bottom: 5px;
+}
+
 
 /* ------------------------------------
-  6. Sliders 
+6. Sliders 
 -------------------------------------*/
 
 .blockquotes div:first-child {
@@ -205,7 +230,7 @@ body {
 
 
 /* ------------------------------------
-  7. Main Content Elements 
+7. Main Content Elements 
 -------------------------------------*/
 
 .related_articles_list li:not(:last-child) {
@@ -228,7 +253,7 @@ ul.related_articles_list li.articles {
 
 
 /* ------------------------------------
-  8. Main Content 
+8. Main Content 
 -------------------------------------*/
 
 .table-vertical tr td:first-child {
@@ -296,13 +321,82 @@ ul.related_articles_list li.articles {
   color: #FFF;
 }
 
-.row > .box-titles:nth-child(1) > div > h3 { background-color: #c8d23a; }
-.row > .box-titles:nth-child(2) > div > h3 { background-color: #f68933; }
-.row > .box-titles:nth-child(3) > div > h3 { background-color: #70cbd2; }
+.scale_image_container.event .caption_inner {
+  padding-left: 30px;
+  transition: padding 0.15s ease-in-out;
+}
+
+.scale_image_container.event:hover .event-theme-tab span {
+  opacity: 1;
+}
+
+.scale_image_container.event:hover .event-theme-tab {
+  left: 0px;
+}
+
+.scale_image_container.event:hover .event-theme-tab i.fa {
+  opacity: 1;
+}
+
+.scale_image_container.event:hover .caption_inner {
+  padding-left: 55px;
+}
+
+.event-theme-tab {
+  color: #ffffff;
+  text-align: center;
+  height: 100%;
+  width: 45px;
+  float: left;
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  z-index: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+.event-theme-tab i.fa {
+  margin: 0 auto;
+  padding-top: 10px;
+  opacity: 0;
+}
+
+.event-theme-tab span {
+  float: left;
+  margin: 35px auto 0;
+  font-size: 14px;
+  opacity: 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.event-theme-tab.passive {
+  background: #feb41c;
+}
+
+.event-theme-tab.active {
+  background: #96ca2d;
+}
+
+.row > .box-titles:nth-child(1) > div > h3 {
+  background-color: #c8d23a;
+}
+
+.row > .box-titles:nth-child(2) > div > h3 {
+  background-color: #f68933;
+}
+
+.row > .box-titles:nth-child(3) > div > h3 {
+  background-color: #70cbd2;
+}
 
 
 /* ------------------------------------
-  9. Forms 
+9. Forms 
 -------------------------------------*/
 
 .input-group {
@@ -399,12 +493,12 @@ ul.related_articles_list li.articles {
 
 
 /* ------------------------------------
-  10. Icons
+10. Icons
 -------------------------------------*/
 
 
 /* ------------------------------------
-  11. Footer
+11. Footer
 -------------------------------------*/
 
 ul.socials-list li {
@@ -419,6 +513,11 @@ ul.socials-list li > a {
 
 .sort {
   cursor: pointer;
+}
+
+.sort.asc,
+.sort.desc {
+  background: #ff680d;
 }
 
 .tag-list li {
@@ -456,4 +555,8 @@ ul.tag-list::after {
 
 .search-input button:hover {
   color: #ff680d;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
 }

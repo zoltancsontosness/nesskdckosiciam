@@ -1,70 +1,105 @@
 <ion:partial view="header" breadcrumb="yes_please" />
 <ion:page>
-  <div class="section read_post_list tabs_content type_2">
-    <h2 class="section_title section_title_big"><ion:title /></h2>
+  <div class="row">
+    <div class="section">
+      <h2 class="section_title section_title_big"><ion:title /></h2>
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <div class="section_7">
+        <div id="events_list">
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="section photo_gallery" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
-          <h3 class="section_title">Aktívne</h3>
-          <ion:partial view="helpers/list_events" active="active" />
+          <div class="search-input">
+            <div class="control-group ">
+              <div class="controls">
+                <input id="search" class="search hasclear" type="text" placeholder="Hľadať" />
+                <button class="clearer"><i class="fa fa-times fa-lg"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="row event-buttons-list">
+            <li class="col-sm-4">
+              <button class="button button_type_2 button_grey_light btn-block" onclick="filterByType('all')">Všetky</button>
+            </li>
+            <li class="col-sm-4">
+              <button class="button button_type_2 button_grey_light active btn-block" onclick="filterByType('active')">Aktívne</button>
+            </li>
+            <li class="col-sm-4">
+              <button class="button button_type_2 button_grey_light passive btn-block" onclick="filterByType('passive')">Divák</button>
+            </li>
+          </ul>
+
+          <div class="margin-bottom-20">
+            <span>Zoradiť podľa : </span>
+
+            <button class="sort button button_type_3 button_grey_light" data-sort="type">
+              Typ
+            </button>
+            <button class="sort button button_type_3 button_grey_light" data-sort="date">
+              Dátum
+            </button>
+            <button class="sort button button_type_3 button_grey_light" data-sort="title">
+              Názov
+            </button>
+          </div>
+
+          <div class="row">
+            <ul class="list">
+              <ion:articles:article>
+                <li class="no-margin col-sm-6">
+                  <ion:partial view="helpers/tile_event" />
+                </li>
+              </ion:articles:article>
+            </ul>
+          </div>
+
+          <div class="pagination_block text-center">
+            <ul class="pagination"></ul>
+          </div>
         </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="section photo_gallery" data-appear-animation="fadeInDown" data-appear-animation-delay="500">
-          <h3 class="section_title">Pasívne</h3>
-          <ion:partial view="helpers/list_events" active="passive" />
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <ion:partial view="modules/panel_calendar" />
       </div>
     </div>
+
+    <div class="col-xs-12 col-md-4">
+      <!--        <ion:partial view="modules/panel_calendar" />-->
+    </div>
+
   </div>
 </ion:page>
 
 <script>
-  var list_active;
-  var list_passive;
+  var list;
 
   $(document).ready(function () {
     var options = {
       date: new Date(),
-      valueNames: ['title', 'date'],
+      valueNames: ['title', 'date', 'type'],
       page: 10,
       plugins: [
-      ListPagination({}),
-    ],
+        ListPagination({}),
+      ],
     };
 
-    var options1 = {
-      date: new Date(),
-      valueNames: ['title', 'date'],
-      page: 10,
-      plugins: [
-      ListPagination({}),
-    ],
-    };
-
-    list_active = new List('events_list_active', options);
-    list_passive = new List('events_list_passive', options1);
-
-    filterList(list_active,0);
-    filterList(list_passive,0);
+    list = new List('events_list', options);
   });
 
-  function showHistoryOfState(state) {
-    switch (state) {
-    case 'active':
-      filterList(list_active, -1)
-      return true;
-    case 'passive':
-      filterList(list_passive, -1)
-      return true;
+  function filterByType(type) {
+    if (type === "all") {
+      list.filter(function (item) {
+        return true;
+      });
+      return;
     }
-    return false;
+
+    list.filter(function (item) {
+      return (item._values.type == type);
+    });
+  }
+
+  function filterByDate() {
+    list.filter(function (item) {
+      return (new Date(item._values.date) > list.date);
+    });
   }
 </script>
 

@@ -9,26 +9,6 @@
 
       <div class="section_7 product_page">
         <div class="row">
-         
-<!--
-          <div class="col-xs-12">
-            <ion:medias type="picture" limit="1">
-              <div class="scale_image_container with_buttons pull-left" style="width:360px; margin-right:20px; margin-bottom:20px">
-                <img src="<ion:media:src size='360' method='width' />" alt="<ion:media:title/>" class="scale_image img-responsive">
-                <div class="open_buttons clearfix">
-                  <div class="f_left">
-                    <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
-                  </div>
-                </div>
-              </div>
-            </ion:medias>
-
-            <div class="text-content text-justify">
-            <ion:content />
-            </div>
-          </div>
--->
-
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <ion:medias type="picture" limit="1">
               <div class="scale_image_container with_buttons">
