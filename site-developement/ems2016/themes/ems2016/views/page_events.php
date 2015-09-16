@@ -32,9 +32,6 @@
           <div class="margin-bottom-20">
             <span>Zoradiť podľa : </span>
 
-            <button class="sort button button_type_3 button_grey_light" data-sort="type">
-              Typ
-            </button>
             <button class="sort button button_type_3 button_grey_light" data-sort="date">
               Dátum
             </button>
@@ -61,7 +58,7 @@
     </div>
 
     <div class="col-xs-12 col-md-4">
-      <!--        <ion:partial view="modules/panel_calendar" />-->
+      <!--<ion:partial view="modules/panel_calendar" />-->
     </div>
 
   </div>

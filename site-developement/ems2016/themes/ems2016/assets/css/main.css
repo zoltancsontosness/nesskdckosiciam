@@ -351,7 +351,7 @@ ul.related_articles_list li.articles {
   position: absolute;
   left: -30px;
   top: 0px;
-  z-index: 500;
+  z-index: 1;
   transition: all 0.15s ease-in-out;
 }
 
@@ -372,6 +372,7 @@ ul.related_articles_list li.articles {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
   filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transition: all 0.15s ease-in-out;
 }
 
 .event-theme-tab.passive {
