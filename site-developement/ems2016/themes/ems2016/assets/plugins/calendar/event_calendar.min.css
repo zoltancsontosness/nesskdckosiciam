@@ -1,0 +1,124 @@
+div.event_calendar {
+    margin: 0;
+    padding: 0;
+}
+div.event_calendar .table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+div.event_calendar .table th, div.event_calendar .table td {
+    padding: 2px;
+    text-align: center;
+}
+div.event_calendar .table tr th, div.event_calendar .table tr td {
+    background-color: #fff;
+}
+div.event_calendar .table tr.calendar-month-header th {
+    background-color: #fafafa;
+}
+div.event_calendar .table tr.calendar-month-header th span {
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+div.event_calendar .table tr.calendar-dow-header th {
+    background-color: #f0f0f0;
+}
+div.event_calendar .table tr:last-child {
+    border-bottom: 1px solid #ddd;
+}
+div.event_calendar .table tr.calendar-month-header th {
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+div.event_calendar .table-bordered tr.calendar-month-header th {
+    border-left: 0;
+    border-right: 0;
+}
+div.event_calendar .table-bordered tr.calendar-month-header th:first-child {
+    border-left: 1px solid #ddd;
+}
+div.event_calendar div.calendar-month-navigation {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+}
+div.event_calendar tr.calendar-dow-header th, div.event_calendar tr.calendar-dow td {
+    width: 14%}
+div.event_calendar .table tr td div.day {
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+div.event_calendar .table tr td.event div.day, div.event_calendar ul.legend li.event {
+    background-color: #fff0c3;
+}
+div.event_calendar .table tr td.dow-clickable, div.event_calendar .table tr td.event-clickable {
+    cursor: pointer;
+}
+div.event_calendar .badge-today, div.event_calendar div.legend span.badge-today {
+    background-color: #357ebd;
+    color: #fff;
+    text-shadow: none;
+}
+div.event_calendar .badge-event, div.event_calendar div.legend span.badge-event {
+    background-color: #ff9b08;
+    color: #fff;
+    text-shadow: none;
+}
+div.event_calendar .badge-event {
+    font-size: .95em;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+div.event_calendar div.legend {
+    margin-top: 5px;
+    text-align: right;
+}
+div.event_calendar div.legend span {
+    color: #999;
+    font-size: 10px;
+    font-weight: normal;
+}
+div.event_calendar div.legend span.legend-text:after, div.event_calendar div.legend span.legend-block:after, div.event_calendar div.legend span.legend-list:after, div.event_calendar div.legend span.legend-spacer:after {
+    content: ' '}
+div.event_calendar div.legend span.legend-spacer {
+    padding-left: 25px;
+}
+div.event_calendar ul.legend>span {
+    padding-left: 2px;
+}
+div.event_calendar ul.legend {
+    display: inline-block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+div.event_calendar ul.legend li {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 5px;
+}
+div.event_calendar ul.legend div.event_calendar ul.legend li:first-child {
+    margin-left: 7px;
+}
+div.event_calendar ul.legend li:last-child {
+    margin-right: 5px;
+}
+div.event_calendar div.legend span.badge {
+    font-size: .9em;
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+@media(max-width:979px) {
+    div.event_calendar .table th, div.event_calendar .table td {
+    padding: 2px 1px;
+}
+}

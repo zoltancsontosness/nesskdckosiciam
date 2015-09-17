@@ -141,4 +141,24 @@ class Json extends MY_Controller
     readfile($result);
     exit;
   }
+  
+  // IN PROGRES
+  public function getEvents($year, $month) {
+    //print_r(json_encode($this->json_model->getEvents($year, $month), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+    echo '[
+    {
+    "date":"2015-09-15",
+    "title":"Example 2",
+    "body":"<p class=\"lead\">Party<\/p><p>Like its 1999.<\/p>",
+    "footer":"At Paisley Park"
+    },
+    {
+    "date":"2015-09-17",
+    "title":"Tonight",
+    "body":"<p class=\"lead\">Party<\/p><p>Like its 1999.<\/p>",
+    "footer":"At Paisley Park"
+    }
+    ]';
+    
+  }
 }

@@ -31,7 +31,7 @@
   
   <div class="row">
     <div class="col-xs-12 text-justify block-underline">
-      <h1 class="section_title text-center"><ion:page:articles:article:title limit="1"/></h1>
+      <h1 class="section_title padding-top-25 text-center"><ion:page:articles:article:title limit="1"/></h1>
       <ion:page:articles:article:content limit="1"/>
     </div>
   </div>
@@ -54,7 +54,7 @@
   </div>
   
   <div class="section_2 row">
-    <h1 class="section_title text-center"><ion:page:title id="napisali-o-nas" /></h1>
+    <h1 class="section_title padding-top-25 text-center"><ion:page:title id="napisali-o-nas" /></h1>
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <div class="owl-demo-2 owl-carousel_2 var2">
         <ion:page id="napisali-o-nas">
