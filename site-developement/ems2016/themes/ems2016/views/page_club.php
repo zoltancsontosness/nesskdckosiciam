@@ -31,10 +31,18 @@
               <table class="table table-vertical">
                 <tr>
                   <td>
-                    <ion:organizer:label />
+                    Adresa
                   </td>
                   <td>
-                    <ion:organizer:value />
+                    <ion:address:value />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Email
+                  </td>
+                  <td>
+                    <ion:email:value />
                   </td>
                 </tr>
                 <tr>
