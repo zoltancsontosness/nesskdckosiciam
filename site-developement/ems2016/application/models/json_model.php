@@ -60,7 +60,13 @@ class Json_model extends Base_model
    */
   function getMedia($media_id) {
     $query = $this->db->query('SELECT `file_name`, `base_path` FROM `media` WHERE `id_media` ='. $media_id);
-    
+    return $query->result_array();  
+  }
+  
+  // IN PROGRES
+  function getEvents($year, $month)
+  {
+    $query = $this->db->query("SELECT `title`, `active`, `date` FROM `events_list`");
     return $query->result_array();
   }
 }
