@@ -201,6 +201,10 @@ $config['forms'] = array
                 'rules' => 'trim|xss_clean|required',
                 'label' => 'form_label_address',
             ),
+            'attachment' => array(
+                'rules' => 'xss_clean',
+                'label' => 'form_label_attachment',
+            ),
         )
     ),
 

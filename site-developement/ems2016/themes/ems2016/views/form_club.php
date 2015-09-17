@@ -81,6 +81,25 @@
         </div>
       </div>
       <div class="row">
+        <div class="control-group input_profiles col-xs-12">
+          <label class="control-label">Príloha (logo):</label>
+          <small class="help-block">(formát <span class="warning">jpg</span>, <span class="warning">jpeg</span> a <span class="warning">png</span> o veľkosti max. 1MB)</small>
+          <div class="controls">
+            <!-- Foto 1 -->
+            <div class="input-group control-group input-profiles">
+              <span class="input-group-btn">
+                <span class="button btn-file button_orange">
+                  Vyberte prílohu ...
+                  <input name="attachment[]" type="file" id="cv">
+                </span>
+              </span>
+              <input type="text" readonly="" class="file-reader" />
+            </div>
+            <ion:form:clubs:error:attachment tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_1" type="checkbox" id="rules_1">
           <label for="rules_1">Súhlasím s <a href="<ion:theme_url />assets/files/pravna-zodpovednost.pdf" target="_blank">podmienkami pridávania klubu</a></label>
