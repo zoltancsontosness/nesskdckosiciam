@@ -962,8 +962,9 @@ class TagManager_Page extends TagManager
 		$lang = Settings::get_lang();
 		$breadcrumb = self::get_breadcrumb_array($page, $pages, $lang );
 
-		// Filter appearing pages
-		$breadcrumb = array_values(array_filter($breadcrumb, array(__CLASS__, '_filter_appearing_pages')));
+		// Filter appearing pages 
+    // Uncomment this if you want hide pages which are hidden in navigation - Patrik
+    // $breadcrumb = array_values(array_filter($breadcrumb, array(__CLASS__, '_filter_appearing_pages')));
 
 		if ($level != FALSE)
 		{

@@ -1,4 +1,4 @@
-<ion:partial view="header" />
+<ion:partial view="header" breadcrumb="true" />
 
   <div class="section_2">
     <ul class="social_media_list button-list row">

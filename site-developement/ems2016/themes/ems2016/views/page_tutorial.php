@@ -1,4 +1,4 @@
-<ion:partial view="header" />
+<ion:partial view="header" breadcrumb="true" />
 <div class="content">
   <div class="container row">
     <div class="col-xs-12">

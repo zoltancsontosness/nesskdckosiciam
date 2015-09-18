@@ -1,4 +1,4 @@
-<ion:partial view="header" />
+<ion:partial view="header" breadcrumb="true" />
 
 <ion:article>
   <div class="row">

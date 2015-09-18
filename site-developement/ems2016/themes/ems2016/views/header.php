@@ -103,7 +103,8 @@
       <div class="breadcrumb">
         <div class="container">
           <div>
-            <ion:page:breadcrumb article="true" child-tag="span" separator=" / " home="true" />
+            
+            <ion:page:breadcrumb article="true" child-tag="span" separator=" / " home="true" display_hidden="true"/>
           </div>
         </div>
       </div>
