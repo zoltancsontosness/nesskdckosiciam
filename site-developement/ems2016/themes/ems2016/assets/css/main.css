@@ -417,6 +417,14 @@ li.active a {
   color: #fff;
 }
 
+a.active-event-link {
+  color: #96CA2D;
+}
+
+a.pasive-event-link {
+  color: #FEB41C;
+}
+
 
 /* ------------------------------------
 9. Forms 

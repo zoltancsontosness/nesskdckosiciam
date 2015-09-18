@@ -7,6 +7,7 @@ class Json extends MY_Controller
   {
     parent::__construct();
     $this->load->model('json_model');
+    $this->load->helper('url');
     header('Content-Type: text/html; charset=utf-8');
   }
 
@@ -142,36 +143,20 @@ class Json extends MY_Controller
     exit;
   }
 
-  // IN PROGRES
+  // Events for calendar
   public function getEvents($year, $month) {
     $events = $this->json_model->getEvents($year, $month);
     $final_array = array();
-//
-//
-//    foreach ($events as $key => $event) {
-//      for ($i = $key+1; $i < count($events); $i++) {
-//        $e_date = date_create($events[$i]->date);
-//        $event_date = date_create($event['date']);
-//      }
-//    }
-
-
-    foreach ($events as $key => $event) {
-      $one_day = array();
-      foreach ($events as $e) {
-        $e_date = date_create($e['date']);
-        $event_date = date_create($event['date']);
-        if (date_format($e_date,'Y/m/d') == date_format($event_date,'Y/m/d')) {
-          if(array_search($events,$e) == false) {
-          array_push($one_day,$e);
-          }
-          break;
-        }
+    
+    foreach ($events as $value) {
+      $final_array[$value["date"]]["date"] = $value["date"];
+      if (array_key_exists('body', $final_array[$value["date"]])) {
+        $final_array[$value["date"]]["body"] .= '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
+      } else {
+        $final_array[$value["date"]]["body"] = '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
       }
-
-      array_push($final_array,$one_day);
     }
-
+     
     print_r(json_encode($final_array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 }

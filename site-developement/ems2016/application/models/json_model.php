@@ -63,7 +63,7 @@ class Json_model extends Base_model
     return $query->result_array();  
   }
   
-  // IN PROGRES
+  // Events for calendar
   function getEvents($year, $month)
   {
     $query = $this->db->query("SELECT * FROM `event_calendar` WHERE DATE_FORMAT(date,'%Y') = $year AND DATE_FORMAT(date,'%m') = $month");
