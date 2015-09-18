@@ -54,7 +54,7 @@
       
       success: function (response) {
         var today = response.list[0];
-        $('#temp_day').text(Math.round(today.temp.day));
+        $('#temp_day').text(Math.round(today.temp.max));
         $('#temp_night').text(Math.round(today.temp.night));
         document.getElementById("icon").className += " mc-" + today.weather[0].icon + " mc-lg";
         $('#wind').text(today.speed + "");

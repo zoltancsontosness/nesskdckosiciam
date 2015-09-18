@@ -1,11 +1,13 @@
-<ion:partial view="header" />
+<ion:partial view="header" breadcrumb="true" />
 <div class="content">
   <div class="container">
     <div class="col-sm-8">
       <div class="section text_post_block" data-appear-animation="fadeInDown" data-appear-animation-delay="350">
         <ion:articles:article>
           <ion:title tag="h1" class="section_title section_title_big" />
-          <ion:content />
+          <div class="text-content">
+            <ion:content />
+          </div>
         </ion:articles:article>
       </div>
     </div>

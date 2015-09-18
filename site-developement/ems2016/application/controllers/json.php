@@ -7,6 +7,7 @@ class Json extends MY_Controller
   {
     parent::__construct();
     $this->load->model('json_model');
+    $this->load->helper('url');
     header('Content-Type: text/html; charset=utf-8');
   }
 
@@ -141,24 +142,21 @@ class Json extends MY_Controller
     readfile($result);
     exit;
   }
-  
-  // IN PROGRES
+
+  // Events for calendar
   public function getEvents($year, $month) {
-    //print_r(json_encode($this->json_model->getEvents($year, $month), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-    echo '[
-    {
-    "date":"2015-09-15",
-    "title":"Example 2",
-    "body":"<p class=\"lead\">Party<\/p><p>Like its 1999.<\/p>",
-    "footer":"At Paisley Park"
-    },
-    {
-    "date":"2015-09-17",
-    "title":"Tonight",
-    "body":"<p class=\"lead\">Party<\/p><p>Like its 1999.<\/p>",
-    "footer":"At Paisley Park"
-    }
-    ]';
+    $events = $this->json_model->getEvents($year, $month);
+    $final_array = array();
     
+    foreach ($events as $value) {
+      $final_array[$value["date"]]["date"] = $value["date"];
+      if (array_key_exists('body', $final_array[$value["date"]])) {
+        $final_array[$value["date"]]["body"] .= '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
+      } else {
+        $final_array[$value["date"]]["body"] = '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
+      }
+    }
+     
+    print_r(json_encode($final_array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 }

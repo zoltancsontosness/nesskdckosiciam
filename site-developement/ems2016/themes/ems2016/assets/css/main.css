@@ -412,6 +412,19 @@ ul.related_articles_list li.articles {
   background-color: #70cbd2;
 }
 
+li.active a {
+  background: #ff680d;
+  color: #fff;
+}
+
+a.active-event-link {
+  color: #96CA2D;
+}
+
+a.pasive-event-link {
+  color: #FEB41C;
+}
+
 
 /* ------------------------------------
 9. Forms 

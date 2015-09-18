@@ -94,6 +94,26 @@ create or replace view `events_list` as (
   ORDER BY date DESC
 );
 
+create or replace view `event_calendar` as (
+  select 
+  article_lang.title, 
+  group_concat(DISTINCT if(id_extend_field = 25, ex.content, NULL)) as 'active', 
+  group_concat(DISTINCT if(id_extend_field = 18, ex.content, NULL)) as 'date',
+  article_lang.url
+  from article as a
+  join article_lang on article_lang.id_article = a.id_article
+  join element on a.id_article = element.id_parent
+  left join extend_fields as ex on ex.id_parent = element.id_element
+  where a.id_article in (
+    select id_article from page_article pa
+    join page on page.id_page = pa.id_page
+    where page.name = 'events' and pa.online = 1
+  )
+  group by title
+  ORDER BY date DESC
+);
+
+
 create or replace view `articles` as (
   select a.id_article as "id", title, article_lang.content as "content", id_media as 
   "thumbnail", a.created as 
@@ -163,6 +183,33 @@ create or replace view `events` as (
     where page.name = 'events'
   )
   group by title,thumbnail
+);
+
+create or replace view `clubs` as (
+  select 
+  a.id_article as 'id', 
+  article_lang.title, 
+  group_concat(DISTINCT if(id_extend_field = 30, ex.content, NULL)) as 'address', 
+  group_concat(DISTINCT if(id_extend_field = 22, ex.content, NULL)) as 'webpage',
+  group_concat(DISTINCT if(id_extend_field = 29, ex.content, NULL)) as 'email',
+  id_media as 'thumbnail',
+  article_lang.content as 'content'
+  from article as a
+  join article_lang on article_lang.id_article = a.id_article
+  join element on a.id_article = element.id_parent
+  left join extend_fields as ex on ex.id_parent = element.id_element
+  left join media on media.id_media = (
+    select id_media 
+    from article_media
+    where id_article = a.id_article
+    order by ordering asc
+    limit 1)
+  where a.id_article in (
+    select id_article from page_article pa
+    join page on page.id_page = pa.id_page
+    where page.name = 'clubs'
+  )
+  group by id,title,thumbnail
 );
 
 create or replace view `playgrounds` as (
