@@ -4,12 +4,6 @@ $(document).ready(function () {
   navDropdowns.children("ul").wrap('<div class="sub_menu_wrap type_2 clearfix"></div>');
 
   /**
-   * Sticky footer responsive
-   */
-  var footerHeight = $("footer.footer").outerHeight() + 40;
-  $("body").css("margin-bottom", footerHeight);
-
-  /**
    * Tooltips
    */
   $('[data-toggle="popover"]').popover();
@@ -18,7 +12,16 @@ $(document).ready(function () {
   $("table").wrap('<div class="table"></div>');
   $("table").removeAttr("border")
   $("table").addClass("table");
+    sticky_footer();
 });
+
+  /**
+   * Sticky footer responsive
+   */
+  function sticky_footer() {
+    var footerHeight = $("footer.footer").outerHeight() + 40;
+    $("body").css("margin-bottom", footerHeight);
+  }
 
 /*
   Equalize Heights of elements
@@ -42,4 +45,5 @@ equalize("box-content");
 $(window).resize(function () {
   equalize("box-title");
   equalize("box-content");
+  sticky_footer();
 });

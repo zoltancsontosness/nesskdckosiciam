@@ -31,6 +31,7 @@
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/plugins/flexslider/flexslider.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/animate.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<ion:theme_url/>assets/css/jquery.fancybox-1.3.4.css" />
+  <link rel="stylesheet" type="text/css" href="<ion:theme_url/>assets/plugins/calendar/event_calendar.min.css">
 
   <!-- Main styles -->
   <link href="<ion:theme_url/>assets/css/main.css" rel="stylesheet" />

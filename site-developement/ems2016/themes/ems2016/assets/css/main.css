@@ -55,6 +55,19 @@ img.grayscale {
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 
+img.logo {
+  max-height: 100px;
+  margin: auto;
+}
+
+@media (max-width: 767) {
+  .footer-logo {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+
 
 /* ------------------------------------
 2. Typography 
@@ -271,6 +284,10 @@ ul.related_articles_list li.articles {
   width: 100%;
 }
 
+.footer .footer_top_part {
+  background-color: #eee;
+}
+
 .text-content ul {
   list-style-type: circle;
   list-style-position: inside;
@@ -312,7 +329,7 @@ ul.related_articles_list li.articles {
   background: #feb41c;
 }
 
-.section_title {
+.padding-top-25 {
   padding-top: 25px;
 }
 

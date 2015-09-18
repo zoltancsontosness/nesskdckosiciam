@@ -35,6 +35,28 @@
         </div>
       </div>
       <div class="row">
+        <div class="control-group input_profiles col-xs-12 col-sm-6">
+          <label class="control-label">Emailová adresa:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="email" type="text" value="<ion:form:clubs:field:email />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Emailová adresa" data-content="Uveďte e-mail organizátora."></i>
+            </div>
+            <ion:form:clubs:error:email tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+        <div class="control-group input_profiles col-xs-12 col-sm-6">
+          <label class="control-label">Ulica a čislo:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="address" type="text" value="<ion:form:clubs:field:address />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Ulica a číslo" data-content="Uveďte ulicu a číslo na ktorej sídli klub."></i>
+            </div>
+            <ion:form:clubs:error:address tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="control-group input_profiles col-xs-12 col-sm-12">
           <label class="control-label">Webstránka:</label>
           <div class="controls">
@@ -55,6 +77,25 @@
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Popis" data-content="Uveďte popis činnosti organizácie."></i>
             </div>
             <ion:form:clubs:error:desc tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="control-group input_profiles col-xs-12">
+          <label class="control-label">Príloha (logo):</label>
+          <small class="help-block">(formát <span class="warning">jpg</span>, <span class="warning">jpeg</span> a <span class="warning">png</span> o veľkosti max. 1MB)</small>
+          <div class="controls">
+            <!-- Foto 1 -->
+            <div class="input-group control-group input-profiles">
+              <span class="input-group-btn">
+                <span class="button btn-file button_orange">
+                  Vyberte prílohu ...
+                  <input name="attachment[]" type="file" id="cv">
+                </span>
+              </span>
+              <input type="text" readonly="" class="file-reader" />
+            </div>
+            <ion:form:clubs:error:attachment tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>

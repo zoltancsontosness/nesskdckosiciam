@@ -69,6 +69,7 @@ $route['json/versions'] = 'json/getVersions';
 $route['json/(:any)'] = 'json/getArticle/$1';
 $route['json/(:any)/(:num)'] = 'json/getArticle/$1/$2';
 $route['thumbs/(:num)/(:any)'] = 'json/getThumbnail/$1/$2';
+$route['events/(:num)/(:num)'] = 'json/getEvents/$1/$2';
 
 /*
  * Route to default controller

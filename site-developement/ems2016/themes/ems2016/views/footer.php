@@ -9,35 +9,20 @@
   <div class="footer_top_part">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-4 widget">
-        <div class="logo-ke img-responsive"></div>
+        <div class="col-xs-12 col-sm-4 widget footer-logo">
+          <img src="<ion:theme_url />assets/img/kosice_logo.png" class="logo">
         </div>
-        <div class="col-xs-12 col-sm-4 widget">
-          <div class="logo-aceseu img-responsive"></div>
+        <div class="col-xs-12 col-sm-4 widget footer-logo">
+          <img src="<ion:theme_url />assets/img/aces_eu.png" class="logo">
         </div>
-        <div class="col-xs-12 col-sm-4 widget">
-          <!--<img src="<ion:theme_url />assets/img/aceseu-logo.png">-->
+        <div class="col-xs-12 col-sm-4 widget footer-logo" >
+          <img src="<ion:theme_url />assets/img/ness.png" class="logo">
         </div>
       </div>
     </div>
   </div>
   <div class="footer_bottom_part">
     <div class="container clearfix">
-      <div class="mobile_menu">
-        <nav>
-          <ul>
-            <ion:pages parent="o-projekte">
-              <ion:page>
-                <li>
-                  <a href="<ion:url />">
-                    <ion:title />
-                  </a>
-                </li>
-              </ion:page>
-            </ion:pages>
-          </ul>
-        </nav>
-      </div>
       <p>© 2015 <span>NESS KDC</span>. All Rights Reserved.</p>
     </div>
   </div>
@@ -56,6 +41,7 @@
 <script src="<ion:theme_url/>assets/js/script.js"></script>
 <script src="<ion:theme_url/>assets/js/list.min.js"></script>
 <script src="<ion:theme_url/>assets/js/list.pagination.min.js"></script>
+<script src="<ion:theme_url/>assets/plugins/calendar/event_calendar.min.js"></script>
 <script src="<ion:theme_url/>assets/js/custom.js"></script>
 </body>
 
