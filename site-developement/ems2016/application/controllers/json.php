@@ -149,11 +149,12 @@ class Json extends MY_Controller
     $final_array = array();
     
     foreach ($events as $value) {
-      $final_array[$value["date"]]["date"] = $value["date"];
-      if (array_key_exists('body', $final_array[$value["date"]])) {
-        $final_array[$value["date"]]["body"] .= '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
+      $date_value = substr($value["date"], 0, 10);
+      $final_array[$date_value]["date"] = $date_value;
+      if (array_key_exists('body', $final_array[$date_value])) {
+        $final_array[$date_value]["body"] .= '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
       } else {
-        $final_array[$value["date"]]["body"] = '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
+        $final_array[$date_value]["body"] = '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
       }
     }
      
