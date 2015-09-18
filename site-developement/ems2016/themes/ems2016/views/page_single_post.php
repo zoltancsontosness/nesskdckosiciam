@@ -24,7 +24,7 @@
         <div class="text_post_block text-content">
           <div class="scale_image_container">
             <ion:medias limit="1" type="picture">
-              <img src="<ion:media:src size='750,375' method='adaptive'/>" alt="<ion:media:title />">
+              <img src="<ion:media:src />" alt="<ion:media:title />">
             </ion:medias>
           </div>
           <ion:content tag="p" />
