@@ -286,6 +286,7 @@ ul.related_articles_list li.articles {
 
 .footer .footer_top_part {
   background-color: #eee;
+  min-height: 200px;
 }
 
 .text-content ul {

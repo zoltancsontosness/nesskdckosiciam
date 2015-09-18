@@ -1,5 +1,6 @@
-<ion:partial view="header" /> 
-  <h1 class="section_title section_title_medium"><ion:page:title /></h1>
+<ion:partial view="header" breadcrumb="true" /> 
+<div class="section">
+  <h2 class="section_title section_title_big"><ion:page:title /></h2>
   <div class="clearfix">
     <form name="clubs" action="" class="form_type_1 type_2 col-xs-12 col-sm-8 col-sm-offset-2" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="form" value="clubs">
@@ -119,6 +120,8 @@
       <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať klub</button>
     </form>
   </div>
+</div>
+  
 
   <script src="<ion:theme_url/>assets/plugins/tinymce/tinymce.min.js"></script>
   <script src="<ion:theme_url/>assets/plugins/tinymce/langs/sk.js"></script>

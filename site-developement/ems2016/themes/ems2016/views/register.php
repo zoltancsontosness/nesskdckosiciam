@@ -1,4 +1,4 @@
-<ion:partial view="header" />
+<ion:partial view="header" breadcrumb="true"/>
 
   <div class="section_2">
     <ul class="social_media_list button-list row">
@@ -52,7 +52,7 @@
       </ion:articles:article>
     </ion:page>
   </div>
-  
+  <!--
   <div class="section_2 row">
     <h1 class="section_title padding-top-25 text-center"><ion:page:title id="napisali-o-nas" /></h1>
     <div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -70,6 +70,7 @@
       </div>      
     </div>
   </div>
+  -->
  
 
 <ion:partial view="footer" />
