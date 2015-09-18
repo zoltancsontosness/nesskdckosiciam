@@ -395,6 +395,11 @@ ul.related_articles_list li.articles {
   background-color: #70cbd2;
 }
 
+li.active a {
+  background: #ff680d;
+  color: #fff;
+}
+
 
 /* ------------------------------------
 9. Forms 

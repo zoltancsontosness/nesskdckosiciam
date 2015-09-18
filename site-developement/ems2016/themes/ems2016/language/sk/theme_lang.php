@@ -14,5 +14,9 @@ $lang['title_details'] = 'Informácie';
 $lang['title_random_playgrounds'] = 'Náhodne vybrané';
 $lang['btn_show_all'] = 'Zobraziť všetky';
 $lang['btn_history'] = 'História';
+$lang['title_socials_sharing'] = 'Zdieľanie';
+$lang['socials_share'] = 'Zdieľať';
+$lang['socials_twitt'] = 'Tweetni';
+$lang['socials_add_plus'] = 'Daj +';
 
 ?>
