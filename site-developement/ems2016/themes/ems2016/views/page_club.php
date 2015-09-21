@@ -8,7 +8,7 @@
       </div>
 
       <ion:medias type="picture" limit="1">
-        <div class="scale_image_container with_buttons pull-left" style="margin-right:25px;">
+        <div class="scale_image_container with_buttons pull-left margin-right-25">
           <img src="<ion:media:src size='360,280' method='adaptive' />" alt="<ion:media:title/>" class="scale_image">
           <div class="open_buttons clearfix">
             <div class="f_left">
@@ -18,7 +18,7 @@
         </div>
       </ion:medias>
       <div class="text-content text-justify">
-      <ion:content />
+        <ion:content />
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -55,9 +55,9 @@
                     ?>
                       <?php if($url === ''): ?>
                         <ion:webpage:label tag="span" class="text-muted" />
-                      <?php else: ?>
-                        <ion:webpage:label />
-                      <?php endif; ?>
+                        <?php else: ?>
+                          <ion:webpage:label />
+                          <?php endif; ?>
                   </td>
                   <td>
                     <a href="<?= $url ?>" target="_blank">

@@ -6,6 +6,10 @@
       <div class="section read_post_list gallery_list">
         <h2 class="section_title section_title_big"><ion:title /></h2>
 
+        <div class="text_post_section text-content text-justify">
+          <ion:content />
+        </div>
+
         <?php $counter=0 ?>
         <ion:medias type="picture">
           <?php if($counter == 0): $counter++; ?>
@@ -31,8 +35,8 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <!--      SIDEBAR-->
-      
+      <!--SIDEBAR-->
+
     </div>
   </div>
 

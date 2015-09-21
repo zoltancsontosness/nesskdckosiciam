@@ -1,10 +1,10 @@
 <ion:partial view="header" breadcrumb="yes_please" />
 <ion:page>
   <div class="row">
-    <div class="section">
-      <h2 class="section_title section_title_big"><ion:title /></h2>
-    </div>
     <div class="col-xs-12 col-md-8">
+      <div class="section">
+        <h2 class="section_title section_title_big"><ion:title /></h2>
+      </div>
       <div class="section_7">
         <div id="events_list">
 
@@ -17,20 +17,24 @@
             </div>
           </div>
 
-          <ul class="row event-buttons-list">
-            <li class="col-sm-4">
-              <button class="button button_type_2 button_grey_light btn-block" onclick="filterByType('all')">Všetky</button>
-            </li>
-            <li class="col-sm-4">
-              <button class="button button_type_2 button_grey_light active btn-block" onclick="filterByType('active')">Aktívne</button>
-            </li>
-            <li class="col-sm-4">
-              <button class="button button_type_2 button_grey_light passive btn-block" onclick="filterByType('passive')">Divák</button>
-            </li>
-          </ul>
+          <div class="row section_3">
+            <ul>
+              <li class="col-sm-4">
+                <button class="button button_type_2 button_grey_light btn-block" onclick="filterByType('all')">Všetky</button>
+              </li>
+              <li class="col-sm-4">
+                <button class="button button_type_2 button_grey_light active btn-block" onclick="filterByType('active')">Aktívne</button>
+              </li>
+              <li class="col-sm-4">
+                <button class="button button_type_2 button_grey_light passive btn-block" onclick="filterByType('passive')">Divák</button>
+              </li>
+            </ul>
+          </div>
 
-          <div class="margin-bottom-20">
-            <span>Zoradiť podľa : </span>
+          <div class="section_3">
+            <h4 class="section_title section_title_small pull-left">
+              Zoradiť podľa : &nbsp;
+            </h4>
 
             <button class="sort button button_type_3 button_grey_light" data-sort="date">
               Dátum
@@ -58,7 +62,7 @@
     </div>
 
     <div class="col-xs-12 col-md-4">
-      <!--<ion:partial view="modules/panel_calendar" />-->
+      <ion:partial view="modules/panel_calendar" />
     </div>
 
   </div>
@@ -97,7 +101,19 @@
     list.filter(function (item) {
       return (new Date(item._values.date) > list.date);
     });
-  }
+  };
+  
+  $(".hasclear").keyup(function () {
+    var t = $(this);
+    t.next('button').toggle(Boolean(t.val()));
+  });
+  
+  $(".clearer").hide($(this).prev('input').val());
+
+  $(".clearer").click(function () {
+    $(this).prev('input').val('').focus();
+    $(this).hide();
+  });
 </script>
 
 <ion:partial view="footer" />
