@@ -1,6 +1,6 @@
 <a href="<ion:article:url />">
   <ion:article:element:event-info:items>
-    <div class="scale_image_container event">
+    <div class="scale_image_container event animated fadeIn">
       <div class="event-theme-tab <ion:is-active:value />">
         <ion:is-active:value is="active">
           <i class="fa fa-heartbeat fa-inverse fa-2x"></i>
