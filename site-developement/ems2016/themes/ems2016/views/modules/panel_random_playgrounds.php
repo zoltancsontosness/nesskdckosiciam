@@ -2,7 +2,7 @@
   <h3 class="section_title"><ion:lang key="title_random_playgrounds" /></h3>
 
   <ion:page id="playgrounds">
-    <ion:articles limit="4" order_by="RAND()">
+    <ion:articles limit="4" random="true">
       <ion:article:medias limit="1" type="picture" size="500,225" method="adaptive">
         <div class="scale_image_container">
           <a href="<ion:article:url />">

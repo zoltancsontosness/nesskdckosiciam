@@ -175,7 +175,7 @@ class TagManager_Category extends TagManager
 		$tag->set('categories', $categories);
 		$tag->set('count', $count);
 
-    // Sorting categories by article_nb
+    // Sorting categories by article_nb - Patrik
     if (!is_null($order_by_nb) && $order_by_nb) {
       uasort($categories,'self::compare_nb');
     }
