@@ -30,14 +30,8 @@
                     <i><ion:data:ico /></i><br />
                     <i><ion:data:facility /></i><br />
                     <i><ion:data:city /></i><br />
-                    <i><ion:data:street /></i><br />
-                    <i><ion:data:number /></i><br />
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 40px 0px 20px 0px;color:#153643;font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
-                    <b style="font-size: 24px;"><ion:data:position /></b><br /><br />
-                    <ion:data:job-desc />
+                    <i><ion:data:street /></i> <i><ion:data:number /></i><br /><br />
+                    
                   </td>
                 </tr>
                 <tr>

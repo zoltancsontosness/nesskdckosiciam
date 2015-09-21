@@ -29,7 +29,7 @@ class TagManager_Clubs extends TagManager
       if($response['success']){
         $title = $posted['club_name'];
         // Config for files
-        $config['upload_path'] = 'files/podujatia/' . self::clean($title);
+        $config['upload_path'] = 'files/kluby/' . self::clean($title);
 
         //$config['allowed_types'] = 'pdf|doc|docx';
         $config['allowed_extensions'] = array('jpg', 'jpeg', 'png');
@@ -44,7 +44,7 @@ class TagManager_Clubs extends TagManager
           'has_url' => 1,
           'priority' => 5,
           'flag' => 0,
-          'indexed' => 1
+          'indexed' => 0
         );
 
         $lang_data = array (
@@ -108,6 +108,7 @@ class TagManager_Clubs extends TagManager
         $message = TagManager_Form::get_form_message('success');
         TagManager_Form::set_additional_success($form_name, $message);
         $redirect = base_url()."uspesna-registracia-klubu";
+        TagManager_Email::send_form_emails($tag, $form_name, $posted);
         if ($redirect !== FALSE) redirect($redirect);
       }else{
         $message = TagManager_Form::get_form_message('captcha_error');

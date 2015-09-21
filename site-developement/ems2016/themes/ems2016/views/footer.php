@@ -10,13 +10,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-4 widget footer-logo">
-          <img src="<ion:theme_url />assets/img/kosice_logo.png" class="logo">
+          <img src="<ion:theme_url />assets/img/kosice_logo.png" class="logo" alt="logo">
         </div>
         <div class="col-xs-12 col-sm-4 widget footer-logo">
-          <img src="<ion:theme_url />assets/img/aces_eu.png" class="logo">
+          <img src="<ion:theme_url />assets/img/aces_eu.png" class="logo" alt="logo">
         </div>
         <div class="col-xs-12 col-sm-4 widget footer-logo" >
-          <img src="<ion:theme_url />assets/img/ness.png" class="logo">
+          <img src="<ion:theme_url />assets/img/ness.png" class="logo" alt="logo">
         </div>
       </div>
     </div>

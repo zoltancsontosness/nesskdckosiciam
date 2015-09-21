@@ -42,7 +42,7 @@ class TagManager_Facilities extends TagManager
           'has_url' => 1,
           'priority' => 5,
           'flag' => 0,
-          'indexed' => 1
+          'indexed' => 0
         );
 
         $lang_data = array (
@@ -121,6 +121,7 @@ class TagManager_Facilities extends TagManager
         $message = TagManager_Form::get_form_message('success');
         TagManager_Form::set_additional_success($form_name, $message);
         $redirect = base_url()."uspesna-registracia-sportoviska";
+        TagManager_Email::send_form_emails($tag, $form_name, $posted);
         if ($redirect !== FALSE) redirect($redirect);
       }else{
          $message = TagManager_Form::get_form_message('captcha_error');

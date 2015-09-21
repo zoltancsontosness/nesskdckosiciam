@@ -5,42 +5,62 @@
       <ion:lang key="btn_viewall" /> 
       <i class="fa fa-angle-right"></i>
     </a>
-
-    <div class="owl-demo-2">
-      <ion:articles limit="3" order_by="date DESC">
+  
+    <?php if ('<ion:articles:count />' <= 1): ?>
+      <ion:articles>
         <ion:article>
-          <div class="item">
-            
-            <div class="scale_image_container">
-              <ion:medias type="picture" limit="1" size="555,374" method="adaptive">
-                <a href="<ion:url />">
-                  <img src="<ion:media:src />" alt="<ion:media:title />" class="scale_image">
+          <div class="scale_image_container">
+            <ion:medias type="picture" limit="1" size="555,374" method="adaptive">
+              <a href="<ion:url />">
+                <img src="<ion:media:src />" alt="<ion:media:title />" class="scale_image">
+              </a>
+            </ion:medias>
+            <ion:subtitle is_not="">
+              <div class="post_image_buttons">
+                <a href="<ion:url />" class="button banner_button travel">
+                  <ion:subtitle />
                 </a>
-              </ion:medias>
-              <ion:subtitle is_not="">
-                <div class="post_image_buttons">
-                  <a href="<ion:url />" class="button banner_button travel">
-                    <ion:subtitle />
-                  </a>
-                </div>
-              </ion:subtitle>
-            </div>
-            
-            <div class="clearfix">
-              <div class="f_left">
-                <div class="event_date">
-                  <ion:date format="complete" />
-                </div>
               </div>
-            </div>
-            <div class="post_text">
-              <h4 class="post_title"><a href="<ion:url />"><ion:title /></a></h4>
-            </div>
-            
+            </ion:subtitle>
           </div>
         </ion:article>
       </ion:articles>
-    </div>
-    
+    <?php else: ?>
+      <div class="owl-demo-2">
+        <ion:articles limit="3" order_by="date DESC">
+          <ion:article>
+            <div class="item">
+              
+              <div class="scale_image_container">
+                <ion:medias type="picture" limit="1" size="555,374" method="adaptive">
+                  <a href="<ion:url />">
+                    <img src="<ion:media:src />" alt="<ion:media:title />" class="scale_image">
+                  </a>
+                </ion:medias>
+                <ion:subtitle is_not="">
+                  <div class="post_image_buttons">
+                    <a href="<ion:url />" class="button banner_button travel">
+                      <ion:subtitle />
+                    </a>
+                  </div>
+                </ion:subtitle>
+              </div>
+              
+              <div class="clearfix">
+                <div class="f_left">
+                  <div class="event_date">
+                    <ion:date format="complete" />
+                  </div>
+                </div>
+              </div>
+              <div class="post_text">
+                <h4 class="post_title"><a href="<ion:url />"><ion:title /></a></h4>
+              </div>
+              
+            </div>
+          </ion:article>
+        </ion:articles>
+      </div>
+    <?php endif; ?>  
   </ion:page>
 </div>

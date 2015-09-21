@@ -219,7 +219,9 @@ $config['forms'] = array
         ),
         'emails' => array(
             array(
-                'email' => 'contact'
+                'email' => 'contact',
+                'subject' => 'Kontaktny formular',
+                'view' => 'mail/contact',
             ),
         ),
 

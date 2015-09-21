@@ -12,7 +12,7 @@ $(document).ready(function () {
   $("table").wrap('<div class="table"></div>');
   $("table").removeAttr("border")
   $("table").addClass("table");
-    sticky_footer();
+  sticky_footer();
 });
 
   /**

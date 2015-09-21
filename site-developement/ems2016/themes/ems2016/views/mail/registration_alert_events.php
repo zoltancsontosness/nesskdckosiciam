@@ -26,18 +26,12 @@
                 <tr>
                   <td style="padding: 20px 0px 0px 0px;color:#153643;font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
                     <b>Detaily: </b><br /><br />
-                    <i><ion:data:operator /></i><br />
+                    <i><ion:data:organizer /></i><br />
                     <i><ion:data:ico /></i><br />
                     <i><ion:data:event_name /></i><br />
                     <i><ion:data:address /></i><br />
                     <i><ion:data:sport_type /></i><br />
-                    <i><ion:data:is_active /></i><br />
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 40px 0px 20px 0px;color:#153643;font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;">
-                    <b style="font-size: 24px;"><ion:data:position /></b><br /><br />
-                    <ion:data:job-desc />
+                    <i><ion:data:is_active /></i><br /><br />
                   </td>
                 </tr>
                 <tr>

@@ -42,7 +42,7 @@ class TagManager_Events extends TagManager
           'has_url' => 1,
           'priority' => 5,
           'flag' => 0,
-          'indexed' => 1,
+          'indexed' => 0,
         );
 
         $lang_data = array (
@@ -62,8 +62,8 @@ class TagManager_Events extends TagManager
           'address' => $posted['address'],
           'ico' => $posted['ico'],
           'webpage' => $posted['webpage'],
-          'date' => $posted['date'],
-          'length' => $posted['length'],
+          'date' => self::formatDate($posted['date']),
+          'length' => self::formatDate($posted['length']),
           'is-active' => $posted['is_active']
         );
 
@@ -88,22 +88,25 @@ class TagManager_Events extends TagManager
         self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
         // Do upload and link to article
         $files = $_FILES;
+        if($files["attachment"]["size"][0] != 0){
+          foreach ($_FILES['attachment']['name'] as $key => $value) {
+            $_FILES['attachment']['name']= $files['attachment']['name'][$key];
+            $_FILES['attachment']['type']= $files['attachment']['type'][$key];
+            $_FILES['attachment']['tmp_name']= $files['attachment']['tmp_name'][$key];
+            $_FILES['attachment']['error']= $files['attachment']['error'][$key];
+            $_FILES['attachment']['size']= $files['attachment']['size'][$key];  
 
-        foreach ($_FILES['attachment']['name'] as $key => $value) {
-          $_FILES['attachment']['name']= $files['attachment']['name'][$key];
-          $_FILES['attachment']['type']= $files['attachment']['type'][$key];
-          $_FILES['attachment']['tmp_name']= $files['attachment']['tmp_name'][$key];
-          $_FILES['attachment']['error']= $files['attachment']['error'][$key];
-          $_FILES['attachment']['size']= $files['attachment']['size'][$key];  
-
-          $isUploaded = self::$ci->upload->do_upload();
-          if ($isUploaded){
-            $post_data = array_merge($posted, self::$ci->upload->data());
-            $id_media = self::$ci->media_model->insert_media($config['upload_path'].'/'.$post_data["file_name"]);
-            self::$ci->media_model->attach_media('article', $article_id, $id_media);
+            $isUploaded = self::$ci->upload->do_upload();
+            if ($isUploaded){
+              $post_data = array_merge($posted, self::$ci->upload->data());
+              $id_media = self::$ci->media_model->insert_media($config['upload_path'].'/'.$post_data["file_name"]);
+              self::$ci->media_model->attach_media('article', $article_id, $id_media);
+            }
           }
-         
+        } else {
+          self::$ci->media_model->attach_media('article', $article_id, 366);
         }
+        
         
         
 
@@ -121,6 +124,7 @@ class TagManager_Events extends TagManager
         $message = TagManager_Form::get_form_message('success');
         TagManager_Form::set_additional_success($form_name, $message);
         $redirect = base_url()."uspesna-registracia-podujatia";
+        TagManager_Email::send_form_emails($tag, $form_name, $posted);
         if ($redirect !== FALSE) redirect($redirect);
       }else{
          $message = TagManager_Form::get_form_message('captcha_error');
@@ -137,5 +141,11 @@ class TagManager_Events extends TagManager
     $result = strtolower($result);
     $result = str_replace(' ', '-', $result);
     return $result;
+  }
+
+  public static function formatDate($string) {
+    $date = DateTime::createFromFormat('j.m.Y H:i', $string);
+
+    return $date->format('Y-m-d H:i');
   }
 }

@@ -30,6 +30,10 @@ class TagManager_Contact extends TagManager
         $message = TagManager_Form::get_form_message('success');
         TagManager_Form::set_additional_success($form_name, $message);
 
+        // Send the posted data to the Email library and send the Email
+        // as defined in /themes/your_theme/config/forms.php
+        TagManager_Email::send_form_emails($tag, $form_name, $posted);
+
         $redirect = TagManager_Form::get_form_redirect();
         if ($redirect !== FALSE) redirect($redirect);    
       }
