@@ -32,7 +32,7 @@
                               </ion:page:name>
                               <ion:else>
                                 <i class="fa fa-pencil fa-fw"></i>
-                                <ion:date format="complete" />
+                                <ion:date format="complete_date" />
                               </ion:else>
                             </div>
                           </div>
@@ -84,7 +84,7 @@
                       </ion:page:name>
                       <ion:else>
                         <i class="fa fa-pencil fa-fw"></i>
-                        <ion:date format="long" />
+                        <ion:date format="medium" />
                       </ion:else>
                     </div>
                   </div>

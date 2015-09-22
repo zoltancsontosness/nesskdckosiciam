@@ -24,8 +24,4 @@
   </div>
 </div>
 
-<ion:categories > 
-  <ion:category:name />
-</ion:categories>
-
 <ion:partial view="footer" />

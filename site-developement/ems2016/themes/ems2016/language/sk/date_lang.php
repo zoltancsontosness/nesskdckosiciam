@@ -1,5 +1,6 @@
 <?php
 
+$lang['dateformat_complete_date'] = 'l , d. F Y';
 $lang['apr'] = 'Apr';
 $lang['april'] = 'Apríla';
 $lang['aug'] = 'Aug';

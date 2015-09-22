@@ -83,7 +83,7 @@ class Category_model extends Base_model
 	 * @return array
 	 *
 	 */
-  public function get_categories_list($id_page=NULL, $lang=NULL)
+  public function get_categories_list($id_page=NULL, $lang=NULL, $order_by = NULL)
   {
     $this->{$this->db_group}->select('category.name, category_lang.*, count(1) as nb', FALSE);
 
@@ -111,13 +111,19 @@ class Category_model extends Base_model
     // Filter on published
     $this->_filter_on_published(self::$publish_filter, $lang);
 
-    if ( ! is_null($id_page))
+    if (!is_null($id_page))
       $this->{$this->db_group}->where('page_article.id_page', $id_page);
 
     $this->{$this->db_group}->where('category_lang.lang', $lang);
 
     $this->{$this->db_group}->group_by('category.id_category');
-    $this->{$this->db_group}->order_by('category.ordering');
+
+    // Order by default ordering defined in cms or custom by tag 'order_by' - Patrik
+    if (empty($order_by)) {
+      $this->{$this->db_group}->order_by('category.ordering');
+    } else {
+      $this->{$this->db_group}->order_by($order_by);
+    }
 
     $data = array();
 
@@ -129,8 +135,8 @@ class Category_model extends Base_model
     return $data;
   }
 
-  public function get_all_categories() {
-    $this->{$this->db_group}->select('category.name, category_lang.*, count(1) as nb', FALSE);
+  public function get_all_categories($order_by = NULL) {
+    $this->{$this->db_group}->select('category.name, category_lang.*', FALSE);
 
     $this->{$this->db_group}->join(
       'category_lang',
@@ -138,9 +144,20 @@ class Category_model extends Base_model
       'left'
     );
 
-    $this->_filter_on_published(self::$publish_filter, $lang);
+    if (empty($order_by)) {
+      $this->{$this->db_group}->order_by('category.ordering');
+    } else {
+      $this->{$this->db_group}->order_by($order_by);
+    }
 
-    $this->{$this->db_group}->order_by('category.ordering');
+    $data = array();
+
+    $query = $this->{$this->db_group}->get('category');
+
+    if ( $query->num_rows() > 0 )
+      $data = $query->result_array();
+
+    return $data;
   }
 
 

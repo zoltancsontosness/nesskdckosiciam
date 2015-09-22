@@ -18,5 +18,6 @@ $lang['title_socials_sharing'] = 'Zdieľanie';
 $lang['socials_share'] = 'Zdieľať';
 $lang['socials_twitt'] = 'Tweetni';
 $lang['socials_add_plus'] = 'Daj +';
+$lang['title_coming_events'] = 'Najbližšie udalosti';
 
 ?>
