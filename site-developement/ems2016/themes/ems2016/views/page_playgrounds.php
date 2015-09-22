@@ -47,7 +47,8 @@
                         <ion:element:facility-info>
                           <ion:items>
                             <div class="event_date text-nowrap" title="<ion:street:value /> <ion:number:value />">
-                              <ion:street:value /> <ion:number:value />
+                              <ion:street:value />
+                              <ion:number:value />
                             </div>
                           </ion:items>
                         </ion:element:facility-info>
@@ -58,7 +59,7 @@
               </ion:articles:article>
               <?php if($counter < $columns): ?>
                 </ul>
-              <?php endif; ?>
+                <?php endif; ?>
           </div>
         </div>
 
@@ -66,13 +67,20 @@
           <div class="pagination_block">
             <ion:articles:pagination pagination="24" />
           </div>
-        <?php endif; ?>
+          <?php endif; ?>
       </ion:page>
     </div>
   </div>
 
   <div class="col-lg-4 col-md-4 col-sm-12">
-    <ion:partial view="modules/panel_categories" on_page="true"/>
+    <ion:partial view="modules/panel_categories" on_page="true" />
+
+    <div class="section">
+      <ion:page id="pridanie-sportoviska">
+        <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
+          Pridať športovisko<i class="fa fa-plus"></i></a>
+      </ion:page>
+    </div>
   </div>
 </div>
 

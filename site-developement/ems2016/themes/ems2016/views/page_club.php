@@ -9,7 +9,7 @@
 
       <ion:medias type="picture" limit="1">
         <div class="scale_image_container with_buttons pull-left margin-right-25">
-          <img src="<ion:media:src size='360,280' method='adaptive' />" alt="<ion:media:title/>" class="scale_image">
+          <img src="<ion:media:src size='360,280' method='border' color='#ffffff' />" alt="<ion:media:title/>" class="scale_image">
           <div class="open_buttons clearfix">
             <div class="f_left">
               <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>

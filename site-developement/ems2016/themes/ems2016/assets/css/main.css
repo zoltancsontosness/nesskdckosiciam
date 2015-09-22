@@ -216,12 +216,17 @@ img.logo {
   padding: 1px 11px;
 }
 
+.button.button_grey_light[class*="button_type_icon_"].active:not(:hover) i {
+    background: #88b828;
+}
+
+.button.button_grey_light[class*="button_type_icon_"].passive:not(:hover) i {
+    background: #feab06;
+}
+
 .button.active {
   background: #96ca2d;
 }
-
-.button.active:hover,
-.button.passive:hover {}
 
 .button.passive {
   background: #feb41c;

@@ -1,4 +1,4 @@
-<ion:partial view="header" /> 
+<ion:partial view="header" breadcrumb="true" /> 
 <div class="section">
   <h2 class="section_title section_title_big"><ion:page:title /></h2>
   <div class="clearfix">

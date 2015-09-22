@@ -51,7 +51,16 @@
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <ion:partial view="modules/panel_headlines" />
+      <div class="section">
+        <ion:page id="pridanie-klubu">
+          <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
+          Pridať klub<i class="fa fa-plus"></i></a>
+        </ion:page>
+      </div>
+
+      <div class="hidden-xs">
+        <ion:partial view="modules/panel_headlines" />
+      </div>
     </div>
   </div>
 
