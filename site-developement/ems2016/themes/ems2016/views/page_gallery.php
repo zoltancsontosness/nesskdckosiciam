@@ -1,9 +1,10 @@
 <ion:partial view="header" breadcrumb="true" />
 
 <ion:page>
-  <div class="section read_post_list tabs_content type_2">
+  <div class="section">
     <h2 class="section_title section_title_big"><ion:title /></h2>
-
+  </div>
+  <div class="section_7">
     <?php $counter=0; $columns=4; ?>
     <ion:articles:article>
       <?php if($counter == 0): ?>

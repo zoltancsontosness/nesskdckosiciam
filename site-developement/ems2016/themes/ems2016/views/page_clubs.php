@@ -67,6 +67,8 @@
 </ion:page>
 
 <script>
+  var clubsList;
+  
   $(document).ready(function () {
     options = {
       listClass: 'activity_list',
@@ -76,13 +78,13 @@
       ListPagination({}),
     ]
     };
-
-    var clubsList = new List('activity_list', options);
+    clubsList = new List('activity_list', options);
   })
 
   $(".hasclear").keyup(function () {
     var t = $(this);
     t.next('button').toggle(Boolean(t.val()));
+
   });
 
   $(".clearer").hide($(this).prev('input').val());
@@ -90,6 +92,7 @@
   $(".clearer").click(function () {
     $(this).prev('input').val('').focus();
     $(this).hide();
+    clubsList.search();
   });
 </script>
 
