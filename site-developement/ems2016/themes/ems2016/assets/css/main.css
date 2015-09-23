@@ -106,6 +106,21 @@ img.logo {
   float: right;
 }
 
+.bad-content-link {
+  float: right !important;
+}
+
+.bad-content-link a {
+  color: #fff;
+}
+
+@media (max-width: 768px){
+  .bad-content-link {
+    float: none !important;
+    text-align: center;
+  }
+}
+
 
 /* ------------------------------------
 2. Typography 
