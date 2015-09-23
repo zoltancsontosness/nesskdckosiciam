@@ -127,7 +127,6 @@ class TagManager_Category extends TagManager
 
     foreach($categories as $key=>$category)
       $categories[$key]['nb'] = '1';
-    print_r($categories);
 
     $lsk = '__all__';
     self::$categories[$lsk] = array_values($categories);

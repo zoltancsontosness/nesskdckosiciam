@@ -256,6 +256,7 @@ img.logo {
   margin-bottom: 25px;
 }
 
+
 ul.related_articles_list li.events {
   border-color: #13b7ff;
 }
@@ -266,6 +267,18 @@ ul.related_articles_list li.news {
 
 ul.related_articles_list li.articles {
   border-color: #a13d63;
+}
+
+@media (min-width: 599px) {
+  .col-md-left {
+    float: left;
+  }
+
+  .left-box {
+    max-width: 375px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 

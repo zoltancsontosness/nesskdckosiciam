@@ -9,8 +9,8 @@
 
       <div class="section_7 product_page">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <div class="product_preview">
+          <div class="col-xs-12 text-justify text-content">
+            <div class="product_preview col-md-left left-box">
               <ion:medias type="picture" limit="1">
                 <div class="qv_preview product_item">
                   <img id="zoom_image" src="<ion:media:src size='360,280' method='adaptive' />" data-zoom-image="<ion:media:src />" alt="<ion:media:title />">
@@ -29,8 +29,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-justify text-content">
             <ion:content />
           </div>
         </div>

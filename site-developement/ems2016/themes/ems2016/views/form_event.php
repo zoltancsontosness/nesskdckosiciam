@@ -96,7 +96,7 @@
                 </ul>
                 <select name="category" class="d_none" style="display: none;">
                   <option value="">Vyberte jednu z možností ...</option>
-                  <ion:categories>
+                  <ion:categories get_all="true" order_by="name ASC">
                     <option value="<ion:category:id />"><ion:category:name /></option>
                   </ion:categories>
                 </select>
