@@ -67,8 +67,8 @@
       <ion:partial view="modules/panel_calendar" />
       <div class="section">
         <ion:page id="pridanie-podujatia">
-        <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
-          Pridať podujatie<i class="fa fa-plus"></i></a>
+          <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
+            Pridať podujatie<i class="fa fa-plus"></i></a>
         </ion:page>
       </div>
 
@@ -115,6 +115,7 @@
   $(".hasclear").keyup(function () {
     var t = $(this);
     t.next('button').toggle(Boolean(t.val()));
+
   });
 
   $(".clearer").hide($(this).prev('input').val());
@@ -122,6 +123,7 @@
   $(".clearer").click(function () {
     $(this).prev('input').val('').focus();
     $(this).hide();
+    list.search();
   });
 </script>
 
