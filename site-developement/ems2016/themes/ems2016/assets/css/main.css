@@ -462,6 +462,9 @@ a.passive-event-link {
 /* ------------------------------------
 9. Forms 
 -------------------------------------*/
+input[readonly] {
+  background-color: #eee;
+}
 
 .input-group {
   position: relative;

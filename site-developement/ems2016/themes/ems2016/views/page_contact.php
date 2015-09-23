@@ -31,12 +31,12 @@
             <ion:form:contact:error:cf_email tag="p" class="error-input alert-danger" />
           </li>
           <li>
-            <label>Predmet</label>
+            <label>Predmet<span class="required">*</span></label>
             <input type="text" name="cf_subject" id="cf_subject">
             <ion:form:contact:error:cf_subject tag="p" class="error-input alert-danger" />
           </li>
           <li>
-            <label>Správa</label>
+            <label>Správa<span class="required">*</span></label>
             <textarea name="cf_message" id="cf_message"></textarea>
             <ion:form:contact:error:cf_message tag="p" class="error-input alert-danger" />
           </li>

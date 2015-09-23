@@ -76,6 +76,5 @@ $route['events/(:num)/(:num)'] = 'json/getEvents/$1/$2';
  */
 $route['(.*)'] = $route['default_controller'].'/index/$1';
 
-
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

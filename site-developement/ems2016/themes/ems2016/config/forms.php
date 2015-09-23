@@ -246,4 +246,38 @@ $config['forms'] = array
             ),
         )
     ),
+
+    //Report problem
+    'report_problem' => array
+    (
+        'process' => 'TagManager_Report_problem::process_data',
+        'messages' => array(
+            'success' => 'report_problem_message_success',
+            'error' => 'report_problem_message_error',
+            'captcha_error' => 'bad_captcha',
+        ),
+        'emails' => array(
+            array(
+                'email' => 'technical',
+                'subject' => 'Nahlásenie chybných údajov',
+                'view' => 'mail/bad_content',
+            ),
+        ),
+
+        'fields' => array
+        (
+            'email' => array(
+                'rules' => 'trim|xss_clean|valid_email|required',
+                'label' => 'form_label_email',
+            ),
+            'link' => array(
+                'rules' => 'trim|xss_clean|min_length[3]|required',
+                'label' => 'form_label_subject',
+            ),
+            'message' => array(
+                'rules' => 'trim|xss_clean|min_length[10]|required',
+                'label' => 'form_label_message',
+            ),
+        )
+    ),
 );

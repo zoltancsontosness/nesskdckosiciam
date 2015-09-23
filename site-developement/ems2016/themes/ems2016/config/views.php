@@ -22,6 +22,7 @@ $views = array (
     'page_single_post' => 'Single post page',
     404 => 'error_page',
     'page_playground' => 'Športovisko',
+    'page_bad_content_form' => 'Zly obsah report',
   ),
 );
 
