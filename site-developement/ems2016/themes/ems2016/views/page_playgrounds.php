@@ -21,7 +21,7 @@
           <div class="small_post_list">
 
             <?php $counter=0; $columns=4; ?>
-              <ion:articles:article pagination="24" order_by="title ASC">
+              <ion:articles:article order_by="title ASC">
                 <?php if($counter == 0): ?>
 
                   <ul class="row">
@@ -63,9 +63,9 @@
           </div>
         </div>
 
-        <?php if('<ion:articles:pagination pagination="24" />' != ''): ?>
+        <?php if('<ion:articles:pagination />' != ''): ?>
           <div class="pagination_block">
-            <ion:articles:pagination pagination="24" />
+            <ion:articles:pagination />
           </div>
           <?php endif; ?>
       </ion:page>

@@ -3119,7 +3119,7 @@ p a:hover{
 
   .calendar table tr th,
   .calendar table tr td{
-    font-family: 'Droid Serif', serif;
+/*    font-family: 'Droid Serif', serif;*/
   }
 
   .calendar table tr td.current,
