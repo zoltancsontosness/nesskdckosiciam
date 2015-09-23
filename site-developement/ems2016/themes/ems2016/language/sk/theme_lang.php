@@ -19,5 +19,9 @@ $lang['socials_share'] = 'Zdieľať';
 $lang['socials_twitt'] = 'Tweetni';
 $lang['socials_add_plus'] = 'Daj +';
 $lang['title_coming_events'] = 'Najbližšie udalosti';
+$lang['span_allevents'] = 'Všetky, ktoré sa ešte nekonali.';
+$lang['span_pastevents'] = 'Iba podujatia, ktoré sa už konali.';
+$lang['span_eventspassive'] = 'Podujatia s možnosťou zúčastniť sa.';
+$lang['span_eventsactive'] = 'Udalosti, ktoré môžete sledovať.';
 
 ?>

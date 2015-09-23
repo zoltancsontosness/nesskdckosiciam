@@ -9,7 +9,7 @@
           <span id="temp_night"></span><span class="degree">&deg;C</span>
         </div>
       </div>
-      <div class="hidden-md">
+      <div class="hidden-md hidden-xs">
         <i id="icon" class="mc"></i>
       </div>
     </div>

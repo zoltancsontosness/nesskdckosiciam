@@ -19,31 +19,42 @@
 
           <div class="row section_3">
             <ul>
-              <li class="col-sm-4">
+              <li class="col-sm-3">
                 <button class="button button_type_2 button_grey_light btn-block" onclick="filterByType('all')">Všetky</button>
               </li>
-              <li class="col-sm-4">
+              <li class="col-sm-3">
                 <button class="button button_type_icon_medium button_grey_light active btn-block" onclick="filterByType('active')">
                   Aktívne<i class="fa fa-heartbeat "></i></button>
               </li>
-              <li class="col-sm-4">
+              <li class="col-sm-3">
                 <button class="button button_type_icon_medium button_grey_light passive btn-block" onclick="filterByType('passive')">
                   Divák<i class="fa fa-television"></i></button>
+              </li>
+              <li class="col-sm-3">
+                <button class="button button_type_2 button_grey btn-block" onclick="filterOld()">
+                  Uskutočnené</button>
               </li>
             </ul>
           </div>
 
-          <div class="section_3">
-            <h4 class="section_title section_title_small pull-left">
-              Zoradiť podľa : &nbsp;
-            </h4>
+          <div class="section_3 margin-bottom-20">
+            <div class="row">
+              <div class="col-md-6">
+                <b>
+                Zoradiť podľa : &nbsp;
+                </b>
 
-            <button class="sort button button_type_3 button_grey_light" data-sort="date">
-              Dátum
-            </button>
-            <button class="sort button button_type_3 button_grey_light" data-sort="title">
-              Názov
-            </button>
+                <button class="sort button button_type_3 button_grey_light" data-sort="date">
+                  Dátum
+                </button>
+                <button class="sort button button_type_3 button_grey_light" data-sort="title">
+                  Názov
+                </button>
+              </div>
+              <div class="col-md-6 text-right">
+                <b>Zobrazujú sa : </b> <span id="showing"></span>
+              </div>
+            </div>
           </div>
 
           <div class="row">
@@ -82,7 +93,6 @@
 
   $(document).ready(function () {
     var options = {
-      date: new Date(),
       valueNames: ['title', 'date', 'type'],
       page: 10,
       plugins: [
@@ -91,26 +101,48 @@
     };
 
     list = new List('events_list', options);
+
+    filterByType('all');
   });
 
   function filterByType(type) {
     if (type === "all") {
       list.filter(function (item) {
-        return true;
+        sortByDate();
+        $("#showing").text('<ion:lang key="span_allevents" />' );
+        return (new Date(item._values.date) > new Date());
       });
       return;
     }
 
+    if(type == 'active') {
+      $("#showing").text('<ion:lang key="span_eventsactive" />');
+    } else {
+      $("#showing").text('<ion:lang key="span_eventspassive" />');
+    }
+    
     list.filter(function (item) {
-      return (item._values.type == type);
+      sortByDate();
+      return (item._values.type == type && new Date(item._values.date) > new Date());
     });
+
   }
 
-  function filterByDate() {
+  function filterOld() {
+     $("#showing").text('<ion:lang key="span_pastevents" />');
+    
     list.filter(function (item) {
-      return (new Date(item._values.date) > list.date);
+      return (new Date(item._values.date) < new Date());
     });
-  };
+
+    sortByDate();
+  }
+
+  function sortByDate() {
+    list.sort('date', {
+      order: "asc"
+    });
+  }
 
   $(".hasclear").keyup(function () {
     var t = $(this);
