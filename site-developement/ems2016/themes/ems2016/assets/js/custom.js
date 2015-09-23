@@ -38,12 +38,3 @@ function equalize(elementClass) {
     elements.removeAttr("style");
   }
 };
-
-equalize("box-title");
-equalize("box-content");
-
-$(window).resize(function () {
-  equalize("box-title");
-  equalize("box-content");
-  sticky_footer();
-});
