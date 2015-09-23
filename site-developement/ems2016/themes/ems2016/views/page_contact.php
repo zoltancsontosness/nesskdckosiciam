@@ -3,6 +3,9 @@
   <div class="col-lg-8 col-md-8 col-sm-12">
     <div class="section">
       <h2 class="section_title section_title_big"><ion:page:title /></h2>
+    </div>
+
+    <div class="section_7">
       <ion:articles limit="1">
         <ion:article:content />
       </ion:articles>
@@ -41,13 +44,13 @@
             <div class="g-recaptcha" data-sitekey="6Le-dAsTAAAAAMFkOVKzrWM84QF5t0BVw6wTL5Gn"></div>
           </li>
           <?php if(isset($_POST['g-recaptcha-response'])): ?>
-            <?php if($_POST['g-recaptcha-response'] === ""): ?>
-              <p class="error-input alert-danger">Captcha nebola vyplnená</p>
-              <?php endif; ?>
-                <?php endif; ?>
-                  <li>
-                    <button type="submit" class="button button_grey">Odoslať správu</button>
-                  </li>
+          <?php if($_POST['g-recaptcha-response'] === ""): ?>
+          <p class="error-input alert-danger">Captcha nebola vyplnená</p>
+          <?php endif; ?>
+          <?php endif; ?>
+          <li>
+            <button type="submit" class="button button_grey">Odoslať správu</button>
+          </li>
         </ul>
       </form>
     </div>
