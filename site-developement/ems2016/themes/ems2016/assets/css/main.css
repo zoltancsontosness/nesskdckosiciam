@@ -631,3 +631,5 @@ ul.tag-list::after {
 .margin-right-25 {
   margin-right: 25px;
 }
+.hidden-load {visibility: hidden;}
+.hidden-load.animated {visibility: visible;}

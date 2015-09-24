@@ -55,6 +55,8 @@ div.event_calendar .table tr td div.day {
 div.event_calendar .table tr td.event div.day, div.event_calendar ul.legend li.event {
     background-color: #fff0c3;
 }
+
+
 div.event_calendar .table tr td.dow-clickable, div.event_calendar .table tr td.event-clickable {
     cursor: pointer;
 }

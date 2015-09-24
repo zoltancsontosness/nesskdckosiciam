@@ -101,38 +101,38 @@
     };
 
     list = new List('events_list', options);
-
+    list.on('updated', addAnimations);
     filterByType('all');
   });
 
   function filterByType(type) {
-    if (type === "all") {
+    if (type === 'all') {
       list.filter(function (item) {
-        sortByDate();
-        $("#showing").text('<ion:lang key="span_allevents" />' );
-        return (new Date(item._values.date) > new Date());
+        $("#showing").text('<ion:lang key="span_allevents" />');
+        return (getDate(item._values.date) > new Date());
       });
+      sortByDate();
       return;
     }
 
-    if(type == 'active') {
+    if (type == 'active') {
       $("#showing").text('<ion:lang key="span_eventsactive" />');
     } else {
       $("#showing").text('<ion:lang key="span_eventspassive" />');
     }
-    
+
     list.filter(function (item) {
-      sortByDate();
-      return (item._values.type == type && new Date(item._values.date) > new Date());
+      return (item._values.type == type && getDate(item._values.date) > new Date());
     });
 
+    sortByDate();
   }
 
   function filterOld() {
-     $("#showing").text('<ion:lang key="span_pastevents" />');
-    
+    $("#showing").text('<ion:lang key="span_pastevents" />');
+
     list.filter(function (item) {
-      return (new Date(item._values.date) < new Date());
+      return (getDate(item._values.date) < new Date());
     });
 
     sortByDate();
@@ -142,6 +142,24 @@
     list.sort('date', {
       order: "asc"
     });
+  }
+
+  function addAnimations() {
+    $("#events_list .list li").each(function (i) {
+      var el = $(this),
+        newone = el.clone(true);
+      el.before(newone);
+      el.remove();
+
+      setTimeout(function () {
+        newone.find(".event").removeClass("animated").addClass("animated fadeInUp");
+      }, (i) * 100);
+    });
+  }
+
+  function getDate(source) {
+    date_parts = source.split('/');
+    return new Date(date_parts[0], date_parts[2] - 1, date_parts[1]);
   }
 
   $(".hasclear").keyup(function () {
@@ -156,6 +174,7 @@
     $(this).prev('input').val('').focus();
     $(this).hide();
     list.search();
+    sortByDate();
   });
 </script>
 
