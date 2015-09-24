@@ -15,13 +15,13 @@ $(document).ready(function () {
   sticky_footer();
 });
 
-  /**
-   * Sticky footer responsive
-   */
-  function sticky_footer() {
-    var footerHeight = $("footer.footer").outerHeight() + 40;
-    $("body").css("margin-bottom", footerHeight);
-  }
+/**
+ * Sticky footer responsive
+ */
+function sticky_footer() {
+  var footerHeight = $("footer.footer").outerHeight() + 40;
+  $("body").css("margin-bottom", footerHeight);
+}
 
 /*
   Equalize Heights of elements
@@ -31,7 +31,9 @@ function equalize(elementClass) {
   if ($(window).width() >= 992) {
     var maxHeight = 0;
     elements.each(function () {
-      if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+      if ($(this).height() > maxHeight) {
+        maxHeight = $(this).height();
+      }
     });
     elements.height(maxHeight);
   } else {

@@ -180,7 +180,7 @@ create or replace view `events` as (
   where a.id_article in (
     select id_article from page_article pa
     join page on page.id_page = pa.id_page
-    where page.name = 'events'
+    where page.name = 'events' and pa.online = 1
   )
   group by title,thumbnail
 );
@@ -207,7 +207,7 @@ create or replace view `clubs` as (
   where a.id_article in (
     select id_article from page_article pa
     join page on page.id_page = pa.id_page
-    where page.name = 'clubs'
+    where page.name = 'clubs' and pa.online = 1
   )
   group by id,title,thumbnail
 );
@@ -239,7 +239,7 @@ create or replace view `playgrounds` as (
   where a.id_article in (
     select id_article from page_article pa
     join page on page.id_page = pa.id_page
-    where page.name = 'playgrounds'
+    where page.name = 'playgrounds' and pa.online = 1
   )
   group by id, title, thumbnail, content
 );

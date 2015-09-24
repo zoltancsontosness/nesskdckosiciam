@@ -39,7 +39,7 @@
 
           <div class="section_3 margin-bottom-20">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <b>
                 Zoradiť podľa : &nbsp;
                 </b>
@@ -51,8 +51,13 @@
                   Názov
                 </button>
               </div>
-              <div class="col-md-6 text-right">
-                <b>Zobrazujú sa : </b> <span id="showing"></span>
+              <div class="col-sm-6">
+                <div class="text-right hidden-xs">
+                <b>Zobrazujú sa : </b> <span class="showing"></span>
+                </div>
+                <div class="visible-xs margin-top-20">
+                <b>Zobrazujú sa : </b> <span class="showing"></span>
+                </div>
               </div>
             </div>
           </div>
@@ -75,7 +80,6 @@
     </div>
 
     <div class="col-xs-12 col-md-4">
-      <ion:partial view="modules/panel_calendar" />
       <div class="section">
         <ion:page id="pridanie-podujatia">
           <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
@@ -83,6 +87,7 @@
         </ion:page>
       </div>
 
+      <ion:partial view="modules/panel_calendar" />
     </div>
 
   </div>
@@ -108,31 +113,31 @@
   function filterByType(type) {
     if (type === 'all') {
       list.filter(function (item) {
-        $("#showing").text('<ion:lang key="span_allevents" />');
-        return (getDate(item._values.date) > new Date());
+        $(".showing").text('<ion:lang key="span_allevents" />');
+        return (getDate(item._values.date) > getDate('<?php echo date("m/d/o"); ?>'));
       });
       sortByDate();
       return;
     }
 
     if (type == 'active') {
-      $("#showing").text('<ion:lang key="span_eventsactive" />');
+      $(".showing").text('<ion:lang key="span_eventsactive" />');
     } else {
-      $("#showing").text('<ion:lang key="span_eventspassive" />');
+      $(".showing").text('<ion:lang key="span_eventspassive" />');
     }
 
     list.filter(function (item) {
-      return (item._values.type == type && getDate(item._values.date) > new Date());
+      return (item._values.type == type && getDate(item._values.date) > getDate('<?php echo date("m/d/o"); ?>'));
     });
 
     sortByDate();
   }
 
   function filterOld() {
-    $("#showing").text('<ion:lang key="span_pastevents" />');
+    $(".showing").text('<ion:lang key="span_pastevents" />');
 
     list.filter(function (item) {
-      return (getDate(item._values.date) < new Date());
+      return (getDate(item._values.date) < getDate('<?php echo date("m/d/o"); ?>'));
     });
 
     sortByDate();
@@ -152,14 +157,14 @@
       el.remove();
 
       setTimeout(function () {
-        newone.find(".event").removeClass("animated").addClass("animated fadeInUp");
+        newone.find(".event").removeClass("animated fadeInUp").addClass("animated fadeInUp");
       }, (i) * 100);
     });
   }
 
   function getDate(source) {
     date_parts = source.split('/');
-    return new Date(date_parts[0], date_parts[2] - 1, date_parts[1]);
+    return new Date(date_parts[2], date_parts[0] - 1, date_parts[1]);
   }
 
   $(".hasclear").keyup(function () {
