@@ -73,7 +73,6 @@
   </div>
 
   <div class="col-lg-4 col-md-4 col-sm-12">
-    <ion:partial view="modules/panel_categories" on_page="true" />
 
     <div class="section">
       <ion:page id="pridanie-sportoviska">
@@ -81,6 +80,7 @@
           Pridať športovisko<i class="fa fa-plus"></i></a>
       </ion:page>
     </div>
+    <ion:partial view="modules/panel_categories" on_page="true" />
   </div>
 </div>
 
