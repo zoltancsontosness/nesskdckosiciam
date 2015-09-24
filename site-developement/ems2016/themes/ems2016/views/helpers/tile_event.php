@@ -1,6 +1,6 @@
 <a href="<ion:article:url />">
   <ion:article:element:event-info:items>
-    <div class="scale_image_container event animated fadeIn">
+    <div class="scale_image_container event hidden-load">
       <div class="event-theme-tab <ion:is-active:value />">
         <ion:is-active:value is="active">
           <i class="fa fa-heartbeat fa-inverse fa-2x"></i>
@@ -25,7 +25,7 @@
 
             <div class="event_date text-nowrap">
               <i class="fa fa-calendar fa-fw"></i>
-              <span class="date hidden"><ion:date:value format="m.d.o" /></span>
+              <span class="date hidden"><ion:date:value format="o/d/m" /></span>
               <ion:date:value format="complete" /> -
               <?php if('<ion:date:value format="d/m" />' !== '<ion:length:value format="d/m" />') : ?>
               <ion:length:value format="d.m.Y H:i" />
