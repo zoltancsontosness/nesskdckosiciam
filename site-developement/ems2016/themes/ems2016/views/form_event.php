@@ -58,6 +58,28 @@
         </div>
       </div>
       <div class="row">
+        <div class="control-group input_profiles col-xs-12 col-sm-6">
+          <label class="control-label">Telefón:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="phone" type="text" value="<ion:form:events:field:phone />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Telefón" data-content="Uveďte telefónne číslo, na ktorom Vás budú môcť administrátori kontaktovať."></i>
+            </div>
+            <ion:form:events:error:phone tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+        <div class="control-group input_profiles col-xs-12 col-sm-6">
+          <label class="control-label">E-mail:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="email" type="text" value="<ion:form:events:field:email />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="E-mail" data-content="Uveďte e-mailovú adresu, prostredníctvom ktorej vás môže verejnosť kontaktovať. E-mailová adresa sa zobrazí na webovej stránke www.emskosice.sk "></i>
+            </div>
+            <ion:form:events:error:email tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="control-group input_profiles col-xs-12 col-md-6">
           <label class="control-label">Typ športu:</label>
           <div class="controls">

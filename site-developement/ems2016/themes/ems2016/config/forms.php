@@ -151,6 +151,14 @@ $config['forms'] = array
                 'rules' => 'xss_clean|required|trim',
                 'label' => 'form_label_category'
             ),
+            'phone' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
+            ),
+            'email' => array(
+                'rules' => 'trim|required|valid_email|xss_clean',
+                'label' => 'form_label_email',
+            ),
         )
     ),
 
@@ -196,6 +204,10 @@ $config['forms'] = array
             'email' => array(
                 'rules' => 'trim|xss_clean|valid_email|required',
                 'label' => 'form_label_email',
+            ),
+            'phone' => array(
+                'rules' => 'trim|xss_clean|min_length[5]|required',
+                'label' => 'form_label_subtitle',
             ),
             'address' => array(
                 'rules' => 'trim|xss_clean|required',

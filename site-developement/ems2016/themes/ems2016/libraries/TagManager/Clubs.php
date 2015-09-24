@@ -61,6 +61,7 @@ class TagManager_Clubs extends TagManager
 
         $extend_data = array(
           'ico' => $posted['ico'],
+          'phone' => $posted['phone'],
           'webpage' => $posted['webpage'],
           'address' => $posted['address'],
           'email' => $posted['email'],

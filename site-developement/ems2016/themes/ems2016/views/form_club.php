@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="control-group input_profiles col-xs-12 col-sm-12">
+        <div class="control-group input_profiles col-xs-12 col-sm-6">
           <label class="control-label">Webstránka:</label>
           <div class="controls">
             <div class="inner-addon right-addon">
@@ -66,6 +66,16 @@
               <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Webstránka" data-content="Uveďte adresu webovej stránky organizácie."></i>
             </div>
             <ion:form:clubs:error:webpage tag="p" class="error-input alert-danger" />
+          </div>
+        </div>
+        <div class="control-group input_profiles col-xs-12 col-sm-6">
+          <label class="control-label">Telefón:</label>
+          <div class="controls">
+            <div class="inner-addon right-addon">
+              <input name="phone" type="text" value="<ion:form:clubs:field:phone />">
+              <i class="icon glyphicon glyphicon-info-sign" data-trigger="hover" data-placement="top" data-toggle="popover" title="Telefón" data-content="Uveďte telefónne číslo, na ktorom Vás budú môcť administrátori kontaktovať."></i>
+            </div>
+            <ion:form:clubs:error:phone tag="p" class="error-input alert-danger" />
           </div>
         </div>
       </div>

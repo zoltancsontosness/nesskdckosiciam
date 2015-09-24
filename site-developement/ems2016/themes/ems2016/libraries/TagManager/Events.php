@@ -59,6 +59,8 @@ class TagManager_Events extends TagManager
 
         $extend_data = array(
           'organizer' => $posted['organizer'],
+          'email' => $posted['email'],
+          'phone' => $posted['phone'],
           'address' => $posted['address'],
           'ico' => $posted['ico'],
           'webpage' => $posted['webpage'],
