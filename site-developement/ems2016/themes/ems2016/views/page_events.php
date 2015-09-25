@@ -137,7 +137,7 @@
     $(".showing").text('<ion:lang key="span_pastevents" />');
 
     list.filter(function (item) {
-      return (getDate(item._values.date) < getDate('<?php echo date("m/d/o"); ?>'));
+      return (getDate(item._values.date) <= getDate('<?php echo date("m/d/o"); ?>'));
     });
 
     sortByDate();
