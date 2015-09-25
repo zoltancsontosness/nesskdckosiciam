@@ -11,7 +11,7 @@
       <ul class="row">
         <?php endif; $counter++; ?>
         <li class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-          <div class="section_post_left">
+          <div class="section_3 gallery_item">
             <ion:medias limit="1" type="picture">
               <div class="scale_image_container">
                 <a href="<ion:article:url />">
