@@ -633,3 +633,11 @@ ul.tag-list::after {
 }
 .hidden-load {visibility: hidden;}
 .hidden-load.animated {visibility: visible;}
+
+.gallery_item .post_text {
+  padding-top: 0;
+}
+
+.gallery_item .scale_image_container {
+  margin-bottom: 10px;
+}

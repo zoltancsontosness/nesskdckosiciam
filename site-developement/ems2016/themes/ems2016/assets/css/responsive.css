@@ -98,7 +98,14 @@
 		-webkit-transform-origin: 100% 0;
 		transform-origin: 100% 0;
 	}
+  
+  .main_menu > ul > li > a {
+    font-size: 14px;
+  }
 	
+  .button.button_type_2 {
+    padding: 8px 5px;
+  }
 }
 
 @media only screen and (max-width: 992px){
@@ -1035,10 +1042,10 @@
 
 	.small_post_list li .scale_image_container {
 		margin-bottom: 0;
-		float: left;
-		margin-right: 20px;
+/*		float: left;*/
+    margin-right: 20px;
 	}
-
+  
 	.text_post_section .img_position_left{
       max-width: 100%;
     }

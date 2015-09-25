@@ -12,7 +12,7 @@
           <img src="<ion:media:src size='360,280' method='border' color='#ffffff' />" alt="<ion:media:title/>" class="scale_image">
           <div class="open_buttons clearfix">
             <div class="f_left">
-              <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
+              <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:id />"><i class="fa fa-search-plus"></i></a>
             </div>
           </div>
         </div>

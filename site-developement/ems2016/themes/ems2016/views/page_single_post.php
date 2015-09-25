@@ -23,7 +23,7 @@
         <h2 class="section_title section_title_big"><ion:title /></h2>
         <div class="text_post_block text-content">
           <div class="scale_image_container">
-            <ion:medias limit="1" type="picture">
+            <ion:medias limit="1" type="picture" size='750' method='width'>
               <img src="<ion:media:src />" alt="<ion:media:title />">
             </ion:medias>
           </div>
@@ -62,7 +62,7 @@
                     </a>
                     <div class="open_buttons clearfix hidden-xs">
                       <div class="f_left">
-                        <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:name />"><i class="fa fa-search-plus"></i></a>
+                        <a href="<ion:media:src />" role="button" class="jackbox_button button button_grey_light fancy-image" rel="<ion:article:id />"><i class="fa fa-search-plus"></i></a>
                       </div>
                     </div>
                   </div>

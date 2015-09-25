@@ -20,6 +20,21 @@
                 <a href="<ion:url />" class="button banner_button travel">
                   <ion:subtitle />
                 </a>
+              </ion:medias>
+              <ion:subtitle is_not="">
+                <div class="post_image_buttons">
+                  <a href="<ion:url />" class="button banner_button travel">
+                    <ion:subtitle />
+                  </a>
+                </div>
+              </ion:subtitle>
+            </div>
+            
+            <div class="clearfix">
+              <div class="f_left">
+                <div class="event_date">
+                  <ion:date format="complete_date" />
+                </div>
               </div>
             </ion:subtitle>
           </div>
