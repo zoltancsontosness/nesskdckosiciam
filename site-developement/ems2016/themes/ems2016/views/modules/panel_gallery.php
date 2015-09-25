@@ -29,7 +29,7 @@
             <div class="clearfix">
               <div class="f_left">
                 <div class="event_date">
-                  <ion:date format="complete" />
+                  <ion:date format="complete_date" />
                 </div>
               </div>
             </div>
