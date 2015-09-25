@@ -23,5 +23,7 @@ $lang['span_allevents'] = 'Všetky, ktoré sa ešte nekonali.';
 $lang['span_pastevents'] = 'Iba podujatia, ktoré sa už konali.';
 $lang['span_eventspassive'] = 'Podujatia s možnosťou zúčastniť sa.';
 $lang['span_eventsactive'] = 'Udalosti, ktoré môžete sledovať.';
+$lang['title_report_content'] = 'Nahlásiť chybný obsah';
+$lang['report_content'] = 'Nahlásiť';
 
 ?>

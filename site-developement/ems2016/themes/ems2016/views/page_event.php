@@ -106,6 +106,7 @@ if($url !== ''){
         </div>
         <?php endif; ?>
         <ion:partial view="modules/panel_share" />
+        <ion:partial view="modules/panel_report" />
       </div>
     </div>
   </div>

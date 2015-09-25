@@ -23,8 +23,8 @@
                 <div class="product_carousel" id="thumbnails">
                   <ion:medias type="picture">
                     <a href="#" data-image="<ion:media:src size='360,280' method='adaptive'/>" data-zoom-image="<ion:media:src />" class="active">
-                        <img src="<ion:media:src size='100,100' method='adaptive' />" alt="<ion:media:title />">
-                      </a>
+                      <img src="<ion:media:src size='100,100' method='adaptive' />" alt="<ion:media:title />">
+                    </a>
                   </ion:medias>
                 </div>
               </div>
@@ -131,6 +131,7 @@
           </div>
           <?php endif; ?>
         <ion:partial view="modules/panel_share" />
+        <ion:partial view="modules/panel_report" />
       </div>
     </div>
   </div>

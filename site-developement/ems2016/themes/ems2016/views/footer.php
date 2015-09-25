@@ -24,7 +24,6 @@
   <div class="footer_bottom_part">
     <div class="container clearfix">
       <p class="float-none text-center">© 2015 <span>NESS KDC</span> All Rights Reserved.</p>
-      <p class="bad-content-link"><a href="<ion:base_url />nahlasenie-chybneho-obsahu/formular"><span>Nahlásenie chybného/neaktuálneho obsahu</span></a></p>
     </div>
   </div>
 </footer>
