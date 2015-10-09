@@ -1,99 +1,105 @@
 <ion:partial view="header" breadcrumb="true" />
-<ion:page>
 
+<ion:page>
   <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-12">
       <div class="section">
-        <h2 class="section_title section_title_big"><ion:title /></h2>
-      </div>
-      <div class="section_7">
-        <div id="activity_list">
+        <ion:category:current:title expression="!=''">
+          <h2 class="section_title section_title_big">
+            <ion:page:title />
+            <small>
+              <ion:category:current:title class="text-muted" /> 
+            </small>
+          </h2>
+        </ion:category:current:title>
+        <ion:else>
+          <h2 class="section_title section_title_big"><ion:page:title /></h2>
+        </ion:else>
 
-          <div class="search-input">
-            <div class="control-group ">
-              <div class="controls">
-                <input id="search" class="search hasclear" type="text" placeholder="Hľadať" />
-                <button class="clearer"><i class="fa fa-times fa-lg"></i></button>
-              </div>
-            </div>
-          </div>
+        <div class="read_post_list">
+          <div class="small_post_list">
 
-          <ul class="activity_list">
-            <ion:articles:article>
-              <li>
-                <div class="post_text">
-                  <div class="clearfix">
-                    <a href="<ion:url />" class="f_left title"><h5><ion:title /></h5></a>
+            <?php $counter=0; $columns=4; ?>
+            <ion:articles:article order_by="title ASC">
+              <?php if($counter == 0): ?>
+
+              <ul class="row">
+                <?php endif; $counter++; ?>
+
+                <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-list-item">
+                  <div class="scale_image_container">
+                    <a href="<ion:url />">
+                      <ion:medias type="picture" limit="1" size="300,200" method="adaptive">
+                        <img src="<ion:media:src />" alt="<ion:media:alt />" class="scale_image">
+                      </ion:medias>
+                    </a>
+
+                    <ion:article:categories:count expression="count.gt(0)" >
+                      <div class="post_image_buttons">
+                        <a href="<ion:url />" class="button banner_button sport">
+                          <ion:article:categories:list separator=", " />
+                        </a>
+                      </div>
+                    </ion:article:categories:count>
+
                   </div>
-                  <div class="event_activity">pridané
-                    <ion:date format="long" />
-                  </div>
-                  <ion:content characters="175" function="strip_tags" />
-                </div>
-                <a href="<ion:url />" class="button button_type_icon_small button_grey margin-top-20 pull-right">
-                  <ion:lang key="btn_showmore" />
-                  <i class="fa fa-angle-right fa-fw"></i>
-                </a>
-              </li>
+                  <a href="<ion:url />">
+                    <ion:title tag="h4" />
+                  </a>
+                </li>
+                <?php if($counter == $columns) : $counter=0; ?>
+              </ul>
+              <?php endif; ?>
             </ion:articles:article>
-          </ul>
-
-          <div class="text-center clearfix">
-            <ul class="pagination"></ul>
-          </div>
-        </div>
-
-        <?php if('<ion:articles:pagination />' != ''): ?>
-          <div class="pagination_block">
-            <ion:articles:pagination />
-          </div>
+            <?php if($counter < $columns): ?>
+            </ul>
           <?php endif; ?>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="section">
-        <ion:page id="pridanie-klubu">
-          <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
-          Pridať klub<i class="fa fa-plus"></i></a>
-        </ion:page>
+        </div>
       </div>
 
-      <div class="hidden-xs">
-        <ion:partial view="modules/panel_headlines" />
+      <?php if('<ion:articles:pagination />' != ''): ?>
+      <div class="pagination_block">
+        <ion:articles:pagination />
       </div>
+      <?php endif; ?>
     </div>
   </div>
 
+  <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="section">
+      <ion:page id="pridanie-klubu">
+        <a href="<ion:url />" class="button button_type_icon_medium button_grey btn-block" onclick="filterByType('all')">
+          Pridať klub<i class="fa fa-plus"></i></a>
+      </ion:page>
+    </div>
+
+    <div class="widget widget_categories" data-appear-animation="fadeInDown" data-appear-animation-delay="250">
+      <h3 class="widget_title">
+        <ion:page:title />
+        <ion:category:current:title expression="!=''">     
+          <a href="<ion:url />" class="button button_grey view_button float-right">     
+            <ion:lang key="btn_show_all" />
+          </a>
+        </ion:category:current:title>      
+      </h3>
+
+      <ul class="categories_list">
+        <li>
+          <ion:categories tag="ul" order_by="nb DESC">
+            <li>
+              <a href="<ion:category:url />">
+                <ion:category:title />
+              </a>
+              <span>
+                <ion:category:nb_articles /> 
+              </span>
+            </li>
+          </ion:categories>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
 </ion:page>
-
-<script>
-  var clubsList;
-  
-  $(document).ready(function () {
-    options = {
-      listClass: 'activity_list',
-      valueNames: ['title'],
-      page: 8,
-      plugins: [
-      ListPagination({}),
-    ]
-    };
-    clubsList = new List('activity_list', options);
-  })
-
-  $(".hasclear").keyup(function () {
-    var t = $(this);
-    t.next('button').toggle(Boolean(t.val()));
-
-  });
-
-  $(".clearer").hide($(this).prev('input').val());
-
-  $(".clearer").click(function () {
-    $(this).prev('input').val('').focus();
-    $(this).hide();
-    clubsList.search();
-  });
-</script>
 
 <ion:partial view="footer" />
