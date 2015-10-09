@@ -59,11 +59,14 @@ create or replace view `playgrounds_list` as (
 );
 
 create or replace view `clubs_list` as (
-  select article.id_article as "id", title from page_article as pa
+  select article.id_article as "id", title,
+  group_concat(DISTINCT c.id_category) as 'categories' from page_article as pa
   join page on pa.id_page = page.id_page
   join article_lang on pa.id_article = article_lang.id_article 
   join article on pa.id_article = article.id_article 
+  left join article_category c on pa.id_article = c.id_article
   where page.name = 'clubs' and pa.online = 1
+  group by id,title
 );
 
 create or replace view `events_list` as (
@@ -192,12 +195,14 @@ create or replace view `clubs` as (
   group_concat(DISTINCT if(id_extend_field = 30, ex.content, NULL)) as 'address', 
   group_concat(DISTINCT if(id_extend_field = 22, ex.content, NULL)) as 'webpage',
   group_concat(DISTINCT if(id_extend_field = 29, ex.content, NULL)) as 'email',
+  group_concat(DISTINCT c.id_category) as 'categories',
   id_media as 'thumbnail',
   article_lang.content as 'content'
   from article as a
   join article_lang on article_lang.id_article = a.id_article
   join element on a.id_article = element.id_parent
   left join extend_fields as ex on ex.id_parent = element.id_element
+  left join article_category c on a.id_article = c.id_article
   left join media on media.id_media = (
     select id_media 
     from article_media
