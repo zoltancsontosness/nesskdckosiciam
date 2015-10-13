@@ -42,6 +42,7 @@
 <script src="<ion:theme_url/>assets/js/list.pagination.min.js"></script>
 <script src="<ion:theme_url/>assets/plugins/calendar/event_calendar.min.js"></script>
 <script src="<ion:theme_url/>assets/js/custom.js"></script>
+<ion:setting key="google_analytics" />
 </body>
 
 </html>
