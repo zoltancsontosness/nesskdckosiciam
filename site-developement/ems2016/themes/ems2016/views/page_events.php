@@ -41,7 +41,7 @@
             <div class="row">
               <div class="col-sm-6">
                 <b>
-                Zoradiť podľa : &nbsp;
+                  Zoradiť podľa : &nbsp;
                 </b>
 
                 <button class="sort button button_type_3 button_grey_light" data-sort="date">
@@ -53,10 +53,10 @@
               </div>
               <div class="col-sm-6">
                 <div class="text-right hidden-xs">
-                <b>Zobrazujú sa : </b> <span class="showing"></span>
+                  <b>Zobrazujú sa : </b> <span class="showing"></span>
                 </div>
                 <div class="visible-xs margin-top-20">
-                <b>Zobrazujú sa : </b> <span class="showing"></span>
+                  <b>Zobrazujú sa : </b> <span class="showing"></span>
                 </div>
               </div>
             </div>
@@ -98,10 +98,12 @@
 
   $(document).ready(function () {
     var options = {
-      valueNames: ['title', 'date', 'type'],
+      valueNames: ['title', 'date', 'type', 'date_ends'],
       page: 10,
       plugins: [
-        ListPagination({}),
+        ListPagination({
+          outerWindow : 1,
+        }),
       ],
     };
 
@@ -114,7 +116,7 @@
     if (type === 'all') {
       list.filter(function (item) {
         $(".showing").text('<ion:lang key="span_allevents" />');
-        return (getDate(item._values.date) > getDate('<?php echo date("m/d/o"); ?>'));
+        return (getDate(item._values.date_ends) > getDate('<?php echo date("m/d/o"); ?>'));
       });
       sortByDate();
       return;
@@ -127,7 +129,7 @@
     }
 
     list.filter(function (item) {
-      return (item._values.type == type && getDate(item._values.date) > getDate('<?php echo date("m/d/o"); ?>'));
+      return (item._values.type == type && getDate(item._values.date_ends) > getDate('<?php echo date("m/d/o"); ?>'));
     });
 
     sortByDate();
@@ -137,10 +139,12 @@
     $(".showing").text('<ion:lang key="span_pastevents" />');
 
     list.filter(function (item) {
-      return (getDate(item._values.date) <= getDate('<?php echo date("m/d/o"); ?>'));
+      return (getDate(item._values.date_ends) <= getDate('<?php echo date("m/d/o"); ?>'));
     });
 
-    sortByDate();
+    list.sort('date', {
+      order: "desc"
+    });
   }
 
   function sortByDate() {
@@ -152,7 +156,7 @@
   function addAnimations() {
     $("#events_list .list li").each(function (i) {
       var el = $(this),
-        newone = el.clone(true);
+          newone = el.clone(true);
       el.before(newone);
       el.remove();
 
