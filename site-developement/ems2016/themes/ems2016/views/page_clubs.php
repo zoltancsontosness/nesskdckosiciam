@@ -29,7 +29,7 @@
                 <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 post-list-item">
                   <div class="scale_image_container">
                     <a href="<ion:url />">
-                      <ion:medias type="picture" limit="1" size="300,200" method="adaptive">
+                       <ion:medias type="picture" limit="1" size="165,110" method="border" color="#ffffff">
                         <img src="<ion:media:src />" alt="<ion:media:alt />" class="scale_image">
                       </ion:medias>
                     </a>
@@ -85,7 +85,7 @@
 
       <ul class="categories_list">
         <li>
-          <ion:categories tag="ul" order_by="nb DESC">
+          <ion:categories tag="ul" order_by="name ASC">
             <li>
               <a href="<ion:category:url />">
                 <ion:category:title />

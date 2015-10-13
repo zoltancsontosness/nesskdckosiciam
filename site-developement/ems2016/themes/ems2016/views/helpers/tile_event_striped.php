@@ -12,6 +12,7 @@
         <div class="caption_inner">
           <div class="clearfix">
             <div class="event_date text-nowrap">
+              <span class="date hidden"><ion:date:value format="m/d/o" /></span>
               <i class="fa fa-calendar fa-fw"></i>
               <ion:date:value format="complete" />
             </div>

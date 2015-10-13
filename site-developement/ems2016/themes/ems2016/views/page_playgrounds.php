@@ -82,7 +82,7 @@
         Pridať športovisko<i class="fa fa-plus"></i></a>
     </ion:page>
   </div>
-  <ion:partial view="modules/panel_categories" on_page="true" />
+  <ion:partial view="modules/panel_categories"/>
 </div>
 </div>
 
