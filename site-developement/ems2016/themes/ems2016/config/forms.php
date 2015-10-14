@@ -216,7 +216,7 @@ $config['forms'] = array
             ),
             'attachment' => array(
                 'field' => 'attachment',
-                'rules' => 'xss_clean|_some_callback',
+                'rules' => 'xss_clean',
                 'label' => 'form_label_attachment',
             ),
         )

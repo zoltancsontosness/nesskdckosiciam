@@ -10,6 +10,7 @@ class TagManager_Clubs extends TagManager
   public static function process_data(FTL_Binding $tag)
   {
     $form_name = self::$ci->input->post('form');
+    self::$ci->session->unset_userdata('error_file');
 
     
 
@@ -76,28 +77,27 @@ class TagManager_Clubs extends TagManager
         self::load_model('media_model');
         self::$ci->load->helper('url');
         self::$ci->load->library('upload', $config);
-        self::$ci->load->libray('session');
 
-
-        //SAVING TO DB
-        $article_id = self::$ci->article_model->save($data,$lang_data);
-        $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 3, $element);
-        self::$ci->extend_field_model->save_data('element', $element_id, $extend_data,false);
-        //LINKING ARTICLE TO PAGE
-        $data['online'] = 0;
-        $data['main_parent'] = 11;
-        self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
-        
-        // Do upload and link to article
         $files = $_FILES;
         foreach($_FILES['attachment']['size'] as $key => $value) {
           if ($value !== 0) {
             $isFileSet = true;
+          } else {
+            $isFileSet = false;
           }
-
-          $isFileSet = false;
         }
         if($isFileSet){
+          //SAVING TO DB
+          $article_id = self::$ci->article_model->save($data,$lang_data);
+          $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 3, $element);
+          self::$ci->extend_field_model->save_data('element', $element_id, $extend_data,false);
+          //LINKING ARTICLE TO PAGE
+          $data['online'] = 0;
+          $data['main_parent'] = 11;
+          self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
+        
+        // Do upload and link to article
+        
           foreach ($_FILES['attachment']['name'] as $key => $value) {
             $_FILES['attachment']['name']= $files['attachment']['name'][$key];
             $_FILES['attachment']['type']= $files['attachment']['type'][$key];
@@ -123,7 +123,7 @@ class TagManager_Clubs extends TagManager
           $message = TagManager_Form::get_form_message('attachment_error');
 
           TagManager_Form::set_additional_error('attachment_error', $message);
-          self::$ci->session->set_flashdata('error_file', $message);  
+          self::$ci->session->set_userdata('error_file', $message);  
           self::$ci->form_validation->set_message('attachment_error', $message);
         }
       }else{
