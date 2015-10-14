@@ -1019,7 +1019,6 @@ class TagManager_Form extends TagManager
 
 	// ------------------------------------------------------------------------
 
-
 	/**
 	 * Init errors messages
 	 * Replace the CI native error messages by the one set in

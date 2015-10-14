@@ -455,7 +455,7 @@ ION.append({
 
 			if (typeOf(options) == 'null') options = {};
 
-			var oTimePicker = (options.timePicker) ? options.timePicker : false;
+			var oTimePicker = (options.timePicker) ? options.timePicker : true;
 			var oInputFormat = (oTimePicker == true) ? date_format + ' H:i:s' : date_format;
 			var oOutputFormat = (oTimePicker == true) ? 'Y-m-d H:i:s' : 'Y-m-d';
 
@@ -475,8 +475,8 @@ ION.append({
 				*/
 			});
 		}
-
 		ION.datePicker.attach($$('.date'));
+		
 	},
 	
 	

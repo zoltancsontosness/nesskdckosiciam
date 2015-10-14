@@ -1,4 +1,8 @@
 <ion:partial view="header" breadcrumb="true" /> 
+<?php var_dump('<ion:form:clubs:error:attachment tag="p" class="error-input alert-danger" />'); 
+  //self::$ci->load->libray('session');
+  //$fileError = $this->session->flashdata('error_file');
+?>
 <div class="section">
   <h2 class="section_title section_title_big"><ion:page:title /></h2>
   <div class="clearfix">
@@ -106,7 +110,7 @@
               </span>
               <input type="text" readonly="" class="file-reader" />
             </div>
-            <ion:form:clubs:error:attachment tag="p" class="error-input alert-danger" />
+            
           </div>
         </div>
       </div>

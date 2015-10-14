@@ -170,6 +170,7 @@ $config['forms'] = array
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
             'captcha_error' => 'bad_captcha',
+            'attachment_error' => 'attachment_missing'
         ),
         'emails' => array(
             array(
@@ -214,7 +215,8 @@ $config['forms'] = array
                 'label' => 'form_label_address',
             ),
             'attachment' => array(
-                'rules' => 'xss_clean',
+                'field' => 'attachment',
+                'rules' => 'xss_clean|_some_callback',
                 'label' => 'form_label_attachment',
             ),
         )

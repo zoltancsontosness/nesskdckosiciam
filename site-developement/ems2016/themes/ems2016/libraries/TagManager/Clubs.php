@@ -76,6 +76,7 @@ class TagManager_Clubs extends TagManager
         self::load_model('media_model');
         self::$ci->load->helper('url');
         self::$ci->load->library('upload', $config);
+        self::$ci->load->libray('session');
 
 
         //SAVING TO DB
@@ -89,28 +90,42 @@ class TagManager_Clubs extends TagManager
         
         // Do upload and link to article
         $files = $_FILES;
-
-        foreach ($_FILES['attachment']['name'] as $key => $value) {
-          $_FILES['attachment']['name']= $files['attachment']['name'][$key];
-          $_FILES['attachment']['type']= $files['attachment']['type'][$key];
-          $_FILES['attachment']['tmp_name']= $files['attachment']['tmp_name'][$key];
-          $_FILES['attachment']['error']= $files['attachment']['error'][$key];
-          $_FILES['attachment']['size']= $files['attachment']['size'][$key];  
-
-          $isUploaded = self::$ci->upload->do_upload();
-          if ($isUploaded){
-            $post_data = array_merge($posted, self::$ci->upload->data());
-            $id_media = self::$ci->media_model->insert_media($config['upload_path'].'/'.$post_data["file_name"]);
-            self::$ci->media_model->attach_media('article', $article_id, $id_media);
+        foreach($_FILES['attachment']['size'] as $key => $value) {
+          if ($value !== 0) {
+            $isFileSet = true;
           }
+
+          $isFileSet = false;
         }
-        
-        //
-        $message = TagManager_Form::get_form_message('success');
-        TagManager_Form::set_additional_success($form_name, $message);
-        $redirect = base_url()."uspesna-registracia-klubu";
-        TagManager_Email::send_form_emails($tag, $form_name, $posted);
-        if ($redirect !== FALSE) redirect($redirect);
+        if($isFileSet){
+          foreach ($_FILES['attachment']['name'] as $key => $value) {
+            $_FILES['attachment']['name']= $files['attachment']['name'][$key];
+            $_FILES['attachment']['type']= $files['attachment']['type'][$key];
+            $_FILES['attachment']['tmp_name']= $files['attachment']['tmp_name'][$key];
+            $_FILES['attachment']['error']= $files['attachment']['error'][$key];
+            $_FILES['attachment']['size']= $files['attachment']['size'][$key];  
+
+            $isUploaded = self::$ci->upload->do_upload();
+            if ($isUploaded){
+              $post_data = array_merge($posted, self::$ci->upload->data());
+              $id_media = self::$ci->media_model->insert_media($config['upload_path'].'/'.$post_data["file_name"]);
+              self::$ci->media_model->attach_media('article', $article_id, $id_media);
+            }
+          }
+
+          //
+          $message = TagManager_Form::get_form_message('success');
+          TagManager_Form::set_additional_success($form_name, $message);
+          $redirect = base_url()."uspesna-registracia-klubu";
+          TagManager_Email::send_form_emails($tag, $form_name, $posted);
+          if ($redirect !== FALSE) redirect($redirect);
+        } else {
+          $message = TagManager_Form::get_form_message('attachment_error');
+
+          TagManager_Form::set_additional_error('attachment_error', $message);
+          self::$ci->session->set_flashdata('error_file', $message);  
+          self::$ci->form_validation->set_message('attachment_error', $message);
+        }
       }else{
         $message = TagManager_Form::get_form_message('captcha_error');
         //TagManager_Form::set_additional_error($form_name, $message);  
