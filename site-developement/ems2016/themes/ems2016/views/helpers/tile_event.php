@@ -25,7 +25,8 @@
 
             <div class="event_date text-nowrap">
               <i class="fa fa-calendar fa-fw"></i>
-              <span class="date hidden"><ion:length:value format="m/d/o" /></span>
+              <span class="date_ends hidden"><ion:length:value format="m/d/o" /></span>
+              <span class="date hidden"><ion:date:value format="m/d/o" /></span>
               <ion:date:value format="l , d.m.Y H:i" /> -
               <?php if('<ion:date:value format="d/m" />' !== '<ion:length:value format="d/m" />') : ?>
               <ion:length:value format="d.m.Y H:i" />
