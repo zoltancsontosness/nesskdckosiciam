@@ -3,7 +3,7 @@
 
     <div class="clearfix tabs_conrainer">
       <ul class="tabs_nav clearfix">
-        <ion:pages pages="news,events,articles" display_hidden="true">
+        <ion:pages pages="news,events" display_hidden="true">
           <ion:page>
             <li>
               <a href="#tab-<ion:id />"><h3><ion:title /></h3></a>
@@ -14,8 +14,7 @@
     </div>
 
     <div class="tabs_content side_bar_tabs comment_tabs">
-      <ion:pages pages="news,articles" display_hidden="true">
-        <ion:page>
+      <ion:page id="news" display_hidden="true">
           <div id="tab-<ion:id />">
             <ul class="comments_list">
               <ion:articles order_by="date DESC" limit="8">
@@ -44,8 +43,7 @@
               </a>
             </div>
           </div>
-        </ion:page>
-      </ion:pages>
+      </ion:page>
 
       <ion:page id="events" display_hidden="true">
         <div id="tab-<ion:id />">

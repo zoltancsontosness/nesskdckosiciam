@@ -3,7 +3,7 @@
     <div id="flexslider">
       <ul class="slides">
 
-        <ion:pages pages="news,articles,events" display_hidden="true">
+        <ion:pages pages="news,events" display_hidden="true">
           <ion:page>
             <ion:articles type="headline">
               <ion:article>
