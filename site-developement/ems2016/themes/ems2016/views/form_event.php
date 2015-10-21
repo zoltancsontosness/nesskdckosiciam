@@ -119,7 +119,7 @@
                 <select name="category" class="d_none" style="display: none;">
                   <option value="">Vyberte jednu z možností ...</option>
                   <ion:categories get_all="true" order_by="name ASC">
-                    <option value="<ion:category:id />"><ion:category:name /></option>
+                    <option value="<ion:category:id />"><ion:category:title /></option>
                   </ion:categories>
                 </select>
               </div>
@@ -195,6 +195,9 @@
           </div>
         </div>
       </div>
+      <p class="error-input alert-danger">
+            <ion:session:get key="error_file" />
+          </p>
       <div class="row">
         <div class="col-xs-12 control-group">
           <input name="rules_1" type="checkbox" id="rules_1">
@@ -204,14 +207,27 @@
       </div>
       <div class="row">
         <div class="control-group input_profiles col-xs-12">
-          <div class="g-recaptcha" data-sitekey="6Le-dAsTAAAAAMFkOVKzrWM84QF5t0BVw6wTL5Gn"></div>
+         <!-- <div class="g-recaptcha" data-sitekey="6Le-dAsTAAAAAMFkOVKzrWM84QF5t0BVw6wTL5Gn"></div> -->
+         <?php
+            include($_SERVER['DOCUMENT_ROOT']."/themes/ems2016/libraries/Tagmanager/captcha/simple-php-captcha.php");
+            $_SESSION['captcha'] = simple_php_captcha();
+          ?>
+          <img src="<?=  $_SESSION['captcha']['image_src'] ?>" alt="captcha" id="captcha-img"/>
+          <button type="button" id="refresh-captcha">
+            <i class="icon glyphicon glyphicon-refresh"></i>
+          </button>
         </div>
       </div>
-      <?php if(isset($_POST['g-recaptcha-response'])): ?>
-        <?php if($_POST['g-recaptcha-response'] === ""): ?>
-          <p class="error-input alert-danger">Captcha nebola vyplnená</p>
-        <?php endif; ?>
-      <?php endif; ?>
+      <div class="row control-group">
+        <div class="col-xs-4">
+          <label for="captcha">Opíšte text z obrázka</label>
+          <input name="captcha" type="text" />
+        </div>
+      </div>
+      <ion:form:events:error:captcha tag="p" class="error-input alert-danger" />
+      <p class="error-input alert-danger">
+        <ion:session:get key="captcha_error" />
+      </p>
       <button type="submit" class="button button_type_icon_big button_orange btn-block"><i class="fa fa-pencil"></i>Registrovať podujatie</button>
     </form>
   </div>
@@ -238,6 +254,22 @@
       locale: moment.locale('sk')
     });
   });
+  </script>
+  <script>
+    $('#refresh-captcha').on('click', function() {
+      $.ajax({
+        url: "<ion:base_url />refresh/captcha",
+        method: "GET",
+        cache: false,
+        success: function(data) {
+          var data = $.parseJSON(data);
+          $("#captcha-img").attr('src', data.image_src);
+        },
+        error: function(){
+          alert("Niečo sa nepodarilo. Obnovte stránku prosím!");
+        }
+      });
+    });
   </script>
 
 <ion:partial view="footer" />

@@ -41,13 +41,25 @@
             <ion:form:contact:error:cf_message tag="p" class="error-input alert-danger" />
           </li>
           <li>
-            <div class="g-recaptcha" data-sitekey="6Le-dAsTAAAAAMFkOVKzrWM84QF5t0BVw6wTL5Gn"></div>
+            <!-- <div class="g-recaptcha" data-sitekey="6Le-dAsTAAAAAMFkOVKzrWM84QF5t0BVw6wTL5Gn"></div> -->
+            <?php
+              include($_SERVER['DOCUMENT_ROOT']."/themes/ems2016/libraries/Tagmanager/captcha/simple-php-captcha.php");
+              $_SESSION['captcha'] = simple_php_captcha();
+            ?>
+            <img src="<?=  $_SESSION['captcha']['image_src'] ?>" alt="captcha" id="captcha-img"/>
+            <button type="button" id="refresh-captcha">
+              <i class="icon glyphicon glyphicon-refresh"></i>
+            </button>
           </li>
-          <?php if(isset($_POST['g-recaptcha-response'])): ?>
-          <?php if($_POST['g-recaptcha-response'] === ""): ?>
-          <p class="error-input alert-danger">Captcha nebola vyplnená</p>
-          <?php endif; ?>
-          <?php endif; ?>
+          <div class="row control-group">
+            <div class="col-xs-4">
+              <label for="captcha">Opíšte text z obrázka</label>
+              <input name="captcha" type="text" />
+            </div>
+          </div>
+          <p class="error-input alert-danger">
+            <ion:session:get key="captcha_error" />
+          </p>
           <li>
             <button type="submit" class="button button_grey">Odoslať správu</button>
           </li>
@@ -60,4 +72,21 @@
     <ion:partial view="modules/panel_coming_events" />
   </div>
 </div>
+
+<script>
+    $('#refresh-captcha').on('click', function() {
+      $.ajax({
+        url: "<ion:base_url />refresh/captcha",
+        method: "GET",
+        cache: false,
+        success: function(data) {
+          var data = $.parseJSON(data);
+          $("#captcha-img").attr('src', data.image_src);
+        },
+        error: function(){
+          alert("Niečo sa nepodarilo. Obnovte stránku prosím!");
+        }
+      });
+    });
+  </script>
 <ion:partial view="footer" />

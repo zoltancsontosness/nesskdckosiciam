@@ -9,6 +9,7 @@ class TagManager_Contact extends TagManager
 
   public static function process_data(FTL_Binding $tag)
   {
+    self::$ci->session->unset_userdata('captcha_error');
     $form_name = self::$ci->input->post('form');
 
     
@@ -19,14 +20,14 @@ class TagManager_Contact extends TagManager
 
 
       //google recaptcha 
-      $recaptcha = $posted['g-recaptcha-response'];
-      $secret = "6Le-dAsTAAAAAHbYBE8apocAqYXHV5iNhZPx4gMT";
-      $verify_link = "https://www.google.com/recaptcha/api/siteverify";
-      $ip = $_SERVER['REMOTE_ADDR'];
-      $url = $verify_link."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
-      $response = json_decode(file_get_contents($url), true);
+      // $recaptcha = $posted['g-recaptcha-response'];
+      // $secret = "6Le-dAsTAAAAAHbYBE8apocAqYXHV5iNhZPx4gMT";
+      // $verify_link = "https://www.google.com/recaptcha/api/siteverify";
+      // $ip = $_SERVER['REMOTE_ADDR'];
+      // $url = $verify_link."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
+      // $response = json_decode(file_get_contents($url), true);
 
-      if($response['success']){
+      if($_SESSION['captcha']['code'] === $posted['captcha']){
         $message = TagManager_Form::get_form_message('success');
         TagManager_Form::set_additional_success($form_name, $message);
 
@@ -36,6 +37,11 @@ class TagManager_Contact extends TagManager
 
         $redirect = TagManager_Form::get_form_redirect();
         if ($redirect !== FALSE) redirect($redirect);    
+      } else{
+        $message = TagManager_Form::get_form_message('captcha_error');
+        TagManager_Form::set_additional_error($form_name, $message);  
+        //self::$ci->form_validation->set_message('required', $message); 
+        self::$ci->session->set_userdata('captcha_error', "Captcha bola vyplnená zle!");  
       }
     }
   }

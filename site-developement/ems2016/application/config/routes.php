@@ -71,6 +71,9 @@ $route['json/(:any)/(:num)'] = 'json/getArticle/$1/$2';
 $route['thumbs/(:num)/(:any)'] = 'json/getThumbnail/$1/$2';
 $route['events/(:num)/(:num)'] = 'json/getEvents/$1/$2';
 
+/* Refresh captcha */
+$route['refresh/captcha'] = 'helper_service/refreshCaptcha';
+
 /*
  * Route to default controller
  */
