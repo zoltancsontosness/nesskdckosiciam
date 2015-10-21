@@ -100,6 +100,7 @@ class Json extends MY_Controller
     $abs_path = getcwd().'/'.$data['base_path'];
 
     $resolutions = array(
+      'xsmall' => ['400','250'],
       'small' => ['640','480'],
       'medium' => ['1280','720'],
       'large' => ['1920','1080']
@@ -130,6 +131,7 @@ class Json extends MY_Controller
       'width' => $size[0],
       'height' => $size[1],
       'thumb_marker' => '',
+      'quality' => '75%'
     );
 
     $result=($dreamed_thumbs_path.'/'.$data['file_name']);
