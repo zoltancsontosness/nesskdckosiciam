@@ -63,6 +63,16 @@ class Json_model extends Base_model
     return $query->result_array();  
   }
   
+  /**
+   * Returns all medias query result by article id.
+   * @param  integer  $id_article
+   * @return array   result 
+   */
+  function getGallery($id_article) {
+    $query = $this->db->query('SELECT id_media as `id` FROM `article_media` where id_article = '.$id_article);
+    return $query->result_array();
+  }
+  
   // Events for calendar
   function getEvents($year, $month)
   {

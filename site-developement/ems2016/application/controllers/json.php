@@ -72,7 +72,11 @@ class Json extends MY_Controller
   {
     $accessible = array("categories", "news", "events", "articles", "playgrounds", "clubs");
     if (in_array($type, $accessible)) {
-      print_r(json_encode($this->json_model->getArticle($type, $id), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+      $result = $this->json_model->getArticle($type, $id);
+      if (!is_null($id))
+        $result[0]['gallery'] = $this->json_model->getGallery($id);
+
+      print_r(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     } else {
       return false;
     }
@@ -100,6 +104,7 @@ class Json extends MY_Controller
     $abs_path = getcwd().'/'.$data['base_path'];
 
     $resolutions = array(
+      'xsmall' => ['400','250'],
       'small' => ['640','480'],
       'medium' => ['1280','720'],
       'large' => ['1920','1080']
@@ -130,6 +135,7 @@ class Json extends MY_Controller
       'width' => $size[0],
       'height' => $size[1],
       'thumb_marker' => '',
+      'quality' => '75%'
     );
 
     $result=($dreamed_thumbs_path.'/'.$data['file_name']);
@@ -147,7 +153,7 @@ class Json extends MY_Controller
   public function getEvents($year, $month) {
     $events = $this->json_model->getEvents($year, $month);
     $final_array = array();
-    
+
     foreach ($events as $value) {
       $date_value = substr($value["date"], 0, 10);
       $final_array[$date_value]["date"] = $date_value;
@@ -157,7 +163,7 @@ class Json extends MY_Controller
         $final_array[$date_value]["body"] = '<a href="' . base_url() . 'podujatia/' . $value["url"] . '" class="' . $value["active"] . '-event-link">' . $value["title"] . '</a><br />';
       }
     }
-     
+
     print_r(json_encode($final_array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 }

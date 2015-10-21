@@ -16,7 +16,9 @@
                   <ion:article:categories:list count="1" />
                 </a>
                 <div class="event_date">
-                  <ion:article:date format="long" />
+                  <ion:article:element:facility-info:items>
+                    <ion:street:value/>&nbsp;<ion:number:value />
+                  </ion:article:element:facility-info:items>
                 </div>
               </div>
               <a href="<ion:article:url />">

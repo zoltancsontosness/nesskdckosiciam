@@ -2,7 +2,7 @@
   <?php $count = 0; $show = 3; $already_shown = array(); $timeout = 0; ?>
     <ul class="related_articles_list">
       <?php while ($count < $show) : ?>
-        <ion:pages:page page="news,articles,events" display_hidden="true">
+        <ion:pages:page page="news,events" display_hidden="true">
           <?php $has_per_page = false; ?>
             <ion:articles:article type="headline" order_by="date DESC">
               <?php if ($count < $show and !in_array('<ion:name/>',$already_shown) and !$has_per_page) : 
