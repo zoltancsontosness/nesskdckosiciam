@@ -9,6 +9,7 @@ $config['forms'] = array
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
             'captcha_error' => 'bad_captcha',
+            'attachment_error' => 'attachment_missing'
         ),
         'emails' => array(
             array(
@@ -73,6 +74,10 @@ $config['forms'] = array
                 'rules' => 'required|xss_clean',
                 'label' => 'form_label_rules_1'
             ),
+            'captcha' => array(
+                'rules' => 'xss_clean|trim|required',
+                'label' => 'form_label_captcha',
+            ),
             
         )
     ),
@@ -85,6 +90,7 @@ $config['forms'] = array
             'success' => 'new_article_message_success',
             'error' => 'new_article_message_error',
             'captcha_error' => 'bad_captcha',
+            'attachment_error' => 'attachment_missing'
         ),
         'emails' => array(
             array(
@@ -159,6 +165,10 @@ $config['forms'] = array
                 'rules' => 'trim|required|valid_email|xss_clean',
                 'label' => 'form_label_email',
             ),
+            'captcha' => array(
+                'rules' => 'xss_clean|trim|required',
+                'label' => 'form_label_captcha',
+            ),
         )
     ),
 
@@ -219,6 +229,10 @@ $config['forms'] = array
                 'rules' => 'xss_clean',
                 'label' => 'form_label_attachment',
             ),
+            'captcha' => array(
+                'rules' => 'xss_clean|trim|required',
+                'label' => 'form_label_captcha',
+            ),
         )
     ),
 
@@ -257,6 +271,10 @@ $config['forms'] = array
             'cf_message' => array(
                 'rules' => 'trim|xss_clean|min_length[10]|required',
                 'label' => 'form_label_message',
+            ),
+            'captcha' => array(
+                'rules' => 'xss_clean|trim|required',
+                'label' => 'form_label_captcha',
             ),
         )
     ),

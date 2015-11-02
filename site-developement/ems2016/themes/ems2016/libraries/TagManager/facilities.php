@@ -10,20 +10,22 @@ class TagManager_Facilities extends TagManager
   public static function process_data(FTL_Binding $tag)
   {
     $form_name = self::$ci->input->post('form');
+    self::$ci->session->unset_userdata('error_file');
+    self::$ci->session->unset_userdata('captcha_error');
 
     if (TagManager_Form::validate($form_name))
     {
       $posted = self::$ci->input->post();
 
       //google recaptcha 
-      $recaptcha = $posted['g-recaptcha-response'];
-      $secret = "6Le-dAsTAAAAAHbYBE8apocAqYXHV5iNhZPx4gMT";
-      $verify_link = "https://www.google.com/recaptcha/api/siteverify";
-      $ip = $_SERVER['REMOTE_ADDR'];
-      $url = $verify_link."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
-      $response = json_decode(file_get_contents($url), true);
+      // $recaptcha = $posted['g-recaptcha-response'];
+      // $secret = "6Le-dAsTAAAAAHbYBE8apocAqYXHV5iNhZPx4gMT";
+      // $verify_link = "https://www.google.com/recaptcha/api/siteverify";
+      // $ip = $_SERVER['REMOTE_ADDR'];
+      // $url = $verify_link."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
+      // $response = json_decode(file_get_contents($url), true);
 
-      if($response['success']){
+      if($_SESSION['captcha']['code'] === $posted['captcha']){
 
         $title = $posted['facility'];
         // Config for files
@@ -79,54 +81,70 @@ class TagManager_Facilities extends TagManager
         self::$ci->load->library('upload', $config);
         self::$ci->load->helper('url');
 
-        //SAVING TO DB
-        $article_id = self::$ci->article_model->save($data,$lang_data);
-        $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 1, $element);
-        self::$ci->extend_field_model->save_data('element', $element_id, $extend_data,false);
-        //LINKING ARTICLE TO PAGE
-        $data['online'] = 0;
-        $data['main_parent'] = 5;
-        self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
-        // Do upload and link to article
-        $files = $_FILES;
-        foreach ($_FILES['photos']['name'] as $key => $value) {
-          $_FILES['photos']['name']= $files['photos']['name'][$key];
-          $_FILES['photos']['type']= $files['photos']['type'][$key];
-          $_FILES['photos']['tmp_name']= $files['photos']['tmp_name'][$key];
-          $_FILES['photos']['error']= $files['photos']['error'][$key];
-          $_FILES['photos']['size']= $files['photos']['size'][$key];  
-
-          $isUploaded = self::$ci->upload->do_upload();
-          if ($isUploaded){
-            $post_data = array_merge($posted, self::$ci->upload->data());
-            $id_media = self::$ci->media_model->insert_media($config['upload_path'].'/'.$post_data["file_name"]);
-            self::$ci->media_model->attach_media('article', $article_id, $id_media);
+        foreach($_FILES['photos']['size'] as $key => $value) {
+          if ($value !== 0) {
+            $isFileSet = true;
+            break;
+          } else {
+            $isFileSet = false;
           }
-         
         }
-        
-        
+        if($isFileSet){
+          //SAVING TO DB
+          $article_id = self::$ci->article_model->save($data,$lang_data);
+          $element_id = self::$ci->element_model->save('article', $article_id, FALSE, 1, $element);
+          self::$ci->extend_field_model->save_data('element', $element_id, $extend_data,false);
+          //LINKING ARTICLE TO PAGE
+          $data['online'] = 0;
+          $data['main_parent'] = 5;
+          self::$ci->article_model->link_to_page($data['main_parent'],$article_id,$data);
+          // Do upload and link to article
+          $files = $_FILES;
+          foreach ($_FILES['photos']['name'] as $key => $value) {
+            $_FILES['photos']['name']= $files['photos']['name'][$key];
+            $_FILES['photos']['type']= $files['photos']['type'][$key];
+            $_FILES['photos']['tmp_name']= $files['photos']['tmp_name'][$key];
+            $_FILES['photos']['error']= $files['photos']['error'][$key];
+            $_FILES['photos']['size']= $files['photos']['size'][$key];  
 
-        //CORRECT INTEGRITY
-        //$article = self::$ci->article_model->get_by_id($article_id);
-        //self::$ci->article_model->correct_integrity($data, $lang_data);
+            $isUploaded = self::$ci->upload->do_upload();
+            if ($isUploaded){
+              $post_data = array_merge($posted, self::$ci->upload->data());
+              $id_media = self::$ci->media_model->insert_media($config['upload_path'].'/'.$post_data["file_name"]);
+              self::$ci->media_model->attach_media('article', $article_id, $id_media);
+            }
+           
+          }
+          
+          
 
-        //SAVE URLs
-        //self::$ci->article_model->save_urls($article_id);
-       
-        //ADDING LANG DATA 
-        //$articles = array($article);
-        //self::$ci->article_model->add_lang_data($articles);
-        //
-        $message = TagManager_Form::get_form_message('success');
-        TagManager_Form::set_additional_success($form_name, $message);
-        $redirect = base_url()."uspesna-registracia-sportoviska";
-        TagManager_Email::send_form_emails($tag, $form_name, $posted);
-        if ($redirect !== FALSE) redirect($redirect);
+          //CORRECT INTEGRITY
+          //$article = self::$ci->article_model->get_by_id($article_id);
+          //self::$ci->article_model->correct_integrity($data, $lang_data);
+
+          //SAVE URLs
+          //self::$ci->article_model->save_urls($article_id);
+         
+          //ADDING LANG DATA 
+          //$articles = array($article);
+          //self::$ci->article_model->add_lang_data($articles);
+          //
+          $message = TagManager_Form::get_form_message('success');
+          TagManager_Form::set_additional_success($form_name, $message);
+          $redirect = base_url()."uspesna-registracia-sportoviska";
+          TagManager_Email::send_form_emails($tag, $form_name, $posted);
+          if ($redirect !== FALSE) redirect($redirect);
+        } else {
+          $message = TagManager_Form::get_form_message('attachment_error');
+
+          TagManager_Form::set_additional_error('attachment_error', $message);
+          self::$ci->session->set_userdata('error_file', $message);  
+          self::$ci->form_validation->set_message('attachment_error', $message);
+        }
       }else{
-         $message = TagManager_Form::get_form_message('captcha_error');
-        //TagManager_Form::set_additional_error($form_name, $message);  
-        self::$ci->form_validation->set_message('captcha_error', $message);
+        $message = TagManager_Form::get_form_message('captcha_error');
+        TagManager_Form::set_additional_error($form_name, $message);  
+        self::$ci->session->set_userdata('captcha_error', "Captcha bola vyplnená zle!");
       }
     }
   }

@@ -542,6 +542,14 @@ input[readonly] {
   opacity: 0.5;
 }
 
+#refresh-captcha {
+  width: 25px;
+  height: 25px;
+}
+#refresh-captcha > i.icon {
+  line-height: 19px;
+}
+
 .inner-addon .icon:hover {
   opacity: 1;
   transition: all 0.3s ease-in-out;

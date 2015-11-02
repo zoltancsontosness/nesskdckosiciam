@@ -5,7 +5,7 @@
 
         <ion:pages pages="news,events" display_hidden="true">
           <ion:page>
-            <ion:articles type="headline">
+            <ion:articles type="headline" limit="5">
               <ion:article>
                 <?php $has_media='<ion:medias:count />'> 0; if ($has_media) :?>
                   <li>
@@ -57,7 +57,7 @@
     <ul>
       <ion:pages pages="news,articles,events" display_hidden="true">
         <ion:page>
-          <ion:articles type="headline">
+          <ion:articles type="headline" limit="5">
             <ion:article>
               <?php $has_media='<ion:medias:count />'> 0; if ($has_media) :?>
                 <li class="clearfix">
