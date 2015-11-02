@@ -9,24 +9,13 @@ create or replace view  `news_list` as (
   order by date desc
 );
 
-create or replace view  `articles_list` as (
-  select article.id_article as "id", title, id_media as "thumbnail", article.created as 
-  "date" from page_article as pa
-  join page on pa.id_page = page.id_page
-  join article_lang on pa.id_article = article_lang.id_article 
-  join article on pa.id_article = article.id_article
-  left join article_media as am on am.id_article = article.id_article
-  where page.name = 'articles' and pa.online = 1 and am.ordering = 1
-  order by date desc
-);
-
 create or replace view `playgrounds_list` as (
   select 
   a.id_article as 'id', 
   article_lang.title, 
-  group_concat(DISTINCT if(id_extend_field = 27, ex.content, NULL)) as 'street', 
-  group_concat(DISTINCT if(id_extend_field = 28, ex.content, NULL)) as 'number', 
-  group_concat(DISTINCT if(id_extend_field = 7, ex.content, NULL)) as 'city', 
+  concat(group_concat(if(id_extend_field = 27, ex.content, NULL)),
+         ' ',group_concat(if(id_extend_field = 28, ex.content, NULL)),
+         ' ',group_concat(if(id_extend_field = 7, ex.content, NULL))) as 'address', 
   group_concat(DISTINCT c.id_category) as 'categories',
   id_media as 'thumbnail'
   from article as a
@@ -45,19 +34,23 @@ create or replace view `playgrounds_list` as (
 
 create or replace view `clubs_list` as (
   select article.id_article as "id", title,
+  group_concat(DISTINCT if(id_extend_field = 30, ex.content, NULL)) as 'address', 
   group_concat(DISTINCT c.id_category) as 'categories' from page_article as pa
   join page on pa.id_page = page.id_page
   join article_lang on pa.id_article = article_lang.id_article 
   join article on pa.id_article = article.id_article 
+  join element on pa.id_article = element.id_parent
+  left join extend_fields as ex on ex.id_parent = element.id_element
   left join article_category c on pa.id_article = c.id_article
   where page.name = 'clubs' and pa.online = 1
   group by id,title
 );
 
 create or replace view `events_list` as (
-   select 
+  select 
   a.id_article as 'id', 
   article_lang.title, 
+  group_concat(DISTINCT if(id_extend_field = 14, ex.content, NULL)) as 'address', 
   group_concat(DISTINCT if(id_extend_field = 25, ex.content, NULL)) as 'active', 
   group_concat(DISTINCT if(id_extend_field = 18, ex.content, NULL)) as 'date',
   group_concat(DISTINCT c.id_category) as 'categories',
@@ -96,28 +89,11 @@ create or replace view `event_calendar` as (
   ORDER BY date DESC
 );
 
-
-create or replace view `articles` as (
-  select a.id_article as "id", title, article_lang.content as "content", id_media as 
-  "thumbnail", a.created as 
-  "date" from article as a
-  join article_lang on a.id_article = article_lang.id_article 
-  left join media on media.id_media = 
-  (SELECT id_media from article_media
-   where id_article = a.id_article
-   order by ordering asc
-   LIMIT 1) 
-  where a.id_article in (
-    select id_article from page_article pa
-    join page on page.id_page = pa.id_page
-    where page.name = 'articles' and pa.online = 1
-  )
-);
-
 create or replace view `news` as (
   select a.id_article as "id", title, article_lang.content as "content", 
-  id_media as "thumbnail", a.created as 
-  "date" from article as a
+  id_media as "thumbnail", a.created as "date",
+  group_concat(DISTINCT "novinky/",article_lang.url) as 'url'
+  from article as a
   join article_lang on a.id_article = article_lang.id_article 
   left join media on media.id_media = 
   (SELECT id_media from article_media
@@ -129,6 +105,7 @@ create or replace view `news` as (
     join page on page.id_page = pa.id_page
     where page.name = 'news' and pa.online = 1
   )
+  group by id, title, content, thumbnail, date
 );
 
 create or replace view `categories` as (
@@ -148,7 +125,8 @@ create or replace view `events` as (
   group_concat(DISTINCT if(id_extend_field = 20, ex.content, NULL)) as 'date_ends',
   group_concat(DISTINCT c.id_category) as 'categories',
   id_media as 'thumbnail',
-  article_lang.content as 'content'
+  article_lang.content as 'content',
+  group_concat(distinct "podujatia/",article_lang.url) as 'url'
   from article as a
   join article_lang on article_lang.id_article = a.id_article
   join element on a.id_article = element.id_parent
@@ -177,7 +155,8 @@ create or replace view `clubs` as (
   group_concat(DISTINCT if(id_extend_field = 29, ex.content, NULL)) as 'email',
   group_concat(DISTINCT c.id_category) as 'categories',
   id_media as 'thumbnail',
-  article_lang.content as 'content'
+  article_lang.content as 'content',
+  group_concat(DISTINCT "kluby/",article_lang.url) as 'url'
   from article as a
   join article_lang on article_lang.id_article = a.id_article
   join element on a.id_article = element.id_parent
@@ -201,15 +180,16 @@ create or replace view `playgrounds` as (
   select 
   a.id_article as 'id', 
   article_lang.title, 
-  group_concat(DISTINCT if(id_extend_field = 27, ex.content, NULL)) as 'street', 
-  group_concat(DISTINCT if(id_extend_field = 28, ex.content, NULL)) as 'number', 
-  group_concat(DISTINCT if(id_extend_field = 7, ex.content, NULL)) as 'city', 
+  concat(group_concat(if(id_extend_field = 27, ex.content, NULL)),
+         ' ',group_concat(if(id_extend_field = 28, ex.content, NULL)),
+         ' ',group_concat(if(id_extend_field = 7, ex.content, NULL))) as 'address', 
   group_concat(DISTINCT if(id_extend_field = 8, ex.content, NULL)) as 'phone',
   group_concat(DISTINCT if(id_extend_field = 9, ex.content, NULL)) as 'email',
   group_concat(DISTINCT if(id_extend_field = 10, ex.content, NULL)) as 'webpage',
   group_concat(DISTINCT c.id_category) as 'categories',
   id_media as 'thumbnail',
-  article_lang.content as 'content'
+  article_lang.content as 'content',
+  group_concat(DISTINCT "sportoviska/",article_lang.url) as 'url'
   from article as a
   join article_lang on article_lang.id_article = a.id_article
   join element on a.id_article = element.id_parent

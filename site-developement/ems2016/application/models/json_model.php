@@ -79,4 +79,13 @@ class Json_model extends Base_model
     $query = $this->db->query("SELECT * FROM `event_calendar` WHERE DATE_FORMAT(date,'%Y') = $year AND DATE_FORMAT(date,'%m') = $month");
     return $query->result_array();
   }
+  
+  function getCoords($id_article) {
+    $query = $this->db->get_where('coordinates', array('id_article' => $id_article));
+    return $query->result_array();
+  }
+  
+  function setCoords($data) {
+    $this->db->insert('coordinates', $data);
+  }
 }

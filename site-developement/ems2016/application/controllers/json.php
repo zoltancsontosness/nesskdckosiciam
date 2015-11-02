@@ -71,16 +71,53 @@ class Json extends MY_Controller
   public function getArticle($type, $id = NULL)
   {
     $accessible = array("categories", "news", "events", "articles", "playgrounds", "clubs");
+    $has_coordinates = array("events", "playgrounds", "clubs");
+
     if (in_array($type, $accessible)) {
       $result = $this->json_model->getArticle($type, $id);
       if (!is_null($id))
         $result[0]['gallery'] = $this->json_model->getGallery($id);
 
+      if (in_array($type, $has_coordinates) and !is_null($id)) {
+        $result[0]['coords'] = $this->getCoordinates($result[0]);
+        //        for($i = 0; $i < count($result); $i++) {
+        //          $result[$i]['coords']  = $this->getCoordinates($result[$i]);
+        //        }
+      }
       print_r(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     } else {
       return false;
     }
     return true;
+  }
+
+  private function getCoordinates($article) 
+  {
+    $result_coords = $this->json_model->getCoords($article['id']);
+    if(empty($result_coords)) {
+      $json = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.urlencode( $article['address']));
+      $result_json = json_decode($json);
+
+      if(empty($result_json->results)) return null;
+
+      $location = $result_json->results[0]->geometry->location;
+
+      $data = array(
+        'id_article' => $article['id'],
+        'lat' => $location->lat,
+        'lng' => $location->lng
+      );
+
+      $this->json_model->setCoords($data);
+    }
+
+    $real_coords = $this->json_model->getCoords($article['id']);
+    $result = array(
+      'lat' => $real_coords[0]['lat'],
+      'lng' => $real_coords[0]['lng']
+    );
+
+    return $result;
   }
 
   /**
