@@ -5,8 +5,6 @@
     <div id="events_list">
       <ul class="list">
         <ion:articles:article order_by="date asc">
-          <ion:element:event-info:items>
-          </ion:element:event-info:items>
           <li>
             <ion:partial view="helpers/tile_event_striped" />
           </li>
