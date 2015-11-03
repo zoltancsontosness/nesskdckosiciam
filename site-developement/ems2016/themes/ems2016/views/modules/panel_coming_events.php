@@ -6,16 +6,10 @@
       <ul class="list">
         <ion:articles:article order_by="date asc">
           <ion:element:event-info:items>
-            <?php 
-              $var = strtotime('<ion:length:value format="m/d/o" />');
-            ?>
           </ion:element:event-info:items>
-
-          <?php if((time()-(60*60*24)) < $var): ?>
           <li>
             <ion:partial view="helpers/tile_event_striped" />
           </li>
-          <?php endif; ?>
         </ion:articles:article>
       </ul>
     </div>
@@ -30,12 +24,13 @@
     };
 
     list = new List('events_list', options);
-    list.sort('date', {
-      order: "asc"
-    });
 
     list.filter(function (item) {
       return (getDate(item._values.date) > getDate('<?php echo date("m/d/o"); ?>'));
+    });
+    
+    list.sort('date', {
+      order: "asc"
     });
   });
 

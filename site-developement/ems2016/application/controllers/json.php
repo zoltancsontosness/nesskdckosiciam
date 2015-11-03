@@ -112,12 +112,8 @@ class Json extends MY_Controller
     }
 
     $real_coords = $this->json_model->getCoords($article['id']);
-    $result = array(
-      'lat' => $real_coords[0]['lat'],
-      'lng' => $real_coords[0]['lng']
-    );
-
-    return $result;
+    unset($real_coords[0]['id_article']);
+    return $real_coords[0];
   }
 
   /**
