@@ -2,6 +2,7 @@
 
 class Json extends MY_Controller
 {
+  private $has_coordinates = array("events", "playgrounds", "clubs");
 
   function __construct()
   {
@@ -24,42 +25,28 @@ class Json extends MY_Controller
    */
   public function getList($type, $start_date = NULL)
   {
+    $start_date = date('Y-m-d H:i:s', $start_date);
+
     switch ($type) {
       case "news":
-        $table = "news_list";
-        $this->getResultsFromDate($table, $start_date);
+        $result = $this->json_model->getListFromDate("news_list", $start_date);
         break;
       case "events":
-        $table = "events_list";
-        $this->getResultsFromDate($table, $start_date);
-        break;
-      case "articles":
-        $table = "articles_list";
-        $this->getResultsFromDate($table, $start_date);
+        $result = $this->json_model->getListFromDate("events_list", $start_date);
         break;
       case "playgrounds":
-        $table = "playgrounds_list";
-        $this->getAllResults($table);
+        $result = $this->json_model->getList("playgrounds_list");
         break;
       case "clubs":
-        $table = "clubs_list";
-        $this->getAllResults($table);
+        $result = $this->json_model->getList("clubs_list");
         break;
       default:
         return false;
     }
+
+    if(in_array($type, $this->has_coordinates)) $result = $this->attachCoordinates($result);
+    print_r(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     return true;
-  }
-
-  private function getAllResults($table)
-  {
-    print_r(json_encode($this->json_model->getList($table), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-  }
-
-  private function getResultsFromDate($table, $start_date)
-  {
-    $start_date = date('Y-m-d H:i:s', $start_date);
-    print_r(json_encode($this->json_model->getListFromDate($table, $start_date), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
   }
 
   /**
@@ -70,25 +57,29 @@ class Json extends MY_Controller
    */
   public function getArticle($type, $id = NULL)
   {
-    $accessible = array("categories", "news", "events", "articles", "playgrounds", "clubs");
-    $has_coordinates = array("events", "playgrounds", "clubs");
+    $accessible = array("categories", "news", "events", "playgrounds", "clubs");
 
     if (in_array($type, $accessible)) {
       $result = $this->json_model->getArticle($type, $id);
       if (!is_null($id))
         $result[0]['gallery'] = $this->json_model->getGallery($id);
 
-      if (in_array($type, $has_coordinates) and !is_null($id)) {
+      if (in_array($type, $this->has_coordinates) and !is_null($id)) {
         $result[0]['coords'] = $this->getCoordinates($result[0]);
-        //        for($i = 0; $i < count($result); $i++) {
-        //          $result[$i]['coords']  = $this->getCoordinates($result[$i]);
-        //        }
       }
       print_r(json_encode($result, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     } else {
       return false;
     }
     return true;
+  }
+
+  private function attachCoordinates($articles) {
+    for($i = 0; $i < count($articles); $i++) {
+      $articles[$i]['coords']  = $this->getCoordinates($articles[$i]);
+    }
+
+    return $articles;
   }
 
   private function getCoordinates($article) 
@@ -173,7 +164,7 @@ class Json extends MY_Controller
 
     $result=($dreamed_thumbs_path.'/'.$data['file_name']);
 
-    $this->image_lib->initialize( $config );
+    $this->image_lib->initialize($config);
     $this->image_lib->resize(); 
     $this->image_lib->clear(); 
 
